@@ -1,0 +1,98 @@
+diff --git a/modules/worldfm_infer.py b/modules/worldfm_infer.py
+index 81e5e36..f8bab27 100755
+--- a/modules/worldfm_infer.py
++++ b/modules/worldfm_infer.py
+@@ -77,7 +77,13 @@ def _preprocess_u8_tensor(
+     tgt_h, tgt_w = int(target_size_hw[0]), int(target_size_hw[1])
+     scale = max(tgt_h / H, tgt_w / W)
+     new_h, new_w = int(round(H * scale)), int(round(W * scale))
+-    x = torch.nn.functional.interpolate(x, size=(new_h, new_w), mode="bicubic", align_corners=False)
++    if (new_h, new_w) != (H, W):
++        resize_device = x.device
++        # Torch 2.5 MPS lacks bicubic interpolation. Keep the same resize on CPU.
++        if resize_device.type == "mps":
++            x = x.cpu()
++        x = torch.nn.functional.interpolate(x, size=(new_h, new_w), mode="bicubic", align_corners=False)
++        x = x.to(resize_device)
+     crop_y = max(0, (new_h - tgt_h) // 2)
+     crop_x = max(0, (new_w - tgt_w) // 2)
+     x = x[:, :, crop_y:crop_y + tgt_h, crop_x:crop_x + tgt_w].squeeze(0)
+@@ -150,7 +156,9 @@ class WorldFMTriConditionInprocess:
+         model_sd = state_dict["state_dict"] if isinstance(state_dict, dict) and "state_dict" in state_dict else state_dict
+         if isinstance(model_sd, dict) and "pos_embed" in model_sd:
+             del model_sd["pos_embed"]
+-        model.load_state_dict(model_sd, strict=False)
++        load_result = model.load_state_dict(model_sd, strict=False)
++        self.checkpoint_missing_keys = list(load_result.missing_keys)
++        self.checkpoint_unexpected_keys = list(load_result.unexpected_keys)
+         model.eval().to(cfg.weight_dtype)
+         warm_pos_embed = getattr(model, "warm_pos_embed_cache", None)
+         if callable(warm_pos_embed):
+@@ -401,6 +409,8 @@ class WorldFMTriConditionInprocess:
+         def _sync():
+             if torch.cuda.is_available() and self.device.type == "cuda":
+                 torch.cuda.synchronize(device=self.device)
++            elif self.device.type == "mps":
++                torch.mps.synchronize()
+ 
+         t0 = time.perf_counter() if use_profile else 0.0
+         cond1 = _preprocess_u8_tensor(render_rgb_u8, target_size_hw=self.target_hw).unsqueeze(0)
+diff --git a/worldfm/diffusion/model/nets/PixArtWorldFMMS.py b/worldfm/diffusion/model/nets/PixArtWorldFMMS.py
+index e7b2cf6..0610009 100755
+--- a/worldfm/diffusion/model/nets/PixArtWorldFMMS.py
++++ b/worldfm/diffusion/model/nets/PixArtWorldFMMS.py
+@@ -420,7 +420,7 @@ class PixArtWorldFMMS(PixArtWorldFM):
+                                     embed_dim, (cond2_h_tokens, cond2_w_tokens),
+                                     pe_interpolation=self.pe_interpolation, base_size=self.base_size
+                                 )
+-                            ).unsqueeze(0).to(cond2_embed.device).to(self.dtype)
++                            ).unsqueeze(0).to(device=cond2_embed.device, dtype=self.dtype)
+                             self._cond2_pos_embed_cache[cache_key] = cond2_pos_embed
+                         cond2_tokens = cond2_embed + cond2_pos_embed  # (B, N_cond2, D)
+                         cond2_tokens = self.cond2_token_norm(cond2_tokens)
+@@ -507,7 +507,7 @@ class PixArtWorldFMMS(PixArtWorldFM):
+                     self.pos_embed.shape[-1], (self.h, self.w), pe_interpolation=self.pe_interpolation,
+                     base_size=self.base_size
+                 )
+-            ).unsqueeze(0).to(x.device).to(self.dtype)
++            ).unsqueeze(0).to(device=x.device, dtype=self.dtype)
+             self._pos_embed_cache[pos_cache_key] = pos_embed
+ 
+         x = self.x_embedder(x) + pos_embed  # (N, T, D), where T = H * W / patch_size ** 2
+diff --git a/worldfm/diffusion/model/nets/PixArtWorldFM_blocks.py b/worldfm/diffusion/model/nets/PixArtWorldFM_blocks.py
+index 92a0dc3..0e071e8 100755
+--- a/worldfm/diffusion/model/nets/PixArtWorldFM_blocks.py
++++ b/worldfm/diffusion/model/nets/PixArtWorldFM_blocks.py
+@@ -9,7 +9,11 @@ import math
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
+-import xformers.ops
++try:
++    import xformers.ops
++except ImportError:
++    # The released self-attention already falls back to PyTorch SDPA on MPS.
++    xformers = None
+ import os
+ from einops import rearrange
+ from timm.models.vision_transformer import Mlp, Attention as Attention_
+@@ -658,4 +662,4 @@ class CaptionEmbedderDoubleBr(nn.Module):
+         if (train and use_dropout) or (force_drop_ids is not None):
+             global_caption, caption = self.token_drop(global_caption, caption, force_drop_ids)
+         y_embed = self.proj(global_caption)
+-        return y_embed, caption
+\ No newline at end of file
++        return y_embed, caption
+diff --git a/worldfm/download.py b/worldfm/download.py
+index 4654b08..66ec0d1 100755
+--- a/worldfm/download.py
++++ b/worldfm/download.py
+@@ -28,7 +28,7 @@ def find_model(model_name):
+         return download_model(model_name)
+     else:  # Load a custom checkpoint:
+         assert os.path.isfile(model_name), f'Could not find checkpoint at {model_name}'
+-        return torch.load(model_name, map_location=lambda storage, loc: storage)
++        return torch.load(model_name, map_location="cpu", weights_only=True)
+ 
+ 
+ def download_model(model_name):

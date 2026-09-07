@@ -4,7 +4,7 @@ An original, locally trained spatial generator with a 3D explorer, learned ecosy
 
 **Research prototype. Genie 3 parity has not been established.** Worldline generates small terrain fields and learns synthetic water, vegetation and heat transitions. Three.js renders those fields. It is not a general-purpose neural video model, and it does not claim three new scientific breakthroughs.
 
-No inference API, hosted generative service, external foundation-model weights, or API key is required. The original source, trained checkpoints, training data generator, evaluation code, and research review are included under Apache-2.0.
+The editor requires no inference API, hosted generative service, external foundation-model weights, or API key. The original source, trained checkpoints, training data generator, evaluation code, and research review are included under Apache-2.0. Optional external-model measurement scripts are separate, with their own attribution and download instructions.
 
 ![A generated alien landscape in the Worldline browser renderer](docs/images/alien-preview.png)
 
@@ -77,7 +77,11 @@ These have substantial prior art, documented in the review. Worldline implements
 
 The [research plan](docs/research-plan.md) sets out what remains necessary for broad neural world generation, stronger graphics, meaningful novelty and a defensible frontier-model comparison.
 
-The [next controlled experiment](docs/cloud-experiment.md) specifies a paired comparison of training dataset sizes, fresh evaluation data, acceptance thresholds and optional compute costs. It has not been run or scheduled.
+The separate [original RGB experiment](docs/room-rgb-experiment.md) trains action-conditioned image models from scratch. A direct predictor performed better than a small diffusion model on the same room scenes, but both lose detail and fail to demonstrate reliable door memory. Source, small original checkpoints, measured errors and failure images are included. To try its actual neural predictions, double-click **start-room-lab.command**, or run `python -m experiments.room_world.play --open`. Room Lab opens at **http://127.0.0.1:8788** and uses CPU inference. Every action after initialization generates one 64 by 64 image; the larger canvas displays those pixels without added detail.
+
+The [external neural baseline study](docs/neural-baseline-study.md) records actual local runs of DIAMOND and WorldFM, with pinned artifacts and reproduction scripts. Those external models are not used by the editor and their weights are not redistributed here.
+
+The [terrain-data scaling proposal](docs/cloud-experiment.md) specifies a paired comparison of training dataset sizes, fresh evaluation data, acceptance thresholds and optional compute costs. That proposed experiment has not been run or scheduled.
 
 ## Project layout
 
@@ -89,6 +93,8 @@ worldline/state.py      Immutable snapshots, edits and independent branches
 worldline/server.py     Local inference and persistence API
 web/                   Interactive browser renderer and controls
 checkpoints/           Original learned weights and training measurements
+experiments/room_world/ Original RGB prediction experiment and weights
+experiments/baselines/  Optional external-model measurement scripts
 tests/                 Correctness tests and local benchmark runner
 docs/                  Research, model card, evaluation and limitations
 ```

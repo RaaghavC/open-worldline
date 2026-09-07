@@ -1,0 +1,179 @@
+{
+  "status": "complete",
+  "purpose": "External released image-editing baseline on original programmed render",
+  "not_evidence_for": [
+    "our own trained model",
+    "world-model quality",
+    "geometric consistency",
+    "Genie 3 parity"
+  ],
+  "source": {
+    "path": "images/renderer-original.png",
+    "sha256": "734f35de9d917a4d3d98873c29f08c1dee2e16c8c8329e341cd1309a064984ec",
+    "size": [
+      2048,
+      1152
+    ]
+  },
+  "reference": {
+    "path": "images/renderer-reference.png",
+    "sha256": "da4b832057a37d7cef63a3ea53615a8945ef956f82047041344a245ca94c39f5",
+    "size": [
+      768,
+      432
+    ],
+    "preprocessing": "RGB conversion and full-frame LANCZOS resize only"
+  },
+  "model": {
+    "repo": "Runpod/FLUX.2-klein-4B-mflux-4bit",
+    "hf_revision": "7ee1b3aa8178a1240050490072196a57da2bf2a9",
+    "anonymous": true,
+    "license": "apache-2.0",
+    "upstream": "black-forest-labs/FLUX.2-klein-4B",
+    "third_party_conversion": true,
+    "conversion_claim": "mflux-save --model flux2-klein-4b --quantize 4; MLX group size 64; uploaded by Runpod",
+    "bytes": 4619704367,
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1580,
+        "sha256": "caf3ca02d5e883f643e939cbed54f94237f94c171797f0dfea5e25c7e33315b3",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "README.md",
+        "bytes": 2836,
+        "sha256": "ac78bf64699ae716ca9b1d1da5b37cdd929235c59e2b1e7b617c5960d2f33dc8",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "config.json",
+        "bytes": 455,
+        "sha256": "2d09aef957ff45cccacf0bd4b9daae0684d1b802232343b387f5aee00b5fe238",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "text_encoder/0.safetensors",
+        "bytes": 2135435091,
+        "sha256": "4425bbe79bdf4d171dfa16117d61a174a22bdfab971478bd9eb7962eea855212",
+        "expected_lfs_sha256": "4425bbe79bdf4d171dfa16117d61a174a22bdfab971478bd9eb7962eea855212"
+      },
+      {
+        "path": "text_encoder/1.safetensors",
+        "bytes": 127582109,
+        "sha256": "941c6099f3014d6e4eb6af7deba890e1423b41e0fe4a9a218afb6b17d61c8bc8",
+        "expected_lfs_sha256": "941c6099f3014d6e4eb6af7deba890e1423b41e0fe4a9a218afb6b17d61c8bc8"
+      },
+      {
+        "path": "text_encoder/model.safetensors.index.json",
+        "bytes": 51332,
+        "sha256": "594c9b5f3fbe132406a1ca3551b14226db1010053aa546f372dc0b5dd03a6f19",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "tokenizer/chat_template.jinja",
+        "bytes": 4168,
+        "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "tokenizer/tokenizer.json",
+        "bytes": 11422650,
+        "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "expected_lfs_sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+      },
+      {
+        "path": "tokenizer/tokenizer_config.json",
+        "bytes": 348,
+        "sha256": "579073f506a3f85caed232bb91617cfb93028408d1f43ffaf66f3fc1aee9a9af",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "transformer/0.safetensors",
+        "bytes": 2145323701,
+        "sha256": "b8b21514b059d129cf27ea0650ede92608ae05b8c99ab7239148c69da954f82b",
+        "expected_lfs_sha256": "b8b21514b059d129cf27ea0650ede92608ae05b8c99ab7239148c69da954f82b"
+      },
+      {
+        "path": "transformer/1.safetensors",
+        "bytes": 34727730,
+        "sha256": "a85ce666eaa791dd7d8082352a61a9f3e24b36e04604bbe3856e7bebd5d61589",
+        "expected_lfs_sha256": "a85ce666eaa791dd7d8082352a61a9f3e24b36e04604bbe3856e7bebd5d61589"
+      },
+      {
+        "path": "transformer/model.safetensors.index.json",
+        "bytes": 26908,
+        "sha256": "ca07f4f1b921c373d2e6323100c22dd7c7cd3ae9b6ef8fbe9b56e8f1883a9a93",
+        "expected_lfs_sha256": null
+      },
+      {
+        "path": "vae/0.safetensors",
+        "bytes": 165107912,
+        "sha256": "5053e0f1a87db7b97dc9f43ddba152c0d77858e87ab515fdf2ed9e6ca0374fab",
+        "expected_lfs_sha256": "5053e0f1a87db7b97dc9f43ddba152c0d77858e87ab515fdf2ed9e6ca0374fab"
+      },
+      {
+        "path": "vae/model.safetensors.index.json",
+        "bytes": 17547,
+        "sha256": "404dcd01ec193bef1504a24ec3935bfbbb360c75365e17b241a00f9ec007c86b",
+        "expected_lfs_sha256": null
+      }
+    ]
+  },
+  "prompt": "Convert this landscape rendering into a detailed, photorealistic photograph of the same place. Keep the camera position, mountain silhouettes, lake and river boundaries, and locations and sizes of the turquoise crystals unchanged. Give the purple-gray mountains natural fractured rock layers, mineral grain, small weathered stones and crevices. Make the turquoise crystals translucent quartz with realistic facets and varied light reflection. Make the water transparent blue-green with subtle ripples and reflections. Use soft warm sunrise light and light atmospheric haze. Keep every visible object and its position. No buildings, people, animals, added trees, text or labels.",
+  "seed": 20260907,
+  "steps": 4,
+  "guidance": 1.0,
+  "scheduler": "flow_match_euler_discrete",
+  "environment": {
+    "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "versions": {
+      "mflux": "0.19.1",
+      "mlx": "0.32.2",
+      "mlx-metal": "0.32.2",
+      "numpy": "2.4.6",
+      "Pillow": "12.3.0",
+      "psutil": "7.0.0",
+      "transformers": "5.16.1",
+      "huggingface-hub": "1.30.0"
+    }
+  },
+  "load_seconds": 3.1834148750058375,
+  "load_mlx_peak_bytes": 4609793358,
+  "loaded_quantization_bits": 4,
+  "generation_seconds_full": 51.95130362501368,
+  "generation_seconds_reported_loop": 48.46976709365845,
+  "generation_mlx_peak_bytes": 6924936124,
+  "generated": {
+    "path": "images/flux4b-generated.png",
+    "sha256": "4ef44a8a37344913001a5b6272bc0ff173c94f422e61f22e8a078bbfca152cd9",
+    "size": [
+      768,
+      432
+    ],
+    "original_experiment_file_sha256": "107edc8c182c8a73d3daee862bba091d246a64b270cdbf673e7ea44a8f933d2f",
+    "publication_note": "PNG text and EXIF metadata containing local paths were removed. Pixel and image-data chunks are unchanged."
+  },
+  "max_rss_bytes_getrusage_macos": 1205583872,
+  "max_sampled_rss_bytes": 1156825088,
+  "max_sampled_mlx_active_bytes": 6743451572,
+  "memory_note": "MLX and RSS overlap. Do not add them. MLX peaks count array allocations; sampled RSS can miss brief peaks. Low-RAM mode releases text encoder and transformer after use.",
+  "measurement": {
+    "sample_interval_seconds": 0.05,
+    "cache_limit_bytes": 1000000000,
+    "mlx_memory_guideline_bytes": 17179869184,
+    "cold_model_load": true,
+    "single_generation": true,
+    "warm_latency_measured": false
+  },
+  "metrics_paths_relative_to": "experiments/baselines/flux4b",
+  "original_executed_script_sha256": "de8c613844e5d801ebd0db174023c3f8d6ad705fc1444f8921faa360c8ea01c3",
+  "published_probe_sha256": "90acfe6bb75d1e7d9292eb5d427d06b879fb09abfc6377e8bd20b23e92cdf411",
+  "portability_changes": "The published wrapper uses explicit weights/output CLI arguments, bundled reference paths, filename-only result fields, PNG saving without embedded local paths, bounded positive dimensions/steps/seed validation, and hash-based source provenance labels for custom inputs. Model initialization, original sampling, memory callbacks and timing code match the executed wrapper.",
+  "visual_assessment": "Main hills and water channel remain recognizable. Rock fractures, granular surfaces, reflected water ripples and translucent crystal facets appear. Individual crystal outlines and sizes changed; exact object count and geometry were not measured. The result resembles a detailed rendered alien landscape, without a photorealism benchmark.",
+  "hardware": {
+    "processor": "Apple M4 Pro",
+    "unified_memory_bytes": 25769803776
+  }
+}

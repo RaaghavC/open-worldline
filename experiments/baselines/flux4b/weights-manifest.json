@@ -1,0 +1,96 @@
+{
+  "repo": "Runpod/FLUX.2-klein-4B-mflux-4bit",
+  "hf_revision": "7ee1b3aa8178a1240050490072196a57da2bf2a9",
+  "anonymous": true,
+  "license": "apache-2.0",
+  "upstream": "black-forest-labs/FLUX.2-klein-4B",
+  "third_party_conversion": true,
+  "conversion_claim": "mflux-save --model flux2-klein-4b --quantize 4; MLX group size 64; uploaded by Runpod",
+  "bytes": 4619704367,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1580,
+      "sha256": "caf3ca02d5e883f643e939cbed54f94237f94c171797f0dfea5e25c7e33315b3",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "README.md",
+      "bytes": 2836,
+      "sha256": "ac78bf64699ae716ca9b1d1da5b37cdd929235c59e2b1e7b617c5960d2f33dc8",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "config.json",
+      "bytes": 455,
+      "sha256": "2d09aef957ff45cccacf0bd4b9daae0684d1b802232343b387f5aee00b5fe238",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "text_encoder/0.safetensors",
+      "bytes": 2135435091,
+      "sha256": "4425bbe79bdf4d171dfa16117d61a174a22bdfab971478bd9eb7962eea855212",
+      "expected_lfs_sha256": "4425bbe79bdf4d171dfa16117d61a174a22bdfab971478bd9eb7962eea855212"
+    },
+    {
+      "path": "text_encoder/1.safetensors",
+      "bytes": 127582109,
+      "sha256": "941c6099f3014d6e4eb6af7deba890e1423b41e0fe4a9a218afb6b17d61c8bc8",
+      "expected_lfs_sha256": "941c6099f3014d6e4eb6af7deba890e1423b41e0fe4a9a218afb6b17d61c8bc8"
+    },
+    {
+      "path": "text_encoder/model.safetensors.index.json",
+      "bytes": 51332,
+      "sha256": "594c9b5f3fbe132406a1ca3551b14226db1010053aa546f372dc0b5dd03a6f19",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "tokenizer/chat_template.jinja",
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "expected_lfs_sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "bytes": 348,
+      "sha256": "579073f506a3f85caed232bb91617cfb93028408d1f43ffaf66f3fc1aee9a9af",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "transformer/0.safetensors",
+      "bytes": 2145323701,
+      "sha256": "b8b21514b059d129cf27ea0650ede92608ae05b8c99ab7239148c69da954f82b",
+      "expected_lfs_sha256": "b8b21514b059d129cf27ea0650ede92608ae05b8c99ab7239148c69da954f82b"
+    },
+    {
+      "path": "transformer/1.safetensors",
+      "bytes": 34727730,
+      "sha256": "a85ce666eaa791dd7d8082352a61a9f3e24b36e04604bbe3856e7bebd5d61589",
+      "expected_lfs_sha256": "a85ce666eaa791dd7d8082352a61a9f3e24b36e04604bbe3856e7bebd5d61589"
+    },
+    {
+      "path": "transformer/model.safetensors.index.json",
+      "bytes": 26908,
+      "sha256": "ca07f4f1b921c373d2e6323100c22dd7c7cd3ae9b6ef8fbe9b56e8f1883a9a93",
+      "expected_lfs_sha256": null
+    },
+    {
+      "path": "vae/0.safetensors",
+      "bytes": 165107912,
+      "sha256": "5053e0f1a87db7b97dc9f43ddba152c0d77858e87ab515fdf2ed9e6ca0374fab",
+      "expected_lfs_sha256": "5053e0f1a87db7b97dc9f43ddba152c0d77858e87ab515fdf2ed9e6ca0374fab"
+    },
+    {
+      "path": "vae/model.safetensors.index.json",
+      "bytes": 17547,
+      "sha256": "404dcd01ec193bef1504a24ec3935bfbbb360c75365e17b241a00f9ec007c86b",
+      "expected_lfs_sha256": null
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "baseline": "DIAMOND CSGO external author checkpoint",
+  "device": "mps",
+  "torch": "2.5.1",
+  "numpy": "1.26.4",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "quality": "higher_quality",
+  "frames_per_arm": 12,
+  "spawn": 0,
+  "checkpoint_sha256": "9a56a599cec69863717001660871418af1ac3598762167a5cbda73076951bcb6",
+  "seed": 20260907,
+  "input_sha256": {
+    "act.npy": "11830620c54f47d0ee6a9f904e68516980f8cd5af488572bd6e9e4815e8be52d",
+    "full_res.npy": "32a5418b56b268aa731eff1acd87daa46226988dd8e577ccfaaec8fab132ee1d",
+    "low_res.npy": "50e10ae563ce86e98c58de99c2d3a0a4c0f111f6fde2c87323bd1d5eb5210d1a",
+    "next_act.npy": "762d9db84444e12912a8e535d10b29783db59f6a7f97579c933496354ffb4bb6"
+  },
+  "sampling_config": {
+    "_target_": "envs.WorldModelEnvConfig",
+    "horizon": 1000,
+    "num_batches_to_preload": 256,
+    "diffusion_sampler_next_obs": {
+      "_target_": "models.diffusion.DiffusionSamplerConfig",
+      "num_steps_denoising": 3,
+      "sigma_min": "2e-3",
+      "sigma_max": 5.0,
+      "rho": 7,
+      "order": 1,
+      "s_churn": 0.0,
+      "s_tmin": 0.0,
+      "s_tmax": "${eval:'float(\"inf\")'}",
+      "s_noise": 1.0,
+      "s_cond": 0.005
+    },
+    "diffusion_sampler_upsampling": {
+      "_target_": "models.diffusion.DiffusionSamplerConfig",
+      "num_steps_denoising": 10,
+      "sigma_min": 1,
+      "sigma_max": 5.0,
+      "rho": 7,
+      "order": 1,
+      "s_churn": 10.0,
+      "s_tmin": 1,
+      "s_tmax": 5,
+      "s_noise": 0.9,
+      "s_cond": 0
+    }
+  },
+  "arms": {
+    "idle": {
+      "inference_ms": [
+        2977.0101250032894,
+        1503.6213749845047,
+        1504.5316250179894,
+        1523.7779580056667,
+        1549.3413750082254,
+        1553.8850000011735,
+        1537.339750007959,
+        1518.6931249918416,
+        1415.7027080073021,
+        1417.6036659919191,
+        1613.2643329910934,
+        2363.786957983393
+      ],
+      "median_ms": 1530.558854006813,
+      "p95_ms": 2639.737383142346,
+      "mean_model_inference_fps": 0.5859787589133602,
+      "timing_scope": "Denoiser plus neural upsampler, synchronized; includes first cold call, excludes history updates, image copies, storage and display",
+      "frames_sha256": "3bee5c325d197359c06de53c7a4dd28987d7ad223fa033ecb521a7cfa4a8294b"
+    },
+    "forward": {
+      "inference_ms": [
+        2560.276249976596,
+        2263.5082499764394,
+        2237.5066250097007,
+        2110.7868749822956,
+        2322.7357089926954,
+        2052.805040992098,
+        2204.5160839916207,
+        2227.1843750204425,
+        2164.381082984619,
+        3492.9260829812847,
+        2506.5476250019856,
+        3043.0162909906358
+      ],
+      "median_ms": 2250.50743749307,
+      "p95_ms": 3245.4756973864273,
+      "mean_model_inference_fps": 0.4111533530205662,
+      "timing_scope": "Denoiser plus neural upsampler, synchronized; includes first cold call, excludes history updates, image copies, storage and display",
+      "frames_sha256": "88e79e4cec521464d4401a930ded34cd5c9bb3b208df72a48ada8e92c0da3a46"
+    }
+  },
+  "limitations": [
+    "No future ground-truth frames in the released spawn bundle; no prediction accuracy or FVD is measured.",
+    "Pixel differences show input sensitivity, not correct action following.",
+    "Output is150x280, not720p; saved animation playback timing is not neural throughput.",
+    "External checkpoint is not an original Worldline model or redistributed here."
+  ],
+  "paired_action_mae_0_to_255": {
+    "forward": 18.918355158730158
+  },
+  "final_mps_current_allocated_bytes": 1538880000,
+  "final_mps_driver_allocated_bytes": 2288926720,
+  "upstream_commit": "851cefb497733d27f1b85c804104638765860fca"
+}

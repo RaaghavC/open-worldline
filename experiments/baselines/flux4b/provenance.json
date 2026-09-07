@@ -1,0 +1,76 @@
+{
+  "experiment_date": "2026-09-07",
+  "purpose": "External local appearance baselines, not original Worldline trained models",
+  "mflux_package": {
+    "pypi_version": "0.19.1",
+    "wheel_sha256": "e56f1e28e2cbad1153272ad87d3077f82442015f60214cdbc9b322c6003db513",
+    "wheel_upload_time": "2026-08-26T01:54:04",
+    "installed_source_files_verified_equal_to_wheel": 776,
+    "source_mismatches": [],
+    "upstream_license_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/resolve/e7b7dc27f91deacad38e78976d1f2b499d76a294/LICENSE.md",
+    "upstream_license_sha256": "ca02bc51900ab07789d1b70283329e7137f5af98f5161c23a1c81fc38a4af1fe"
+  },
+  "mflux_source_inspection_commit": "051ba9ff25c9a8a8703356053a012a0dfad3fe39",
+  "runtime_identity": "Unmodified verified PyPI mflux 0.19.1 wheel, not assumed identical to later GitHub commit",
+  "weights": {
+    "repo": "Runpod/FLUX.2-klein-4B-mflux-4bit",
+    "revision": "7ee1b3aa8178a1240050490072196a57da2bf2a9",
+    "upstream_model": "black-forest-labs/FLUX.2-klein-4B",
+    "upstream_inspected_revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "upstream_revision_used_by_converter": "not recorded by converter",
+    "license": "Apache-2.0 in upstream LICENSE.md and conversion card metadata",
+    "third_party_conversion": true,
+    "total_download_bytes": 4619704367
+  },
+  "image_provenance": {
+    "flux4b-generated.png": {
+      "sha256": "4ef44a8a37344913001a5b6272bc0ff173c94f422e61f22e8a078bbfca152cd9",
+      "bytes": 670866,
+      "original_experiment_file_sha256": "107edc8c182c8a73d3daee862bba091d246a64b270cdbf673e7ea44a8f933d2f",
+      "removed_png_chunks": [
+        "iTXt",
+        "tEXt",
+        "eXIf"
+      ],
+      "publication_note": "Removed text and EXIF metadata containing local paths; preserved all image-data chunks."
+    },
+    "renderer-original.png": {
+      "sha256": "734f35de9d917a4d3d98873c29f08c1dee2e16c8c8329e341cd1309a064984ec",
+      "bytes": 2350249
+    },
+    "renderer-reference.png": {
+      "sha256": "da4b832057a37d7cef63a3ea53615a8945ef956f82047041344a245ca94c39f5",
+      "bytes": 375292
+    },
+    "worldfm-generated.png": {
+      "sha256": "d79353f82373a3241ce81045247a7135b019cd164130e87551d6d214b155b784",
+      "bytes": 311460
+    },
+    "worldfm-guide.png": {
+      "sha256": "f511a2ec855e8d35e2960ae4cbd8ab354121784684c373e37fdd3a408010b941",
+      "bytes": 308132
+    },
+    "worldfm-reference.png": {
+      "sha256": "1f2fe8e4485144dde33b8b2340507298dfca9b76d5f75c4736862c46035007af",
+      "bytes": 498689
+    }
+  },
+  "results": {
+    "flux4b": "results/flux4b-result.json",
+    "worldfm_reference_test": "results/worldfm-result.json"
+  },
+  "license_limits": "WorldFM repository and HF metadata declare Apache-2.0; the included VAE's original training provenance was not documented. No model weights are redistributed here.",
+  "original_executed_probe_sha256": "de8c613844e5d801ebd0db174023c3f8d6ad705fc1444f8921faa360c8ea01c3",
+  "published_scripts": {
+    "probe.py": {
+      "sha256": "90acfe6bb75d1e7d9292eb5d427d06b879fb09abfc6377e8bd20b23e92cdf411"
+    },
+    "fetch_weights.py": {
+      "sha256": "202fe1a8bf1f66869593b3941109969221a2c49cef862baa64cf51ed47581514"
+    },
+    "../fetch_assets.py": {
+      "sha256": "b3ae0fd1c36a422ab5d91dfcc483afbc290e66b3cf1d6f6a91304dd439a33fde"
+    }
+  },
+  "published_script_changes": "Download helper reuse with read-only verification and original manifest schema; argument bounds and custom-input provenance labels. The inference model, sampling, memory callbacks, timing code, executed measurement values and published image files are unchanged. No new inference run was performed for this review."
+}

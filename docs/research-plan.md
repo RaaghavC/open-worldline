@@ -16,10 +16,13 @@ Any result described as revolutionary would need substantial effect sizes, compa
 
 ## Next local work
 
-1. Use actual held-out test fields to measure distribution quality, action dependence and rollout error. Separate model error from renderer bugs.
-2. Add richer original simulators and object interactions with recorded actions, state, RGB and depth. Preserve data rights and scene/trajectory test splits.
-3. Implement a small action-conditioned visual residual model and test whether it improves appearance while preserving the explicit state. Report its own output resolution and generation rate.
-4. Test reproducibility, export/reload, long sessions, unusual brush states, keyboard navigation, mobile layouts and recovery from interrupted inference.
+The first held-out field evaluation and browser persistence checks are complete. Two original RGB models were subsequently trained and evaluated on original room videos. The direct predictor improves short-term pixel error, but both models lose geometry and fail to demonstrate reliable door memory. A separate browser demo exposes those learned predictions. See the [room experiment](room-rgb-experiment.md) and [browser checks](room-lab-browser-checks.md).
+
+Released DIAMOND and WorldFM models also ran locally. These are external-model execution measurements, not a matched quality comparison. The [baseline study](neural-baseline-study.md) records the result and its limits.
+
+The next local training question is whether a small carried recurrent state improves the explicit door-memory test relative to a parameter-matched state-reset control. The [frozen proposal](room-rgb-experiment.md#smallest-next-memory-experiment-not-implemented) specifies fresh scene splits, three seeds and acceptance thresholds. Existing inspected test scenes are now development evidence. This can test memory in a narrow domain; it cannot establish frontier graphics or novelty.
+
+Broad visual generation still needs rights-cleared, diverse RGB/depth/action data, stronger model capacity and a sustained training plan. Any appearance model must preserve geometry under new camera views and edits, with measured errors and full failure sequences. An attractive isolated image is insufficient evidence. Longer sessions, accessibility and interrupted-inference recovery also need further testing.
 
 ## A cloud pilot must answer a narrow question
 

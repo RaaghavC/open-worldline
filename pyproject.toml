@@ -24,4 +24,4 @@ worldline = "worldline.server:main"
 include = ["worldline*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "experiments/room_world/tests", "experiments/baselines/tests"]

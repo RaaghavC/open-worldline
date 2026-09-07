@@ -1,6 +1,6 @@
 # Initial measured results
 
-September 7, 2026. Apple M4 Pro with 24 GB shared memory, PyTorch 2.5.1. These measurements describe the shipped small synthetic-world prototype. External model results have not been measured here.
+September 7, 2026. Apple M4 Pro with 24 GB shared memory, PyTorch 2.5.1. These measurements describe the shipped small synthetic-world prototype. Subsequent external model runs are reported separately in the [neural baseline study](neural-baseline-study.md), and original image prediction in the [RGB experiment](room-rgb-experiment.md).
 
 ## Actual neural models
 

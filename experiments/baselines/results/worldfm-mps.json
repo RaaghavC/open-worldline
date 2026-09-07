@@ -1,0 +1,130 @@
+{
+  "baseline": "InSpatio WorldFM official two-step release",
+  "source_url": "https://github.com/inspatio/worldfm",
+  "source_commit": "d51ada211079d185285076b56fb803069a571838",
+  "weights_url": "https://huggingface.co/inspatio/worldfm",
+  "hf_revision": "48d206b813a6ff3ddc1977b6cce8b6769c3bbad6",
+  "weights": {
+    "worldfm_2-step.pth": {
+      "sha256": "7cf8462ca3e9acaa0c7cf6f5b99917f2dd0b9d03dee9837237c28bf5700c7b17",
+      "bytes": 2458577701
+    },
+    "vae/diffusion_pytorch_model.safetensors": {
+      "sha256": "1b909373b28f2137098b0fd9dbc6f97f8410854f31f84ddc9fa04b077b0ace2c",
+      "bytes": 334643238
+    },
+    "vae/config.json": {
+      "sha256": "f18b16fa4381c90ab44a3d7abd2e90afd05a2c31b8ca69998bc93c6453aeb7b7",
+      "bytes": 631
+    }
+  },
+  "license_evidence": "Apache-2.0 repository license and HF card metadata; VAE upstream provenance not documented.",
+  "input_claim": "Reference and guide are original programmed-render images, outside the documented panorama pipeline. No photorealism or novel-view claim follows from this smoke test.",
+  "same_reference_and_guide": true,
+  "device": "mps",
+  "dtype": "float16",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "python": "3.11.9",
+  "dependencies": {
+    "torch": "2.5.1",
+    "torchvision": "0.20.1",
+    "diffusers": "0.34.0",
+    "timm": "1.0.13",
+    "transformers": "4.51.0",
+    "huggingface-hub": "0.30.2",
+    "numpy": "1.26.4",
+    "Pillow": "11.2.1",
+    "safetensors": "0.5.3",
+    "accelerate": "1.6.0",
+    "einops": "0.4.1",
+    "mmcv": "1.7.0",
+    "mmengine": "0.10.7"
+  },
+  "seed": 42,
+  "sampling_steps": 2,
+  "resolution": [
+    512,
+    512
+  ],
+  "reference": {
+    "path": "docs/images/alien-preview.png",
+    "sha256": "734f35de9d917a4d3d98873c29f08c1dee2e16c8c8329e341cd1309a064984ec"
+  },
+  "guide": {
+    "path": "docs/images/alien-preview.png",
+    "sha256": "734f35de9d917a4d3d98873c29f08c1dee2e16c8c8329e341cd1309a064984ec"
+  },
+  "load_seconds": 9.287889375002123,
+  "model_parameters": 612192416,
+  "vae_parameters": 83653863,
+  "missing_keys": [
+    "pos_embed"
+  ],
+  "unexpected_keys": [],
+  "frames": [
+    {
+      "index": 0,
+      "seed": 42,
+      "seconds": 8.238031792017864,
+      "file": "generated-00.png",
+      "sha256": "e65dc6f1af0daaf8c8fcd4f13886cabf4405cb264acaa4bb6dbff4b28d8219ed",
+      "finite": true,
+      "pixel_std": 49.8827453871128,
+      "profile_ms": {
+        "cond1_pre_ms": 10.816499998327345,
+        "cond1_vae_ms": 729.052667011274,
+        "cond2_vae_ms": 537.1589580026921,
+        "dmd_step1_ms": 3849.782959005097,
+        "dmd_step2_ms": 1702.580792014487,
+        "denoiser_ms": 5552.363751019584,
+        "vae_decode_ms": 1380.60500001302,
+        "total_ms": 8209.996876044897
+      }
+    },
+    {
+      "index": 1,
+      "seed": 43,
+      "seconds": 4.943012625008123,
+      "file": "generated-01.png",
+      "sha256": "da1f041955e922830338b630405aa7dc15ddf3d7f7c042c5310e5647f7b1bd6f",
+      "finite": true,
+      "pixel_std": 50.049659129201515,
+      "profile_ms": {
+        "cond1_pre_ms": 2.273208025144413,
+        "cond1_vae_ms": 625.1047920086421,
+        "dmd_step1_ms": 1764.5295829861425,
+        "dmd_step2_ms": 1709.3810830265284,
+        "denoiser_ms": 3473.910666012671,
+        "vae_decode_ms": 840.1597909978591,
+        "total_ms": 4941.4484570443165
+      }
+    },
+    {
+      "index": 2,
+      "seed": 44,
+      "seconds": 4.881921584019437,
+      "file": "generated-02.png",
+      "sha256": "0acac6d81ce2056f38dd1169969d172308eeede522b542d89e8906d7291f1dbe",
+      "finite": true,
+      "pixel_std": 49.81805603240165,
+      "profile_ms": {
+        "cond1_pre_ms": 1.203499996336177,
+        "cond1_vae_ms": 579.8767500091344,
+        "dmd_step1_ms": 1734.4769579940476,
+        "dmd_step2_ms": 1716.3820409914479,
+        "denoiser_ms": 3450.8589989854954,
+        "vae_decode_ms": 845.2732500154525,
+        "total_ms": 4877.2124990064185
+      }
+    }
+  ],
+  "steady_seconds_mean": 4.91246710451378,
+  "steady_frames_per_second": 0.20356370408692573,
+  "inference_run": true,
+  "sampled_peak_memory": {
+    "rss_bytes": 4235460608,
+    "mps_tensor_bytes": 3275160064,
+    "mps_driver_bytes": 5870108672
+  },
+  "max_rss_bytes_macos": 4288659456
+}

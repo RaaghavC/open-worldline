@@ -1,0 +1,130 @@
+{
+  "baseline": "DIAMOND CSGO external author checkpoint",
+  "device": "mps",
+  "torch": "2.5.1",
+  "numpy": "1.26.4",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "quality": "fast",
+  "frames_per_arm": 12,
+  "spawn": 0,
+  "checkpoint_sha256": "9a56a599cec69863717001660871418af1ac3598762167a5cbda73076951bcb6",
+  "sampling_config": {
+    "_target_": "envs.WorldModelEnvConfig",
+    "horizon": 1000,
+    "num_batches_to_preload": 256,
+    "diffusion_sampler_next_obs": {
+      "_target_": "models.diffusion.DiffusionSamplerConfig",
+      "num_steps_denoising": 1,
+      "sigma_min": "2e-3",
+      "sigma_max": 5.0,
+      "rho": 7,
+      "order": 1,
+      "s_churn": 0.0,
+      "s_tmin": 0.0,
+      "s_tmax": "${eval:'float(\"inf\")'}",
+      "s_noise": 1.0,
+      "s_cond": 0.005
+    },
+    "diffusion_sampler_upsampling": {
+      "_target_": "models.diffusion.DiffusionSamplerConfig",
+      "num_steps_denoising": 1,
+      "sigma_min": 1,
+      "sigma_max": 5.0,
+      "rho": 7,
+      "order": 2,
+      "s_churn": 10.0,
+      "s_tmin": 1,
+      "s_tmax": 5,
+      "s_noise": 0.9,
+      "s_cond": 0
+    }
+  },
+  "arms": {
+    "idle": {
+      "inference_ms": [
+        6984.276584000327,
+        183.2089170056861,
+        364.54162502195686,
+        292.0400000002701,
+        294.66937499819323,
+        296.49408400291577,
+        286.93199998815544,
+        289.59450000547804,
+        289.25408399663866,
+        277.2052090149373,
+        282.10820897947997,
+        275.4305839771405
+      ],
+      "median_ms": 289.42429200105835,
+      "p95_ms": 3343.4223565622187,
+      "frames_sha256": "913c2241284fe7c4905fdcb070ed14f28ec6282fa4d69bbf995b444150b9442c",
+      "mean_model_inference_fps": 1.1862683306543684,
+      "timing_scope": "Denoiser plus neural upsampler, synchronized; includes first cold call, excludes history updates, image copies, storage and display"
+    },
+    "forward": {
+      "inference_ms": [
+        142.67733300221153,
+        190.17754201195203,
+        305.8270000037737,
+        304.95783302467316,
+        286.92070898250677,
+        264.3359999929089,
+        282.2659590165131,
+        288.3820839924738,
+        242.78091598534957,
+        271.5825409977697,
+        292.76395798660815,
+        263.4296659962274
+      ],
+      "median_ms": 276.9242500071414,
+      "p95_ms": 305.3489581652684,
+      "frames_sha256": "a4cc459747cee763b558600d4d7b288a2d885c190f039436b2f92d8346cc2cbd",
+      "mean_model_inference_fps": 3.826406716474015,
+      "timing_scope": "Denoiser plus neural upsampler, synchronized; includes first cold call, excludes history updates, image copies, storage and display"
+    },
+    "left": {
+      "inference_ms": [
+        143.60991600551642,
+        423.3560000138823,
+        285.21091598668136,
+        282.8055419959128,
+        303.47966600675136,
+        270.4410839942284,
+        283.8390830147546,
+        263.1564589974005,
+        300.0048749963753,
+        339.46504100458696,
+        323.9420829922892,
+        300.72016699705273
+      ],
+      "median_ms": 292.6078954915283,
+      "p95_ms": 377.2159725587698,
+      "frames_sha256": "5677d4a02b6790102b816eb57e5991ead8d815a14dbc09a3c901703f76bc513e",
+      "mean_model_inference_fps": 3.409061048810007,
+      "timing_scope": "Denoiser plus neural upsampler, synchronized; includes first cold call, excludes history updates, image copies, storage and display"
+    }
+  },
+  "limitations": [
+    "No future ground-truth frames in the released spawn bundle; no prediction accuracy or FVD is measured.",
+    "Pixel differences show input sensitivity, not correct action following.",
+    "Output is150x280, not720p; saved animation playback timing is not neural throughput.",
+    "External checkpoint is not an original Worldline model or redistributed here."
+  ],
+  "paired_action_mae_0_to_255": {
+    "forward": 21.513126984126984,
+    "left": 40.302583994708996
+  },
+  "upstream_commit": "851cefb497733d27f1b85c804104638765860fca",
+  "checkpoint_revision": "5d4abca9af6ab1b3ab1c6fc228cacb7281130f7f",
+  "seed": 20260907,
+  "input_sha256": {
+    "info.json": "fe9718686e98c9273c12ce5796a901df98c4bcb29337bf8e239df2955619b74c",
+    "act.npy": "11830620c54f47d0ee6a9f904e68516980f8cd5af488572bd6e9e4815e8be52d",
+    "low_res.npy": "50e10ae563ce86e98c58de99c2d3a0a4c0f111f6fde2c87323bd1d5eb5210d1a",
+    "full_res.npy": "32a5418b56b268aa731eff1acd87daa46226988dd8e577ccfaaec8fab132ee1d",
+    "next_act.npy": "762d9db84444e12912a8e535d10b29783db59f6a7f97579c933496354ffb4bb6"
+  },
+  "metadata_audit": "Pinned asset manifest verified before inference; seed and artifact identifiers added after run.",
+  "final_mps_current_allocated_bytes": 1530700032,
+  "final_mps_driver_allocated_bytes": 2297282560
+}

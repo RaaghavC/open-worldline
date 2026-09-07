@@ -1,0 +1,111 @@
+{
+  "baseline": "InSpatio WorldFM official two-step release",
+  "source_url": "https://github.com/inspatio/worldfm",
+  "source_commit": "d51ada211079d185285076b56fb803069a571838",
+  "weights_url": "https://huggingface.co/inspatio/worldfm",
+  "hf_revision": "48d206b813a6ff3ddc1977b6cce8b6769c3bbad6",
+  "weights": {
+    "worldfm_2-step.pth": {
+      "sha256": "7cf8462ca3e9acaa0c7cf6f5b99917f2dd0b9d03dee9837237c28bf5700c7b17",
+      "bytes": 2458577701
+    },
+    "vae/diffusion_pytorch_model.safetensors": {
+      "sha256": "1b909373b28f2137098b0fd9dbc6f97f8410854f31f84ddc9fa04b077b0ace2c",
+      "bytes": 334643238
+    },
+    "vae/config.json": {
+      "sha256": "f18b16fa4381c90ab44a3d7abd2e90afd05a2c31b8ca69998bc93c6453aeb7b7",
+      "bytes": 631
+    }
+  },
+  "license_evidence": "Apache-2.0 repository license and HF card metadata; VAE upstream provenance not documented.",
+  "input_claim": "The reference is the external FLUX4B edited image; the guide is the original programmed terrain render. Both were center cropped and resized to 512 x 512. This tests one reference-conditioning result without a changed camera.",
+  "same_reference_and_guide": false,
+  "device": "mps",
+  "dtype": "float16",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "python": "3.11.9",
+  "dependencies": {
+    "torch": "2.5.1",
+    "torchvision": "0.20.1",
+    "diffusers": "0.34.0",
+    "timm": "1.0.13",
+    "transformers": "4.51.0",
+    "huggingface-hub": "0.30.2",
+    "numpy": "1.26.4",
+    "Pillow": "11.2.1",
+    "safetensors": "0.5.3",
+    "accelerate": "1.6.0",
+    "einops": "0.4.1",
+    "mmcv": "1.7.0",
+    "mmengine": "0.10.7"
+  },
+  "seed": 42,
+  "sampling_steps": 2,
+  "resolution": [
+    512,
+    512
+  ],
+  "reference": {
+    "path": "images/flux4b-generated.png",
+    "sha256": "4ef44a8a37344913001a5b6272bc0ff173c94f422e61f22e8a078bbfca152cd9",
+    "original_experiment_file_sha256": "107edc8c182c8a73d3daee862bba091d246a64b270cdbf673e7ea44a8f933d2f",
+    "publication_note": "Only local-path metadata was removed from the published FLUX reference PNG. Decoded image pixels are unchanged."
+  },
+  "guide": {
+    "path": "images/renderer-reference.png",
+    "sha256": "da4b832057a37d7cef63a3ea53615a8945ef956f82047041344a245ca94c39f5"
+  },
+  "load_seconds": 8.414968124998268,
+  "model_parameters": 612192416,
+  "vae_parameters": 83653863,
+  "missing_keys": [
+    "pos_embed"
+  ],
+  "unexpected_keys": [],
+  "frames": [
+    {
+      "index": 0,
+      "seed": 42,
+      "seconds": 5.882014667004114,
+      "file": "images/worldfm-generated.png",
+      "sha256": "d79353f82373a3241ce81045247a7135b019cd164130e87551d6d214b155b784",
+      "finite": true,
+      "pixel_std": 48.78199781877923,
+      "profile_ms": {
+        "cond1_pre_ms": 12.664874986512586,
+        "cond1_vae_ms": 694.0974580065813,
+        "cond2_vae_ms": 468.4175839938689,
+        "dmd_step1_ms": 1974.7186659951694,
+        "dmd_step2_ms": 1704.0567500225734,
+        "denoiser_ms": 3678.775416017743,
+        "vae_decode_ms": 994.9839579930995,
+        "total_ms": 5848.939290997805
+      }
+    }
+  ],
+  "steady_seconds_mean": null,
+  "steady_frames_per_second": null,
+  "inference_run": true,
+  "sampled_peak_memory": {
+    "rss_bytes": 5152587776,
+    "mps_tensor_bytes": 3254792704,
+    "mps_driver_bytes": 5865914368
+  },
+  "max_rss_bytes_macos": 5155864576,
+  "processed_reference": {
+    "path": "images/worldfm-reference.png",
+    "sha256": "1f2fe8e4485144dde33b8b2340507298dfca9b76d5f75c4736862c46035007af"
+  },
+  "processed_guide": {
+    "path": "images/worldfm-guide.png",
+    "sha256": "f511a2ec855e8d35e2960ae4cbd8ab354121784684c373e37fdd3a408010b941"
+  },
+  "metrics_paths_relative_to": "experiments/baselines/flux4b",
+  "visual_assessment": "Negative result: the image retained the guide's smooth purple terrain and opaque triangular crystals. The detailed rock, water and crystal appearance in the FLUX reference did not transfer in this single test.",
+  "report_note": "Paths were made repository-relative and the legacy generic input-description string was corrected to identify the actual FLUX reference. Numerical observations are unchanged.",
+  "hardware": {
+    "processor": "Apple M4 Pro",
+    "unified_memory_bytes": 25769803776
+  }
+}

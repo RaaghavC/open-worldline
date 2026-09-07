@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Room Lab · Worldline</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="https://github.com/RaaghavC/open-worldline"
+        >WORLDLINE <span>RESEARCH</span></a
+      ><span class="pill">Runs on this computer</span>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">EXPERIMENT 02</p>
+          <h1>Explore a learned room.</h1>
+          <p class="lede">
+            A small original model imagines the next room image from your
+            controls and its last four images.
+          </p>
+        </div>
+        <div class="note">
+          64 × 64 generated pixels.<br />Detail fades as you explore.<br />Long-term
+          memory is not solved.
+        </div>
+      </section>
+      <div class="workspace">
+        <section class="viewer" aria-label="Generated room">
+          <div class="viewer-top">
+            <span id="source">Ready to begin</span
+            ><span id="frame">Frame 0</span>
+          </div>
+          <div class="screen">
+            <canvas
+              id="canvas"
+              width="64"
+              height="64"
+              tabindex="0"
+              aria-label="Room view. Use W and S to move, A and D to turn, and E to interact."
+            ></canvas>
+            <div id="placeholder">Start a room to explore</div>
+          </div>
+          <div class="viewer-bottom">
+            <span id="timing">Every action generates one image</span
+            ><span>W A S D · E</span>
+          </div>
+        </section>
+        <aside>
+          <form id="setup">
+            <h2>Your room</h2>
+            <label for="seed">Scene seed</label
+            ><input
+              id="seed"
+              type="number"
+              min="0"
+              max="2147483647"
+              step="1"
+              value="31415"
+              required
+            /><label for="model">Image model</label
+            ><select id="model">
+              <option value="predictor">
+                Direct predictor · stronger in this test
+              </option>
+              <option value="flow">
+                Flow generator · 8 sampling steps
+              </option></select
+            ><button class="primary" type="submit" id="start">
+              Start room
+            </button>
+          </form>
+          <div class="controls">
+            <h2>Explore</h2>
+            <div class="pad">
+              <button data-action="1" class="forward" aria-label="Move forward">
+                ↑<small>W</small></button
+              ><button data-action="3" aria-label="Turn left">
+                ↶<small>A</small></button
+              ><button data-action="2" aria-label="Move backward">
+                ↓<small>S</small></button
+              ><button data-action="4" aria-label="Turn right">
+                ↷<small>D</small>
+              </button>
+            </div>
+            <div class="action-row">
+              <button data-action="5">Open / close <small>E</small></button
+              ><button data-action="0">Wait <small>Space</small></button>
+            </div>
+            <p class="hint">
+              Click a control or hold a key. Try the door before turning away.
+            </p>
+          </div>
+          <div class="branches">
+            <h2>Try another future</h2>
+            <button id="branch">Save a branch</button
+            ><button id="return" hidden>Return to saved branch</button>
+            <p class="hint">
+              Copies the model’s four images and random state. Kept for this
+              session only.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <p id="status" role="status" aria-live="polite">
+        Choose a seed, then start a room.
+      </p>
+      <section class="explain">
+        <div>
+          <h2>What you are seeing</h2>
+          <p>
+            The first view comes from our original room renderer. Every image
+            after your first action comes from the neural network. No true room
+            state or new rendered image is supplied during prediction.
+          </p>
+        </div>
+        <div>
+          <h2>What this demonstrates</h2>
+          <p>
+            Local image prediction using newly trained weights and no external
+            model. This small experiment loses geometry during long sessions. It
+            does not demonstrate Genie 3 quality or reliable physical behavior.
+          </p>
+          <a
+            href="https://github.com/RaaghavC/open-worldline/blob/main/docs/room-rgb-experiment.md"
+            >Read the measured results ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
