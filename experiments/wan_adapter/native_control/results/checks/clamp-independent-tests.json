@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "tests_run": 5,
+  "elapsed_seconds": 0.33798345798277296,
+  "errors": [],
+  "failures": [],
+  "source_sha256": {
+    "test_clamp_independent.py": "d8799461853dc406019d95dab533aa884860d0d62f6b9d294fea5686ed589915",
+    "clamp_cache.py": "b9401c18601f37a5a54a55f0e738e032396d44f46a35e528c2759898c5cad7d2",
+    "clamp_loop.py": "ef6cfe667d5ea41606faf554e3edbcfd177468af56028f905130b60b65d21f73",
+    "clamp_run.py": "155c9de7b11533e2f3ee366059be8e8af1c042a9c8e4d4b780ee354b07c728a7",
+    "sampling.py": "297522d2880a3534b507737d4d03a948987adc2f21d3d6a6493d0724fed78fc7",
+    "loop.py": "5dc4848cae5b8117bbce0a4bbd63023365c9eb2f6b1bf68774ba5d12170c74a0",
+    "run_clip.py": "36b53d8868e3f09a83fe18bb433616da64a81e84396c57b982c8e200edfe05d5",
+    "portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "evidence.py": "00acd8e3c0a5b0866793fa0de27ce10fdb56fba13b4c49c95f44ef1ae6acc581"
+  },
+  "limits": "Equation and access checks only; no GPU, foundation load or quality result."
+}

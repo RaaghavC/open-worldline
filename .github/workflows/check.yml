@@ -39,6 +39,8 @@ jobs:
         working-directory: experiments/wan_adapter
       - run: python native_control/test_independent.py
         working-directory: experiments/wan_adapter
+      - run: python native_control/test_clamp_independent.py
+        working-directory: experiments/wan_adapter
   text-cache-cpu:
     runs-on: ubuntu-latest
     timeout-minutes: 15

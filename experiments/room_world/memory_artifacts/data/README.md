@@ -1,6 +1,6 @@
 # Room memory development data
 
-These are original 64 × 64 rendered RGB trajectories for an untrained recurrent-memory experiment. They are teacher observations, not neural predictions. The original NumPy room renderer supplies every pixel. The training and validation scene seeds are separate from those used for the published direct predictor.
+These are original 64 × 64 rendered RGB trajectories for a recurrent-memory training experiment. They are teacher observations, not neural predictions. The original NumPy room renderer supplies every pixel. The training and validation scene seeds are separate from those used for the published direct predictor.
 
 | Split | New scenes | Observations | Transitions | Compressed NPZ bytes | Capture time |
 |---|---:|---:|---:|---:|---:|

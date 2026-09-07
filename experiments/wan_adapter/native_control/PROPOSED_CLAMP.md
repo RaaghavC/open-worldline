@@ -1,6 +1,6 @@
 # Proposed single-factor initial-image clamp diagnostic
 
-Status: proposed only. No new generation or training has been started for this comparison.
+Status: this proposal was implemented, independently checked and run once. The [completed result](results/clamp50/README.md) shows repeated surface lattice returning after the clean initial-image clamp. The text below preserves the predeclared comparison. No further generation is implied.
 
 The smallest next comparison adds one treatment to the completed pure T2V control: replace latent frame zero with the independently encoded initial observation before each negative/positive denoiser pair and after each CPU UniPC update. Keep every other tested setting fixed: official source and weight hashes, full float32 arithmetic, CPU UniPC, 50 steps, shift 8, guidance 6, exact positive/native-negative text tensors, 512 x 288 size, 17-frame layout, saved seed-20260908 noise and official float32 VAE decode.
 

@@ -33,10 +33,16 @@ A reviewed one-pair profile predicted 736.99 seconds including explicit solver/t
 
 Two pre-generation compatibility failures are retained. The first profile attempted an unsupported float64 MPS conversion while moving a timestep to CPU; separating the transfer and cast fixed it, with new source-matched parity checks. A solver preflight then found the unsupported MPS linear solve; the explicit CPU solver resolved that boundary without changing its equations. Neither failed attempt generated a video or supplied a quality result.
 
-## Interpretation and next comparison
+## Starting-image comparison
 
 The previous [Atrium adaptation](wan-atrium-pilot.md) used a different precision path, negative context, solver, step count and first-image condition. The coherent result here shows that the pretrained model can generate a recognizable scene through the checked local path at this resolution. Restoring several choices at once does not isolate any one cause of the earlier lattice.
 
-The next bounded comparison can add only the initial-image clamp to this same successful path, retaining its noise, prompt, scheduler, precision and step count. That would test the image-conditioning change before more adapter training. A pure text-to-video result contains no evidence of following a supplied camera command, reacting to an interaction, remembering a hidden object or supporting editable persistent worlds.
+The subsequent single comparison added the encoded first frame from the original Atrium capture, holding it fixed during every denoiser call and solver update. It retained the pure control's saved noise, positive and negative text, scheduler, precision, guidance and step count. Only the observation tensor was loaded from the capture cache. No action adapter, actions or future target entered generation. The output contains one observed reconstruction and 16 generated future frames.
+
+The comparison completed 50 solver steps in 613.64 seconds and decoded in 30.87 seconds, within a measured 660.30-second interval. The sampled peak Metal driver allocation was 9.49 GiB. The fixed prefix remained exact, and outputs were finite. Those checks establish execution, not image quality.
+
+The observed reconstruction is sharp. Later generated frames change the door shape and room layout, introduce a bench and plant, and develop a repeating lattice-like surface texture. For this fixed seed and input, adding the starting-image clamp reintroduced a visible defect despite the otherwise successful settings. This does not establish a population failure rate or isolate the model's internal cause. It does show that this text-to-video checkpoint does not yet provide a usable starting-image world simulator through the tested clamp.
+
+More updates of the previous adapter are not justified by its denoising loss alone. The next design needs a training and inference treatment of observed frames that the model can learn, with an explicit comparison to a native image-conditioned model. A pure text-to-video result contains no evidence of following a supplied camera command, reacting to an interaction, remembering a hidden object or supporting editable persistent worlds.
 
 The [native-control directory](../experiments/wan_adapter/native_control/) contains the measured source, numerical checks, failed preflights, runtime profile, full output sequence and original latent/noise tensors. External foundation weights remain separate and attributed under their upstream Apache-2.0 license. No hosted generation API was used.

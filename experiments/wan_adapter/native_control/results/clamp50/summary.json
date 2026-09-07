@@ -1,0 +1,16 @@
+{
+  "schema": "worldline-wan-native-clamp-summary-v1",
+  "status": "completed with visual failure",
+  "date": "2026-09-07",
+  "observed_reconstructed_frames": 1,
+  "generated_future_frames": 16,
+  "solver_updates": 50,
+  "sequential_cfg_calls": 100,
+  "all_50_post_update_prefix_differences": 0.0,
+  "initial_noise_matches_successful_t2v_file": true,
+  "future_fps_denoise_plus_decode": 0.024824904842146656,
+  "preview_fps": 10,
+  "finding": "The reconstructed initial frame is clear. Future frames introduce repeated lattice-like surface texture, blur, changed doorway shape and invented objects. This implicates hard clean initial-latent clamping for this one T2V input and seed; it does not establish that every image-conditioning method fails.",
+  "input_snapshot_note": "PROTOCOL.md and the unchanged capture manifest were copied after the run as additional validation-input snapshots. The independently pinned protocol hash and capture manifest hash match those enforced by the executed loader. They are not represented as part of the automatic pre-run measured-source snapshot.",
+  "no_actions_adapter_or_future_targets": true
+}

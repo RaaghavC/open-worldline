@@ -1,6 +1,6 @@
 # Reduced-resolution native-style Wan control
 
-This separate diagnostic restores the official T2V conditioning and UniPC recipe before any further action-adapter training. It uses the externally pretrained Wan model with no adapter, observed-image clamp, action input, capture-cache access or model training. It cannot establish Worldline control quality or Genie 3 parity.
+The initial pure-T2V diagnostic restores the official T2V conditioning and UniPC recipe before any further action-adapter training. It uses the externally pretrained Wan model with no adapter, observed-image clamp, action input, capture-cache access or model training. It cannot establish Worldline control quality or Genie 3 parity.
 
 The first runtime check is one negative/positive forward pair at 512 x 288 pixels and 17 decoded-frame equivalent. This size is smaller than the official 1.3B CLI's listed 480p dimensions and 81-frame example. The port uses float32 throughout, including parameters, attention, time projections, modulation, residuals and the head. It is an explicit full-precision numerical control. It does not claim bitwise reproduction of native CUDA BF16 autocast or FlashAttention.
 
@@ -91,3 +91,29 @@ The inspected frames show a recognizable doorway, warm plaster walls and plants.
 All 17 frames are newly generated; no observed frame was inserted. The official base loaded all 825 keys exactly and remained frozen. All recorded latent states and decoded frames were finite. The run completed within the original 900-second guard. The measurement interval excludes interpreter/import startup. Memory measures overlap and are not additive.
 
 The [full report](results/clip50/metrics.json), [preview](results/clip50/preview.gif), [all PNG frames](results/clip50/frames/), [initial noise](results/clip50/initial-noise.safetensors), [final latents](results/clip50/generated-latents.safetensors), [source snapshots](results/clip50/measured-source/) and [memory samples](results/clip50/memory.jsonl) are retained. The noise tensor SHA256 is `ce38d20bcf6ca132aeac8259e0f085fdfe80c64db7745df1c561b294dc201eeb`; it matches the profiled initial Gaussian tensor. The output is evidence for this one fixed-seed, reduced-resolution control, not a reproduction of the official CUDA 480p/81-frame example.
+
+## Completed single-factor initial-image clamp
+
+![Clamp result: observed frame 0 and generated future frames](results/clamp50/comparison.png)
+
+The [predeclared comparison](PROPOSED_CLAMP.md) has now completed once. It keeps the successful native-style T2V path fixed and adds only the independently encoded original first image, clamped before each denoiser call and after each solver update. No action tensor, adapter or future target is loaded. The saved Gaussian noise is byte-identical to the successful pure control.
+
+The reconstructed starting image is clear. Future frames show repeated lattice-like surface texture, blur, doorway changes and invented objects. This implicates hard clean first-latent clamping for this tested T2V input and seed. It is a failed image-continuation result, not evidence that every I2V architecture fails. All 50 prefix checks are exactly 0.0; correct enforcement of the clamp did not yield correct future imagery.
+
+The run took 660.295 seconds, with 613.639 seconds denoising and 30.875 seconds decoding. Peak sampled Metal driver allocation was 9.491 GiB. One reconstructed observed frame and 16 generated future frames are saved; measured future-frame throughput is 0.0248 fps, separate from the 10-fps preview. See [all evidence and source snapshots](results/clamp50/README.md).
+
+Reproduction after the successful control and the five independent clamp checks:
+
+```sh
+python native_control/test_clamp_independent.py --output results/clamp-independent.json
+PYTORCH_ENABLE_MPS_FALLBACK=0 python native_control/clamp_run.py \
+  --weights external-weights \
+  --text-cache text_cache/native-results \
+  --profile-run results/native-pair-profile \
+  --solver-profile results/native-solver-transfers/metrics.json \
+  --control-run results/native-clip50 \
+  --observation-cache data_cache \
+  --output results/native-clamp50
+```
+
+The observed cache carries original first-image and official VAE hashes plus 11 passed causality checks. Each output directory must be new. This command performs one bounded 50-step diagnostic, with the same 900-second and memory guards.
