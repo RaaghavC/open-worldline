@@ -1,0 +1,84 @@
+{
+  "schema": "worldline-official-cpu-evidence-publication-v1",
+  "source_directory": "work/wan22-official-cpu-independent-v1",
+  "scope": "12 completed independent tiny CPU and process-guard checks; no official weight values or GPU operations",
+  "copied_file_count": 18,
+  "copied_bytes": 109152,
+  "all_copied_files_byte_exact": true,
+  "path_transformations": [],
+  "manifest_self_excluded_from_files": true,
+  "files": {
+    "checked-source/LICENSE-APACHE-2.0.txt.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "checked-source/__init__.py.txt": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "checked-source/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "checked-source/inputs.py.txt": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "checked-source/reference.py.txt": {
+      "bytes": 4455,
+      "sha256": "0175041e5396b1c7cda19067c591fce7bbf91da96c117e5c52c65abee889bf8b"
+    },
+    "checked-source/run.py.txt": {
+      "bytes": 12485,
+      "sha256": "dbd612b43989a65fa7df4a96e908e66abdbcde135282daca09145c9d441a649e"
+    },
+    "checked-source/source-map.json.txt": {
+      "bytes": 1588,
+      "sha256": "2721c145bc9cec4f65d0c779e6f201b464f5c11626bcc3476cea57b3146bc1b2"
+    },
+    "checked-source/streaming.py.txt": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "checked-source/test_cpu.py.txt": {
+      "bytes": 9587,
+      "sha256": "c2c0c49a7dbcbb9429b3397ecbeb8dfc4d8f2bff57aa2c4378c95b975208b0dd"
+    },
+    "checked-source/test_independent.py.txt": {
+      "bytes": 18472,
+      "sha256": "f3339de98f670552b57337eecf5ec068b21c16885ac310cbe20c72bbbdb542e6"
+    },
+    "checked-source/upstream-provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "checked-source/vendor/__init__.py.txt": {
+      "bytes": 121,
+      "sha256": "d976cab62a82bdbe3d55a2993a77bf3ea0bee21d53d8d8e84608864ed0568173"
+    },
+    "checked-source/vendor/attention-original.py.txt.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "checked-source/vendor/attention.py.txt": {
+      "bytes": 1875,
+      "sha256": "0eb7924fbdb530538aa6c26ee82266eaeff8c8dfd479d733bbb5a747e9906027"
+    },
+    "checked-source/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "checked-source/vendor/shared_config-original.py.txt.txt": {
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    "report.json": {
+      "bytes": 7746,
+      "sha256": "acc4c384b2c1c2cf839f19297b420062c98336b3479caa49c37893f5d185a9da"
+    },
+    "test-output.txt": {
+      "bytes": 99,
+      "sha256": "f8df4e3d01926b414faf101d1cac7948c789888b1d174b16c0516a8547118af9"
+    }
+  }
+}

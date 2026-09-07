@@ -1,0 +1,330 @@
+{
+  "schema": "worldline-reference-comparator-independent-v2",
+  "status": "passed",
+  "source_sha256": "30c0de0f3b1ecebcfe195ffd616d5763cbee75a43405f2e62d6430af6c382e70",
+  "test_source_sha256": "7912d64ba2556490abcb871e8fc347c9ec75d9b4f89801c6c5bc297b2ae813d7",
+  "source_unchanged_after_checks": true,
+  "seconds": 0.3051082080055494,
+  "numpy_version": "1.26.4",
+  "analytic": [
+    {
+      "check": "signed",
+      "status": "passed",
+      "metrics": {
+        "elements": 3,
+        "exact_value_equal": false,
+        "nonzero_difference_elements": 3,
+        "maximum_absolute_difference": 8.0,
+        "mean_absolute_difference": 3.3333333333333335,
+        "rmse": 4.69041575982343,
+        "reference_rms": 2.6457513110645907,
+        "rmse_over_reference_rms": 1.7728105208558367,
+        "cosine": -0.5714285714285714
+      }
+    },
+    {
+      "check": "orthogonal",
+      "status": "passed",
+      "metrics": {
+        "elements": 2,
+        "exact_value_equal": false,
+        "nonzero_difference_elements": 2,
+        "maximum_absolute_difference": 2.0,
+        "mean_absolute_difference": 1.5,
+        "rmse": 1.5811388300841898,
+        "reference_rms": 1.4142135623730951,
+        "rmse_over_reference_rms": 1.118033988749895,
+        "cosine": 0.0
+      }
+    },
+    {
+      "check": "zero_actual",
+      "status": "passed",
+      "metrics": {
+        "elements": 2,
+        "exact_value_equal": false,
+        "nonzero_difference_elements": 2,
+        "maximum_absolute_difference": 4.0,
+        "mean_absolute_difference": 3.5,
+        "rmse": 3.5355339059327378,
+        "reference_rms": 3.5355339059327378,
+        "rmse_over_reference_rms": 1.0,
+        "cosine": null
+      }
+    },
+    {
+      "check": "zero_reference",
+      "status": "passed",
+      "metrics": {
+        "elements": 2,
+        "exact_value_equal": false,
+        "nonzero_difference_elements": 2,
+        "maximum_absolute_difference": 2.0,
+        "mean_absolute_difference": 2.0,
+        "rmse": 2.0,
+        "reference_rms": 0.0,
+        "rmse_over_reference_rms": null,
+        "cosine": null
+      }
+    },
+    {
+      "check": "equal",
+      "status": "passed",
+      "metrics": {
+        "elements": 3,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 2.160246899469287,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      }
+    },
+    {
+      "check": "nonfinite_empty_shape_rejection",
+      "status": "passed",
+      "cases": 4
+    },
+    {
+      "check": "native_time_axis_partition",
+      "status": "passed",
+      "observed_elements": 27648,
+      "future_elements": 110592,
+      "total_elements": 138240
+    }
+  ],
+  "known_saved_files": [
+    {
+      "label": "portable_cpu",
+      "file": "inputs.safetensors",
+      "sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+      "tensors": 4,
+      "parser_equals_safetensors_numpy": true
+    },
+    {
+      "label": "portable_cpu",
+      "file": "outputs.safetensors",
+      "sha256": "15b6993a7f5fe0057a41367208ea5f3d18fe49311fde28ce54c1f30a5d255c27",
+      "tensors": 4,
+      "parser_equals_safetensors_numpy": true
+    },
+    {
+      "label": "portable_mps",
+      "file": "inputs.safetensors",
+      "sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+      "tensors": 4,
+      "parser_equals_safetensors_numpy": true
+    },
+    {
+      "label": "portable_mps",
+      "file": "outputs.safetensors",
+      "sha256": "70b6728371e5373b9e07b1055e2d23c59310d60f640b789240421ca6e42bc46d",
+      "tensors": 4,
+      "parser_equals_safetensors_numpy": true
+    }
+  ],
+  "parser_cases": [
+    {
+      "case": "valid_scalar",
+      "comparator": "accepted",
+      "library": "accepted"
+    },
+    {
+      "case": "valid_zero_size",
+      "comparator": "accepted",
+      "library": "accepted"
+    },
+    {
+      "case": "gap",
+      "comparator": "rejected:ValueError",
+      "library": "rejected:SafetensorError"
+    },
+    {
+      "case": "trailing",
+      "comparator": "rejected:ValueError",
+      "library": "rejected:SafetensorError"
+    },
+    {
+      "case": "shape_mismatch",
+      "comparator": "rejected:ValueError",
+      "library": "rejected:SafetensorError"
+    },
+    {
+      "case": "overlap",
+      "comparator": "rejected:ValueError",
+      "library": "rejected:SafetensorError"
+    },
+    {
+      "case": "unsupported_dtype",
+      "comparator": "rejected:ValueError",
+      "library": "accepted"
+    },
+    {
+      "case": "invalid_metadata",
+      "comparator": "rejected:ValueError",
+      "library": "rejected:SafetensorError"
+    },
+    {
+      "case": "duplicate_json_key",
+      "comparator": "accepted",
+      "library": "accepted"
+    }
+  ],
+  "reference_run_gate_cases": [
+    {
+      "case": "valid",
+      "outcome": "accepted"
+    },
+    {
+      "case": "parent_planned",
+      "outcome": "rejected"
+    },
+    {
+      "case": "terminal_failed",
+      "outcome": "rejected"
+    },
+    {
+      "case": "terminal_nonzero",
+      "outcome": "rejected"
+    },
+    {
+      "case": "one_prediction",
+      "outcome": "rejected"
+    },
+    {
+      "case": "extra_pass",
+      "outcome": "rejected"
+    },
+    {
+      "case": "worker_hash",
+      "outcome": "rejected"
+    },
+    {
+      "case": "worker_input_mismatch",
+      "outcome": "rejected"
+    },
+    {
+      "case": "input_bytes",
+      "outcome": "rejected"
+    },
+    {
+      "case": "output_bytes",
+      "outcome": "rejected"
+    },
+    {
+      "case": "snapshot_bytes",
+      "outcome": "rejected"
+    },
+    {
+      "case": "current_source_bytes",
+      "outcome": "rejected"
+    },
+    {
+      "case": "source_map",
+      "outcome": "rejected"
+    },
+    {
+      "case": "watchdog",
+      "outcome": "rejected"
+    },
+    {
+      "case": "extra_output",
+      "outcome": "rejected"
+    },
+    {
+      "case": "end_to_end_fixture_only",
+      "outcome": "computed with exact coupling"
+    },
+    {
+      "case": "inconsistent_reference_guidance",
+      "outcome": "rejected before report write"
+    }
+  ],
+  "guidance_checks": {
+    "portable_cpu": {
+      "equation": "negative + float32(5) * (positive - negative)",
+      "operations": "Separate NumPy subtract, multiply and add, each with dtype=float32",
+      "saved_outputs_changed": false,
+      "residual_denominator": "Recomputed eager FP32 guidance; distinct from cross-model reference normalization",
+      "all": {
+        "elements": 138240,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.2431141447742526,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "observed": {
+        "elements": 27648,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 0.7086071340941998,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "future": {
+        "elements": 110592,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.343925203852498,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0000000000000002
+      }
+    },
+    "portable_mps": {
+      "equation": "negative + float32(5) * (positive - negative)",
+      "operations": "Separate NumPy subtract, multiply and add, each with dtype=float32",
+      "saved_outputs_changed": false,
+      "residual_denominator": "Recomputed eager FP32 guidance; distinct from cross-model reference normalization",
+      "all": {
+        "elements": 138240,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.244518532631993,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "observed": {
+        "elements": 27648,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 0.7065894484426389,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "future": {
+        "elements": 110592,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.345814181236768,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 0.9999999999999999
+      }
+    }
+  },
+  "limitations": [
+    "No forthcoming official reference run was executed or certified.",
+    "End-to-end reference-run metadata uses an explicitly synthetic fixture containing known portable CPU outputs, not a newly executed official reference.",
+    "No official-model comparison result or image-quality result was produced by these checks."
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "schema": "worldline-wan22-official-reference-comparison-v2",
+  "scope": "Descriptive first-step numerical comparison only; no visual quality or CUDA-equivalence conclusion",
+  "normalization": "The streamed official CPU output is the denominator in every cross-model comparison; guidance residuals use their own recomputed guidance denominator",
+  "zero_denominators": "Relative RMSE and cosine are null when their denominators are zero",
+  "source_sha256": "30c0de0f3b1ecebcfe195ffd616d5763cbee75a43405f2e62d6430af6c382e70",
+  "reference_inputs_sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+  "reference_outputs_sha256": "fcf4b6cdb662a85927e618beecb2f12acf748dec6b358caf05d715f0ed0c4733",
+  "reference_run_identity": {
+    "parent_metrics_sha256": "726f0a943817cc748eedbe3763496fcb95b17ec4368414afffdd03311dc07cb3",
+    "result_metrics_sha256": "c5a437ae50cfbfb84d4d994775fbdb2d961d4559e63022e7e92f96db1cdb7ca8",
+    "terminal_sha256": "d07df7ad20852421b00203e359047729402606443de32b856a95e97254fe95fb",
+    "inputs_sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+    "outputs_sha256": "fcf4b6cdb662a85927e618beecb2f12acf748dec6b358caf05d715f0ed0c4733",
+    "source_sha256": {
+      "__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "reference.py": "0175041e5396b1c7cda19067c591fce7bbf91da96c117e5c52c65abee889bf8b",
+      "streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "run.py": "dbd612b43989a65fa7df4a96e908e66abdbcde135282daca09145c9d441a649e",
+      "test_cpu.py": "c2c0c49a7dbcbb9429b3397ecbeb8dfc4d8f2bff57aa2c4378c95b975208b0dd",
+      "vendor/__init__.py": "d976cab62a82bdbe3d55a2993a77bf3ea0bee21d53d8d8e84608864ed0568173",
+      "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "vendor/attention.py": "0eb7924fbdb530538aa6c26ee82266eaeff8c8dfd479d733bbb5a747e9906027",
+      "vendor/attention-original.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "vendor/shared_config-original.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "source-map.json": "2721c145bc9cec4f65d0c779e6f201b464f5c11626bcc3476cea57b3146bc1b2",
+      "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "retained_and_current_sources_match": true,
+    "completed_predictions": 2,
+    "no_watchdog_record": true
+  },
+  "numpy_version": "1.26.4",
+  "analytic_checks": 7,
+  "comparisons": {
+    "portable_cpu": {
+      "outputs_sha256": "15b6993a7f5fe0057a41367208ea5f3d18fe49311fde28ce54c1f30a5d255c27",
+      "velocities": {
+        "positive_velocity": {
+          "all": {
+            "elements": 138240,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 138240,
+            "maximum_absolute_difference": 0.3685484901070595,
+            "mean_absolute_difference": 0.0034464343200702845,
+            "rmse": 0.007159439197454836,
+            "reference_rms": 1.1937045977620557,
+            "rmse_over_reference_rms": 0.005997664087813078,
+            "cosine": 0.9999820190513261
+          },
+          "observed": {
+            "elements": 27648,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 27648,
+            "maximum_absolute_difference": 0.3685484901070595,
+            "mean_absolute_difference": 0.006522537637986048,
+            "rmse": 0.012998921875176575,
+            "reference_rms": 0.6514361168810381,
+            "rmse_over_reference_rms": 0.019954254205942917,
+            "cosine": 0.9998011617248008
+          },
+          "future": {
+            "elements": 110592,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 110592,
+            "maximum_absolute_difference": 0.20601105690002441,
+            "mean_absolute_difference": 0.0026774084905913436,
+            "rmse": 0.004672148279788422,
+            "reference_rms": 1.2942453707869996,
+            "rmse_over_reference_rms": 0.0036099401127835597,
+            "cosine": 0.9999934961290031
+          }
+        },
+        "negative_velocity": {
+          "all": {
+            "elements": 138240,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 138240,
+            "maximum_absolute_difference": 0.3723657727241516,
+            "mean_absolute_difference": 0.003367718103669968,
+            "rmse": 0.00712690738479555,
+            "reference_rms": 1.1904608257337257,
+            "rmse_over_reference_rms": 0.005986679469610409,
+            "cosine": 0.9999821010039159
+          },
+          "observed": {
+            "elements": 27648,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 27648,
+            "maximum_absolute_difference": 0.3723657727241516,
+            "mean_absolute_difference": 0.006047624559278628,
+            "rmse": 0.012702085020912407,
+            "reference_rms": 0.6527407879595902,
+            "rmse_over_reference_rms": 0.019459615907591737,
+            "cosine": 0.9998107328311203
+          },
+          "future": {
+            "elements": 110592,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 110592,
+            "maximum_absolute_difference": 0.16306167840957642,
+            "mean_absolute_difference": 0.0026977414897678027,
+            "rmse": 0.0048119923233204374,
+            "reference_rms": 1.2903404930256797,
+            "rmse_over_reference_rms": 0.0037292422808780845,
+            "cosine": 0.9999930649287477
+          }
+        },
+        "guided_velocity": {
+          "all": {
+            "elements": 138240,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 138240,
+            "maximum_absolute_difference": 2.2895819544792175,
+            "mean_absolute_difference": 0.02306878786269627,
+            "rmse": 0.04769862578184633,
+            "reference_rms": 1.245260197322435,
+            "rmse_over_reference_rms": 0.03830414389250388,
+            "cosine": 0.9992666173995166
+          },
+          "observed": {
+            "elements": 27648,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 27648,
+            "maximum_absolute_difference": 2.2895819544792175,
+            "mean_absolute_difference": 0.042874661435386464,
+            "rmse": 0.08740246197153004,
+            "reference_rms": 0.70937179190213,
+            "rmse_over_reference_rms": 0.12321107629211835,
+            "cosine": 0.9924019060496317
+          },
+          "future": {
+            "elements": 110592,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 110592,
+            "maximum_absolute_difference": 1.0357884168624878,
+            "mean_absolute_difference": 0.018117319469523722,
+            "rmse": 0.030563884523642955,
+            "reference_rms": 1.3463057282830586,
+            "rmse_over_reference_rms": 0.02270203853520034,
+            "cosine": 0.999743418285959
+          }
+        }
+      }
+    },
+    "portable_mps": {
+      "outputs_sha256": "70b6728371e5373b9e07b1055e2d23c59310d60f640b789240421ca6e42bc46d",
+      "velocities": {
+        "positive_velocity": {
+          "all": {
+            "elements": 138240,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 138238,
+            "maximum_absolute_difference": 0.34990815073251724,
+            "mean_absolute_difference": 0.0038628720894340377,
+            "rmse": 0.007247225206517047,
+            "reference_rms": 1.1937045977620557,
+            "rmse_over_reference_rms": 0.006071204902874685,
+            "cosine": 0.9999815713105435
+          },
+          "observed": {
+            "elements": 27648,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 27648,
+            "maximum_absolute_difference": 0.34990815073251724,
+            "mean_absolute_difference": 0.006976955565414584,
+            "rmse": 0.013565834073785135,
+            "reference_rms": 0.6514361168810381,
+            "rmse_over_reference_rms": 0.020824504079902675,
+            "cosine": 0.9997836686129355
+          },
+          "future": {
+            "elements": 110592,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 110590,
+            "maximum_absolute_difference": 0.0992807149887085,
+            "mean_absolute_difference": 0.0030843512204389014,
+            "rmse": 0.004432254275546769,
+            "reference_rms": 1.2942453707869996,
+            "rmse_over_reference_rms": 0.00342458576680218,
+            "cosine": 0.9999941361574544
+          }
+        },
+        "negative_velocity": {
+          "all": {
+            "elements": 138240,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 138239,
+            "maximum_absolute_difference": 0.3698209524154663,
+            "mean_absolute_difference": 0.003810273227057398,
+            "rmse": 0.0073210365741473915,
+            "reference_rms": 1.1904608257337257,
+            "rmse_over_reference_rms": 0.00614975009331799,
+            "cosine": 0.9999811087907073
+          },
+          "observed": {
+            "elements": 27648,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 27648,
+            "maximum_absolute_difference": 0.3698209524154663,
+            "mean_absolute_difference": 0.006288255046331064,
+            "rmse": 0.012209148218910275,
+            "reference_rms": 0.6527407879595902,
+            "rmse_over_reference_rms": 0.018704435886525473,
+            "cosine": 0.9998259178587358
+          },
+          "future": {
+            "elements": 110592,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 110591,
+            "maximum_absolute_difference": 0.2196873426437378,
+            "mean_absolute_difference": 0.003190777772238981,
+            "rmse": 0.0054526274026541295,
+            "reference_rms": 1.2903404930256797,
+            "rmse_over_reference_rms": 0.004225727575105724,
+            "cosine": 0.9999910789717704
+          }
+        },
+        "guided_velocity": {
+          "all": {
+            "elements": 138240,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 138240,
+            "maximum_absolute_difference": 1.7450852990150452,
+            "mean_absolute_difference": 0.021010204776245735,
+            "rmse": 0.04339897058575661,
+            "reference_rms": 1.245260197322435,
+            "rmse_over_reference_rms": 0.03485132719978789,
+            "cosine": 0.9993925080437306
+          },
+          "observed": {
+            "elements": 27648,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 27648,
+            "maximum_absolute_difference": 1.7450852990150452,
+            "mean_absolute_difference": 0.040684494424921364,
+            "rmse": 0.08093300497397336,
+            "reference_rms": 0.70937179190213,
+            "rmse_over_reference_rms": 0.11409109566784052,
+            "cosine": 0.9934737051707518
+          },
+          "future": {
+            "elements": 110592,
+            "exact_value_equal": false,
+            "nonzero_difference_elements": 110592,
+            "maximum_absolute_difference": 0.8673788905143738,
+            "mean_absolute_difference": 0.016091632364076826,
+            "rmse": 0.026773129931890873,
+            "reference_rms": 1.3463057282830586,
+            "rmse_over_reference_rms": 0.019886367092885063,
+            "cosine": 0.9998022606575768
+          }
+        }
+      }
+    }
+  },
+  "guidance_equation_residuals": {
+    "official_reference": {
+      "equation": "negative + float32(5) * (positive - negative)",
+      "operations": "Separate NumPy subtract, multiply and add, each with dtype=float32",
+      "saved_outputs_changed": false,
+      "residual_denominator": "Recomputed eager FP32 guidance; distinct from cross-model reference normalization",
+      "all": {
+        "elements": 138240,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.245260197322435,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 0.9999999999999999
+      },
+      "observed": {
+        "elements": 27648,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 0.70937179190213,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "future": {
+        "elements": 110592,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.3463057282830586,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0000000000000002
+      }
+    },
+    "portable_cpu": {
+      "equation": "negative + float32(5) * (positive - negative)",
+      "operations": "Separate NumPy subtract, multiply and add, each with dtype=float32",
+      "saved_outputs_changed": false,
+      "residual_denominator": "Recomputed eager FP32 guidance; distinct from cross-model reference normalization",
+      "all": {
+        "elements": 138240,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.2431141447742526,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "observed": {
+        "elements": 27648,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 0.7086071340941998,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "future": {
+        "elements": 110592,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.343925203852498,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0000000000000002
+      }
+    },
+    "portable_mps": {
+      "equation": "negative + float32(5) * (positive - negative)",
+      "operations": "Separate NumPy subtract, multiply and add, each with dtype=float32",
+      "saved_outputs_changed": false,
+      "residual_denominator": "Recomputed eager FP32 guidance; distinct from cross-model reference normalization",
+      "all": {
+        "elements": 138240,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.244518532631993,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "observed": {
+        "elements": 27648,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 0.7065894484426389,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 1.0
+      },
+      "future": {
+        "elements": 110592,
+        "exact_value_equal": true,
+        "nonzero_difference_elements": 0,
+        "maximum_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "reference_rms": 1.345814181236768,
+        "rmse_over_reference_rms": 0.0,
+        "cosine": 0.9999999999999999
+      }
+    }
+  },
+  "reference_guidance_exact_required": true,
+  "status": "computed"
+}

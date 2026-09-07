@@ -1,0 +1,53 @@
+{
+  "original_source_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+  "translated_source_sha256": "b87c6b22c06b4c34338cf314c22c470b8b7e7747e751854207c225c937261558",
+  "complete_ast_reversal_exact": true,
+  "changed_calls": [
+    {
+      "line": 27,
+      "before": "torch.amp.autocast('cuda', enabled=False)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='enabled', value=Constant(value=False))])"
+    },
+    {
+      "line": 38,
+      "before": "torch.amp.autocast('cuda', enabled=False)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='enabled', value=Constant(value=False))])"
+    },
+    {
+      "line": 238,
+      "before": "torch.amp.autocast('cuda', dtype=torch.float32)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='dtype', value=Attribute(value=Name(id='torch', ctx=Load()), attr='float32', ctx=Load()))])"
+    },
+    {
+      "line": 246,
+      "before": "torch.amp.autocast('cuda', dtype=torch.float32)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='dtype', value=Attribute(value=Name(id='torch', ctx=Load()), attr='float32', ctx=Load()))])"
+    },
+    {
+      "line": 286,
+      "before": "torch.amp.autocast('cuda', dtype=torch.float32)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='dtype', value=Attribute(value=Name(id='torch', ctx=Load()), attr='float32', ctx=Load()))])"
+    },
+    {
+      "line": 462,
+      "before": "torch.amp.autocast('cuda', dtype=torch.float32)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='dtype', value=Attribute(value=Name(id='torch', ctx=Load()), attr='float32', ctx=Load()))])"
+    },
+    {
+      "line": 254,
+      "before": "torch.amp.autocast('cuda', dtype=torch.float32)",
+      "after": "torch.amp.autocast('cpu', enabled=False)",
+      "original_ast": "Call(func=Attribute(value=Attribute(value=Name(id='torch', ctx=Load()), attr='amp', ctx=Load()), attr='autocast', ctx=Load()), args=[Constant(value='cuda')], keywords=[keyword(arg='dtype', value=Attribute(value=Name(id='torch', ctx=Load()), attr='float32', ctx=Load()))])"
+    }
+  ],
+  "other_ast_nodes_changed": false,
+  "attention_substitution": "Package-local independent CPU BF16 SDPA, not CUDA FlashAttention",
+  "model_equations_replaced": false,
+  "literal_complex_fp64_rope": true
+}

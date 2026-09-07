@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "execute_requested": true,
+  "weights_loaded": true,
+  "model_execution": true,
+  "source_sha256": {
+    "__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "reference.py": "0175041e5396b1c7cda19067c591fce7bbf91da96c117e5c52c65abee889bf8b",
+    "streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "run.py": "dbd612b43989a65fa7df4a96e908e66abdbcde135282daca09145c9d441a649e",
+    "test_cpu.py": "c2c0c49a7dbcbb9429b3397ecbeb8dfc4d8f2bff57aa2c4378c95b975208b0dd",
+    "vendor/__init__.py": "d976cab62a82bdbe3d55a2993a77bf3ea0bee21d53d8d8e84608864ed0568173",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "0eb7924fbdb530538aa6c26ee82266eaeff8c8dfd479d733bbb5a747e9906027",
+    "vendor/attention-original.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config-original.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "source-map.json": "2721c145bc9cec4f65d0c779e6f201b464f5c11626bcc3476cea57b3146bc1b2",
+    "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "input_identity": {
+    "pair_files": {
+      "metrics.json": "b8f1b035498278a1f5bc273b0526b7a17e70f09244f49b792952f2bd68df6b57",
+      "terminal.json": "bf7c395ff1544bf9195c0ccc949bcaf13e54f57bc10ca9abd17b7f61eb4943a5",
+      "inputs.safetensors": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5"
+    },
+    "text_files": {
+      "manifest.json": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+      "embeddings.safetensors": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406"
+    },
+    "observation": {
+      "codec_report_sha256": "024927e795ecd381412ac38fa7f0936e6621f494c3dd9b5d4a13e06a904d5c5e",
+      "cache_sha256": "b2154c91d4029c05d09faba34a1cd8cb838b9aebd247ff8d7e52bceb265edf76",
+      "observation_tensor_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "input_image_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+      "codec_source_sha256": {
+        "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+        "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+        "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+        "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+      }
+    },
+    "text": {
+      "manifest_sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+      "reuse_evidence_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "positive_tensor_sha256": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093",
+      "negative_tensor_sha256": "aa6911f67cb7a4e5cf934131594b6fe264dff9983f84ab188e9199c706cf60cc"
+    },
+    "input_tensor_sha256": {
+      "initial_latent": "59a60814a1f4eaa8afdd7ba927b3fc6946c04be06ca363dd4eed94e85da13cfb",
+      "initial_noise": "976ecd5ea20b269da0c3a3cfd4a1cd768f0472546e6ce3dc5280963ad384d90c",
+      "observation": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "token_times": "c33795e46bac9af3b71a0c8b21d41d8a0137b154febf5225d3f70fe7e984c3e3"
+    },
+    "noise_regenerated": false,
+    "actions_read": false,
+    "future_target_read": false
+  },
+  "gates": {
+    "author_cpu_report_sha256": "edf612db115c3964c371db65574d88bb487ca7670000764e4c89fb6c7e27a6db",
+    "independent_report_sha256": "acc4c384b2c1c2cf839f19297b420062c98336b3479caa49c37893f5d185a9da"
+  },
+  "pair_predictions": 2,
+  "solver_steps": 0,
+  "input_file_sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+  "plan_checks": "Pinned config/index and shard sizes/headers only; all shard bytes are verified in worker before tensor values",
+  "result_metrics_sha256": "c5a437ae50cfbfb84d4d994775fbdb2d961d4559e63022e7e92f96db1cdb7ca8",
+  "elapsed_seconds": 509.2739250829909
+}

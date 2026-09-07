@@ -1,0 +1,17 @@
+{
+  "scope": "Independent CPU execution of attributed official Wan2.2 model equations; not CUDA numerical parity or an original model",
+  "upstream_provenance_meaning": "upstream-provenance.json is an exact copied record whose relative paths describe the upstream package. They are not assertions that this package's custom vendor/attention.py is upstream code.",
+  "official_code_commit": "42bf4cfaa384bc21833865abc2f9e6c0e67233dc",
+  "official_sources_retained": {
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention-original.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config-original.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+    "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "custom_attention_file": "vendor/attention.py",
+  "custom_attention_meaning": "Original compatibility code implementing explicitly declared CPU BF16 SDPA, separately source-hashed by CPU and runtime reports",
+  "runtime_translation": "Seven official CUDA autocast calls are changed to disabled CPU autocast calls. A reversible AST comparison verifies that no other AST nodes change. Original source and translated text are retained separately.",
+  "parameter_path": "Original FP32 values, official convert_model_dtype=False semantics, outer CPU BF16 autocast with weight caching disabled; one module loaded and evicted at a time",
+  "imported_portable_equations": false,
+  "weights_redistributed": false
+}

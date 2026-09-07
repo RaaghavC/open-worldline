@@ -1,0 +1,148 @@
+{
+  "schema": "worldline-wan22-official-cpu-independent-review-v1",
+  "status": "passed",
+  "tests": 12,
+  "pytest_exit_code": 0,
+  "elapsed_seconds": 4.694407458009664,
+  "source_sha256": {
+    "__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "reference.py": "0175041e5396b1c7cda19067c591fce7bbf91da96c117e5c52c65abee889bf8b",
+    "streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "run.py": "dbd612b43989a65fa7df4a96e908e66abdbcde135282daca09145c9d441a649e",
+    "test_cpu.py": "c2c0c49a7dbcbb9429b3397ecbeb8dfc4d8f2bff57aa2c4378c95b975208b0dd",
+    "vendor/__init__.py": "d976cab62a82bdbe3d55a2993a77bf3ea0bee21d53d8d8e84608864ed0568173",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "0eb7924fbdb530538aa6c26ee82266eaeff8c8dfd479d733bbb5a747e9906027",
+    "vendor/attention-original.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config-original.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "source-map.json": "2721c145bc9cec4f65d0c779e6f201b464f5c11626bcc3476cea57b3146bc1b2",
+    "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "test_independent.py": "f3339de98f670552b57337eecf5ec068b21c16885ac310cbe20c72bbbdb542e6"
+  },
+  "source_sha256_after": {
+    "__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "reference.py": "0175041e5396b1c7cda19067c591fce7bbf91da96c117e5c52c65abee889bf8b",
+    "streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "run.py": "dbd612b43989a65fa7df4a96e908e66abdbcde135282daca09145c9d441a649e",
+    "test_cpu.py": "c2c0c49a7dbcbb9429b3397ecbeb8dfc4d8f2bff57aa2c4378c95b975208b0dd",
+    "vendor/__init__.py": "d976cab62a82bdbe3d55a2993a77bf3ea0bee21d53d8d8e84608864ed0568173",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "0eb7924fbdb530538aa6c26ee82266eaeff8c8dfd479d733bbb5a747e9906027",
+    "vendor/attention-original.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config-original.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "source-map.json": "2721c145bc9cec4f65d0c779e6f201b464f5c11626bcc3476cea57b3146bc1b2",
+    "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "test_independent.py": "f3339de98f670552b57337eecf5ec068b21c16885ac310cbe20c72bbbdb542e6"
+  },
+  "sources_unchanged": true,
+  "test_results": [
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_complete_ast_diff_is_only_seven_native_precision_calls",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.05141212500166148
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_literal_complex_rope_axes_padding_and_dtype",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 1.5979172919760458
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_attention_matches_native_key_truncation_and_preserves_query_dtype",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0083476250001695
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_streamed_original_storage_matches_literal_resident_and_operation_dtypes",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 1.3014624170027673
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_partial_load_native_and_observer_failure_release_parameters[load]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.13415174998226576
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_partial_load_native_and_observer_failure_release_parameters[native]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.37079529199399985
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_partial_load_native_and_observer_failure_release_parameters[event]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.3520591249980498
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_partial_hook_registration_failure_cleans_previously_registered_hooks",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.07929237498319708
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_retained_parameter_owner_is_detected_not_counted_as_released",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.4589015420060605
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_shard_copy_is_owned_and_plan_only_cannot_read_values",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.08034454198786989
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_parent_watchdog_retains_failure_and_kills_stubborn_child",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.010491666995221749
+    },
+    {
+      "nodeid": "experiments/wan22_native/official_cpu/test_independent.py::test_pre_supervisor_handoff_failure_also_kills_stubborn_child",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0030047500040382147
+    }
+  ],
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "dependencies": {
+    "torch": "2.5.1",
+    "diffusers": "0.34.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pytest": "7.4.4"
+  },
+  "threads": 1,
+  "actual_5b_weight_values_loaded": false,
+  "gpu_used": false,
+  "original_model_claim": false,
+  "cuda_flash_attention_parity_claim": false,
+  "test_output_sha256": "f8df4e3d01926b414faf101d1cac7948c789888b1d174b16c0516a8547118af9",
+  "review_findings": {
+    "literal_ast_only_seven_precision_contexts": true,
+    "literal_complex128_rope": true,
+    "independent_attention_key_truncation_oracle": true,
+    "root_patch_device_read_preloaded_once": true,
+    "resident_and_streamed_outputs_exact": true,
+    "intermediate_native_dtypes_exact": true,
+    "cache_disabled_and_cache_on_output_equality": true,
+    "a_b_a_context_isolation": true,
+    "fp32_parameter_storage_ownership_and_eviction": true,
+    "partial_hook_load_forward_event_failure_cleanup": true,
+    "parent_deadline_and_stubborn_child_termination": true,
+    "handoff_failure_kill_escalation": true,
+    "input_review": "Exact saved CPU-pair file pins, genuine text file pins, 144 observed time-zero tokens and 576 time-999 tokens; no actions, targets, adapter or renderer inputs. Plan verifies shard headers only; worker verifies pinned shard bytes before values.",
+    "scope_limit": "Tiny CPU evidence and read-only runner review. Actual full-model execution and output comparison are not performed by this review."
+  }
+}
