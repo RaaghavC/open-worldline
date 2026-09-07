@@ -1,0 +1,55 @@
+from pathlib import Path
+import json,hashlib,sys,math
+import torch
+from safetensors.torch import load_file
+root=Path('outputs/open-worldline/experiments/wan_adapter').resolve();sys.path.insert(0,str(root))
+from adapter import ActionObservationAdapter
+from tokenwise_time.training import training_pair
+from tokenwise_time.training_data import read_training_window,tensor_sha
+from tokenwise_time.profile_update import module_sha
+run=Path('work/tokenwise-update-v1');m=json.loads((run/'metrics.json').read_text())
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+assert m['status']=='passed' and m['completed_updates']==1 and m['requested_updates']==1
+assert m['base_tensor_sha256_before']==m['base_tensor_sha256_after']
+assert m['update']['gradient_tensors']==42 and all(math.isfinite(n) and n>0 for n in m['update']['residual_gradient_norms'])
+for f,h in m['source_sha256'].items():assert sha(run/'measured-source'/(f+'.txt'))==h
+for f,h in m['output_sha256'].items():assert sha(run/f)==h
+before=load_file(run/'initial-adapter.safetensors',device='cpu');after=load_file(run/'updated-adapter.safetensors',device='cpu')
+assert list(before)==list(after)
+assert all(torch.isfinite(v).all() for v in after.values())
+torch.manual_seed(m['original_adapter_seed']);adapter=ActionObservationAdapter(1536)
+assert set(before)==set(adapter.state_dict())
+assert all(torch.equal(v,before[n]) for n,v in adapter.state_dict().items())
+assert module_sha(adapter)==m['adapter_sha256_before']
+adapter.load_state_dict(after,strict=True);assert module_sha(adapter)==m['adapter_sha256_after']
+changed=[n for n in before if not torch.equal(before[n],after[n])]
+saved=load_file(run/'sampled-training-inputs.safetensors',device='cpu')
+assert set(saved)=={'noise','integer_time','token_times','noisy_training_latent'}
+window,provenance=read_training_window(root/'data_cache',m['capture']['window'])
+x,v,t=training_pair(window['target'],saved['noise'],window['observation'],saved['integer_time'])
+assert torch.equal(x,saved['noisy_training_latent']) and torch.equal(t,saved['token_times'])
+assert tensor_sha(v)==m['training_sample']['prediction_target_sha256']
+assert torch.equal(x[:,:,:1],window['observation'])
+assert torch.equal(t[:,:576],torch.zeros_like(t[:,:576]))
+assert torch.equal(t[:,576:],torch.full_like(t[:,576:],118))
+generator=torch.Generator().manual_seed(m['noise_seed'])
+assert torch.equal(torch.randint(50,951,(1,),generator=generator),saved['integer_time'])
+assert torch.equal(torch.randn(window['target'].shape,generator=generator),saved['noise'])
+rows=[json.loads(line) for line in (run/'memory.jsonl').read_text().splitlines()]
+peaks={k:max(r[k] for r in rows) for k in ['rss_bytes','mps_active_bytes','mps_driver_bytes']}
+assert peaks==m['peaks_sampled']
+assert min(r['available_system_bytes'] for r in rows)>2*1024**3
+report={'status':'passed','review_device':'cpu','new_gpu_work':False,'pretrained_base_loaded':False,
+ 'run_metrics_sha256':sha(run/'metrics.json'),'source_snapshots_verified':len(m['source_sha256']),
+ 'output_file_hashes_verified':len(m['output_sha256']),'exact_seeded_initial_adapter':True,
+ 'adapter_initial_and_final_module_hashes_match':True,'updated_adapter_all_finite':True,
+ 'changed_adapter_tensors':len(changed),'total_adapter_tensors':len(before),'changed_tensor_names':changed,
+ 'exact_seeded_noise_and_integer_time':True,'saved_noising_recomputed_exactly_on_cpu':True,
+ 'observation_equals_independent_cache':True,'observed_tokens_time_zero':576,'future_tokens_time_118':2304,
+ 'predicted_training_target_hash_matches':True,'memory_samples':len(rows),'recomputed_peaks_bytes':peaks,
+ 'minimum_sampled_available_system_bytes':min(r['available_system_bytes'] for r in rows),
+ 'gradient_evidence_scope':'42 finite gradient tensors and three positive aggregate residual norms are recorded by the executed guard. Raw gradients were not saved and were not recomputed in this packaging audit.',
+ 'base_evidence_scope':'The executed source hashes the full frozen state before and after and records equal hashes. No duplicate external-base copy is packaged.',
+ 'limitation':'One update on one original development clip. No post-update generated video or held-out quality comparison, no MPS-vs-CPU full-model gradient equality test.'}
+Path('work/tokenwise-update-v1-independent-review.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps({k:v for k,v in report.items() if k!='changed_tensor_names'},indent=2))

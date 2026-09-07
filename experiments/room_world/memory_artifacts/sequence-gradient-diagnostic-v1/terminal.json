@@ -1,0 +1,78 @@
+{
+  "status": "complete",
+  "reason": null,
+  "exit_code": 0,
+  "elapsed_seconds": 6.585018291982124,
+  "max_seconds": 180.0,
+  "max_rss_gib": 18,
+  "minimum_available_gib": 2,
+  "sample_interval_seconds": 0.5,
+  "samples": [
+    {
+      "seconds": 0.00024724999093450606,
+      "rss_bytes": 147456,
+      "available_bytes": 12624510976
+    },
+    {
+      "seconds": 0.506052084005205,
+      "rss_bytes": 129482752,
+      "available_bytes": 12521177088
+    },
+    {
+      "seconds": 1.00809562500217,
+      "rss_bytes": 164134912,
+      "available_bytes": 12473565184
+    },
+    {
+      "seconds": 1.5160144589899573,
+      "rss_bytes": 263553024,
+      "available_bytes": 12473565184
+    },
+    {
+      "seconds": 2.024375583976507,
+      "rss_bytes": 355270656,
+      "available_bytes": 12114051072
+    },
+    {
+      "seconds": 2.5291464169858955,
+      "rss_bytes": 363954176,
+      "available_bytes": 11144298496
+    },
+    {
+      "seconds": 3.039329083985649,
+      "rss_bytes": 438059008,
+      "available_bytes": 10646405120
+    },
+    {
+      "seconds": 3.5412507499859203,
+      "rss_bytes": 455376896,
+      "available_bytes": 10689232896
+    },
+    {
+      "seconds": 4.0431850839813706,
+      "rss_bytes": 460324864,
+      "available_bytes": 10715168768
+    },
+    {
+      "seconds": 4.553366666979855,
+      "rss_bytes": 461012992,
+      "available_bytes": 10614161408
+    },
+    {
+      "seconds": 5.0633387089765165,
+      "rss_bytes": 551370752,
+      "available_bytes": 8396554240
+    },
+    {
+      "seconds": 5.573651958984556,
+      "rss_bytes": 621936640,
+      "available_bytes": 8331296768
+    },
+    {
+      "seconds": 6.083905916981166,
+      "rss_bytes": 721960960,
+      "available_bytes": 8719400960
+    }
+  ],
+  "limit": "RSS/available RAM sampled in parent; Metal allocator cap is set in worker; stopped runs retain last completed recovery files"
+}

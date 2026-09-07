@@ -1,0 +1,789 @@
+{
+  "status": "passed",
+  "configuration": {
+    "model_type": "t2v",
+    "dim": 256,
+    "ffn_dim": 512,
+    "freq_dim": 256,
+    "num_heads": 2,
+    "num_layers": 2,
+    "text_dim": 4096,
+    "text_len": 512,
+    "in_dim": 16,
+    "out_dim": 16
+  },
+  "head_width": 128,
+  "atol": 2e-05,
+  "rtol": 2e-05,
+  "rows": [
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "time_embedding",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "time_projection",
+      "shape": [
+        2,
+        20,
+        1536
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "text_embedding",
+      "shape": [
+        2,
+        512,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "block0_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "block0_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "block0_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "block1_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "block1_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "block1_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "head_time_input",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "head_modulation",
+      "shape": [
+        2,
+        20,
+        2,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "head_output",
+      "shape": [
+        2,
+        20,
+        64
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "velocity0",
+      "shape": [
+        16,
+        3,
+        4,
+        6
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        999,
+        499
+      ],
+      "stage": "velocity1",
+      "shape": [
+        16,
+        2,
+        2,
+        4
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "time_embedding",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "time_projection",
+      "shape": [
+        2,
+        20,
+        1536
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "text_embedding",
+      "shape": [
+        2,
+        512,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "block0_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "block0_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "block0_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "block1_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "block1_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "block1_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "head_time_input",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "head_modulation",
+      "shape": [
+        2,
+        20,
+        2,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "head_output",
+      "shape": [
+        2,
+        20,
+        64
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "velocity0",
+      "shape": [
+        16,
+        3,
+        4,
+        6
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        500,
+        250
+      ],
+      "stage": "velocity1",
+      "shape": [
+        16,
+        2,
+        2,
+        4
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "time_embedding",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "time_projection",
+      "shape": [
+        2,
+        20,
+        1536
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "text_embedding",
+      "shape": [
+        2,
+        512,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "block0_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "block0_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "block0_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "block1_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "block1_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "block1_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "head_time_input",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "head_modulation",
+      "shape": [
+        2,
+        20,
+        2,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "head_output",
+      "shape": [
+        2,
+        20,
+        64
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "velocity0",
+      "shape": [
+        16,
+        3,
+        4,
+        6
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        50,
+        25
+      ],
+      "stage": "velocity1",
+      "shape": [
+        16,
+        2,
+        2,
+        4
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "time_embedding",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "time_projection",
+      "shape": [
+        2,
+        20,
+        1536
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "text_embedding",
+      "shape": [
+        2,
+        512,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "block0_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "block0_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "block0_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "block1_time_input",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "block1_modulation",
+      "shape": [
+        2,
+        20,
+        6,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "block1_output",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "head_time_input",
+      "shape": [
+        2,
+        20,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "head_modulation",
+      "shape": [
+        2,
+        20,
+        2,
+        256
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "head_output",
+      "shape": [
+        2,
+        20,
+        64
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "velocity0",
+      "shape": [
+        16,
+        3,
+        4,
+        6
+      ],
+      "max_abs": 0.0
+    },
+    {
+      "timestep_batch": [
+        0,
+        0
+      ],
+      "stage": "velocity1",
+      "shape": [
+        16,
+        2,
+        2,
+        4
+      ],
+      "max_abs": 0.0
+    }
+  ],
+  "state_dict_keys_identical": true,
+  "parameter_tensors_identical": true,
+  "mixed_token_times_finite": true,
+  "no_class_or_original_instance_mutation": true,
+  "limits": "Tiny random-weight CPU mathematical test only. No pretrained weights loaded; no image generation or training. Mixed token times remain untrained for Wan2.1 T2V.",
+  "elapsed_seconds": 1.4681767919973936,
+  "torch": "2.5.1",
+  "source_sha256": {
+    "tokenwise_time/test_parity.py": "a6db75db639ad629e99595635dc5635bcced9ae0b1936818d40c2de2650ac70c",
+    "tokenwise_time/portable.py": "54ef9b1c869774dd43379d5587c0676ca1175ffba869f9cd7dd44a7590b6bd32",
+    "native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "native_control/vendor/model.py": "c1572ade3bf7345bd4c00d4a19535788fab62f9c08b5aeb15f6d01f4435bb47a"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "status": "passed",
+  "max_seconds": 900,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "timings": [
+    {
+      "stage": "load_verified_fp32_base",
+      "seconds": 9.56122991698794
+    },
+    {
+      "stage": "hash_frozen_base_before",
+      "seconds": 5.192233208013931
+    },
+    {
+      "stage": "zero_initialized_adapter_equality",
+      "seconds": 14.243142791994615
+    },
+    {
+      "stage": "one_optimizer_update",
+      "seconds": 15.658101708017057
+    },
+    {
+      "stage": "hash_frozen_base_after",
+      "seconds": 5.054905833007069
+    }
+  ],
+  "steps": [],
+  "peaks_sampled": {
+    "rss_bytes": 662601728,
+    "mps_active_bytes": 7034786816,
+    "mps_driver_bytes": 9328115712
+  },
+  "experiment": "One real-data tokenwise-time adapter update",
+  "requested_updates": 1,
+  "completed_updates": 1,
+  "split": "Single-layout development mechanics",
+  "device": "mps",
+  "core_dtype": "float32",
+  "adapter_dtype": "float32",
+  "training_mixture": {
+    "image_conditioned": 1.0,
+    "uniform_t2v": 0.0
+  },
+  "image_conditioning": "Independent clean observed latent has time 0; future has matching k/1000 noise and exact integer time k",
+  "time_distribution": "Integer k uniformly sampled from 50..950 inclusive; sigma=k/1000",
+  "loss": "MSE on future latent frames 1..4 only, target=noise-target; no observed loss",
+  "actions": "Actual ordered 16 six-channel commands from original capture; mechanics only, no control-quality claim",
+  "observation_adapter": "32 pooled tokens from independently encoded initial observation; not persistent memory",
+  "training_cfg": false,
+  "pretrained_i2v_reproduced": false,
+  "video_generation": false,
+  "novelty_claim": false,
+  "original_adapter_initialization": "Fresh CPU seed initialization, no previously trained checkpoint",
+  "original_adapter_seed": 20260911,
+  "noise_seed": 20260912,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0
+  },
+  "checkpointing": "Non-reentrant frozen block forward; adapter forward hooks outside replay; retained through backward",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "torch": "2.5.1",
+  "automatic_mps_cpu_fallback": "0",
+  "cpu_checks": {
+    "uniform_time_parity_sha256": "1927445ba46b2e58320c43b17f3e97af66944ef5201872daf19a0cf8027d8ff6",
+    "training_mechanics_sha256": "9757eb116a547f588025db58940017a53466698b2c049dd65fd7510f3b6aad07",
+    "independent_training_review_sha256": "39de8704bb555a9377f21e1d3a25aa88eff8520988df7a00116ca3c3d46dab19"
+  },
+  "source_sha256": {
+    "tokenwise_time/portable.py": "54ef9b1c869774dd43379d5587c0676ca1175ffba869f9cd7dd44a7590b6bd32",
+    "tokenwise_time/training.py": "da8b2b516b35f538986d9797e297a9912e672120947d3a886b2331785f80488f",
+    "tokenwise_time/training_data.py": "ae3b279742fe2f71fe2d8d1b2555843e813d27591ee15e78203f78cc1e7791bb",
+    "tokenwise_time/profile_update.py": "2c2ccf53eee17ba770bff8a7a72f4ac9b5dce384d68404decba5833343142685",
+    "tokenwise_time/test_parity.py": "a6db75db639ad629e99595635dc5635bcced9ae0b1936818d40c2de2650ac70c",
+    "tokenwise_time/test_training.py": "d0db216a3460ea755c365eba5e1e6ff097361f0c8761d1d529d3eec2324ffe07",
+    "tokenwise_time/test_training_independent.py": "f2860841bbf4bc1998f8e348f7b5463d8b5cfd01f3007ada02390fc5d02bbae0",
+    "adapter.py": "c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8",
+    "fetch_weights.py": "b8a145fd3a4eef032faa22dfea7fdd6fb8f6b445986a8e3fda637557579c1ebf",
+    "PROTOCOL.md": "b2f2ae4be3171f226194811e771301350614fb9ce364fc3de7db15fbbaaadf85",
+    "requirements-real.txt": "53599afd5791f4441dc05521ce25797070f80b4443a01b4cfbd107cf75836c70",
+    "requirements.txt": "cca51d2d00fcee411e0974adea4f1b312ba2bbb3c0931db92edb53d0948f02d2",
+    "text_cache/cache.py": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff",
+    "text_cache/prompts.json": "d845b5bb35a15e6432e57c9e1aae2457533553e1b3ee0d0f159449c5bd8263b7",
+    "native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "native_control/profile_pair.py": "83fe59f5afb1003ae71396577e7ecf1a1d809b3873acd18a1c7e59489d498b64",
+    "native_control/evidence.py": "00acd8e3c0a5b0866793fa0de27ce10fdb56fba13b4c49c95f44ef1ae6acc581",
+    "native_control/sampling.py": "297522d2880a3534b507737d4d03a948987adc2f21d3d6a6493d0724fed78fc7",
+    "native_control/clamp_cache.py": "b9401c18601f37a5a54a55f0e738e032396d44f46a35e528c2759898c5cad7d2",
+    "native_control/vendor/model.py": "c1572ade3bf7345bd4c00d4a19535788fab62f9c08b5aeb15f6d01f4435bb47a",
+    "native_control/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "native_control/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "native_control/vendor/source-manifest.json": "af45a0e44e2dcf3acc29a9caf4e2a839f00ed1a8fd7b4c58a54e629dd46b1cf8",
+    "native_control/vendor/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "capture": {
+    "manifest_sha256": "8d7675d96f9f71d27cd4107c9fd2540b05ebc02eb6834c24a98dcf6a76802a5f",
+    "window": "open-0000",
+    "file_sha256": "a8055808a0a700e36a82226b74d68aa45d09682151c60e0ef1409ca78e535257",
+    "tensors": {
+      "target": {
+        "shape": [
+          1,
+          16,
+          5,
+          36,
+          64
+        ],
+        "dtype": "torch.float32",
+        "sha256": "018aa6880af186cbd8633e6df9966692446114214690d9b1273cca1095ae1263"
+      },
+      "observation": {
+        "shape": [
+          1,
+          16,
+          1,
+          36,
+          64
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bfefca154d207c72e94d3118c5ef61da00c69b6ca644ca678cf6d36b8137baf0"
+      },
+      "actions": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ff269f0b83e7ba85c0203bb674c738d305f5e1388c34de7e0184f8b584c779ae"
+      }
+    },
+    "source": {
+      "schema": "worldline-rgb-action-window-v1",
+      "capture_manifest_sha256": "942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0",
+      "scene_family": "single_atrium_layout_v1",
+      "scene_seed": 51000,
+      "split": "development",
+      "independent_layouts": 1,
+      "arm": "open",
+      "start": 0,
+      "frames": 17,
+      "sources": [
+        {
+          "frame": 0,
+          "file": "open/0000.png",
+          "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+        },
+        {
+          "frame": 1,
+          "file": "open/0001.png",
+          "sha256": "18ba823611f1183a1c3b675456b6c2b6ae4d042911df4c0a7a75e2759ba21835"
+        },
+        {
+          "frame": 2,
+          "file": "open/0002.png",
+          "sha256": "4eac06bf7d5269476e53c924fbe340e77340b2b3e16c4eacb07edc0ce846576b"
+        },
+        {
+          "frame": 3,
+          "file": "open/0003.png",
+          "sha256": "48904e7eca2f75281b9ce5f7f6a0b189e9f239d8df51c656ef748baf10cf91a2"
+        },
+        {
+          "frame": 4,
+          "file": "open/0004.png",
+          "sha256": "da92af403ac43cb77326c63a757af07c06c8e1525c4a3dd41cf4473da7bc9dcb"
+        },
+        {
+          "frame": 5,
+          "file": "open/0005.png",
+          "sha256": "c4ef33b8e7291f937d05ae0e13b9fd81c800a63ab9cdef207061378bfcbb9611"
+        },
+        {
+          "frame": 6,
+          "file": "open/0006.png",
+          "sha256": "cea2946dfa89a38b661a463699d052f65cc8bb2f1a4bcf36c7c89fed85aa96cc"
+        },
+        {
+          "frame": 7,
+          "file": "open/0007.png",
+          "sha256": "9639073f57ab07715048cf527b661b19746df5f7476afb816a70d53a257aafbe"
+        },
+        {
+          "frame": 8,
+          "file": "open/0008.png",
+          "sha256": "800dc876844ed9f54752c0a877a07573bb1784bc6aebdd7f7f95095e539daf80"
+        },
+        {
+          "frame": 9,
+          "file": "open/0009.png",
+          "sha256": "9a5e3d28eb9a67fcbf58b898da3cccb4ac81bd6a7759731356120bade1d731c5"
+        },
+        {
+          "frame": 10,
+          "file": "open/0010.png",
+          "sha256": "fd68a0e1dd790d1b376eb9a90d48ad7870edcaa48c0189fc35a5b3d02e47698e"
+        },
+        {
+          "frame": 11,
+          "file": "open/0011.png",
+          "sha256": "acc38f3c4bf97874ab13329f3bd459cd0474f8e5beb9d01ef706a8c22274c683"
+        },
+        {
+          "frame": 12,
+          "file": "open/0012.png",
+          "sha256": "5a86d8dced79d8e6dfcb40ab65d63e2b0d31da75c9ec21c66144af2fc24bf40d"
+        },
+        {
+          "frame": 13,
+          "file": "open/0013.png",
+          "sha256": "80fb93d933b11f2d9df24d3348c0e9a5d890ad463132c658f504359fc65e4006"
+        },
+        {
+          "frame": 14,
+          "file": "open/0014.png",
+          "sha256": "f1f2acd91462ede7fffed9ecf0e305bbebaae38f6e49ac6f7f931f3f5e634599"
+        },
+        {
+          "frame": 15,
+          "file": "open/0015.png",
+          "sha256": "863a37822f83397de02e72e3726e5a81320cbe3906b772262265ba518542a54d"
+        },
+        {
+          "frame": 16,
+          "file": "open/0016.png",
+          "sha256": "ca10715064bb0997003efab9f2a384fd94dbca34c46a1c27d1229d89159e91c2"
+        }
+      ],
+      "action_schema": "worldline-command-deltas-v1",
+      "action_channels": [
+        "local_right_m",
+        "local_up_m",
+        "local_forward_m",
+        "yaw_left_rad",
+        "pitch_up_rad",
+        "interact_pulse"
+      ],
+      "action_normalization": "none; raw commanded meters/radians/pulse",
+      "rgb_transform": {
+        "view": "AgX",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0,
+        "display": "sRGB",
+        "exr": "scene-linear"
+      },
+      "data_license": "CC0-1.0",
+      "model_inputs": [
+        "rgb",
+        "commanded_action_deltas"
+      ],
+      "first_observation_index": 0,
+      "observation_policy": "Encode first RGB alone for conditioning; all later RGB are training targets only"
+    },
+    "causal_checks_passed": 11,
+    "observation": "Independently encoded first RGB image, not selected from full target encoding",
+    "target_use": "Training corruption and future-only loss; never adapter observation conditioning",
+    "data_scope": "One original layout, development mechanics only"
+  },
+  "text": {
+    "id": "atrium",
+    "text_sha256": "28b2a417e8444313da5b0408204bce155c5b6230a825cba357744f3e748d26da",
+    "tensor_sha256": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093",
+    "manifest_sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+    "file_sha256": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+    "shape": [
+      25,
+      4096
+    ],
+    "training_cfg": false,
+    "native_padding": "Unpadded context, then 512-token padding before projection, no context mask"
+  },
+  "trainable_parameters": 1349376,
+  "adapter_sha256_before": "f190b2bcf8b110bb109e5817090364281b64eb320e6453a45bc0bb958f4492f4",
+  "training_sample": {
+    "k": [
+      118
+    ],
+    "sigma_float32": [
+      0.11800000071525574
+    ],
+    "sigma_exact_rational": [
+      "118/1000"
+    ],
+    "observed_token_times": 0,
+    "observed_tokens_per_example": 576,
+    "future_tokens_per_example": 2304,
+    "token_times_sha256": "22c02df4c7b0f98cc35307a70f90a14709624558cecc08b17d808a5eca0aa4b4",
+    "noise_sha256": "6ba48db412efba856e4c5ae03ca58a6ca82278a1c1097e1410acd7ba7c098e40",
+    "noisy_latent_sha256": "2e1699a8c2864f5f4e9bc179f070ecd2be91ca24a24426ca2a06b1c48578b546",
+    "prediction_target_sha256": "9535c4477a2de52006ed1f366fcdd317ff37823aa346bcd7fb423ddbad71a2e8",
+    "latent_shape": [
+      1,
+      16,
+      5,
+      36,
+      64
+    ],
+    "artifact_sha256": "763c0ceabcc20900b5f6d278674bc1dc2eb0d23cfad3f5fdc601bb7e192f3275"
+  },
+  "training_rope_table_inference_tensor": false,
+  "foundation": {
+    "weight_revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+    "weight_sha256": "96b6b242ca1c2f24e9d02cd6596066fab6d310e2d7538f33ae267cb18d957e8f",
+    "config_sha256": "ab37994c43740513f94b3ba6233a784035a67b43c8cde83c8f31aa90468c67ce",
+    "parameters": 1418996800,
+    "loaded_keys": 825,
+    "missing_keys": [],
+    "unexpected_keys": []
+  },
+  "base_tensor_sha256_before": "dbb4f012c47ce83d0789a0173d5be2305c03fcbd80bfaf98f30e5feeefb40020",
+  "actual_zero_init_equal": true,
+  "update": {
+    "future_flow_mse": 0.3115270435810089,
+    "gradient_norm_before_clip": 0.11926417797803879,
+    "residual_gradient_norms": [
+      0.09107183932706286,
+      0.0728494653451067,
+      0.02495635243885498
+    ],
+    "gradient_tensors": 42,
+    "block_forward_and_recompute_calls": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "adapter_sha256_after": "059ce00e12ebfe69be42a39dc6944a28334866deaaca7cc1e84dcfa3a7e9aa6f",
+  "base_tensor_sha256_after": "dbb4f012c47ce83d0789a0173d5be2305c03fcbd80bfaf98f30e5feeefb40020",
+  "base_parameters_unchanged": true,
+  "hooks_removed": true,
+  "output_sha256": {
+    "initial-adapter.safetensors": "f6e29d12cf793c1129dc9eb544cd366d6ae8702e6b3761fb9a879e31a0961f7c",
+    "updated-adapter.safetensors": "e7487521ad6e1792fbe066d6f06603cdf16a518fce3b897665bc2a3ae3ce9060",
+    "sampled-training-inputs.safetensors": "763c0ceabcc20900b5f6d278674bc1dc2eb0d23cfad3f5fdc601bb7e192f3275"
+  },
+  "elapsed_seconds": 54.65861825001775
+}

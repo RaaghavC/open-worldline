@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.15722049999749288,
+  "device": "cpu",
+  "torch": "2.5.1",
+  "pretrained_core_loaded": false,
+  "source_sha256": {
+    "tokenwise_time/test_training_independent.py": "f2860841bbf4bc1998f8e348f7b5463d8b5cfd01f3007ada02390fc5d02bbae0",
+    "tokenwise_time/training.py": "da8b2b516b35f538986d9797e297a9912e672120947d3a886b2331785f80488f",
+    "tokenwise_time/training_data.py": "ae3b279742fe2f71fe2d8d1b2555843e813d27591ee15e78203f78cc1e7791bb",
+    "tokenwise_time/profile_update.py": "2c2ccf53eee17ba770bff8a7a72f4ac9b5dce384d68404decba5833343142685",
+    "tokenwise_time/portable.py": "54ef9b1c869774dd43379d5587c0676ca1175ffba869f9cd7dd44a7590b6bd32",
+    "adapter.py": "c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8",
+    "native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "native_control/vendor/model.py": "c1572ade3bf7345bd4c00d4a19535788fab62f9c08b5aeb15f6d01f4435bb47a"
+  },
+  "scope": "Independent training mechanics and actual development-cache integrity; no GPU, quality training, sampler or generalization result."
+}

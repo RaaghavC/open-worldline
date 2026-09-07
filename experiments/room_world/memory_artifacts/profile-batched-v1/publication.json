@@ -1,0 +1,91 @@
+{
+  "schema": "worldline-room-memory-profile-publication-v1",
+  "source_run": "work/room-memory-profile-batched-v1",
+  "phase": "profile",
+  "sequence_path": "batched",
+  "evaluation_executed": false,
+  "reserved_test_opened": false,
+  "files": {
+    "20260907/carry/terminal.json": {
+      "sha256": "0d05c6c99136a5dce2c9546f9ffc6177084d7a155592a20cb8bdf297d21ad226",
+      "bytes": 4414
+    },
+    "20260907/carry/training/memory-final.pt": {
+      "sha256": "04103414228ab762164bef6538997d26a10ee6408b72b062d079873bc3166018",
+      "bytes": 102280
+    },
+    "20260907/carry/training/memory-last.pt": {
+      "sha256": "04103414228ab762164bef6538997d26a10ee6408b72b062d079873bc3166018",
+      "bytes": 102280
+    },
+    "20260907/carry/training/metrics.json": {
+      "sha256": "230e019617c6973aa25bcae6a586e215acd802a69898506430c3bc9b842becdd",
+      "bytes": 57003
+    },
+    "20260907/carry/training/recovery-last.pt": {
+      "sha256": "5912626ebfd64e753896a7f0c2f9e3e9adcef0b57665e5d79570b796cbd931d9",
+      "bytes": 320008
+    },
+    "20260907/carry/worker.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "20260907/initial-memory.pt": {
+      "sha256": "293301759d0ece1630a8b8d5875b2bdf613a620631bd246243615e05ebc924b6",
+      "bytes": 102024
+    },
+    "20260907/reset/terminal.json": {
+      "sha256": "04aa02af91da4eb49f048002ee7587a451188bae519cce03de74abe9c8e6aad3",
+      "bytes": 5918
+    },
+    "20260907/reset/training/memory-final.pt": {
+      "sha256": "52c23aa4baa2587d146826858473a1d87316e09719cfdd9b7de7f7856d0c0301",
+      "bytes": 102280
+    },
+    "20260907/reset/training/memory-last.pt": {
+      "sha256": "52c23aa4baa2587d146826858473a1d87316e09719cfdd9b7de7f7856d0c0301",
+      "bytes": 102280
+    },
+    "20260907/reset/training/metrics.json": {
+      "sha256": "c3adaa882f16fdde629cd3f324caae4c2d40dcbf4ca26d05e3fa33e102ffcce4",
+      "bytes": 57012
+    },
+    "20260907/reset/training/recovery-last.pt": {
+      "sha256": "49194bf0e8280d19accbbfcaf35f76778d6e83281cbe6d37f6ce0b5e346b1b63",
+      "bytes": 320008
+    },
+    "20260907/reset/worker.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "measured-source/memory_data.py.txt": {
+      "sha256": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+      "bytes": 7046
+    },
+    "measured-source/memory_evaluate.py.txt": {
+      "sha256": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+      "bytes": 39904
+    },
+    "measured-source/memory_model.py.txt": {
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "bytes": 6862
+    },
+    "measured-source/memory_sequence.py.txt": {
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "bytes": 4839
+    },
+    "measured-source/memory_train.py.txt": {
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "bytes": 39603
+    },
+    "measured-source/model.py.txt": {
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "bytes": 5261
+    },
+    "study.json": {
+      "sha256": "19fae9fe6ac6bd59f97241606f88a7b5af8a92a0dfca0c86058507d2f4aa7558",
+      "bytes": 18159
+    }
+  },
+  "total_bytes": 1397181
+}

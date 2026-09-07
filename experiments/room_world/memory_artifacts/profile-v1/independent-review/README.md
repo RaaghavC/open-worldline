@@ -15,4 +15,4 @@ python experiments/room_world/memory_artifacts/profile-v1/independent-review/aud
   --output /tmp/worldline-memory-profile-audit.json
 ```
 
-The output path must not already exist. The audit intentionally requires current model/trainer sources to match the measured snapshots; run it at the corresponding repository revision. The original measured files remain unchanged. [Checksums](checksums.json) record this review package's exact files. Code is Apache-2.0.
+The output path must not already exist. The audit intentionally requires current model/trainer sources to match the measured snapshots. The profile, executable audit and matching sources are available together at repository revision `00c03bf5a1d33b08eb48894259c1c32840d5b70b`; use that revision for this command after later trainer changes. The original measured files remain unchanged. [Checksums](checksums.json) record the current package files. This README gained the explicit repository revision after the audit; its executed source and reports are unchanged. Code is Apache-2.0.

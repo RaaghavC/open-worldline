@@ -1,0 +1,188 @@
+{
+  "status": "complete",
+  "reason": null,
+  "exit_code": 0,
+  "elapsed_seconds": 17.77564862498548,
+  "max_seconds": 600.0,
+  "max_rss_gib": 18,
+  "minimum_available_gib": 2,
+  "sample_interval_seconds": 0.5,
+  "samples": [
+    {
+      "seconds": 0.0003152090066578239,
+      "rss_bytes": 196608,
+      "available_bytes": 9710780416
+    },
+    {
+      "seconds": 0.5103804169921204,
+      "rss_bytes": 148946944,
+      "available_bytes": 9640591360
+    },
+    {
+      "seconds": 1.0200582499965094,
+      "rss_bytes": 227213312,
+      "available_bytes": 9491202048
+    },
+    {
+      "seconds": 1.5292479589988943,
+      "rss_bytes": 295845888,
+      "available_bytes": 9558196224
+    },
+    {
+      "seconds": 2.0396964169922285,
+      "rss_bytes": 423608320,
+      "available_bytes": 8428552192
+    },
+    {
+      "seconds": 2.543353541987017,
+      "rss_bytes": 508329984,
+      "available_bytes": 8434991104
+    },
+    {
+      "seconds": 3.0536237090127543,
+      "rss_bytes": 515260416,
+      "available_bytes": 8425275392
+    },
+    {
+      "seconds": 3.562050792010268,
+      "rss_bytes": 527384576,
+      "available_bytes": 8428322816
+    },
+    {
+      "seconds": 4.063481916993624,
+      "rss_bytes": 530071552,
+      "available_bytes": 8418525184
+    },
+    {
+      "seconds": 4.568483792012557,
+      "rss_bytes": 531464192,
+      "available_bytes": 8406351872
+    },
+    {
+      "seconds": 5.076793791988166,
+      "rss_bytes": 532119552,
+      "available_bytes": 8414150656
+    },
+    {
+      "seconds": 5.584592958999565,
+      "rss_bytes": 532856832,
+      "available_bytes": 8423030784
+    },
+    {
+      "seconds": 6.085090000007767,
+      "rss_bytes": 533774336,
+      "available_bytes": 8416509952
+    },
+    {
+      "seconds": 6.593408791988622,
+      "rss_bytes": 535117824,
+      "available_bytes": 8425062400
+    },
+    {
+      "seconds": 7.103890041995328,
+      "rss_bytes": 535003136,
+      "available_bytes": 8410464256
+    },
+    {
+      "seconds": 7.610136542003602,
+      "rss_bytes": 535150592,
+      "available_bytes": 8407695360
+    },
+    {
+      "seconds": 8.117392709013075,
+      "rss_bytes": 535150592,
+      "available_bytes": 8411267072
+    },
+    {
+      "seconds": 8.618491417000769,
+      "rss_bytes": 535642112,
+      "available_bytes": 8338653184
+    },
+    {
+      "seconds": 9.126210459013237,
+      "rss_bytes": 535756800,
+      "available_bytes": 8339554304
+    },
+    {
+      "seconds": 9.634186042007059,
+      "rss_bytes": 536100864,
+      "available_bytes": 8443691008
+    },
+    {
+      "seconds": 10.135198042000411,
+      "rss_bytes": 536707072,
+      "available_bytes": 8445771776
+    },
+    {
+      "seconds": 10.645190834009554,
+      "rss_bytes": 536707072,
+      "available_bytes": 8458977280
+    },
+    {
+      "seconds": 11.156566458987072,
+      "rss_bytes": 537116672,
+      "available_bytes": 8436449280
+    },
+    {
+      "seconds": 11.664503959007561,
+      "rss_bytes": 537214976,
+      "available_bytes": 8446640128
+    },
+    {
+      "seconds": 12.166724999988219,
+      "rss_bytes": 537280512,
+      "available_bytes": 8440053760
+    },
+    {
+      "seconds": 12.672825583984377,
+      "rss_bytes": 537296896,
+      "available_bytes": 8466956288
+    },
+    {
+      "seconds": 13.176089749991661,
+      "rss_bytes": 537313280,
+      "available_bytes": 8460992512
+    },
+    {
+      "seconds": 13.686794209002983,
+      "rss_bytes": 537346048,
+      "available_bytes": 8465842176
+    },
+    {
+      "seconds": 14.196240541990846,
+      "rss_bytes": 537378816,
+      "available_bytes": 8464318464
+    },
+    {
+      "seconds": 14.70243337500142,
+      "rss_bytes": 537444352,
+      "available_bytes": 8463794176
+    },
+    {
+      "seconds": 15.207447166991187,
+      "rss_bytes": 537444352,
+      "available_bytes": 8470478848
+    },
+    {
+      "seconds": 15.708405874989694,
+      "rss_bytes": 537608192,
+      "available_bytes": 8479178752
+    },
+    {
+      "seconds": 16.21173620899208,
+      "rss_bytes": 537821184,
+      "available_bytes": 8470970368
+    },
+    {
+      "seconds": 16.717610791994957,
+      "rss_bytes": 537952256,
+      "available_bytes": 8505049088
+    },
+    {
+      "seconds": 17.227925791987218,
+      "rss_bytes": 538050560,
+      "available_bytes": 8513568768
+    }
+  ],
+  "limit": "RSS/available RAM sampled in parent; Metal allocator cap is set in worker; stopped runs retain last completed recovery files"
+}

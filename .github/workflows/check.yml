@@ -45,6 +45,10 @@ jobs:
         working-directory: experiments/wan_adapter
       - run: python tokenwise_time/test_independent.py --output results/ci-tokenwise-independent.json
         working-directory: experiments/wan_adapter
+      - run: python tokenwise_time/test_training.py --output results/ci-tokenwise-training.json
+        working-directory: experiments/wan_adapter
+      - run: python tokenwise_time/test_training_independent.py --output results/ci-tokenwise-training-independent.json
+        working-directory: experiments/wan_adapter
   text-cache-cpu:
     runs-on: ubuntu-latest
     timeout-minutes: 15

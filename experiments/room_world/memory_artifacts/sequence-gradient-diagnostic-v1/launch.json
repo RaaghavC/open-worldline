@@ -1,0 +1,21 @@
+{
+  "status": "launched",
+  "script_sha256": "bff22f7f5daedc1ab4e51b8e0df4b4d31de3cb5246a392185a90ed17cbdd162f",
+  "source_sha256": {
+    "memory_train.py": "5422b878462820646e1b85cce40c750e8a2fce72dd58f3438d95f71a107cfbe8",
+    "memory_evaluate.py": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+    "memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "memory_data.py": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+    "memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+  },
+  "original_probe_script_sha256": "b7b2ca39782f0a6a76444904f2f4c66f88a7bfadd786ca7175026c72130a1a2f",
+  "failed_probe_sha256": "26b0746d48cc1649ac04fc9d925361579a52c1dea7733ed4e92ab6b908b17f6a",
+  "max_seconds": 180.0,
+  "optimizer_updates": 0,
+  "resource_limits": {
+    "rss_gib": 18,
+    "minimum_available_gib": 2,
+    "mps_allocator_gib": 18
+  }
+}

@@ -9,6 +9,24 @@ import torch
 from torch import nn
 
 
+def _sequence_path(record):
+    """Reports written before explicit path selection used the stepwise loss."""
+    from .memory_train import SEQUENCE_PATHS
+    value = record.get("sequence_path", "stepwise")
+    if value not in SEQUENCE_PATHS:
+        raise ValueError("Unrecognized training sequence path")
+    return value
+
+
+def _validate_checkpoint_identity(payload, job):
+    from .memory_train import BASE_SHA256
+    if (payload["mode"] != job["mode"] or payload["seed"] != job["seed"]
+            or payload["base_checkpoint_sha256"] != BASE_SHA256
+            or payload["completed_updates"] != job["updates"]
+            or _sequence_path(payload) != _sequence_path(job)):
+        raise ValueError("Checkpoint identity, sequence path or completed budget differs")
+
+
 def history_at(observations, transition):
     """Available four-frame history at t, repeating observation0 if t<3."""
     if observations.ndim != 5 or observations.shape[2] != 3:
@@ -244,6 +262,7 @@ def compare_evaluations(reports, *, matched_budgets=False, visibility_audit=None
         return result
     control_arrays, pair_arrays = {}, {}
     try:
+        sequence_path = _sequence_path(reports[keys[0]].get("provenance", {}))
         data_hash = reports["frozen"]["data"]["manifest_sha256"]
         controls_hash = reports["frozen"]["control_results"]["provenance"]["manifest_sha256"]
         if not isinstance(data_hash, str) or len(data_hash) != 64 or not isinstance(controls_hash, str) or len(controls_hash) != 64:
@@ -261,6 +280,10 @@ def compare_evaluations(reports, *, matched_budgets=False, visibility_audit=None
                 seed, mode = key.split("-")
                 if identity.get("seed") != int(seed) or identity.get("mode") != mode:
                     raise ValueError("Measured model identity differs")
+                if _sequence_path(identity) != sequence_path:
+                    raise ValueError("Measured training sequence paths differ")
+            if identity.get("training_sequence_path", sequence_path) != sequence_path:
+                raise ValueError("Measured study sequence path differs")
             controls = measured["control_results"]
             rows = controls["single_cases"]
             if len(rows) != len(scenes) * len(CONTROL_ACTIONS):
@@ -462,6 +485,11 @@ def _evaluation_worker(config):
     from pathlib import Path
     from .memory_train import (DevelopmentDataset, ValidationControls, make_model, restore_memory, sha256, BASE_SHA256)
     torch.set_num_threads(2)
+    training_sequence_path = _sequence_path({"sequence_path": config.get("training_sequence_path", "stepwise")})
+    sequence_path = None if config["mode"] == "frozen" else _sequence_path(config)
+    if ((config["mode"] == "frozen" and config.get("sequence_path") is not None)
+            or (config["mode"] != "frozen" and sequence_path != training_sequence_path)):
+        raise ValueError("Evaluation job and study sequence paths differ")
     for name, expected in config["source_sha256"].items():
         if Path(name).name != name or sha256(Path(__file__).with_name(name)) != expected:
             raise ValueError("Evaluation source changed after its snapshot")
@@ -476,10 +504,7 @@ def _evaluation_worker(config):
         if sha256(config["checkpoint"]) != config["checkpoint_sha256"]:
             raise ValueError("Final checkpoint hash differs")
         payload = torch.load(config["checkpoint"], map_location="cpu", weights_only=True)
-        if (payload["mode"] != config["mode"] or payload["seed"] != config["seed"]
-                or payload["base_checkpoint_sha256"] != BASE_SHA256
-                or payload["completed_updates"] != config["updates"]):
-            raise ValueError("Checkpoint identity or completed budget differs")
+        _validate_checkpoint_identity(payload, config)
         restore_memory(model, payload["memory_state_dict"])
     dataset = DevelopmentDataset(config["data"], "validation")
     if dataset.manifest_sha256 != config["data_sha256"]:
@@ -487,8 +512,12 @@ def _evaluation_worker(config):
     controls = ValidationControls(config["controls"]) if config.get("controls") else None
     if controls is not None and controls.manifest_sha256 != config["controls_sha256"]:
         raise ValueError("Control manifest changed")
+    provenance = {key: config[key] for key in ("mode", "seed", "updates", "checkpoint_sha256")}
+    provenance.update(sequence_path=sequence_path, training_sequence_path=training_sequence_path,
+                      training_study_sha256=config.get("training_study_sha256"),
+                      training_source_sha256=config.get("training_source_sha256"))
     evaluate_model(model, dataset, config["output"], mode="carry" if config["mode"] == "frozen" else config["mode"],
-                   provenance={key: config[key] for key in ("mode", "seed", "updates", "checkpoint_sha256")}, controls=controls)
+                   provenance=provenance, controls=controls)
 
 
 def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=600, controls=None, control_audit=None):
@@ -501,7 +530,8 @@ def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=
     import subprocess
     import sys
     from .memory_train import (DevelopmentDataset, ValidationControls, verify_visibility_audit, BASE, BASE_SHA256,
-                               new_directory, atomic_write, sha256, handoff_and_guard, matched_arms)
+                               new_directory, atomic_write, sha256, handoff_and_guard, matched_arms,
+                               training_source_names)
     if not math.isfinite(max_seconds) or not 0 < max_seconds <= 600 or device not in ("cpu", "mps"):
         raise ValueError("Use CPU/MPS and a positive time cap at most600 seconds")
     root, base = Path(study).resolve(), Path(base or BASE).resolve()
@@ -509,6 +539,16 @@ def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=
     if (source_report["status"] != "complete" or source_report["phase"] != "train"
             or source_report["matched_budgets"] is not True or sha256(base) != BASE_SHA256):
         raise ValueError("Only completed matched training arms with the pinned base are eligible")
+    sequence_path = _sequence_path(source_report)
+    training_sources = source_report.get("source_sha256", {})
+    if (set(training_sources) != set(training_source_names(sequence_path))
+            or any(not isinstance(value, str) or len(value) != 64
+                   or any(char not in "0123456789abcdef" for char in value) for value in training_sources.values())):
+        raise ValueError("Training source provenance does not cover the declared sequence path")
+    for name, expected in training_sources.items():
+        retained = (root / "measured-source" / (name + ".txt")).resolve()
+        if not retained.is_relative_to(root) or not retained.is_file() or sha256(retained) != expected:
+            raise ValueError("Retained training source snapshot differs from its recorded hash")
     for name in ("memory_model.py", "model.py"):
         if sha256(Path(__file__).with_name(name)) != source_report.get("source_sha256", {}).get(name):
             raise ValueError("Model forward source differs from the completed training study")
@@ -539,16 +579,23 @@ def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=
             if not path.is_relative_to(root) or sha256(path) != row["metrics_sha256"]:
                 raise ValueError("Training metrics path or hash differs")
             arm = json.loads(path.read_text())
+            if (_sequence_path(row) != sequence_path or _sequence_path(arm) != sequence_path
+                    or arm["mode"] != mode or arm["seed"] != seed
+                    or arm["completed_updates"] != source_report["requested_updates_per_arm"]):
+                raise ValueError("Training study, arm or sequence path differs")
             pair.append(arm)
             checkpoint = path.parent / "memory-final.pt"
             if sha256(checkpoint) != arm["memory_final_sha256"]:
                 raise ValueError("Final memory checkpoint changed")
-            jobs.append({"seed": seed, "mode": mode, "updates": arm["completed_updates"],
-                         "checkpoint": str(checkpoint), "checkpoint_sha256": arm["memory_final_sha256"]})
+            job = {"seed": seed, "mode": mode, "updates": arm["completed_updates"], "sequence_path": sequence_path,
+                   "checkpoint": str(checkpoint), "checkpoint_sha256": arm["memory_final_sha256"]}
+            # Check metadata before any worker is started, and again after loading in that worker.
+            _validate_checkpoint_identity(torch.load(checkpoint, map_location="cpu", weights_only=True), job)
+            jobs.append(job)
         if not matched_arms(*pair):
             raise ValueError("Realized arm budgets differ")
     jobs.append({"seed": source_report["seeds"][0], "mode": "frozen", "updates": 0,
-                 "checkpoint": None, "checkpoint_sha256": BASE_SHA256})
+                 "sequence_path": None, "checkpoint": None, "checkpoint_sha256": BASE_SHA256})
     out = new_directory(output)
     snapshot = out / "measured-source"
     snapshot.mkdir()
@@ -559,6 +606,7 @@ def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=
         sources[name] = sha256(path)
     report = {"schema": "worldline-room-memory-validation-study-v1", "status": "running",
               "training_study_sha256": sha256(root / "study.json"), "source_sha256": sources,
+              "sequence_path": sequence_path, "training_source_sha256": training_sources,
               "base_checkpoint_sha256": BASE_SHA256, "validation": dataset.provenance(), "runs": [],
               "reserved_test_opened": False, "controls_evaluated": False,
               "controls": control_data.provenance() if control_data is not None else None,
@@ -574,6 +622,8 @@ def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=
             folder.mkdir()
             config = dict(job, base=str(base), data=str(Path(data).resolve()), data_sha256=dataset.manifest_sha256,
                           output=str((folder / "predictions").resolve()), device=device, source_sha256=sources,
+                          training_sequence_path=sequence_path, training_source_sha256=training_sources,
+                          training_study_sha256=report["training_study_sha256"],
                           controls=str(control_data.root) if control_data is not None else None,
                           controls_sha256=control_data.manifest_sha256 if control_data is not None else None)
             with (folder / "worker.log").open("x") as log:
@@ -584,11 +634,18 @@ def evaluate_study(study, data, output, *, base=None, device="cpu", max_seconds=
             path = folder / "predictions/evaluation.json"
             measured = json.loads(path.read_text()) if path.exists() else {"status": "missing"}
             report["runs"].append({"mode": job["mode"], "seed": job["seed"], "terminal_status": terminal["status"],
+                "sequence_path": job["sequence_path"],
                 "status": measured["status"], "evaluation": str(path.relative_to(out)),
                 "evaluation_sha256": sha256(path) if path.exists() else None})
             atomic_write(out / "validation.json", report)
             if terminal["status"] != "complete" or measured["status"] != "complete":
                 raise RuntimeError("Evaluation stopped or failed; partial outputs retained")
+            identity = measured.get("provenance", {})
+            if (identity.get("sequence_path") != job["sequence_path"]
+                    or identity.get("training_sequence_path") != sequence_path
+                    or identity.get("training_study_sha256") != report["training_study_sha256"]
+                    or identity.get("training_source_sha256") != training_sources):
+                raise ValueError("Measured evaluation sequence-path provenance differs")
             model_reports[folder.name] = measured
         report["controls_evaluated"] = all(value.get("controls_evaluated") is True for value in model_reports.values())
         report["comparison"] = compare_evaluations(model_reports, matched_budgets=True, visibility_audit=visibility)

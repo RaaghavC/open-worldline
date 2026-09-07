@@ -1,0 +1,330 @@
+"""Separate L1-sign/common-upstream diagnostic; preserves the failed MPS probe."""
+import argparse
+import importlib.util
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import time
+from unittest.mock import patch
+
+
+def compare(candidate, reference):
+    import torch
+    candidate, reference = candidate.detach().cpu().double(), reference.detach().cpu().double()
+    delta = candidate - reference
+    norm = reference.norm()
+    return {"max_abs_difference": float(delta.abs().max()), "l2_difference": float(delta.norm()),
+        "relative_l2_difference": float(delta.norm() / norm) if norm else None,
+        "reference_l2_norm": float(norm), "candidate_l2_norm": float(candidate.norm()),
+        "finite": bool(torch.isfinite(candidate).all() and torch.isfinite(reference).all())}
+
+
+def decompose(native_s, common_s, native_b, common_b):
+    import torch
+    native_s, common_s, native_b, common_b = (value.double() for value in (native_s, common_s, native_b, common_b))
+    native_delta = native_b - native_s
+    common_delta = common_b - common_s
+    candidate_sign = native_b - common_b
+    reference_rounding = common_s - native_s
+    residual = native_delta - (common_delta + candidate_sign + reference_rounding)
+    zero = torch.zeros_like(native_delta)
+    return {"native_delta": compare(native_delta, zero), "common_backward_delta": compare(common_delta, zero),
+        "candidate_native_minus_common": compare(candidate_sign, zero),
+        "reference_common_minus_native": compare(reference_rounding, zero),
+        "identity_residual": compare(residual, zero)}
+
+
+def cpu_fixture(output):
+    import torch
+    from experiments.room_world.memory_train import new_directory, atomic_write
+    out = new_directory(output)
+    values = []
+    upstream = None
+    for offset in (0., .03125):
+        rgb = torch.tensor([.5, .125], dtype=torch.float64, requires_grad=True)
+        weight = torch.tensor(.25, dtype=torch.float64, requires_grad=True)
+        prediction, target = rgb[0] * weight + offset, rgb[1]
+        loss = (prediction - target).abs() / 2
+        if upstream is None:
+            upstream = torch.autograd.grad(loss, prediction, retain_graph=True)[0].detach()
+        native = torch.autograd.grad(loss, (weight, rgb), retain_graph=True)
+        common_loss = prediction * upstream - target * upstream
+        common = torch.autograd.grad(common_loss, (weight, rgb))
+        values.append((native, common))
+    assert upstream == 0
+    assert all(value.count_nonzero() == 0 for value in (*values[0][0], *values[0][1], *values[1][1]))
+    assert values[1][0][0] == .25
+    assert torch.equal(values[1][0][1], torch.tensor([.125, -.5], dtype=torch.float64))
+    report = {"status": "passed", "device": "cpu", "optimizer_updates": 0,
+        "fixture": "Exact zero reference residual versus positive candidate residual with identical prediction Jacobian",
+        "upstream": float(upstream), "native_l1_gradients_differ": True, "common_gradients_identical": True,
+        "decomposition": {name: decompose(values[0][0][index], values[0][1][index], values[1][0][index], values[1][1][index])
+                          for index, name in enumerate(("weight", "rgb"))}}
+    assert all(value["identity_residual"]["max_abs_difference"] == 0 for value in report["decomposition"].values())
+    atomic_write(out / "fixture.json", report)
+    print(json.dumps(report))
+
+
+def prepare(args):
+    from experiments.room_world.memory_train import sha256
+    failed_root = args.failed_probe.resolve()
+    failed = json.loads((failed_root / "probe.json").read_text())
+    old_script = args.original_probe_script.resolve()
+    if failed["status"] != "failed" or failed["optimizer_updates"] != 0 or failed["scene"] != 5023:
+        raise ValueError("Expected the retained failed zero-update scene5023 probe")
+    if sha256(old_script) != failed["script_sha256"]:
+        raise ValueError("Original probe script changed")
+    spec = importlib.util.spec_from_file_location("retained_original_probe", old_script)
+    original = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(original)
+    config = original.prepare(args.repo, args.profile, args.train)
+    for name in ("seed", "scene", "checkpoint_sha256", "profile_study_sha256", "train_manifest_sha256", "base_checkpoint_sha256", "shape", "action_shape", "source_sha256"):
+        if config[name] != failed[name]:
+            raise ValueError(f"Original probe input identity differs: {name}")
+    row = failed["modes"]["carry"][0]
+    gradient_path = (failed_root / row["gradient_file"]).resolve()
+    if not gradient_path.is_relative_to(failed_root) or sha256(gradient_path) != row["gradient_file_sha256"]:
+        raise ValueError("Retained original gradients path/hash differs")
+    config.update(failed_probe_sha256=sha256(failed_root / "probe.json"), previous_gradients=str(gradient_path),
+        previous_gradients_sha256=sha256(gradient_path), thresholds=failed["thresholds"],
+        original_probe_script_sha256=sha256(old_script), original_l1_result="failed and retained unchanged")
+    return config
+
+
+def worker(config):
+    import torch
+    import experiments.room_world.memory_sequence as sequence
+    from experiments.room_world.memory_train import (DevelopmentDataset, make_model, restore_memory, sha256,
+        sequence_loss, atomic_write, tensor_hashes, _sync)
+    out = Path(config["output"])
+    report = {key: config[key] for key in ("seed", "scene", "checkpoint_sha256", "profile_study_sha256",
+        "train_manifest_sha256", "base_checkpoint_sha256", "shape", "action_shape", "source_sha256",
+        "script_sha256", "failed_probe_sha256", "previous_gradients_sha256", "thresholds", "original_l1_result")}
+    report.update(schema="worldline-room-memory-common-upstream-diagnostic-v1", status="running", device="mps",
+        mode="carry", torch=str(torch.__version__), optimizer_updates=0, paths={},
+        instrumentation="Stepwise model-forward hook and a temporary delegating observation wrapper for the batched return tensor; no arithmetic replacement or source-file mutation",
+        objective="sum(prediction*u)-sum(target*u), using the exact detached reference L1 upstream obtained by autograd",
+        decomposition="native_b-native_s=(common_b-common_s)+(native_b-common_b)+(common_s-native_s)",
+        limit="One actual pair. The ordinary L1 result is separate from common-upstream agreement and remains subject to unchanged original tolerances.")
+
+    def save():
+        atomic_write(out / "diagnostic.json", report)
+
+    def passes(rows):
+        for name, value in rows.items():
+            prefix = "rgb_gradient" if name == "rgb_input" else "parameter_gradient"
+            if not value["finite"] or value["max_abs_difference"] > report["thresholds"][prefix + "_abs_max"]:
+                return False
+            if value["relative_l2_difference"] is None:
+                if value["l2_difference"] != 0:
+                    return False
+            elif value["relative_l2_difference"] > report["thresholds"][prefix + "_relative_l2"]:
+                return False
+        return True
+
+    save()
+    try:
+        if not torch.backends.mps.is_available() or os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK") != "0":
+            raise RuntimeError("MPS with CPU fallback disabled is required")
+        torch.set_num_threads(2)
+        torch.mps.set_per_process_memory_fraction(min(1., 18 * 2**30 / torch.mps.recommended_max_memory()))
+        for name, expected in config["source_sha256"].items():
+            if Path(name).name != name or sha256(Path(config["repo"]) / "experiments/room_world" / name) != expected:
+                raise ValueError("Model/measurement source changed")
+        if sha256(__file__) != config["script_sha256"] or sha256(config["checkpoint"]) != config["checkpoint_sha256"]:
+            raise ValueError("Diagnostic script or memory checkpoint changed")
+        if sha256(config["previous_gradients"]) != config["previous_gradients_sha256"]:
+            raise ValueError("Previous failed gradients changed")
+        old_gradients = torch.load(config["previous_gradients"], map_location="cpu", weights_only=True)
+        payload = torch.load(config["checkpoint"], map_location="cpu", weights_only=True)
+        if payload["completed_updates"] != 50 or payload["mode"] != "carry" or payload["seed"] != config["seed"]:
+            raise ValueError("Checkpoint identity differs")
+        dataset = DevelopmentDataset(config["train"], "train")
+        if dataset.manifest_sha256 != config["train_manifest_sha256"]:
+            raise ValueError("Actual training data changed")
+        original_rgb, actions = dataset.load_pair(config["scene"])
+        actions = actions.to("mps")
+        outputs, common_upstream = {}, None
+        for path in ("stepwise", "batched"):
+            model = make_model(config["base"], config["seed"], "cpu")
+            restore_memory(model, payload["memory_state_dict"])
+            before = tensor_hashes(model.state_dict())
+            model = model.to("mps").train()
+            rgb = original_rgb.to("mps").requires_grad_()
+            named = [(name, value) for name, value in model.named_parameters() if value.requires_grad] + [("rgb_input", rgb)]
+            parameters = tuple(value for _, value in named)
+            captured = []
+            _sync("mps")
+            tick = time.perf_counter()
+            if path == "stepwise":
+                hook = model.register_forward_hook(lambda module, args, output: captured.append(output[0]))
+                try:
+                    loss = sequence_loss(model, rgb, actions, "carry")
+                finally:
+                    hook.remove()
+                upstream_parts = torch.autograd.grad(loss, tuple(captured), retain_graph=True)
+                prediction = torch.stack(captured, dim=1)
+                native_upstream = torch.stack(upstream_parts, dim=1).detach()
+                common_upstream = native_upstream.detach().clone()
+            else:
+                original_function = sequence.observed_sequence
+
+                def observe(*args, **kwargs):
+                    result = original_function(*args, **kwargs)
+                    captured.append(result[0])
+                    return result
+
+                with patch.object(sequence, "observed_sequence", observe):
+                    loss = sequence.sequence_loss_batched(model, rgb, actions, "carry")
+                if len(captured) != 1:
+                    raise RuntimeError("Unexpected batched observation count")
+                prediction = captured[0]
+                native_upstream = torch.autograd.grad(loss, prediction, retain_graph=True)[0].detach()
+            if not torch.isfinite(loss):
+                raise FloatingPointError("Nonfinite L1 loss")
+            native = torch.autograd.grad(loss, parameters, retain_graph=True)
+            target = rgb[:, 1:]
+            common_loss = (prediction * common_upstream).sum() - (target * common_upstream).sum()
+            common = torch.autograd.grad(common_loss, parameters)
+            _sync("mps")
+            seconds = time.perf_counter() - tick
+            native = {name: value.detach().cpu() for (name, _), value in zip(named, native)}
+            common = {name: value.detach().cpu() for (name, _), value in zip(named, common)}
+            if any(not torch.isfinite(value).all() for value in (*native.values(), *common.values())):
+                raise FloatingPointError("Nonfinite diagnostic gradient")
+            if tensor_hashes(model.state_dict()) != before or any(value.grad is not None for value in model.parameters()):
+                raise RuntimeError("The no-update diagnostic mutated model state or accumulated parameter gradients")
+            outputs[path] = {"prediction": prediction.detach().cpu(), "target": target.detach().cpu(),
+                "native_upstream": native_upstream.cpu(), "native": native, "common": common}
+            report["paths"][path] = {"ordinary_l1": float(loss.detach().cpu()), "common_linear_objective": float(common_loss.detach().cpu()),
+                "seconds_for_forward_upstream_and_two_backward_calls": seconds,
+                "mps_active_bytes_after_calls": torch.mps.current_allocated_memory(),
+                "mps_driver_bytes_after_calls": torch.mps.driver_allocated_memory(),
+                "native_vs_original_failed_probe": {name: compare(value, old_gradients[path][name]) for name, value in native.items()}}
+            save()
+            del model, rgb, parameters, named, captured, prediction, target, native, common, loss, common_loss
+            if path == "stepwise":
+                del upstream_parts
+        s, b = outputs["stepwise"], outputs["batched"]
+        if not torch.equal(s["target"], b["target"]):
+            raise RuntimeError("Target inputs differ")
+        native_rows = {name: compare(b["native"][name], s["native"][name]) for name in s["native"]}
+        common_rows = {name: compare(b["common"][name], s["common"][name]) for name in s["common"]}
+        report["ordinary_l1_gradient_comparison"] = native_rows
+        report["common_upstream_gradient_comparison"] = common_rows
+        report["ordinary_l1_loss_abs_difference"] = abs(report["paths"]["batched"]["ordinary_l1"] - report["paths"]["stepwise"]["ordinary_l1"])
+        report["ordinary_l1_loss_within_original_limit"] = report["ordinary_l1_loss_abs_difference"] <= report["thresholds"]["loss_abs"]
+        report["ordinary_l1_gradients_within_original_limits"] = passes(native_rows)
+        report["common_upstream_gradients_within_original_limits"] = passes(common_rows)
+        report["gradient_decomposition"] = {name: decompose(s["native"][name], s["common"][name], b["native"][name], b["common"][name]) for name in s["native"]}
+        r_s, r_b = s["prediction"] - s["target"], b["prediction"] - b["target"]
+        sign_s, sign_b = r_s.sign(), r_b.sign()
+        mismatch = sign_s != sign_b
+        coordinates = mismatch.nonzero()
+        epsilon = torch.finfo(r_s.dtype).eps
+        report["prediction_comparison"] = compare(b["prediction"], s["prediction"])
+        report["prediction_comparison"]["rms_difference"] = float((b["prediction"].double() - s["prediction"].double()).square().mean().sqrt())
+        report["residual_signs"] = {"mismatch_count": int(mismatch.sum()),
+            "opposite_nonzero_sign_count": int(((sign_s * sign_b) < 0).sum()),
+            "reference_exact_zero_count": int((r_s == 0).sum()), "batched_exact_zero_count": int((r_b == 0).sum()),
+            "mismatches_with_exact_zero": int((mismatch & ((r_s == 0) | (r_b == 0))).sum()),
+            "reference_residual_sign_vs_native_upstream_sign_mismatch": int((sign_s != s["native_upstream"].sign()).sum()),
+            "batched_residual_sign_vs_native_upstream_sign_mismatch": int((sign_b != b["native_upstream"].sign()).sum()),
+            "near_zero_abs_threshold": epsilon, "mismatches_near_zero": int((mismatch & ((r_s.abs() <= epsilon) | (r_b.abs() <= epsilon))).sum()),
+            "reference_native_upstream_unique": s["native_upstream"].unique().tolist(),
+            "batched_native_upstream_unique": b["native_upstream"].unique().tolist(),
+            "coordinates_shown": min(len(coordinates), 64), "coordinate_order": ["branch", "transition", "channel", "y", "x"],
+            "examples": []}
+        for coord in coordinates[:64]:
+            index = tuple(coord.tolist())
+            report["residual_signs"]["examples"].append({"coordinate": list(index),
+                "reference_prediction": float(s["prediction"][index]), "batched_prediction": float(b["prediction"][index]),
+                "target": float(s["target"][index]), "reference_residual": float(r_s[index]), "batched_residual": float(r_b[index]),
+                "reference_upstream": float(s["native_upstream"][index]), "batched_upstream": float(b["native_upstream"][index])})
+        delta_upstream = b["native_upstream"] - s["native_upstream"]
+        direct_target_change = torch.zeros_like(s["native"]["rgb_input"])
+        direct_target_change[:, 1:] = -delta_upstream
+        native_rgb_change = b["native"]["rgb_input"] - s["native"]["rgb_input"]
+        report["direct_target_term"] = {"comparison_to_native_rgb_gradient_change": compare(native_rgb_change, direct_target_change),
+            "target_term_max_abs": float(direct_target_change.abs().max()),
+            "limit": "This term isolates the target derivative; the prediction Jacobian can also propagate sign changes to earlier RGB."}
+        tensors = {"reference_prediction": s["prediction"], "batched_prediction": b["prediction"], "targets": s["target"],
+            "reference_residual": r_s, "batched_residual": r_b,
+            "reference_residual_sign": sign_s.to(torch.int8), "batched_residual_sign": sign_b.to(torch.int8),
+            "common_upstream": common_upstream.cpu(), "reference_native_upstream": s["native_upstream"],
+            "batched_native_upstream": b["native_upstream"], "direct_target_gradient_change": direct_target_change}
+        for path, output in outputs.items():
+            for kind in ("native", "common"):
+                for name, value in output[kind].items():
+                    tensors[f"{path}.{kind}.{name}"] = value
+        artifact = out / "diagnostic-tensors.pt"
+        atomic_write(artifact, tensors, tensor=True)
+        report.update(status="complete", artifact=artifact.name, artifact_sha256=sha256(artifact), tensor_hashes=tensor_hashes(tensors))
+    except BaseException as error:
+        report.update(status="interrupted" if isinstance(error, KeyboardInterrupt) else "failed", error_type=type(error).__name__, error=str(error))
+        raise
+    finally:
+        save()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo", type=Path, required=True)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--profile", type=Path)
+    parser.add_argument("--train", type=Path)
+    parser.add_argument("--failed-probe", type=Path)
+    parser.add_argument("--original-probe-script", type=Path, default=Path(__file__).with_name("run-room-memory-sequence-mps.py"))
+    parser.add_argument("--max-seconds", type=float, default=180)
+    parser.add_argument("--cpu-fixture", action="store_true")
+    parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument("--worker", action="store_true", help=argparse.SUPPRESS)
+    args = parser.parse_args()
+    sys.path.insert(0, str(args.repo.resolve()))
+    if args.worker:
+        worker(json.loads(sys.stdin.read(65536)))
+        return
+    if args.output is None:
+        parser.error("--output is required")
+    if args.cpu_fixture:
+        cpu_fixture(args.output)
+        return
+    if args.profile is None or args.train is None or args.failed_probe is None or not 0 < args.max_seconds <= 180:
+        parser.error("Need --profile, --train, --failed-probe and a positive cap at most180 seconds")
+    from experiments.room_world.memory_train import new_directory, atomic_write, sha256, handoff_and_guard
+    config = prepare(args)
+    if args.validate_only:
+        print(json.dumps({"status": "inputs_verified_cpu_only", "scene": config["scene"], "shape": config["shape"], "thresholds": config["thresholds"]}))
+        return
+    out = new_directory(args.output).resolve()
+    snapshots = out / "measured-source"
+    snapshots.mkdir()
+    for name, expected in config["source_sha256"].items():
+        shutil.copyfile(args.repo / "experiments/room_world" / name, snapshots / (name + ".txt"))
+        if sha256(snapshots / (name + ".txt")) != expected:
+            raise ValueError("Source changed during snapshot")
+    shutil.copyfile(__file__, snapshots / "diagnose-room-memory-gradients.py.txt")
+    shutil.copyfile(args.original_probe_script, snapshots / "run-room-memory-sequence-mps.py.txt")
+    config.update(repo=str(args.repo.resolve()), train=str(args.train.resolve()), output=str(out), script_sha256=sha256(__file__))
+    atomic_write(out / "launch.json", {"status": "launched", "script_sha256": config["script_sha256"],
+        "source_sha256": config["source_sha256"], "original_probe_script_sha256": config["original_probe_script_sha256"],
+        "failed_probe_sha256": config["failed_probe_sha256"], "max_seconds": args.max_seconds, "optimizer_updates": 0,
+        "resource_limits": {"rss_gib": 18, "minimum_available_gib": 2, "mps_allocator_gib": 18}})
+    with (out / "worker.log").open("x") as log:
+        process = subprocess.Popen([sys.executable, str(Path(__file__).resolve()), "--worker", "--repo", str(args.repo.resolve())],
+            stdin=subprocess.PIPE, stdout=log, stderr=subprocess.STDOUT,
+            env=dict(os.environ, PYTORCH_ENABLE_MPS_FALLBACK="0"))
+        terminal = handoff_and_guard(process, config, out, max_seconds=args.max_seconds)
+    report = json.loads((out / "diagnostic.json").read_text()) if (out / "diagnostic.json").exists() else {"status": "missing"}
+    print(json.dumps({"terminal_status": terminal["status"], "diagnostic_status": report["status"],
+        "ordinary_l1_gradients_within_original_limits": report.get("ordinary_l1_gradients_within_original_limits"),
+        "common_upstream_gradients_within_original_limits": report.get("common_upstream_gradients_within_original_limits")}))
+    if terminal["status"] != "complete" or report["status"] != "complete":
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

@@ -2,6 +2,7 @@
 """CPU software checks with tiny synthetic tensors; no Room model training."""
 import copy
 import json
+from pathlib import Path
 import subprocess
 import sys
 
@@ -314,3 +315,247 @@ def test_variable_wait_control_predictions_are_retained(tmp_path):
             saved = torch.load(out / row["prediction_file"], weights_only=True)
             assert saved["uninterrupted"].shape[1] == steps
             assert saved["observed_prefix_return"].shape[1] == 24
+
+
+@pytest.mark.parametrize("sequence_path", ["stepwise", "batched"])
+def test_sequence_path_plan_snapshots_the_actual_implementation(tmp_path, monkeypatch, sequence_path):
+    monkeypatch.setattr(mt, "DevelopmentDataset", lambda *_: TinyData())
+    out = tmp_path / sequence_path
+    result = mt.run_study(tmp_path, tmp_path, out, phase="plan", seeds=(mt.SEEDS[0],), sequence_path=sequence_path)
+    assert result["sequence_path"] == sequence_path
+    assert set(result["source_sha256"]) == set(mt.training_source_names(sequence_path))
+    assert ("memory_sequence.py" in result["source_sha256"]) == (sequence_path == "batched")
+    for name, expected in result["source_sha256"].items():
+        assert mt.sha256(out / "measured-source" / (name + ".txt")) == expected
+        assert mt.sha256(Path(mt.__file__).with_name(name)) == expected
+    assert result["schedules"][str(mt.SEEDS[0])] == mt.paired_scene_schedule(TinyData.scene_ids, mt.SEEDS[0], 50)
+
+
+def test_batched_dispatch_and_checkpoint_path_are_explicit(tmp_path, monkeypatch):
+    from experiments.room_world import memory_sequence
+    calls = []
+
+    def synthetic_batched_fixture(model, rgb, actions, mode, *, check=None):
+        # Isolate dispatch/provenance. Actual batched numerical checks are independent.
+        calls.append(mode)
+        return mt.sequence_loss(model, rgb, actions, mode, check=check)
+
+    monkeypatch.setattr(memory_sequence, "sequence_loss_batched", synthetic_batched_fixture)
+    out = tmp_path / "batched"
+    result = mt.run_arm(TinyMemory(), TinyData(), [5000], "carry", out, seed=mt.SEEDS[0], phase="train", sequence_path="batched")
+    assert calls == ["carry"]
+    assert result["sequence_path"] == "batched"
+    assert result["loss_implementation"].endswith("synthetic_batched_fixture")
+    for name in ("memory-last.pt", "memory-final.pt", "recovery-last.pt"):
+        assert torch.load(out / name, weights_only=True)["sequence_path"] == "batched"
+
+
+@pytest.mark.parametrize("sequence_path", ["stepwise", "batched"])
+def test_worker_forwards_path_and_requires_its_source(tmp_path, monkeypatch, sequence_path):
+    from pathlib import Path
+    class Dataset(TinyData):
+        manifest_sha256 = "fixture"
+
+    monkeypatch.setattr(mt, "make_model", lambda *_: TinyMemory())
+    monkeypatch.setattr(mt, "DevelopmentDataset", lambda *_: Dataset())
+    called = []
+
+    def synthetic_worker_fixture(*args, **kwargs):
+        called.append(kwargs)
+        return {"status": "complete"}
+
+    monkeypatch.setattr(mt, "run_arm", synthetic_worker_fixture)
+    initial = tmp_path / "initial.pt"
+    mt.atomic_write(initial, mt.memory_state(TinyMemory()), tensor=True)
+    config = {"device": "cpu", "base": str(mt.BASE), "seed": mt.SEEDS[0], "initial": str(initial),
+        "initial_sha256": mt.sha256(initial), "train": str(tmp_path), "train_manifest_sha256": "fixture",
+        "schedule": [5000], "mode": "carry", "output": str(tmp_path / "unused"), "phase": "profile",
+        "learning_rate": 3e-4, "weight_decay": 1e-4,
+        "source_sha256": {name: mt.sha256(Path(mt.__file__).with_name(name)) for name in mt.training_source_names(sequence_path)}}
+    if sequence_path == "batched":
+        config["sequence_path"] = "batched"
+    # Missing path is the legacy/default stepwise case.
+    mt._worker(config)
+    assert called[0]["sequence_path"] == sequence_path
+    if sequence_path == "batched":
+        del config["source_sha256"]["memory_sequence.py"]
+        with pytest.raises(ValueError, match="does not cover"):
+            mt._worker(config)
+        assert len(called) == 1
+
+
+def test_legacy_stepwise_reports_match_but_mixed_paths_do_not():
+    common = {"status": "complete", "seed": mt.SEEDS[0], "completed_updates": 1, "requested_updates": 1,
+        "completed_scene_schedule": [5000], "scene_schedule": [5000], "initial_memory": {"same": 1},
+        "base_before": {"same": 2}, "base_after": {"same": 2}, "optimizer": {"same": 3}, "data": {"same": 4}}
+    carry, reset = dict(common, mode="carry"), dict(common, mode="reset")
+    assert mt.matched_arms(carry, reset)
+    assert mt.matched_arms(dict(carry, sequence_path="stepwise"), reset)
+    assert not mt.matched_arms(dict(carry, sequence_path="batched"), reset)
+    assert mt.matched_arms(dict(carry, sequence_path="batched"), dict(reset, sequence_path="batched"))
+    assert not mt.matched_arms(dict(carry, sequence_path="unknown"), dict(reset, sequence_path="unknown"))
+
+
+def test_invalid_sequence_path_is_rejected_before_output_creation(tmp_path):
+    out = tmp_path / "untouched"
+    with pytest.raises(ValueError, match="Sequence path"):
+        mt.run_arm(TinyMemory(), TinyData(), [5000], "carry", out, seed=1, phase="profile", sequence_path="automatic")
+    assert not out.exists()
+
+
+def test_sequence_path_cli_defaults_to_stepwise_and_accepts_batched(tmp_path, monkeypatch):
+    seen = []
+
+    def plan_fixture(*args, **kwargs):
+        seen.append(kwargs["sequence_path"])
+        return {"status": "planned", "phase": "plan", "matched_budgets": False, "evaluation_executed": False}
+
+    monkeypatch.setattr(mt, "run_study", plan_fixture)
+    common = ["memory_train", "--train", str(tmp_path), "--validation", str(tmp_path), "--output", str(tmp_path)]
+    monkeypatch.setattr(sys, "argv", common)
+    mt.main()
+    monkeypatch.setattr(sys, "argv", common + ["--sequence-path", "batched"])
+    mt.main()
+    assert seen == ["stepwise", "batched"]
+
+
+def _evaluation_study_fixture(tmp_path, monkeypatch, sequence_path="batched"):
+    """Synthetic completed metadata only; no optimizer, real training or scoring."""
+    class Dataset(TinyData):
+        manifest_sha256 = "f" * 64
+
+    monkeypatch.setattr(mt, "DevelopmentDataset", lambda *_: Dataset())
+    root = tmp_path / "study"
+    root.mkdir()
+    study = {"status": "complete", "phase": "train", "matched_budgets": True,
+        "requested_updates_per_arm": 1, "seeds": [mt.SEEDS[0]],
+        "validation": {"manifest_sha256": Dataset.manifest_sha256}, "runs": [],
+        "source_sha256": {name: mt.sha256(Path(mt.__file__).with_name(name))
+                           for name in mt.training_source_names(sequence_path or "stepwise")}}
+    if sequence_path is not None:
+        study["sequence_path"] = sequence_path
+    snapshot = root / "measured-source"
+    snapshot.mkdir()
+    for name in study["source_sha256"]:
+        (snapshot / (name + ".txt")).write_bytes(Path(mt.__file__).with_name(name).read_bytes())
+    initial = mt.memory_state(TinyMemory())
+    common = {"status": "complete", "seed": mt.SEEDS[0], "completed_updates": 1, "requested_updates": 1,
+        "completed_scene_schedule": [5000], "scene_schedule": [5000], "initial_memory": {"fixture": True},
+        "base_before": {"fixture": True}, "base_after": {"fixture": True}, "optimizer": {}, "data": {}}
+    for mode in ("carry", "reset"):
+        folder = root / mode
+        folder.mkdir()
+        payload = {"mode": mode, "seed": mt.SEEDS[0], "completed_updates": 1,
+                   "base_checkpoint_sha256": mt.BASE_SHA256, "memory_state_dict": initial}
+        arm, row = dict(common, mode=mode), {"seed": mt.SEEDS[0], "mode": mode}
+        if sequence_path is not None:
+            payload["sequence_path"] = arm["sequence_path"] = row["sequence_path"] = sequence_path
+        torch.save(payload, folder / "memory-final.pt")
+        arm["memory_final_sha256"] = mt.sha256(folder / "memory-final.pt")
+        mt.atomic_write(folder / "metrics.json", arm)
+        row.update(metrics=f"{mode}/metrics.json", metrics_sha256=mt.sha256(folder / "metrics.json"))
+        study["runs"].append(row)
+    mt.atomic_write(root / "study.json", study)
+    return root, study
+
+
+@pytest.mark.parametrize("location", ["row", "arm", "checkpoint", "missing_source", "unknown_study"])
+def test_evaluation_rejects_inconsistent_sequence_path_before_launch(tmp_path, monkeypatch, location):
+    root, study = _evaluation_study_fixture(tmp_path, monkeypatch)
+    row = study["runs"][0]
+    metrics_path = root / row["metrics"]
+    arm = json.loads(metrics_path.read_text())
+    if location == "row":
+        row["sequence_path"] = "stepwise"
+    elif location == "arm":
+        arm["sequence_path"] = "stepwise"
+    elif location == "checkpoint":
+        path = metrics_path.parent / "memory-final.pt"
+        payload = torch.load(path, weights_only=True)
+        payload["sequence_path"] = "stepwise"
+        torch.save(payload, path)
+        arm["memory_final_sha256"] = mt.sha256(path)
+    elif location == "missing_source":
+        del study["source_sha256"]["memory_sequence.py"]
+    else:
+        study["sequence_path"] = "unknown"
+    mt.atomic_write(metrics_path, arm)
+    row["metrics_sha256"] = mt.sha256(metrics_path)
+    mt.atomic_write(root / "study.json", study)
+    monkeypatch.setattr(subprocess, "Popen", lambda *a, **k: pytest.fail("Worker must not start"))
+    output = tmp_path / "uncreated"
+    with pytest.raises(ValueError, match="sequence path"):
+        evaluate_study(root, tmp_path, output)
+    assert not output.exists()
+
+
+@pytest.mark.parametrize("change", ["missing", "modified"])
+def test_evaluation_rejects_changed_retained_training_source(tmp_path, monkeypatch, change):
+    root, _ = _evaluation_study_fixture(tmp_path, monkeypatch)
+    path = root / "measured-source/memory_sequence.py.txt"
+    if change == "missing":
+        path.unlink()
+    else:
+        path.write_bytes(path.read_bytes() + b"\n# changed after training\n")
+    monkeypatch.setattr(subprocess, "Popen", lambda *a, **k: pytest.fail("Worker must not start"))
+    with pytest.raises(ValueError, match="Retained training source snapshot"):
+        evaluate_study(root, tmp_path, tmp_path / "uncreated")
+    assert not (tmp_path / "uncreated").exists()
+
+
+@pytest.mark.parametrize("sequence_path", [None, "stepwise", "batched"])
+def test_evaluation_records_path_and_training_provenance(tmp_path, monkeypatch, sequence_path):
+    from experiments.room_world import memory_evaluate as me
+    root, study = _evaluation_study_fixture(tmp_path, monkeypatch, sequence_path)
+    configs = []
+
+    def synthetic_handoff(process, config, folder, **kwargs):
+        configs.append(config)
+        out = Path(config["output"])
+        out.mkdir()
+        identity = {key: config[key] for key in ("mode", "seed", "updates", "checkpoint_sha256",
+                    "sequence_path", "training_sequence_path", "training_source_sha256", "training_study_sha256")}
+        mt.atomic_write(out / "evaluation.json", {"status": "complete", "provenance": identity})
+        return {"status": "complete"}
+
+    monkeypatch.setattr(subprocess, "Popen", lambda *a, **k: object())
+    monkeypatch.setattr(mt, "handoff_and_guard", synthetic_handoff)
+    monkeypatch.setattr(me, "compare_evaluations", lambda *a, **k: {"status": "unavailable", "fixture_only": True})
+    report = me.evaluate_study(root, tmp_path, tmp_path / "evaluation")
+    expected = sequence_path or "stepwise"
+    assert report["sequence_path"] == expected
+    assert report["training_source_sha256"] == study["source_sha256"]
+    assert [c["sequence_path"] for c in configs] == [expected, expected, None]
+    assert all(c["training_sequence_path"] == expected for c in configs)
+    assert all(c["training_source_sha256"] == study["source_sha256"] for c in configs)
+    assert all(c["training_study_sha256"] == mt.sha256(root / "study.json") for c in configs)
+    assert [r["sequence_path"] for r in report["runs"]] == [expected, expected, None]
+
+
+def test_evaluation_worker_rechecks_checkpoint_path_and_records_real_config(tmp_path, monkeypatch):
+    from experiments.room_world import memory_evaluate as me
+    root, study = _evaluation_study_fixture(tmp_path, monkeypatch)
+    monkeypatch.setattr(mt, "make_model", lambda *a: TinyMemory())
+    seen = []
+    monkeypatch.setattr(me, "evaluate_model", lambda *a, **k: seen.append(k))
+    path = root / "carry/memory-final.pt"
+    config = {"mode": "carry", "seed": mt.SEEDS[0], "updates": 1, "device": "cpu", "base": str(mt.BASE),
+        "checkpoint": str(path), "checkpoint_sha256": mt.sha256(path), "sequence_path": "batched",
+        "training_sequence_path": "batched", "training_source_sha256": study["source_sha256"],
+        "training_study_sha256": mt.sha256(root / "study.json"), "data": str(tmp_path),
+        "data_sha256": "f" * 64, "output": str(tmp_path / "unused"),
+        "source_sha256": {name: mt.sha256(Path(me.__file__).with_name(name))
+                           for name in ("memory_evaluate.py", "memory_train.py", "memory_model.py", "model.py")}}
+    me._evaluation_worker(config)
+    assert seen[0]["provenance"]["sequence_path"] == "batched"
+    assert seen[0]["provenance"]["training_source_sha256"] == study["source_sha256"]
+    payload = torch.load(path, weights_only=True)
+    payload["sequence_path"] = "stepwise"
+    torch.save(payload, path)
+    config["checkpoint_sha256"] = mt.sha256(path)
+    with pytest.raises(ValueError, match="sequence path"):
+        me._evaluation_worker(config)
+    assert len(seen) == 1
+    config["training_sequence_path"] = "stepwise"
+    with pytest.raises(ValueError, match="sequence paths"):
+        me._evaluation_worker(config)

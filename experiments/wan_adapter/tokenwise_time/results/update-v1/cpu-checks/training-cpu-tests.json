@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.8151649999781512,
+  "device": "cpu",
+  "pretrained_weights_loaded": false,
+  "torch": "2.5.1",
+  "source_sha256": {
+    "tokenwise_time/test_training.py": "d0db216a3460ea755c365eba5e1e6ff097361f0c8761d1d529d3eec2324ffe07",
+    "tokenwise_time/training.py": "da8b2b516b35f538986d9797e297a9912e672120947d3a886b2331785f80488f",
+    "tokenwise_time/portable.py": "54ef9b1c869774dd43379d5587c0676ca1175ffba869f9cd7dd44a7590b6bd32",
+    "adapter.py": "c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8",
+    "native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "native_control/vendor/model.py": "c1572ade3bf7345bd4c00d4a19535788fab62f9c08b5aeb15f6d01f4435bb47a"
+  },
+  "scope": "Noising/loss, checkpoint gradients, fresh adapter mechanics and hook cleanup; no video or generalization result"
+}

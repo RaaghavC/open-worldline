@@ -1,0 +1,97 @@
+{
+  "schema": "worldline-room-memory-batched-profile-independent-audit-v1",
+  "status": "passed",
+  "device_used_for_audit": "cpu",
+  "audit_source_sha256": "856c777cc65177c18c10a2c5bc34cab2d586f0d3ad4836905243bb3029745d3e",
+  "study_sha256": "19fae9fe6ac6bd59f97241606f88a7b5af8a92a0dfca0c86058507d2f4aa7558",
+  "source_sha256": {
+    "memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+    "memory_evaluate.py": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+    "memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "memory_data.py": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+    "memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+  },
+  "base_checkpoint_sha256": "9376e684e3abd103313d13d04bd4a1afc1b202fccb7e7b6fe133e7232a486d69",
+  "initial_memory_sha256": "293301759d0ece1630a8b8d5875b2bdf613a620631bd246243615e05ebc924b6",
+  "sequence_path": "batched",
+  "old_stepwise_study_sha256": "aab2aec3616592d2abbea756b998a867dff408275405898688a03e1f62bc2edd",
+  "same_initialization_schedule_data_optimizer_as_stepwise": true,
+  "checkpoint_path_labels_verified": true,
+  "optimizer_tensor_shapes_and_nonnegative_second_moments_verified": true,
+  "matched_realized_updates": true,
+  "completed_updates_each": 50,
+  "seed": 20260907,
+  "full_temporal_graph_steps": 65,
+  "base_tensors_equal_to_published_checkpoint": true,
+  "recovery_optimizer_steps_all50": true,
+  "reserved_test_opened": false,
+  "quality_evaluation_executed": false,
+  "arms": [
+    {
+      "mode": "carry",
+      "completed_updates": 50,
+      "training_seconds": 15.927366374991834,
+      "supervised_seconds": 17.77564862498548,
+      "stepwise_training_seconds": 72.99253066600068,
+      "observed_stepwise_to_batched_training_time_ratio": 4.58283742255148,
+      "linear_1024_update_training_seconds": 326.19246335983274,
+      "update_seconds_mean": 0.31598301085992714,
+      "update_seconds_median": 0.27931718749459833,
+      "update_seconds_range": [
+        0.2197440000018105,
+        1.0740793340082746
+      ],
+      "loss_first": 0.010677842423319817,
+      "loss_last": 0.012564500793814659,
+      "loss_range": [
+        0.008081803098320961,
+        0.01261014025658369
+      ],
+      "gradient_norm_range": [
+        0.001435411162674427,
+        0.0032460824586451054
+      ],
+      "all_memory_tensors_changed": true,
+      "final_sha256": "04103414228ab762164bef6538997d26a10ee6408b72b062d079873bc3166018",
+      "recovery_sha256": "5912626ebfd64e753896a7f0c2f9e3e9adcef0b57665e5d79570b796cbd931d9",
+      "peak_mps_driver_sampled_gib": 2.0900115966796875,
+      "peak_mps_active_sampled_gib": 0.010868310928344727,
+      "peak_rss_sampled_gib": 0.5010986328125,
+      "minimum_available_sampled_gib": 7.7659759521484375
+    },
+    {
+      "mode": "reset",
+      "completed_updates": 50,
+      "training_seconds": 21.94787908301805,
+      "supervised_seconds": 24.341257624997525,
+      "stepwise_training_seconds": 73.98794754198752,
+      "observed_stepwise_to_batched_training_time_ratio": 3.3710750483965874,
+      "linear_1024_update_training_seconds": 449.4925636202097,
+      "update_seconds_mean": 0.4354614374984521,
+      "update_seconds_median": 0.41466502100229263,
+      "update_seconds_range": [
+        0.16570666700135916,
+        0.9061553750070743
+      ],
+      "loss_first": 0.010677842423319817,
+      "loss_last": 0.012597770430147648,
+      "loss_range": [
+        0.008096488192677498,
+        0.012664023786783218
+      ],
+      "gradient_norm_range": [
+        0.0008703277562744915,
+        0.0022612344473600388
+      ],
+      "all_memory_tensors_changed": true,
+      "final_sha256": "52c23aa4baa2587d146826858473a1d87316e09719cfdd9b7de7f7856d0c0301",
+      "recovery_sha256": "49194bf0e8280d19accbbfcaf35f76778d6e83281cbe6d37f6ce0b5e346b1b63",
+      "peak_mps_driver_sampled_gib": 2.0900115966796875,
+      "peak_mps_active_sampled_gib": 0.009513378143310547,
+      "peak_rss_sampled_gib": 0.49285888671875,
+      "minimum_available_sampled_gib": 7.7860107421875
+    }
+  ],
+  "limits": "One 50-update profile per arm, one initialization seed. Elapsed-time ratios are observed across two separate runs, not a multi-run speed benchmark. The 1024-update estimates are linear, exclude initialization and evaluation, and must retain the 600-second cap. No validation/control result or learned-memory claim. Metal/RSS samples overlap and are not proven instantaneous peaks. Original L1-gradient failure remains unchanged."
+}

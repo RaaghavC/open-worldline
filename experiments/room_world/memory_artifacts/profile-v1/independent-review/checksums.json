@@ -5,8 +5,8 @@
   "only_report_difference": "audit_source_sha256 identifies the portable path-argument wrapper",
   "files": {
     "README.md": {
-      "bytes": 1901,
-      "sha256": "8d821b24c05acc7df57f64b7fd38dc6228c58a11821469691cbdff07ec374f54"
+      "bytes": 2165,
+      "sha256": "80f01eeec7983fbbeeb0ee7664ce9e1cb999101aa7a813346ada8a2305dfca7b"
     },
     "audit_profile.py": {
       "bytes": 8049,
@@ -24,5 +24,6 @@
       "bytes": 3665,
       "sha256": "61a61f152667de8f6c88dda6407884a6b00d30cae996bf06cfbbd12c95a66111"
     }
-  }
+  },
+  "documentation_update": "README now pins the matching repository revision; executed audit source and reports are unchanged."
 }

@@ -1,0 +1,66 @@
+{
+  "schema": "worldline-memory-gradient-diagnostic-publication-v1",
+  "files": {
+    "diagnostic-tensors.pt.gz": {
+      "sha256": "94ea12e30e83322ea4607a63068f3e50e44aa5d6bcba52c3a80025a93a2d58fc",
+      "bytes": 45619259
+    },
+    "diagnostic.json": {
+      "sha256": "00a75aa61972259381a40b945a8b9998c6372df12c38632b8df94ddeab8b8434",
+      "bytes": 33039
+    },
+    "launch.json": {
+      "sha256": "72b9647eb0b0a37514ee2a4daee31832ec8b3287153172a423f6e72b148224ed",
+      "bytes": 1035
+    },
+    "measured-source/diagnose-room-memory-gradients.py.txt": {
+      "sha256": "bff22f7f5daedc1ab4e51b8e0df4b4d31de3cb5246a392185a90ed17cbdd162f",
+      "bytes": 21489
+    },
+    "measured-source/memory_data.py.txt": {
+      "sha256": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+      "bytes": 7046
+    },
+    "measured-source/memory_evaluate.py.txt": {
+      "sha256": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+      "bytes": 39904
+    },
+    "measured-source/memory_model.py.txt": {
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "bytes": 6862
+    },
+    "measured-source/memory_sequence.py.txt": {
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "bytes": 4839
+    },
+    "measured-source/memory_train.py.txt": {
+      "sha256": "5422b878462820646e1b85cce40c750e8a2fce72dd58f3438d95f71a107cfbe8",
+      "bytes": 37726
+    },
+    "measured-source/model.py.txt": {
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "bytes": 5261
+    },
+    "measured-source/run-room-memory-sequence-mps.py.txt": {
+      "sha256": "b7b2ca39782f0a6a76444904f2f4c66f88a7bfadd786ca7175026c72130a1a2f",
+      "bytes": 15283
+    },
+    "terminal.json": {
+      "sha256": "29c4e8fff90a7530ebb5322d0745b106b50e25acfc418ce117c93cdef01be8cc",
+      "bytes": 1881
+    },
+    "worker.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "compressed_artifact": {
+    "file": "diagnostic-tensors.pt.gz",
+    "format": "gzip",
+    "reconstructed_file": "diagnostic-tensors.pt",
+    "reconstructed_bytes": 87164257,
+    "reconstructed_sha256": "6e4a7a977371e2c94c8af611abf3f9bf3e77fe789ec8d7b67aeb78732e5794cc"
+  },
+  "original_l1_check": "failed; unchanged",
+  "total_bytes": 45793624
+}

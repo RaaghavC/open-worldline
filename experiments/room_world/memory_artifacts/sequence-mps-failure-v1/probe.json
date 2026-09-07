@@ -1,0 +1,252 @@
+{
+  "seed": 20260907,
+  "scene": 5023,
+  "checkpoint_sha256": "32254661c9d64645ebd902284bf408df47694befc742e7296e5d61e2089389b6",
+  "profile_study_sha256": "aab2aec3616592d2abbea756b998a867dff408275405898688a03e1f62bc2edd",
+  "train_manifest_sha256": "f85c695dc192a1a726535e613e3df1517ed90029895cf0ea8be7552c8b35d8dc",
+  "base_checkpoint_sha256": "9376e684e3abd103313d13d04bd4a1afc1b202fccb7e7b6fe133e7232a486d69",
+  "shape": [
+    2,
+    66,
+    3,
+    64,
+    64
+  ],
+  "action_shape": [
+    2,
+    65
+  ],
+  "source_sha256": {
+    "memory_train.py": "5422b878462820646e1b85cce40c750e8a2fce72dd58f3438d95f71a107cfbe8",
+    "memory_evaluate.py": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+    "memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "memory_data.py": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+    "memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+  },
+  "script_sha256": "b7b2ca39782f0a6a76444904f2f4c66f88a7bfadd786ca7175026c72130a1a2f",
+  "repeats": 3,
+  "schema": "worldline-room-memory-sequence-mps-probe-v1",
+  "status": "failed",
+  "device": "mps",
+  "torch": "2.5.1",
+  "optimizer_updates": 0,
+  "modes": {
+    "carry": [
+      {
+        "repeat": 0,
+        "order": [
+          "stepwise",
+          "batched"
+        ],
+        "passed": false,
+        "loss_abs_difference": 0.0,
+        "parameter_gradients": {
+          "gru.weight_ih": {
+            "max_abs_difference": 1.0277290130034089e-10,
+            "l2_difference": 8.86915851862559e-10,
+            "relative_l2_difference": 4.892001036808333e-06,
+            "reference_l2_norm": 0.00018129919539861865,
+            "candidate_l2_norm": 0.00018129947002706265,
+            "finite": true
+          },
+          "gru.weight_hh": {
+            "max_abs_difference": 2.6716406864579767e-11,
+            "l2_difference": 2.1882236749684534e-10,
+            "relative_l2_difference": 5.002140482127442e-06,
+            "reference_l2_norm": 4.3745746101832553e-05,
+            "candidate_l2_norm": 4.374577015228502e-05,
+            "finite": true
+          },
+          "gru.bias_ih": {
+            "max_abs_difference": 3.3651303965598345e-11,
+            "l2_difference": 8.923880857374147e-11,
+            "relative_l2_difference": 4.4509527042407265e-06,
+            "reference_l2_norm": 2.0049372461027854e-05,
+            "candidate_l2_norm": 2.004939252391978e-05,
+            "finite": true
+          },
+          "gru.bias_hh": {
+            "max_abs_difference": 1.944044925039634e-11,
+            "l2_difference": 5.053157668684945e-11,
+            "relative_l2_difference": 4.655672150004954e-06,
+            "reference_l2_norm": 1.0853766128440915e-05,
+            "candidate_l2_norm": 1.0853773415711176e-05,
+            "finite": true
+          },
+          "condition.weight": {
+            "max_abs_difference": 8.440110832452774e-10,
+            "l2_difference": 1.616292256100969e-08,
+            "relative_l2_difference": 6.663377104061636e-06,
+            "reference_l2_norm": 0.0024256352760160674,
+            "candidate_l2_norm": 0.002425644009257563,
+            "finite": true
+          },
+          "condition.bias": {
+            "max_abs_difference": 8.731149137020111e-10,
+            "l2_difference": 4.0681470522412775e-09,
+            "relative_l2_difference": 5.258491685093482e-06,
+            "reference_l2_norm": 0.0007736338280753518,
+            "candidate_l2_norm": 0.0007736356922546884,
+            "finite": true
+          }
+        },
+        "rgb_gradient": {
+          "max_abs_difference": 3.130008821017327e-07,
+          "l2_difference": 6.307077198702178e-07,
+          "relative_l2_difference": 0.0015964399626888482,
+          "reference_l2_norm": 0.00039507136792537494,
+          "candidate_l2_norm": 0.00039507153501558325,
+          "finite": true
+        },
+        "paths": {
+          "stepwise": {
+            "loss": 0.010371977463364601,
+            "forward_seconds": 1.2468674590054434,
+            "forward_backward_seconds": 2.7574499170004856,
+            "mps_active_bytes_after_backward": 22843904,
+            "mps_driver_bytes_after_backward": 1455603712
+          },
+          "batched": {
+            "loss": 0.010371977463364601,
+            "forward_seconds": 0.6423565409786534,
+            "forward_backward_seconds": 1.1741295410029124,
+            "mps_active_bytes_after_backward": 21862400,
+            "mps_driver_bytes_after_backward": 3603611648
+          }
+        },
+        "gradient_hashes": {
+          "stepwise": {
+            "condition.bias": {
+              "shape": [
+                192
+              ],
+              "dtype": "torch.float32",
+              "sha256": "5d6063bf9d37145af48baf7a1c59711e16297076310f722b944f2b49f57e21bd"
+            },
+            "condition.weight": {
+              "shape": [
+                192,
+                32
+              ],
+              "dtype": "torch.float32",
+              "sha256": "d93185b38554f2e2c94ccb46297f711984533736cee93bf34ba37a94072d3318"
+            },
+            "gru.bias_hh": {
+              "shape": [
+                96
+              ],
+              "dtype": "torch.float32",
+              "sha256": "957aebaaf44f5e86ffa818ea3d0051753bc37e7fc6df5f94489ed78dd3b32949"
+            },
+            "gru.bias_ih": {
+              "shape": [
+                96
+              ],
+              "dtype": "torch.float32",
+              "sha256": "15d58cf8e276c65977b09952d45febfc8370d3776f5762d341a46cf0a1bfd708"
+            },
+            "gru.weight_hh": {
+              "shape": [
+                96,
+                32
+              ],
+              "dtype": "torch.float32",
+              "sha256": "64661bde8496c9f6492112884aaec944e4c699f1f307c145821f4822df656a11"
+            },
+            "gru.weight_ih": {
+              "shape": [
+                96,
+                160
+              ],
+              "dtype": "torch.float32",
+              "sha256": "a9470e48ebd7ea61ed1c7e19a7f584232baafc15fb29d42e14c0d075e0fb6dba"
+            },
+            "rgb_input": {
+              "shape": [
+                2,
+                66,
+                3,
+                64,
+                64
+              ],
+              "dtype": "torch.float32",
+              "sha256": "8df77ef44f9d49ec0f4729344903317c20869d449ef3503ad15464bf31d9659e"
+            }
+          },
+          "batched": {
+            "condition.bias": {
+              "shape": [
+                192
+              ],
+              "dtype": "torch.float32",
+              "sha256": "a76595ed4274ca613b4dde7caedea90c512d973885ae3bd2697b89cf6ceab53c"
+            },
+            "condition.weight": {
+              "shape": [
+                192,
+                32
+              ],
+              "dtype": "torch.float32",
+              "sha256": "7e928acc8f5a96e319073141b25b6541f1e99f3b1d7ede5779bd92abbfd20cab"
+            },
+            "gru.bias_hh": {
+              "shape": [
+                96
+              ],
+              "dtype": "torch.float32",
+              "sha256": "065049ad85441e40346926b7495e517ce0032215121d137e56d23bc16c92afea"
+            },
+            "gru.bias_ih": {
+              "shape": [
+                96
+              ],
+              "dtype": "torch.float32",
+              "sha256": "0dd08e3db8d3479f3b542245fafeea776cf9cba5b8a6d1294105ca2693f9ae05"
+            },
+            "gru.weight_hh": {
+              "shape": [
+                96,
+                32
+              ],
+              "dtype": "torch.float32",
+              "sha256": "1a8ce82f1cfe6ed9d3702551a87403747fb5493152cd56e997c3ca1936552dfe"
+            },
+            "gru.weight_ih": {
+              "shape": [
+                96,
+                160
+              ],
+              "dtype": "torch.float32",
+              "sha256": "f486a3895e3f3585915aeff5cfdc9acfefbe4f044e850a29ed2f51a3f25e3761"
+            },
+            "rgb_input": {
+              "shape": [
+                2,
+                66,
+                3,
+                64,
+                64
+              ],
+              "dtype": "torch.float32",
+              "sha256": "494916eea2b5dec4b07bc972f17609462f9ffbc0ce57382e55bce73e8a34810e"
+            }
+          }
+        },
+        "gradient_file": "gradients-carry.pt",
+        "gradient_file_sha256": "b5a2e82ae7f9bf09c2e135ffd89408b2045fc24813e681f5af85e423cf1a5a9c"
+      }
+    ]
+  },
+  "checkpoint_use": "The same completed carry-profile memory values initialize both computational paths and both state modes",
+  "limit": "One actual training pair; synchronized MPS loss/backward probe only; not a training or quality result",
+  "thresholds": {
+    "loss_abs": 2e-06,
+    "parameter_gradient_abs_max": 1e-06,
+    "parameter_gradient_relative_l2": 0.001,
+    "rgb_gradient_abs_max": 1e-07,
+    "rgb_gradient_relative_l2": 0.001
+  },
+  "error_type": "RuntimeError",
+  "error": "Declared MPS numerical comparison limits were exceeded; evidence retained"
+}

@@ -1,0 +1,240 @@
+"""Separate guarded MPS loss/gradient probe. No optimizer updates or training."""
+import argparse
+import json
+import os
+from pathlib import Path
+import shutil
+import statistics
+import subprocess
+import sys
+import time
+
+
+def setup(repo):
+    sys.path.insert(0, str(Path(repo).resolve()))
+
+
+def prepare(repo, profile, train):
+    from experiments.room_world.memory_train import (DevelopmentDataset, BASE, BASE_SHA256, SEEDS, sha256, matched_arms)
+    profile = Path(profile).resolve()
+    manifest = json.loads((profile / "study.json").read_text())
+    if manifest["status"] != "complete" or manifest["phase"] != "profile" or manifest["matched_budgets"] is not True:
+        raise ValueError("Need the complete matched profile, not a partial run")
+    if manifest["seeds"] != [SEEDS[0]] or manifest["requested_updates_per_arm"] != 50:
+        raise ValueError("Expected the measured seed20260907/50-update profile")
+    root = Path(repo).resolve() / "experiments/room_world"
+    for name, expected in manifest["source_sha256"].items():
+        if Path(name).name != name or sha256(root / name) != expected:
+            raise ValueError("A measured profile source differs")
+    arms = []
+    for mode in ("carry", "reset"):
+        rows = [row for row in manifest["runs"] if row["seed"] == SEEDS[0] and row["mode"] == mode]
+        if len(rows) != 1:
+            raise ValueError("Missing/duplicate profile arm")
+        path = (profile / rows[0]["metrics"]).resolve()
+        if not path.is_relative_to(profile) or sha256(path) != rows[0]["metrics_sha256"]:
+            raise ValueError("Profile metrics path/hash differs")
+        arms.append(json.loads(path.read_text()))
+        if mode == "carry":
+            checkpoint = path.parent / "memory-final.pt"
+            checkpoint_sha = arms[-1]["memory_final_sha256"]
+    if not matched_arms(*arms) or sha256(checkpoint) != checkpoint_sha or sha256(BASE) != BASE_SHA256:
+        raise ValueError("The measured profile/checkpoint/base evidence differs")
+    dataset = DevelopmentDataset(train, "train")
+    if dataset.manifest_sha256 != manifest["training"]["manifest_sha256"]:
+        raise ValueError("Training capture differs from the profile")
+    scene = manifest["schedules"][str(SEEDS[0])][0]
+    rgb, actions = dataset.load_pair(scene)
+    if tuple(rgb.shape) != (2, 66, 3, 64, 64) or tuple(actions.shape) != (2, 65):
+        raise ValueError("Expected both branches of a full64px/65-step actual pair")
+    return {"seed": SEEDS[0], "scene": scene, "checkpoint": str(checkpoint), "checkpoint_sha256": checkpoint_sha,
+        "profile_study_sha256": sha256(profile / "study.json"), "train_manifest_sha256": dataset.manifest_sha256,
+        "base": str(BASE.resolve()), "base_checkpoint_sha256": BASE_SHA256,
+        "shape": list(rgb.shape), "action_shape": list(actions.shape),
+        "source_sha256": {name: sha256(root / name) for name in (*manifest["source_sha256"], "memory_sequence.py")}}
+
+
+def worker(config):
+    import torch
+    from experiments.room_world.memory_train import (DevelopmentDataset, make_model, restore_memory, sha256,
+        tensor_hashes, atomic_write, _sync)
+    from experiments.room_world.memory_train import sequence_loss
+    from experiments.room_world.memory_sequence import sequence_loss_batched
+    out = Path(config["output"])
+    report = {key: config[key] for key in ("seed", "scene", "checkpoint_sha256", "profile_study_sha256",
+        "train_manifest_sha256", "base_checkpoint_sha256", "shape", "action_shape", "source_sha256", "script_sha256", "repeats")}
+    report.update(schema="worldline-room-memory-sequence-mps-probe-v1", status="running", device="mps",
+        torch=str(torch.__version__), optimizer_updates=0, modes={},
+        checkpoint_use="The same completed carry-profile memory values initialize both computational paths and both state modes",
+        limit="One actual training pair; synchronized MPS loss/backward probe only; not a training or quality result",
+        thresholds={"loss_abs": 2e-6, "parameter_gradient_abs_max": 1e-6, "parameter_gradient_relative_l2": 1e-3,
+                    "rgb_gradient_abs_max": 1e-7, "rgb_gradient_relative_l2": 1e-3})
+
+    def save():
+        atomic_write(out / "probe.json", report)
+
+    def difference(candidate, reference):
+        candidate, reference = candidate.double(), reference.double()
+        delta = candidate - reference
+        norm = reference.norm()
+        return {"max_abs_difference": float(delta.abs().max()), "l2_difference": float(delta.norm()),
+            "relative_l2_difference": float(delta.norm() / norm) if norm else None,
+            "reference_l2_norm": float(norm), "candidate_l2_norm": float(candidate.norm()),
+            "finite": bool(torch.isfinite(candidate).all() and torch.isfinite(reference).all())}
+
+    save()
+    try:
+        if not torch.backends.mps.is_available() or os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK") != "0":
+            raise RuntimeError("This probe requires MPS with CPU fallback disabled")
+        torch.set_num_threads(2)
+        torch.mps.set_per_process_memory_fraction(min(1., 18 * 2**30 / torch.mps.recommended_max_memory()))
+        source_root = Path(config["repo"]) / "experiments/room_world"
+        for name, expected in config["source_sha256"].items():
+            if Path(name).name != name or sha256(source_root / name) != expected:
+                raise ValueError("Probe source changed after its snapshot")
+        if sha256(config["checkpoint"]) != config["checkpoint_sha256"] or sha256(__file__) != config["script_sha256"]:
+            raise ValueError("Probe script or memory checkpoint changed")
+        payload = torch.load(config["checkpoint"], map_location="cpu", weights_only=True)
+        if (payload["seed"] != config["seed"] or payload["mode"] != "carry" or payload["completed_updates"] != 50
+                or payload["base_checkpoint_sha256"] != config["base_checkpoint_sha256"]):
+            raise ValueError("Memory checkpoint identity differs")
+        model = make_model(config["base"], config["seed"], "cpu")
+        restore_memory(model, payload["memory_state_dict"])
+        if not model.condition.weight.abs().sum() > 0:
+            raise ValueError("Need nonzero conditioning to test recurrent gradients")
+        expected_values = tensor_hashes(model.state_dict())
+        model = model.to("mps").train()
+        dataset = DevelopmentDataset(config["train"], "train")
+        if dataset.manifest_sha256 != config["train_manifest_sha256"]:
+            raise ValueError("Training capture changed")
+        rgb, actions = dataset.load_pair(config["scene"])
+        rgb, actions = rgb.to("mps"), actions.to("mps")
+
+        def run_once(function, mode):
+            model.zero_grad(set_to_none=True)
+            observed = rgb.clone().requires_grad_()
+            _sync("mps")
+            tick = time.perf_counter()
+            loss = function(model, observed, actions, mode)
+            _sync("mps")
+            forward = time.perf_counter() - tick
+            if not torch.isfinite(loss):
+                raise FloatingPointError("Nonfinite loss")
+            loss.backward()
+            _sync("mps")
+            total = time.perf_counter() - tick
+            gradients = {name: value.grad.detach().cpu().clone() for name, value in model.named_parameters() if value.requires_grad}
+            if any(value.grad is not None for value in model.base.parameters()):
+                raise RuntimeError("Frozen base received a gradient")
+            if any(not torch.isfinite(value).all() for value in gradients.values()) or not torch.isfinite(observed.grad).all():
+                raise FloatingPointError("Nonfinite gradient")
+            for name, value in gradients.items():
+                if mode == "reset" and name == "gru.weight_hh":
+                    if value.abs().sum() != 0:
+                        raise RuntimeError("Reset recurrent-weight gradient should be exactly zero")
+                elif not value.abs().sum() > 0:
+                    raise RuntimeError("The nonzero-conditioning gradient probe received a zero gradient")
+            return {"loss": float(loss.detach().cpu()), "gradients": gradients, "rgb_gradient": observed.grad.detach().cpu().clone(),
+                "forward_seconds": forward, "forward_backward_seconds": total,
+                "mps_active_bytes_after_backward": torch.mps.current_allocated_memory(),
+                "mps_driver_bytes_after_backward": torch.mps.driver_allocated_memory()}
+
+        for mode in ("carry", "reset"):
+            report["modes"][mode] = []
+            for repeat in range(config["repeats"]):
+                functions = [("stepwise", sequence_loss), ("batched", sequence_loss_batched)]
+                if repeat % 2:
+                    functions.reverse()
+                measured = {name: run_once(function, mode) for name, function in functions}
+                reference, candidate = measured["stepwise"], measured["batched"]
+                gradients = {name: difference(candidate["gradients"][name], reference["gradients"][name]) for name in reference["gradients"]}
+                input_difference = difference(candidate["rgb_gradient"], reference["rgb_gradient"])
+                loss_delta = abs(reference["loss"] - candidate["loss"])
+                thresholds = report["thresholds"]
+                passed = loss_delta <= thresholds["loss_abs"]
+                for value in gradients.values():
+                    passed &= value["finite"] and value["max_abs_difference"] <= thresholds["parameter_gradient_abs_max"]
+                    passed &= (value["relative_l2_difference"] is None and value["l2_difference"] == 0
+                               or value["relative_l2_difference"] is not None and value["relative_l2_difference"] <= thresholds["parameter_gradient_relative_l2"])
+                passed &= input_difference["finite"] and input_difference["max_abs_difference"] <= thresholds["rgb_gradient_abs_max"]
+                passed &= input_difference["relative_l2_difference"] is not None and input_difference["relative_l2_difference"] <= thresholds["rgb_gradient_relative_l2"]
+                evidence = {"repeat": repeat, "order": [name for name, _ in functions], "passed": bool(passed),
+                    "loss_abs_difference": loss_delta, "parameter_gradients": gradients, "rgb_gradient": input_difference,
+                    "paths": {name: {key: value for key, value in values.items() if key not in ("gradients", "rgb_gradient")}
+                              for name, values in measured.items()},
+                    "gradient_hashes": {name: tensor_hashes(dict(values["gradients"], rgb_input=values["rgb_gradient"]))
+                                        for name, values in measured.items()}}
+                if repeat == 0:
+                    gradient_file = out / f"gradients-{mode}.pt"
+                    atomic_write(gradient_file, {name: dict(value["gradients"], rgb_input=value["rgb_gradient"])
+                                                for name, value in measured.items()}, tensor=True)
+                    evidence.update(gradient_file=gradient_file.name, gradient_file_sha256=sha256(gradient_file))
+                report["modes"][mode].append(evidence)
+                save()
+                if not passed:
+                    raise RuntimeError("Declared MPS numerical comparison limits were exceeded; evidence retained")
+                del measured, reference, candidate
+        if tensor_hashes(model.state_dict()) != expected_values:
+            raise RuntimeError("Model parameters or buffers changed during this no-update probe")
+        report["status"] = "passed"
+        report["model_values_unchanged"] = True
+        report["timing_summary"] = {mode: {path: statistics.median(row["paths"][path]["forward_backward_seconds"] for row in rows)
+                                          for path in ("stepwise", "batched")} for mode, rows in report["modes"].items()}
+    except BaseException as error:
+        report.update(status="interrupted" if isinstance(error, KeyboardInterrupt) else "failed", error_type=type(error).__name__, error=str(error))
+        raise
+    finally:
+        save()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--worker", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--repo", type=Path, required=True)
+    parser.add_argument("--profile", type=Path)
+    parser.add_argument("--train", type=Path)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--repeats", type=int, default=1)
+    parser.add_argument("--max-seconds", type=float, default=180)
+    parser.add_argument("--validate-only", action="store_true")
+    args = parser.parse_args()
+    setup(args.repo)
+    if args.worker:
+        worker(json.loads(sys.stdin.read(65536)))
+        return
+    if args.profile is None or args.train is None or args.output is None:
+        parser.error("--profile, --train and --output are required")
+    if not 1 <= args.repeats <= 3 or not 0 < args.max_seconds <= 600:
+        parser.error("Use1..3 repetitions and a time cap within600 seconds")
+    from experiments.room_world.memory_train import new_directory, atomic_write, sha256, handoff_and_guard
+    prepared = prepare(args.repo, args.profile, args.train)
+    if args.validate_only:
+        print(json.dumps(dict(prepared, status="inputs_verified_cpu_only"), indent=2))
+        return
+    out = new_directory(args.output).resolve()
+    snapshots = out / "measured-source"
+    snapshots.mkdir()
+    for name, expected in prepared["source_sha256"].items():
+        path = args.repo / "experiments/room_world" / name
+        shutil.copyfile(path, snapshots / (name + ".txt"))
+        if sha256(snapshots / (name + ".txt")) != expected:
+            raise ValueError("Source changed while copying the probe snapshot")
+    shutil.copyfile(__file__, snapshots / "run-room-memory-sequence-mps.py.txt")
+    config = dict(prepared, repo=str(args.repo.resolve()), train=str(args.train.resolve()), output=str(out),
+                  repeats=args.repeats, script_sha256=sha256(__file__))
+    public_config = {key: value for key, value in config.items() if key not in ("repo", "train", "output", "base", "checkpoint")}
+    atomic_write(out / "launch.json", dict(public_config, status="launched", max_seconds=args.max_seconds,
+        resource_limits={"rss_gib": 18, "minimum_available_gib": 2, "mps_allocator_gib": 18}, optimizer_updates=0))
+    with (out / "worker.log").open("x") as log:
+        process = subprocess.Popen([sys.executable, str(Path(__file__).resolve()), "--worker", "--repo", str(args.repo.resolve())],
+            stdin=subprocess.PIPE, stdout=log, stderr=subprocess.STDOUT,
+            env=dict(os.environ, PYTORCH_ENABLE_MPS_FALLBACK="0"))
+        terminal = handoff_and_guard(process, config, out, max_seconds=args.max_seconds)
+    measured = json.loads((out / "probe.json").read_text()) if (out / "probe.json").exists() else {"status": "missing"}
+    print(json.dumps({"terminal_status": terminal["status"], "probe_status": measured["status"], "optimizer_updates": 0}))
+    if terminal["status"] != "complete" or measured["status"] != "passed":
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

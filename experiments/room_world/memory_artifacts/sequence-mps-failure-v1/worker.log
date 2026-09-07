@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rc/Documents/Codex/2026-09-07/re/work/run-room-memory-sequence-mps.py", line 240, in <module>
+    main()
+  File "/Users/rc/Documents/Codex/2026-09-07/re/work/run-room-memory-sequence-mps.py", line 203, in main
+    worker(json.loads(sys.stdin.read(65536)))
+  File "/Users/rc/Documents/Codex/2026-09-07/re/work/run-room-memory-sequence-mps.py", line 175, in worker
+    raise RuntimeError("Declared MPS numerical comparison limits were exceeded; evidence retained")
+RuntimeError: Declared MPS numerical comparison limits were exceeded; evidence retained
