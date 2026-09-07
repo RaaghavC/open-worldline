@@ -1,0 +1,60 @@
+{
+  "schema": "worldline-room-memory-stopped-publication-v1",
+  "source_run": "work/room-memory-training-batched-1024-v1",
+  "status": "incomplete",
+  "evaluation_executed": false,
+  "files": {
+    "20260907/carry/terminal.json": {
+      "bytes": 136504,
+      "sha256": "a5298dd77693962805eade136e1cf24b7742f17a0f4e8c9cf5ba1e58dbf79a39"
+    },
+    "20260907/carry/training/memory-last.pt": {
+      "bytes": 102280,
+      "sha256": "a2ed6c2eb39b54c2297cb598777abb9281115fe0264e9eafbc8a42be9b794a96"
+    },
+    "20260907/carry/training/metrics.json": {
+      "bytes": 269512,
+      "sha256": "4f5d705e0954d77e9075aa5435e4a06a5cbd14f7421d0e01540af098b6d6441b"
+    },
+    "20260907/carry/training/recovery-last.pt": {
+      "bytes": 322312,
+      "sha256": "d41b4690ef15c20c184753e68bbc021c5a1b8db2f4c3a6ad544fbd499d77129b"
+    },
+    "20260907/carry/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20260907/initial-memory.pt": {
+      "bytes": 102024,
+      "sha256": "293301759d0ece1630a8b8d5875b2bdf613a620631bd246243615e05ebc924b6"
+    },
+    "measured-source/memory_data.py.txt": {
+      "bytes": 7046,
+      "sha256": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3"
+    },
+    "measured-source/memory_evaluate.py.txt": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "measured-source/memory_model.py.txt": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "measured-source/memory_sequence.py.txt": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "measured-source/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "measured-source/model.py.txt": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "study.json": {
+      "bytes": 54270,
+      "sha256": "91debf148e9b3577588136ad4d918e2335f6827d6a6999c6ed0977567f794979"
+    }
+  }
+}

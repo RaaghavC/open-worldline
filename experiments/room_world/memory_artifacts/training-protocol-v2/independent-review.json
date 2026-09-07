@@ -1,0 +1,43 @@
+{
+  "schema": "worldline-memory-512-amendment-independent-review-v1",
+  "status": "passed",
+  "audit_device": "cpu",
+  "model_forwards": 0,
+  "optimizer_updates": 0,
+  "reserved_test_opened": false,
+  "audit_source_sha256": "bfc6eced7ed43bb6615f6b709cd84b79ae49cc215bd08ae91206749fcf02b9a6",
+  "stopped_study_sha256": "91debf148e9b3577588136ad4d918e2335f6827d6a6999c6ed0977567f794979",
+  "new_plan_sha256": "7c4ef593192624f2635dd0a84e824715acb3e5ff8bbddb6e61104efd411b0f2f",
+  "protocol_v2_sha256": "8bdb44e8f3a3a71345ef76524c78efa4856a63e865eb1301fa0fef9cbcc2593b",
+  "stopped_run": {
+    "parent_status": "stopped",
+    "reason": "elapsed_time_limit",
+    "parent_seconds": 600.380085916986,
+    "worker_status": "running",
+    "completed_updates": 804,
+    "all_six_optimizer_steps": 804,
+    "final_checkpoint_present": false,
+    "recovery_and_last_memory_equal": true,
+    "finite_recovery_tensors": true,
+    "minimum_available_sampled_gib": 7.3666839599609375,
+    "first_512_update_intervals_seconds": 337.50015443220036,
+    "final_50_update_median_seconds": 0.8487383750034496,
+    "completed_base_after_comparison_available": false
+  },
+  "amendment": {
+    "fixed_updates_each": 512,
+    "seeds": [
+      20260907,
+      20260908,
+      20260909
+    ],
+    "epochs_each": 16,
+    "same_sources_data_optimizer_contract": true,
+    "quality_sections_and_gates_unchanged": true,
+    "same_600_second_cap": true,
+    "all_schedules_verified": true,
+    "fresh_initialization": "Required by amended protocol and unchanged trainer; verify actual initial files after launch",
+    "partial_run_eligible_for_quality": false
+  },
+  "readiness": "No blocker for the separately recorded fresh 512-update study. The stopped 1024-update attempt remains incomplete."
+}
