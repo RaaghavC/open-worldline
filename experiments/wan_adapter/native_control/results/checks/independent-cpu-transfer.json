@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "tests_run": 10,
+  "elapsed_seconds": 0.30697758399765007,
+  "torch_version": "2.5.1",
+  "failures": [],
+  "errors": [],
+  "source_sha256": {
+    "test_independent.py": "ac9715a0cf39886860ca5813f4fc70d1de7dd72dd6f771e23b653e1bf4a3afcc",
+    "portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "sampling.py": "297522d2880a3534b507737d4d03a948987adc2f21d3d6a6493d0724fed78fc7",
+    "vendor/model.py": "c1572ade3bf7345bd4c00d4a19535788fab62f9c08b5aeb15f6d01f4435bb47a",
+    "vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+  },
+  "limits": "CPU equation/source checks only; no foundation-weight load, GPU or visual-quality evaluation."
+}

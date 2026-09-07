@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "max_seconds": 900,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "timings": [
+    {
+      "stage": "50_steps_cpu_solver_mps_transfers",
+      "seconds": 0.5224245419958606
+    },
+    {
+      "stage": "50_steps_all_cpu_reference",
+      "seconds": 0.15797833300894126
+    }
+  ],
+  "steps": 50,
+  "peaks_sampled": {
+    "rss_bytes": 353746944,
+    "mps_active_bytes": 1507328,
+    "mps_driver_bytes": 27754496
+  },
+  "purpose": "Actual-shape CPU UniPC and transfer overhead with constant oracle, no network loaded",
+  "model_calls": 100,
+  "loop_sha256": "5dc4848cae5b8117bbce0a4bbd63023365c9eb2f6b1bf68774ba5d12170c74a0",
+  "source_sha256": {
+    "profile_solver.py": "9f28191a5fdbca114286adc21fa3352c6d2e16f926691ff96151f9dab8690189",
+    "sampling.py": "297522d2880a3534b507737d4d03a948987adc2f21d3d6a6493d0724fed78fc7",
+    "loop.py": "5dc4848cae5b8117bbce0a4bbd63023365c9eb2f6b1bf68774ba5d12170c74a0",
+    "evidence.py": "00acd8e3c0a5b0866793fa0de27ce10fdb56fba13b4c49c95f44ef1ae6acc581"
+  },
+  "oracle_cpu_max_abs": 0.0,
+  "input_transfers_seconds": 0.014761325961444527,
+  "output_transfers_seconds": 0.01407549696159549,
+  "cpu_solver_seconds": 0.07700328913051635,
+  "solver_and_transfers_seconds": 0.10584011205355637,
+  "elapsed_seconds": 0.6966854160127696
+}

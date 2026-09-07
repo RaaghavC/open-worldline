@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "all_17_frames_generated": true,
+  "observed_frames": 0,
+  "external_pretrained_model": true,
+  "original_adapter_loaded": false,
+  "action_control_evaluated": false,
+  "visual_findings": [
+    "Recognizable sunlit doorway, plaster walls and plants across the inspected frames.",
+    "Repeated surface lattice from the earlier adaptation is absent in frames0,5,10,16.",
+    "Colors are saturated and some textures appear stylized.",
+    "Composition changes little during this short clip."
+  ],
+  "interpretation": "A working pure text-to-video foundation path at this tested reduced resolution. Multiple recipe changes prevent identifying which one caused improvement. No action control, persistent memory or native CUDA BF16 equivalence established.",
+  "observed_interval_seconds": 663.7648937499907,
+  "denoise_seconds": 617.3219900419936,
+  "decode_seconds": 30.92830200001481,
+  "generated_frames_per_second_denoise_and_decode": 0.026224438629174354,
+  "preview_playback_fps": 10,
+  "peak_mps_driver_gib": 10.395034790039062,
+  "peak_mps_active_gib": 6.630980491638184,
+  "peak_process_rss_gib": 0.4787139892578125,
+  "solver_updates": 50,
+  "model_calls": 100,
+  "new_training": false,
+  "external_weights_bundled": false
+}

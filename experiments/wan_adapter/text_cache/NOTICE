@@ -6,3 +6,10 @@ The T5 implementation also identifies its origin in Hugging Face Transformers T5
 Apache-2.0 license copies for minWM code and the official Wan weight distribution
 are included separately in vendor/. All upstream copyright notices are retained.
 Original loading, caching, tests and measurement code in this directory is Apache-2.0.
+
+native-source/shared_config.py.txt is an unchanged source snapshot from
+Wan-Video/Wan2.1 revision 9737cba9c1c3c4d04b33fcad41c111989865d315,
+copyright 2024-2025 The Alibaba Wan Team Authors, under Apache-2.0.
+native-prompts.json copies its configured negative prompt verbatim for a
+separate native-style sampling diagnostic. A license copy and source hashes
+are included in native-source/. Existing original prompt contexts are retained.

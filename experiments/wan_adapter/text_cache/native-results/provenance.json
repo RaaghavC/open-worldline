@@ -1,0 +1,37 @@
+{
+  "schema": "worldline-native-wan-text-cache-evidence-v1",
+  "date": "2026-09-07",
+  "cache_is_real_encoder_output": true,
+  "encoder_weights_bundled": false,
+  "source_snapshots": "measured-source",
+  "executed_source_sha256": {
+    "run_cache.py": "ef1ebc8595e47371d457a6d12a83869ed3da693d6fbe59130331cc63068cf53b",
+    "worker.py": "1cb562f650532e8dfa2f8f4046266285e2c8ad87203db15805bf52fb62e997dd",
+    "encoder.py": "2e055ca0472958a354eb74db83ec089d6f67c4705dbdef853a532049ba9a1bd4",
+    "cache.py": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+  },
+  "prompt_file": "../native-prompts.json",
+  "prompt_file_sha256": "6bc89b7deb4965b75737ac65e2ab0ae948f49d6107183b0bc44b1674996301f9",
+  "negative_source_manifest": "../native-source/provenance.json",
+  "negative_source_manifest_sha256": "c64f4b3800b8cc984f5733c41a9de289c93d879b388fd626ede4f65fa0337070",
+  "original_prompt_file_sha256": "d845b5bb35a15e6432e57c9e1aae2457533553e1b3ee0d0f159449c5bd8263b7",
+  "original_embeddings_file_sha256": "fb9fe2cc1383e1c258e7774ac2c11f90ffa2c014ac3a12656f8cdc4b4e749ab7",
+  "encoder_and_tokenizer_license": "Apache-2.0",
+  "negative_prompt_source_license": "Apache-2.0",
+  "log_publication": "encoding.log copied byte-for-byte as encoding-events.jsonl; original measurement content is unchanged",
+  "artifact_sha256": {
+    "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "NOTICE": "7e0ba14c5458ef53591ccd051f2c3a2078f2a78e7ec490fd07b54731cba11b40",
+    "README.md": "02a84df4ff19c890e9a5639f3e7814b9555a5acb28d566502f9cc7ff7ed8b5b8",
+    "embeddings.safetensors": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+    "encoding-events.jsonl": "2e9f2853cc473a7da831b8273ad2eaab32d69db582e8e33bafd20995091b3a5a",
+    "manifest.json": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+    "measured-source/cache.py.txt": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff",
+    "measured-source/encoder.py.txt": "2e055ca0472958a354eb74db83ec089d6f67c4705dbdef853a532049ba9a1bd4",
+    "measured-source/run_cache.py.txt": "ef1ebc8595e47371d457a6d12a83869ed3da693d6fbe59130331cc63068cf53b",
+    "measured-source/worker.py.txt": "1cb562f650532e8dfa2f8f4046266285e2c8ad87203db15805bf52fb62e997dd",
+    "memory.jsonl": "41b483a64079d946aab03e8d3860929c839a0f7d6b60d32d742a1ce6d3553d1d",
+    "summary.json": "d1bf047d030704debe8dc5208a905417657f3527dd86b08ee5a6a4fdbc360fc0",
+    "watchdog.json": "7b0c1fa39985f2b454b7f83ff578d98b28a04e00b295686b0bc7d9d8b595eb42"
+  }
+}

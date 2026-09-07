@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-07",
+  "check": "Python AST comparison without location attributes; formatting/comments are ignored, statements/defaults/expressions are retained.",
+  "results": [
+    {
+      "upstream_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/9737cba9c1c3c4d04b33fcad41c111989865d315/wan/modules/t5.py",
+      "official_source_sha256": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f",
+      "selected_source_sha256": "b8f2df0392b68717436b3db25323f04d15aaf0710713e1c7d3ceffd82f78d44d",
+      "method_ast_equal": {
+        "GELU.forward": true,
+        "T5Attention.__init__": true,
+        "T5Attention.forward": true,
+        "T5CrossAttention.__init__": true,
+        "T5CrossAttention.forward": true,
+        "T5Decoder.__init__": true,
+        "T5Decoder.forward": true,
+        "T5Encoder.__init__": true,
+        "T5Encoder.forward": true,
+        "T5FeedForward.__init__": true,
+        "T5FeedForward.forward": true,
+        "T5LayerNorm.__init__": true,
+        "T5LayerNorm.forward": true,
+        "T5Model.__init__": true,
+        "T5Model.forward": true,
+        "T5RelativeEmbedding.__init__": true,
+        "T5RelativeEmbedding._relative_position_bucket": true,
+        "T5RelativeEmbedding.forward": true,
+        "T5SelfAttention.__init__": true,
+        "T5SelfAttention.forward": true,
+        "_t5": true,
+        "fp16_clamp": true,
+        "init_weights": true,
+        "umt5_xxl": true
+      },
+      "official_only_definitions": [
+        "T5EncoderModel.__call__",
+        "T5EncoderModel.__init__"
+      ],
+      "selected_only_definitions": []
+    },
+    {
+      "upstream_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/9737cba9c1c3c4d04b33fcad41c111989865d315/wan/modules/tokenizers.py",
+      "official_source_sha256": "cf5b189c1ae017326efadab2fc6380ba223fa7a59d0be6464bd264db53c76934",
+      "selected_source_sha256": "4e1fee1659fcd345fbc4f8e68263145a091b936744ecb6a7ebaecbe1e429f215",
+      "method_ast_equal": {
+        "HuggingfaceTokenizer.__call__": true,
+        "HuggingfaceTokenizer.__init__": true,
+        "HuggingfaceTokenizer._clean": true,
+        "basic_clean": true,
+        "canonicalize": true,
+        "whitespace_clean": true
+      },
+      "official_only_definitions": [],
+      "selected_only_definitions": []
+    }
+  ],
+  "scope": "Source-equation and tokenizer comparison only. Full native CUDA BF16 numerical equality was not evaluated. The actual cache evaluates the official BF16 weights using separately tested block-streamed float32 computation."
+}

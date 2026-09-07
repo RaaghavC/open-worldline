@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/Wan-Video/Wan2.1",
+  "revision": "9737cba9c1c3c4d04b33fcad41c111989865d315",
+  "license": "Apache-2.0",
+  "license_url": "https://github.com/Wan-Video/Wan2.1/blob/9737cba9c1c3c4d04b33fcad41c111989865d315/LICENSE.txt",
+  "files": [
+    {
+      "upstream_path": "wan/configs/shared_config.py",
+      "local_path": "shared_config.py.txt",
+      "sha256": "a942b6f0a1d1a4ec9a7893c17a6218651ce272953b90d012ce5cdd19d15e45f7",
+      "modified": false
+    },
+    {
+      "upstream_path": "LICENSE.txt",
+      "local_path": "LICENSE-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    }
+  ],
+  "extraction": "native-prompts.json copies the AST literal assigned to wan_shared_cfg.sample_neg_prompt verbatim, without translating or normalizing the prompt bytes."
+}

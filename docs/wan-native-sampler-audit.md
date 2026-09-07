@@ -43,6 +43,8 @@ The official [model source](https://github.com/Wan-Video/Wan2.1/blob/9737cba9c1c
 
 The existing numerical tests compare positional substitutions and a tiny FP32 selected minWM model against that selected model's upstream functions. They do not compare a native pretrained FP32/BF16 Wan forward against the complete extracted FP16 path. The mismatches are source-observed. Their contribution to the visible artifact remains unmeasured.
 
+A subsequent [official text-source comparison](../experiments/wan_adapter/text_cache/official-source-audit/README.md) verified matching syntax trees for all 24 common T5 definitions and all six tokenizer definitions in the selected and pinned official sources. The released actual contexts still use streamed float32 evaluation of official BF16 weights, so native CUDA BF16 numerical equality is not claimed.
+
 The external text encoder already demonstrated values exceeding FP16 range before its final normalized embeddings. That is evidence for keeping its separate streamed FP32 path; it is not evidence that Wan's transformer has the same overflow. Likewise, finite transformer outputs do not prove adequate numerical fidelity.
 
 Before a full native-style clip, perform a tiny no-adapter forward comparison against the literal pinned Wan model in FP32, using the same compatible SDPA and already checked real-valued RoPE substitutions. Compare at least timestep 999, 500 and 50; include final velocity and intermediate time/head outputs. Keep FP32 model parameters and the native activation choices for this reference. Then separately measure error introduced by the intended memory-saving precision path. A failed parity check is a reason to fix the port before another quality run. No such comparison was executed by this audit.

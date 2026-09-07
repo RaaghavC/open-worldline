@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "experiment": "Real official Wan configured negative context plus unchanged Atrium positive context",
+  "new_text_model": false,
+  "encoder_weights_bundled": false,
+  "prompt_ids": [
+    "atrium",
+    "native_negative"
+  ],
+  "positive_matches_original_context_exactly": true,
+  "positive_max_absolute_difference": 0.0,
+  "new_negative_token_length": 126,
+  "new_negative_all_finite": true,
+  "new_negative_nonzero": true,
+  "embeddings_file_bytes": 2474288,
+  "embeddings_file_sha256": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+  "maximum_measured_intermediate_absolute_value": 376037.0,
+  "sampled_after_block_mps_driver_max_bytes": 1110163456,
+  "measurement_limit": "After-block MPS readings do not capture within-block peaks; RSS and available-memory watchdog samples can miss short peaks.",
+  "original_cache": "../results",
+  "original_prompt_file": "../prompts.json",
+  "native_prompt_file": "../native-prompts.json",
+  "generation_quality_evaluated": false,
+  "native_sampler_evaluated": false
+}

@@ -57,11 +57,19 @@ context = load_context(cache, "atrium", device="cpu")
 unconditional = load_context(cache, "unconditional", expected_text="")
 ```
 
-The consumer verifies prompt, file and tensor hashes, shape, finite values and dtype-conversion overflow without loading UMT5. **11 CPU tests pass** for mapped-storage aliasing, exact tiny reference equivalence, per-block remapping/repetition, padding masks, corrupted caches, zero/nonfinite rejection and conversion overflow. A separate tiny CPU-versus-streamed-MPS check measured maximum absolute difference `4.7684e-7`; this is a numerical implementation check, not learned quality evaluation.
+The consumer verifies prompt, file and tensor hashes, shape, finite values and dtype-conversion overflow without loading UMT5. The original **11 CPU tests pass** for mapped-storage aliasing, exact tiny reference equivalence, per-block remapping/repetition, padding masks, corrupted caches, zero/nonfinite rejection and conversion overflow. Four additional CLI/source tests bring the component total to **15 passing tests**. A separate tiny CPU-versus-streamed-MPS check measured maximum absolute difference `4.7684e-7`; this is a numerical implementation check, not learned quality evaluation.
 
 Run the component tests explicitly; they are separate from the root project's default test paths:
 
 ```sh
 work/wan-text-env/bin/python -m pip install -r experiments/wan_adapter/text_cache/requirements-test.txt
-work/wan-text-env/bin/python -m pytest experiments/wan_adapter/text_cache/test_cpu.py experiments/wan_adapter/text_cache/test_cache.py -q
+work/wan-text-env/bin/python -m pytest experiments/wan_adapter/text_cache/test_cpu.py experiments/wan_adapter/text_cache/test_cache.py experiments/wan_adapter/text_cache/test_run_cache.py -q
 ```
+
+## Separate native negative-prompt cache
+
+The later [native-results cache](native-results/README.md) contains the unchanged positive Atrium context and a real encoding of the pinned official Wan configured negative prompt. Its positive tensor matches this original cache exactly. The original actual empty-string context remains here. These two negative conditions have different meanings and separate recorded identities.
+
+`run_cache.py` now accepts optional `--prompts /path/to/prompts.json`; omitting it preserves the original two prompts. The original measured wrapper is [archived](results/measured-source/run_cache.py.txt), and [published-scripts.json](results/published-scripts.json) distinguishes the post-measurement change. Native-negative reproduction uses [native-prompts.json](native-prompts.json), with the exact official source retained under [native-source](native-source/provenance.json).
+
+A separate [official source comparison](official-source-audit/README.md) checks the selected text-network and tokenizer definitions against the pinned Wan release. It records source-equation agreement and the remaining numerical precision distinction.

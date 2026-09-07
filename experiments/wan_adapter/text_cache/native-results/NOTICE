@@ -1,0 +1,16 @@
+These cached contexts were computed using the official external Wan UMT5-XXL
+encoder and tokenizer from Wan-AI/Wan2.1-T2V-1.3B, revision
+37ec512624d61f7aa208f7ea8140a131f93afc9a, distributed under Apache-2.0.
+The encoder checkpoint is not included. The tensors are actual encoder outputs
+for the two recorded prompts, not pretrained encoder parameters or an original
+Worldline text model.
+
+The native negative text is copied verbatim from the Alibaba Wan Team's shared
+configuration at Wan-Video/Wan2.1 revision
+9737cba9c1c3c4d04b33fcad41c111989865d315, under Apache-2.0. Its original copyright
+header, source snapshot, hash and license are retained in ../native-source/.
+The unchanged positive text was authored for the Worldline Atrium experiment.
+
+Selected Wan/minWM encoder source retains its separate attribution and license
+copies in ../vendor/ and ../NOTICE. A copy of Apache-2.0 accompanies these
+cached outputs. The original two-prompt cache remains separately in ../results/.

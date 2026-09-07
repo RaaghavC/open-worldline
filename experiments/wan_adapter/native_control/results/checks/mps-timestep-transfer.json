@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "test": "MPS timestep tensor transfers to CPU before double cast",
+  "timesteps": [
+    999,
+    500,
+    50
+  ],
+  "max_abs": 0.0,
+  "shape": [
+    3,
+    256
+  ],
+  "dtype": "torch.float32",
+  "portable_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+}
