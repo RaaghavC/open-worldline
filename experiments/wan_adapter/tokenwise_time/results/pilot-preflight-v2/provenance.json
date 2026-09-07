@@ -1,0 +1,19 @@
+{
+  "schema": "worldline-tokenwise-pilot-preflight-v2",
+  "reason": "Canonical retained noise must not depend on identical seeded Torch normal samples across platforms",
+  "prior_failed_ci": "https://github.com/RaaghavC/open-worldline/actions/runs/34138436083",
+  "files": {
+    "prior-linux-failure.log": {
+      "sha256": "4b37fda55337d614ac9ed35800a548985b071eb3c72cdc5a951faa1a94e577ba",
+      "bytes": 7354
+    },
+    "cpu-tests.json": {
+      "sha256": "7a2ab6b16a16522132a854956f1411c8ac980090b88ee87cc8ccd84c514288bb",
+      "bytes": 4036
+    },
+    "independent-tests.json": {
+      "sha256": "202696b1e791d0158ad106d260dd89a0352528e5cc8af553bab4a3e1dfd510d1",
+      "bytes": 4185
+    }
+  }
+}

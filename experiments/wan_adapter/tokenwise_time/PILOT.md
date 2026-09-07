@@ -1,6 +1,6 @@
 # Fixed 16-update development pilot
 
-This separate path passed seven implementation tests and six independent CPU tests. It has not run on the GPU and has produced no trained 16-update checkpoint or video. The [CPU reports and source hashes](results/pilot-preflight/provenance.json) preserve that review. The completed [one-update profile](results/update-v1/README.md), its source snapshots, and all previous native/clamp experiments remain unchanged.
+This separate path passed seven implementation tests and six independent CPU tests. It has not run on the GPU and has produced no trained 16-update checkpoint or video. The [CPU reports and source hashes](results/pilot-preflight-v2/provenance.json) preserve that review. The completed [one-update profile](results/update-v1/README.md), its source snapshots, and all previous native/clamp experiments remain unchanged.
 
 The experiment asks whether the original small adapter can learn under the same image-conditioning rules used by its sampler. The independently encoded first observation is clean and its 576 spatial tokens receive time 0. The other 2,304 tokens receive the exact sampled time `k`, with future latent noise fraction `k/1000`. Training draws integer `k` uniformly from 50 through 950. Loss applies only to the four future latent frames. All examples are image-conditioned; there is no uniformly noised text-to-video mixture.
 
@@ -43,8 +43,8 @@ PYTORCH_ENABLE_MPS_FALLBACK=0 python experiments/wan_adapter/tokenwise_time/trai
   --weights /path/to/verified/wan-adapter-weights \
   --capture-cache experiments/wan_adapter/data_cache \
   --text-cache experiments/wan_adapter/text_cache/results \
-  --cpu-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight/cpu-tests.json \
-  --independent-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight/independent-tests.json \
+  --cpu-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight-v2/cpu-tests.json \
+  --independent-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight-v2/independent-tests.json \
   --output /path/to/new/tokenwise-train16
 ```
 
@@ -54,7 +54,7 @@ No dependency or weight download is performed by the runner. `initial-adapter.sa
 
 The prescribed input is `open-0000`. Each clip contains one reconstructed initial observation and 16 newly generated future frames at 512 by 288 pixels. The sampling reader materializes only the separately encoded observation and actual command tensor from the public cache. It does not load the future target latent or future RGB images. Hashing the opaque cache file checks integrity without materializing its target tensor.
 
-Run two separate processes, first with `--arm zero`, then with `--arm trained`. Both load the completed training record. The first uses its exact fresh initial adapter; the second uses update 16. Both use the retained Gaussian noise from the successful pure T2V control, seed 20260908, the same positive and native negative text tensors, FP32 core/adapter/decoder, and the unchanged official CPU UniPC solver with 50 steps, shift 8 and guidance 6. Both use the same actual commands and independently encoded initial observation.
+Run two separate processes, first with `--arm zero`, then with `--arm trained`. Both load the completed training record. The first uses its exact fresh initial adapter; the second uses update 16. Both use the retained Gaussian noise from the successful pure T2V control, seed 20260908, the same positive and native negative text tensors, FP32 core/adapter/decoder, and the unchanged official CPU UniPC solver with 50 steps, shift 8 and guidance 6. Both use the same actual commands and independently encoded initial observation. The saved noise file and tensor hashes define this input exactly. The loader does not require a different CPU platform to regenerate those bytes from the same seed. The [earlier Linux CI failure](https://github.com/RaaghavC/open-worldline/actions/runs/34138436083) and [updated checks](results/pilot-preflight-v2/provenance.json) are retained. PyTorch documents that identical results across platforms are not guaranteed, even with controlled seeds. [PyTorch reproducibility](https://docs.pytorch.org/docs/2.14/notes/randomness.html).
 
 Before both negative/positive calls, the initial latent is clamped and its tokens receive time 0. All future tokens receive the solver's exact integer time. The initial latent is clamped again after every solver update. Each arm records all 100 input prefix checks and all 50 post-update checks. Callers' original noise and observations remain unchanged.
 
@@ -64,8 +64,8 @@ PYTORCH_ENABLE_MPS_FALLBACK=0 python experiments/wan_adapter/tokenwise_time/samp
   --capture-cache experiments/wan_adapter/data_cache \
   --text-cache experiments/wan_adapter/text_cache/native-results \
   --training-run /path/to/completed/tokenwise-train16 \
-  --cpu-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight/cpu-tests.json \
-  --independent-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight/independent-tests.json \
+  --cpu-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight-v2/cpu-tests.json \
+  --independent-report experiments/wan_adapter/tokenwise_time/results/pilot-preflight-v2/independent-tests.json \
   --arm zero --output /path/to/new/tokenwise-zero50
 ```
 

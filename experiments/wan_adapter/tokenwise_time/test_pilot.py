@@ -104,8 +104,21 @@ class Tests(unittest.TestCase):
         self.assertEqual(checks['model_calls'],100)
 
     def test_noise_preservation_time_budget_and_output_isolation(self):
-        noise,provenance=retained_noise(pc.PARENT/'native_control/results/clip50')
-        self.assertTrue(torch.equal(noise,initial_noise()));self.assertTrue(provenance['noise_file_sha256'])
+        from tokenwise_time import sample_pilot
+        # Loading the canonical artifact must not depend on the local CPU's RNG.
+        with mock.patch.object(sample_pilot,'initial_noise',side_effect=AssertionError('Regeneration is not the identity rule')):
+            noise,provenance=retained_noise(pc.PARENT/'native_control/results/clip50')
+        self.assertEqual(pc.tensor_sha(noise),sample_pilot.CANONICAL_NOISE_TENSOR_SHA256)
+        self.assertEqual(provenance['noise_file_sha256'],sample_pilot.CANONICAL_NOISE_FILE_SHA256)
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);control=pc.PARENT/'native_control/results/clip50'
+            changed=noise.clone();changed[0,0,0,0]+=1
+            digest=pc.atomic_tensors(root/'initial-noise.safetensors',{'initial_noise':changed})
+            record=json.loads((control/'metrics.json').read_text())
+            record['initial_noise_sha256']=digest
+            record['initial_noise_tensor_sha256']=pc.tensor_sha(changed)
+            (root/'metrics.json').write_text(json.dumps(record))
+            with self.assertRaisesRegex(ValueError,'noise hash mismatch'):retained_noise(root)
         self.assertEqual(estimate_total(40.,14.),786.)
         for bad in (float('nan'),float('inf'),0.,-1.):
             with self.assertRaises(ValueError):estimate_total(40.,bad)

@@ -32,6 +32,9 @@ from tokenwise_time.portable import extend_model
 from tokenwise_time.training_data import tensor_sha
 from tokenwise_time import pilot_common as pc
 
+CANONICAL_NOISE_FILE_SHA256 = '737ae2a38575fde3d069008c06a66849eecc6e04ec3742b7ac8a6871fcfec5be'
+CANONICAL_NOISE_TENSOR_SHA256 = 'ce38d20bcf6ca132aeac8259e0f085fdfe80c64db7745df1c561b294dc201eeb'
+
 
 def estimate_total(elapsed,first_step,*,remaining_steps=49,decode_and_artifact_allowance=60.):
     values=(elapsed,first_step,decode_and_artifact_allowance)
@@ -46,12 +49,22 @@ def retained_noise(directory):
     if r.get('status')!='passed' or r.get('seed')!=SEED or r.get('generated_frames')!=17 or r.get('observed_frames')!=0:
         raise ValueError('The completed pure T2V control is required for its retained noise')
     path=directory/'initial-noise.safetensors'
-    if sha(path)!=r.get('initial_noise_sha256'):raise ValueError('Retained control noise hash mismatch')
+    file_hash=sha(path)
+    if file_hash!=r.get('initial_noise_sha256') or file_hash!=CANONICAL_NOISE_FILE_SHA256:
+        raise ValueError('Retained control noise hash mismatch')
     with safe_open(path,framework='pt',device='cpu') as f:
         if set(f.keys())!={'initial_noise'}:raise ValueError('Unexpected noise artifact keys')
         noise=f.get_tensor('initial_noise')
-    if not torch.equal(noise,initial_noise()):raise ValueError('Retained noise differs from the fixed native-control seed')
-    return noise,{'control_metrics_sha256':sha(directory/'metrics.json'),'noise_file_sha256':sha(path),'noise_tensor_sha256':tensor_sha(noise)}
+    if noise.shape!=(16,5,36,64) or noise.dtype!=torch.float32 or not torch.isfinite(noise).all():
+        raise ValueError('Invalid retained control noise tensor')
+    tensor_hash=tensor_sha(noise)
+    if tensor_hash!=CANONICAL_NOISE_TENSOR_SHA256 or tensor_hash!=r.get('initial_noise_tensor_sha256'):
+        raise ValueError('Retained control noise tensor hash mismatch')
+    # The published tensor defines the matched comparison. Torch's CPU normal
+    # sampler need not produce identical bits on ARM and x86 for the same seed.
+    return noise,{'control_metrics_sha256':sha(directory/'metrics.json'),'noise_file_sha256':file_hash,
+        'noise_tensor_sha256':tensor_hash,'source_seed':SEED,
+        'identity_rule':'Exact published tensor and file hashes; no cross-platform RNG regeneration requirement'}
 
 
 def main():
