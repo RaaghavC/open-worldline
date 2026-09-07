@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-worldline"
+version = "0.1.0"
+description = "An original trainable spatial world generator with learned ecological dynamics and persistent editable worlds"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "numpy>=1.24,<3", "torch>=2.5,<3", "fastapi>=0.111,<1",
+  "uvicorn>=0.30,<1", "pydantic>=2.7,<3", "pillow>=10,<13"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[project.scripts]
+worldline = "worldline.server:main"
+
+[tool.setuptools.packages.find]
+include = ["worldline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

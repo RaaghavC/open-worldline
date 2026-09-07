@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eeede5" />
+    <meta
+      name="description"
+      content="Worldline, an open-source local world modeling research prototype. Generate terrain, change its ecology, and explore alternate futures."
+    />
+    <title>Worldline · Local world editor</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232f4b3c'/%3E%3Cpath d='M7 26 15 12 21 23 27 16 34 26' stroke='%23f1efe4' fill='none' stroke-width='2'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <canvas
+      id="scene"
+      aria-label="Interactive generated 3D world"
+      tabindex="0"
+    ></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Worldline home"
+        ><span class="brandmark"
+          ><svg viewBox="0 0 40 40">
+            <path d="M5 27 14 11 22 25 28 17 36 27" />
+            <path d="m9 29 8-5 9 6 8-4" /></svg></span
+        ><span>worldline<span class="brand-dot">.</span></span></a
+      >
+      <span class="prototype">LOCAL RESEARCH PREVIEW</span>
+      <div class="top-actions">
+        <button id="libraryButton" class="glass-button" title="Saved worlds">
+          <span data-icon="layers"></span><span>My worlds</span></button
+        ><button
+          id="captureButton"
+          class="glass-button square"
+          title="Save a screenshot"
+          aria-label="Save a screenshot"
+        >
+          <span data-icon="camera"></span></button
+        ><button
+          id="aboutButton"
+          class="glass-button square"
+          title="About Worldline"
+          aria-label="About Worldline"
+        >
+          <span data-icon="info"></span>
+        </button>
+      </div>
+    </header>
+    <aside class="studio paper">
+      <div class="studio-heading">
+        <span class="eyebrow">LOCAL WORLD EDITOR</span
+        ><button
+          id="collapseButton"
+          class="quiet square"
+          aria-label="Collapse controls"
+          title="Collapse controls"
+        >
+          <span data-icon="minus"></span>
+        </button>
+      </div>
+      <div id="panelBody">
+        <h1>Create a<br /><em>world.</em></h1>
+        <p class="intro">
+          Generate terrain. Edit the landscape.<br />Compare weather changes.
+        </p>
+        <nav class="tabs" aria-label="World tools">
+          <button class="tab active" data-tab="create">Create</button
+          ><button class="tab" data-tab="shape">Shape</button
+          ><button class="tab" data-tab="evolve">Evolve</button
+          ><button class="tab" data-tab="history">History</button>
+        </nav>
+        <section class="pane active" data-pane="create">
+          <label class="field-label" for="prompt"
+            >Choose a starting point</label
+          >
+          <div class="presets">
+            <button data-biome="0" class="preset active">
+              <span class="swatch alpine"></span>Alpine</button
+            ><button data-biome="1" class="preset">
+              <span class="swatch desert"></span>Desert</button
+            ><button data-biome="2" class="preset">
+              <span class="swatch alien"></span>Alien
+            </button>
+          </div>
+          <textarea
+            id="prompt"
+            rows="3"
+            maxlength="600"
+            aria-label="World description"
+          >
+An alpine lake beneath snow-capped mountains</textarea
+          >
+          <p class="field-note">
+            Descriptions select one of three biomes.<br />The seed gives each
+            landscape its shape.
+          </p>
+          <div class="seed-row">
+            <label for="seed">World seed</label
+            ><input
+              id="seed"
+              type="number"
+              min="0"
+              max="2147483647"
+              value="42"
+            /><button
+              id="randomSeed"
+              class="quiet square"
+              title="Random seed"
+              aria-label="Random seed"
+            >
+              <span data-icon="shuffle"></span>
+            </button>
+          </div>
+          <button id="generateButton" class="primary">
+            <span data-icon="spark"></span><span>Generate world</span
+            ><span class="arrow">↗</span>
+          </button>
+          <div class="fine-print">
+            <span class="status-dot"></span
+            ><span id="modelStatus">Connecting to your local model</span>
+          </div>
+        </section>
+        <section class="pane" data-pane="shape">
+          <label class="field-label">Edit the landscape</label>
+          <p class="pane-copy">
+            Choose a brush, then click the landscape. Every change is saved.
+          </p>
+          <div class="brush-grid">
+            <button class="brush" data-brush="raise">
+              <span data-icon="mountain"></span>Raise</button
+            ><button class="brush" data-brush="lower">
+              <span data-icon="down"></span>Lower</button
+            ><button class="brush" data-brush="plant">
+              <span data-icon="leaf"></span>Plant</button
+            ><button class="brush" data-brush="water">
+              <span data-icon="drop"></span>Water</button
+            ><button class="brush" data-brush="heat">
+              <span data-icon="sun"></span>Heat</button
+            ><button class="brush active" data-brush="">
+              <span data-icon="hand"></span>Explore
+            </button>
+          </div>
+          <label class="slider-label" for="radius"
+            >Brush size <output id="radiusValue">Medium</output></label
+          ><input
+            id="radius"
+            type="range"
+            min="0.025"
+            max="0.2"
+            step="0.005"
+            value="0.07"
+          />
+          <label class="slider-label" for="strength"
+            >Strength <output id="strengthValue">35%</output></label
+          ><input
+            id="strength"
+            type="range"
+            min="0.1"
+            max="0.8"
+            step="0.05"
+            value="0.35"
+          />
+          <div class="tip">
+            <span data-icon="info"></span
+            ><span
+              >Edits stay in this world when you revisit or reopen it.</span
+            >
+          </div>
+        </section>
+        <section class="pane" data-pane="evolve">
+          <label class="field-label">Let the world respond</label>
+          <p class="pane-copy">
+            Change rainfall and heat. The trained dynamics model predicts water,
+            growth and temperature.
+          </p>
+          <label class="slider-label" for="rain"
+            ><span>Rainfall</span><output id="rainValue">40%</output></label
+          ><input
+            id="rain"
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value="0.4"
+          />
+          <label class="slider-label" for="heat"
+            ><span>Heat</span><output id="heatValue">10%</output></label
+          ><input
+            id="heat"
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value="0.1"
+          />
+          <button id="stepButton" class="primary">
+            <span data-icon="play"></span><span>Simulate 10 steps</span
+            ><span class="arrow">→</span>
+          </button>
+          <div class="divider"></div>
+          <label class="field-label">What if things went differently?</label>
+          <p class="pane-copy">
+            Make a copy at this exact moment, then try another future.
+          </p>
+          <button id="branchButton" class="secondary">
+            <span data-icon="branch"></span>Branch an alternate future
+          </button>
+        </section>
+        <section class="pane" data-pane="history">
+          <div class="history-heading">
+            <label class="field-label">Saved revisions</label
+            ><button
+              id="refreshHistory"
+              class="quiet square"
+              title="Refresh history"
+              aria-label="Refresh history"
+            >
+              <span data-icon="refresh"></span>
+            </button>
+          </div>
+          <p class="pane-copy">
+            Restore a saved moment. Your later history remains available.
+          </p>
+          <div id="historyList" class="history-list">
+            <p class="empty">Generate a world to begin its story.</p>
+          </div>
+        </section>
+        <div class="studio-bottom">
+          <button id="exportButton" class="quiet">
+            <span data-icon="download"></span>Export world</button
+          ><button id="importButton" class="quiet">
+            <span data-icon="upload"></span>Import</button
+          ><input
+            type="file"
+            id="importFile"
+            accept=".json,application/json"
+            hidden
+          />
+        </div>
+      </div>
+    </aside>
+    <div class="world-caption">
+      <span class="eyebrow" id="worldSubtitle"
+        >AN ORIGINAL NEURAL LANDSCAPE</span
+      >
+      <h2 id="worldTitle">No world loaded</h2>
+      <div class="world-meta">
+        <span id="worldSeed">SEED 42</span><span class="meta-divider"></span
+        ><span id="worldRevision">No saved world</span>
+      </div>
+    </div>
+    <div class="view-controls paper">
+      <button id="orbitButton" class="view-button active">
+        <span data-icon="orbit"></span>Orbit</button
+      ><button id="walkButton" class="view-button">
+        <span data-icon="walk"></span>Explore</button
+      ><span class="view-divider"></span
+      ><button
+        id="homeViewButton"
+        class="view-button icon-only"
+        title="Return to the opening view"
+        aria-label="Return to opening view"
+      >
+        <span data-icon="home"></span></button
+      ><button
+        id="hideUIButton"
+        class="view-button icon-only"
+        title="Hide interface (H)"
+        aria-label="Hide interface"
+      >
+        <span data-icon="expand"></span>
+      </button>
+    </div>
+    <div class="controls-hint" id="controlsHint">
+      Drag to orbit <span>·</span> Scroll to zoom
+    </div>
+    <div class="telemetry">
+      <span><b id="renderFps">0</b> render fps</span
+      ><span><b id="genLatency">Waiting</b> generation</span
+      ><span><b id="tickValue">0</b> simulation steps</span>
+    </div>
+    <div class="compass" title="North">
+      <span>N</span
+      ><svg viewBox="0 0 40 40" id="compassNeedle">
+        <path d="M20 5 27 29 20 25 13 29Z" fill="currentColor" />
+      </svg>
+    </div>
+    <div id="busy" class="busy-overlay" hidden>
+      <div class="busy-card paper">
+        <div class="orbital-loader"><span></span><span></span></div>
+        <span class="eyebrow">RUNNING ON YOUR COMPUTER</span>
+        <h2 id="busyTitle">Generating terrain</h2>
+        <p id="busyText">The neural model is generating the landscape.</p>
+        <div class="busy-duration" id="busyDuration">0.0 s</div>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="libraryDialog" class="modal paper">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">SAVED ON THIS COMPUTER</span>
+          <h2>My worlds</h2>
+        </div>
+        <button
+          class="quiet square close-dialog"
+          aria-label="Close saved worlds"
+        >
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div id="worldList" class="world-list"></div>
+    </dialog>
+    <dialog id="aboutDialog" class="modal paper">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">OPEN SOURCE · LOCAL FIRST</span>
+          <h2>About Worldline</h2>
+        </div>
+        <button class="quiet square close-dialog" aria-label="Close about">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <p>
+        Worldline is a research prototype that generates terrain and vegetation
+        fields with an original, locally trained neural model. A separate
+        trained model predicts changes in water, vegetation and heat.
+      </p>
+      <p>
+        The 3D landscape uses Three.js geometry, foliage and shaders to display
+        those fields. The graphics are rendered, rather than generated video
+        frames. World edits and saved history are explicit software features.
+      </p>
+      <p>
+        Descriptions select <strong>alpine, desert or alien</strong> using a
+        small keyword vocabulary. This is not a general text-to-world model. The
+        training environments are synthetic.
+      </p>
+      <p>
+        <strong>Genie 3 parity has not been established.</strong> Neither
+        research novelty nor three revolutionary advances have been
+        demonstrated. This prototype provides working code and measurable
+        experiments toward further research.
+      </p>
+      <p>
+        <a
+          href="https://github.com/RaaghavC/open-worldline"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Source code, trained weights and research on GitHub ↗</a
+        >
+      </p>
+      <div class="about-specs">
+        <span>World model <b>64 × 64 learned fields</b></span
+        ><span>Inference <b id="deviceName">Local computer</b></span
+        ><span>Rendering <b>Three.js / WebGL</b></span
+        ><span>Connectivity <b>No external inference</b></span>
+      </div>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

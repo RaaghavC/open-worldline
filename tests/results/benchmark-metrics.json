@@ -1,0 +1,358 @@
+{
+  "schema": "worldline.evaluation.v1",
+  "recorded_at_utc": "2026-09-07T10:35:42.200747+00:00",
+  "python_version": "3.11.9",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "scope": "Software properties and limited synthetic-model ablation",
+  "snapshot_metrics": {
+    "scope": "Explicit storage and compact-edit software, using a deterministic numeric fixture, no neural model",
+    "revisions": 24,
+    "create_ms": 22.516249999171123,
+    "save_ms_median": 24.93056251842063,
+    "save_ms_p95": 29.439033151720643,
+    "restore_ms": 27.84041702398099,
+    "branch_ms": 24.23991699470207,
+    "close_reopen_and_all_history_read_ms": 75.8687499910593,
+    "database_bytes_after_close": 8413184,
+    "outside_brush_changed_values": 0,
+    "caller_input_unchanged": true,
+    "restored_state_and_hash_exact": true,
+    "history_append_only_after_restore": true,
+    "branch_parent_unchanged": true,
+    "reload_exact": true,
+    "all_historical_hashes_retained": true,
+    "json_import_export_hash_exact": true,
+    "source_state_sha256": "558a9abc94c130294e85c43d735388d00242e166fcafffd175785c29b46bbf1a"
+  },
+  "model_metrics": {
+    "status": "measured",
+    "scope": "Actual trained 64x64 field models; explicit synthetic ecology teacher; no rendered-image assessment",
+    "device": "cpu",
+    "torch_version": "2.5.1",
+    "checkpoint_sha256": {
+      "spatial-flow.pt": "739e599ce72a3ba21657d8613cd9fd413b3e9361bc331e32a3147e6d22fb8c18",
+      "ecology.pt": "54fb01945c4b1c27e854831b6ac77489c283cc70462989265b34dad15cffdfcc"
+    },
+    "model_load_ms": 10.525458987103775,
+    "generation_seed": 913710,
+    "flow_steps": 24,
+    "generation_ms_by_biome": {
+      "alpine": 207.83674999256618,
+      "desert": 292.7030000137165,
+      "alien": 402.3556250031106
+    },
+    "same_seed_exact_on_this_device": true,
+    "different_seed_mean_absolute_difference": 0.4563691020011902,
+    "same_seed_other_biomes_mean_absolute_difference": [
+      0.6633008718490601,
+      0.367845356464386
+    ],
+    "finite_and_bounded_fields": true,
+    "learned_transition_ms_median": 1.628792000701651,
+    "learned_transition_ms_p95": 3.9311410684604193,
+    "control_ablation_definition": "Same checkpoint and initial state, actual control in full arm, both controls zeroed every step in ablated arm; both compared against actual-control synthetic teacher",
+    "control_ablation_aggregate": {
+      "1": {
+        "conditioned_mean_mse": 1.0090077230036816e-06,
+        "controls_zeroed_mean_mse": 0.0005968179672587818,
+        "paired_cases_conditioned_better": 12,
+        "case_count": 12
+      },
+      "10": {
+        "conditioned_mean_mse": 3.560776538809781e-05,
+        "controls_zeroed_mean_mse": 0.03439758741296828,
+        "paired_cases_conditioned_better": 12,
+        "case_count": 12
+      },
+      "60": {
+        "conditioned_mean_mse": 0.0004085180128943951,
+        "controls_zeroed_mean_mse": 0.16676525957882404,
+        "paired_cases_conditioned_better": 12,
+        "case_count": 12
+      }
+    },
+    "control_ablation_cases": [
+      {
+        "seed": 913720,
+        "rain": 1.0,
+        "heat": 0.0,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 9.22498486488621e-07,
+            "controls_zeroed_mse": 0.00015379545220639557,
+            "conditioned_vs_zeroed_output_mae": 0.010075735859572887
+          },
+          "10": {
+            "conditioned_mse": 2.6104607968591154e-05,
+            "controls_zeroed_mse": 0.009533269330859184,
+            "conditioned_vs_zeroed_output_mae": 0.0763687863945961
+          },
+          "60": {
+            "conditioned_mse": 0.0006798391113989055,
+            "controls_zeroed_mse": 0.0815110132098198,
+            "conditioned_vs_zeroed_output_mae": 0.2256690263748169
+          }
+        }
+      },
+      {
+        "seed": 913720,
+        "rain": 0.0,
+        "heat": 1.0,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 9.332119930149929e-07,
+            "controls_zeroed_mse": 0.0014042523689568043,
+            "conditioned_vs_zeroed_output_mae": 0.022008046507835388
+          },
+          "10": {
+            "conditioned_mse": 4.369939779280685e-05,
+            "controls_zeroed_mse": 0.08004774898290634,
+            "conditioned_vs_zeroed_output_mae": 0.17627006769180298
+          },
+          "60": {
+            "conditioned_mse": 0.0004660944396164268,
+            "controls_zeroed_mse": 0.3899991512298584,
+            "conditioned_vs_zeroed_output_mae": 0.5240216851234436
+          }
+        }
+      },
+      {
+        "seed": 913720,
+        "rain": 0.8,
+        "heat": 0.7,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 5.651336323353462e-07,
+            "controls_zeroed_mse": 0.0005188477807678282,
+            "conditioned_vs_zeroed_output_mae": 0.017020314931869507
+          },
+          "10": {
+            "conditioned_mse": 1.1206776434846688e-05,
+            "controls_zeroed_mse": 0.028975093737244606,
+            "conditioned_vs_zeroed_output_mae": 0.12806953489780426
+          },
+          "60": {
+            "conditioned_mse": 3.938446752727032e-05,
+            "controls_zeroed_mse": 0.1174008846282959,
+            "conditioned_vs_zeroed_output_mae": 0.27279072999954224
+          }
+        }
+      },
+      {
+        "seed": 913720,
+        "rain": 0.25,
+        "heat": 0.4,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 6.257785685193085e-07,
+            "controls_zeroed_mse": 0.0001861491473391652,
+            "conditioned_vs_zeroed_output_mae": 0.009350097738206387
+          },
+          "10": {
+            "conditioned_mse": 2.3291782781598158e-05,
+            "controls_zeroed_mse": 0.010664652101695538,
+            "conditioned_vs_zeroed_output_mae": 0.07175206393003464
+          },
+          "60": {
+            "conditioned_mse": 0.0003405796887818724,
+            "controls_zeroed_mse": 0.0447198860347271,
+            "conditioned_vs_zeroed_output_mae": 0.16292136907577515
+          }
+        }
+      },
+      {
+        "seed": 913721,
+        "rain": 1.0,
+        "heat": 0.0,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 1.5027547988211154e-06,
+            "controls_zeroed_mse": 0.00035317163565196097,
+            "conditioned_vs_zeroed_output_mae": 0.015443186275660992
+          },
+          "10": {
+            "conditioned_mse": 3.694374026963487e-05,
+            "controls_zeroed_mse": 0.019903702661395073,
+            "conditioned_vs_zeroed_output_mae": 0.11279898136854172
+          },
+          "60": {
+            "conditioned_mse": 0.0003869242500513792,
+            "controls_zeroed_mse": 0.13440880179405212,
+            "conditioned_vs_zeroed_output_mae": 0.2906268835067749
+          }
+        }
+      },
+      {
+        "seed": 913721,
+        "rain": 0.0,
+        "heat": 1.0,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 1.1215046242796234e-06,
+            "controls_zeroed_mse": 0.0013996449997648597,
+            "conditioned_vs_zeroed_output_mae": 0.021803028881549835
+          },
+          "10": {
+            "conditioned_mse": 5.6922926887637004e-05,
+            "controls_zeroed_mse": 0.0799553170800209,
+            "conditioned_vs_zeroed_output_mae": 0.17373885214328766
+          },
+          "60": {
+            "conditioned_mse": 0.0006667243433184922,
+            "controls_zeroed_mse": 0.366315633058548,
+            "conditioned_vs_zeroed_output_mae": 0.48384544253349304
+          }
+        }
+      },
+      {
+        "seed": 913721,
+        "rain": 0.8,
+        "heat": 0.7,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 1.1616483561738278e-06,
+            "controls_zeroed_mse": 0.0005293688154779375,
+            "conditioned_vs_zeroed_output_mae": 0.018549760803580284
+          },
+          "10": {
+            "conditioned_mse": 2.837421379808802e-05,
+            "controls_zeroed_mse": 0.03194063901901245,
+            "conditioned_vs_zeroed_output_mae": 0.1441711187362671
+          },
+          "60": {
+            "conditioned_mse": 4.162142067798413e-05,
+            "controls_zeroed_mse": 0.14249363541603088,
+            "conditioned_vs_zeroed_output_mae": 0.3171856105327606
+          }
+        }
+      },
+      {
+        "seed": 913721,
+        "rain": 0.25,
+        "heat": 0.4,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 9.576759794072132e-07,
+            "controls_zeroed_mse": 0.00017574115190654993,
+            "conditioned_vs_zeroed_output_mae": 0.009712270461022854
+          },
+          "10": {
+            "conditioned_mse": 4.222920324536972e-05,
+            "controls_zeroed_mse": 0.010626856237649918,
+            "conditioned_vs_zeroed_output_mae": 0.07739532738924026
+          },
+          "60": {
+            "conditioned_mse": 0.0006582980859093368,
+            "controls_zeroed_mse": 0.04895442724227905,
+            "conditioned_vs_zeroed_output_mae": 0.17732687294483185
+          }
+        }
+      },
+      {
+        "seed": 913722,
+        "rain": 1.0,
+        "heat": 0.0,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 1.4283760947364499e-06,
+            "controls_zeroed_mse": 0.00031893164850771427,
+            "conditioned_vs_zeroed_output_mae": 0.014706159941852093
+          },
+          "10": {
+            "conditioned_mse": 3.866192128043622e-05,
+            "controls_zeroed_mse": 0.018314631655812263,
+            "conditioned_vs_zeroed_output_mae": 0.1064394935965538
+          },
+          "60": {
+            "conditioned_mse": 0.0001254251692444086,
+            "controls_zeroed_mse": 0.12585274875164032,
+            "conditioned_vs_zeroed_output_mae": 0.2735327184200287
+          }
+        }
+      },
+      {
+        "seed": 913722,
+        "rain": 0.0,
+        "heat": 1.0,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 1.0576028444120311e-06,
+            "controls_zeroed_mse": 0.0014077601954340935,
+            "conditioned_vs_zeroed_output_mae": 0.021903306245803833
+          },
+          "10": {
+            "conditioned_mse": 5.4461754189105704e-05,
+            "controls_zeroed_mse": 0.08025176078081131,
+            "conditioned_vs_zeroed_output_mae": 0.1733531504869461
+          },
+          "60": {
+            "conditioned_mse": 0.00077047199010849,
+            "controls_zeroed_mse": 0.36325904726982117,
+            "conditioned_vs_zeroed_output_mae": 0.4837554693222046
+          }
+        }
+      },
+      {
+        "seed": 913722,
+        "rain": 0.8,
+        "heat": 0.7,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 9.607941819922416e-07,
+            "controls_zeroed_mse": 0.0005336207686923444,
+            "conditioned_vs_zeroed_output_mae": 0.018479065969586372
+          },
+          "10": {
+            "conditioned_mse": 2.432274050079286e-05,
+            "controls_zeroed_mse": 0.03178088366985321,
+            "conditioned_vs_zeroed_output_mae": 0.14303414523601532
+          },
+          "60": {
+            "conditioned_mse": 3.79383382096421e-05,
+            "controls_zeroed_mse": 0.13798493146896362,
+            "conditioned_vs_zeroed_output_mae": 0.3075646162033081
+          }
+        }
+      },
+      {
+        "seed": 913722,
+        "rain": 0.25,
+        "heat": 0.4,
+        "horizons": {
+          "1": {
+            "conditioned_mse": 8.711131158634089e-07,
+            "controls_zeroed_mse": 0.0001805316423997283,
+            "conditioned_vs_zeroed_output_mae": 0.009736403822898865
+          },
+          "10": {
+            "conditioned_mse": 4.107411950826645e-05,
+            "controls_zeroed_mse": 0.010776493698358536,
+            "conditioned_vs_zeroed_output_mae": 0.07747776806354523
+          },
+          "60": {
+            "conditioned_mse": 0.0006889148498885334,
+            "controls_zeroed_mse": 0.04828295484185219,
+            "conditioned_vs_zeroed_output_mae": 0.17497970163822174
+          }
+        }
+      }
+    ],
+    "limitations": [
+      "Tests action-input use within one synthetic transition law, not real-world physics or unseen dynamics laws",
+      "Cases use new deterministic seeds, with the same synthetic state family as training",
+      "Generation timing includes inference and synchronization through NumPy output but excludes rendering and HTTP",
+      "Single-process local measurements are not server concurrency or browser frame-rate measurements"
+    ]
+  },
+  "not_tested": [
+    "Genie 3 parity",
+    "photorealism",
+    "graphics preference",
+    "scientific novelty",
+    "general physical reasoning",
+    "open-domain language understanding",
+    "minute-long autoregressive video",
+    "browser FPS",
+    "multi-user concurrency performance"
+  ]
+}

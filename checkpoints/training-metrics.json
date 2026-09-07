@@ -1,0 +1,311 @@
+{
+  "evaluation_scope": "Synthetic held-out fields only. No Genie 3 comparison; no claim of general physical accuracy or photorealistic neural video.",
+  "torch_version": "2.5.1",
+  "spatial_flow": {
+    "architecture": "conditional spatial rectified flow",
+    "channels": [
+      "height",
+      "vegetation_density"
+    ],
+    "size": 64,
+    "biomes": [
+      "alpine",
+      "desert",
+      "alien"
+    ],
+    "training_data": "original synthetic terrain, disjoint validation seeds",
+    "training_examples": 1536,
+    "heldout_examples": 192,
+    "seed": 314159,
+    "training_steps": 1600,
+    "trained_from_scratch": true,
+    "parameters": 233410,
+    "device": "mps",
+    "untrained_heldout_flow_mse": 1.2871183653672535,
+    "trained_heldout_flow_mse": 0.10816115885972977,
+    "relative_loss_reduction": 0.9159664240911767,
+    "raw_model_loss": 0.11281391854087512,
+    "ema_model_loss": 0.10816115885972977,
+    "selected": "ema",
+    "training_seconds": 74.44054075001623,
+    "history": [
+      {
+        "step": 1,
+        "loss": 1.2769182920455933,
+        "seconds": 4.06
+      },
+      {
+        "step": 100,
+        "loss": 0.2783638834953308,
+        "seconds": 8.38
+      },
+      {
+        "step": 200,
+        "loss": 0.21629130840301514,
+        "seconds": 12.75
+      },
+      {
+        "step": 300,
+        "loss": 0.15896959602832794,
+        "seconds": 17.13
+      },
+      {
+        "step": 400,
+        "loss": 0.11525405943393707,
+        "seconds": 21.51
+      },
+      {
+        "step": 500,
+        "loss": 0.13623133301734924,
+        "seconds": 25.87
+      },
+      {
+        "step": 600,
+        "loss": 0.12982606887817383,
+        "seconds": 30.21
+      },
+      {
+        "step": 700,
+        "loss": 0.14160969853401184,
+        "seconds": 34.66
+      },
+      {
+        "step": 800,
+        "loss": 0.13376054167747498,
+        "seconds": 39.03
+      },
+      {
+        "step": 900,
+        "loss": 0.11132316291332245,
+        "seconds": 43.38
+      },
+      {
+        "step": 1000,
+        "loss": 0.1084468811750412,
+        "seconds": 47.85
+      },
+      {
+        "step": 1100,
+        "loss": 0.15388906002044678,
+        "seconds": 52.26
+      },
+      {
+        "step": 1200,
+        "loss": 0.1393369734287262,
+        "seconds": 56.68
+      },
+      {
+        "step": 1300,
+        "loss": 0.10627120733261108,
+        "seconds": 61.15
+      },
+      {
+        "step": 1400,
+        "loss": 0.16177231073379517,
+        "seconds": 65.57
+      },
+      {
+        "step": 1500,
+        "loss": 0.07992949336767197,
+        "seconds": 69.91
+      },
+      {
+        "step": 1600,
+        "loss": 0.0884876400232315,
+        "seconds": 74.23
+      }
+    ],
+    "sample_seconds_mean": 0.463843708334025,
+    "field_statistics": {
+      "0": {
+        "reference_mean": [
+          0.0026817764155566692,
+          0.4233388900756836
+        ],
+        "generated_mean": [
+          0.0038702674210071564,
+          0.41009798645973206
+        ],
+        "reference_std": [
+          0.43763744831085205,
+          0.43274781107902527
+        ],
+        "generated_std": [
+          0.420441210269928,
+          0.40116435289382935
+        ],
+        "generated_neighbor_difference": 0.06541050970554352
+      },
+      "1": {
+        "reference_mean": [
+          -0.09990531951189041,
+          -0.7081182599067688
+        ],
+        "generated_mean": [
+          -0.08602019399404526,
+          -0.6917388439178467
+        ],
+        "reference_std": [
+          0.2829926609992981,
+          0.1174384206533432
+        ],
+        "generated_std": [
+          0.29251882433891296,
+          0.11670596897602081
+        ],
+        "generated_neighbor_difference": 0.04942057654261589
+      },
+      "2": {
+        "reference_mean": [
+          0.1036829724907875,
+          -0.08052603900432587
+        ],
+        "generated_mean": [
+          0.13008899986743927,
+          -0.0922774076461792
+        ],
+        "reference_std": [
+          0.3779754340648651,
+          0.44244369864463806
+        ],
+        "generated_std": [
+          0.3528982996940613,
+          0.429935097694397
+        ],
+        "generated_neighbor_difference": 0.05511615425348282
+      }
+    },
+    "untouched_test_examples": 96,
+    "untouched_test_seed": 1214159,
+    "untouched_test_flow_mse": 0.10520872225364049,
+    "independent_pixel_gaussian_baseline_test_flow_mse": 0.5277721285820007,
+    "test_loss_reduction_vs_independent_pixel_baseline": 0.8006550240985413,
+    "sample_nearest_training_rmse": [
+      0.44344910979270935,
+      0.23618988692760468,
+      0.46770966053009033,
+      0.42514708638191223,
+      0.24944743514060974,
+      0.48560428619384766,
+      0.4314931333065033,
+      0.227105051279068,
+      0.4720509648323059,
+      0.4758823812007904,
+      0.2278221696615219,
+      0.4603798985481262
+    ],
+    "sample_nearest_training_rmse_mean": 0.38352342198292416,
+    "novelty_diagnostic_limit": "Pixel distance to the nearest training field detects exact copies only; it does not demonstrate novel concepts, generalization beyond the synthetic distribution, or visual superiority.",
+    "field_overview": "generated-fields-overview.png"
+  },
+  "ecology": {
+    "architecture": "residual convolutional field dynamics",
+    "channels": [
+      "water",
+      "vegetation",
+      "heat"
+    ],
+    "training_data": "original synthetic reaction/diffusion teacher",
+    "training_examples": 1024,
+    "heldout_examples": 128,
+    "seed": 314160,
+    "training_steps": 1000,
+    "trained_from_scratch": true,
+    "parameters": 11107,
+    "device": "mps",
+    "untrained_heldout_mse": 0.0003602948854677379,
+    "heldout_mse": 1.1346680821588961e-06,
+    "persistence_heldout_mse": 0.00028932292480021715,
+    "mse_reduction_vs_persistence": 0.9960781950378028,
+    "mse_by_channel": [
+      1.908037575049093e-06,
+      3.833629875771294e-07,
+      1.1126039680675603e-06
+    ],
+    "rollouts": [
+      {
+        "steps": 1,
+        "model_mse": 1.2412747310008854e-06,
+        "persistence_mse": 0.0002718339383136481
+      },
+      {
+        "steps": 4,
+        "model_mse": 1.317020632995991e-05,
+        "persistence_mse": 0.003512363648042083
+      },
+      {
+        "steps": 8,
+        "model_mse": 3.456555350567214e-05,
+        "persistence_mse": 0.010769403539597988
+      },
+      {
+        "steps": 16,
+        "model_mse": 7.969434227561578e-05,
+        "persistence_mse": 0.026826700195670128
+      },
+      {
+        "steps": 32,
+        "model_mse": 0.00018057003035210073,
+        "persistence_mse": 0.050280358642339706
+      }
+    ],
+    "training_seconds": 7.162860082986299,
+    "history": [
+      {
+        "step": 1,
+        "scaled_loss": 5.672537803649902,
+        "seconds": 1.25
+      },
+      {
+        "step": 100,
+        "scaled_loss": 0.137061208486557,
+        "seconds": 1.79
+      },
+      {
+        "step": 200,
+        "scaled_loss": 0.10149174183607101,
+        "seconds": 2.33
+      },
+      {
+        "step": 300,
+        "scaled_loss": 0.07633957266807556,
+        "seconds": 2.88
+      },
+      {
+        "step": 400,
+        "scaled_loss": 0.06753946840763092,
+        "seconds": 3.44
+      },
+      {
+        "step": 500,
+        "scaled_loss": 0.05946892127394676,
+        "seconds": 4.01
+      },
+      {
+        "step": 600,
+        "scaled_loss": 0.05738472193479538,
+        "seconds": 4.56
+      },
+      {
+        "step": 700,
+        "scaled_loss": 0.056187987327575684,
+        "seconds": 5.11
+      },
+      {
+        "step": 800,
+        "scaled_loss": 0.029501231387257576,
+        "seconds": 5.64
+      },
+      {
+        "step": 900,
+        "scaled_loss": 0.05547591671347618,
+        "seconds": 6.18
+      },
+      {
+        "step": 1000,
+        "scaled_loss": 0.012674631550908089,
+        "seconds": 6.75
+      }
+    ]
+  }
+}
