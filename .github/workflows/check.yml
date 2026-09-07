@@ -81,6 +81,9 @@ jobs:
           name: wan22-codec-portable
           path: work/wan22-codec-cpu-portable-linux-v1.json
       - run: python -m pytest -q experiments/wan22_native/shift3/test_cpu.py experiments/wan22_native/shift3/test_independent.py
+      - run: python -m pytest -q experiments/wan22_native/action_adapter/test_pooling.py experiments/wan22_native/tiny_decoder/test_cpu.py
+      - run: python scripts/fetch_atrium_rgb.py --output ../../work/atrium-pilot/dense-pair
+      - run: python -m pytest -q experiments/wan22_native/action_training/test_cpu.py experiments/wan22_native/action_training/test_independent.py
   text-cache-cpu:
     runs-on: ubuntu-latest
     timeout-minutes: 15

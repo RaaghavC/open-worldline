@@ -10,3 +10,8 @@ experiments/wan_adapter/tokenwise_time/results/pilot-preflight-v2/prior-linux-fa
 # Preserve byte-exact primary source and checkpoint-header evidence.
 docs/abot-source-audit/** -whitespace
 experiments/wan22_native/codec-cpu-diagnostics/v1/linux-ci-failure.log -whitespace
+# Retain the exact licensed external decoder sources and measured snapshots.
+experiments/wan22_native/tiny_decoder/vendor/abot_taehv.py -whitespace
+experiments/wan22_native/tiny_decoder/vendor/upstream-README.md -whitespace
+experiments/wan22_native/tiny_decoder/cpu-v1/checked-source/vendor/abot_taehv.py.txt -whitespace
+experiments/wan22_native/tiny_decoder/results/*/checked-source/vendor/abot_taehv.py.txt -whitespace

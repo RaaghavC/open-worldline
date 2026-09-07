@@ -1,0 +1,442 @@
+{
+  "schema": "worldline-action-adaptive-pooling-cpu-v1",
+  "status": "passed",
+  "tests": 45,
+  "test_records": [
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_values_and_input_gradients_match_cpu_adaptive_oracle[shape0-output_size0]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.018363459006650373
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_values_and_input_gradients_match_cpu_adaptive_oracle[shape1-output_size1]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0014302090276032686
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_values_and_input_gradients_match_cpu_adaptive_oracle[shape2-output_size2]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010304170136805624
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_values_and_input_gradients_match_cpu_adaptive_oracle[shape3-output_size3]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0011766249954234809
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_values_and_input_gradients_match_cpu_adaptive_oracle[shape4-output_size4]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0009907079802360386
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_overlapping_height_bins_reuse_rows_four_and_thirteen",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0010862920025829226
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_noncontiguous_inputs_batch_isolation_and_no_adaptive_kernel_call",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0014827919949311763
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_cpu_dispatch_keeps_original_kernel_and_exact_values",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0006783749850001186
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_full_adapter_cpu_equations_and_gradients_with_explicit_pool",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.009214666992193088
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_invalid_explicit_pool_contract[value0-size0]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00013937498442828655
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_invalid_explicit_pool_contract[value1-size1]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 7.350000669248402e-05
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_invalid_explicit_pool_contract[value2-size2]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 7.02079851180315e-05
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_invalid_explicit_pool_contract[value3-size3]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 6.870797369629145e-05
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_invalid_explicit_pool_contract[value4-size4]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00011950000771321356
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_pooling.py::test_invalid_explicit_pool_contract[value5-None]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 8.687499212101102e-05
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_native_parameter_count_and_all_fp32",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00275370801682584
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_exact_zero_identity_to_untouched_native_core[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.017095250019337982
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_exact_zero_identity_to_untouched_native_core[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012594416009960696
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_encoder_retains_order_and_is_causal_with_fresh_per_call_state",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003108250006334856
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_residual_masks_observed_tokens_and_padding_without_mutation",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0011290840047877282
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_nonzero_head_keeps_adapter_gradient_path_and_frozen_prefix[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012219040974741802
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_nonzero_head_keeps_adapter_gradient_path_and_frozen_prefix[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01127033299417235
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_sequential_half_losses_equal_batch_pair_gradients[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0206482500070706
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_sequential_half_losses_equal_batch_pair_gradients[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.02078624998102896
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_disabled_external_autocast_and_normal_features_from_inference_caller",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012395083991577849
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[noisy_shape]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004887707997113466
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[noisy_nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004931292001856491
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[command_shape]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0062546670087613165
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[command_nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004968207998899743
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[pulse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004875625018030405
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[observation_mismatch]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004838708002353087
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[time_dtype]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00491620899992995
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[time_prefix]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004816958011360839
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[time_future]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00577170800534077
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[context_nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004702666017692536
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[context_shape]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00465991601231508
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[adapter_dtype]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0051897910016123205
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_feature_ownership_and_metadata_rejection",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.011400415998650715
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_native_default_rejects_tiny_core_and_unfrozen_head",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005816959019284695
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_manual_gru_attention_and_fhw_mask_equations",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005640542018227279
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_later_commands_cannot_enter_earlier_direct_residual_or_its_gradient",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0027985839988105
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_two_branch_updates_preserve_base_and_reach_command_gru[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.021699874982004985
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_two_branch_updates_preserve_base_and_reach_command_gru[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.020472458010772243
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_sequential_pair_common_upstream_matches_batched_gradient[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01690808401326649
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_sequential_pair_common_upstream_matches_batched_gradient[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.017203916009748355
+    }
+  ],
+  "seconds": 1.721641209005611,
+  "source_sha256": {
+    "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+    "experiments/wan22_native/action_adapter/wrapper.py": "964432182196fd859ec6b965e7d66216f27166662584c8279724b5d86b3f4157",
+    "experiments/wan22_native/action_adapter/test_cpu.py": "54a96d07b7cea8fb5f4a66bf197b49eec8c606a42b79deea0360e6cbc49e1e01",
+    "experiments/wan22_native/action_adapter/README.md": "5e439b5381f931850600c4765517a780eb7fb6d1bc89586a294b3063d23bfbb4",
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "experiments/wan22_native/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+    "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/NOTICE": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+    "experiments/wan22_native/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "experiments/wan22_native/action_adapter/test_pooling.py": "db7a3a5fd25f79669813ccd52e234ab097a4b57d5d3609288823314a878ab57f",
+    "experiments/wan22_native/action_adapter/test_independent.py": "abb334d8321addaa80575d78e617512b2dd57d77f483206ad8a44fa83c5166fc"
+  },
+  "source_unchanged_after_tests": true,
+  "report_source_sha256": "8b7294986d726f2841637f9298c757ef886b801742508c67f9608f4656b80721",
+  "previous_report_sha256": "777cab9ff27b2524d20bf6619dbdc0c0c7da8734122b8942394d3d4f2e8d140e",
+  "previous_model_sha256": "77b1232757ce1f030b5526975791f795aba6e77cb06a3afb56d08ac1f28a6c6c",
+  "model_change_only_new_import_and_pool_dispatch": true,
+  "native_foundation_sources_unchanged": true,
+  "device": "cpu",
+  "threads": 1,
+  "official_weight_values_loaded": false,
+  "gpu_used": false,
+  "comparison_tolerances": {
+    "atol": 2e-07,
+    "rtol": 3e-06,
+    "chosen_before_execution": true
+  },
+  "comparisons": [
+    {
+      "shape": [
+        1,
+        48,
+        18,
+        32
+      ],
+      "output": [
+        4,
+        8
+      ],
+      "forward": {
+        "max_absolute": 1.4901161193847656e-07,
+        "relative_l2": 1.0463510603842055e-07
+      },
+      "input_gradient": {
+        "max_absolute": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    {
+      "shape": [
+        2,
+        3,
+        18,
+        31
+      ],
+      "output": [
+        4,
+        8
+      ],
+      "forward": {
+        "max_absolute": 8.940696716308594e-08,
+        "relative_l2": 1.143994963629373e-07
+      },
+      "input_gradient": {
+        "max_absolute": 7.450580596923828e-09,
+        "relative_l2": 4.466360933340126e-08
+      }
+    },
+    {
+      "shape": [
+        2,
+        2,
+        13,
+        19
+      ],
+      "output": [
+        4,
+        8
+      ],
+      "forward": {
+        "max_absolute": 1.1920928955078125e-07,
+        "relative_l2": 7.80914923731974e-08
+      },
+      "input_gradient": {
+        "max_absolute": 7.450580596923828e-09,
+        "relative_l2": 1.9573011028256297e-08
+      }
+    },
+    {
+      "shape": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "output": [
+        4,
+        8
+      ],
+      "forward": {
+        "max_absolute": 0.0,
+        "relative_l2": 0.0
+      },
+      "input_gradient": {
+        "max_absolute": 5.960464477539063e-08,
+        "relative_l2": 5.5768117589016866e-08
+      }
+    }
+  ],
+  "mathematical_bins": {
+    "row_start": "floor(i*H/out_H)",
+    "row_end_exclusive": "ceil((i+1)*H/out_H)",
+    "column_start": "floor(j*W/out_W)",
+    "column_end_exclusive": "ceil((j+1)*W/out_W)",
+    "height_18_to_4": [
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        13,
+        18
+      ]
+    ],
+    "overlapping_rows_zero_based": [
+      4,
+      13
+    ]
+  },
+  "primary_bin_reference": {
+    "url": "https://github.com/pytorch/pytorch/blob/v2.5.1/aten/src/ATen/native/AdaptivePooling.h",
+    "installed_header_sha256": "5ce526435ae0292dba57ae138f3e0642c2e0133ba659b5de213e8605a72cce18",
+    "source_lines": [
+      31,
+      37
+    ]
+  },
+  "cpu_path": "Existing F.adaptive_avg_pool2d remains unchanged; helper selected only for MPS tensors",
+  "mps_status": "Not executed in this CPU report; separate independent operation check required",
+  "limitations": [
+    "FP32 reduction order may round differently; mathematical bins and gradients are compared within stated tolerances.",
+    "No actual native5B optimizer update or quality measurement follows from these CPU fixtures."
+  ],
+  "runtime": {
+    "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "pytest": "7.4.4"
+  }
+}

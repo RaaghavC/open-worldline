@@ -1,0 +1,55 @@
+{
+  "schema": "worldline-action-adaptive-pooling-mps-v1",
+  "status": "passed",
+  "source_sha256": {
+    "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+  },
+  "cpu_report_sha256": "6db45df9560bbc7de1c3469fd303eaa9222c1a0cd65fa499f24250dd0b290d34",
+  "script_sha256": "a761aacd29493e690bd0c7e17d3e93740cb2cd8cedc7ce4b3523d034bd720eef",
+  "shape": [
+    1,
+    48,
+    18,
+    32
+  ],
+  "output_size": [
+    4,
+    8
+  ],
+  "dtype": "float32",
+  "device": "mps",
+  "fallback": "0",
+  "atol": 2e-07,
+  "rtol": 3e-06,
+  "tolerances_chosen_before_execution": true,
+  "foundation_weights_loaded": false,
+  "model_inference": false,
+  "optimizer_updates": 0,
+  "shape_oracle": "CPU torch.nn.functional.adaptive_avg_pool2d",
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "torch": "2.5.1",
+  "forward_and_backward_seconds": 0.22527058300329372,
+  "tensor_sha256": {
+    "input": "357a668e3f3f5a82f53e8e713c32a67454f8ce2fd676fc16683ae7f2a9f17fde",
+    "upstream": "f0ad07b99d742a5d849340c82753a1748c7b3929fe7eca5bfb8555d18b3d0254",
+    "oracle_output": "3bf04337b2f650e396122acd7d0b996e6c50dc7ca559a82be4e0d88f26dd9ccc",
+    "oracle_input_gradient": "aeec19db1579564f60bf4c9d1ce8efe666170bf35a073c62489a2be447b571c2",
+    "mps_output": "9b8939de964c1647cdbf78167f69cc993c2aafc3bbd6ce991517e712fc0755a5",
+    "mps_input_gradient": "aeec19db1579564f60bf4c9d1ce8efe666170bf35a073c62489a2be447b571c2"
+  },
+  "tensor_file_sha256": "7224d85c986170cca826f24b4174995ca4969694c7c981aa6abb1844d482cd32",
+  "finite": true,
+  "forward": {
+    "max_absolute": 1.1920928955078125e-07,
+    "relative_l2": 1.0891567262263225e-07
+  },
+  "input_gradient": {
+    "max_absolute": 0.0,
+    "relative_l2": 0.0
+  },
+  "gradient_nonzero": true,
+  "unsupported_kernel_called": false,
+  "source_unchanged": true,
+  "mps_driver_bytes_after": 17285120
+}

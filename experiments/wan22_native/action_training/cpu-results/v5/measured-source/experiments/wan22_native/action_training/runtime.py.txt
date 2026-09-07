@@ -1,0 +1,184 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Read-only provenance/admission checks and snapshots for the paired pilot."""
+import json
+import math
+from pathlib import Path
+import shutil
+
+from safetensors import safe_open
+
+from .. import profile_core
+from ..action_data import data, runtime as data_runtime
+from ..action_data.build import validate_roundtrip
+from ..action_data.cache import load_training_window
+from ..load_weights import sha256, tensor_sha256
+from .objective import SEED, STARTS, OPTIMIZER, update_count, make_draws
+
+HERE=Path(__file__).resolve().parent
+REPO=HERE.parents[2]
+LOCAL=('__init__.py','objective.py','runtime.py','train.py','test_cpu.py')
+EXTRA=('experiments/wan22_native/action_adapter/__init__.py','experiments/wan22_native/action_adapter/model.py',
+       'experiments/wan22_native/action_adapter/wrapper.py','experiments/wan22_native/action_adapter/pooling.py',
+       'experiments/wan22_native/codec_profile.py',
+       'experiments/wan22_native/action_data/__init__.py','experiments/wan22_native/action_data/build.py')
+
+
+def source_paths():
+    paths={str((HERE/n).relative_to(REPO)):HERE/n for n in LOCAL}
+    paths.update({str((profile_core.HERE/n).relative_to(REPO)):profile_core.HERE/n for n in profile_core.SOURCE_NAMES})
+    paths.update({n:REPO/n for n in (*profile_core.REUSED_NAMES,*EXTRA,*data_runtime.REUSED_SOURCES)})
+    paths.update({str((data.HERE/n).relative_to(REPO)):data.HERE/n for n in data_runtime.LOCAL_SOURCES})
+    return paths
+
+
+def source_hashes():return {name:sha256(path) for name,path in source_paths().items()}
+
+
+def snapshot(output):
+    hashes=source_hashes()
+    for name,path in source_paths().items():
+        target=Path(output)/'measured-source'/(name+'.txt');target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target)
+        if sha256(target)!=hashes[name]:raise RuntimeError('Source changed during snapshot: '+name)
+    return hashes
+
+
+def validate_cpu(path, *, independent=False):
+    report=json.loads(Path(path).read_text())
+    if (report.get('status')!='passed' or type(report.get('tests'))is not int or report['tests']<(1 if independent else 10)
+            or report.get('source_sha256')!=source_hashes() or report.get('source_unchanged_after_tests')is not True):
+        raise ValueError('Passed current source-bound action-training CPU report required')
+    if independent and report.get('independent_review')is not True:
+        raise ValueError('Separate independent review record required')
+    return sha256(path)
+
+
+def validate_inputs(capture, cache, roundtrip, text_cache):
+    cache=Path(cache).resolve(); parent=cache.parent
+    terminal=json.loads((parent/'terminal.json').read_text())
+    metrics=json.loads((cache/'metrics.json').read_text())
+    manifest=json.loads((cache/'manifest.json').read_text())
+    if (terminal.get('status')!='complete' or terminal.get('exit_code')!=0 or metrics.get('mode')!='cache'
+            or metrics.get('source_sha256')!=data_runtime.source_hashes()
+            or manifest.get('source_sha256')!=data_runtime.source_hashes()
+            or any(p.exists() for p in (parent/'watchdog-stop.json',cache/'watchdog-stop.json'))):
+        raise ValueError('Completed current-source native cache with a successful parent required')
+    original=data.plan(capture)
+    if [row['source']for row in manifest.get('windows',[])] != [row['source']for row in original['selection']]:
+        raise ValueError('Cached windows differ from the verified original/derived RGB and commands')
+    windows={}
+    for row in original['selection']:
+        values,provenance=load_training_window(cache,row['id'])
+        windows[row['id']]=dict(provenance=provenance,tensors={n:tensor_sha256(v)for n,v in values.items()})
+    roundtrip_hash=validate_roundtrip(roundtrip)
+    positive,negative,text_identity=profile_core.load_text(text_cache)
+    del negative
+    return dict(cache_manifest_sha256=sha256(cache/'manifest.json'),cache_metrics_sha256=sha256(cache/'metrics.json'),
+        cache_terminal_sha256=sha256(parent/'terminal.json'),roundtrip_metrics_sha256=roundtrip_hash,
+        capture_manifest_sha256=original['capture_manifest_sha256'],windows=windows,text=text_identity,
+        training_text_id='atrium',negative_text_used=False,independent_layouts=1,split='development'),positive
+
+
+def validate_admission(path, mode, inputs):
+    """A mode-specific parent decision, separate from numerical/codec gates."""
+    if path is None:raise ValueError('Explicit mode-specific parent admission is missing')
+    path=Path(path);record=json.loads(path.read_text())
+    expected_scope={'probe':'optimizer-feasibility-only','fixed16':'fixed16-action-pilot'}.get(mode)
+    if (record.get('schema')!='worldline-wan22-action-training-admission-v1' or record.get('decision')!='admit'
+            or record.get('issued_by')!='parent-agent' or record.get('mode')!=mode
+            or expected_scope is None or record.get('scope')!=expected_scope
+            or record.get('foundation_visual_status') not in ('failed','passed')
+            or (mode=='fixed16' and record.get('foundation_visual_status')!='passed')
+            or record.get('source_sha256')!=source_hashes()
+            or record.get('cache_manifest_sha256')!=inputs['cache_manifest_sha256']
+            or record.get('roundtrip_metrics_sha256')!=inputs['roundtrip_metrics_sha256']
+            or not isinstance(record.get('visual_review'),str) or not record['visual_review'].strip()):
+        raise ValueError('Admission must bind the exact mode/scope, visual status, sources and data; fixed16 requires passed visual review')
+    evidence=record.get('foundation_evidence')
+    if not isinstance(evidence,list) or not evidence:raise ValueError('Reviewed foundation evidence required')
+    for item in evidence:
+        if not isinstance(item,dict) or set(item)!={'file','sha256'}:
+            raise ValueError('Foundation evidence must declare an exact file and hash')
+        file=Path(item['file'])
+        if not file.is_absolute():file=path.parent/file
+        if not file.is_file() or sha256(file)!=item['sha256']:raise ValueError('Reviewed foundation evidence changed')
+    return dict(sha256=sha256(path),mode=mode,scope=expected_scope,foundation_visual_status=record['foundation_visual_status'],
+                visual_review=record['visual_review'],foundation_evidence=evidence,
+                quality_inferred_from_cpu_or_probe=False)
+
+
+def protocol(mode):
+    return dict(schema='worldline-wan22-action-training-protocol-v1',mode=mode,seed=SEED,paired_updates=update_count(mode),
+        starts=[STARTS[i%4]for i in range(update_count(mode))],branch_order=['closed','open'],batch_per_forward=1,
+        trainable_parameters=947712,adapter_dtype='float32',core_storage_policy='selective_bf16',
+        objective='Mean squared error of velocity over future latent frames 1..4 only; half-weight each branch',
+        noised_future='(1-k/1000)*target+(k/1000)*saved_noise',observed_prefix='independent one-image latent at token time zero',
+        draw_order='Private CPU torch.Generator seeded 20260907: randint(50,951), then full-shape FP32 randn, for each pair',
+        paired_draws='Both branches share the saved full noise tensor and k',optimizer={**OPTIMIZER,'betas':list(OPTIMIZER['betas'])},
+        gradient_clip_l2=1.,warm_start=False,checkpoint_selection='Last fully validated prescribed update; no validation selection',
+        resume_supported=False,max_seconds=900,max_memory_gib=18,minimum_available_gib=2,
+        image_generation=False,quality_evaluation=False,scope='One-layout development pilot; no generalization or novelty claim')
+
+
+def validate_probe(directory, inputs):
+    if directory is None:raise ValueError('Fixed16 requires a completed separate two-update feasibility probe')
+    root=Path(directory);result=root/'result'
+    parent_plan=json.loads((root/'plan.json').read_text())
+    terminal=json.loads((root/'terminal.json').read_text());report=json.loads((result/'metrics.json').read_text())
+    if (terminal.get('status')!='complete' or terminal.get('exit_code')!=0 or report.get('status')!='passed'
+            or report.get('protocol')!=protocol('probe') or report.get('completed_updates')!=2
+            or report.get('source_sha256')!=source_hashes() or report.get('input_evidence')!=inputs
+            or report.get('base_unchanged')is not True or report.get('second_update_gru_gradient_nonzero')is not True
+            or any(p.exists() for p in (root/'watchdog-stop.json',result/'watchdog-stop.json'))):
+        raise ValueError('Incomplete, failed, changed or mismatched two-update probe')
+    expected_schedule,_=make_draws('probe')
+    if (parent_plan.get('status')!='complete' or parent_plan.get('protocol')!=protocol('probe')
+            or parent_plan.get('source_sha256')!=source_hashes() or parent_plan.get('input_evidence')!=inputs
+            or parent_plan.get('schedule')!=expected_schedule or report.get('schedule')!=expected_schedule):
+        raise ValueError('Completed source/input-matching parent probe plan and exact schedule required')
+    for name,field in (('draws.safetensors','draw_file_sha256'),('positive.safetensors','positive_file_sha256')):
+        if sha256(root/name)!=parent_plan.get(field):raise ValueError('Parent probe artifact changed: '+name)
+    with safe_open(root/'positive.safetensors',framework='pt',device='cpu')as handle:
+        if set(handle.keys())!={'atrium'} or tensor_sha256(handle.get_tensor('atrium'))!=inputs['text']['positive_tensor_sha256']:
+            raise ValueError('Retained probe positive context differs')
+    rows=report.get('updates',[])
+    if len(rows)!=2:raise ValueError('Exactly two retained probe updates required')
+    for index,row in enumerate(rows):
+        for name in ('gradient_l2_before_clip','gradient_l2_after_clip','output_gradient_l2','command_gru_gradient_l2','paired_mean_future_flow_mse'):
+            value=row.get(name)
+            if type(value) not in (int,float) or not math.isfinite(value) or value<0:
+                raise ValueError('Finite nonnegative retained probe losses/gradient norms required')
+        if row['gradient_l2_before_clip']<=0 or row['gradient_l2_after_clip']<=0 or row['gradient_l2_after_clip']>1.00001:
+            raise ValueError('Finite positive clipped probe gradients required')
+        branches=row.get('branches',[])
+        if len(branches)!=2 or [b.get('branch')for b in branches]!=['closed','open']:
+            raise ValueError('Both ordered probe branch losses required')
+        losses=[b.get('future_flow_mse')for b in branches]
+        if any(type(v)not in (int,float) or not math.isfinite(v) or v<0 for v in losses):
+            raise ValueError('Finite branch losses required')
+        if not math.isclose(sum(losses)/2,row['paired_mean_future_flow_mse'],rel_tol=1e-12,abs_tol=1e-12):
+            raise ValueError('Paired probe loss does not equal the two half losses')
+    if rows[0]['command_gru_gradient_l2']!=0. or rows[1]['command_gru_gradient_l2']<=0.:
+        raise ValueError('Zero first-update and nonzero second-update GRU gradients required')
+    if sha256(root/'draws.safetensors')!=report.get('draw_file_sha256'):
+        raise ValueError('Probe saved noise/RNG file changed')
+    checkpoint=report['final_checkpoint'];sub=Path(checkpoint['directory'])
+    if sub.is_absolute() or '..'in sub.parts:raise ValueError('Invalid probe checkpoint path')
+    manifest=result/sub/'manifest.json'
+    if not manifest.resolve().is_relative_to(result.resolve()) or sha256(manifest)!=checkpoint['manifest_sha256']:
+        raise ValueError('Probe checkpoint manifest changed')
+    bundle=json.loads(manifest.read_text())
+    if bundle.get('completed_updates')!=2 or set(bundle.get('files',{}))!={'adapter.safetensors','optimizer-and-rng.pt'} or bundle.get('files')!=checkpoint.get('files'):
+        raise ValueError('Exact complete two-update checkpoint bundle required')
+    for name,digest in bundle['files'].items():
+        if name not in ('adapter.safetensors','optimizer-and-rng.pt') or sha256(manifest.parent/name)!=digest:
+            raise ValueError('Probe recovery artifact changed')
+    if set(report.get('output_sha256',{}))!={'weight-load.json','core-before.json','core-after.json','last-valid.json'}:
+        raise ValueError('Full probe core/value verification artifacts required')
+    for name,digest in report['output_sha256'].items():
+        file=result/name
+        if Path(name).is_absolute() or '..'in Path(name).parts or not file.resolve().is_relative_to(result.resolve()) or sha256(file)!=digest:
+            raise ValueError('Probe output changed')
+    return dict(metrics_sha256=sha256(result/'metrics.json'),initial_adapter_sha256=report['initial_adapter_sha256'],
+        schedule_rows=report['schedule'][:2],checkpoint_loaded_for_training=False,
+        scope='Numerical feasibility only; explicit fixed16 visual admission remains required')

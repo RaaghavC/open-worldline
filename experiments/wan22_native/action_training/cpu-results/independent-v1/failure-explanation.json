@@ -1,0 +1,10 @@
+{
+  "status": "test_assertion_failed",
+  "implementation_changed": false,
+  "comparison": "Two sequential FP32 branch means, averaged in Python, versus one concatenated FP32 mean",
+  "actual_paired_mean": 1.029030978679657,
+  "reference_batch_mean": 1.0290310382843018,
+  "absolute_difference": 5.960464477539063e-08,
+  "original_assertion": "unittest assertAlmostEqual places=7",
+  "next_revision": "Use explicit absolute 1e-7 comparison tolerance for the differently ordered FP32 reduction; keep parameter and gradient comparisons unchanged"
+}

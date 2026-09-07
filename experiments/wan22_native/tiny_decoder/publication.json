@@ -1,0 +1,159 @@
+{
+  "scope": "Frozen initial tiny-decoder source, licenses, CPU evidence and byte-exact plan inputs. No trained weights or actual tiny-decoder images. Later results are outside this initial manifest.",
+  "files": {
+    "ABOT-THIRD-PARTY-NOTICES.md": {
+      "bytes": 1654,
+      "sha256": "6d6f1f7194d5ba9810d8793a520165301f55512f76b54cf7410eeb50b715d4df"
+    },
+    "LICENSE-ABOT-APACHE.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "LICENSE-MIT.txt": {
+      "bytes": 1073,
+      "sha256": "532f9e394518ffddecd294a517d5b41d79d3d3866c3fb95a6cb0e8bcc02370bf"
+    },
+    "README.md": {
+      "bytes": 6291,
+      "sha256": "3c7f0cddbcf2f7107c12f696fe1d525f96edbf882c95e6a5af6296eab8636edf"
+    },
+    "__init__.py": {
+      "bytes": 102,
+      "sha256": "2de1e6b92d6361aa1eb177a14cd6f62a046addda7a7caaed3269e5d4e0939297"
+    },
+    "codec.py": {
+      "bytes": 7205,
+      "sha256": "aff281fba1d9a98b066149476a7044c96011bc0aff8e55a1b956e11affa9ac8d"
+    },
+    "cpu-v1/README.md": {
+      "bytes": 1145,
+      "sha256": "8afaf21e38c66a1eac7ab43f659b87fdc607c3b688b7a22b3543e1329bfc95bd"
+    },
+    "cpu-v1/checked-source/LICENSE-MIT.txt.txt": {
+      "bytes": 1073,
+      "sha256": "532f9e394518ffddecd294a517d5b41d79d3d3866c3fb95a6cb0e8bcc02370bf"
+    },
+    "cpu-v1/checked-source/__init__.py.txt": {
+      "bytes": 102,
+      "sha256": "2de1e6b92d6361aa1eb177a14cd6f62a046addda7a7caaed3269e5d4e0939297"
+    },
+    "cpu-v1/checked-source/codec.py.txt": {
+      "bytes": 7205,
+      "sha256": "aff281fba1d9a98b066149476a7044c96011bc0aff8e55a1b956e11affa9ac8d"
+    },
+    "cpu-v1/checked-source/inputs.py.txt": {
+      "bytes": 6250,
+      "sha256": "10e598a86b7baa4de5155126737006ce25c6764d5005a3d19689fcbdf85c0cb3"
+    },
+    "cpu-v1/checked-source/run.py.txt": {
+      "bytes": 12864,
+      "sha256": "030f18bda35a175aab4c96f5d7bba35379090bc8dccdac1539a8ffd8bcb6a3a7"
+    },
+    "cpu-v1/checked-source/test_cpu.py.txt": {
+      "bytes": 8483,
+      "sha256": "ef2c5f8a7e7aa8a8d442c2ed722723364fbd999a3dba7de569c5e11baeeee30f"
+    },
+    "cpu-v1/checked-source/vendor/__init__.py.txt": {
+      "bytes": 70,
+      "sha256": "88aada61773944b56a02b612f4f13a27d2a0fda4bf27a4448b938b43fccce80f"
+    },
+    "cpu-v1/checked-source/vendor/abot_taehv.py.txt": {
+      "bytes": 22167,
+      "sha256": "2c13798e7ae821be11bf1245e5d06ce8c01bec6145083937cb2cc3404f7955bf"
+    },
+    "cpu-v1/checked-source/vendor/taehv.py.txt": {
+      "bytes": 26475,
+      "sha256": "99545f093b36c16297ad182ce18a5dce2ebc98bb611f5e8dfa2dce431ba39ce2"
+    },
+    "cpu-v1/reused-source/experiments/room_world/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "cpu-v1/reused-source/experiments/wan22_native/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "cpu-v1/reused-source/experiments/wan22_native/codec_decode_profile.py.txt": {
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    "cpu-v1/reused-source/experiments/wan22_native/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "cpu-v1/reused-source/experiments/wan22_native/sample_clip.py.txt": {
+      "bytes": 39918,
+      "sha256": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a"
+    },
+    "cpu-v1/tests.json": {
+      "bytes": 1824,
+      "sha256": "9736e0c16e8da4c1ddbe7fd5f36df7881974730ca88dd97d9f1077c7c56a4fc0"
+    },
+    "inputs.py": {
+      "bytes": 6250,
+      "sha256": "10e598a86b7baa4de5155126737006ce25c6764d5005a3d19689fcbdf85c0cb3"
+    },
+    "plans/README.md": {
+      "bytes": 1186,
+      "sha256": "934caa01e1da8b287e9c45e556b87ebf993a68ffd63b9fbc07786b617de577de"
+    },
+    "plans/index.json": {
+      "bytes": 1648,
+      "sha256": "a5afc6d60de63b8b0bca8e397b4aaa053f9af2df46cbafbc37850647e6fece4f"
+    },
+    "plans/reconstruction/input.safetensors": {
+      "bytes": 553048,
+      "sha256": "36fef1ae418a53b238a5ada56c42fa31a1b286cac7fc65f16c7526232427165e"
+    },
+    "plans/reconstruction/metrics.json": {
+      "bytes": 3747,
+      "sha256": "52468f061adfbaf14c525b4a07b87bfea4e3ffa65065d657a0abf089bd15d372"
+    },
+    "plans/shift3/input.safetensors": {
+      "bytes": 553048,
+      "sha256": "abe16fef6cf0182ee49f57b304023cd93ea78c7c627cd520ccef10939a27c85d"
+    },
+    "plans/shift3/metrics.json": {
+      "bytes": 3590,
+      "sha256": "58b1cb83e011613ac24c734b75fb9f26ab693eda7ceedfa0e0d0abf0f10cfdb3"
+    },
+    "plans/shift5/input.safetensors": {
+      "bytes": 553048,
+      "sha256": "3097dd63bdce426735ebb1b58f4395efaee1dc58e984a343c81bffca6aa8a1cb"
+    },
+    "plans/shift5/metrics.json": {
+      "bytes": 3591,
+      "sha256": "9d7d267b46b45c09569c58d0b59947c7d3b2a04a77f5390ebc161f3497e28c6f"
+    },
+    "run.py": {
+      "bytes": 12864,
+      "sha256": "030f18bda35a175aab4c96f5d7bba35379090bc8dccdac1539a8ffd8bcb6a3a7"
+    },
+    "source.json": {
+      "bytes": 2719,
+      "sha256": "b3695056906024d288a7ddda306750677a22b2b7f648ff7bc96610e67453d7d6"
+    },
+    "test_cpu.py": {
+      "bytes": 8483,
+      "sha256": "ef2c5f8a7e7aa8a8d442c2ed722723364fbd999a3dba7de569c5e11baeeee30f"
+    },
+    "vendor/__init__.py": {
+      "bytes": 70,
+      "sha256": "88aada61773944b56a02b612f4f13a27d2a0fda4bf27a4448b938b43fccce80f"
+    },
+    "vendor/abot_taehv.py": {
+      "bytes": 22167,
+      "sha256": "2c13798e7ae821be11bf1245e5d06ce8c01bec6145083937cb2cc3404f7955bf"
+    },
+    "vendor/taehv.py": {
+      "bytes": 26475,
+      "sha256": "99545f093b36c16297ad182ce18a5dce2ebc98bb611f5e8dfa2dce431ba39ce2"
+    },
+    "vendor/upstream-README.md": {
+      "bytes": 10016,
+      "sha256": "a1c7afefb557bd09bfd4795e18da2ee3d3ff1c9fb6f3d87e42f6988b9c7718f3"
+    }
+  },
+  "file_count": 38,
+  "bytes": 1989640
+}

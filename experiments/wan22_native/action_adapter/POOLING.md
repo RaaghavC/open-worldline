@@ -1,0 +1,9 @@
+# MPS observation-pooling correction
+
+The first original-action training probe stopped before its first optimizer update because PyTorch 2.5.1 MPS could not perform adaptive average pooling from 18 × 32 to 4 × 8. The failure and its original implementation remain retained. The correction changes only observation pooling on MPS; it does not change the native Wan core, adapter parameters, output size or training objective.
+
+[`pooling.py`](pooling.py) computes each average over rows `floor(i*H/out_H)` through `ceil((i+1)*H/out_H)-1`, and the same rule for columns. These are the [PyTorch adaptive-pooling bins](https://github.com/pytorch/pytorch/blob/v2.5.1/aten/src/ATen/native/AdaptivePooling.h). For 18 rows and four output rows, the half-open intervals are `[0,5)`, `[4,9)`, `[9,14)` and `[13,18)`. Input rows 4 and 13 therefore contribute to two output bins. Slices, means, stacking and their gradients stay on the input device. No image resizing or automatic CPU fallback is introduced.
+
+`observation_pool2d` selects those explicit bins only when `value.device.type == "mps"`. On CPU it calls the same `F.adaptive_avg_pool2d` as the previous model. The original 947,712-parameter adapter is otherwise unchanged. FP32 reduction order can differ, so numerical equivalence is measured rather than described as universal bit equality.
+
+[The source-bound CPU report](cpu-results/pooling-v1/report.json) records all 45 checks passing. It includes native observation shape, doubly uneven dimensions, overlap accumulation, noncontiguous input, batch isolation, an activated adapter's output and gradients, and all previous adapter regressions. [The evidence README](cpu-results/pooling-v1/README.md) gives the invocation and limits. A separate independent MPS check and refreshed training source gates precede any full-model retry. No training or visual success is inferred from this correction.

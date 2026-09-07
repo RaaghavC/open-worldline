@@ -1,0 +1,1963 @@
+{
+  "schema": "worldline-wan22-cpu-projection-diagnostic-v2",
+  "status": "completed",
+  "source_sha256": {
+    "codec_cpu_projection_diagnostic.py": "9dbb1bc328e9fb90b6a8783df3ecfa94c74d0f94f694c036b065ddaebe8a5d8d",
+    "codec_cpu_diagnostic.py": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+  },
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "torch_version": "2.5.1+cpu",
+  "torch_config": "PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201703\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.5.3 (Git Hash 66f0cb9eb66affd2da3bf5f8d897376f04aae6af)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.5.1, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, \n",
+  "external_weights_loaded": false,
+  "gpu_operations": false,
+  "production_source_or_values_changed": false,
+  "results": [
+    {
+      "status": "completed",
+      "mkldnn_enabled": true,
+      "mkldnn_available": true,
+      "threads": 1,
+      "seconds": 0.745478114999969,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "hook_neutrality_passed": true,
+      "hooks_removed": true,
+      "cache_clear": true,
+      "observed_location": "First compared discrepancy appears at the final 1x1x1 projection",
+      "projection_kernel_size": [
+        1,
+        1,
+        1
+      ],
+      "projection_stride": [
+        1,
+        1,
+        1
+      ],
+      "standalone_projection_input_shape": [
+        1,
+        96,
+        1,
+        2,
+        2
+      ],
+      "full_projection_input_shape": [
+        1,
+        96,
+        5,
+        2,
+        2
+      ],
+      "standalone_projection_original_stride": [
+        384,
+        4,
+        4,
+        2,
+        1
+      ],
+      "full_projection_original_stride": [
+        1920,
+        20,
+        4,
+        2,
+        1
+      ],
+      "checks": {
+        "hooked_full_encode_vs_unhooked_full_encode": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "bf9fa7e575effadcb2c99ae7cb22f347c231f0e7911e60c3da3701833911a6af",
+          "right_sha256": "bf9fa7e575effadcb2c99ae7cb22f347c231f0e7911e60c3da3701833911a6af",
+          "shape": [
+            1,
+            48,
+            5,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 960,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "first_encoder_output_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_input_prefix_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_output_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373904258012772,
+              "right": -0.015373894944787025,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08948000520467758,
+              "right": 0.08947999775409698,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.03681826591491699,
+              "right": 0.0368182398378849,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618225574493408,
+              "right": -0.06618224084377289,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.03181177377700806,
+              "right": 0.031811781227588654,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.13923576474189758,
+              "right": -0.1392357349395752,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580293610692024,
+              "right": -0.020580291748046875,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080324321985245,
+              "right": 0.09080323576927185,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "normalized_latent_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+          "right_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 134,
+          "max_abs": 2.086162567138672e-07,
+          "mean_abs": 3.145335843631377e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.5576459169387817,
+              "right": 0.557645857334137,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.05884046480059624,
+              "right": -0.05884044989943504,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.0357118621468544,
+              "right": 0.035711869597435,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.12932822108268738,
+              "right": -0.129328191280365,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.014840112999081612,
+              "right": -0.014840111136436462,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.49424734711647034,
+              "right": 0.49424731731414795,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                1
+              ],
+              "left": 0.25743693113327026,
+              "right": 0.2574368715286255,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                1,
+                1
+              ],
+              "left": 0.22925519943237305,
+              "right": 0.22925522923469543,
+              "abs": 2.9802322387695312e-08
+            }
+          ]
+        },
+        "replayed_identical_input_short_vs_long_projection": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373894944787025,
+              "right": -0.015373904258012772,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08947999775409698,
+              "right": 0.08948000520467758,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.0368182398378849,
+              "right": 0.03681826591491699,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618224084377289,
+              "right": -0.06618225574493408,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.031811781227588654,
+              "right": 0.03181177377700806,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.1392357349395752,
+              "right": -0.13923576474189758,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580291748046875,
+              "right": -0.020580293610692024,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080323576927185,
+              "right": 0.09080324321985245,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "same_length_projection_future_perturbation": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "future_dependency_scope": "Only the recorded same-length projection perturbation; no universal proof from one fixture"
+    },
+    {
+      "status": "completed",
+      "mkldnn_enabled": true,
+      "mkldnn_available": true,
+      "threads": 2,
+      "seconds": 0.0683398389999752,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "hook_neutrality_passed": true,
+      "hooks_removed": true,
+      "cache_clear": true,
+      "observed_location": "First compared discrepancy appears at the final 1x1x1 projection",
+      "projection_kernel_size": [
+        1,
+        1,
+        1
+      ],
+      "projection_stride": [
+        1,
+        1,
+        1
+      ],
+      "standalone_projection_input_shape": [
+        1,
+        96,
+        1,
+        2,
+        2
+      ],
+      "full_projection_input_shape": [
+        1,
+        96,
+        5,
+        2,
+        2
+      ],
+      "standalone_projection_original_stride": [
+        384,
+        4,
+        4,
+        2,
+        1
+      ],
+      "full_projection_original_stride": [
+        1920,
+        20,
+        4,
+        2,
+        1
+      ],
+      "checks": {
+        "hooked_full_encode_vs_unhooked_full_encode": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "bf9fa7e575effadcb2c99ae7cb22f347c231f0e7911e60c3da3701833911a6af",
+          "right_sha256": "bf9fa7e575effadcb2c99ae7cb22f347c231f0e7911e60c3da3701833911a6af",
+          "shape": [
+            1,
+            48,
+            5,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 960,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "first_encoder_output_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_input_prefix_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_output_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373904258012772,
+              "right": -0.015373894944787025,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08948000520467758,
+              "right": 0.08947999775409698,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.03681826591491699,
+              "right": 0.0368182398378849,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618225574493408,
+              "right": -0.06618224084377289,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.03181177377700806,
+              "right": 0.031811781227588654,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.13923576474189758,
+              "right": -0.1392357349395752,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580293610692024,
+              "right": -0.020580291748046875,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080324321985245,
+              "right": 0.09080323576927185,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "normalized_latent_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+          "right_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 134,
+          "max_abs": 2.086162567138672e-07,
+          "mean_abs": 3.145335843631377e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.5576459169387817,
+              "right": 0.557645857334137,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.05884046480059624,
+              "right": -0.05884044989943504,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.0357118621468544,
+              "right": 0.035711869597435,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.12932822108268738,
+              "right": -0.129328191280365,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.014840112999081612,
+              "right": -0.014840111136436462,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.49424734711647034,
+              "right": 0.49424731731414795,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                1
+              ],
+              "left": 0.25743693113327026,
+              "right": 0.2574368715286255,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                1,
+                1
+              ],
+              "left": 0.22925519943237305,
+              "right": 0.22925522923469543,
+              "abs": 2.9802322387695312e-08
+            }
+          ]
+        },
+        "replayed_identical_input_short_vs_long_projection": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373894944787025,
+              "right": -0.015373904258012772,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08947999775409698,
+              "right": 0.08948000520467758,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.0368182398378849,
+              "right": 0.03681826591491699,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618224084377289,
+              "right": -0.06618225574493408,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.031811781227588654,
+              "right": 0.03181177377700806,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.1392357349395752,
+              "right": -0.13923576474189758,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580291748046875,
+              "right": -0.020580293610692024,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080323576927185,
+              "right": 0.09080324321985245,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "same_length_projection_future_perturbation": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "future_dependency_scope": "Only the recorded same-length projection perturbation; no universal proof from one fixture"
+    },
+    {
+      "status": "completed",
+      "mkldnn_enabled": false,
+      "mkldnn_available": true,
+      "threads": 1,
+      "seconds": 0.057286755000006906,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "hook_neutrality_passed": true,
+      "hooks_removed": true,
+      "cache_clear": true,
+      "observed_location": "First compared discrepancy appears at the final 1x1x1 projection",
+      "projection_kernel_size": [
+        1,
+        1,
+        1
+      ],
+      "projection_stride": [
+        1,
+        1,
+        1
+      ],
+      "standalone_projection_input_shape": [
+        1,
+        96,
+        1,
+        2,
+        2
+      ],
+      "full_projection_input_shape": [
+        1,
+        96,
+        5,
+        2,
+        2
+      ],
+      "standalone_projection_original_stride": [
+        384,
+        4,
+        4,
+        2,
+        1
+      ],
+      "full_projection_original_stride": [
+        1920,
+        20,
+        4,
+        2,
+        1
+      ],
+      "checks": {
+        "hooked_full_encode_vs_unhooked_full_encode": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "9a61a7698daaacc7b98658e84774a9968dc1280be817df030e1577161891d5fe",
+          "right_sha256": "9a61a7698daaacc7b98658e84774a9968dc1280be817df030e1577161891d5fe",
+          "shape": [
+            1,
+            48,
+            5,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 960,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "first_encoder_output_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_input_prefix_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_output_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373904258012772,
+              "right": -0.015373894944787025,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08948000520467758,
+              "right": 0.08947999775409698,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.03681826591491699,
+              "right": 0.0368182398378849,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618225574493408,
+              "right": -0.06618224084377289,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.03181177377700806,
+              "right": 0.031811781227588654,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.13923576474189758,
+              "right": -0.1392357349395752,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580293610692024,
+              "right": -0.020580291748046875,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080324321985245,
+              "right": 0.09080323576927185,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "normalized_latent_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+          "right_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 134,
+          "max_abs": 2.086162567138672e-07,
+          "mean_abs": 3.145335843631377e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.5576459169387817,
+              "right": 0.557645857334137,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.05884046480059624,
+              "right": -0.05884044989943504,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.0357118621468544,
+              "right": 0.035711869597435,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.12932822108268738,
+              "right": -0.129328191280365,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.014840112999081612,
+              "right": -0.014840111136436462,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.49424734711647034,
+              "right": 0.49424731731414795,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                1
+              ],
+              "left": 0.25743693113327026,
+              "right": 0.2574368715286255,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                1,
+                1
+              ],
+              "left": 0.22925519943237305,
+              "right": 0.22925522923469543,
+              "abs": 2.9802322387695312e-08
+            }
+          ]
+        },
+        "replayed_identical_input_short_vs_long_projection": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373894944787025,
+              "right": -0.015373904258012772,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08947999775409698,
+              "right": 0.08948000520467758,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.0368182398378849,
+              "right": 0.03681826591491699,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618224084377289,
+              "right": -0.06618225574493408,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.031811781227588654,
+              "right": 0.03181177377700806,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.1392357349395752,
+              "right": -0.13923576474189758,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580291748046875,
+              "right": -0.020580293610692024,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080323576927185,
+              "right": 0.09080324321985245,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "same_length_projection_future_perturbation": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "future_dependency_scope": "Only the recorded same-length projection perturbation; no universal proof from one fixture"
+    },
+    {
+      "status": "completed",
+      "mkldnn_enabled": false,
+      "mkldnn_available": true,
+      "threads": 2,
+      "seconds": 0.056561399999964124,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "hook_neutrality_passed": true,
+      "hooks_removed": true,
+      "cache_clear": true,
+      "observed_location": "First compared discrepancy appears at the final 1x1x1 projection",
+      "projection_kernel_size": [
+        1,
+        1,
+        1
+      ],
+      "projection_stride": [
+        1,
+        1,
+        1
+      ],
+      "standalone_projection_input_shape": [
+        1,
+        96,
+        1,
+        2,
+        2
+      ],
+      "full_projection_input_shape": [
+        1,
+        96,
+        5,
+        2,
+        2
+      ],
+      "standalone_projection_original_stride": [
+        384,
+        4,
+        4,
+        2,
+        1
+      ],
+      "full_projection_original_stride": [
+        1920,
+        20,
+        4,
+        2,
+        1
+      ],
+      "checks": {
+        "hooked_full_encode_vs_unhooked_full_encode": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "9a61a7698daaacc7b98658e84774a9968dc1280be817df030e1577161891d5fe",
+          "right_sha256": "9a61a7698daaacc7b98658e84774a9968dc1280be817df030e1577161891d5fe",
+          "shape": [
+            1,
+            48,
+            5,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 960,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "first_encoder_output_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_input_prefix_full_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "right_sha256": "99bcaef82a72cc699a749747d7d3d23134b9e3095095f64d8f448e6d7f390ecb",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "projection_output_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373904258012772,
+              "right": -0.015373894944787025,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08948000520467758,
+              "right": 0.08947999775409698,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.03681826591491699,
+              "right": 0.0368182398378849,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618225574493408,
+              "right": -0.06618224084377289,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.03181177377700806,
+              "right": 0.031811781227588654,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.13923576474189758,
+              "right": -0.1392357349395752,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580293610692024,
+              "right": -0.020580291748046875,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080324321985245,
+              "right": 0.09080323576927185,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "normalized_latent_prefix_full_vs_standalone": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+          "right_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 134,
+          "max_abs": 2.086162567138672e-07,
+          "mean_abs": 3.145335843631377e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.5576459169387817,
+              "right": 0.557645857334137,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.05884046480059624,
+              "right": -0.05884044989943504,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.0357118621468544,
+              "right": 0.035711869597435,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.12932822108268738,
+              "right": -0.129328191280365,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.014840112999081612,
+              "right": -0.014840111136436462,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.49424734711647034,
+              "right": 0.49424731731414795,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                1
+              ],
+              "left": 0.25743693113327026,
+              "right": 0.2574368715286255,
+              "abs": 5.960464477539063e-08
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                1,
+                1
+              ],
+              "left": 0.22925519943237305,
+              "right": 0.22925522923469543,
+              "abs": 2.9802322387695312e-08
+            }
+          ]
+        },
+        "replayed_identical_input_short_vs_long_projection": {
+          "torch_equal": false,
+          "bytes_equal": false,
+          "left_sha256": "4ff2f01d5025c9f69044ea1a4281b7cc71dd247721d9fdf973aefbe998677268",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 333,
+          "max_abs": 1.043081283569336e-07,
+          "mean_abs": 1.8546643332228996e-08,
+          "both_finite": true,
+          "first_differences": [
+            {
+              "index": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left": -0.015373894944787025,
+              "right": -0.015373904258012772,
+              "abs": 9.313225746154785e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "left": 0.08947999775409698,
+              "right": 0.08948000520467758,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "left": 0.0368182398378849,
+              "right": 0.03681826591491699,
+              "abs": 2.60770320892334e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left": -0.06618224084377289,
+              "right": -0.06618225574493408,
+              "abs": 1.4901161193847656e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "left": 0.031811781227588654,
+              "right": 0.03181177377700806,
+              "abs": 7.450580596923828e-09
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "left": -0.1392357349395752,
+              "right": -0.13923576474189758,
+              "abs": 2.9802322387695312e-08
+            },
+            {
+              "index": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "left": -0.020580291748046875,
+              "right": -0.020580293610692024,
+              "abs": 1.862645149230957e-09
+            },
+            {
+              "index": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "left": 0.09080323576927185,
+              "right": 0.09080324321985245,
+              "abs": 7.450580596923828e-09
+            }
+          ]
+        },
+        "same_length_projection_future_perturbation": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "right_sha256": "2a33222b452a2ce2588b89c3c1b7d26b6c2035f2d38af32537963551df8befe3",
+          "shape": [
+            1,
+            96,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 384,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "future_dependency_scope": "Only the recorded same-length projection perturbation; no universal proof from one fixture"
+    }
+  ],
+  "source_unchanged": true
+}

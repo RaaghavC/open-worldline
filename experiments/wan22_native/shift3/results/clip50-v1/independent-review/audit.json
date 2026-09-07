@@ -1,0 +1,144 @@
+{
+  "schema": "worldline-shift3-independent-artifact-audit-v1",
+  "status": "passed_artifact_audit_visual_failure_retained",
+  "audit_source_sha256": "9fb9b60c965b8eb9d8f60c1c6adc9313e1da872d2c035bc226c1e1a9a0feedad",
+  "model_inference": false,
+  "gpu_used": false,
+  "read_only_inputs": true,
+  "python": "3.11.9",
+  "numpy": "1.26.4",
+  "scope": "Saved artifact identities and arithmetic, plus separately stated inspection of existing PNGs. Does not rerun denoising or prove per-step tensors that were not retained.",
+  "publication": {
+    "files": 83,
+    "bytes": 46479445,
+    "all_raw_files_byte_exact": true,
+    "publication_sha256": "8c3fb8625f3459eae4553cb1b846e54ab1b048aefa8bf589f6fbbaff9868374e"
+  },
+  "source_identity": {
+    "snapshot_counts": {
+      "source_sha256": 25,
+      "reused_source_sha256": 4,
+      "ablation_source_sha256": 4
+    },
+    "all_shared_sources_match_control": true,
+    "integrate_ast_exact": true,
+    "solver_source_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+  },
+  "input_identity": {
+    "file_sha256": "0419e16b8699b408a1c085a382ca7751074c0be8c1927164b970de03b1e42753",
+    "all_six_inputs_exact": true,
+    "tensor_sha256": {
+      "initial_latent": "59a60814a1f4eaa8afdd7ba927b3fc6946c04be06ca363dd4eed94e85da13cfb",
+      "initial_noise": "976ecd5ea20b269da0c3a3cfd4a1cd768f0472546e6ce3dc5280963ad384d90c",
+      "negative": "aa6911f67cb7a4e5cf934131594b6fe264dff9983f84ab188e9199c706cf60cc",
+      "observation": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "positive": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093",
+      "token_times": "c33795e46bac9af3b71a0c8b21d41d8a0137b154febf5225d3f70fe7e984c3e3"
+    },
+    "all_825_weight_load_records_equal": true,
+    "stage_environments_equal": true
+  },
+  "schedule": {
+    "steps": 50,
+    "sigmas": 51,
+    "recorded_cfg_calls": 100,
+    "all_100_recorded_prefix_boundaries_passed": true,
+    "all_50_recorded_post_step_prefix_checks_passed": true,
+    "independent_all_times_and_sigmas_exact": true,
+    "first_model_time_both": 999,
+    "first_sigma_shift3": 0.9996664524078369,
+    "first_sigma_shift5": 0.9997998476028442,
+    "last_model_time": 57,
+    "terminal_sigma": 0.0,
+    "retained_final_prefix_exact": true,
+    "limitation": "Intermediate model inputs/velocities were not all saved; their prefix/finiteness checks are source-bound execution records, not independently replayed tensors."
+  },
+  "outputs": {
+    "raw_shape": [
+      1,
+      3,
+      17,
+      288,
+      512
+    ],
+    "raw_dtype": "float32",
+    "raw_range": [
+      -1.0,
+      1.0
+    ],
+    "all_17_frames_finite": true,
+    "all_17_pngs_exact_raw_quantization": true,
+    "four_contact_sheet_tiles_exact": true,
+    "first_frame_exact_to_shift5": true,
+    "future_rgb_mae_between_shifts": 0.039465793330382457,
+    "raw_file_sha256": "c365a2c6e5d2366332499ceb0fa585b6614db2e6c2dd75dcd515e633b6ea6522",
+    "final_latent_file_sha256": "abe16fef6cf0182ee49f57b304023cd93ea78c7c627cd520ccef10939a27c85d",
+    "known_initial_reconstruction_frames": 1,
+    "generated_future_frames": 16,
+    "quality_metric": false
+  },
+  "timing_and_memory": {
+    "stages_seconds": {
+      "verify_and_load_selective_bf16_core": 86.8276391249965,
+      "native_50_step_sampling": 318.80962845799513,
+      "verify_and_load_fp32_codec": 3.387570708000567,
+      "decode_full_17_frames": 60.07937879199744,
+      "save_all_frames_and_raw_pixels": 1.5933823339873925
+    },
+    "summed_step_intervals_seconds": 318.38532363122795,
+    "parent_seconds": 477.4953946660098,
+    "summed_child_terminal_seconds": 477.3042782910052,
+    "estimate_seconds": 692.6396646999638,
+    "sampled_peaks": {
+      "core": {
+        "rss_bytes": 1048444928,
+        "mps_active_bytes": 10520611328,
+        "mps_driver_bytes": 10864082944
+      },
+      "decode": {
+        "rss_bytes": 3192111104,
+        "mps_active_bytes": 5283189248,
+        "mps_driver_bytes": 10982440960
+      }
+    },
+    "minimum_parent_available_bytes": 2417000448,
+    "not_an_interactive_fps_claim": true
+  },
+  "visual_inspection": {
+    "status": "failed",
+    "images": [
+      {
+        "run": "shift3",
+        "file": "decode/result/comparison.png",
+        "sha256": "c920ceb956b91f34fbc3b1cc26f05a2ccbcc571b9409c57cbdc931144076b35e"
+      },
+      {
+        "run": "shift3",
+        "file": "decode/result/frames/0005.png",
+        "sha256": "39fbbb1e227fc3dbd4a6f1c2eeb2c5e5a1a5cfb36a972b681672df35ec9a21ef"
+      },
+      {
+        "run": "shift3",
+        "file": "decode/result/frames/0016.png",
+        "sha256": "300b77e42e576a47f002af93c18c5ff3b9037aaf7ae233315a7204d35fc6431a"
+      },
+      {
+        "run": "shift5",
+        "file": "decode/result/comparison.png",
+        "sha256": "1379f04164663b3c451cb726a7e3214360ce410ee5128ea9290dc18b698f250b"
+      }
+    ],
+    "finding": "Both contact sheets retain a recognizable brown door, but generated frames contain severe colored prismatic patterns, warped wall and floor surfaces, and smeared edges. Original shift3 PNGs 5 and 16 confirm the contact-sheet failure. Shift3 does not resolve this distortion.",
+    "limitation": "Inspection of retained frames 0,5,10,16 and two original-size future PNGs, not a blinded quality study or a claim that both entire videos have identical pixels."
+  },
+  "source_metrics_sha256": "6b03f00d84f3ac4578be5135a5641ac422c258e288d04a98358ebdeab5fdfbad",
+  "control_metrics_sha256": "17d52167ef71b804f4de36b9855607410ae3134bb0d4d36cdc948dd6f9bea1bc",
+  "evidence_sha256": {
+    "metrics.json": "6b03f00d84f3ac4578be5135a5641ac422c258e288d04a98358ebdeab5fdfbad",
+    "schedule.json": "e1029fae6eeb73cad0c61783c38ddc15b06d9454b7af9d651cbb5f9bd48f34ef",
+    "core/result/metrics.json": "f5ceb9ce6246d4dc5b00617e0747f764487fa30ccb1c44bf9f2bfac2e15004a7",
+    "decode/result/metrics.json": "61781a92a70eee4584a1abab28a08c0a2db7a0b0dbab7d59cb27eea359645f4d",
+    "core/result/weight-load.json": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+  },
+  "findings": []
+}

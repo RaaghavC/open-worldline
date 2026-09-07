@@ -1,0 +1,67 @@
+{
+  "scope": "Read-only audit of completed Linux CI artifacts; no model or test rerun",
+  "ci_run_id": 34150787732,
+  "ci_commit": "309c60075666f8b0c2e464ea2a2417995ad82627",
+  "reports": {
+    "linux-portable-v1": {
+      "sha256": "3d1ab1e1021f7d256c45daa7207452b170bcf955783ff6e17a06e48de0931835",
+      "tests": 4,
+      "seconds": 0.8314958789999878,
+      "same_length_future_perturbation_exact": true,
+      "repeat_exact": true,
+      "cross_length_max_abs": 2.086162567138672e-07
+    },
+    "linux-projection-v2": {
+      "sha256": "8087013718c5e8b8f8e9c13318ff3a4f8bd882370eef0fc2d23f4f9dbd94ea23",
+      "configurations": [
+        {
+          "oneDNN_enabled": true,
+          "threads": 1,
+          "first_encoder_and_preprojection_prefix_exact": true,
+          "postprojection_differences": 333,
+          "postprojection_elements": 384,
+          "postprojection_max_abs": 1.043081283569336e-07,
+          "independent_projection_replay_matches_difference": true,
+          "same_length_future_perturbation_exact": true
+        },
+        {
+          "oneDNN_enabled": true,
+          "threads": 2,
+          "first_encoder_and_preprojection_prefix_exact": true,
+          "postprojection_differences": 333,
+          "postprojection_elements": 384,
+          "postprojection_max_abs": 1.043081283569336e-07,
+          "independent_projection_replay_matches_difference": true,
+          "same_length_future_perturbation_exact": true
+        },
+        {
+          "oneDNN_enabled": false,
+          "threads": 1,
+          "first_encoder_and_preprojection_prefix_exact": true,
+          "postprojection_differences": 333,
+          "postprojection_elements": 384,
+          "postprojection_max_abs": 1.043081283569336e-07,
+          "independent_projection_replay_matches_difference": true,
+          "same_length_future_perturbation_exact": true
+        },
+        {
+          "oneDNN_enabled": false,
+          "threads": 2,
+          "first_encoder_and_preprojection_prefix_exact": true,
+          "postprojection_differences": 333,
+          "postprojection_elements": 384,
+          "postprojection_max_abs": 1.043081283569336e-07,
+          "independent_projection_replay_matches_difference": true,
+          "same_length_future_perturbation_exact": true
+        }
+      ],
+      "conclusion": "First compared discrepancy occurs at final 1x1x1 projection when temporal input length changes. This does not identify the underlying reduction kernel or prove universal causality."
+    },
+    "linux-diagnostic-v2": {
+      "sha256": "57d896f5c1a62acdc72272a0ef93964cc8ebe6473222e80828b2ae45a5d0c6f9",
+      "status": "completed",
+      "purpose": "Retained repeated original diagnostic from the same successful CI run; previous Linux diagnostic remains unchanged."
+    }
+  },
+  "status": "passed"
+}

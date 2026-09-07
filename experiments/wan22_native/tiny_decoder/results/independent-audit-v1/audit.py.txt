@@ -1,0 +1,181 @@
+"""Read-only NumPy/Pillow audit of three retained tiny decoder runs. No torch."""
+import argparse
+import hashlib
+import json
+import math
+from pathlib import Path
+import struct
+
+import numpy as np
+from PIL import Image
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for b in iter(lambda: f.read(2**20), b''):
+            h.update(b)
+    return h.hexdigest()
+
+
+def read(path, key, keys, shape, dtype='F32'):
+    raw = Path(path).read_bytes()
+    size = struct.unpack('<Q', raw[:8])[0]
+    header = json.loads(raw[8:8+size])
+    assert set(header) - {'__metadata__'} == set(keys)
+    spec = header[key]
+    assert spec['shape'] == list(shape) and spec['dtype'] == dtype
+    lo, hi = spec['data_offsets']
+    a = np.frombuffer(raw[8+size+lo:8+size+hi], dtype={'F32':'<f4','U8':'u1'}[dtype]).reshape(shape)
+    assert np.isfinite(a).all()
+    return a
+
+
+def tensor_sha(a):
+    return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
+
+
+def score(a, b):
+    delta = a.astype(np.float64) - b.astype(np.float64)
+    mse = float(np.mean(delta * delta))
+    return {'mse_rgb_0_1': mse, 'mae_rgb_0_1': float(np.mean(abs(delta))),
+            'psnr_db': None if mse == 0 else float(-10*np.log10(mse)), 'exact': mse == 0}
+
+
+def check_scores(reference, prediction, recorded):
+    rows = {'all_frames': score(reference, prediction),
+            'first_frame': score(reference[:1], prediction[:1]),
+            'later_frames': score(reference[1:], prediction[1:])}
+    rows['per_frame'] = [dict(frame=i, **score(a, b)) for i, (a, b) in enumerate(zip(reference, prediction))]
+    maximum = 0.
+    for key in ('all_frames', 'first_frame', 'later_frames', 'per_frame'):
+        pairs = zip(rows[key], recorded[key]) if key == 'per_frame' else [(rows[key], recorded[key])]
+        for observed, expected in pairs:
+            assert set(observed) == set(expected)
+            for name, value in observed.items():
+                if isinstance(value, float):
+                    difference = abs(value - expected[name]); maximum = max(maximum, difference)
+                    assert math.isfinite(expected[name]) and difference <= 1e-12, (key, name, difference)
+                else:
+                    assert value == expected[name]
+    return {'maximum_absolute_recomputed_score_difference': maximum, 'scores': rows}
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--repo', type=Path, required=True)
+    p.add_argument('--runs-root', type=Path, required=True)
+    p.add_argument('--weights', type=Path, required=True)
+    p.add_argument('--output', type=Path, required=True)
+    args = p.parse_args()
+    assert not args.output.exists(), 'Refuse to replace evidence'
+    package = args.repo/'experiments/wan22_native/tiny_decoder'
+    download = args.runs_root/'taehv-weights/download.json'
+    weight = json.loads(download.read_text())
+    assert args.weights.stat().st_size == weight['bytes'] == 22884021
+    assert sha(args.weights) == weight['sha256'] == 'd053e216ca50e2bb837bbcd79b85f0366bea00e5938025572382a773b74c559a'
+    review = args.runs_root/'tiny-decoder-root-review-v1/report.json'
+    parent_review = json.loads(review.read_text())
+    report = {'status':'passed', 'audit_source_sha256':sha(__file__), 'method':'Read-only safetensors parser, NumPy and Pillow. No torch import, tensor model load, model execution or GPU use.',
+              'raw_work_unchanged':True, 'weight_file_hashed_without_deserialization':True,
+              'weight_download_manifest_sha256':sha(download), 'root_source_review_sha256':sha(review),
+              'weight_sha256':weight['sha256'], 'runs':{}}
+    total = 0
+    for kind in ('reconstruction','shift5','shift3'):
+        root = args.runs_root/f'wan22-tiny-{kind}-v1'; out = root/'decoder/result'
+        raw_hashes = {str(f.relative_to(root)):sha(f) for f in sorted(root.rglob('*')) if f.is_file()}
+        parent = json.loads((root/'metrics.json').read_text()); worker = json.loads((out/'metrics.json').read_text())
+        launch = json.loads((root/'decoder/launch.json').read_text()); terminal = json.loads((root/'decoder/terminal.json').read_text())
+        assert parent['status'] == worker['status'] == 'passed'
+        assert terminal['status'] == 'complete' and terminal['exit_code'] == 0
+        assert not list(root.rglob('watchdog-stop.json'))
+        assert parent['frame_count'] == worker['frame_count'] == 17
+        assert parent['decoder_metrics_sha256'] == sha(out/'metrics.json')
+        assert parent['cpu_report_sha256'] == sha(root/'cpu-tests.json') == parent_review['author_cpu_report_sha256']
+        for group, source_base, saved_dir in [('source_sha256', package, 'checked-source'), ('reused_source_sha256', args.repo, 'reused-source')]:
+            assert parent[group] == worker[group] == launch[group]
+            assert parent[group] == parent_review['reviewed_source_sha256' if group == 'source_sha256' else group]
+            for name, digest in parent[group].items():
+                assert sha(source_base/name) == sha(root/saved_dir/(name+'.txt')) == digest
+        spec = parent['source_evidence']; source = Path(launch['source_run'])
+        assert spec == worker['source_evidence'] == launch['source_evidence']
+        expected_metrics = source/('result/metrics.json' if kind == 'reconstruction' else 'metrics.json')
+        assert sha(expected_metrics) == spec['source_metrics_sha256']
+        assert sha(source/spec['latent_file']) == spec['latent_file_sha256']
+        latent = read(source/spec['latent_file'], spec['latent_key'], spec['latent_keys'], (1,48,5,18,32))
+        saved = read(root/'input.safetensors', 'latent', ['latent'], (1,48,5,18,32))
+        assert np.array_equal(latent, saved)
+        digest = tensor_sha(saved)
+        assert digest == worker['latent_tensor_sha256'] == launch['latent_tensor_sha256'] == parent['latent_identity']['tensor_sha256']
+        assert sha(root/'input.safetensors') == parent['input_file_sha256'] == launch['input_file_sha256']
+        assert sha(source/spec['baseline_file']) == spec['baseline_sha256']
+        baseline = read(source/spec['baseline_file'], spec['baseline_key'], [spec['baseline_key']], (1,3,17,288,512))
+        full = ((baseline[0].transpose(1,0,2,3)+np.float32(1))/np.float32(2)).clip(0,1)
+        tiny = read(out/'decoded.safetensors','rgb01',['rgb01'],(1,17,3,288,512))[0]
+        assert tiny.min() >= 0 and tiny.max() <= 1
+        scores = {'full_vae_agreement':check_scores(full,tiny,worker['full_vae_agreement'])}
+        if spec['truth_file'] is not None:
+            assert kind == 'reconstruction' and sha(source/spec['truth_file']) == spec['truth_sha256']
+            rgb = read(source/spec['truth_file'],'rgb',['rgb'],(17,288,512,3),'U8')
+            truth = rgb.transpose(0,3,1,2).astype(np.float32)/np.float32(255)
+            scores['original_rgb_reconstruction'] = check_scores(truth,tiny,worker['original_rgb_reconstruction'])
+            scores['full_vae_reconstruction'] = check_scores(truth,full,worker['full_vae_reconstruction'])
+        else:
+            assert 'original_rgb_reconstruction' not in worker and 'full_vae_reconstruction' not in worker
+        files = sorted((out/'frames').glob('*.png'))
+        assert [f.name for f in files] == [f'{i:04d}.png' for i in range(17)]
+        for i, file in enumerate(files):
+            image = Image.open(file)
+            assert image.size == (512,288) and image.mode == 'RGB'
+            assert np.array_equal(np.asarray(image), np.rint(tiny[i].transpose(1,2,0)*np.float32(255)).astype(np.uint8))
+        for name, digest in worker['output_sha256'].items():
+            assert sha(out/name) == digest
+        with Image.open(out/'preview.gif') as gif:
+            assert gif.n_frames == 17 and gif.size == (512,288)
+            for i in range(17):
+                gif.seek(i); assert gif.info['duration'] == 100
+        # Check contact-sheet picture crops against exact raw pixel conversion; labels are not model content.
+        sheet = np.asarray(Image.open(out/'comparison.png'))
+        assert sheet.shape == (1280,1024,3)
+        for row, i in enumerate((0,5,10,16)):
+            y = row*320+32
+            assert np.array_equal(sheet[y:y+288,:512], np.rint(full[i].transpose(1,2,0)*np.float32(255)).astype(np.uint8))
+            assert np.array_equal(sheet[y:y+288,512:], np.asarray(Image.open(files[i])))
+        assert [(x['latent_start'],x['latent_count'],x['output_frames'],x['startup_frames_trimmed']) for x in worker['chunks']] == [(0,3,9,3),(3,2,8,0)]
+        assert worker['cache_clear_after_decode'] is True and worker['startup_frames_trimmed_once'] == 3
+        assert worker['frames_dropped_or_padded'] == 0 and worker['references_loaded_after_decode'] is True
+        assert all(worker[x] is False for x in ['transformer_executed','model_training','actions_read','text_read','extra_mean_std_transform','reference_pixels_loaded_before_decode'])
+        assert worker['decoder']['weight_sha256'] == weight['sha256'] and worker['decoder']['full_weights_verified'] is True
+        assert worker['decoder']['dtype'] == 'float32' and worker['decoder']['autocast_enabled'] is False
+        assert parent['elapsed_seconds'] < 900 and worker['elapsed_seconds'] < 900
+        streams = {}
+        for relative in ['parent-memory.jsonl','decoder/result/memory.jsonl']:
+            samples = [json.loads(line) for line in (root/relative).read_text().splitlines()]
+            assert samples and all(x['available_bytes'] >= 2*2**30 for x in samples)
+            fields = ['combined_rss_bytes'] if relative.startswith('parent') else ['rss_bytes','mps_active_bytes','mps_driver_bytes']
+            peaks = {k:max(x[k] for x in samples) for k in fields}
+            assert all(v <= 18*2**30 for v in peaks.values())
+            expected = parent['sampled_parent_limits'] if relative.startswith('parent') else worker['peaks_sampled']
+            assert all(expected[k] == v for k,v in peaks.items())
+            streams[relative] = {'samples':len(samples), 'peak_bytes':peaks,'minimum_available_bytes':min(x['available_bytes'] for x in samples)}
+        assert raw_hashes == {str(f.relative_to(root)):sha(f) for f in sorted(root.rglob('*')) if f.is_file()}
+        total += len(files)
+        report['runs'][kind] = {'status':'passed','raw_file_sha256':raw_hashes,'input_exactly_matches_source':True,
+            'latent_tensor_sha256':tensor_sha(saved),'native_input_shape':[1,48,5,18,32],
+            'raw_rgb01_shape':[1,17,3,288,512],'all_17_png_pixels_exact_to_float32_rounding':True,
+            'contact_sheet_picture_pixels_exact':True,'gif_frames':17,'gif_display_fps':10,
+            'stream_latents':[3,2],'stream_frames':[9,8],'cache_clear_reported':True,
+            'source_read_review_supports_reference_materialization_after_decode':True,
+            'weight_size_and_hash_rechecked':True,'output_hashes_rechecked':True,'scores':scores,
+            'parent_elapsed_seconds':parent['elapsed_seconds'],'worker_elapsed_seconds':worker['elapsed_seconds'],
+            'timings':worker['timings'],'memory':streams,
+            'quality_assessment':'Real reconstruction loses thin edges and plant detail; both generated controls retain severe colored distortions. No new generation or model training in this audit.'}
+    assert total == 51
+    report['total_verified_png_frames'] = total
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(report,indent=2)+'\n')
+    print(json.dumps({'status':report['status'],'png_frames':total,'report_sha256':sha(args.output)}))
+
+
+if __name__ == '__main__':
+    main()

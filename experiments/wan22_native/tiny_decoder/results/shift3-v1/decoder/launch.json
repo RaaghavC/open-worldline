@@ -1,0 +1,53 @@
+{
+  "run": "../../work/wan22-tiny-shift3-v1",
+  "output": "../../work/wan22-tiny-shift3-v1/decoder/result",
+  "weights": "../../work/taehv-weights/taew2_2.pth",
+  "source_run": "experiments/wan22_native/shift3/results/clip50-v1",
+  "kind": "shift3",
+  "device": "mps",
+  "deadline": 161154.535776,
+  "source_sha256": {
+    "__init__.py": "2de1e6b92d6361aa1eb177a14cd6f62a046addda7a7caaed3269e5d4e0939297",
+    "codec.py": "aff281fba1d9a98b066149476a7044c96011bc0aff8e55a1b956e11affa9ac8d",
+    "inputs.py": "10e598a86b7baa4de5155126737006ce25c6764d5005a3d19689fcbdf85c0cb3",
+    "run.py": "030f18bda35a175aab4c96f5d7bba35379090bc8dccdac1539a8ffd8bcb6a3a7",
+    "test_cpu.py": "ef2c5f8a7e7aa8a8d442c2ed722723364fbd999a3dba7de569c5e11baeeee30f",
+    "vendor/__init__.py": "88aada61773944b56a02b612f4f13a27d2a0fda4bf27a4448b938b43fccce80f",
+    "vendor/taehv.py": "99545f093b36c16297ad182ce18a5dce2ebc98bb611f5e8dfa2dce431ba39ce2",
+    "vendor/abot_taehv.py": "2c13798e7ae821be11bf1245e5d06ce8c01bec6145083937cb2cc3404f7955bf",
+    "LICENSE-MIT.txt": "532f9e394518ffddecd294a517d5b41d79d3d3866c3fb95a6cb0e8bcc02370bf"
+  },
+  "reused_source_sha256": {
+    "experiments/wan22_native/codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "experiments/wan22_native/sample_clip.py": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a",
+    "experiments/wan22_native/codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "experiments/wan22_native/codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+  },
+  "source_evidence": {
+    "kind": "shift3",
+    "source_metrics_sha256": "6b03f00d84f3ac4578be5135a5641ac422c258e288d04a98358ebdeab5fdfbad",
+    "latent_file": "core/result/latents.safetensors",
+    "latent_file_sha256": "abe16fef6cf0182ee49f57b304023cd93ea78c7c627cd520ccef10939a27c85d",
+    "latent_key": "latent",
+    "latent_keys": [
+      "latent"
+    ],
+    "latent_shape": [
+      1,
+      48,
+      5,
+      18,
+      32
+    ],
+    "baseline_file": "decode/result/decoded.safetensors",
+    "baseline_sha256": "c365a2c6e5d2366332499ceb0fa585b6614db2e6c2dd75dcd515e633b6ea6522",
+    "baseline_key": "video",
+    "truth_file": null,
+    "input_convention": "Native48 normalized diffusion latent, passed directly without inverse mean/std",
+    "raw_reference_loaded_before_decode": false,
+    "source_original_run_unchanged": true
+  },
+  "input_file_sha256": "abe16fef6cf0182ee49f57b304023cd93ea78c7c627cd520ccef10939a27c85d",
+  "latent_tensor_sha256": "f6e971abce5998e1e7263ddffaedf7901e4c4f71b229c0bc1d47a63ca4277c0a"
+}

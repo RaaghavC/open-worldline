@@ -24,3 +24,5 @@ The [original shift-5 control](../../../sample-results/clip50-v1/README.md) rema
 - [All 83 byte-exact original files and hashes](publication.json)
 
 The parent and worker status `passed` refers to execution checks. It does not mean the images passed visual inspection. The source images in the contact sheet are unenhanced original outputs, with labels outside their image region. Count one starting reconstruction and 16 generated future frames. No future ground-truth image or trained action adapter was used.
+
+An [independent artifact audit](independent-review/audit.json) verified all 83 original files, 50 times and 51 sigmas, matching inputs and weight-load records, recorded prefix checks, all 17 raw/PNG frame pairs, and the timing and memory arithmetic. Its separate visual review also judged the future-frame distortions a failure. The audit performed no model execution.

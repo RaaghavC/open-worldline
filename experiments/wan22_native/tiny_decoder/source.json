@@ -1,0 +1,67 @@
+{
+  "scope": "External approximate decoder; wrapper and evidence tooling are original Apache-2.0 code. No original decoder, full-VAE equivalence, image quality or measured speed claim.",
+  "upstream": {
+    "name": "TAEHV",
+    "author": "Ollin Boer Bohan",
+    "commit": "011dfc2112197741c540e0bdd5b7b67bcc930771",
+    "commit_date": "2026-08-31",
+    "license": "MIT",
+    "code_url": "https://github.com/madebyollin/taehv/blob/011dfc2112197741c540e0bdd5b7b67bcc930771/taehv.py",
+    "code_file": "vendor/taehv.py",
+    "sha256": "99545f093b36c16297ad182ce18a5dce2ebc98bb611f5e8dfa2dce431ba39ce2",
+    "byte_exact": true
+  },
+  "abot_comparison_source": {
+    "commit": "fdc0d63d7da6ee8e304816733921ccb606dc75e9",
+    "commit_date": "2026-09-04",
+    "license_notice": "ABot Apache-2.0; TAEHV upstream MIT notice retained separately",
+    "code_url": "https://github.com/amap-cvlab/ABot-World/blob/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/taehv.py",
+    "code_file": "vendor/abot_taehv.py",
+    "sha256": "2c13798e7ae821be11bf1245e5d06ce8c01bec6145083937cb2cc3404f7955bf",
+    "byte_exact": true,
+    "purpose": "CPU comparison of its 9/12 frame chunk API, not the runtime decoder implementation"
+  },
+  "weight": {
+    "name": "taew2_2.pth",
+    "publisher_repository": "acvlab/ABot-World-0-5B-LF",
+    "revision": "d26a3003701e70d38cd17e2af2faf63bd4ff7632",
+    "bytes": 22884021,
+    "publisher_lfs_sha256": "d053e216ca50e2bb837bbcd79b85f0366bea00e5938025572382a773b74c559a",
+    "downloaded_for_this_preflight": false,
+    "tensor_values_inspected": false,
+    "redistributed_in_this_package": false,
+    "runtime_requires_exact_size_and_hash": true
+  },
+  "checks": {
+    "cpu_tests": 9,
+    "cpu_seconds": 0.4736503339954652,
+    "official_weight_values_loaded": false,
+    "gpu_used": false,
+    "report_file": "cpu-v1/tests.json",
+    "report_sha256": "9736e0c16e8da4c1ddbe7fd5f36df7881974730ca88dd97d9f1077c7c56a4fc0"
+  },
+  "parameter_counts": {
+    "encoder": 1494576,
+    "decoder": 9923532,
+    "total": 11418108
+  },
+  "conventions": {
+    "normalized_input": "FP32 [1,48,5,18,32] directly into upstream network after NTCHW permutation",
+    "inverse_full_vae_mean_std": false,
+    "output": "FP32 [1,17,3,288,512] in [0,1]",
+    "chunk_latents": [
+      3,
+      2
+    ],
+    "chunk_rgb_frames": [
+      9,
+      8
+    ],
+    "startup_trim": "Original upstream first three raw frames, once per reset",
+    "additional_temporal_crop_or_padding": false,
+    "additional_output_upscaling": false,
+    "native_decoder_spatial_scale": 16,
+    "warmup": false,
+    "precision_change": "Explicit FP32 parameters and convolutions, autocast disabled, CPU or MPS instead of ABot CUDA autocast"
+  }
+}

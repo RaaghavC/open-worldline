@@ -1,0 +1,27 @@
+{
+  "schema": "worldline-action-pooling-mps-publication-v1",
+  "status": "passed",
+  "report_sha256": "429f4cc025bb18678a27b0a59f116a90c1e95321b8305f0d0e4ecbbe4fe9b2da",
+  "files_sha256": {
+    ".gitignore": "7222581a36b10ea835a2b65e5d701a13ce98d75d223bd5a42031ab603709c3f8",
+    "README.md": "a1d7b07670f8729a1d4b7d4a68b329c7da090c76fa39fab6844a29e152986317",
+    "check-wan22-action-pooling-mps.py": "a761aacd29493e690bd0c7e17d3e93740cb2cd8cedc7ce4b3523d034bd720eef",
+    "cpu-report.json": "6db45df9560bbc7de1c3469fd303eaa9222c1a0cd65fa499f24250dd0b290d34",
+    "model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+    "pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "report.json": "429f4cc025bb18678a27b0a59f116a90c1e95321b8305f0d0e4ecbbe4fe9b2da",
+    "tensors.safetensors": "7224d85c986170cca826f24b4174995ca4969694c7c981aa6abb1844d482cd32",
+    "terminal.json": "9e6b43fa42e6d5f391f1ac61b7233c62b2ec67667443f5c3408fb3743833cfc7",
+    "worker.log": "429f4cc025bb18678a27b0a59f116a90c1e95321b8305f0d0e4ecbbe4fe9b2da"
+  },
+  "measured_report_changed": false,
+  "executed_tensor_file_changed": false,
+  "external_model_weights_included": false,
+  "added_during_publication": [
+    "README.md",
+    ".gitignore",
+    "cpu-report.json"
+  ],
+  "original_terminal_location": "Separate sibling terminal JSON; copied byte-exact",
+  "original_log_location": "Separate sibling operation log; copied byte-exact"
+}

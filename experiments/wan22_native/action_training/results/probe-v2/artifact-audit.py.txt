@@ -1,0 +1,133 @@
+"""Read completed probe artifacts only. Never load the foundation or run a model."""
+import argparse
+import json
+import math
+from pathlib import Path
+import sys
+
+import torch
+from safetensors import safe_open
+
+
+def audit(repo, run, admission):
+    sys.path.insert(0, str(repo))
+    from experiments.wan22_native.action_training import runtime as gate
+    from experiments.wan22_native.action_training.objective import loaded_records, require_finite_tree, make_draws
+    from experiments.wan22_native.action_training.train import verify_saved_draws
+    from experiments.wan22_native.load_weights import sha256, tensor_sha256
+    def read(path):return json.loads(path.read_text())
+    terminal=read(run/'terminal.json')
+    if terminal.get('status')!='complete' or terminal.get('exit_code')!=0:
+        raise ValueError('A successful terminal is required before a completed-probe audit')
+    plan=read(run/'plan.json');report=read(run/'result/metrics.json')
+    assert plan['status']=='complete' and report['status']=='passed'
+    assert plan['terminal_sha256']==sha256(run/'terminal.json')
+    inputs=report['input_evidence'];gate.validate_probe(run,inputs)
+    decision=gate.validate_admission(admission,'probe',inputs)
+    assert decision['scope']=='optimizer-feasibility-only'
+    assert decision['foundation_visual_status']=='failed'
+    assert report['admission_evidence']['visual_admission']==decision
+    assert report['generated_images']==0 and report['quality_evaluation']is False
+    assert report['automatic_promotion_to_fixed16']is False
+    assert report['all825_current_value_hashes_verified']is True
+    assert report['source_sha256']==plan['source_sha256']==gate.source_hashes()
+    sources=[]
+    for base in (run,run/'result'):
+        for name,digest in report['source_sha256'].items():
+            file=base/'measured-source'/(name+'.txt')
+            assert sha256(file)==digest
+            sources.append(str(file.relative_to(run)))
+    before=read(run/'result/core-before.json');after=read(run/'result/core-after.json')
+    loaded=read(run/'result/weight-load.json')
+    assert len(before)==825 and before==after==loaded_records(loaded)
+    rows,draws=verify_saved_draws(run,'probe',plan['schedule'])
+    assert rows==report['schedule'] and rows==make_draws('fixed16')[0][:2]
+    checkpoints=[];previous=None;initial_identity=None
+    for step in range(3):
+        path=run/'result'/f'checkpoint-{step:04d}';manifest=read(path/'manifest.json')
+        assert manifest['completed_updates']==step
+        assert set(manifest['files'])=={'adapter.safetensors','optimizer-and-rng.pt'}
+        assert manifest['external_core_weights_included']is False and manifest['resume_supported']is False
+        if initial_identity is None:initial_identity=manifest['identity']
+        assert manifest['identity']==initial_identity
+        assert manifest['identity']['source_sha256']==report['source_sha256']
+        assert manifest['identity']['core_before_sha256']==sha256(run/'result/core-before.json')
+        for name,digest in manifest['files'].items():assert sha256(path/name)==digest
+        values={};changed=[];count=0
+        with safe_open(path/'adapter.safetensors',framework='pt',device='cpu')as handle:
+            assert set(handle.keys())==set(manifest['tensors'])
+            for name in handle.keys():
+                tensor=handle.get_tensor(name);row=manifest['tensors'][name]
+                assert tensor.dtype==torch.float32 and bool(torch.isfinite(tensor).all())
+                assert list(tensor.shape)==row['shape'] and row['dtype']=='float32'
+                digest=tensor_sha256(tensor);assert digest==row['sha256'];count+=tensor.numel()
+                values[name]=digest
+                if previous is not None and previous[name]!=digest:changed.append(name)
+                if step==0 and name in ('output.weight','output.bias'):assert not torch.count_nonzero(tensor).item()
+                del tensor
+        assert count==947712
+        recovery=torch.load(path/'optimizer-and-rng.pt',weights_only=True,map_location='cpu')
+        require_finite_tree(recovery)
+        assert recovery['completed_updates']==step and recovery['identity']==initial_identity
+        assert recovery['torch_cpu_rng'].dtype==torch.uint8
+        assert recovery['draw_rng_state'].dtype==torch.uint8
+        expected_rng=draws[f'rng_after_{step-1:04d}'] if step else torch.Generator().manual_seed(20260907).get_state()
+        assert torch.equal(recovery['draw_rng_state'],expected_rng)
+        optimizer=recovery['optimizer'];assert len(optimizer['param_groups'])==1
+        group=optimizer['param_groups'][0]
+        assert group['lr']==1e-4 and group['betas']==(.9,.999) and group['eps']==1e-8 and group['weight_decay']==.01
+        assert len(group['params'])==len(values)
+        assert len(optimizer['state'])==(len(values) if step else 0)
+        for row in optimizer['state'].values():
+            assert set(row)=={'step','exp_avg','exp_avg_sq'} and float(row['step'])==step
+            assert row['exp_avg'].dtype==row['exp_avg_sq'].dtype==torch.float32
+        if step:assert changed
+        if step==1:assert 'output.weight'in changed and 'output.bias'in changed
+        if step==2:assert any(n.startswith('command_gru.')for n in changed)
+        checkpoints.append(dict(completed_updates=step,manifest_sha256=sha256(path/'manifest.json'),
+            tensors=len(values),parameters=count,optimizer_states=len(optimizer['state']),changed_since_previous=changed,
+            files=manifest['files'],finite=True))
+        previous=values;del recovery,optimizer
+    assert report['initial_adapter_sha256']==checkpoints[0]['files']['adapter.safetensors']
+    final=report['final_checkpoint'];last=read(run/'result/last-valid.json')
+    assert final==report['last_checkpoint']
+    assert final['directory']==last['directory']=='checkpoint-0002'
+    assert final['manifest_sha256']==last['manifest_sha256']==checkpoints[-1]['manifest_sha256']
+    assert last['completed_updates']==2
+    for index,row in enumerate(report['updates']):
+        expected=rows[index]
+        assert all(row[name]==expected[name]for name in ('update','start','k','sigma','noise_sha256'))
+        assert row['optimizer_updates']==1 and row['live_sequential_forwards']==2
+        for branch,window in zip(row['branches'],expected['branches']):
+            for key in ('observation','commands'):
+                assert branch['input_sha256'][key]==inputs['windows'][window]['tensors'][key]
+    memory=[json.loads(line)for line in (run/'result/memory.jsonl').read_text().splitlines()]
+    assert memory
+    peaks={k:max(row[k]for row in memory)for k in ('rss_bytes','mps_active_bytes','mps_driver_bytes')}
+    assert peaks==report['peaks_sampled']
+    minimum=min(row['available_bytes']for row in memory)
+    assert minimum>=2*2**30 and max(peaks['rss_bytes'],peaks['mps_driver_bytes'])<=18*2**30
+    assert 0<report['elapsed_seconds']<=900
+    assert all(math.isfinite(row['seconds']) and row['seconds']>0 for row in report['timings'])
+    inventory={str(p.relative_to(run)):dict(bytes=p.stat().st_size,sha256=sha256(p))
+        for p in sorted(run.rglob('*'))if p.is_file()}
+    return dict(schema='worldline-wan22-action-probe-artifact-audit-v1',status='passed',
+        run_metrics_sha256=sha256(run/'result/metrics.json'),terminal_sha256=sha256(run/'terminal.json'),
+        admission_sha256=sha256(admission),foundation_visual_status='failed',scope='optimizer-feasibility-only',
+        source_snapshots_checked=len(sources),core_parameter_records=825,core_before_after_equal=True,
+        checkpoints=checkpoints,completed_updates=2,live_foundation_forwards=4,updates=report['updates'],
+        elapsed_seconds=report['elapsed_seconds'],timings=report['timings'],peaks_sampled=peaks,
+        minimum_available_bytes=minimum,files=inventory,
+        limits='Artifact integrity and finite optimizer mechanics only. No sampling or inference was performed by this audit. No improved-image, action-control or visual-foundation conclusion.')
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    for name in ('repo','run','admission','output'):parser.add_argument('--'+name,type=Path,required=True)
+    args=parser.parse_args()
+    if args.output.exists():raise ValueError('Refuse overwriting audit evidence')
+    torch.set_num_threads(1)
+    result=audit(args.repo.resolve(),args.run.resolve(),args.admission.resolve())
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(result,indent=2)+'\n')
+    print(json.dumps({k:result[k]for k in ('status','completed_updates','core_parameter_records','elapsed_seconds')},indent=2))

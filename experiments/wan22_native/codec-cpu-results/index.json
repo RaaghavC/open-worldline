@@ -1,0 +1,296 @@
+{
+  "scope": "Exact retained CPU diagnostics and separate platform test, expanded with successful Linux CI and projection localization. No production changes.",
+  "files": {
+    ".gitattributes": {
+      "bytes": 9,
+      "sha256": "48747480eddba024928d03be9bf83dc579e5515768647507a767e8187a85c9ab"
+    },
+    "CPU_PREFIX_TESTS-before-linux-v2.md": {
+      "bytes": 4832,
+      "sha256": "85b0c12b3c779e49773a1b3bc2fb7ddfcbd20726e5e85632b2d0f9963169932d"
+    },
+    "README.md": {
+      "bytes": 2623,
+      "sha256": "444ac30fcbc328232d0cd8f7c104ee097dbfb3f1f25305eca437c3db9551650d"
+    },
+    "index-before-linux-v2.json": {
+      "bytes": 6804,
+      "sha256": "2cde62a06583bb1d2b82f4e7f11fef9101a85dbd8c22d703a4d5c940ce67fbee"
+    },
+    "linux-diagnostic-v1/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "linux-diagnostic-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "linux-diagnostic-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "linux-diagnostic-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "linux-diagnostic-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "linux-diagnostic-v1/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "linux-diagnostic-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "linux-diagnostic-v1/publication.json": {
+      "bytes": 204,
+      "sha256": "2e7e4f7212e40085afc4241b7e46b08f6c47119a1fe188a5233a21b3782f97c8"
+    },
+    "linux-diagnostic-v1/report.json": {
+      "bytes": 35944,
+      "sha256": "ded50d53be823a6f7825a38db3e4ef4b807ed517b6905c88acb6172ceec0de27"
+    },
+    "linux-diagnostic-v2/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "linux-diagnostic-v2/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "linux-diagnostic-v2/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "linux-diagnostic-v2/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "linux-diagnostic-v2/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "linux-diagnostic-v2/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "linux-diagnostic-v2/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "linux-diagnostic-v2/publication.json": {
+      "bytes": 1749,
+      "sha256": "f530f99316d3ce177ae11fe9e0e783d64879f530f36126068f4f66223c3893ac"
+    },
+    "linux-diagnostic-v2/report.json": {
+      "bytes": 35944,
+      "sha256": "57d896f5c1a62acdc72272a0ef93964cc8ebe6473222e80828b2ae45a5d0c6f9"
+    },
+    "linux-portable-v1/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "linux-portable-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "linux-portable-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "linux-portable-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "linux-portable-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "linux-portable-v1/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "linux-portable-v1/checked-source/test_codec_cpu_portable.py.txt": {
+      "bytes": 5566,
+      "sha256": "8873fcfbf3c299d74b969e680d2738525379c724ea7604d3147761000f246bc0"
+    },
+    "linux-portable-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "linux-portable-v1/publication.json": {
+      "bytes": 1910,
+      "sha256": "3fe3bb8304b8ba257755c988f4dcb92ae865d894601581276a7799ae705e2636"
+    },
+    "linux-portable-v1/report.json": {
+      "bytes": 5424,
+      "sha256": "3d1ab1e1021f7d256c45daa7207452b170bcf955783ff6e17a06e48de0931835"
+    },
+    "linux-projection-v2/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "linux-projection-v2/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "linux-projection-v2/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "linux-projection-v2/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "linux-projection-v2/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "linux-projection-v2/checked-source/codec_cpu_projection_diagnostic.py.txt": {
+      "bytes": 7537,
+      "sha256": "9dbb1bc328e9fb90b6a8783df3ecfa94c74d0f94f694c036b065ddaebe8a5d8d"
+    },
+    "linux-projection-v2/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "linux-projection-v2/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "linux-projection-v2/publication.json": {
+      "bytes": 1927,
+      "sha256": "b9b57ad281dbc43203573b4d785a68aee275ff4c9eb01374274ef47352d9b724"
+    },
+    "linux-projection-v2/report.json": {
+      "bytes": 54846,
+      "sha256": "8087013718c5e8b8f8e9c13318ff3a4f8bd882370eef0fc2d23f4f9dbd94ea23"
+    },
+    "linux-v2-artifact-audit.json": {
+      "bytes": 2818,
+      "sha256": "6418267b486faffad19484b7cfab9db0a9300c2d465ca1f73e3338d1959f5ae6"
+    },
+    "mac-diagnostic-v1/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "mac-diagnostic-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "mac-diagnostic-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "mac-diagnostic-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "mac-diagnostic-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "mac-diagnostic-v1/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "mac-diagnostic-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "mac-diagnostic-v1/publication.json": {
+      "bytes": 204,
+      "sha256": "71fda39aae1e825ad644aa935b2e17bd6f8f01315c32d07bb920c779f1f23c3f"
+    },
+    "mac-diagnostic-v1/report.json": {
+      "bytes": 16736,
+      "sha256": "f8bbca50fa1c676b8010dd420553cf62ed503e01e652c02b0897874b56a911eb"
+    },
+    "mac-portable-v1/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "mac-portable-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "mac-portable-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "mac-portable-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "mac-portable-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "mac-portable-v1/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "mac-portable-v1/checked-source/test_codec_cpu_portable.py.txt": {
+      "bytes": 5566,
+      "sha256": "8873fcfbf3c299d74b969e680d2738525379c724ea7604d3147761000f246bc0"
+    },
+    "mac-portable-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "mac-portable-v1/publication.json": {
+      "bytes": 204,
+      "sha256": "5762942471437570f76de0763b8532a7f35c031c96cdbed6290b4e56ea2955e7"
+    },
+    "mac-portable-v1/report.json": {
+      "bytes": 3379,
+      "sha256": "beee54dadbf5045b9bcb176e75e7ec2791f253243cb5c2a5fe98bc722f028783"
+    },
+    "mac-projection-v2/checked-source/action_data/operations.py.txt": {
+      "bytes": 2860,
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae"
+    },
+    "mac-projection-v2/checked-source/action_data/test_codec_path.py.txt": {
+      "bytes": 4823,
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+    },
+    "mac-projection-v2/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "mac-projection-v2/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "mac-projection-v2/checked-source/codec_cpu_diagnostic.py.txt": {
+      "bytes": 6667,
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b"
+    },
+    "mac-projection-v2/checked-source/codec_cpu_projection_diagnostic.py.txt": {
+      "bytes": 7537,
+      "sha256": "9dbb1bc328e9fb90b6a8783df3ecfa94c74d0f94f694c036b065ddaebe8a5d8d"
+    },
+    "mac-projection-v2/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "mac-projection-v2/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "mac-projection-v2/publication.json": {
+      "bytes": 204,
+      "sha256": "04c5ddfb4184eead5d6905cd8ab8bca3fedf1fb2f5e23de14aabeb2de1d7303f"
+    },
+    "mac-projection-v2/report.json": {
+      "bytes": 25854,
+      "sha256": "13633999ef59764b9c051834efb29a62e56f7cf6a4fca1d6ef62d30ae2f5b98e"
+    }
+  },
+  "file_count": 72,
+  "bytes": 645637,
+  "explanation_sha256": "1b85e73512ae6f077716f7d59e7df2b4761b2ef7ffdb33b113cd938b3cf6dd42"
+}

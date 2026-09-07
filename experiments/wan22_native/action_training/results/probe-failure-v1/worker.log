@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_training/train.py", line 197, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_training/train.py", line 144, in main
+    if args.worker:worker(json.loads(sys.stdin.read(131072)));return
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_training/train.py", line 106, in worker
+    record=guard.measure(f'paired_update_{index+1:04d}',lambda:paired_update(wrapper,windows,draws[row['noise_key']],row['k'],positive,optimizer,check=check))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/codec_profile.py", line 90, in measure
+    started=time.perf_counter();result=function()
+                                       ^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_training/train.py", line 106, in <lambda>
+    record=guard.measure(f'paired_update_{index+1:04d}',lambda:paired_update(wrapper,windows,draws[row['noise_key']],row['k'],positive,optimizer,check=check))
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_training/objective.py", line 144, in paired_update
+    prediction = wrapper(noisy.to(device), times.to(device), [context.to(device)],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/wan-adapter-env/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/wan-adapter-env/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_adapter/wrapper.py", line 171, in forward
+    return self.predict_from_features(features, commands, observation)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_adapter/wrapper.py", line 153, in predict_from_features
+    adapted = self.adapter(hidden, commands, observation, grid)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/wan-adapter-env/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/wan-adapter-env/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/outputs/open-worldline/experiments/wan22_native/action_adapter/model.py", line 89, in forward
+    observed = F.adaptive_avg_pool2d(observation[:, :, 0], (4, 8)).flatten(2).transpose(1, 2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/wan-adapter-env/lib/python3.11/site-packages/torch/nn/functional.py", line 1382, in adaptive_avg_pool2d
+    return torch._C._nn.adaptive_avg_pool2d(input, _output_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Adaptive pool MPS: input sizes must be divisible by output sizes. Non-divisible input sizes are not implemented on MPS device yet. For now, you can manually transfer tensor to cpu in this case. Please refer to [this issue](https://github.com/pytorch/pytorch/issues/96056)

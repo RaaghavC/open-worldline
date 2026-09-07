@@ -1,0 +1,69 @@
+"""Read-only audit of the retained zero-update MPS pooling failure."""
+from pathlib import Path
+import json,sys,hashlib
+import torch
+from safetensors import safe_open
+base=Path(__file__).resolve().parent.parent
+repo=base/'outputs/open-worldline';sys.path.insert(0,str(repo))
+from experiments.wan22_native.load_weights import sha256,tensor_sha256
+from experiments.wan22_native.action_training.objective import loaded_records,require_finite_tree,make_draws
+from experiments.wan22_native.action_training.train import verify_saved_draws
+run=base/'work/wan22-action-probe-v1';result=run/'result';out=base/'work/wan22-action-probe-failure-audit-v1.json'
+if out.exists():raise ValueError('No overwrite')
+read=lambda p:json.loads(p.read_text())
+terminal=read(run/'terminal.json');plan=read(run/'plan.json');report=read(result/'metrics.json')
+assert terminal['status']=='failed' and terminal['exit_code']==1 and plan['status']==report['status']=='failed'
+assert report['completed_updates']==0 and report['updates']==[] and report['base_unchanged']is None
+assert 'input sizes must be divisible by output sizes'in report['error']
+assert not (result/'core-after.json').exists() and 'final_checkpoint'not in report
+assert report['generated_images']==0 and report['quality_evaluation']is False
+sources=report['source_sha256'];assert sources==plan['source_sha256']
+for root in (run,result):
+    for name,digest in sources.items():assert sha256(root/'measured-source'/(name+'.txt'))==digest
+before=read(result/'core-before.json');loaded=read(result/'weight-load.json')
+assert len(before)==825 and before==loaded_records(loaded)
+rows,draws=verify_saved_draws(run,'probe',plan['schedule']);assert rows==report['schedule']
+assert sha256(run/'draws.safetensors')==plan['draw_file_sha256']==report['draw_file_sha256']
+assert sha256(run/'positive.safetensors')==plan['positive_file_sha256']
+with safe_open(run/'positive.safetensors',framework='pt',device='cpu')as handle:
+    assert set(handle.keys())=={'atrium'}
+    assert tensor_sha256(handle.get_tensor('atrium'))==report['input_evidence']['text']['positive_tensor_sha256']
+path=result/'checkpoint-0000';checkpoint=read(path/'manifest.json');last=read(result/'last-valid.json')
+assert checkpoint['completed_updates']==last['completed_updates']==0 and last['directory']=='checkpoint-0000'
+assert sha256(path/'manifest.json')==last['manifest_sha256']==report['last_checkpoint']['manifest_sha256']
+assert not (result/'checkpoint-0001').exists()
+for name,digest in checkpoint['files'].items():assert sha256(path/name)==digest
+values={};count=0
+with safe_open(path/'adapter.safetensors',framework='pt',device='cpu')as handle:
+    assert set(handle.keys())==set(checkpoint['tensors'])
+    for name in handle.keys():
+        tensor=handle.get_tensor(name);row=checkpoint['tensors'][name]
+        assert tensor.dtype==torch.float32 and bool(torch.isfinite(tensor).all())
+        assert list(tensor.shape)==row['shape'] and tensor_sha256(tensor)==row['sha256']
+        if name in ('output.weight','output.bias'):assert not torch.count_nonzero(tensor).item()
+        count+=tensor.numel();values[name]=row['sha256']
+assert count==947712 and len(values)==18
+recovery=torch.load(path/'optimizer-and-rng.pt',weights_only=True,map_location='cpu');require_finite_tree(recovery)
+assert recovery['completed_updates']==0 and recovery['optimizer']['state']=={}
+assert torch.equal(recovery['draw_rng_state'],torch.Generator().manual_seed(20260907).get_state())
+assert recovery['identity']==checkpoint['identity']
+admission=base/'work/wan22-action-probe-admission-v1/admission.json';decision=read(admission)
+assert sha256(admission)=='231be55b177eabcf5419c5ddc1898cc4a25ce6aa05c261f303437876020ea101'
+assert decision['scope']=='optimizer-feasibility-only' and decision['foundation_visual_status']=='failed'
+assert decision['source_sha256']==sources and report['admission_evidence']['visual_admission']['sha256']==sha256(admission)
+for row in decision['foundation_evidence']:assert sha256(admission.parent/row['file'])==row['sha256']
+memory=[json.loads(line)for line in (result/'memory.jsonl').read_text().splitlines()]
+peaks={name:max(row[name]for row in memory)for name in ('rss_bytes','mps_active_bytes','mps_driver_bytes')}
+assert peaks==report['peaks_sampled']
+audit=dict(schema='worldline-wan22-action-probe-failure-audit-v1',status='passed',run_outcome='failed',completed_updates=0,
+    reported_failure=report['error'],core_before_records_verified=825,core_after_verification_available=False,unchanged_core_claim=False,
+    source_snapshots_verified=2*len(sources),initial_adapter_parameters=count,initial_adapter_tensor_count=len(values),optimizer_state_count=0,
+    initial_checkpoint_manifest_sha256=sha256(path/'manifest.json'),draws_verified=True,positive_context_verified=True,
+    raw_admission_sha256=sha256(admission),foundation_visual_status='failed',admission_scope='optimizer-feasibility-only',
+    worker_elapsed_seconds=report['elapsed_seconds'],parent_elapsed_seconds=terminal['elapsed_seconds'],timings=report['timings'],
+    peaks_sampled=peaks,minimum_available_bytes=min(row['available_bytes']for row in memory),
+    run_files={str(p.relative_to(run)):dict(bytes=p.stat().st_size,sha256=sha256(p))for p in sorted(run.rglob('*'))if p.is_file()},
+    scope='Integrity audit of a failed first forward. No model inference, external weights, optimizer execution or image-quality evaluation in this audit.')
+out.write_text(json.dumps(audit,indent=2)+'\n')
+print(json.dumps({k:audit[k]for k in ('status','run_outcome','completed_updates','source_snapshots_verified','minimum_available_bytes')},indent=2))
+print('report_sha256',sha256(out))

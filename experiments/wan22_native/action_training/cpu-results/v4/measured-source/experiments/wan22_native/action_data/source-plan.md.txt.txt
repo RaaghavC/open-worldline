@@ -1,0 +1,192 @@
+# Native Wan2.2 TI2V-5B action-adapter feasibility
+
+Design review, September 7, 2026. No model forward, backward, weight download, training run, paid compute, or measured-source edit was performed. The review read the retained native pair, source/configuration, original adapter and tokenwise training code, official image-conditioning source, and five-paper supplement. It also compared the two original initial RGB images on CPU and calculated tensor sizes using integers.
+
+**Recommendation:** start with an original adapter **after block 29**, keeping all 30 transformer blocks frozen and outside the backward graph. Add a small, explicitly causal encoder of the supplied command history; the existing independent four-command embeddings are insufficient for this placement. First test the new code and one guarded update. A later comparison can add residuals after blocks 9 and 19, but those earlier residuals require backpropagation through the intervening frozen blocks. Neither configuration has been implemented or measured on native 5B. This is an adapter on an attributed external foundation, with no novelty, persistent visual-memory, or Genie 3 parity claim.
+
+## 1. What has actually been measured
+
+The retained `experiments/wan22_native/core-results/pair-v1/metrics.json` reports one positive/negative forward pair, followed by one official CPU UniPC step. It explicitly reports no full video and no quality measurement. Parameters use 10,136,722,176 bytes, or 9.44056 GiB: 68,573,376 FP32 parameters and 4,931,214,336 BF16 parameters. Width is 3,072, FFN width 14,336, depth 30, heads 24, and head width 128.
+
+At 17 frames and 512 by 288 pixels, the native latent is `[48,5,18,32]`; patch size `(1,2,2)` gives `[5,9,16]`, or 720 tokens. The first 144 tokens are the observed image. Sampled peaks were 9.71221 GiB active MPS allocation and 10.11845 GiB driver allocation. Loading took 96.11 seconds; positive and negative calls took 5.7653 and 3.2629 seconds. These are inference measurements and do not establish training memory or throughput.
+
+The reported MPS recommended maximum is 19,069,665,280 bytes, or 17.76001 GiB. The parent guard remains 18 GiB, at least 2 GiB available system memory, and the declared time cap. The physical 24 GB is shared with the OS and other apps. Do not count process RSS plus MPS counters as disjoint memory, or use a low RSS to infer abundant free unified memory.
+
+The exact official image contract must stay intact: encode the initial image alone, clamp its clean latent before both guidance calls, use token time zero for its 144 tokens and solver time for future tokens, and clamp again after each solver update. Preserve native 50-step UniPC, shift 5, guidance 5, explicit selective-BF16 arithmetic, FP32 modulation/head/norm operations, real RoPE, and CPU time/solver calculations. [Pinned official image path](https://github.com/Wan-Video/Wan2.2/blob/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/textimage2video.py#L512).
+
+The existing genuine FP32 UMT5 contexts may be reused. `text-reuse.json` verifies the exact Wan2.2 negative string, encoder and tokenizer identity. Both Atrium branches use the same positive description and negative context. No arm, door-state label, pose, future frame or object ID belongs in either prompt.
+
+## 2. Exact proposed interface and tensors
+
+Implement new adapter/wrapper files; do not change `portable.py`, the pinned vendor source, existing adapter checkpoints, or old measured snapshots. Use explicit calls in a new wrapper's block loop, rather than mutable global methods or conditioning hooks that survive an exception.
+
+```text
+forward(latents, token_times, contexts, seq_len,
+        commands=..., observed_latent=...)
+
+latents:         list of B FP32[48,5,18,32], noisy future plus clean prefix
+token_times:     int64[B,720], initial144=0, future=current integer time
+contexts:        B genuine unpadded FP32[Ltext,4096], 1<=Ltext<=512
+commands:        FP32[B,16,6], actual ordered commands only
+observed_latent: FP32[B,48,1,18,32], encoded from initial RGB alone
+block features:  FP32[B,720,3072]
+output:          B FP32[48,5,18,32] predicted velocities
+```
+
+The wrapper must reproduce the existing patch, padding, text projection, block, head and unpatch ordering. The unmodified core forward is the zero-adapter reference. The initial implementation should reject other resolutions, sequence lengths and latent-channel counts. Generalization of shapes can follow separate tests.
+
+Keep the six existing command channels and units: requested local right/up/forward displacement in meters, yaw-left and pitch-up radians, and a one-transition interaction pulse. Current data exercises only yaw and interaction; the other four channels are always zero. `commands[t]` maps `RGB[t]` to `RGB[t+1]`, read from `records[t+1].action_from_previous`. Preserve all four commands in each latent interval as a 24-value concatenation. Do not derive commands from teacher pose or current door angle.
+
+### A necessary change from the old adapter
+
+The existing `ActionObservationResidual` embeds each four-command group independently. With a residual after the final block, the interaction in group 1 cannot directly affect groups 2 through 4 through that mapping. The frozen prefix never received the action, and there is no later transformer attention to propagate it within the current denoiser call. Earlier adapter placement can spread action information through later attention, but at a larger backward cost. Diffusion feedback can also move information between positions on later calls; relying on it does not supply a controlled history encoder.
+
+Use a shared command encoder: `Linear(24,128) -> SiLU -> Linear(128,128)`, followed by `GRUCell(128,128)` over the four ordered groups, initial state zero. The latent group j receives the GRU state after groups 1 through j. Prepend an exact zero initial state for latent group 0; do not invent a preceding command or advance the GRU on that reserved group. This retains command order and gives each future group the earlier interaction pulse. It is **memory of requested commands**, not evidence that an interaction succeeded, not a door-state register, and not persistent visual memory across clips. Reset it for every independently conditioned clip.
+
+Project 32 pooled observation tokens from the independently encoded initial frame: adaptive spatial pooling of `[B,48,18,32]` to 4 by 8, then `Linear(48,128)`. Share this projection and the command encoder between insertion sites. At each site, compute a width-128 query from the block feature and keys/values from those observation tokens:
+
+```text
+c_j = causal command-prefix GRU state for latent group j
+q   = Linear(3072,128)(x)
+o   = shared Linear(48,128)(pooled initial observation)
+r   = SDPA(q, Linear(128,128)(o), Linear(128,128)(o))
+delta = Linear(128,3072)(SiLU(c_j + r))
+x_out = x + valid_future_token_mask * delta
+```
+
+All new weights and adapter arithmetic are FP32. Broadcast each `c_j` across its 144 spatial tokens in the same F,H,W ordering as patchification. Zero the output projection's weights and bias at every site. Mask the initial 144 tokens and any padding before addition. The original FP32 residual stream is retained; later frozen linears already perform explicit BF16 input casts. No MPS autocast is introduced. This spatially pooled observation attention does not implement pose projection, a 3D cache, or scene reconstruction.
+
+**Exact trainable counts, including biases:**
+
+| Component | Parameters |
+| --- | ---: |
+| Shared action MLP, 24 to 128 to 128 | 19,712 |
+| Shared GRUCell, input/hidden 128, both bias vectors | 99,072 |
+| Shared observation projection, 48 to 128 | 6,272 |
+| Per-site query, 3,072 to 128 | 393,344 |
+| Per-site key and value, each 128 to 128 | 33,024 |
+| Per-site output, 128 to 3,072 | 396,288 |
+| Shared subtotal | 125,056 |
+| Each insertion site | 822,656 |
+| After block 29 only | **947,712** |
+| After blocks 9, 19 and 29 | **2,593,024** |
+
+FP32 parameters, gradients and two FP32 Adam moments occupy 15,163,392 bytes (14.461 MiB) for one site, or 41,488,384 bytes (39.566 MiB) for three sites. These arithmetic totals exclude allocator overhead, optimizer temporary buffers and saved activations. The old `adapter.py` also hardcodes 16 observation channels inside `forward`, even though its constructor accepts `observation_channels`; merely changing the constructor argument cannot make it a valid 48-channel adapter.
+
+## 3. Backward memory, including frozen intervening blocks
+
+`requires_grad=False` prevents parameter gradients; it does not remove the need to differentiate a layer with respect to an input produced by a trainable adapter. For `x10 = frozen_block10(adapter9(x9))`, the gradient into adapter9 needs the Jacobian of block10 and every later block. `eval()` does not disable that graph. Applying `no_grad()` or detaching at the next frozen block silently removes the earlier adapter's learning signal.
+
+Only computations **before the first trainable insertion**, and other computations independent of every trainable parameter, can safely run without autograd. For the post-29 option this includes all transformer blocks. The small frozen output head still needs input gradients because the adapter precedes it. Use ordinary non-gradient tensors or deserialize cached tensors outside inference mode; inference tensors cannot automatically be saved for later backward. The model loader must not execute inside a process-wide inference-mode context intended for sampling.
+
+For the three-site option, blocks 0 through 9 run without a gradient graph, then adapter9 and frozen blocks 10 through 29 remain differentiable. Adapter19 and adapter29 also contribute. Use non-reentrant checkpointing on each of those 20 frozen blocks, preserving the full gradient path and recomputing their internal activations during backward. Conditions must remain identical during recomputation. [PyTorch 2.5 checkpoint contract](https://docs.pytorch.org/docs/2.5/checkpoint.html). Earlier Worldline CPU checks establish this technique for the old 1.3B path; they do not certify the new native BF16 path.
+
+### Activation arithmetic at B=1, 720 tokens
+
+| Tensor or storage scenario | MiB |
+| --- | ---: |
+| One FP32 hidden tensor `[720,3072]`, or head time embedding | 8.4375 |
+| One BF16 hidden tensor | 4.21875 |
+| Shared FP32 time modulation `[720,6,3072]` | 50.625 |
+| BF16 self-attention Q, K and V together | 12.65625 |
+| BF16 text keys and values together, 512 tokens | 6.0 |
+| One FFN intermediate `[720,14336]`, BF16 / FP32 | 19.6875 / 39.375 |
+| One self-attention matrix `[24,720,720]`, if materialized in FP32 | 47.46094 |
+| One text-attention matrix `[24,720,512]`, if materialized in FP32 | 33.75 |
+| Twenty saved FP32 checkpoint boundary states | 168.75 |
+| One width-128 adapter feature / its 720-by-32 attention score | 0.35156 / 0.08789 |
+| Complete FP32 native latent / initial observed latent | 0.52734 / 0.10547 |
+
+This is a tensor inventory, not an additive measurement of simultaneous allocation. Some values share storage; some are recomputed; attention backends may avoid a complete score matrix. Conversely normalization, FP32/BF16 casts, modulation factors, GELU inputs, autograd metadata and backward workspaces add storage. Do not claim FlashAttention's CUDA memory behavior for the current MPS SDPA path. Each block's modulation arithmetic can create another 50.625 MiB tensor even though the original time tensor is shared.
+
+For planning only, allow roughly 0.2 to 0.4 GiB of internal tensors per differentiable block when not checkpointed. Twenty such blocks add roughly 4 to 8 GiB to an inference process that already reached 10.12 GiB. This puts an uncheckpointed three-site run near or above the 18-GiB guard before unmeasured backward workspaces. The range is a sizing allowance inferred from the tensor inventory, not a measured upper bound or proof that every uncheckpointed run exceeds physical 24 GB.
+
+A checkpointed three-site B=1 run retains about 0.165 GiB of explicit block boundaries, a shared 0.049 GiB time tensor, adapter graphs, and one recomputed block's internals at a time. An **11 to 13 GiB planning range** for total driver allocation is plausible from the measured inference peak plus those terms; it is not a fit guarantee. Last-site live training has no transformer backward and a much smaller graph; roughly **10.2 to 10.5 GiB** is a preliminary planning range. Only the source-bound, guarded actual update can establish either peak. Sample driver/active allocation and available system memory through both forward and backward; retain stops.
+
+Hard constraints are clearer than those estimates:
+
+- The full FP32 5B parameters alone occupy **18.62566 GiB**, already above the unchanged 18-GiB guard. Returning to full FP32 core storage is not an allowed fit strategy.
+- Full FP32 Adam training needs **74.50264 GiB** for parameters, gradients and two moments before activations. Even four copies at the current mixed storage require **37.76223 GiB**. Full-core fine-tuning cannot fit this 24-GB machine under these designs.
+- Loading the 11-GB UMT5 encoder or retaining the FP32 704,688,668-parameter VAE alongside the core consumes memory the adapter does not need. Encode and decode in separate guarded processes. Moving a large model from MPS to CPU while retaining it does not free unified memory.
+- Keep B=1 execution. A paired optimizer update can accumulate two half-weighted branch losses sequentially, freeing the first branch graph before the second. Recompute the shared adapter's conditioning graph for the second branch; do not keep both or backpropagate through an already-freed shared graph.
+- Longer clips and more spatial tokens require new estimates. Native global attention grows quadratically with token count. A 720-token update does not establish full native-resolution or long-horizon training.
+
+### A lower-memory exact option for the last site
+
+For a fixed saved schedule of noisy inputs and times, compute final frozen block features `x30` and head time embeddings `e` once under `no_grad`, save their exact FP32 values, and close the core process. Train only the adapter plus the unchanged frozen head on those features. Two full `[720,3072]` tensors cost 16.875 MiB per example; 32 branch examples require 540 MiB, plus small observations, target velocities and metadata. Do not silently quantize the cache. Save source, precision, noisy-input, time, prompt and feature hashes.
+
+This is mathematically the same post-29 objective for those exact examples because the whole feature extractor precedes every trainable parameter. It does not cache adapted denoiser features during sampling: every sampling step still requires the current full native core. A CPU fixture must compare live and cached losses and all adapter gradients before using it. It also must compare the frozen head against its original parameter values. The cache cannot be reused after a new time/noise/example draw without new extraction.
+
+A multi-site adapter can similarly cache only the prefix **before adapter9**. The tail still needs 20 blocks' input gradients. Detaching at adapter19 would be a different, truncated learning rule. A partial-tail loader could save prefix parameter memory, but that is additional unmeasured implementation work and is not necessary for the first pilot.
+
+## 4. Fixed minimal paired-action pilot
+
+This is a proposed development protocol, not authorization to start a run. Required preliminary gates are current CPU/independent checks, verified new 48-channel target caches, one bounded finite update, and a complete native conditioned clip plus decoder that pass the existing guards and are visually inspected. A successful one-pair forward cannot replace those gates.
+
+**Data:** retain the existing eight windows: starts 0, 8, 32 and 49, both branches, 17 RGB frames and 16 actual commands each. Encode every target with the new native 48-channel VAE in a separate process, resetting its temporal cache for each window. Independently encode every initial image and verify the native causal-prefix behavior. Old `[16,5,36,64]` caches are incompatible. No verified native 48-channel eight-window target cache was found during this review.
+
+The original scene is one layout, with one fixed camera position, yaw turns, and a programmed remote door toggle. Seed variation does not produce independent architectural layouts. Translation, reachability, contact, collision and failed interactions are not covered. Offscreen indirect lighting reveals state. All windows remain development examples, including any untrained windows; none is a held-out scene or a strict invisible-memory challenge.
+
+**Important initial-image correction:** the start-0 RGB images are not identical. A CPU comparison found 18 different channel values, each differing by 1 uint8 level, over `[288,512,3]`. Their MAE on `[0,1]` is `1.595690359477124e-7`. Use the existing hash-pinned `open/0000.png` as the shared canonical initial observation for **both** start-0 command branches, in both training and sampling. State this explicitly in the new cache manifest and preserve both raw captures. The original physical starting geometry/pose/door state match; this conditioning choice removes the tiny renderer variation as an input shortcut. Do not claim that the original files matched.
+
+The canonical PNG SHA-256 is `7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780`. Its RGB-array SHA-256 is `6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705`; the closed original RGB hash is `73532812b5360ce615c527d5f242d88aaf91fd943717aa45bd3ca8f8a93d3dad`. Copernicus independently confirmed the discrepancy and alignment. At starts 8, 32 and 49, outgoing commands are identical between branches but initial RGB differs, so those windows cannot establish an action-intervention effect.
+
+**For exact training-prefix alignment, canonicalize the derived start-0 target clips too:** construct each 17-frame training RGB tensor as the shared `open/0000.png` RGB followed by that branch's unchanged frames 1 through 16, then encode it with a freshly reset causal VAE. Encode the shared initial RGB alone for observation conditioning. Record both raw source lists, the replaced closed initial RGB hash, the canonical RGB hash and complete derived RGB/latent hashes. Require the first target latent from each derived clip to equal the independently encoded observation under the declared native codec check. This changes only a derived training tensor, not any raw PNG, EXR, source manifest or measured archive. Canonicalizing only the conditioning latent would establish a same-input inference comparison, but would leave the closed target's causal encoding conditioned on a slightly different first RGB, so it would not satisfy this stronger exact training-prefix contract. The new encoding may therefore change later closed target latents too; do not patch only an old target's first latent or reuse the incompatible 16-channel cache. For starts 8, 32 and 49, preserve each branch's actual distinct initial RGB in both observation and target encoding.
+
+**Training:** fresh seed 20260907; select the post-29 variant first. Sixteen paired optimizer updates, with start schedule `(0,8,32,49)` repeated four times. Each update has two sequential B=1 branches, closed then open, each contributing half its mean future-latent flow MSE before one AdamW step. Thus there are 32 branch examples, not 32 independent scenes. Use exactly the same saved Gaussian noise and integer k for both branches in each update; use separately saved new draws for successive updates. Initialize the command encoder once and reset its hidden state per branch.
+
+Retain the existing simple objective: k uniformly sampled from integers 50 through 950, sigma=k/1000; future input `(1-sigma)*target + sigma*noise`; target velocity `noise-target`; clean independent observed prefix; zero prefix time; mean MSE over future latent positions only. Clean future latents are allowed only to construct the supervised corruption and loss. They never enter the adapter's observation or command encoder. There is no door-weighted loss, teacher geometry, action-effect auxiliary loss, CFG during training, or sampled-video loss in this first experiment.
+
+AdamW settings remain learning rate 1e-4, betas `(0.9,0.999)`, epsilon 1e-8, weight decay 0.01, clip norm 1. All adapter state is FP32. The fixed final update 16 is the sole checkpoint for inspection; no validation selection, retry with a favorable seed, automatic resume, or longer budget after viewing results. Preserve initial/final adapter weights, last valid optimizer/RNG checkpoint, exact example/noise/time schedule, loss records, source/base/data hashes, timings and every failure. A stopped run does not count as a completed pilot. Choose any eventual time cap from the preliminary profile, before looking at image quality; retain 18 GiB and 2 GiB available-memory limits.
+
+For a later placement comparison, use exactly the same 16 paired updates, noise/time files, loss, and optimizer. The shared encoder and block-29 residual start from the exact same parameter bytes; extra block-9 and block-19 residuals receive separately recorded initialization and zero output projections. Compare completed updates and branch schedules, not nominal caps. The three-site configuration has more parameters and compute, so report both; this is not a matched-parameter comparison.
+
+**Generated comparison:** after the native base and full decoder pass, retain one unadapted clip and two post-training clips for start 0: canonical observation, saved Gaussian noise, positive text and native negative text all identical; only the first actual command changes between wait and interact. The remaining 15 commands match. For the unadapted base, which has no command input, one generated clip can be displayed against both branches and explicitly labelled as the same baseline file. Do not claim two separately executed baseline runs. Keep all 17 images, all 16 generated future frames, velocities/latents and all prefix checks. If both placements are later trained, add both command clips from the second variant rather than selecting a preferred variant after inspection.
+
+The original pair's clean targets may differ in a denoising diagnostic because they enter supervised corruption. Therefore equal training noise alone does not make an observed prediction difference proof of action control. Only the generated comparison above holds the inference observation and noise fixed while changing the command.
+
+Report complete-frame errors and per-frame paired-effect errors after generation. A simple declared effect mask is `max_channel(abs(open_truth-closed_truth)) >= 8/255` on future RGB frames; its threshold removes the one-level initial variation. It may include indirect lighting and is not a door segmentation. Compute each prediction's masked MAE to its own and other branch's truth; ties fail the paired-choice diagnostic, empty masks are unavailable. Keep frame counts and every per-frame value. Do not turn one scene, one command contrast, one noise realization or lower training loss into a generalization claim or confidence interval. Exact action-dependent output change is a mechanics result; correct geometry, camera motion and interaction must still be inspected.
+
+## 5. Minimum CPU and runtime correctness checks
+
+1. **Zero output initialization:** complete tiny native forwards, both precision policies, nonzero frozen head, exact equality to the unmodified base for either action sequence. Verify the 144 observed token positions and padding are untouched by the adapter residual.
+2. **Input and ordering:** reject old 16-channel latents, extra/missing actions, nonfinite inputs, wrong time/shape/device, wrong cached context/source hashes, and hidden target keys before materializing tensor values. Verify every four-command group and patch token order with distinguishable values.
+3. **Command-prefix causality:** changing group 4 cannot alter encoder outputs for groups 1 through 3. Reordering two commands with the same sum is preserved at the encoder input; do not assert a randomly initialized model must separate every possible sequence.
+4. **Future-target isolation:** inference materializes only canonical observation, real contexts, commands and saved noise. Replacing future targets, camera transforms, depth, object IDs or door labels leaves generated inputs and outputs unchanged in the CPU fixture.
+5. **Gradient path:** compare direct and checkpointed loss plus every adapter gradient with nonzero output projections. After the first update, require nonzero aggregate gradients into the GRU and earliest insertion as well as the final projection. Zero initial projection permits zero upstream gradients at update 1; it must not be misreported as a failure. Frozen parameters have no gradients and retain exact hashes.
+6. **Sequential paired accumulation:** compare two half-loss backward calls against a tiny batch-pair reference; verify only one optimizer update and no caller-state reuse. Test fresh per-session command states, cleanup on exceptions and last-valid recovery after failure.
+7. **Feature-cache equivalence:** for the last-site option, compare live and cached loss and every trainable gradient at identical features/time/targets, including nonzero conditioning. Changing any bound source/input invalidates the cache.
+8. **Actual-update gate:** one guarded update with native shapes, both branches sequentially, followed by a second bounded update only if needed to exercise nonzero upstream gradients. Record synchronized forward/backward/optimizer times separately and peak memory. No full study follows automatically from passing a tiny CPU fixture.
+
+The complete native model is bidirectional across clip tokens. A causal command encoder does **not** make the sampled video causal or streaming: action information can reach earlier positions through global attention on later denoising calls. This first pilot is conditioned on all 16 supplied commands. A strict test that future commands cannot change earlier generated frames would require a different backbone/training contract; failure of that stronger property must not be hidden behind the encoder test.
+
+## 6. Relation to the five-paper supplement
+
+| Prior method | Relevant mechanism | Consequence for this proposed pilot |
+| --- | --- | --- |
+| [FloWM](https://arxiv.org/abs/2601.01075) | Visually written spatial memory transformed by observer/object motion | A command GRU and 32 initial-image tokens are not FloWM or visually grounded persistent memory. Later work needs observation-driven write/retrieve tests and failed-interaction data. |
+| [Latent Spatial Memory / Mirage](https://arxiv.org/abs/2606.09828) | Native latent cache, depth/pose projection; released code uses this Wan2.2 5B family with VACE and LoRA | It supplies close prior art for a later memory adapter. Current RGB/actions-only inference has no permitted teacher geometry, and this pilot has no persistent spatial cache. |
+| [Olaf-World](https://arxiv.org/abs/2602.10104) | Action-effect alignment across scenes with a frozen visual target | The one-layout, one-toggle data cannot identify cross-scene action coordinates. Do not add its auxiliary loss to this first placement test or call the command mapper novel. |
+| [WorldKV](https://arxiv.org/abs/2605.22718) | Retain and retrieve causal attention K/V chunks | Current native Wan is a bidirectional clip model without that persistent causal cache. K/V retrieval is not an immediate low-cost addition to this wrapper. |
+| [ABot-World-0 / LongForcing](https://arxiv.org/abs/2607.19191) | Long student self-rollouts with an extended-horizon DMD teacher | Supervised cached-feature training does not reproduce this method and does not remove generated-history error. A later rollout-training experiment needs a compatible teacher/causal setup and its own memory budget. |
+
+Paper dates, author claims, code/weight/license limits and pinned source records are already retained in `docs/research-memory-action-2026-09-07.md`. This review does not re-audit or reproduce their results. Our original implementation would remain Apache-2.0 with explicit external Wan Apache attribution; original Atrium captures remain CC0. No external foundation weights would be relabelled or bundled as original adapter weights.
+
+## Source identity
+
+The exact read source hashes are below. They distinguish this design from later implementation changes; the old measurements remain unchanged.
+
+| Source | SHA-256 |
+| --- | --- |
+| native `portable.py` | `1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e` |
+| native `load_weights.py` | `15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9` |
+| native pair-v1 metrics | `aef64c777014d295a4e5d2498081b145083bdf9aca463810b6c0c9f422165887` |
+| native official `vendor/model.py` | `8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432` |
+| native config | `d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc` |
+| original `wan_adapter/adapter.py` | `c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8` |
+| original tokenwise `training.py` | `da8b2b516b35f538986d9797e297a9912e672120947d3a886b2331785f80488f` |
+| retained official Wan2.2 image path | `228f2fabf23014ed41ec6b8cd713d5be7371bb558501c71a62a0258b491a877b` |
+| five-paper supplement | `30f58d682922a47f87962bdb4feba46de080eab7cf0e0145f187911cbdfc26e7` |
+| original dense Atrium manifest | `942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0` |
+
+The primary PyTorch 2.5 checkpoint page was read during this review. Two attempts to open the 2.5 autograd-notes URL failed in the browser, so no unverified quotation from that page is used. Parameter/tensor arithmetic and the initial RGB comparison are local calculations, not model experiments. The next action remains a decision by the parent task after the native codec and complete-clip gates; this note launches nothing.

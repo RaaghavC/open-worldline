@@ -1,0 +1,161 @@
+{
+  "scope": "Exact retained CPU diagnostics and separate platform test; no production changes",
+  "files": {
+    ".gitattributes": {
+      "sha256": "48747480eddba024928d03be9bf83dc579e5515768647507a767e8187a85c9ab",
+      "bytes": 9
+    },
+    "linux-diagnostic-v1/checked-source/action_data/operations.py.txt": {
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+      "bytes": 2860
+    },
+    "linux-diagnostic-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+      "bytes": 4823
+    },
+    "linux-diagnostic-v1/checked-source/codec-source.json.txt": {
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "bytes": 1956
+    },
+    "linux-diagnostic-v1/checked-source/codec.py.txt": {
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+      "bytes": 8428
+    },
+    "linux-diagnostic-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+      "bytes": 6667
+    },
+    "linux-diagnostic-v1/checked-source/codec_memory.py.txt": {
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+      "bytes": 3108
+    },
+    "linux-diagnostic-v1/checked-source/vendor/vae2_2.py.txt": {
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846
+    },
+    "linux-diagnostic-v1/publication.json": {
+      "sha256": "2e7e4f7212e40085afc4241b7e46b08f6c47119a1fe188a5233a21b3782f97c8",
+      "bytes": 204
+    },
+    "linux-diagnostic-v1/report.json": {
+      "sha256": "ded50d53be823a6f7825a38db3e4ef4b807ed517b6905c88acb6172ceec0de27",
+      "bytes": 35944
+    },
+    "mac-diagnostic-v1/checked-source/action_data/operations.py.txt": {
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+      "bytes": 2860
+    },
+    "mac-diagnostic-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+      "bytes": 4823
+    },
+    "mac-diagnostic-v1/checked-source/codec-source.json.txt": {
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "bytes": 1956
+    },
+    "mac-diagnostic-v1/checked-source/codec.py.txt": {
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+      "bytes": 8428
+    },
+    "mac-diagnostic-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+      "bytes": 6667
+    },
+    "mac-diagnostic-v1/checked-source/codec_memory.py.txt": {
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+      "bytes": 3108
+    },
+    "mac-diagnostic-v1/checked-source/vendor/vae2_2.py.txt": {
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846
+    },
+    "mac-diagnostic-v1/publication.json": {
+      "sha256": "71fda39aae1e825ad644aa935b2e17bd6f8f01315c32d07bb920c779f1f23c3f",
+      "bytes": 204
+    },
+    "mac-diagnostic-v1/report.json": {
+      "sha256": "f8bbca50fa1c676b8010dd420553cf62ed503e01e652c02b0897874b56a911eb",
+      "bytes": 16736
+    },
+    "mac-portable-v1/checked-source/action_data/operations.py.txt": {
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+      "bytes": 2860
+    },
+    "mac-portable-v1/checked-source/action_data/test_codec_path.py.txt": {
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+      "bytes": 4823
+    },
+    "mac-portable-v1/checked-source/codec-source.json.txt": {
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "bytes": 1956
+    },
+    "mac-portable-v1/checked-source/codec.py.txt": {
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+      "bytes": 8428
+    },
+    "mac-portable-v1/checked-source/codec_cpu_diagnostic.py.txt": {
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+      "bytes": 6667
+    },
+    "mac-portable-v1/checked-source/codec_memory.py.txt": {
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+      "bytes": 3108
+    },
+    "mac-portable-v1/checked-source/test_codec_cpu_portable.py.txt": {
+      "sha256": "8873fcfbf3c299d74b969e680d2738525379c724ea7604d3147761000f246bc0",
+      "bytes": 5566
+    },
+    "mac-portable-v1/checked-source/vendor/vae2_2.py.txt": {
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846
+    },
+    "mac-portable-v1/publication.json": {
+      "sha256": "5762942471437570f76de0763b8532a7f35c031c96cdbed6290b4e56ea2955e7",
+      "bytes": 204
+    },
+    "mac-portable-v1/report.json": {
+      "sha256": "beee54dadbf5045b9bcb176e75e7ec2791f253243cb5c2a5fe98bc722f028783",
+      "bytes": 3379
+    },
+    "mac-projection-v2/checked-source/action_data/operations.py.txt": {
+      "sha256": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+      "bytes": 2860
+    },
+    "mac-projection-v2/checked-source/action_data/test_codec_path.py.txt": {
+      "sha256": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+      "bytes": 4823
+    },
+    "mac-projection-v2/checked-source/codec-source.json.txt": {
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "bytes": 1956
+    },
+    "mac-projection-v2/checked-source/codec.py.txt": {
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+      "bytes": 8428
+    },
+    "mac-projection-v2/checked-source/codec_cpu_diagnostic.py.txt": {
+      "sha256": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+      "bytes": 6667
+    },
+    "mac-projection-v2/checked-source/codec_cpu_projection_diagnostic.py.txt": {
+      "sha256": "9dbb1bc328e9fb90b6a8783df3ecfa94c74d0f94f694c036b065ddaebe8a5d8d",
+      "bytes": 7537
+    },
+    "mac-projection-v2/checked-source/codec_memory.py.txt": {
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+      "bytes": 3108
+    },
+    "mac-projection-v2/checked-source/vendor/vae2_2.py.txt": {
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846
+    },
+    "mac-projection-v2/publication.json": {
+      "sha256": "04c5ddfb4184eead5d6905cd8ab8bca3fedf1fb2f5e23de14aabeb2de1d7303f",
+      "bytes": 204
+    },
+    "mac-projection-v2/report.json": {
+      "sha256": "13633999ef59764b9c051834efb29a62e56f7cf6a4fca1d6ef62d30ae2f5b98e",
+      "bytes": 25854
+    }
+  }
+}

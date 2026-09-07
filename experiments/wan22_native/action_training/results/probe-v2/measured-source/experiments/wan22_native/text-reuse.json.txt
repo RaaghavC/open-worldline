@@ -1,0 +1,50 @@
+{
+  "schema": "worldline-wan22-text-reuse-v1",
+  "status": "verified",
+  "negative_prompt_source": {
+    "url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/configs/shared_config.py",
+    "file": "vendor/shared_config.py.txt",
+    "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+  },
+  "negative_utf8_bytes": 403,
+  "negative_sha256": "ce96e0324e4b54ce4b6e867f669ca520952e1a34cc116543516b1897f0d3c47e",
+  "exact_negative_match": true,
+  "positive_text": "A sunlit interior with warm plaster walls, a wooden door, limestone flooring, brass details, and green plants.",
+  "positive_sha256": "28b2a417e8444313da5b0408204bce155c5b6230a825cba357744f3e748d26da",
+  "tokenizer_files": [
+    {
+      "file": "google/umt5-xxl/special_tokens_map.json",
+      "bytes": 6623,
+      "sha256": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "pinned_wan22_match": true,
+      "method": "Git blob SHA1 plus retained cache SHA256"
+    },
+    {
+      "file": "google/umt5-xxl/spiece.model",
+      "bytes": 4548313,
+      "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "pinned_wan22_match": true,
+      "method": "LFS SHA256"
+    },
+    {
+      "file": "google/umt5-xxl/tokenizer.json",
+      "bytes": 16837417,
+      "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "pinned_wan22_match": true,
+      "method": "LFS SHA256"
+    },
+    {
+      "file": "google/umt5-xxl/tokenizer_config.json",
+      "bytes": 61728,
+      "sha256": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "pinned_wan22_match": true,
+      "method": "Git blob SHA1 plus retained cache SHA256"
+    }
+  ],
+  "text_encoder_sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+  "text_cache_manifest_sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+  "text_embeddings_sha256": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+  "cache_compute_mode": "stream-mps-fp32",
+  "cache_context_limit": 512,
+  "limit": "Same pinned encoder and tokenizer bytes and exact prompt text; existing cached outputs were computed in FP32, not claimed bitwise equal to an official BF16 encoder run."
+}

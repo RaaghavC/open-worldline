@@ -1,0 +1,14 @@
+{
+  "schema": "worldline-action-training-cpu-publication-v1",
+  "source_report_sha256": "fbad1c64a317d93a5a61ec4069b19216b4a2f7fb399bce137a3d9f904a3ff2e0",
+  "files_sha256": {
+    "measured-source/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+    "measured-source/objective.py": "b3d4c713058fab64bfc8c557187fe44684e492f305f5539ff4d930fe9e9fe558",
+    "measured-source/runtime.py": "89bdd494c40410b3dca7b36dea566b0ce0ed59c7015e4e9be073ab5daceee288",
+    "measured-source/test_cpu.py": "fcfeb534d98fedd2c6ecacbe9a1fa42bb96886c20b2c8adedefb5d1518e0296b",
+    "measured-source/train.py": "104e031c4c1e2e79d0c912c06dee73ec618961816fc5bc97f4c7bd1f50a53bfa",
+    "tests.json": "fbad1c64a317d93a5a61ec4069b19216b4a2f7fb399bce137a3d9f904a3ff2e0"
+  },
+  "raw_test_report_changed": false,
+  "snapshot_note": "v1 retains the five local sources; v2/v3/v4 retain all 41 source hashes. Missing v1 foreign snapshots are not reconstructed under guessed bytes."
+}

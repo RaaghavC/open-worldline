@@ -1,0 +1,17 @@
+# Exact small original initialization, recovery, noise and genuine prompt cache.
+# No external foundation checkpoint is permitted by these exceptions.
+!results/probe-failure-v1/draws.safetensors
+!results/probe-failure-v1/positive.safetensors
+!results/probe-failure-v1/result/checkpoint-0000/adapter.safetensors
+!results/probe-failure-v1/result/checkpoint-0000/optimizer-and-rng.pt
+!results/probe-failure-v1/worker.log
+# Exact completed two-update original-adapter probe and recovery.
+!results/probe-v2/draws.safetensors
+!results/probe-v2/positive.safetensors
+!results/probe-v2/result/checkpoint-0000/adapter.safetensors
+!results/probe-v2/result/checkpoint-0000/optimizer-and-rng.pt
+!results/probe-v2/result/checkpoint-0001/adapter.safetensors
+!results/probe-v2/result/checkpoint-0001/optimizer-and-rng.pt
+!results/probe-v2/result/checkpoint-0002/adapter.safetensors
+!results/probe-v2/result/checkpoint-0002/optimizer-and-rng.pt
+!results/probe-v2/worker.log

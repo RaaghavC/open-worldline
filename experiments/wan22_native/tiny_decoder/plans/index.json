@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "reconstruction",
+    "status": "planned",
+    "model_execution": false,
+    "source_run_name": "wan22-tiny-reconstruction-plan-v1",
+    "copied_files": {
+      "metrics.json": "52468f061adfbaf14c525b4a07b87bfea4e3ffa65065d657a0abf089bd15d372",
+      "input.safetensors": "36fef1ae418a53b238a5ada56c42fa31a1b286cac7fc65f16c7526232427165e"
+    },
+    "source_metrics_sha256": "854fe0e1691bab5eafd9e0f99678b449485539c3834bce69feaca59d3494e6e5",
+    "latent_tensor_sha256": "6e70c32f3557b1cdb4c411dc9646c644a6731803812f7273d7050a64b6a3d557"
+  },
+  {
+    "kind": "shift5",
+    "status": "planned",
+    "model_execution": false,
+    "source_run_name": "wan22-tiny-shift5-plan-v1",
+    "copied_files": {
+      "metrics.json": "9d7d267b46b45c09569c58d0b59947c7d3b2a04a77f5390ebc161f3497e28c6f",
+      "input.safetensors": "3097dd63bdce426735ebb1b58f4395efaee1dc58e984a343c81bffca6aa8a1cb"
+    },
+    "source_metrics_sha256": "17d52167ef71b804f4de36b9855607410ae3134bb0d4d36cdc948dd6f9bea1bc",
+    "latent_tensor_sha256": "5a2b37b04c6d1425b51d35655c4bad65ea6ae6fd66ca43b4a83cedff27558b18"
+  },
+  {
+    "kind": "shift3",
+    "status": "planned",
+    "model_execution": false,
+    "source_run_name": "wan22-tiny-shift3-plan-v1",
+    "copied_files": {
+      "metrics.json": "58b1cb83e011613ac24c734b75fb9f26ab693eda7ceedfa0e0d0abf0f10cfdb3",
+      "input.safetensors": "abe16fef6cf0182ee49f57b304023cd93ea78c7c627cd520ccef10939a27c85d"
+    },
+    "source_metrics_sha256": "6b03f00d84f3ac4578be5135a5641ac422c258e288d04a98358ebdeab5fdfbad",
+    "latent_tensor_sha256": "f6e971abce5998e1e7263ddffaedf7901e4c4f71b229c0bc1d47a63ca4277c0a"
+  }
+]

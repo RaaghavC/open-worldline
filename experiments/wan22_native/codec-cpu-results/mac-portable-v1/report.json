@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "seconds": 0.7245976249978412,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "test_codec_cpu_portable.py": "8873fcfbf3c299d74b969e680d2738525379c724ea7604d3147761000f246bc0",
+    "codec_cpu_diagnostic.py": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+  },
+  "source_unchanged": true,
+  "torch_version": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "measurements": {
+    "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+    "fixture_state_unchanged": true,
+    "cross_length": {
+      "torch_equal": true,
+      "bytes_equal": true,
+      "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+      "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+      "shape": [
+        1,
+        48,
+        1,
+        2,
+        2
+      ],
+      "dtype": "torch.float32",
+      "total_elements": 192,
+      "different_elements": 0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "both_finite": true,
+      "first_differences": []
+    },
+    "same_length_future_perturbation": {
+      "torch_equal": true,
+      "bytes_equal": true,
+      "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+      "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+      "shape": [
+        1,
+        48,
+        1,
+        2,
+        2
+      ],
+      "dtype": "torch.float32",
+      "total_elements": 192,
+      "different_elements": 0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "both_finite": true,
+      "first_differences": []
+    },
+    "same_length_initial_repeat": {
+      "torch_equal": true,
+      "bytes_equal": true,
+      "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+      "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+      "shape": [
+        1,
+        48,
+        1,
+        2,
+        2
+      ],
+      "dtype": "torch.float32",
+      "total_elements": 192,
+      "different_elements": 0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "both_finite": true,
+      "first_differences": []
+    },
+    "declared_cross_length_atol": 9.5367431640625e-07,
+    "declared_cross_length_rtol": 0.0,
+    "tolerance_scope": "Only full-clip versus standalone initial latent in this fixed tiny CPU fixture",
+    "num_threads": 2,
+    "mkldnn_available": false,
+    "mkldnn_enabled": true
+  },
+  "actual_gpu_operations": false,
+  "external_weight_values_loaded": false,
+  "production_exact_prefix_relaxed": false,
+  "same_length_causality_and_repeat": "Exact tensor and byte equality required",
+  "scope": "Platform CPU fixture only; no actual cache or production inference tolerance change"
+}

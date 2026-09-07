@@ -1,0 +1,192 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "seconds": 0.8314958789999878,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "test_codec_cpu_portable.py": "8873fcfbf3c299d74b969e680d2738525379c724ea7604d3147761000f246bc0",
+    "codec_cpu_diagnostic.py": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+  },
+  "source_unchanged": true,
+  "torch_version": "2.5.1+cpu",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "measurements": {
+    "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+    "fixture_state_unchanged": true,
+    "cross_length": {
+      "torch_equal": false,
+      "bytes_equal": false,
+      "left_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+      "right_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+      "shape": [
+        1,
+        48,
+        1,
+        2,
+        2
+      ],
+      "dtype": "torch.float32",
+      "total_elements": 192,
+      "different_elements": 134,
+      "max_abs": 2.086162567138672e-07,
+      "mean_abs": 3.145335843631377e-08,
+      "both_finite": true,
+      "first_differences": [
+        {
+          "index": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "left": 0.5576459169387817,
+          "right": 0.557645857334137,
+          "abs": 5.960464477539063e-08
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "left": -0.05884046480059624,
+          "right": -0.05884044989943504,
+          "abs": 1.4901161193847656e-08
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "left": 0.0357118621468544,
+          "right": 0.035711869597435,
+          "abs": 7.450580596923828e-09
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "left": -0.12932822108268738,
+          "right": -0.129328191280365,
+          "abs": 2.9802322387695312e-08
+        },
+        {
+          "index": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "left": -0.014840112999081612,
+          "right": -0.014840111136436462,
+          "abs": 1.862645149230957e-09
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "left": 0.49424734711647034,
+          "right": 0.49424731731414795,
+          "abs": 2.9802322387695312e-08
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "left": 0.25743693113327026,
+          "right": 0.2574368715286255,
+          "abs": 5.960464477539063e-08
+        },
+        {
+          "index": [
+            0,
+            2,
+            0,
+            1,
+            1
+          ],
+          "left": 0.22925519943237305,
+          "right": 0.22925522923469543,
+          "abs": 2.9802322387695312e-08
+        }
+      ]
+    },
+    "same_length_future_perturbation": {
+      "torch_equal": true,
+      "bytes_equal": true,
+      "left_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+      "right_sha256": "5565b9a350887c9a59c7dc3b251f5f4b99cf61d2d76db68e9129d7b2d97e678f",
+      "shape": [
+        1,
+        48,
+        1,
+        2,
+        2
+      ],
+      "dtype": "torch.float32",
+      "total_elements": 192,
+      "different_elements": 0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "both_finite": true,
+      "first_differences": []
+    },
+    "same_length_initial_repeat": {
+      "torch_equal": true,
+      "bytes_equal": true,
+      "left_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+      "right_sha256": "d29fe3b96131a25827d09cb17de55e6aca31314dea003dd8af8797aeaad7e10f",
+      "shape": [
+        1,
+        48,
+        1,
+        2,
+        2
+      ],
+      "dtype": "torch.float32",
+      "total_elements": 192,
+      "different_elements": 0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "both_finite": true,
+      "first_differences": []
+    },
+    "declared_cross_length_atol": 9.5367431640625e-07,
+    "declared_cross_length_rtol": 0.0,
+    "tolerance_scope": "Only full-clip versus standalone initial latent in this fixed tiny CPU fixture",
+    "num_threads": 2,
+    "mkldnn_available": true,
+    "mkldnn_enabled": true
+  },
+  "actual_gpu_operations": false,
+  "external_weight_values_loaded": false,
+  "production_exact_prefix_relaxed": false,
+  "same_length_causality_and_repeat": "Exact tensor and byte equality required",
+  "scope": "Platform CPU fixture only; no actual cache or production inference tolerance change"
+}

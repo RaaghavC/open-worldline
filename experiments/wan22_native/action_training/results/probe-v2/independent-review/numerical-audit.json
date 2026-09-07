@@ -1,0 +1,151 @@
+{
+  "schema": "worldline-original-action-probe-independent-v2",
+  "status": "passed",
+  "audit_source_sha256": "edcd34b1e2887eb3659b92d673374e7cbb7c12d9db048776ce659ae31f10d7e7",
+  "model_inference": false,
+  "gpu_used": false,
+  "optimizer_execution": false,
+  "source_and_input_mutation": false,
+  "initial_audit_attempt": "Retained under wan22-action-probe-v2-independent-attempt1. The audit initially expected text key positive; measured train.py stores atrium. Corrected audit schema only; no measured file changed.",
+  "scope": "Read-only saved tensors and metadata; CPU noise regeneration, FM input arithmetic and Adam-moment gradient reconstruction. No native foundation values loaded.",
+  "frozen_core": {
+    "records": 825,
+    "parameters": 4999787712,
+    "all_before_after_loader_records_equal": true,
+    "before_file_sha256": "4ed40b214c348518e4ad4440df7e5e54986ee1668876c06ab342a00cc2190c42",
+    "after_file_sha256": "4ed40b214c348518e4ad4440df7e5e54986ee1668876c06ab342a00cc2190c42",
+    "no_full_foundation_tensors_reloaded": true,
+    "limit": "These retained actual-value hashes and source-bound frozen/gradient assertions are checked; this audit does not reopen all foundation tensor values."
+  },
+  "paired_inputs": {
+    "source_files": 42,
+    "snapshot_copies": 84,
+    "draws_regenerated_exactly": true,
+    "branch_checks": [
+      {
+        "id": "closed-0000",
+        "noise_sha256": "7d09257160a683a36e38bd64750d5fb4a20086519f309aa314d1aa48d913ef5f",
+        "k": 506,
+        "all_five_input_hashes_exact": true
+      },
+      {
+        "id": "open-0000",
+        "noise_sha256": "7d09257160a683a36e38bd64750d5fb4a20086519f309aa314d1aa48d913ef5f",
+        "k": 506,
+        "all_five_input_hashes_exact": true
+      },
+      {
+        "id": "closed-0008",
+        "noise_sha256": "02041ee26e53e86e8cd17a4f7a5028ee4f96d7af1daf29d253ccf4c60fcc78a5",
+        "k": 628,
+        "all_five_input_hashes_exact": true
+      },
+      {
+        "id": "open-0008",
+        "noise_sha256": "02041ee26e53e86e8cd17a4f7a5028ee4f96d7af1daf29d253ccf4c60fcc78a5",
+        "k": 628,
+        "all_five_input_hashes_exact": true
+      }
+    ],
+    "first_pair_shared_observation": true,
+    "second_pair_commands_identical": true,
+    "different_windows_and_noise_per_update": true,
+    "source_scene_family": "single_atrium_layout_v1",
+    "split": "development"
+  },
+  "checkpoints": {
+    "bundles": [
+      {
+        "completed_updates": 0,
+        "parameter_tensors": 18,
+        "optimizer_states": 0,
+        "all_finite": true,
+        "manifest_sha256": "f9da6775d3ecbf9adcacbb03d963a31474f2b8dba0741aadac2291612bbe162e"
+      },
+      {
+        "completed_updates": 1,
+        "parameter_tensors": 18,
+        "optimizer_states": 18,
+        "all_finite": true,
+        "manifest_sha256": "58889a90eae0b6fe846ea71ebc280ea0904aa6935c85fa347d8c3e6235f9b1bb"
+      },
+      {
+        "completed_updates": 2,
+        "parameter_tensors": 18,
+        "optimizer_states": 18,
+        "all_finite": true,
+        "manifest_sha256": "97a4c34209b82650119adc80c2a29b5da2124725e52cf8ef524b4a4a07e75dad"
+      }
+    ],
+    "last_valid_completed_updates": 2,
+    "fresh_seed_matches_failed_v1": true,
+    "recovery_weights_only_load": true,
+    "moment_derived_gradient_checks": [
+      {
+        "update": 1,
+        "derived_from_adam_first_moments": {
+          "gradient_l2_after_clip": 0.009494479470932756,
+          "command_gru_gradient_l2": 0.0,
+          "output_gradient_l2": 0.009494479470932756
+        },
+        "relative_tolerance": 2e-05,
+        "absolute_tolerance": 1e-09,
+        "meaning": "Approximate reconstruction through stored FP32 moment arithmetic, not retained raw gradient tensors."
+      },
+      {
+        "update": 2,
+        "derived_from_adam_first_moments": {
+          "gradient_l2_after_clip": 0.009535674870678733,
+          "command_gru_gradient_l2": 4.3638245574377935e-05,
+          "output_gradient_l2": 0.009534072085560102
+        },
+        "relative_tolerance": 2e-05,
+        "absolute_tolerance": 1e-09,
+        "meaning": "Approximate reconstruction through stored FP32 moment arithmetic, not retained raw gradient tensors."
+      }
+    ]
+  },
+  "timings": {
+    "worker_seconds": 129.2394865420065,
+    "parent_seconds": 132.55942700000014,
+    "stage_seconds": [
+      {
+        "stage": "verify_and_load_external_frozen_core",
+        "seconds": 87.26637075000326
+      },
+      {
+        "stage": "hash_all825_current_core_parameters_before_training",
+        "seconds": 16.08579599999939
+      },
+      {
+        "stage": "paired_update_0001",
+        "seconds": 6.234828832995845
+      },
+      {
+        "stage": "paired_update_0002",
+        "seconds": 4.913412624999182
+      },
+      {
+        "stage": "hash_all825_current_core_parameters_after_training",
+        "seconds": 13.810290291003184
+      }
+    ],
+    "peak_driver_bytes": 11114954752
+  },
+  "interpretation": {
+    "execution": "Two prescribed numerical optimizer updates completed; frozen-base and recovery checks pass.",
+    "losses": [
+      0.24544364213943481,
+      0.17769744247198105
+    ],
+    "not_a_learning_curve": "The two losses use different start windows (0 and 8), different noise draws and k=506 versus628. Their decrease cannot measure learning improvement.",
+    "images_generated": 0,
+    "quality_demonstrated": false,
+    "novelty_demonstrated": false,
+    "fixed16_admitted": false
+  },
+  "source_metrics_sha256": "92c3534e715b5191f2235416ce8ea9a8f4b4422327cb2fdd08691456056f8746",
+  "plan_sha256": "6c04fecdd4c3e36a2112ec0025056e68fc6de379004e3fba99c3570c3fa1e664",
+  "terminal_sha256": "5f224529a127a67956a2ec3ff942033c0740974fafb6220c691bbd6c03604e70",
+  "findings": []
+}

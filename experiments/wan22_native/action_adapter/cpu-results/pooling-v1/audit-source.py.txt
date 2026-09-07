@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Bounded CPU report for MPS-pooling equations and unchanged adapter regressions."""
+import hashlib,json,sys,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+REPO=ROOT/'outputs/open-worldline';sys.path.insert(0,str(REPO))
+sys.path.append(str(Path(sys.base_prefix)/'lib/python3.11/site-packages'))
+import numpy as np
+import pytest
+import torch
+from torch.nn import functional as F
+from experiments.wan22_native.action_adapter import pooling
+
+OUT=ROOT/'work/wan22-action-pooling-cpu-v1';OUT.mkdir()
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+old_path=REPO/'experiments/wan22_native/action_adapter/cpu-results/v1/report.json';old=json.loads(old_path.read_text())
+names=list(old['source_sha256'])+['experiments/wan22_native/action_adapter/pooling.py','experiments/wan22_native/action_adapter/test_pooling.py','experiments/wan22_native/action_adapter/test_independent.py']
+before={n:sha(REPO/n)for n in names}
+for n,digest in before.items():
+    p=OUT/'checked-source'/(n+'.txt');p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes((REPO/n).read_bytes());assert sha(p)==digest
+records=[]
+class Recorder:
+    def pytest_runtest_logreport(self,report):
+        if report.when=='call' or report.failed:records.append({'test':report.nodeid,'phase':report.when,'outcome':report.outcome,'seconds':report.duration})
+threads=torch.get_num_threads();torch.set_num_threads(1);start=time.monotonic()
+try:
+    code=pytest.main([str(REPO/'experiments/wan22_native/action_adapter'/file)for file in ('test_pooling.py','test_cpu.py','test_independent.py')]+['-q'],plugins=[Recorder()])
+    elapsed=time.monotonic()-start;metrics=[]
+    for shape in ((1,48,18,32),(2,3,18,31),(2,2,13,19),(1,2,2,3)):
+        generator=torch.Generator().manual_seed(20260907);source=torch.randn(shape,generator=generator)
+        a=source.clone().requires_grad_();b=source.clone().requires_grad_();upstream=torch.randn((*shape[:2],4,8),generator=generator)*.25
+        actual=pooling.adaptive_bin_avg_pool2d(a,(4,8));expected=F.adaptive_avg_pool2d(b,(4,8))
+        ga,=torch.autograd.grad(actual,a,upstream);gb,=torch.autograd.grad(expected,b,upstream)
+        def diff(a,b):
+            difference=(a-b).double();denom=b.double().square().sum().sqrt().item()
+            return {'max_absolute':float(difference.abs().max()),'relative_l2':float(difference.square().sum().sqrt())/denom if denom else None}
+        metrics.append({'shape':list(shape),'output':[4,8],'forward':diff(actual,expected),'input_gradient':diff(ga,gb)})
+finally:torch.set_num_threads(threads)
+after={n:sha(REPO/n)for n in names}
+new_model=(REPO/'experiments/wan22_native/action_adapter/model.py').read_text()
+old_model=REPO/'experiments/wan22_native/action_adapter/cpu-results/v1/checked-source/experiments/wan22_native/action_adapter/model.py.txt'
+restored=new_model.replace('from .pooling import observation_pool2d\n\n','').replace('observed = observation_pool2d(observation[:, :, 0], (4, 8))','observed = F.adaptive_avg_pool2d(observation[:, :, 0], (4, 8))')
+assert restored==old_model.read_text()
+header=Path(torch.__file__).parent/'include/ATen/native/AdaptivePooling.h'
+report={'schema':'worldline-action-adaptive-pooling-cpu-v1','status':'passed'if code==0 and before==after else'failed',
+ 'tests':sum(r['phase']=='call'for r in records),'test_records':records,'seconds':elapsed,'source_sha256':before,
+ 'source_unchanged_after_tests':before==after,'report_source_sha256':sha(Path(__file__)),
+ 'previous_report_sha256':sha(old_path),'previous_model_sha256':sha(old_model),
+ 'model_change_only_new_import_and_pool_dispatch':True,
+ 'native_foundation_sources_unchanged':all(before[n]==d for n,d in old['source_sha256'].items()if '/action_adapter/'not in n),
+ 'device':'cpu','threads':1,'official_weight_values_loaded':False,'gpu_used':False,
+ 'comparison_tolerances':{'atol':2e-7,'rtol':3e-6,'chosen_before_execution':True},'comparisons':metrics,
+ 'mathematical_bins':{'row_start':'floor(i*H/out_H)','row_end_exclusive':'ceil((i+1)*H/out_H)','column_start':'floor(j*W/out_W)','column_end_exclusive':'ceil((j+1)*W/out_W)',
+  'height_18_to_4':[[0,5],[4,9],[9,14],[13,18]],'overlapping_rows_zero_based':[4,13]},
+ 'primary_bin_reference':{'url':'https://github.com/pytorch/pytorch/blob/v2.5.1/aten/src/ATen/native/AdaptivePooling.h','installed_header_sha256':sha(header),'source_lines':[31,37]},
+ 'cpu_path':'Existing F.adaptive_avg_pool2d remains unchanged; helper selected only for MPS tensors',
+ 'mps_status':'Not executed in this CPU report; separate independent operation check required',
+ 'limitations':['FP32 reduction order may round differently; mathematical bins and gradients are compared within stated tolerances.','No actual native5B optimizer update or quality measurement follows from these CPU fixtures.'],
+ 'runtime':{'python':sys.version,'torch':torch.__version__,'numpy':np.__version__,'pytest':pytest.__version__}}
+(OUT/'report.json').write_text(json.dumps(report,indent=2)+'\n');(OUT/'audit-source.py.txt').write_bytes(Path(__file__).read_bytes())
+print(json.dumps({k:report[k]for k in ('status','tests','seconds','comparisons','model_change_only_new_import_and_pool_dispatch','native_foundation_sources_unchanged')},indent=2))
+raise SystemExit(code)
