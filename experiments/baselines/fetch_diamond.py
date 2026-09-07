@@ -12,4 +12,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
     manifest = json.loads(Path(__file__).with_name("diamond-assets-manifest.json").read_text())
     fetch(manifest["repository"], manifest["revision"], manifest["artifacts"], args.output)
-

@@ -110,4 +110,3 @@ def load_model(path, device="cpu"):
     model = RGBModel(config["kind"], config["width"]).to(device)
     model.load_state_dict(checkpoint["state_dict"])
     return model.eval(), checkpoint
-

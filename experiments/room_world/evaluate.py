@@ -119,4 +119,3 @@ def evaluate(model, dataset, device="cpu", sample_steps=8, output=None):
             "limits": ["One fixed noise seed per episode; this pilot is not a distribution-quality benchmark.",
                        "Pixel metrics can favor blur. Inspect the fixed contact sheet and saved rollout.",
                        "Both data and truth are original synthetic rooms; no broad world-model parity is tested."]}
-

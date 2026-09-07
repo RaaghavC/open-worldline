@@ -89,4 +89,3 @@ def test_untrained_predictor_is_exact_persistence_and_input_validation():
         rollout(model, initial, np.asarray([6], dtype=np.int64))
     with pytest.raises(ValueError):
         rollout(model, initial*5, np.asarray([1], dtype=np.int64))
-

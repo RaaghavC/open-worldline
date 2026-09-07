@@ -75,13 +75,13 @@
   },
   "source_files_at_publication_sha256": {
     "simulator.py": "7c05f681c083f87078819ebf83e118be3d438664d1519e4557ea348113664ed4",
-    "data.py": "b7c897645f4936a30a4d6514bb95f9fccfd44ce77daa4fe4b4722df38fa21d1e",
-    "model.py": "4ac5a9653c644e175c7f61980148a5977704cad96049e1b4f56745e822cb339b",
-    "train.py": "a58fe01431580ee932190f6f845b8c01d3db3c002d8557e16cebd984b9d71db8",
-    "evaluate.py": "47f4121777e0fe402a3f3e622468a2f05e68a43609514eebf85f52a562de679e",
+    "data.py": "b189a8955c8388d7a9a169eed5e12750206a808b2bd6333c35a220f3a5dc1db3",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+    "train.py": "f5c86742f8a530af0dfd09eb8e15e7f161f25c77da9b836823540e01275035db",
+    "evaluate.py": "90d041c17848323ad0d3a96b1c9404d85b2c4f1bfa66ec980de52a3192d56817",
     "aliasing.py": "f8bea2ad151d9ea90b8115c8427c61b7f2c1b619b6e2791925b84b6c3909619f"
   },
-  "source_snapshot_note": "These are publication source hashes, not hashes captured when training began. A non-hit fog overflow clamp was added after the first data capture; both run dataset manifests are byte-identical. The simulator module docstring was subsequently clarified to include browser initialization; that documentation edit did not change executable rendering code.",
+  "source_snapshot_note": "These are publication source hashes, not hashes captured when training began. A non-hit fog overflow clamp was added after the first data capture; both run dataset manifests are byte-identical. The simulator module docstring was subsequently clarified to include browser initialization; that documentation edit did not change executable rendering code. Trailing empty source lines were removed before publication; executable code and trained tensors were unchanged.",
   "files_sha256": {
     "aliasing-metrics.json": "520d5f58f40ba1e7be8ee223ce9d69d39789c3b6adf351d25c2c75d66861d575",
     "dataset-manifest.json": "fb78eebbf34ae74106ed39b66ce68f1f3a5ba8fff8a01eaf36c1a24b7ab0caf8",

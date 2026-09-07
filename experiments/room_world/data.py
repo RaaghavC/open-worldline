@@ -66,4 +66,3 @@ def sample_batch(dataset, count, rng):
     target = dataset["frames"][episode, offset+4]
     action = dataset["actions"][episode, offset]
     return history.astype(np.float32)/127.5-1, action, target.astype(np.float32)/127.5-1
-
