@@ -1,0 +1,111 @@
+# SPDX-License-Identifier: Apache-2.0
+"""CPU input, artifact and decoder-admission checks; no model weights."""
+import copy
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from unittest import mock
+
+import numpy as np
+from PIL import Image
+import torch
+from safetensors.torch import save_file
+
+from . import data, cache, runtime
+from .operations import tensor_sha, exact_prefix, score_reconstruction
+
+
+def originals():
+    return tuple(np.array(Image.open(data.HERE/'source-images'/name).convert('RGB'))
+                 for name in ('closed-0000.png','open-0000.png'))
+
+
+def make_window(arm,start,rgb):
+    commands=np.stack([data.original.command_vector('interact' if arm=='open' and start==0 and i==0 else 'left') for i in range(16)])
+    return data.original.RGBActionWindow(np.stack([rgb.copy() for _ in range(17)]),commands,{'arm':arm,'start':start})
+
+
+class DataTests(unittest.TestCase):
+    def test_exact_18_rgb_values_only_in_closed_start0_copy(self):
+        closed,opened=originals();raw=make_window('closed',0,closed);before=raw.rgb.copy()
+        result=data.derive_window(raw,opened)
+        self.assertEqual(len(data.canonical_changes(closed,opened)),18)
+        self.assertTrue(np.array_equal(raw.rgb,before));self.assertTrue(np.array_equal(result.rgb[0],opened))
+        self.assertTrue(np.array_equal(result.rgb[1:],before[1:]));self.assertEqual(result.provenance['changed_channel_values'],18)
+        self.assertTrue(np.array_equal(result.commands,raw.actions));self.assertIsNot(result.commands,raw.actions)
+        for arm,start in data.SELECTION:
+            if (arm,start)==('closed',0):continue
+            raw=make_window(arm,start,opened);out=data.derive_window(raw,opened)
+            self.assertTrue(np.array_equal(out.rgb,raw.rgb));self.assertFalse(out.provenance['changed_first_rgb'])
+
+    def test_wrong_canonical_and_extra_edits_rejected(self):
+        closed,opened=originals();opened[0,0,0]^=1
+        with self.assertRaises(ValueError):data.canonical_changes(closed,opened)
+        with self.assertRaises(ValueError):data.derive_window(make_window('closed',0,closed),opened)
+
+    def test_order_shapes_and_raw_command_units(self):
+        _,opened=originals();raw=make_window('open',0,opened);window=data.derive_window(raw,opened)
+        self.assertEqual(data.SELECTION[:4],(('closed',0),('open',0),('closed',8),('open',8)))
+        self.assertEqual(window.video_array().shape,(1,3,17,288,512));self.assertEqual(window.video_array().dtype,np.float32)
+        self.assertTrue(np.array_equal(window.video_array()[0,:,0],opened.transpose(2,0,1).astype(np.float32)/127.5-1))
+        self.assertEqual(window.commands[0,5],1);self.assertAlmostEqual(float(window.commands[1,3]),np.pi/24,places=7)
+        self.assertEqual(np.count_nonzero(window.commands[:,[0,1,2,4]]),0)
+
+    def test_roundtrip_reader_never_constructs_commands(self):
+        _,opened=originals()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);Image.fromarray(opened).save(root/'first.png');rows=[{'frame':i,'png':'first.png','png_sha256':data.sha(root/'first.png'),'action_from_previous':{'poison':'must not be accessed'}} for i in range(17)]
+            (root/'manifest.json').write_text(json.dumps({'arms':{'open':rows},'rgb_transform':'test fixture'}))
+            with mock.patch.object(data,'MANIFEST_SHA256',data.sha(root/'manifest.json')),mock.patch.object(data.original,'command_vector',side_effect=AssertionError('Command access')):
+                rgb,p=data.load_roundtrip_rgb(root)
+            self.assertEqual(rgb.shape,(17,288,512,3));self.assertFalse(p['action_values_materialized'])
+            self.assertTrue(np.array_equal(rgb[0],opened))
+
+    def test_condition_reader_does_not_materialize_poisoned_target(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);values={n:torch.zeros(shape,dtype=torch.float32) for n,shape in cache.SHAPES.items()}
+            values['target'].fill_(float('nan'));save_file(values,str(root/'window.safetensors'))
+            tensor_specs={n:{'shape':list(v.shape),'dtype':'float32','sha256':tensor_sha(v)} for n,v in values.items()}
+            entries=[{'id':f'{a}-{s:04d}','file':'window.safetensors','sha256':data.sha(root/'window.safetensors'),'tensors':tensor_specs,'source':{}} for a,s in data.SELECTION]
+            (root/'manifest.json').write_text(json.dumps({'schema':cache.SCHEMA,'status':'passed','command_channels':list(data.CHANNELS),'windows':entries,'causal_checks':[{'passed':True}]}))
+            (root/'metrics.json').write_text(json.dumps({'status':'passed','finite_output':True,'cache_clear_after_operations':True}))
+            real=cache.safe_open;reads=[]
+            class Spy:
+                def __init__(self,*a,**k):self.handle=real(*a,**k)
+                def __enter__(self):self.handle.__enter__();return self
+                def __exit__(self,*a):return self.handle.__exit__(*a)
+                def keys(self):return self.handle.keys()
+                def get_tensor(self,name):
+                    reads.append(name)
+                    if name=='target':raise AssertionError('Future target materialized')
+                    return self.handle.get_tensor(name)
+            with mock.patch.object(cache,'safe_open',Spy):actual,p=cache.load_condition(root,'open-0000')
+            self.assertEqual(reads,['observation','commands']);self.assertEqual(set(actual),{'observation','commands'})
+            with self.assertRaises(ValueError):cache.load_training_window(root,'open-0000')
+            (root/'watchdog-stop.json').write_text('{}')
+            with self.assertRaises(ValueError):cache.load_condition(root,'open-0000')
+
+    def test_prefix_is_checked_without_replacement(self):
+        target=torch.zeros(1,48,5,2,2);observation=torch.ones(1,48,1,2,2);before=target.clone()
+        check=exact_prefix(target,observation,name='fixture')
+        self.assertFalse(check['passed']);self.assertEqual(check['max_abs'],1.);self.assertTrue(torch.equal(target,before))
+        with self.assertRaises(ValueError):exact_prefix(target,torch.zeros(1,48,2,2,2),name='bad')
+
+    def test_all_frame_scores_use_float_pixels_before_uint8_rounding(self):
+        truth=np.zeros((17,2,3,3),np.uint8);pred=torch.full((1,3,17,2,3),-1.)
+        pred[:,:,4]=-.5
+        result,pixels=score_reconstruction(truth,pred)
+        self.assertEqual(len(result['per_frame']),17);self.assertEqual(result['per_frame'][4]['mse_rgb_0_1'],.0625)
+        self.assertEqual(result['first_frame']['mse_rgb_0_1'],0.)
+        self.assertAlmostEqual(result['all_frames']['mse_rgb_0_1'],.0625/17)
+        self.assertTrue(np.all(pixels[4]==64))
+
+    def test_stale_preflight_and_stopped_decode_are_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'tests.json';path.write_text(json.dumps({'status':'passed','tests':20,'source_sha256':{},'measurements':{}}))
+            with self.assertRaises(ValueError):runtime.validate_preflight(path)
+        completed=data.HERE.parent/'codec-results/full-decode-v3';report=json.loads((completed/'metrics.json').read_text())
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'metrics.json').write_text(json.dumps(report));(root/'watchdog-stop.json').write_text('{}')
+            with self.assertRaises(ValueError):runtime.validate_decoder_run(root)

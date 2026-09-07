@@ -1,0 +1,26 @@
+from pathlib import Path
+import sys,json,hashlib,time,contextlib,io,platform
+base=Path('/Users/rc/Documents/Codex/2026-09-07/re');repo=base/'outputs/open-worldline'
+sys.path.insert(0,str(repo));sys.path.append(str(Path(sys.base_prefix)/'lib/python3.11/site-packages'))
+import pytest,torch,numpy
+from experiments.wan22_native.action_data import runtime,data
+out=base/'work/wan22-action-data-independent-v1';out.mkdir(exist_ok=False)
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+report_path=data.HERE/'cpu-v2/tests.json';before=runtime.source_hashes()
+assert json.loads(report_path.read_text())['source_sha256']==before
+before['action_data/test_independent.py']=sha(data.HERE/'test_independent.py')
+for name in before:
+    src=(data.HERE/name.removeprefix('action_data/')) if name.startswith('action_data/') else repo/name
+    dest=out/'checked-source'/(name+'.txt');dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(src.read_bytes())
+records=[]
+class Recorder:
+    def pytest_runtest_logreport(self,report):
+        if report.when=='call' or report.failed:records.append({'test':report.nodeid,'phase':report.when,'outcome':report.outcome,'seconds':report.duration})
+stream=io.StringIO();started=time.perf_counter()
+with contextlib.redirect_stdout(stream),contextlib.redirect_stderr(stream):
+    code=pytest.main([str(data.HERE/'test_independent.py'),'-q'],plugins=[Recorder()])
+after=runtime.source_hashes();after['action_data/test_independent.py']=sha(data.HERE/'test_independent.py');assert before==after
+all_gates=runtime.gates(report_path,data.HERE.parent/'codec-results/full-decode-v3')
+report={'schema':'wan22-action-data-independent-roundtrip-cpu-v1','status':'passed' if code==0 else 'failed','tests':len([r for r in records if r['phase']=='call']),'test_records':records,'elapsed_seconds':time.perf_counter()-started,'source_sha256':before,'source_unchanged_after_tests':True,'implementation_report_sha256':sha(report_path),'gates':all_gates,'official_weight_values_loaded':False,'gpu_used':False,'runtime':{'python':platform.python_version(),'torch':torch.__version__,'numpy':numpy.__version__},'scope':'Mocked full reconstruction worker, exact RGB-only input boundaries, one-frame storage isolation, retained prefix failure without repair, all-frame scoring, parent timeout cleanup. No actual-weight codec or model inference. Cache contract reviewed separately on source.','report_source_sha256':sha(Path(__file__))}
+(out/'report.json').write_text(json.dumps(report,indent=2)+'\n');(out/'pytest-output.txt').write_text(stream.getvalue());(out/'executed-report-source.py.txt').write_bytes(Path(__file__).read_bytes())
+print(stream.getvalue());print(json.dumps({'status':report['status'],'tests':report['tests'],'seconds':report['elapsed_seconds'],'report_sha256':sha(out/'report.json')},indent=2));raise SystemExit(int(code))

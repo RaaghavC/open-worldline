@@ -1,0 +1,2808 @@
+{
+  "status": "passed",
+  "max_seconds": 900,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "timings": [
+    {
+      "stage": "verify_and_load_fp32_codec",
+      "seconds": 5.395241084013833
+    },
+    {
+      "stage": "encode_initial_rgb_alone",
+      "seconds": 1.2553995000198483
+    },
+    {
+      "stage": "encode_original_17_rgb",
+      "seconds": 11.534223875001771
+    },
+    {
+      "stage": "decode_original_target_17_frames",
+      "seconds": 61.36850033400697
+    }
+  ],
+  "peaks_sampled": {
+    "rss_bytes": 3013820416,
+    "mps_active_bytes": 5283189248,
+    "mps_driver_bytes": 10456088576
+  },
+  "schema": "worldline-wan22-action-data-run-v1",
+  "mode": "roundtrip",
+  "device": "mps",
+  "dtype": "float32",
+  "runtime_environment": {
+    "environment": {
+      "PYTORCH_MPS_LOW_WATERMARK_RATIO": "0.6",
+      "PYTORCH_MPS_HIGH_WATERMARK_RATIO": null,
+      "PYTORCH_ENABLE_MPS_FALLBACK": "0",
+      "PYTORCH_MPS_FAST_MATH": null,
+      "PYTORCH_MPS_PREFER_METAL": null
+    },
+    "recommended_max_memory_bytes": 19069665280,
+    "record_only": true,
+    "meaning": "Environment present before process startup; no variable is changed by this record"
+  },
+  "source_sha256": {
+    "action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+    "action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/cache.py": "4083ac258f42ff3312075f4dd0ae34189c11ba272b60acdc4594c450fbc6b6e2",
+    "action_data/runtime.py": "6542cc73f1aa2750e9481b2d4c527abaaaed6d9c21bd8c6413a85f77b9bf63ff",
+    "action_data/worker.py": "83b389463cad32fd9ecf37172e4b878cba5e22837558c565b9abb2ffec430576",
+    "action_data/build.py": "5f11abfdd4d4113245f032017f083f0640cedd4a728aa232ad2582918522cecc",
+    "action_data/roundtrip.py": "809eca2905f0af3f6355e4ec1eba960427be34c61154a7db28f6af017c294a3b",
+    "action_data/test_data.py": "4d2d1c3ca32f0cf0a5ff929b2c4738be5d21810b8e755df97fd28ef81ec3603b",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+    "action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+    "experiments/wan22_native/codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "experiments/wan22_native/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "experiments/wan22_native/codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "experiments/wan22_native/codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+  },
+  "external_pretrained_codec": true,
+  "original_model": false,
+  "raw_capture_modified": false,
+  "dependencies": {
+    "torch": "2.5.1",
+    "einops": "0.8.1",
+    "numpy": "1.26.4",
+    "pillow": "12.3.0",
+    "psutil": "7.2.2",
+    "safetensors": "0.5.3"
+  },
+  "gates": {
+    "action_data_cpu_sha256": "b4b436578f0d16474e5a89f54923b0970c5ec3486becb7c4c74d49bbc906e160",
+    "initial_codec_cpu_sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+    "decode_cpu_sha256": "585666a3d7a31ce5b9fffa8223f3503ea94c666fe0413093321dd041015db370",
+    "memory_cpu_sha256": "ae7d0822d049124f7a78c02178aa0c9dbc81c8fd4737574a91327c12d6b4ab4c",
+    "completed_decoder": {
+      "metrics_sha256": "b533559026aa31fd0fc1aace5c3ef9d318f7c736f3407459848ff59f37d9c07d",
+      "elapsed_seconds": 86.91887337499065,
+      "runtime_environment": {
+        "environment": {
+          "PYTORCH_MPS_LOW_WATERMARK_RATIO": "0.6",
+          "PYTORCH_MPS_HIGH_WATERMARK_RATIO": null,
+          "PYTORCH_ENABLE_MPS_FALLBACK": "0",
+          "PYTORCH_MPS_FAST_MATH": null,
+          "PYTORCH_MPS_PREFER_METAL": null
+        },
+        "recommended_max_memory_bytes": 19069665280,
+        "record_only": true,
+        "meaning": "Environment present before process startup; no variable is changed by this record"
+      },
+      "policy": "Per-native-convolution sync/empty_cache plus temporal chunk cleanup"
+    }
+  },
+  "codec": {
+    "external_pretrained_model": true,
+    "weight_sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+    "weight_bytes": 2818839170,
+    "loaded_keys": 196,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameters": 704688668,
+    "source_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "config": {
+      "dim": 160,
+      "dec_dim": 256,
+      "z_dim": 48,
+      "dim_mult": [
+        1,
+        2,
+        4,
+        4
+      ],
+      "num_res_blocks": 2,
+      "attn_scales": [],
+      "temperal_downsample": [
+        false,
+        true,
+        true
+      ],
+      "dropout": 0.0
+    },
+    "load": "Meta architecture; weights_only=True, mmap=True; strict FP32 state; no full dtype conversion",
+    "compute_dtype": "float32",
+    "device": "mps"
+  },
+  "per_convolution_cleanup_report": {
+    "registered_layers": 62,
+    "cleanup_calls": 323,
+    "completed_cleanups": 323,
+    "cleanup_seconds": 67.36145091606886,
+    "layers": {
+      "encoder.conv1": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.0929868339735549
+      },
+      "encoder.downsamples.0.downsamples.0.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 1.0375230830104556
+      },
+      "encoder.downsamples.0.downsamples.0.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 1.0837349580251612
+      },
+      "encoder.downsamples.0.downsamples.1.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 1.161817793006776
+      },
+      "encoder.downsamples.0.downsamples.1.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 1.2828307909949217
+      },
+      "encoder.downsamples.1.downsamples.0.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.4725319999852218
+      },
+      "encoder.downsamples.1.downsamples.0.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.9578042900247965
+      },
+      "encoder.downsamples.1.downsamples.0.shortcut": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.10495591699145734
+      },
+      "encoder.downsamples.1.downsamples.1.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 1.0339298750041053
+      },
+      "encoder.downsamples.1.downsamples.1.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.990163208974991
+      },
+      "encoder.downsamples.1.downsamples.2.time_conv": {
+        "calls": 4,
+        "completed_cleanups": 4,
+        "cleanup_seconds": 0.03643291597836651
+      },
+      "encoder.downsamples.2.downsamples.0.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.2354754560510628
+      },
+      "encoder.downsamples.2.downsamples.0.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.48097579096793197
+      },
+      "encoder.downsamples.2.downsamples.0.shortcut": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.0659873740223702
+      },
+      "encoder.downsamples.2.downsamples.1.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.4947697910538409
+      },
+      "encoder.downsamples.2.downsamples.1.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.5274123750277795
+      },
+      "encoder.downsamples.2.downsamples.2.time_conv": {
+        "calls": 4,
+        "completed_cleanups": 4,
+        "cleanup_seconds": 0.024596835050033405
+      },
+      "encoder.downsamples.3.downsamples.0.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.13646954199066386
+      },
+      "encoder.downsamples.3.downsamples.0.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.08056937507353723
+      },
+      "encoder.downsamples.3.downsamples.1.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.07923025003401563
+      },
+      "encoder.downsamples.3.downsamples.1.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.08127354099997319
+      },
+      "encoder.middle.0.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.08266941597685218
+      },
+      "encoder.middle.0.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.07859470904804766
+      },
+      "encoder.middle.2.residual.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.0802014589717146
+      },
+      "encoder.middle.2.residual.6": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.08100770896999165
+      },
+      "encoder.head.2": {
+        "calls": 6,
+        "completed_cleanups": 6,
+        "cleanup_seconds": 0.01740741598769091
+      },
+      "conv1": {
+        "calls": 2,
+        "completed_cleanups": 2,
+        "cleanup_seconds": 0.0012579579779412597
+      },
+      "conv2": {
+        "calls": 1,
+        "completed_cleanups": 1,
+        "cleanup_seconds": 0.012201667006593198
+      },
+      "decoder.conv1": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.05621174900443293
+      },
+      "decoder.middle.0.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.168686166027328
+      },
+      "decoder.middle.0.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.18154045898700133
+      },
+      "decoder.middle.2.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.1835662510129623
+      },
+      "decoder.middle.2.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.18366087600588799
+      },
+      "decoder.upsamples.0.upsamples.0.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.3313461240322795
+      },
+      "decoder.upsamples.0.upsamples.0.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.18278262394596823
+      },
+      "decoder.upsamples.0.upsamples.1.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.19156650101649575
+      },
+      "decoder.upsamples.0.upsamples.1.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.1933310840104241
+      },
+      "decoder.upsamples.0.upsamples.2.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.2036189590289723
+      },
+      "decoder.upsamples.0.upsamples.2.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.21106175100430846
+      },
+      "decoder.upsamples.0.upsamples.3.time_conv": {
+        "calls": 4,
+        "completed_cleanups": 4,
+        "cleanup_seconds": 0.03613808401860297
+      },
+      "decoder.upsamples.1.upsamples.0.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.5688013330218382
+      },
+      "decoder.upsamples.1.upsamples.0.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.752157124952646
+      },
+      "decoder.upsamples.1.upsamples.1.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.841557749954518
+      },
+      "decoder.upsamples.1.upsamples.1.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.5710236669692677
+      },
+      "decoder.upsamples.1.upsamples.2.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.8137945820053574
+      },
+      "decoder.upsamples.1.upsamples.2.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.8012687499576714
+      },
+      "decoder.upsamples.1.upsamples.3.time_conv": {
+        "calls": 4,
+        "completed_cleanups": 4,
+        "cleanup_seconds": 0.29623795897350647
+      },
+      "decoder.upsamples.2.upsamples.0.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 5.971299915981945
+      },
+      "decoder.upsamples.2.upsamples.0.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 3.1580779579817317
+      },
+      "decoder.upsamples.2.upsamples.0.shortcut": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.9784999589319341
+      },
+      "decoder.upsamples.2.upsamples.1.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 2.9778611679794267
+      },
+      "decoder.upsamples.2.upsamples.1.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 3.1771504170028493
+      },
+      "decoder.upsamples.2.upsamples.2.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 3.0218759159906767
+      },
+      "decoder.upsamples.2.upsamples.2.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 2.985201293020509
+      },
+      "decoder.upsamples.3.upsamples.0.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 6.2308192499913275
+      },
+      "decoder.upsamples.3.upsamples.0.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 2.486703375063371
+      },
+      "decoder.upsamples.3.upsamples.0.shortcut": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 1.5134977069974411
+      },
+      "decoder.upsamples.3.upsamples.1.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 3.0893906250130385
+      },
+      "decoder.upsamples.3.upsamples.1.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 2.5140592079842463
+      },
+      "decoder.upsamples.3.upsamples.2.residual.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 2.8072537089756224
+      },
+      "decoder.upsamples.3.upsamples.2.residual.6": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 2.5274308750231285
+      },
+      "decoder.head.2": {
+        "calls": 5,
+        "completed_cleanups": 5,
+        "cleanup_seconds": 0.339165416022297
+      }
+    },
+    "events": [
+      {
+        "call": 1,
+        "layer": "encoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.01162529198336415
+      },
+      {
+        "call": 2,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.05320958301308565
+      },
+      {
+        "call": 3,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.041010625020135194
+      },
+      {
+        "call": 4,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03588287500315346
+      },
+      {
+        "call": 5,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.034678708005230874
+      },
+      {
+        "call": 6,
+        "layer": "encoder.downsamples.1.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.006735792005201802
+      },
+      {
+        "call": 7,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.016960417007794604
+      },
+      {
+        "call": 8,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03201670802081935
+      },
+      {
+        "call": 9,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.032314500014763325
+      },
+      {
+        "call": 10,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.032116124988533556
+      },
+      {
+        "call": 11,
+        "layer": "encoder.downsamples.2.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.011596750002354383
+      },
+      {
+        "call": 12,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.016482291015563533
+      },
+      {
+        "call": 13,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03201674998854287
+      },
+      {
+        "call": 14,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03176504201837815
+      },
+      {
+        "call": 15,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03212729099323042
+      },
+      {
+        "call": 16,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.009303458005888388
+      },
+      {
+        "call": 17,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.008971625007689
+      },
+      {
+        "call": 18,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.008854249987052754
+      },
+      {
+        "call": 19,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.008998500008601695
+      },
+      {
+        "call": 20,
+        "layer": "encoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.009464625007240102
+      },
+      {
+        "call": 21,
+        "layer": "encoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.009037042007548735
+      },
+      {
+        "call": 22,
+        "layer": "encoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.009327959007350728
+      },
+      {
+        "call": 23,
+        "layer": "encoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.009009875007905066
+      },
+      {
+        "call": 24,
+        "layer": "encoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.0025784999888855964
+      },
+      {
+        "call": 25,
+        "layer": "conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.0006156250019557774
+      },
+      {
+        "call": 26,
+        "layer": "encoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.007423583010677248
+      },
+      {
+        "call": 27,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.036705250007798895
+      },
+      {
+        "call": 28,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03495254201698117
+      },
+      {
+        "call": 29,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03483945797779597
+      },
+      {
+        "call": 30,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.034610207978403196
+      },
+      {
+        "call": 31,
+        "layer": "encoder.downsamples.1.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.004910374991595745
+      },
+      {
+        "call": 32,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.016535000002477318
+      },
+      {
+        "call": 33,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03249812501599081
+      },
+      {
+        "call": 34,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.032550750009249896
+      },
+      {
+        "call": 35,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03270679200068116
+      },
+      {
+        "call": 36,
+        "layer": "encoder.downsamples.2.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.006432958005461842
+      },
+      {
+        "call": 37,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.016047707991674542
+      },
+      {
+        "call": 38,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.0320800410117954
+      },
+      {
+        "call": 39,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03323391702724621
+      },
+      {
+        "call": 40,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.033410208008717746
+      },
+      {
+        "call": 41,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.01797758400789462
+      },
+      {
+        "call": 42,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.008983333013020456
+      },
+      {
+        "call": 43,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.008927499991841614
+      },
+      {
+        "call": 44,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.009178458014503121
+      },
+      {
+        "call": 45,
+        "layer": "encoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.009214125020662323
+      },
+      {
+        "call": 46,
+        "layer": "encoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.009189625008730218
+      },
+      {
+        "call": 47,
+        "layer": "encoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.00915662499028258
+      },
+      {
+        "call": 48,
+        "layer": "encoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.0091077089891769
+      },
+      {
+        "call": 49,
+        "layer": "encoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.002009457995882258
+      },
+      {
+        "call": 50,
+        "layer": "encoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.015358541975729167
+      },
+      {
+        "call": 51,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.16507033299421892
+      },
+      {
+        "call": 52,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.19513608299894258
+      },
+      {
+        "call": 53,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.33650220901472494
+      },
+      {
+        "call": 54,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.37444029201287776
+      },
+      {
+        "call": 55,
+        "layer": "encoder.downsamples.1.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.004998292017262429
+      },
+      {
+        "call": 56,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.09049183299066499
+      },
+      {
+        "call": 57,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.1801651660061907
+      },
+      {
+        "call": 58,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.23412087498581968
+      },
+      {
+        "call": 59,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.25277320900931954
+      },
+      {
+        "call": 60,
+        "layer": "encoder.downsamples.1.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.003213957999832928
+      },
+      {
+        "call": 61,
+        "layer": "encoder.downsamples.2.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.005283833015710115
+      },
+      {
+        "call": 62,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.039563833008287475
+      },
+      {
+        "call": 63,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.07501883298391476
+      },
+      {
+        "call": 64,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.07672537499456666
+      },
+      {
+        "call": 65,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.08573058401816525
+      },
+      {
+        "call": 66,
+        "layer": "encoder.downsamples.2.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.004508292011450976
+      },
+      {
+        "call": 67,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.01540237499284558
+      },
+      {
+        "call": 68,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.012387499999022111
+      },
+      {
+        "call": 69,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.013649125001393259
+      },
+      {
+        "call": 70,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.01395933300955221
+      },
+      {
+        "call": 71,
+        "layer": "encoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.013558624981669709
+      },
+      {
+        "call": 72,
+        "layer": "encoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.013626416999613866
+      },
+      {
+        "call": 73,
+        "layer": "encoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.014671499986434355
+      },
+      {
+        "call": 74,
+        "layer": "encoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.014628749981056899
+      },
+      {
+        "call": 75,
+        "layer": "encoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.003220457991119474
+      },
+      {
+        "call": 76,
+        "layer": "encoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.01953708298970014
+      },
+      {
+        "call": 77,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.3316237499821
+      },
+      {
+        "call": 78,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.31310154200764373
+      },
+      {
+        "call": 79,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.23052537499461323
+      },
+      {
+        "call": 80,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.22719720800523646
+      },
+      {
+        "call": 81,
+        "layer": "encoder.downsamples.1.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.022828624991234392
+      },
+      {
+        "call": 82,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.10805974999675527
+      },
+      {
+        "call": 83,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.20106320799095556
+      },
+      {
+        "call": 84,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.2184564580093138
+      },
+      {
+        "call": 85,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.20500124999671243
+      },
+      {
+        "call": 86,
+        "layer": "encoder.downsamples.1.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.009935124980984256
+      },
+      {
+        "call": 87,
+        "layer": "encoder.downsamples.2.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.012391166994348168
+      },
+      {
+        "call": 88,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.049049500026740134
+      },
+      {
+        "call": 89,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.10013712500222027
+      },
+      {
+        "call": 90,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.10492695801076479
+      },
+      {
+        "call": 91,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.10666687501361594
+      },
+      {
+        "call": 92,
+        "layer": "encoder.downsamples.2.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.006217459012987092
+      },
+      {
+        "call": 93,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.022236374992644414
+      },
+      {
+        "call": 94,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.014546042017173022
+      },
+      {
+        "call": 95,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.014274500019382685
+      },
+      {
+        "call": 96,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.014918000000761822
+      },
+      {
+        "call": 97,
+        "layer": "encoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.016345790994819254
+      },
+      {
+        "call": 98,
+        "layer": "encoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.014673167024739087
+      },
+      {
+        "call": 99,
+        "layer": "encoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.01460012499592267
+      },
+      {
+        "call": 100,
+        "layer": "encoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.01455191700370051
+      },
+      {
+        "call": 101,
+        "layer": "encoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.002924667001934722
+      },
+      {
+        "call": 102,
+        "layer": "encoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.01923795900074765
+      },
+      {
+        "call": 103,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.20935754201491363
+      },
+      {
+        "call": 104,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.20757095798035152
+      },
+      {
+        "call": 105,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.25168266700347885
+      },
+      {
+        "call": 106,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.391851874999702
+      },
+      {
+        "call": 107,
+        "layer": "encoder.downsamples.1.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.040606790978927165
+      },
+      {
+        "call": 108,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.13703724998049438
+      },
+      {
+        "call": 109,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.28403658300521784
+      },
+      {
+        "call": 110,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.254899249994196
+      },
+      {
+        "call": 111,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.21723929198924452
+      },
+      {
+        "call": 112,
+        "layer": "encoder.downsamples.1.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.010534333006944507
+      },
+      {
+        "call": 113,
+        "layer": "encoder.downsamples.2.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.013909750006860122
+      },
+      {
+        "call": 114,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.053569291019812226
+      },
+      {
+        "call": 115,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.12236345899873413
+      },
+      {
+        "call": 116,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.12724679100210778
+      },
+      {
+        "call": 117,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.1271886249887757
+      },
+      {
+        "call": 118,
+        "layer": "encoder.downsamples.2.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.006245459022466093
+      },
+      {
+        "call": 119,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.0323160830012057
+      },
+      {
+        "call": 120,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.015471875027287751
+      },
+      {
+        "call": 121,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.014915250008925796
+      },
+      {
+        "call": 122,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.014491832989733666
+      },
+      {
+        "call": 123,
+        "layer": "encoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.014832082990324125
+      },
+      {
+        "call": 124,
+        "layer": "encoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.014611874998081475
+      },
+      {
+        "call": 125,
+        "layer": "encoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.014731874980498105
+      },
+      {
+        "call": 126,
+        "layer": "encoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.015580249979393557
+      },
+      {
+        "call": 127,
+        "layer": "encoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.003130500001134351
+      },
+      {
+        "call": 128,
+        "layer": "encoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.01980437501333654
+      },
+      {
+        "call": 129,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.24155662499833852
+      },
+      {
+        "call": 130,
+        "layer": "encoder.downsamples.0.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.291963208001107
+      },
+      {
+        "call": 131,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.27238520901300944
+      },
+      {
+        "call": 132,
+        "layer": "encoder.downsamples.0.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.22005249999347143
+      },
+      {
+        "call": 133,
+        "layer": "encoder.downsamples.1.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.02487604200723581
+      },
+      {
+        "call": 134,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.10344775000703521
+      },
+      {
+        "call": 135,
+        "layer": "encoder.downsamples.1.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.22802449998562224
+      },
+      {
+        "call": 136,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.2615880419907626
+      },
+      {
+        "call": 137,
+        "layer": "encoder.downsamples.1.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.2503265409904998
+      },
+      {
+        "call": 138,
+        "layer": "encoder.downsamples.1.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.012749499990604818
+      },
+      {
+        "call": 139,
+        "layer": "encoder.downsamples.2.downsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.016372915997635573
+      },
+      {
+        "call": 140,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.06076283298898488
+      },
+      {
+        "call": 141,
+        "layer": "encoder.downsamples.2.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.11935958298272453
+      },
+      {
+        "call": 142,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.12087170800077729
+      },
+      {
+        "call": 143,
+        "layer": "encoder.downsamples.2.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.14228879200527444
+      },
+      {
+        "call": 144,
+        "layer": "encoder.downsamples.2.downsamples.2.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.007625625003129244
+      },
+      {
+        "call": 145,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.039233666990185156
+      },
+      {
+        "call": 146,
+        "layer": "encoder.downsamples.3.downsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.02020900000934489
+      },
+      {
+        "call": 147,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.01860962502541952
+      },
+      {
+        "call": 148,
+        "layer": "encoder.downsamples.3.downsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.019727416976820678
+      },
+      {
+        "call": 149,
+        "layer": "encoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.019254166982136667
+      },
+      {
+        "call": 150,
+        "layer": "encoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.01745658300933428
+      },
+      {
+        "call": 151,
+        "layer": "encoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.017713375011226162
+      },
+      {
+        "call": 152,
+        "layer": "encoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.018129208008758724
+      },
+      {
+        "call": 153,
+        "layer": "encoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.0035438330087345093
+      },
+      {
+        "call": 154,
+        "layer": "conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.0006423329759854823
+      },
+      {
+        "call": 155,
+        "layer": "conv2",
+        "status": "passed",
+        "cleanup_seconds": 0.012201667006593198
+      },
+      {
+        "call": 156,
+        "layer": "decoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.0019196250068489462
+      },
+      {
+        "call": 157,
+        "layer": "decoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03025279100984335
+      },
+      {
+        "call": 158,
+        "layer": "decoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03137924999464303
+      },
+      {
+        "call": 159,
+        "layer": "decoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03231629100628197
+      },
+      {
+        "call": 160,
+        "layer": "decoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03297899998142384
+      },
+      {
+        "call": 161,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.1257844160136301
+      },
+      {
+        "call": 162,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03247020801063627
+      },
+      {
+        "call": 163,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03470275001018308
+      },
+      {
+        "call": 164,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03686408401699737
+      },
+      {
+        "call": 165,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.04152866700314917
+      },
+      {
+        "call": 166,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.044796875008614734
+      },
+      {
+        "call": 167,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.2257590840163175
+      },
+      {
+        "call": 168,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.11200512500363402
+      },
+      {
+        "call": 169,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.1318112079752609
+      },
+      {
+        "call": 170,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.2043422079877928
+      },
+      {
+        "call": 171,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.2408060830202885
+      },
+      {
+        "call": 172,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.18530716700479388
+      },
+      {
+        "call": 173,
+        "layer": "decoder.upsamples.2.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.11218162497971207
+      },
+      {
+        "call": 174,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.2476932090066839
+      },
+      {
+        "call": 175,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.13669745801598765
+      },
+      {
+        "call": 176,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.19776874998933636
+      },
+      {
+        "call": 177,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.2270995829894673
+      },
+      {
+        "call": 178,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.19168912500026636
+      },
+      {
+        "call": 179,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.1326614590070676
+      },
+      {
+        "call": 180,
+        "layer": "decoder.upsamples.3.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.05874770798254758
+      },
+      {
+        "call": 181,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.23254091700073332
+      },
+      {
+        "call": 182,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.15060670900857076
+      },
+      {
+        "call": 183,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.18991695798467845
+      },
+      {
+        "call": 184,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.1623868749884423
+      },
+      {
+        "call": 185,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.15675612501217984
+      },
+      {
+        "call": 186,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.15936733401031233
+      },
+      {
+        "call": 187,
+        "layer": "decoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.018761707993689924
+      },
+      {
+        "call": 188,
+        "layer": "decoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.002450250001857057
+      },
+      {
+        "call": 189,
+        "layer": "decoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.040484625002136454
+      },
+      {
+        "call": 190,
+        "layer": "decoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.04470779199618846
+      },
+      {
+        "call": 191,
+        "layer": "decoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.04281295900000259
+      },
+      {
+        "call": 192,
+        "layer": "decoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.04028695900342427
+      },
+      {
+        "call": 193,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.039000832999590784
+      },
+      {
+        "call": 194,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.039136707986472175
+      },
+      {
+        "call": 195,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03860987501684576
+      },
+      {
+        "call": 196,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.0405927500105463
+      },
+      {
+        "call": 197,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03780129199731164
+      },
+      {
+        "call": 198,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.0395525420026388
+      },
+      {
+        "call": 199,
+        "layer": "decoder.upsamples.0.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.008592750004027039
+      },
+      {
+        "call": 200,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.2964737499714829
+      },
+      {
+        "call": 201,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.3851737079967279
+      },
+      {
+        "call": 202,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.4696941249712836
+      },
+      {
+        "call": 203,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.447449166997103
+      },
+      {
+        "call": 204,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.5716916249948554
+      },
+      {
+        "call": 205,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.4543298749777023
+      },
+      {
+        "call": 206,
+        "layer": "decoder.upsamples.1.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.07354512499296106
+      },
+      {
+        "call": 207,
+        "layer": "decoder.upsamples.2.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.24185337498784065
+      },
+      {
+        "call": 208,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.6730987909832038
+      },
+      {
+        "call": 209,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.7020119169901591
+      },
+      {
+        "call": 210,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.623382583988132
+      },
+      {
+        "call": 211,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.8907300840073731
+      },
+      {
+        "call": 212,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.6586424160050228
+      },
+      {
+        "call": 213,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.8125962500052992
+      },
+      {
+        "call": 214,
+        "layer": "decoder.upsamples.3.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.6032439580012579
+      },
+      {
+        "call": 215,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.6553032500087284
+      },
+      {
+        "call": 216,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.6229741249990184
+      },
+      {
+        "call": 217,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.7564886250183918
+      },
+      {
+        "call": 218,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.6278177500062156
+      },
+      {
+        "call": 219,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.5779618329834193
+      },
+      {
+        "call": 220,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5655792920151725
+      },
+      {
+        "call": 221,
+        "layer": "decoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.06767320798826404
+      },
+      {
+        "call": 222,
+        "layer": "decoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.015876457997364923
+      },
+      {
+        "call": 223,
+        "layer": "decoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.033796000003349036
+      },
+      {
+        "call": 224,
+        "layer": "decoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03773566699237563
+      },
+      {
+        "call": 225,
+        "layer": "decoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.036864499998046085
+      },
+      {
+        "call": 226,
+        "layer": "decoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03736600000411272
+      },
+      {
+        "call": 227,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.053740541014121845
+      },
+      {
+        "call": 228,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.0382307919790037
+      },
+      {
+        "call": 229,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03904587498982437
+      },
+      {
+        "call": 230,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03844279199256562
+      },
+      {
+        "call": 231,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.039998959022341296
+      },
+      {
+        "call": 232,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.04209874998196028
+      },
+      {
+        "call": 233,
+        "layer": "decoder.upsamples.0.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.009110167011385784
+      },
+      {
+        "call": 234,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.3347076660138555
+      },
+      {
+        "call": 235,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.41852412497974
+      },
+      {
+        "call": 236,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.4222880000015721
+      },
+      {
+        "call": 237,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.2741750410059467
+      },
+      {
+        "call": 238,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.30669695799588226
+      },
+      {
+        "call": 239,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.36461033299565315
+      },
+      {
+        "call": 240,
+        "layer": "decoder.upsamples.1.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.07098520899307914
+      },
+      {
+        "call": 241,
+        "layer": "decoder.upsamples.2.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.19701949998852797
+      },
+      {
+        "call": 242,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.3879551669815555
+      },
+      {
+        "call": 243,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.7721700419788249
+      },
+      {
+        "call": 244,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.7490017079981044
+      },
+      {
+        "call": 245,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.7604461669980083
+      },
+      {
+        "call": 246,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.8238803749845829
+      },
+      {
+        "call": 247,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.8539216670033056
+      },
+      {
+        "call": 248,
+        "layer": "decoder.upsamples.3.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.38015716601512395
+      },
+      {
+        "call": 249,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.5160896249872167
+      },
+      {
+        "call": 250,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.6585397920280229
+      },
+      {
+        "call": 251,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.6895169999916106
+      },
+      {
+        "call": 252,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5485943329986185
+      },
+      {
+        "call": 253,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.73696608399041
+      },
+      {
+        "call": 254,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5159764579730108
+      },
+      {
+        "call": 255,
+        "layer": "decoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.08449754200410098
+      },
+      {
+        "call": 256,
+        "layer": "decoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.01799833300174214
+      },
+      {
+        "call": 257,
+        "layer": "decoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.030188792006811127
+      },
+      {
+        "call": 258,
+        "layer": "decoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03208508301759139
+      },
+      {
+        "call": 259,
+        "layer": "decoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03369379200739786
+      },
+      {
+        "call": 260,
+        "layer": "decoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03624462499283254
+      },
+      {
+        "call": 261,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.05691008400754072
+      },
+      {
+        "call": 262,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.037010832980740815
+      },
+      {
+        "call": 263,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.04090195900062099
+      },
+      {
+        "call": 264,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.039197083009639755
+      },
+      {
+        "call": 265,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.043196832993999124
+      },
+      {
+        "call": 266,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.04442312501487322
+      },
+      {
+        "call": 267,
+        "layer": "decoder.upsamples.0.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.009585666994098574
+      },
+      {
+        "call": 268,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.33528125000884756
+      },
+      {
+        "call": 269,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.38076245799311437
+      },
+      {
+        "call": 270,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.47153862498817034
+      },
+      {
+        "call": 271,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.3221047919942066
+      },
+      {
+        "call": 272,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.3349193329922855
+      },
+      {
+        "call": 273,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.3528187079937197
+      },
+      {
+        "call": 274,
+        "layer": "decoder.upsamples.1.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.0697967919986695
+      },
+      {
+        "call": 275,
+        "layer": "decoder.upsamples.2.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.20332033399608918
+      },
+      {
+        "call": 276,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.302090415993007
+      },
+      {
+        "call": 277,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.7934788749844301
+      },
+      {
+        "call": 278,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.7333289590023924
+      },
+      {
+        "call": 279,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.6165623330161907
+      },
+      {
+        "call": 280,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.6037397499894723
+      },
+      {
+        "call": 281,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5895067499950528
+      },
+      {
+        "call": 282,
+        "layer": "decoder.upsamples.3.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.23023962500155903
+      },
+      {
+        "call": 283,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.4704270829970483
+      },
+      {
+        "call": 284,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.535616833018139
+      },
+      {
+        "call": 285,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.7429504170140717
+      },
+      {
+        "call": 286,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5942902920069173
+      },
+      {
+        "call": 287,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.7567644999944605
+      },
+      {
+        "call": 288,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.6064437500026543
+      },
+      {
+        "call": 289,
+        "layer": "decoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.08470058301463723
+      },
+      {
+        "call": 290,
+        "layer": "decoder.conv1",
+        "status": "passed",
+        "cleanup_seconds": 0.017967082996619865
+      },
+      {
+        "call": 291,
+        "layer": "decoder.middle.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.03396395800518803
+      },
+      {
+        "call": 292,
+        "layer": "decoder.middle.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03563266698620282
+      },
+      {
+        "call": 293,
+        "layer": "decoder.middle.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.0378787090012338
+      },
+      {
+        "call": 294,
+        "layer": "decoder.middle.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03678429202409461
+      },
+      {
+        "call": 295,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.05591024999739602
+      },
+      {
+        "call": 296,
+        "layer": "decoder.upsamples.0.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03593408298911527
+      },
+      {
+        "call": 297,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.038306041999021545
+      },
+      {
+        "call": 298,
+        "layer": "decoder.upsamples.0.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.03823437498067506
+      },
+      {
+        "call": 299,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.04109320801217109
+      },
+      {
+        "call": 300,
+        "layer": "decoder.upsamples.0.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.04019045899622142
+      },
+      {
+        "call": 301,
+        "layer": "decoder.upsamples.0.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.008849500009091571
+      },
+      {
+        "call": 302,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.37657958301133476
+      },
+      {
+        "call": 303,
+        "layer": "decoder.upsamples.1.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.4556917089794297
+      },
+      {
+        "call": 304,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.346225792018231
+      },
+      {
+        "call": 305,
+        "layer": "decoder.upsamples.1.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.32295245898421854
+      },
+      {
+        "call": 306,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.35968058300204575
+      },
+      {
+        "call": 307,
+        "layer": "decoder.upsamples.1.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.44420266698580235
+      },
+      {
+        "call": 308,
+        "layer": "decoder.upsamples.1.upsamples.3.time_conv",
+        "status": "passed",
+        "cleanup_seconds": 0.08191083298879676
+      },
+      {
+        "call": 309,
+        "layer": "decoder.upsamples.2.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.22412512497976422
+      },
+      {
+        "call": 310,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.3604623330174945
+      },
+      {
+        "call": 311,
+        "layer": "decoder.upsamples.2.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.75371966601233
+      },
+      {
+        "call": 312,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.6743791670014616
+      },
+      {
+        "call": 313,
+        "layer": "decoder.upsamples.2.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.68231224999181
+      },
+      {
+        "call": 314,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.7439242500113323
+      },
+      {
+        "call": 315,
+        "layer": "decoder.upsamples.2.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5965151670097839
+      },
+      {
+        "call": 316,
+        "layer": "decoder.upsamples.3.upsamples.0.shortcut",
+        "status": "passed",
+        "cleanup_seconds": 0.2411092499969527
+      },
+      {
+        "call": 317,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 1.356458374997601
+      },
+      {
+        "call": 318,
+        "layer": "decoder.upsamples.3.upsamples.0.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5189659160096198
+      },
+      {
+        "call": 319,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.710517625004286
+      },
+      {
+        "call": 320,
+        "layer": "decoder.upsamples.3.upsamples.1.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.5809699579840526
+      },
+      {
+        "call": 321,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.2",
+        "status": "passed",
+        "cleanup_seconds": 0.5788051669951528
+      },
+      {
+        "call": 322,
+        "layer": "decoder.upsamples.3.upsamples.2.residual.6",
+        "status": "passed",
+        "cleanup_seconds": 0.6800640410219785
+      },
+      {
+        "call": 323,
+        "layer": "decoder.head.2",
+        "status": "passed",
+        "cleanup_seconds": 0.08353237502160482
+      }
+    ],
+    "hooks_removed": true,
+    "policy": "synchronize then empty_cache after native CausalConv3d forward",
+    "backend": "mps"
+  },
+  "input": {
+    "id": "open-0000",
+    "capture_manifest_sha256": "942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0",
+    "sources": [
+      {
+        "frame": 0,
+        "file": "open/0000.png",
+        "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+      },
+      {
+        "frame": 1,
+        "file": "open/0001.png",
+        "sha256": "18ba823611f1183a1c3b675456b6c2b6ae4d042911df4c0a7a75e2759ba21835"
+      },
+      {
+        "frame": 2,
+        "file": "open/0002.png",
+        "sha256": "4eac06bf7d5269476e53c924fbe340e77340b2b3e16c4eacb07edc0ce846576b"
+      },
+      {
+        "frame": 3,
+        "file": "open/0003.png",
+        "sha256": "48904e7eca2f75281b9ce5f7f6a0b189e9f239d8df51c656ef748baf10cf91a2"
+      },
+      {
+        "frame": 4,
+        "file": "open/0004.png",
+        "sha256": "da92af403ac43cb77326c63a757af07c06c8e1525c4a3dd41cf4473da7bc9dcb"
+      },
+      {
+        "frame": 5,
+        "file": "open/0005.png",
+        "sha256": "c4ef33b8e7291f937d05ae0e13b9fd81c800a63ab9cdef207061378bfcbb9611"
+      },
+      {
+        "frame": 6,
+        "file": "open/0006.png",
+        "sha256": "cea2946dfa89a38b661a463699d052f65cc8bb2f1a4bcf36c7c89fed85aa96cc"
+      },
+      {
+        "frame": 7,
+        "file": "open/0007.png",
+        "sha256": "9639073f57ab07715048cf527b661b19746df5f7476afb816a70d53a257aafbe"
+      },
+      {
+        "frame": 8,
+        "file": "open/0008.png",
+        "sha256": "800dc876844ed9f54752c0a877a07573bb1784bc6aebdd7f7f95095e539daf80"
+      },
+      {
+        "frame": 9,
+        "file": "open/0009.png",
+        "sha256": "9a5e3d28eb9a67fcbf58b898da3cccb4ac81bd6a7759731356120bade1d731c5"
+      },
+      {
+        "frame": 10,
+        "file": "open/0010.png",
+        "sha256": "fd68a0e1dd790d1b376eb9a90d48ad7870edcaa48c0189fc35a5b3d02e47698e"
+      },
+      {
+        "frame": 11,
+        "file": "open/0011.png",
+        "sha256": "acc38f3c4bf97874ab13329f3bd459cd0474f8e5beb9d01ef706a8c22274c683"
+      },
+      {
+        "frame": 12,
+        "file": "open/0012.png",
+        "sha256": "5a86d8dced79d8e6dfcb40ab65d63e2b0d31da75c9ec21c66144af2fc24bf40d"
+      },
+      {
+        "frame": 13,
+        "file": "open/0013.png",
+        "sha256": "80fb93d933b11f2d9df24d3348c0e9a5d890ad463132c658f504359fc65e4006"
+      },
+      {
+        "frame": 14,
+        "file": "open/0014.png",
+        "sha256": "f1f2acd91462ede7fffed9ecf0e305bbebaae38f6e49ac6f7f931f3f5e634599"
+      },
+      {
+        "frame": 15,
+        "file": "open/0015.png",
+        "sha256": "863a37822f83397de02e72e3726e5a81320cbe3906b772262265ba518542a54d"
+      },
+      {
+        "frame": 16,
+        "file": "open/0016.png",
+        "sha256": "ca10715064bb0997003efab9f2a384fd94dbca34c46a1c27d1229d89159e91c2"
+      }
+    ],
+    "rgb_sha256": "b970f21d29e5f2c4d8cb15a9fd15844ebc19dce2ddc6534fabadebc83e3e8ffa",
+    "first_rgb_sha256": "6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705",
+    "raw_rgb_modified": false,
+    "data_license": "CC0-1.0",
+    "rgb_transform": {
+      "view": "AgX",
+      "look": "None",
+      "exposure": 0.0,
+      "gamma": 1.0,
+      "display": "sRGB",
+      "exr": "scene-linear"
+    },
+    "action_values_materialized": false,
+    "future_latents_read": false
+  },
+  "input_file": {
+    "file": "rgb-input.safetensors",
+    "sha256": "fbc4f782a947a436906f0c38760fa9f1f82db81c95028fa1c73cad09c12fa096",
+    "tensors": {
+      "rgb": {
+        "shape": [
+          17,
+          288,
+          512,
+          3
+        ],
+        "dtype": "uint8",
+        "sha256": "b970f21d29e5f2c4d8cb15a9fd15844ebc19dce2ddc6534fabadebc83e3e8ffa"
+      }
+    }
+  },
+  "action_values_materialized": false,
+  "commands_provided_to_codec": false,
+  "target_latents_from_old_cache": false,
+  "reconstructed_frames": 17,
+  "newly_generated_frames": 0,
+  "quality_scope": "Codec reconstruction of supplied original RGB only",
+  "causal_checks": [
+    {
+      "name": "full_target_prefix_vs_independent_original_initial",
+      "passed": true,
+      "max_abs": 0.0,
+      "target_prefix_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "observation_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "target_prefix_replaced": false
+    }
+  ],
+  "encoded_target_sha256": "6e70c32f3557b1cdb4c411dc9646c644a6731803812f7273d7050a64b6a3d557",
+  "decoder_chunks": [
+    {
+      "chunk": 0,
+      "seconds": 4.609400040993933,
+      "first_chunk": true,
+      "output_shape": [
+        1,
+        12,
+        1,
+        144,
+        256
+      ],
+      "output_dtype": "torch.float32"
+    },
+    {
+      "chunk": 1,
+      "seconds": 15.607516832998954,
+      "first_chunk": false,
+      "output_shape": [
+        1,
+        12,
+        4,
+        144,
+        256
+      ],
+      "output_dtype": "torch.float32"
+    },
+    {
+      "chunk": 2,
+      "seconds": 14.336553166009253,
+      "first_chunk": false,
+      "output_shape": [
+        1,
+        12,
+        4,
+        144,
+        256
+      ],
+      "output_dtype": "torch.float32"
+    },
+    {
+      "chunk": 3,
+      "seconds": 13.354904208012158,
+      "first_chunk": false,
+      "output_shape": [
+        1,
+        12,
+        4,
+        144,
+        256
+      ],
+      "output_dtype": "torch.float32"
+    },
+    {
+      "chunk": 4,
+      "seconds": 13.370334083010675,
+      "first_chunk": false,
+      "output_shape": [
+        1,
+        12,
+        4,
+        144,
+        256
+      ],
+      "output_dtype": "torch.float32"
+    }
+  ],
+  "reconstruction": {
+    "scope": "All frames are codec reconstructions of supplied RGB, not generated futures",
+    "all_frames": {
+      "mse_rgb_0_1": 0.0005939108886049332,
+      "mae_rgb_0_1": 0.008564432305832434,
+      "psnr_db": 32.26278712409981,
+      "exact_reconstruction": false
+    },
+    "first_frame": {
+      "mse_rgb_0_1": 2.3928580612180156e-05,
+      "mae_rgb_0_1": 0.003001763792545481,
+      "psnr_db": 46.210830619624154,
+      "exact_reconstruction": false
+    },
+    "later_frames": {
+      "mse_rgb_0_1": 0.0006295347828544802,
+      "mae_rgb_0_1": 0.00891209908791287,
+      "psnr_db": 32.00980269393383,
+      "exact_reconstruction": false
+    },
+    "per_frame": [
+      {
+        "frame": 0,
+        "mse_rgb_0_1": 2.3928580612180156e-05,
+        "mae_rgb_0_1": 0.003001763792545481,
+        "psnr_db": 46.210830619624154,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 1,
+        "mse_rgb_0_1": 0.0002978608305156513,
+        "mae_rgb_0_1": 0.0073935958770376875,
+        "psnr_db": 35.259866038993046,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 2,
+        "mse_rgb_0_1": 0.00021821609345014823,
+        "mae_rgb_0_1": 0.0075223045601231,
+        "psnr_db": 36.61113223322117,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 3,
+        "mse_rgb_0_1": 0.0003265092816806041,
+        "mae_rgb_0_1": 0.008746733822514821,
+        "psnr_db": 34.86104468522524,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 4,
+        "mse_rgb_0_1": 0.0003161565722323157,
+        "mae_rgb_0_1": 0.007698379792507829,
+        "psnr_db": 35.00097785685142,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 5,
+        "mse_rgb_0_1": 0.0010666878349089597,
+        "mae_rgb_0_1": 0.012431699716006295,
+        "psnr_db": 29.71962657812632,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 6,
+        "mse_rgb_0_1": 0.0007600629170875137,
+        "mae_rgb_0_1": 0.010136333997892237,
+        "psnr_db": 31.191504558600677,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 7,
+        "mse_rgb_0_1": 0.0008170893857676226,
+        "mae_rgb_0_1": 0.010687525946229504,
+        "psnr_db": 30.87730431078096,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 8,
+        "mse_rgb_0_1": 0.0005183946594216575,
+        "mae_rgb_0_1": 0.007836044159493785,
+        "psnr_db": 32.853394812803096,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 9,
+        "mse_rgb_0_1": 0.0008314742524823568,
+        "mae_rgb_0_1": 0.01019296562479347,
+        "psnr_db": 30.80151194644059,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 10,
+        "mse_rgb_0_1": 0.000599453923529218,
+        "mae_rgb_0_1": 0.008848383547990158,
+        "psnr_db": 32.222441929255005,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 11,
+        "mse_rgb_0_1": 0.0008999511940211793,
+        "mae_rgb_0_1": 0.010144357854566502,
+        "psnr_db": 30.457810424962624,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 12,
+        "mse_rgb_0_1": 0.0005433452700046749,
+        "mae_rgb_0_1": 0.007821959432695385,
+        "psnr_db": 32.649241092600874,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 13,
+        "mse_rgb_0_1": 0.0009395306553375937,
+        "mae_rgb_0_1": 0.009928321180369595,
+        "psnr_db": 30.270890450187427,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 14,
+        "mse_rgb_0_1": 0.0008234448001803958,
+        "mae_rgb_0_1": 0.008813706108816809,
+        "psnr_db": 30.84365508553189,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 15,
+        "mse_rgb_0_1": 0.0008296267341384437,
+        "mae_rgb_0_1": 0.008926884259599992,
+        "psnr_db": 30.811172615590678,
+        "exact_reconstruction": false
+      },
+      {
+        "frame": 16,
+        "mse_rgb_0_1": 0.00028475212091335207,
+        "mae_rgb_0_1": 0.005464389525968727,
+        "psnr_db": 35.45533032490179,
+        "exact_reconstruction": false
+      }
+    ]
+  },
+  "reconstruction_file": {
+    "file": "reconstruction.safetensors",
+    "sha256": "efbb7e1cad8f2f5881c2a9b4f34ffd479c47fc56f011387bbdbd1eeef2311001",
+    "tensors": {
+      "reconstruction": {
+        "shape": [
+          1,
+          3,
+          17,
+          288,
+          512
+        ],
+        "dtype": "float32",
+        "sha256": "28081fe95a9985fbb52436ce5375b2eff39a58b861841b6dbf45fe6a7272f488"
+      }
+    }
+  },
+  "finite_output": true,
+  "original_pixels_sha256": "b970f21d29e5f2c4d8cb15a9fd15844ebc19dce2ddc6534fabadebc83e3e8ffa",
+  "reconstructed_pixels_sha256": "156d843de6a50d0009c72c02aacbd7b24136664964f0a443165a8bd24ac3fa26",
+  "preview_playback_fps": 10,
+  "output_sha256": {
+    "truth/0006.png": "3b11d34e8e33bc69fe6ca5fb1ac23ba4cf029e2fc8c1799fb275bcadd0609f39",
+    "truth/0012.png": "c68ad3310a25584c368be7be4ab29409ba9d8f3ef5082f85000eeac6bd156829",
+    "truth/0013.png": "ebb21dcbe19b8a67ffbe3c305ea9e102575d6308738a804a1b0d22a216c9914c",
+    "truth/0007.png": "9ec4a20346962305e18f44a68874802f8d9e6c6cf8246b5462837c3edccd8c95",
+    "truth/0011.png": "778c2304e290fadcf1abcfa7c92ceebcbd2bf79c84ad7eef962b66015e95db74",
+    "truth/0005.png": "434fec6b9f97b47a8b2abf9ee324d33f4743a17acd2b714df1bc010321b1219f",
+    "truth/0004.png": "36aee9159917bb1269a846a7a1ee658c2de5488aadb3b4d5c667644214c586d0",
+    "truth/0010.png": "17e429f0a9b2f60f3fdc62cc463f1f1e9a25e10d8bb3b6a5f2885ce6c7dfdadc",
+    "truth/0014.png": "25684c50f5d5d4dbcb5c50f372d6c54ed9a616217d33387d4869c06e075830e7",
+    "truth/0000.png": "4e50404db5e5c929c73f1f4cd95b4432dd7fe0bd14f0af9f103f525d0d784e57",
+    "truth/0001.png": "df5eabed2cff3f847561aba95f7c75cec1910b5bb9d3b182efb1eb317fb1fb0f",
+    "truth/0015.png": "37c45fc53352c524cd20cc0a45f8b034743d37b6c785afed0cdcf277587248d4",
+    "truth/0003.png": "e13ce9495d05dba4bdf7dfee6a56ed6540eba7219919c151ab50372c4b68d461",
+    "truth/0016.png": "b4c780f8fe5cea1ac419f7ba2f37e97a6d849f599a639ca990d889e8ff7176f8",
+    "truth/0002.png": "1d2658d6fc36bbb14a45347bcde2b267886526ad6db2c849f691e27708b1523b",
+    "truth/0009.png": "c78fa2aec3cf9935bd06f4298d6c255ed279f726ea249650eb4ddc6ef099045a",
+    "truth/0008.png": "28720b20232e5700934c39f9945cb0f37d2240736c2278c53c75234e06b56176",
+    "reconstruction/0006.png": "66f581e7a4dc1be5ecd87af054d82d667c3db4c8acd5978960af7539309d1477",
+    "reconstruction/0012.png": "04d48f64bda223b91239222b0ddcf108dd471a121932c4e2e4825848ad22bc67",
+    "reconstruction/0013.png": "ee86b2d1e5443ee31c66a86e539d27ce37e4516f269a008e5b8672f3df23a40a",
+    "reconstruction/0007.png": "cfbb263bac6f79b6853a44ea7926e52746011263df21ad9fbffa6bf1ab569b4b",
+    "reconstruction/0011.png": "d30350f1b330d789471ed9bb545473ae53449b16b68930bc773aac1b50c9e482",
+    "reconstruction/0005.png": "571e562b1ab2c19484cdd54ee34b6a2c3c6b5f69b966f050285c977c97e8d742",
+    "reconstruction/0004.png": "ff6955607ceb68a7e4723964918ed387e7492a353f428d2f648dba2a77baea3e",
+    "reconstruction/0010.png": "6a159b122acd335df1d4d8a940b1905975f7483e81cb0ac786e2fcaebc2884fc",
+    "reconstruction/0014.png": "2f1eac67b5ed6d7819ac37a45484e9eb0b5fda1a31610179a8e1f27287cdf1c4",
+    "reconstruction/0000.png": "f312db2ffc145d14e201b7227d8c954a331b93c5e3894bb5b42be6e96bf96c4e",
+    "reconstruction/0001.png": "0a29a319ab8fbff258a544ef71945de6c2b4a41488291f94e88a471b15eebba7",
+    "reconstruction/0015.png": "2cee5eb81d4c161196ded355f724fd9946274ef100a816bed693a58d7885c19d",
+    "reconstruction/0003.png": "2e2c414e56ab12b85d2b4f7bfc70c57e7555d27daa617d24d4ff168d68dc3618",
+    "reconstruction/0016.png": "c66bc916786a1f7658fcb21e8a8db3a4f9513a9faa6f8270e086bbe5a94ea4ba",
+    "reconstruction/0002.png": "ec692697681a797087a912d0b630bc18d0514269b906704efdaa4923eefe0321",
+    "reconstruction/0009.png": "a38736e442e097ec3a9b7e19975dec015c5345613006bcedcf0200ea084bb0e5",
+    "reconstruction/0008.png": "2073c4a8589c73a2a35e149b592f298f57a683afaa2e985c83c9edfbee007abb",
+    "comparison.png": "c2b26c4b11a58128946044353598c4ad0113f5945427001df33be8aed58bb10b",
+    "reconstruction-preview.gif": "6defb6c42dad5bfcad96ceeaa7e595de9ce9c5d495fc8718152d162f3bb31d41",
+    "encoded.safetensors": "d5896aec60a0df152d6ee9d5eb06e0b2d0a3647fa0229296d8e90c3bcd5cce4f",
+    "rgb-input.safetensors": "fbc4f782a947a436906f0c38760fa9f1f82db81c95028fa1c73cad09c12fa096",
+    "reconstruction.safetensors": "efbb7e1cad8f2f5881c2a9b4f34ffd479c47fc56f011387bbdbd1eeef2311001"
+  },
+  "allocator_chunk_counts": {
+    "encoder": 6,
+    "decoder": 5
+  },
+  "cache_clear_after_operations": true,
+  "per_convolution_cleanup_log_sha256": "a2cf00da86887717192d23a2ef87a551aaa3a7af8a49947af8eafd2ca1fd6d7d",
+  "elapsed_seconds": 81.74880158301676
+}

@@ -1,0 +1,222 @@
+{
+  "revision": "fdc0d63d7da6ee8e304816733921ccb606dc75e9",
+  "files": [
+    {
+      "path": "configs/default_config.yaml",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/configs/default_config.yaml",
+      "bytes": 210,
+      "sha256": "9c5e3c89ea6ad3d6278e889124a46f303e308e4efc21dfc5a7220a9684af8fb5",
+      "git_blob_verified": true
+    },
+    {
+      "path": "configs/long_forcing_dmd.yaml",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/configs/long_forcing_dmd.yaml",
+      "bytes": 704,
+      "sha256": "83f0bbe82e2924a4f04e278848d7828b042e5409965a59ef145777a82dd44406",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/causal_model.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/causal_model.py",
+      "bytes": 112364,
+      "sha256": "94d57ed912024a9f6339a6a0a215837e4c997a9e42be0c3a08c39553ed90c6d7",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/model.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/model.py",
+      "bytes": 30552,
+      "sha256": "465fcf17d280378106a9d41f6428520b6566237a4d47373ee9f91c1750566343",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/attention.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/attention.py",
+      "bytes": 14881,
+      "sha256": "4157dfec066d8df426ff2fbdd0660f4bf1ca4cdfe06e55aa52b686ff5a7cea30",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/taehv.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/taehv.py",
+      "bytes": 22167,
+      "sha256": "2c13798e7ae821be11bf1245e5d06ce8c01bec6145083937cb2cc3404f7955bf",
+      "git_blob_verified": true
+    },
+    {
+      "path": "pipeline/causal_inference.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/pipeline/causal_inference.py",
+      "bytes": 40649,
+      "sha256": "a715dd0f2077c4f964a4d655bfe5cdac45e66ca19ba72385de1810d67a894a88",
+      "git_blob_verified": true
+    },
+    {
+      "path": "utils/wan_wrapper.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/utils/wan_wrapper.py",
+      "bytes": 36930,
+      "sha256": "8fa702b39332b855ef27bce186d3c12988a52566f6685190013bb1cebcdc262a",
+      "git_blob_verified": true
+    },
+    {
+      "path": "utils/scheduler.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/utils/scheduler.py",
+      "bytes": 7979,
+      "sha256": "4194ef1324bb06527621749c7f9a82f431ccf011823aa65099cb7bdf116b642e",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/config.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/config.py",
+      "bytes": 4909,
+      "sha256": "67519910dba02ac5c56294e0b30b30fd5d7cbd776cc504e215e49fd5e3ca2fd7",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/keyboard.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/keyboard.py",
+      "bytes": 2688,
+      "sha256": "1f9d8b76bdf3207dcc73ed424815fb1ed0650a2435ed99884f548c49d8770575",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/inference.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/inference.py",
+      "bytes": 18375,
+      "sha256": "819799857b15c5ae71332308fa9649659886ba78864729961d82ddd850dbb2ae",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/pipeline_loader.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/pipeline_loader.py",
+      "bytes": 3861,
+      "sha256": "dddce96f886e7cafa4de55988af307dffccd9dc2e692ed2dffb731e17788dda0",
+      "git_blob_verified": true
+    },
+    {
+      "path": "scripts/inference.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/scripts/inference.py",
+      "bytes": 17013,
+      "sha256": "7a5b118b70c4624ed9bf5e98fa564bf70f8082edf49de179617ae203cc730bca",
+      "git_blob_verified": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/THIRD_PARTY_NOTICES.md",
+      "bytes": 1654,
+      "sha256": "6d6f1f7194d5ba9810d8793a520165301f55512f76b54cf7410eeb50b715d4df",
+      "git_blob_verified": true
+    },
+    {
+      "path": "NOTICE",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/NOTICE",
+      "bytes": 229,
+      "sha256": "1784c5e9b1f1fc656391afdc606cadc317419dc776d6be2b49af6c5f27006684",
+      "git_blob_verified": true
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "git_blob_verified": true
+    },
+    {
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/requirements.txt",
+      "bytes": 522,
+      "sha256": "147acb2e410ea7b26a177ad37a75100a59426280e1121edaac99da21aa818afc",
+      "git_blob_verified": true
+    },
+    {
+      "path": "FAQ.md",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/FAQ.md",
+      "bytes": 2169,
+      "sha256": "9bd0d82f24f85c8c6c63c878fb428ed926796a689029ca3a74906cf0c742c24a",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/helios_kernels/__init__.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/helios_kernels/__init__.py",
+      "bytes": 306,
+      "sha256": "6b143fd1fc3ebb2d1442a03aed80ad19e25f320565f43a6c5c51e2919363af96",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/helios_kernels/utils.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/helios_kernels/utils.py",
+      "bytes": 1655,
+      "sha256": "15de578a865a5af5aae0d28c627394e54de04cc5aa934f8ba3da4d185eb2da82",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/sla_attn.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/sla_attn.py",
+      "bytes": 1559,
+      "sha256": "bd0881de551f9b53c915bcb97ae89e1300cdf236b0317100b031f277c1e060ce",
+      "git_blob_verified": true
+    },
+    {
+      "path": "utils/memory.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/utils/memory.py",
+      "bytes": 4417,
+      "sha256": "ca0b31c93019f802e1312d512591ae6bea35b450064cdde19b6202779f50bb7f",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/sla_kernel.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/sla_kernel.py",
+      "bytes": 10385,
+      "sha256": "98d1a368ab41e0abac180e0dba74ed84c6b86721383669d380ebc0ec7bb39869",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/app.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/app.py",
+      "bytes": 16979,
+      "sha256": "fc7fe673f51e049580b9357b0fa0f37b0365efc0f193bbfe5bf22f6fe8f2c713",
+      "git_blob_verified": true
+    },
+    {
+      "path": "quantizer/__init__.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/quantizer/__init__.py",
+      "bytes": 1716,
+      "sha256": "c5775ee22f953edf1a7038dae89df57b73ebf92695e069e11ad4726d714c8c92",
+      "git_blob_verified": true
+    },
+    {
+      "path": "quantizer/quant/ptq.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/quantizer/quant/ptq.py",
+      "bytes": 11253,
+      "sha256": "09cdf55ee0324fd4469913f34e75e2512bc3430aa5dc1832f32d795b6733afdb",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/key_hud_ijkl.html",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/key_hud_ijkl.html",
+      "bytes": 457,
+      "sha256": "8ab47e72cfe4737dd0a96320e782196afc3052e0965437cfb4aefc223426df3b",
+      "git_blob_verified": true
+    },
+    {
+      "path": "web_client/key_hud_wasd.html",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/web_client/key_hud_wasd.html",
+      "bytes": 457,
+      "sha256": "ee950bb2d901cbfdfb34c741c53624e6b1fab2c52030220f79777fafc0e67500",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/t5.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/t5.py",
+      "bytes": 16910,
+      "sha256": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f",
+      "git_blob_verified": true
+    },
+    {
+      "path": "wan/modules/tokenizers.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-World/fdc0d63d7da6ee8e304816733921ccb606dc75e9/wan/modules/tokenizers.py",
+      "bytes": 2431,
+      "sha256": "cf5b189c1ae017326efadab2fc6380ba223fa7a59d0be6464bd264db53c76934",
+      "git_blob_verified": true
+    }
+  ]
+}

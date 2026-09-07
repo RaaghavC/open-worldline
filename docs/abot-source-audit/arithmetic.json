@@ -1,0 +1,54 @@
+{
+  "scope": "Source/header arithmetic only; no weights loaded or inference. Storage and cache sizes exclude allocator, activations, workspace, renderer/encoder/text process and OS.",
+  "native_common_key_count": 825,
+  "all_common_shapes_match": true,
+  "missing_native_keys": [],
+  "abot_additional_keys": [
+    "act_control_adapter.conv.bias",
+    "act_control_adapter.conv.weight",
+    "act_control_adapter.residual_blocks.0.conv1.bias",
+    "act_control_adapter.residual_blocks.0.conv1.weight",
+    "act_control_adapter.residual_blocks.0.conv2.bias",
+    "act_control_adapter.residual_blocks.0.conv2.weight"
+  ],
+  "abot_action_adapter_parameters": 270541824,
+  "abot_parameter_bytes_all_bf16": 10540659072,
+  "abot_parameter_gib_all_bf16": 9.81675374507904,
+  "abot_parameter_gib_if_native_fp32_policy_applied": 9.944481611251831,
+  "taehv_constructor_parameters": {
+    "encoder": 1494576,
+    "decoder": 9923532,
+    "total": 11418108,
+    "total_fp16_gib": 0.021267883479595184,
+    "decoder_fp32_gib": 0.036968037486076355,
+    "checkpoint_storage_dtype_verified": false
+  },
+  "cache_cases": [
+    {
+      "rgb_height": 704,
+      "rgb_width": 1280,
+      "frame_tokens": 880,
+      "query_tokens_per_three_latent_frame_chunk": 2640,
+      "bf16_local21_kv_bytes": 6812467200,
+      "bf16_cross_kv_bytes": 188743680,
+      "five_512_reference_extra_kv_bytes": 471859200,
+      "one_materialized_bf16_action_map_bytes": 173015040,
+      "weights_plus_caches_no_refs_all_bf16_gib": 16.33713948726654,
+      "weights_plus_caches_five_refs_selective_native_fp32_gib": 16.90432047843933,
+      "dense_bf16_attention_logits_bytes_3frames_vs21frames": 2341785600
+    },
+    {
+      "rgb_height": 288,
+      "rgb_width": 512,
+      "frame_tokens": 144,
+      "query_tokens_per_three_latent_frame_chunk": 432,
+      "bf16_local21_kv_bytes": 1114767360,
+      "bf16_cross_kv_bytes": 188743680,
+      "five_512_reference_extra_kv_bytes": 471859200,
+      "one_materialized_bf16_action_map_bytes": 28311552,
+      "weights_plus_caches_no_refs_all_bf16_gib": 11.03074300289154,
+      "weights_plus_caches_five_refs_selective_native_fp32_gib": 11.597923994064331,
+      "dense_bf16_attention_logits_bytes_3frames_vs21frames": 62705664
+    }
+  ]
+}

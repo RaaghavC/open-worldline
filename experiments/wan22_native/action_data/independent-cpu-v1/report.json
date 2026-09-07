@@ -1,0 +1,93 @@
+{
+  "schema": "wan22-action-data-independent-roundtrip-cpu-v1",
+  "status": "passed",
+  "tests": 5,
+  "test_records": [
+    {
+      "test": "experiments/wan22_native/action_data/test_independent.py::test_whole_roundtrip_orders_independent_encode_target_only_decode_and_scores",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.3380922089854721
+    },
+    {
+      "test": "experiments/wan22_native/action_data/test_independent.py::test_roundtrip_prefix_mismatch_stops_before_decode_without_repair",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.003388624987564981
+    },
+    {
+      "test": "experiments/wan22_native/action_data/test_independent.py::test_prescribed_opaque_rgb_bytes_and_rejection_without_command_construction",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.12172312499023974
+    },
+    {
+      "test": "experiments/wan22_native/action_data/test_independent.py::test_parent_timeout_terminates_worker_and_retains_failure",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.002504709002096206
+    },
+    {
+      "test": "experiments/wan22_native/action_data/test_independent.py::test_single_frame_encoder_cannot_read_or_share_future_storage",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.00023062500986270607
+    }
+  ],
+  "elapsed_seconds": 0.6458272500021849,
+  "source_sha256": {
+    "action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+    "action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/cache.py": "4083ac258f42ff3312075f4dd0ae34189c11ba272b60acdc4594c450fbc6b6e2",
+    "action_data/runtime.py": "6542cc73f1aa2750e9481b2d4c527abaaaed6d9c21bd8c6413a85f77b9bf63ff",
+    "action_data/worker.py": "83b389463cad32fd9ecf37172e4b878cba5e22837558c565b9abb2ffec430576",
+    "action_data/build.py": "5f11abfdd4d4113245f032017f083f0640cedd4a728aa232ad2582918522cecc",
+    "action_data/roundtrip.py": "809eca2905f0af3f6355e4ec1eba960427be34c61154a7db28f6af017c294a3b",
+    "action_data/test_data.py": "4d2d1c3ca32f0cf0a5ff929b2c4738be5d21810b8e755df97fd28ef81ec3603b",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+    "action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+    "experiments/wan22_native/codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "experiments/wan22_native/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "experiments/wan22_native/codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "experiments/wan22_native/codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+    "action_data/test_independent.py": "75d55c942acc40d29fe0691c7bed7b4021516cb49e63451069900b04feb68e7c"
+  },
+  "source_unchanged_after_tests": true,
+  "implementation_report_sha256": "b4b436578f0d16474e5a89f54923b0970c5ec3486becb7c4c74d49bbc906e160",
+  "gates": {
+    "action_data_cpu_sha256": "b4b436578f0d16474e5a89f54923b0970c5ec3486becb7c4c74d49bbc906e160",
+    "initial_codec_cpu_sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+    "decode_cpu_sha256": "585666a3d7a31ce5b9fffa8223f3503ea94c666fe0413093321dd041015db370",
+    "memory_cpu_sha256": "ae7d0822d049124f7a78c02178aa0c9dbc81c8fd4737574a91327c12d6b4ab4c",
+    "completed_decoder": {
+      "metrics_sha256": "b533559026aa31fd0fc1aace5c3ef9d318f7c736f3407459848ff59f37d9c07d",
+      "elapsed_seconds": 86.91887337499065,
+      "runtime_environment": {
+        "environment": {
+          "PYTORCH_MPS_LOW_WATERMARK_RATIO": "0.6",
+          "PYTORCH_MPS_HIGH_WATERMARK_RATIO": null,
+          "PYTORCH_ENABLE_MPS_FALLBACK": "0",
+          "PYTORCH_MPS_FAST_MATH": null,
+          "PYTORCH_MPS_PREFER_METAL": null
+        },
+        "recommended_max_memory_bytes": 19069665280,
+        "record_only": true,
+        "meaning": "Environment present before process startup; no variable is changed by this record"
+      },
+      "policy": "Per-native-convolution sync/empty_cache plus temporal chunk cleanup"
+    }
+  },
+  "official_weight_values_loaded": false,
+  "gpu_used": false,
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4"
+  },
+  "scope": "Mocked full reconstruction worker, exact RGB-only input boundaries, one-frame storage isolation, retained prefix failure without repair, all-frame scoring, parent timeout cleanup. No actual-weight codec or model inference. Cache contract reviewed separately on source.",
+  "report_source_sha256": "ea063ab5f49923cceee29d2a708350ea19492a4809ce4d3ee19721005669ffd8"
+}

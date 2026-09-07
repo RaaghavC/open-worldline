@@ -1,0 +1,26 @@
+from pathlib import Path
+import sys, json, hashlib, time, contextlib, io, platform
+base=Path('/Users/rc/Documents/Codex/2026-09-07/re');repo=base/'outputs/open-worldline'
+sys.path.insert(0,str(repo));sys.path.append(str(Path(sys.base_prefix)/'lib/python3.11/site-packages'))
+import pytest, torch, numpy, diffusers, safetensors
+out=base/'work/wan22-action-adapter-independent-v1';out.mkdir(exist_ok=False)
+source_report=repo/'experiments/wan22_native/action_adapter/cpu-results/v1/report.json'
+author=json.loads(source_report.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+names=list(author['source_sha256'])+['experiments/wan22_native/action_adapter/test_independent.py']
+before={name:sha(repo/name) for name in names}
+assert all(before[name]==value for name,value in author['source_sha256'].items())
+for name,value in before.items():
+    dst=out/'checked-source'/(name+'.txt');dst.parent.mkdir(parents=True,exist_ok=True);dst.write_bytes((repo/name).read_bytes())
+records=[]
+class Recorder:
+    def pytest_runtest_logreport(self,report):
+        if report.when=='call' or report.failed:
+            records.append({'test':report.nodeid,'phase':report.when,'outcome':report.outcome,'seconds':report.duration})
+stream=io.StringIO();started=time.perf_counter()
+with contextlib.redirect_stdout(stream),contextlib.redirect_stderr(stream):
+    result=pytest.main([str(repo/'experiments/wan22_native/action_adapter/test_independent.py'),'-q'],plugins=[Recorder()])
+after={name:sha(repo/name) for name in names};assert before==after
+(out/'pytest-output.txt').write_text(stream.getvalue())
+report={'schema':'wan22-action-adapter-independent-cpu-v1','status':'passed' if result==0 else 'failed','tests':len([r for r in records if r['phase']=='call']),'test_records':records,'elapsed_seconds':time.perf_counter()-started,'source_sha256':before,'source_unchanged_after_tests':before==after,'implementation_report_sha256':sha(source_report),'runtime':{'python':platform.python_version(),'torch':torch.__version__,'numpy':numpy.__version__,'diffusers':diffusers.__version__,'safetensors':safetensors.__version__},'official_weight_values_loaded':False,'gpu_used':False,'training_scope':'Two AdamW updates on tiny random CPU fixtures only; no actual adapter checkpoint or quality training','scope':'Manual GRU gates and explicit softmax attention; chronological four-command groups and FHW residual mask; direct condition causality; live sequential half-loss updates; frozen core and differentiable frozen head; second-backward GRU; fixed-upstream sequential/batched gradient comparison','report_source_sha256':sha(Path(__file__))}
+(out/'report.json').write_text(json.dumps(report,indent=2)+'\n');(out/'executed-report-source.py.txt').write_bytes(Path(__file__).read_bytes())
+print(stream.getvalue());print(json.dumps({'status':report['status'],'tests':report['tests'],'elapsed_seconds':report['elapsed_seconds'],'report_sha256':sha(out/'report.json')},indent=2));raise SystemExit(int(result))

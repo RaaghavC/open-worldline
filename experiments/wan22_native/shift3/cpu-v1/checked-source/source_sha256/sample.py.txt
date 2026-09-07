@@ -1,0 +1,398 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Fixed shift3 ablation, keeping the existing shift5 control unchanged."""
+import argparse
+import importlib.metadata
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import time
+
+import torch
+from safetensors.torch import save_file
+from .. import sample_clip as native
+from ..profile_core import FlowUniPCMultistepScheduler
+from ..portable import NATIVE_GRID, NATIVE_TOKENS, token_times
+
+HERE = Path(__file__).resolve().parent
+SHAPE = native.SHAPE
+SETTINGS = {"steps": 50, "shift": 3., "guidance": 5.}
+LOCAL_SOURCES = ("__init__.py", "sample.py", "test_cpu.py")
+INDEPENDENT_SOURCE = "test_independent.py"
+tensor_sha256 = native.tensor_sha256
+
+
+def make_scheduler():
+    scheduler = FlowUniPCMultistepScheduler(num_train_timesteps=1000, shift=1, use_dynamic_shifting=False)
+    scheduler.set_timesteps(50, device="cpu", shift=3.)
+    return scheduler
+
+
+def source_hashes(*, independent=False):
+    names = (*LOCAL_SOURCES, INDEPENDENT_SOURCE) if independent else LOCAL_SOURCES
+    return {name: native.sha256(HERE/name) for name in names}
+
+
+def validate_cpu(path, *, independent=False):
+    report = json.loads(Path(path).read_text())
+    if report.get("status") != "passed" or report.get("tests", 0) < (4 if independent else 7):
+        raise ValueError("Passed source-bound shift3 CPU checks required")
+    if report.get("source_sha256") != source_hashes(independent=independent):
+        raise ValueError("Shift3 CPU source is stale")
+    native.check_sources(report.get("native_source_sha256"), native.SOURCES, native.HERE)
+    native.check_sources(report.get("reused_source_sha256"), native.REUSED_NAMES, native.REPO)
+    return native.sha256(path)
+
+
+def first_forward_identity(values):
+    """Shift changes sigma, but the two integer first model times are both999."""
+    native.tensor_contract(values, with_text=True)
+    old, new = native.make_scheduler(), make_scheduler()
+    old_times = token_times(torch.tensor([NATIVE_GRID]), old.timesteps[:1], NATIVE_TOKENS)
+    new_times = token_times(torch.tensor([NATIVE_GRID]), new.timesteps[:1], NATIVE_TOKENS)
+    if int(old.timesteps[0]) != 999 or int(new.timesteps[0]) != 999 or not torch.equal(old_times, new_times):
+        raise ValueError("First scheduled model time changed; old pair timing cannot be reused")
+    if not torch.equal(new_times, values["token_times"]):
+        raise ValueError("Retained first model input differs")
+    return {"passed": True, "first_model_time_both": 999,
+        "first_token_times_exact": True, "initial_model_latent_sha256": tensor_sha256(values["initial_latent"]),
+        "first_token_times_sha256": tensor_sha256(new_times),
+        "positive_sha256": tensor_sha256(values["positive"]), "negative_sha256": tensor_sha256(values["negative"]),
+        "shift5_initial_sigma": float(old.sigmas[0]), "shift3_initial_sigma": float(new.sigmas[0]),
+        "initial_noise_rescaled": False,
+        "meaning": "Initial latent, integer token times and both text tensors match the measured first forward exactly. Later latents differ; timing remains a bounded projection."}
+
+
+def validate_control(directory, values, device, evidence):
+    """Bind the completed shift5 run, without decoding or treating it as good."""
+    directory = Path(directory)
+    report = json.loads(native.confined(directory, "metrics.json").read_text())
+    if (report.get("status") != "passed" or report.get("sampling_configuration") != native.SETTINGS
+            or report.get("device") != device or report.get("frame_count") != 17
+            or report.get("generated_future_frames") != 16 or (directory/"watchdog-stop.json").exists()):
+        raise ValueError("Completed original shift5 runtime record required; quality is not implied")
+    native.check_sources(report.get("source_sha256"), native.SOURCES, native.HERE)
+    native.check_sources(report.get("reused_source_sha256"), native.REUSED_NAMES, native.REPO)
+    if report.get("input_evidence") != evidence:
+        raise ValueError("Control profiles, runtime environments or genuine input provenance differ")
+    path = native.checked_file(directory, "inputs.safetensors", report.get("input_sha256"))
+    control = native.read_tensors(path, native.RUN_KEYS)
+    native.tensor_contract(control, with_text=True)
+    if any(not torch.equal(values[name], control[name]) for name in native.RUN_KEYS):
+        raise ValueError("Ablation must use every exact original control input")
+    stage_hashes = {}
+    for stage in ("core", "decode"):
+        terminal = json.loads(native.confined(directory, stage+"/terminal.json").read_text())
+        if terminal.get("status") != "complete" or terminal.get("exit_code") != 0:
+            raise ValueError("Control stage did not exit successfully")
+        metrics_path = native.checked_file(directory, stage+"/result/metrics.json", report.get(stage+"_metrics_sha256"))
+        measured = json.loads(metrics_path.read_text())
+        if measured.get("status") != "passed" or (directory/stage/"result/watchdog-stop.json").exists():
+            raise ValueError("Stopped or incomplete control stage")
+        native.check_sources(measured.get("source_sha256"), native.SOURCES, native.HERE)
+        native.check_sources(measured.get("reused_source_sha256"), native.REUSED_NAMES, native.REPO)
+        if measured.get("runtime_environment") != evidence[stage+"_runtime_environment"]:
+            raise ValueError("Control stage runtime environment differs from its measured profile")
+        if stage == "core":
+            if (measured.get("sampling_configuration") != native.SETTINGS or measured.get("completed_steps") != 50
+                    or measured.get("completed_core_calls") != 100 or measured.get("all_prefix_checks_passed") is not True):
+                raise ValueError("Complete shift5 control steps required")
+        elif measured.get("frame_count") != 17 or measured.get("finite_output") is not True:
+            raise ValueError("Complete shift5 decoded frames required")
+        for name, digest in measured.get("output_sha256", {}).items():
+            native.checked_file(directory/stage/"result", name, digest)
+        stage_hashes[stage] = native.sha256(metrics_path)
+    return {"metrics_sha256": native.sha256(directory/"metrics.json"), "input_file_sha256": native.sha256(path),
+        "stage_metrics_sha256": stage_hashes, "all_input_tensors_exact": True,
+        "runtime_completed": True, "visual_quality": "Failed prior visual inspection; preserved comparison control"}
+
+
+# Isolated literal loop copied from the frozen shift5 runner; local factory differs.
+def solver_benchmark(noise, observation):
+    """CPU-only cost and finite oracle for all 50 native multistep updates."""
+    schedule = make_scheduler()
+    value = noise.clone()
+    initial_hash = tensor_sha256(noise)
+    started = time.monotonic()
+    for timestep in schedule.timesteps:
+        value[:, :1] = observation[0]
+        velocity = (value * .05 + .01).unsqueeze(0)
+        value = schedule.step(velocity, timestep, value.unsqueeze(0), return_dict=False)[0].squeeze(0)
+        value[:, :1] = observation[0]
+    elapsed = time.monotonic() - started
+    if not torch.isfinite(value).all() or tensor_sha256(noise) != initial_hash:
+        raise RuntimeError("CPU solver oracle failed or mutated input")
+    return {"status": "passed", "device": "cpu", "updates": 50, "seconds": elapsed,
+            "output_sha256": tensor_sha256(value), "model_executed": False}
+
+
+# Isolated literal loop copied from the frozen shift5 runner; local factory differs.
+@torch.inference_mode()
+def integrate(model, noise, observation, positive, negative, *, device="cpu", on_step=None):
+    """Fixed native loop. Known prefix is checked on all 100 model calls."""
+    schedule = make_scheduler()
+    value = noise.clone()
+    obs = observation[0]
+    positive, negative, known = positive.to(device), negative.to(device), obs.to(device)
+    calls = 0
+    rows = []
+    for index, timestep in enumerate(schedule.timesteps):
+        started = time.monotonic()
+        value[:, :1] = obs
+        transfer_started = time.monotonic()
+        latent = value.to(device, copy=True)
+        times = token_times(torch.tensor([NATIVE_GRID]), timestep.reshape(1), NATIVE_TOKENS).to(device)
+        if device == "mps": torch.mps.synchronize()
+        transfer = time.monotonic() - transfer_started
+        outputs, forward_times = [], []
+        for context in (positive, negative):
+            latent[:, :1] = known
+            if not torch.equal(latent[:, :1], known) or not torch.equal(times[0, :144], torch.zeros_like(times[0, :144])):
+                raise RuntimeError("Clean zero-time observation failed at denoiser boundary")
+            tick = time.monotonic()
+            velocity = model([latent], times, [context], 720)[0]
+            if device == "mps": torch.mps.synchronize()
+            forward_times.append(time.monotonic()-tick)
+            if tuple(velocity.shape) != SHAPE or velocity.dtype != torch.float32 or not torch.isfinite(velocity).all():
+                raise FloatingPointError("Denoiser returned invalid velocity")
+            outputs.append(velocity)
+            calls += 1
+        tick = time.monotonic()
+        guided = outputs[1] + 5. * (outputs[0]-outputs[1])
+        if not torch.isfinite(guided).all(): raise FloatingPointError("Guided velocity is nonfinite")
+        guided_cpu = guided.cpu()
+        if device == "mps": torch.mps.synchronize()
+        guide_transfer = time.monotonic()-tick
+        tick = time.monotonic()
+        value = schedule.step(guided_cpu.unsqueeze(0), timestep, value.unsqueeze(0), return_dict=False)[0].squeeze(0)
+        value[:, :1] = obs
+        if value.dtype != torch.float32 or not torch.isfinite(value).all() or not torch.equal(value[:, :1], obs):
+            raise FloatingPointError("CPU solver output or restored observation failed")
+        row = {"step": index+1, "model_timestep": int(timestep), "sigma": float(schedule.sigmas[index]),
+            "observed_tokens": 144, "observed_token_time": 0, "future_token_time": int(timestep),
+            "cfg_calls_prefix_exact": [True, True], "post_step_prefix_exact": True,
+            "positive_seconds": forward_times[0], "negative_seconds": forward_times[1],
+            "input_transfer_seconds": transfer, "guidance_and_output_transfer_seconds": guide_transfer,
+            "cpu_solver_seconds": time.monotonic()-tick, "seconds": time.monotonic()-started}
+        rows.append(row)
+        if on_step: on_step(row, value)
+        del latent, times, outputs, velocity, guided, guided_cpu
+    if calls != 100 or len(rows) != 50: raise RuntimeError("Incomplete native schedule")
+    return value, rows
+
+
+def source_snapshot(output):
+    original, reused = native.source_snapshot(output)
+    ablation = source_hashes(independent=True)
+    for name, digest in ablation.items():
+        destination = output/"ablation-source"/(name+".txt")
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(HERE/name, destination)
+        if native.sha256(destination) != digest:
+            raise RuntimeError("Ablation source changed during snapshot")
+    return original, reused, ablation
+
+
+def child(config):
+    if config.get("ablation_source_sha256") != source_hashes(independent=True) or config.get("ablation_settings") != SETTINGS:
+        raise ValueError("Declared isolated shift3 sources and settings required")
+    native.check_sources(config["source_sha256"], native.SOURCES, native.HERE)
+    native.check_sources(config["reused_source_sha256"], native.REUSED_NAMES, native.REPO)
+    if config["stage"] == "decode":
+        # The original decoder worker is used as-is, including guard and artifacts.
+        return native.child(config)
+    if config["stage"] != "core":
+        raise ValueError("Only core and decode stages are allowed")
+    if os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK", "0") != "0":
+        raise RuntimeError("Automatic CPU fallback must be disabled")
+    device = config["device"]
+    if device == "mps" and not torch.backends.mps.is_available():
+        raise RuntimeError("MPS unavailable")
+    torch.set_num_threads(2)
+    out = Path(config["output"])
+    guard = native.Guard(out, device)
+    report, error, completed = guard.report, None, False
+    report.update(stage="core", external_pretrained_model=True, original_worldline_model=False,
+        device=device, automatic_mps_cpu_fallback="0", source_sha256=config["source_sha256"],
+        reused_source_sha256=config["reused_source_sha256"], ablation_source_sha256=config["ablation_source_sha256"],
+        input_sha256=config["input_sha256"], global_deadline_monotonic=config["deadline"],
+        actions_read=False, adapters_read=False, future_target_read=False, future_rgb_read=False,
+        known_initial_reconstruction_frames=1, newly_generated_future_frames=16,
+        sampling_configuration=SETTINGS, ablation="UniPC shift3 only; original shift5 source unchanged")
+    try:
+        def deadline_check():
+            if time.monotonic() >= config["deadline"]:
+                raise RuntimeError("Combined 900-second deadline reached")
+        deadline_check()
+        actual_runtime = native.runtime_identity(native.runtime_environment(device), device)
+        if actual_runtime != config["runtime_environment"]:
+            raise ValueError("Actual core environment differs from measured pair")
+        report["runtime_environment"] = actual_runtime
+        path = native.checked_file(config["run"], "inputs.safetensors", config["input_sha256"])
+        values = native.read_tensors(path, native.RUN_KEYS)
+        report["first_forward_identity"] = first_forward_identity(values)
+        model, loaded = guard.measure("verify_and_load_selective_bf16_core",
+            lambda: native.load_core(config["weights"], device=device, check=deadline_check))
+        expected = json.loads(native.checked_file(config["run"], "profile-weight-load.json", config["weight_load_sha256"]).read_text())
+        if loaded != expected:
+            raise ValueError("Loaded core differs from the measured source/weight/precision conversion")
+        native.atomic_write(out/"weight-load.json", loaded)
+        report["steps"] = []
+        def retain_step(row, value):
+            deadline_check()
+            report["steps"].append(row)
+            guard.save()
+            temporary = out/"last-latent.tmp"
+            save_file({"latent": value.contiguous()}, str(temporary))
+            temporary.replace(out/"last-latent.safetensors")
+        latent, _ = guard.measure("native_50_step_sampling", lambda: integrate(model,
+            values["initial_noise"], values["observation"], values["positive"], values["negative"],
+            device=device, on_step=retain_step))
+        save_file({"latent": latent.unsqueeze(0).contiguous()}, str(out/"latents.safetensors"))
+        report.update(finite_output=True, completed_steps=50, completed_core_calls=100,
+            all_prefix_checks_passed=True,
+            output_sha256={name: native.sha256(out/name) for name in ("latents.safetensors", "weight-load.json", "last-latent.safetensors")})
+        deadline_check()
+        completed = True
+    except BaseException as caught:
+        error = caught
+        raise
+    finally:
+        if not completed and error is None:
+            error = RuntimeError("Core child did not complete")
+        guard.close(error)
+
+
+class CombinedGuard(native.CombinedGuard):
+    """Unchanged native watchdog; launcher selects only the isolated worker."""
+    def launch(self, config, wrapper):
+        if time.monotonic() >= self.deadline:
+            raise RuntimeError("Combined deadline reached before child launch")
+        wrapper.mkdir()
+        native.atomic_write(wrapper/"launch.json", config)
+        began = time.monotonic()
+        with (wrapper/"worker.log").open("x") as log:
+            proc = subprocess.Popen([sys.executable, "-m", "experiments.wan22_native.shift3.sample", "--worker"],
+                stdin=subprocess.PIPE, stdout=log, stderr=subprocess.STDOUT,
+                env=native.child_environment(config["runtime_environment"]))
+            self.process = proc
+            error = None
+            try:
+                proc.communicate(json.dumps(config).encode())
+            except BaseException as caught:
+                error = caught
+                self.terminate()
+                raise
+            finally:
+                native.atomic_write(wrapper/"terminal.json", {"status": "failed" if error or proc.returncode != 0 else "complete",
+                    "exit_code": proc.returncode, "elapsed_seconds": time.monotonic()-began,
+                    "error_type": type(error).__name__ if error else None})
+        self.process = None
+        if proc.returncode != 0:
+            raise RuntimeError("Child stage failed; preserved log and terminal record")
+        report = json.loads((wrapper/"result/metrics.json").read_text())
+        if report.get("status") != "passed" or (wrapper/"result/watchdog-stop.json").exists():
+            raise RuntimeError("Child stage did not finish its finite-output checks")
+        return report
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--worker", action="store_true", help=argparse.SUPPRESS)
+    for name in ("weights", "pair-profile", "decode-profile", "text-cache", "control-run", "native-cpu-report",
+                 "cpu-report", "independent-report", "output"):
+        parser.add_argument("--"+name, type=Path)
+    parser.add_argument("--device", choices=("cpu", "mps"), default="mps")
+    parser.add_argument("--execute", action="store_true", help="Explicitly run the reviewed ablation; default is plan-only")
+    args = parser.parse_args()
+    if args.worker:
+        child(json.loads(sys.stdin.read(131072)))
+        return
+    required = ("weights", "pair_profile", "decode_profile", "text_cache", "control_run", "native_cpu_report", "cpu_report", "independent_report", "output")
+    if any(getattr(args, name) is None for name in required):
+        parser.error("Weights, measured profiles, exact control, genuine text, all CPU reports and fresh output required")
+    if os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK", "0") != "0":
+        raise RuntimeError("Automatic CPU fallback must be disabled")
+    if args.output.resolve().is_relative_to(native.HERE.resolve()):
+        raise ValueError("Output must be outside the source package")
+    out = native.new_directory(args.output)
+    guard = CombinedGuard(out)
+    report = {"status": "running", "experiment": "Isolated Wan2.2 low-resolution shift3 sampling ablation",
+        "original_worldline_model": False, "novelty_claim": False, "model_training": False,
+        "actions_read": False, "adapters_read": False, "future_rgb_read": False, "target_read": False,
+        "sampling_configuration": SETTINGS, "control_sampling_configuration": native.SETTINGS,
+        "single_changed_sampling_setting": "UniPC shift: 5 to 3", "seed_metadata": native.SEED,
+        "noise_identity": "All saved shift5 control input tensors remain byte-identical; noise is not regenerated or rescaled",
+        "known_initial_reconstruction_frames": 1, "newly_generated_future_frames": 16,
+        "max_combined_seconds": 900, "max_combined_rss_or_child_driver_gib": 18, "minimum_available_gib": 2,
+        "non_overlapping_core_and_codec_processes": True, "device": args.device,
+        "dependencies": {name: importlib.metadata.version(name) for name in ("torch", "diffusers", "numpy", "safetensors", "psutil", "pillow", "einops")}}
+    native.atomic_write(out/"metrics.json", report)
+    try:
+        torch.set_num_threads(2)
+        report["native_cpu_report_sha256"] = native.validate_cpu(args.native_cpu_report)
+        report["cpu_report_sha256"] = validate_cpu(args.cpu_report)
+        report["independent_report_sha256"] = validate_cpu(args.independent_report, independent=True)
+        values, evidence, pair, decode = native.validate_profiles(args.pair_profile, args.decode_profile, args.text_cache, args.device)
+        report["input_evidence"] = evidence
+        report["shift5_control"] = validate_control(args.control_run, values, args.device, evidence)
+        report["first_forward_identity"] = first_forward_identity(values)
+        sources, reused, ablation = source_snapshot(out)
+        report.update(source_sha256=sources, reused_source_sha256=reused, ablation_source_sha256=ablation)
+        retained = ((args.cpu_report, "cpu-tests.json"), (args.independent_report, "independent-tests.json"),
+            (args.native_cpu_report, "native-cpu-tests.json"), (args.control_run/"metrics.json", "control-metrics.json"),
+            (args.control_run/"inputs.safetensors", "control-inputs.safetensors"),
+            (args.pair_profile/"metrics.json", "profile-core.json"), (args.pair_profile/"terminal.json", "profile-core-terminal.json"),
+            (args.pair_profile/"weight-load.json", "profile-weight-load.json"), (args.pair_profile/"inputs.safetensors", "profile-inputs.safetensors"),
+            (args.decode_profile/"metrics.json", "profile-decode.json"), (args.text_cache/"manifest.json", "text-manifest.json"))
+        for source, name in retained:
+            shutil.copyfile(source, out/name)
+        save_file(values, str(out/"inputs.safetensors"))
+        report["input_sha256"] = native.sha256(out/"inputs.safetensors")
+        scheduler = make_scheduler()
+        native.atomic_write(out/"schedule.json", {"settings": SETTINGS, "timesteps": scheduler.timesteps.tolist(),
+            "sigmas": scheduler.sigmas.tolist(), "changed_setting": "shift only", "initial_model_time": 999})
+        benchmark = solver_benchmark(values["initial_noise"], values["observation"])
+        benchmark["sampling_configuration"] = SETTINGS
+        native.atomic_write(out/"cpu-solver.json", benchmark)
+        report["timing_gate"] = native.timing_gate(pair, decode, benchmark["seconds"], time.monotonic()-guard.started)
+        native.atomic_write(out/"metrics.json", report)
+        if not args.execute:
+            report.update(status="planned", gpu_or_weight_load_executed=False)
+            return
+        relative = lambda path: os.path.relpath(Path(path).resolve(), Path.cwd())
+        config = {"weights": relative(args.weights), "run": relative(out), "device": args.device,
+            "deadline": guard.deadline, "source_sha256": sources, "reused_source_sha256": reused,
+            "ablation_source_sha256": ablation, "ablation_settings": SETTINGS,
+            "input_sha256": report["input_sha256"], "weight_load_sha256": evidence["weight_load_sha256"],
+            "allocator_cleanup": evidence["optional_allocator_cleanup"], "per_convolution_cleanup": evidence["per_convolution_cleanup"]}
+        core = guard.launch(dict(config, stage="core", runtime_environment=evidence["core_runtime_environment"],
+            output=relative(out/"core/result")), out/"core")
+        if (core.get("completed_steps") != 50 or core.get("completed_core_calls") != 100
+                or core.get("all_prefix_checks_passed") is not True or core.get("sampling_configuration") != SETTINGS):
+            raise RuntimeError("Complete shift3 50-step core evidence required before decoding")
+        latent_sha = core["output_sha256"]["latents.safetensors"]
+        native.checked_file(out, "core/result/latents.safetensors", latent_sha)
+        report["core_metrics_sha256"] = native.sha256(out/"core/result/metrics.json")
+        report["core_process_exited_before_decoder_launch"] = True
+        native.atomic_write(out/"metrics.json", report)
+        decoded = guard.launch(dict(config, stage="decode", latent_file_sha256=latent_sha,
+            runtime_environment=evidence["decode_runtime_environment"], output=relative(out/"decode/result")), out/"decode")
+        if decoded.get("frame_count") != 17 or decoded.get("finite_output") is not True:
+            raise RuntimeError("All17 finite decoded frames required")
+        report.update(status="passed", decode_metrics_sha256=native.sha256(out/"decode/result/metrics.json"),
+            generated_future_frames=16, output_latent_sha256=latent_sha, frame_count=17, preview_playback_fps=10)
+    except BaseException as caught:
+        report.update(status="interrupted" if isinstance(caught, KeyboardInterrupt) else "failed",
+            error_type=type(caught).__name__, error=str(caught))
+        raise
+    finally:
+        guard.close()
+        report.update(elapsed_seconds=time.monotonic()-guard.started, sampled_parent_limits=guard.peaks)
+        native.atomic_write(out/"metrics.json", report)
+
+
+if __name__ == "__main__":
+    main()

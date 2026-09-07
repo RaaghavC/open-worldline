@@ -1,0 +1,34 @@
+{
+  "status": "passed_readonly_actual_input_and_control_identity",
+  "first_forward_identity": {
+    "passed": true,
+    "first_model_time_both": 999,
+    "first_token_times_exact": true,
+    "initial_model_latent_sha256": "59a60814a1f4eaa8afdd7ba927b3fc6946c04be06ca363dd4eed94e85da13cfb",
+    "first_token_times_sha256": "c33795e46bac9af3b71a0c8b21d41d8a0137b154febf5225d3f70fe7e984c3e3",
+    "positive_sha256": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093",
+    "negative_sha256": "aa6911f67cb7a4e5cf934131594b6fe264dff9983f84ab188e9199c706cf60cc",
+    "shift5_initial_sigma": 0.9997998476028442,
+    "shift3_initial_sigma": 0.9996664524078369,
+    "initial_noise_rescaled": false,
+    "meaning": "Initial latent, integer token times and both text tensors match the measured first forward exactly. Later latents differ; timing remains a bounded projection."
+  },
+  "control": {
+    "metrics_sha256": "17d52167ef71b804f4de36b9855607410ae3134bb0d4d36cdc948dd6f9bea1bc",
+    "input_file_sha256": "0419e16b8699b408a1c085a382ca7751074c0be8c1927164b970de03b1e42753",
+    "stage_metrics_sha256": {
+      "core": "521e900332fa15f4fcb36b393fefe7b73ed05eff06f05623405f9a4f73396d6d",
+      "decode": "0e354b92a2845ddef05a77beb6c442d4b3f72dd8b3003d7f5a5dd7886fa28b78"
+    },
+    "all_input_tensors_exact": true,
+    "runtime_completed": true,
+    "visual_quality": "Failed prior visual inspection; preserved comparison control"
+  },
+  "model_inference_executed": false,
+  "gpu_access": false,
+  "source_sha256": {
+    "__init__.py": "df59970eb5ebe47b90e0d749c834fdb10a71b59d91e186f189f18ad0a0d0ec01",
+    "sample.py": "53d97a3ced66cb94e7b284f6b364562d751517d8f5b8f1d790a3f774208a1416",
+    "test_cpu.py": "31926f79c207d4de9e6c1348674473e62bf3466abaa0f5a619b909ff3e3db936"
+  }
+}

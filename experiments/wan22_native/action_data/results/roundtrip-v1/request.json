@@ -1,0 +1,9 @@
+{
+  "mode": "roundtrip",
+  "capture": "../../work/atrium-pilot/dense-pair",
+  "device": "mps",
+  "weights": "../../work/wan22-ti2v5b-weights/Wan2.2_VAE.pth",
+  "cpu_report": "experiments/wan22_native/action_data/cpu-v2/tests.json",
+  "decoder_run": "experiments/wan22_native/codec-results/full-decode-v3",
+  "plan_sha256": "9157751550a5000775012a8fed449411263fd135680a29c958d139115dc48de1"
+}

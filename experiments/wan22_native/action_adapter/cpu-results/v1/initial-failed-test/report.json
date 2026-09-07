@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "passed": 23,
+  "failed": 1,
+  "seconds": 2.29,
+  "failure": "Single-example versus two-example GRU output asserted byte-exact equality. Different batch matrix kernels produced a small FP32 numerical difference. Same-call repeat and same-batch future-group causality already passed. Product code was not changed to force equality.",
+  "source_sha256": {
+    "wrapper.py": "08bdb9f5c52a09293c8e912e28c1ee5627a6b2d0d9d76dd6da0c653ac9ba00e1",
+    "test_cpu.py": "95435ca19584d4fb63b496af0b8d3300131a0153be79f0b3baa9bd9f91b16a3a",
+    "__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "model.py": "77b1232757ce1f030b5526975791f795aba6e77cb06a3afb56d08ac1f28a6c6c"
+  }
+}

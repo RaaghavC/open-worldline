@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "tests": 12,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 0.9382917500042822,
+  "source_sha256": {
+    "action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+    "action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/cache.py": "ee036277c7dd4a5db36b090527abf3d6a058cc116a3130ece8b6a7a63e2727be",
+    "action_data/runtime.py": "6542cc73f1aa2750e9481b2d4c527abaaaed6d9c21bd8c6413a85f77b9bf63ff",
+    "action_data/worker.py": "83b389463cad32fd9ecf37172e4b878cba5e22837558c565b9abb2ffec430576",
+    "action_data/build.py": "c1f7c490e6825c0e4b5b577556a72132b305456ca9c4b9ccb73548fe8325aa5e",
+    "action_data/roundtrip.py": "809eca2905f0af3f6355e4ec1eba960427be34c61154a7db28f6af017c294a3b",
+    "action_data/test_data.py": "9b3f930810b64639ac78bd65f54c0e11a3eae619ca10a5156e0a44bcec96d8f9",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+    "action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+    "experiments/wan22_native/codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "experiments/wan22_native/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "experiments/wan22_native/codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "experiments/wan22_native/codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+  },
+  "measurements": {
+    "full_17_encode_cleanup_max_abs": 0.0,
+    "full_17_decode_cleanup_max_abs": 0.0,
+    "cleanup_registered_layers": 46,
+    "encode_decode_cleanup_calls": 218,
+    "first_latent_causal_max_abs": 0.0
+  },
+  "device": "cpu",
+  "external_weight_values_loaded": false,
+  "actual_gpu_operations": false,
+  "scope": "Original data rules plus tiny native 48-channel codec equations, all 17 frames; not actual-weight reconstruction or model quality"
+}

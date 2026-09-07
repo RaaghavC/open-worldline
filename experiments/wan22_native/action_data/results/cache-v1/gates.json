@@ -1,0 +1,24 @@
+{
+  "action_data_cpu_sha256": "b4b436578f0d16474e5a89f54923b0970c5ec3486becb7c4c74d49bbc906e160",
+  "initial_codec_cpu_sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+  "decode_cpu_sha256": "585666a3d7a31ce5b9fffa8223f3503ea94c666fe0413093321dd041015db370",
+  "memory_cpu_sha256": "ae7d0822d049124f7a78c02178aa0c9dbc81c8fd4737574a91327c12d6b4ab4c",
+  "completed_decoder": {
+    "metrics_sha256": "b533559026aa31fd0fc1aace5c3ef9d318f7c736f3407459848ff59f37d9c07d",
+    "elapsed_seconds": 86.91887337499065,
+    "runtime_environment": {
+      "environment": {
+        "PYTORCH_MPS_LOW_WATERMARK_RATIO": "0.6",
+        "PYTORCH_MPS_HIGH_WATERMARK_RATIO": null,
+        "PYTORCH_ENABLE_MPS_FALLBACK": "0",
+        "PYTORCH_MPS_FAST_MATH": null,
+        "PYTORCH_MPS_PREFER_METAL": null
+      },
+      "recommended_max_memory_bytes": 19069665280,
+      "record_only": true,
+      "meaning": "Environment present before process startup; no variable is changed by this record"
+    },
+    "policy": "Per-native-convolution sync/empty_cache plus temporal chunk cleanup"
+  },
+  "roundtrip_metrics_sha256": "854fe0e1691bab5eafd9e0f99678b449485539c3834bce69feaca59d3494e6e5"
+}

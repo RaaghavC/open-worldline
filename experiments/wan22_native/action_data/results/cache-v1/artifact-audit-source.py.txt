@@ -1,0 +1,128 @@
+"""Independent CPU artifact audit. No Torch, VAE, transformer or training calls."""
+import argparse
+import hashlib
+import json
+import math
+from pathlib import Path
+import struct
+
+import numpy as np
+from PIL import Image
+
+MANIFEST_SHA='942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0'
+SELECTION=[(arm,start) for start in (0,8,32,49) for arm in ('closed','open')]
+SHAPES={'target':(1,48,5,18,32),'observation':(1,48,1,18,32),'commands':(1,16,6)}
+
+
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def array_sha(a):return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
+
+def arrays(path):
+    raw=Path(path).read_bytes();n=struct.unpack('<Q',raw[:8])[0];h=json.loads(raw[8:8+n]);start=8+n;out={}
+    for key,value in h.items():
+        if key=='__metadata__':continue
+        assert value['dtype']=='F32';a,b=value['data_offsets']
+        out[key]=np.frombuffer(raw[start+a:start+b],dtype='<f4').reshape(value['shape'])
+    return out
+
+
+def rgb(path):
+    with Image.open(path) as im:
+        assert im.size==(512,288) and im.mode in ('RGB','RGBA')
+        if im.mode=='RGBA':assert im.getchannel('A').getextrema()==(255,255)
+        return np.array(im.convert('RGB'),dtype=np.uint8)
+
+
+def audit(run,capture,repo):
+    result=run/'result';r=json.loads((result/'metrics.json').read_text());m=json.loads((result/'manifest.json').read_text())
+    terminal=json.loads((run/'terminal.json').read_text());assert terminal['status']=='complete' and terminal['exit_code']==0
+    assert r['status']==m['status']=='passed' and not list(run.rglob('watchdog-stop.json'))
+    assert sha(result/'manifest.json')==r['cache_manifest_sha256']
+    assert sha(capture/'manifest.json')==MANIFEST_SHA
+    original=json.loads((capture/'manifest.json').read_text());canonical=rgb(capture/'open/0000.png')
+    source_checks={}
+    for name,digest in r['source_sha256'].items():
+        current=repo/('experiments/wan22_native/'+name if name.startswith('action_data/') else name)
+        saved=result/'measured-source'/(name+'.txt')
+        source_checks[name]=sha(current)==sha(saved)==digest
+    assert all(source_checks.values()) and m['source_sha256']==r['source_sha256']
+    assert [e['id'] for e in m['windows']]==[f'{a}-{s:04d}' for a,s in SELECTION]
+    assert len(m['observations'])==7 and len(m['causal_checks'])==11
+    observations={};tensors={};rows=[];pngs={}
+    for spec in m['observations']:
+        path=result/spec['file'];assert sha(path)==spec['sha256'];v=arrays(path)
+        assert set(v)=={'observation'} and v['observation'].shape==SHAPES['observation']
+        assert np.isfinite(v['observation']).all() and array_sha(v['observation'])==spec['tensors']['observation']['sha256']
+        assert spec['encoded_rgb_frames']==1;observations[spec['id']]=v['observation']
+    for entry,(arm,start) in zip(m['windows'],SELECTION):
+        path=result/entry['file'];assert sha(path)==entry['sha256'];values=arrays(path);assert set(values)==set(SHAPES)
+        for key,value in values.items():
+            assert value.shape==SHAPES[key] and np.isfinite(value).all()
+            assert entry['tensors'][key]=={'shape':list(SHAPES[key]),'dtype':'float32','sha256':array_sha(value)}
+        source=entry['source'];records=original['arms'][arm][start:start+17]
+        images=[]
+        for record,claimed in zip(records,source['raw']['sources']):
+            p=capture/record['png'];digest=sha(p);pngs[record['png']]=digest
+            assert digest==record['png_sha256']==claimed['sha256']
+            assert claimed['frame']==record['frame'] and claimed['file']==record['png']
+            images.append(rgb(p))
+        raw=np.stack(images);derived=raw.copy();changes=[]
+        if (arm,start)==('closed',0):
+            for y,x,c in np.argwhere(raw[0]!=canonical):
+                changes.append({'y':int(y),'x':int(x),'channel':int(c),'raw_closed':int(raw[0,y,x,c]),'derived_canonical':int(canonical[y,x,c])})
+            assert len(changes)==18 and all(abs(c['raw_closed']-c['derived_canonical'])==1 for c in changes)
+            derived[0]=canonical
+        assert source['channel_changes']==changes and source['changed_channel_values']==len(changes)
+        assert source['changed_first_rgb']==bool(changes)
+        assert source['raw_rgb_sha256']==array_sha(raw) and source['derived_rgb_sha256']==array_sha(derived)
+        assert source['raw_first_rgb_sha256']==array_sha(raw[0]) and source['derived_first_rgb_sha256']==array_sha(derived[0])
+        assert source['raw_files_modified'] is False and source['old_latent_reused'] is False
+        # Independently assemble destination-record commands in requested raw units.
+        commands=np.zeros((1,16,6),np.float32)
+        for index,record in enumerate(original['arms'][arm][start+1:start+17]):
+            command=record['action_from_previous']
+            if command=='left':commands[0,index,3]=math.pi/24
+            elif command=='right':commands[0,index,3]=-math.pi/24
+            elif command=='interact':commands[0,index,5]=1.
+            else:assert command=='wait'
+        assert np.array_equal(commands,values['commands']) and source['commands_sha256']==array_sha(commands)
+        observation=observations[entry['observation_id']]
+        assert np.array_equal(values['observation'],observation)
+        assert np.array_equal(values['target'][:,:,:1],observation)
+        tensors[entry['id']]=values
+        rows.append({'id':entry['id'],'file_sha256':entry['sha256'],'tensor_hashes_verified':True,
+            'original_rgb_pngs_and_arrays_verified':True,'derived_rgb_correction_verified':True,
+            'real_destination_commands_exact':True,'independent_observation_exact':True,'target_prefix_exact':True,
+            'changed_rgb_channel_values':len(changes),'commands_sha256':array_sha(commands)})
+    assert np.array_equal(tensors['closed-0000']['observation'],tensors['open-0000']['observation'])
+    prior=arrays(repo/'experiments/wan22_native/action_data/results/roundtrip-v1/result/encoded.safetensors')
+    roundtrip_exact={k:bool(np.array_equal(tensors['open-0000'][k],prior[k])) for k in ('target','observation')}
+    assert all(roundtrip_exact.values())
+    pairs=[]
+    for start in (0,8,32,49):
+        a=tensors[f'closed-{start:04d}'];b=tensors[f'open-{start:04d}']
+        command_differences=np.argwhere(a['commands']!=b['commands']).tolist()
+        assert command_differences==([[0,0,5]] if start==0 else [])
+        assert (np.array_equal(a['observation'],b['observation']))==(start==0)
+        pairs.append({'start':start,'observation_equal':start==0,'command_difference_indices':command_differences,
+            'future_target_latents_equal':bool(np.array_equal(a['target'][:,:,1:],b['target'][:,:,1:]))})
+    assert all(c['passed'] and c['max_abs']==0. and c['target_prefix_replaced'] is False for c in m['causal_checks'])
+    memory=[json.loads(line) for line in (result/'memory.jsonl').read_text().splitlines()]
+    cleanup=r['per_convolution_cleanup_report'];assert cleanup['cleanup_calls']==cleanup['completed_cleanups'] and cleanup['hooks_removed']
+    return {'status':'passed','scope':'Independent saved-data/source audit; no model execution or raw-file changes',
+        'metrics_sha256':sha(result/'metrics.json'),'manifest_sha256':sha(result/'manifest.json'),'terminal_sha256':sha(run/'terminal.json'),
+        'source_hash_checks':source_checks,'original_capture_manifest_sha256':MANIFEST_SHA,
+        'unique_original_png_count':len(pngs),'original_png_sha256':pngs,'window_checks':rows,
+        'paired_input_checks':pairs,'open_start0_equals_previous_roundtrip':roundtrip_exact,
+        'causal_checks_count':len(m['causal_checks']),'all_retained_causal_checks_exact':True,
+        'causal_audit_scope':'Stored target prefixes rechecked directly. Perturbation and repeat results verified from immutable measured records; no re-encoding in this audit.',
+        'independent_observation_files':len(observations),'cleanup_calls':cleanup['cleanup_calls'],
+        'registered_convolution_layers':cleanup['registered_layers'],'invoked_convolution_layers':sum(v['calls']>0 for v in cleanup['layers'].values()),
+        'minimum_available_memory_bytes':min(x['available_bytes'] for x in memory),
+        'maximum_sampled_driver_bytes':max(x['mps_driver_bytes'] for x in memory),
+        'actual_model_loads':0,'actual_gpu_operations':0}
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--capture',type=Path,required=True);p.add_argument('--repo',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+    if a.output.exists():raise ValueError('New audit output required')
+    a.output.write_text(json.dumps(audit(a.run,a.capture,a.repo),indent=2)+'\n')

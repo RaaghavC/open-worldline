@@ -1,0 +1,169 @@
+{
+  "status": "passed",
+  "scope": "Independent read-only artifact audit; no codec or model execution",
+  "metrics_sha256": "854fe0e1691bab5eafd9e0f99678b449485539c3834bce69feaca59d3494e6e5",
+  "terminal_sha256": "02eea159d5e97560bd4bbac58472ebcd8884f6921499510eaed6090f5ab551fa",
+  "output_hash_checks": {
+    "truth/0006.png": true,
+    "truth/0012.png": true,
+    "truth/0013.png": true,
+    "truth/0007.png": true,
+    "truth/0011.png": true,
+    "truth/0005.png": true,
+    "truth/0004.png": true,
+    "truth/0010.png": true,
+    "truth/0014.png": true,
+    "truth/0000.png": true,
+    "truth/0001.png": true,
+    "truth/0015.png": true,
+    "truth/0003.png": true,
+    "truth/0016.png": true,
+    "truth/0002.png": true,
+    "truth/0009.png": true,
+    "truth/0008.png": true,
+    "reconstruction/0006.png": true,
+    "reconstruction/0012.png": true,
+    "reconstruction/0013.png": true,
+    "reconstruction/0007.png": true,
+    "reconstruction/0011.png": true,
+    "reconstruction/0005.png": true,
+    "reconstruction/0004.png": true,
+    "reconstruction/0010.png": true,
+    "reconstruction/0014.png": true,
+    "reconstruction/0000.png": true,
+    "reconstruction/0001.png": true,
+    "reconstruction/0015.png": true,
+    "reconstruction/0003.png": true,
+    "reconstruction/0016.png": true,
+    "reconstruction/0002.png": true,
+    "reconstruction/0009.png": true,
+    "reconstruction/0008.png": true,
+    "comparison.png": true,
+    "reconstruction-preview.gif": true,
+    "encoded.safetensors": true,
+    "rgb-input.safetensors": true,
+    "reconstruction.safetensors": true
+  },
+  "source_hash_checks": {
+    "action_data/__init__.py": true,
+    "action_data/data.py": true,
+    "action_data/operations.py": true,
+    "action_data/cache.py": true,
+    "action_data/runtime.py": true,
+    "action_data/worker.py": true,
+    "action_data/build.py": true,
+    "action_data/roundtrip.py": true,
+    "action_data/test_data.py": true,
+    "action_data/test_codec_path.py": true,
+    "action_data/source-plan.md.txt": true,
+    "experiments/wan22_native/codec.py": true,
+    "experiments/wan22_native/codec-source.json": true,
+    "experiments/wan22_native/vendor/vae2_2.py": true,
+    "experiments/wan22_native/codec_profile.py": true,
+    "experiments/wan22_native/codec_decode_profile.py": true,
+    "experiments/wan22_native/codec_memory.py": true,
+    "experiments/wan_adapter/capture_data.py": true
+  },
+  "png_checks": [
+    {
+      "frame": 0,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 1,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 2,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 3,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 4,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 5,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 6,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 7,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 8,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 9,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 10,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 11,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 12,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 13,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 14,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 15,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    },
+    {
+      "frame": 16,
+      "truth_exact": true,
+      "reconstruction_exact": true
+    }
+  ],
+  "independently_recomputed_scores": {
+    "mse_rgb_0_1": 0.0005939108886049332,
+    "mae_rgb_0_1": 0.008564432305832434
+  },
+  "prefix_exact": true,
+  "original_first_image_cache_exact": true,
+  "observation_tensor_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+  "finite_all_encoded_and_decoded_values": true,
+  "registered_convolution_layers": 62,
+  "invoked_convolution_layers": 62,
+  "completed_cleanup_calls": 323,
+  "minimum_available_memory_bytes": 2217132032,
+  "maximum_sampled_driver_bytes": 10456088576,
+  "actual_weight_loads_in_audit": 0,
+  "actual_gpu_operations_in_audit": 0
+}

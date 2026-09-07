@@ -1,0 +1,48 @@
+{
+  "status": "passed_readonly_arithmetic_and_identity_checks",
+  "model_constructed": false,
+  "model_forward_executed": false,
+  "gpu_access": false,
+  "official_solver_exact_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+  "retained_solver_exact_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+  "all50_integer_times_promoted_to_native_fp32_values_exact": true,
+  "native_mask_zero_tokens": 144,
+  "native_mask_future_tokens": 576,
+  "fp32_rgb_scaling_exact_for_all256_byte_values": true,
+  "native48_mean_std_exact": true,
+  "executed_all50_times_sigmas_match_native_scheduler": true,
+  "sigma_start": 0.9997998476028442,
+  "sigma_end": 0.0,
+  "times_first_last": [
+    999,
+    92
+  ],
+  "actual_input_keys": [
+    "initial_latent",
+    "initial_noise",
+    "negative",
+    "observation",
+    "positive",
+    "token_times"
+  ],
+  "positive_shape": [
+    25,
+    4096
+  ],
+  "negative_shape": [
+    126,
+    4096
+  ],
+  "initial_final_prefix_exact": true,
+  "sample_metrics_sha256": "17d52167ef71b804f4de36b9855607410ae3134bb0d4d36cdc948dd6f9bea1bc",
+  "core_metrics_sha256": "521e900332fa15f4fcb36b393fefe7b73ed05eff06f05623405f9a4f73396d6d",
+  "sample_input_sha256": "0419e16b8699b408a1c085a382ca7751074c0be8c1927164b970de03b1e42753",
+  "core_latent_sha256": "3097dd63bdce426735ebb1b58f4395efaee1dc58e984a343c81bffca6aa8a1cb",
+  "source_sha256": {
+    "wan_utils_utils.py": "905850d9814ac99222b4dbb28016abcd6306e5ca161493b498b1c4afb5a99e89",
+    "wan_utils_fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "wan_configs_shared_config.py": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+    "wan_modules_t5.py": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f"
+  },
+  "actual_text_tensors_equal_source_verified_genuine_cache": true
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "wan22-action-adapter-independent-cpu-v1",
+  "status": "passed",
+  "tests": 6,
+  "test_records": [
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_manual_gru_attention_and_fhw_mask_equations",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012863042007666081
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_later_commands_cannot_enter_earlier_direct_residual_or_its_gradient",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.023482832999434322
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_two_branch_updates_preserve_base_and_reach_command_gru[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.026538250007433817
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_two_branch_updates_preserve_base_and_reach_command_gru[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.022300458018435165
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_sequential_pair_common_upstream_matches_batched_gradient[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01967366601456888
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_independent.py::test_live_sequential_pair_common_upstream_matches_batched_gradient[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.018839625001419336
+    }
+  ],
+  "elapsed_seconds": 0.3439479160006158,
+  "source_sha256": {
+    "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "experiments/wan22_native/action_adapter/model.py": "77b1232757ce1f030b5526975791f795aba6e77cb06a3afb56d08ac1f28a6c6c",
+    "experiments/wan22_native/action_adapter/wrapper.py": "964432182196fd859ec6b965e7d66216f27166662584c8279724b5d86b3f4157",
+    "experiments/wan22_native/action_adapter/test_cpu.py": "54a96d07b7cea8fb5f4a66bf197b49eec8c606a42b79deea0360e6cbc49e1e01",
+    "experiments/wan22_native/action_adapter/README.md": "5e439b5381f931850600c4765517a780eb7fb6d1bc89586a294b3063d23bfbb4",
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "experiments/wan22_native/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+    "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/NOTICE": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+    "experiments/wan22_native/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "experiments/wan22_native/action_adapter/test_independent.py": "abb334d8321addaa80575d78e617512b2dd57d77f483206ad8a44fa83c5166fc"
+  },
+  "source_unchanged_after_tests": true,
+  "implementation_report_sha256": "777cab9ff27b2524d20bf6619dbdc0c0c7da8734122b8942394d3d4f2e8d140e",
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "diffusers": "0.34.0",
+    "safetensors": "0.5.3"
+  },
+  "official_weight_values_loaded": false,
+  "gpu_used": false,
+  "training_scope": "Two AdamW updates on tiny random CPU fixtures only; no actual adapter checkpoint or quality training",
+  "scope": "Manual GRU gates and explicit softmax attention; chronological four-command groups and FHW residual mask; direct condition causality; live sequential half-loss updates; frozen core and differentiable frozen head; second-backward GRU; fixed-upstream sequential/batched gradient comparison",
+  "report_source_sha256": "dc301be0e6f3754688ba29a64f2cd724a4827b4b947a4dba98b52b9a9d6c4b6f"
+}

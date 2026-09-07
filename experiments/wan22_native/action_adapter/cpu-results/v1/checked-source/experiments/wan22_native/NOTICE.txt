@@ -1,0 +1,19 @@
+Wan2.2 TI2V-5B is an external pretrained foundation from the Alibaba Wan Team.
+Copyright 2024-2025 The Alibaba Wan Team Authors. All rights reserved.
+
+vendor/model.py and vendor/attention.py are byte-exact official source at commit
+42bf4cfaa384bc21833865abc2f9e6c0e67233dc. The Apache-2.0 license is retained in
+LICENSE-APACHE-2.0.txt. File URLs and hashes are recorded in provenance.json.
+
+portable.py and load_weights.py are local Apache-2.0 execution and loading code.
+They keep the original architecture and parameter names, explicitly store most
+parameters in BF16 while retaining selected FP32 parameters, replace CUDA-only
+attention with declared SDPA, and reuse the independently tested real-valued
+rotary embedding and CPU-double timestep functions by import from this project's
+attributed Wan2.1 native-control port. These adaptations do not establish CUDA
+FlashAttention equivalence, image quality, action control, novelty or an original
+Worldline model. External weights remain outside the repository.
+
+The new 48-channel Wan2.2 VAE is a separate component. The old 16-channel Wan2.1
+latent cache is incompatible. Native I2V profiling must use a separately verified
+observation-only cache from the new VAE and genuine UMT5 text embeddings.

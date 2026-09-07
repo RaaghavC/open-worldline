@@ -1,0 +1,164 @@
+{
+  "schema": "worldline-wan22-atrium-roundtrip-plan-v1",
+  "status": "planned",
+  "mode": "roundtrip",
+  "source": {
+    "id": "open-0000",
+    "capture_manifest_sha256": "942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0",
+    "sources": [
+      {
+        "frame": 0,
+        "file": "open/0000.png",
+        "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+      },
+      {
+        "frame": 1,
+        "file": "open/0001.png",
+        "sha256": "18ba823611f1183a1c3b675456b6c2b6ae4d042911df4c0a7a75e2759ba21835"
+      },
+      {
+        "frame": 2,
+        "file": "open/0002.png",
+        "sha256": "4eac06bf7d5269476e53c924fbe340e77340b2b3e16c4eacb07edc0ce846576b"
+      },
+      {
+        "frame": 3,
+        "file": "open/0003.png",
+        "sha256": "48904e7eca2f75281b9ce5f7f6a0b189e9f239d8df51c656ef748baf10cf91a2"
+      },
+      {
+        "frame": 4,
+        "file": "open/0004.png",
+        "sha256": "da92af403ac43cb77326c63a757af07c06c8e1525c4a3dd41cf4473da7bc9dcb"
+      },
+      {
+        "frame": 5,
+        "file": "open/0005.png",
+        "sha256": "c4ef33b8e7291f937d05ae0e13b9fd81c800a63ab9cdef207061378bfcbb9611"
+      },
+      {
+        "frame": 6,
+        "file": "open/0006.png",
+        "sha256": "cea2946dfa89a38b661a463699d052f65cc8bb2f1a4bcf36c7c89fed85aa96cc"
+      },
+      {
+        "frame": 7,
+        "file": "open/0007.png",
+        "sha256": "9639073f57ab07715048cf527b661b19746df5f7476afb816a70d53a257aafbe"
+      },
+      {
+        "frame": 8,
+        "file": "open/0008.png",
+        "sha256": "800dc876844ed9f54752c0a877a07573bb1784bc6aebdd7f7f95095e539daf80"
+      },
+      {
+        "frame": 9,
+        "file": "open/0009.png",
+        "sha256": "9a5e3d28eb9a67fcbf58b898da3cccb4ac81bd6a7759731356120bade1d731c5"
+      },
+      {
+        "frame": 10,
+        "file": "open/0010.png",
+        "sha256": "fd68a0e1dd790d1b376eb9a90d48ad7870edcaa48c0189fc35a5b3d02e47698e"
+      },
+      {
+        "frame": 11,
+        "file": "open/0011.png",
+        "sha256": "acc38f3c4bf97874ab13329f3bd459cd0474f8e5beb9d01ef706a8c22274c683"
+      },
+      {
+        "frame": 12,
+        "file": "open/0012.png",
+        "sha256": "5a86d8dced79d8e6dfcb40ab65d63e2b0d31da75c9ec21c66144af2fc24bf40d"
+      },
+      {
+        "frame": 13,
+        "file": "open/0013.png",
+        "sha256": "80fb93d933b11f2d9df24d3348c0e9a5d890ad463132c658f504359fc65e4006"
+      },
+      {
+        "frame": 14,
+        "file": "open/0014.png",
+        "sha256": "f1f2acd91462ede7fffed9ecf0e305bbebaae38f6e49ac6f7f931f3f5e634599"
+      },
+      {
+        "frame": 15,
+        "file": "open/0015.png",
+        "sha256": "863a37822f83397de02e72e3726e5a81320cbe3906b772262265ba518542a54d"
+      },
+      {
+        "frame": 16,
+        "file": "open/0016.png",
+        "sha256": "ca10715064bb0997003efab9f2a384fd94dbca34c46a1c27d1229d89159e91c2"
+      }
+    ],
+    "rgb_sha256": "b970f21d29e5f2c4d8cb15a9fd15844ebc19dce2ddc6534fabadebc83e3e8ffa",
+    "first_rgb_sha256": "6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705",
+    "raw_rgb_modified": false,
+    "data_license": "CC0-1.0",
+    "rgb_transform": {
+      "view": "AgX",
+      "look": "None",
+      "exposure": 0.0,
+      "gamma": 1.0,
+      "display": "sRGB",
+      "exr": "scene-linear"
+    },
+    "action_values_materialized": false,
+    "future_latents_read": false
+  },
+  "rgb_shape": [
+    17,
+    288,
+    512,
+    3
+  ],
+  "target_shape": [
+    1,
+    48,
+    5,
+    18,
+    32
+  ],
+  "observation_shape": [
+    1,
+    48,
+    1,
+    18,
+    32
+  ],
+  "decode_shape": [
+    1,
+    3,
+    17,
+    288,
+    512
+  ],
+  "rgb_frames": 17,
+  "action_values_materialized": false,
+  "model_execution": false,
+  "gpu_execution": false,
+  "raw_capture_modified": false,
+  "metrics": "All-frame, first-frame, later-frame and each-frame FP32 MSE/MAE/PSNR",
+  "scope": "Codec reconstruction only, without a transformer, actions, sampling or new generated futures",
+  "source_sha256": {
+    "action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+    "action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/cache.py": "4083ac258f42ff3312075f4dd0ae34189c11ba272b60acdc4594c450fbc6b6e2",
+    "action_data/runtime.py": "6542cc73f1aa2750e9481b2d4c527abaaaed6d9c21bd8c6413a85f77b9bf63ff",
+    "action_data/worker.py": "83b389463cad32fd9ecf37172e4b878cba5e22837558c565b9abb2ffec430576",
+    "action_data/build.py": "5f11abfdd4d4113245f032017f083f0640cedd4a728aa232ad2582918522cecc",
+    "action_data/roundtrip.py": "809eca2905f0af3f6355e4ec1eba960427be34c61154a7db28f6af017c294a3b",
+    "action_data/test_data.py": "4d2d1c3ca32f0cf0a5ff929b2c4738be5d21810b8e755df97fd28ef81ec3603b",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9",
+    "action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+    "experiments/wan22_native/codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "experiments/wan22_native/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "experiments/wan22_native/codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "experiments/wan22_native/codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+  }
+}

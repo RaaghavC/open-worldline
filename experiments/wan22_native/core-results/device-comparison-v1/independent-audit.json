@@ -1,0 +1,92 @@
+{
+  "schema": "wan22-device-comparison-independent-v1",
+  "status": "passed_readonly_arithmetic_audit",
+  "scalar_values_checked": 256,
+  "maximum_scalar_difference_from_original": 3.8746783559417963e-14,
+  "numeric_audit_tolerance": {
+    "absolute": 2e-13,
+    "relative": 1e-12,
+    "scope": "float64 reduction-order differences only; no model quality acceptance threshold"
+  },
+  "all_input_tensors_exact": true,
+  "all825_weight_metadata_records_equal": true,
+  "parameter_count_from_shapes": 4999787712,
+  "source_text_observation_sampler_identities_equal": true,
+  "known_prefix_exact_both": true,
+  "future_latent_comparison": {
+    "guided_velocity": {
+      "elements": 110592,
+      "mean_absolute_difference": 0.016494496810839497,
+      "root_mean_square_difference": 0.025746388527388368,
+      "maximum_absolute_difference": 0.6661226749420166,
+      "cpu_root_mean_square": 1.343925203852498,
+      "relative_rms_difference": 0.019157605239922378,
+      "cosine_similarity": 0.9998177370733384,
+      "exactly_equal_elements": 0
+    },
+    "negative_velocity": {
+      "elements": 110592,
+      "mean_absolute_difference": 0.003163929143250966,
+      "root_mean_square_difference": 0.005454692338602733,
+      "maximum_absolute_difference": 0.21825408935546875,
+      "cpu_root_mean_square": 1.2905802613343529,
+      "relative_rms_difference": 0.004226542511167057,
+      "cosine_similarity": 0.9999910701871689,
+      "exactly_equal_elements": 1
+    },
+    "one_step_latent": {
+      "elements": 110592,
+      "mean_absolute_difference": 6.709081762264664e-05,
+      "root_mean_square_difference": 0.0001047226272200354,
+      "maximum_absolute_difference": 0.0027093887329101562,
+      "cpu_root_mean_square": 0.9973910214712869,
+      "relative_rms_difference": 0.00010499656099325552,
+      "cosine_similarity": 0.9999999944886823,
+      "exactly_equal_elements": 44
+    },
+    "positive_velocity": {
+      "elements": 110592,
+      "mean_absolute_difference": 0.00313912733560973,
+      "root_mean_square_difference": 0.004966341873987029,
+      "maximum_absolute_difference": 0.20905590057373047,
+      "cpu_root_mean_square": 1.2940365832166083,
+      "relative_rms_difference": 0.003837868216710002,
+      "cosine_similarity": 0.9999926467761836,
+      "exactly_equal_elements": 1
+    }
+  },
+  "guidance_arithmetic": [
+    {
+      "device": "cpu",
+      "saved_guidance_vs_explicit_np_float32_max_abs": 0.0
+    },
+    {
+      "device": "mps",
+      "saved_guidance_vs_explicit_np_float32_max_abs": 0.0
+    }
+  ],
+  "input_file_sha256": {
+    "cpu": {
+      "metrics.json": "b8f1b035498278a1f5bc273b0526b7a17e70f09244f49b792952f2bd68df6b57",
+      "terminal.json": "bf7c395ff1544bf9195c0ccc949bcaf13e54f57bc10ca9abd17b7f61eb4943a5",
+      "inputs.safetensors": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+      "outputs.safetensors": "15b6993a7f5fe0057a41367208ea5f3d18fe49311fde28ce54c1f30a5d255c27",
+      "weight-load.json": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+    },
+    "mps": {
+      "metrics.json": "aef64c777014d295a4e5d2498081b145083bdf9aca463810b6c0c9f422165887",
+      "terminal.json": "f1bc1c73298ce1fe1f1869a33a0aed0fd5aa9e310d40bd1438b15263705f41fe",
+      "inputs.safetensors": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+      "outputs.safetensors": "70b6728371e5373b9e07b1055e2d23c59310d60f640b789240421ca6e42bc46d",
+      "weight-load.json": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+    }
+  },
+  "original_comparison_sha256": "cae7347c5768e032ad7ea6de880433b9c54a1cb7f52092007cb84d6ea3fe6e64",
+  "original_comparison_source_sha256": "0cc0115a24b9738801c4e367799f16a67d5ffcfaf55fa3a0dd1a7584917d9222",
+  "independent_audit_source_sha256": "015920d0034ecdf008c822ed2b4b364d5ab78195ddd31de43a4a90654e6b77ff",
+  "model_code_imported": false,
+  "official_weight_values_read": false,
+  "model_inference_executed": false,
+  "gpu_used": false,
+  "limits": "One initial positive/negative pair and one solver step. CPU also uses the declared selective-BF16 policy; neither execution is full-FP32 or official CUDA ground truth. These differences neither establish full-rollout equivalence nor identify the cause of failed video quality."
+}

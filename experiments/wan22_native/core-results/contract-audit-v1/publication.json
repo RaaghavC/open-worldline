@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "purpose": "Read-only source and retained-tensor review of a visually failed native clip; no model execution or quality claim",
+  "official_commit": "42bf4cfaa384bc21833865abc2f9e6c0e67233dc",
+  "copied_files": [
+    {
+      "published": "audit.md",
+      "original": "work/wan22-native-contract-audit.md",
+      "sha256": "251feb31fb6167cffbc58184167798de69670cc7575e486e99db20162ca93fba",
+      "bytes": 6913,
+      "byte_exact": true
+    },
+    {
+      "published": "wan22-native-contract-audit/arithmetic-checks.json",
+      "original": "work/wan22-native-contract-audit/arithmetic-checks.json",
+      "sha256": "6b334454e6938db13c104ca9bddb4a880df79c279d1fd21235bdb3905e017938",
+      "bytes": 1881,
+      "byte_exact": true
+    },
+    {
+      "published": "wan22-native-contract-audit/solver-comparison.json",
+      "original": "work/wan22-native-contract-audit/solver-comparison.json",
+      "sha256": "c47365c6b2fe5f8c68c6b7ead4d0e111e303579f4b3bbdf2f3c76e43e7409746",
+      "bytes": 372,
+      "byte_exact": true
+    },
+    {
+      "published": "wan22-native-contract-audit/wan_configs_shared_config.py",
+      "original": "work/wan22-native-contract-audit/wan_configs_shared_config.py",
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "bytes": 945,
+      "byte_exact": true
+    },
+    {
+      "published": "wan22-native-contract-audit/wan_modules_t5.py",
+      "original": "work/wan22-native-contract-audit/wan_modules_t5.py",
+      "sha256": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f",
+      "bytes": 16910,
+      "byte_exact": true
+    },
+    {
+      "published": "wan22-native-contract-audit/wan_utils_fm_solvers_unipc.py",
+      "original": "work/wan22-native-contract-audit/wan_utils_fm_solvers_unipc.py",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "bytes": 32558,
+      "byte_exact": true
+    },
+    {
+      "published": "wan22-native-contract-audit/wan_utils_utils.py",
+      "original": "work/wan22-native-contract-audit/wan_utils_utils.py",
+      "sha256": "905850d9814ac99222b4dbb28016abcd6306e5ca161493b498b1c4afb5a99e89",
+      "bytes": 7274,
+      "byte_exact": true
+    },
+    {
+      "published": "official-source/wan/textimage2video.py",
+      "original": "work/i2v-next-path-audit/wan22/wan/textimage2video.py",
+      "sha256": "228f2fabf23014ed41ec6b8cd713d5be7371bb558501c71a62a0258b491a877b",
+      "bytes": 24031,
+      "byte_exact": true
+    },
+    {
+      "published": "official-source/wan/configs/wan_ti2v_5B.py",
+      "original": "work/i2v-next-path-audit/wan22/wan/configs/wan_ti2v_5B.py",
+      "sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+      "bytes": 891,
+      "byte_exact": true
+    },
+    {
+      "published": "official-source/wan/modules/model.py",
+      "original": "work/i2v-next-path-audit/wan22/wan/modules/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "bytes": 18097,
+      "byte_exact": true
+    },
+    {
+      "published": "official-source/wan/modules/vae2_2.py",
+      "original": "work/i2v-next-path-audit/wan22/wan/modules/vae2_2.py",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846,
+      "byte_exact": true
+    },
+    {
+      "published": "reviewed-local-source/sample_clip.py.txt",
+      "original": "outputs/open-worldline/experiments/wan22_native/sample_clip.py",
+      "sha256": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a",
+      "bytes": 39918,
+      "byte_exact": true
+    },
+    {
+      "published": "reviewed-local-source/portable.py.txt",
+      "original": "outputs/open-worldline/experiments/wan22_native/portable.py",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "bytes": 11880,
+      "byte_exact": true
+    },
+    {
+      "published": "reviewed-local-source/codec.py.txt",
+      "original": "outputs/open-worldline/experiments/wan22_native/codec.py",
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+      "bytes": 8428,
+      "byte_exact": true
+    }
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "f6dd144e1752765ae557f8caa1342f2899a4df0cb8d77f4f24eb8248b9a693b3",
+      "bytes": 2157
+    },
+    "audit.md": {
+      "sha256": "251feb31fb6167cffbc58184167798de69670cc7575e486e99db20162ca93fba",
+      "bytes": 6913
+    },
+    "official-source/wan/configs/wan_ti2v_5B.py": {
+      "sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+      "bytes": 891
+    },
+    "official-source/wan/modules/model.py": {
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "bytes": 18097
+    },
+    "official-source/wan/modules/vae2_2.py": {
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846
+    },
+    "official-source/wan/textimage2video.py": {
+      "sha256": "228f2fabf23014ed41ec6b8cd713d5be7371bb558501c71a62a0258b491a877b",
+      "bytes": 24031
+    },
+    "reviewed-local-source/codec.py.txt": {
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+      "bytes": 8428
+    },
+    "reviewed-local-source/portable.py.txt": {
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "bytes": 11880
+    },
+    "reviewed-local-source/sample_clip.py.txt": {
+      "sha256": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a",
+      "bytes": 39918
+    },
+    "wan22-native-contract-audit/arithmetic-checks.json": {
+      "sha256": "6b334454e6938db13c104ca9bddb4a880df79c279d1fd21235bdb3905e017938",
+      "bytes": 1881
+    },
+    "wan22-native-contract-audit/solver-comparison.json": {
+      "sha256": "c47365c6b2fe5f8c68c6b7ead4d0e111e303579f4b3bbdf2f3c76e43e7409746",
+      "bytes": 372
+    },
+    "wan22-native-contract-audit/wan_configs_shared_config.py": {
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "bytes": 945
+    },
+    "wan22-native-contract-audit/wan_modules_t5.py": {
+      "sha256": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f",
+      "bytes": 16910
+    },
+    "wan22-native-contract-audit/wan_utils_fm_solvers_unipc.py": {
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "bytes": 32558
+    },
+    "wan22-native-contract-audit/wan_utils_utils.py": {
+      "sha256": "905850d9814ac99222b4dbb28016abcd6306e5ca161493b498b1c4afb5a99e89",
+      "bytes": 7274
+    }
+  }
+}

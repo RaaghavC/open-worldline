@@ -1,0 +1,6995 @@
+{
+  "source": "Existing local pinned Wan2.2 checkpoint headers only, no tensor data read",
+  "headers": [
+    {
+      "file": "diffusion_pytorch_model-00001-of-00003.safetensors",
+      "header_bytes": 41664,
+      "header_sha256": "99fd56044679f8b2d5650d086d7efe769feceae6c8dd8f2d19801ac6f8020960"
+    },
+    {
+      "file": "diffusion_pytorch_model-00002-of-00003.safetensors",
+      "header_bytes": 41376,
+      "header_sha256": "cb940f3e56aa8688ae901e5890595a03b2c5a2d1e57baae2d80a148d891f8830"
+    },
+    {
+      "file": "diffusion_pytorch_model-00003-of-00003.safetensors",
+      "header_bytes": 472,
+      "header_sha256": "35265405793b02264d347ee5e49186fe4e9b427ae535a55c4e9e6f8bd0a1db82"
+    }
+  ],
+  "common_keys": [
+    {
+      "key": "blocks.0.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.0.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.1.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.10.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.11.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.12.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.13.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.2.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.3.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.4.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.5.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.6.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.7.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.8.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.9.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "patch_embedding.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "patch_embedding.weight",
+      "shape": [
+        3072,
+        48,
+        1,
+        2,
+        2
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "text_embedding.0.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "text_embedding.0.weight",
+      "shape": [
+        3072,
+        4096
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "text_embedding.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "text_embedding.2.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "time_embedding.0.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "time_embedding.0.weight",
+      "shape": [
+        3072,
+        256
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "time_embedding.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "time_embedding.2.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "time_projection.1.bias",
+      "shape": [
+        18432
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "time_projection.1.weight",
+      "shape": [
+        18432,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.14.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.15.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.16.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.17.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.18.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.19.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.20.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.21.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.22.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.23.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.24.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.25.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.26.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.27.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.28.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.cross_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.ffn.0.bias",
+      "shape": [
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.ffn.0.weight",
+      "shape": [
+        14336,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.modulation",
+      "shape": [
+        1,
+        6,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.norm3.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.norm3.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.k.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.k.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.norm_k.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.norm_q.weight",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.o.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.o.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.q.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.q.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.v.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.self_attn.v.weight",
+      "shape": [
+        3072,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.ffn.2.bias",
+      "shape": [
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "blocks.29.ffn.2.weight",
+      "shape": [
+        3072,
+        14336
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "head.head.bias",
+      "shape": [
+        192
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "head.head.weight",
+      "shape": [
+        192,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    },
+    {
+      "key": "head.modulation",
+      "shape": [
+        1,
+        2,
+        3072
+      ],
+      "native_dtype": "F32",
+      "abot_dtype": "BF16"
+    }
+  ],
+  "all_shapes_match": true
+}

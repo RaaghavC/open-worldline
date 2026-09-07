@@ -1,0 +1,95 @@
+{
+  "revision": "d26a3003701e70d38cd17e2af2faf63bd4ff7632",
+  "source_url": "https://huggingface.co/acvlab/ABot-World-0-5B-LF/resolve/d26a3003701e70d38cd17e2af2faf63bd4ff7632/diffusion_pytorch_model.safetensors",
+  "header_bytes": 85152,
+  "header_sha256": "2e7e3e4394c5a77f4618c9444b883842f74cd9150b73a8ccdfb47cb64bc3c865",
+  "content_length": 10540744232,
+  "tensor_count": 831,
+  "parameter_counts": {
+    "BF16": 5270329536
+  },
+  "action_adapter": [
+    {
+      "key": "act_control_adapter.conv.bias",
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        0,
+        6144
+      ],
+      "parameters": 3072
+    },
+    {
+      "key": "act_control_adapter.conv.weight",
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        8192,
+        2,
+        2
+      ],
+      "data_offsets": [
+        6144,
+        201332736
+      ],
+      "parameters": 100663296
+    },
+    {
+      "key": "act_control_adapter.residual_blocks.0.conv1.bias",
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        201332736,
+        201338880
+      ],
+      "parameters": 3072
+    },
+    {
+      "key": "act_control_adapter.residual_blocks.0.conv1.weight",
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        3072,
+        3,
+        3
+      ],
+      "data_offsets": [
+        201338880,
+        371208192
+      ],
+      "parameters": 84934656
+    },
+    {
+      "key": "act_control_adapter.residual_blocks.0.conv2.bias",
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        371208192,
+        371214336
+      ],
+      "parameters": 3072
+    },
+    {
+      "key": "act_control_adapter.residual_blocks.0.conv2.weight",
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        3072,
+        3,
+        3
+      ],
+      "data_offsets": [
+        371214336,
+        541083648
+      ],
+      "parameters": 84934656
+    }
+  ],
+  "read_scope": "Only the first 8 bytes and complete JSON header via verified HTTP 206 ranges. No tensor payload was downloaded."
+}

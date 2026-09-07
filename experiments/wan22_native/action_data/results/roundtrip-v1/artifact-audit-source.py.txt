@@ -1,0 +1,75 @@
+"""Read-only audit of retained original RGB and FP32 reconstruction evidence."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import struct
+
+import numpy as np
+from PIL import Image
+
+
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+def array_sha(value):return hashlib.sha256(np.ascontiguousarray(value).tobytes()).hexdigest()
+
+def arrays(path):
+    content=Path(path).read_bytes();n=struct.unpack('<Q',content[:8])[0];header=json.loads(content[8:8+n]);start=8+n
+    values={}
+    for name,spec in header.items():
+        if name=='__metadata__':continue
+        dtype={'F32':'<f4','U8':'u1'}[spec['dtype']];a,b=spec['data_offsets']
+        values[name]=np.frombuffer(content[start+a:start+b],dtype=dtype).reshape(spec['shape'])
+    return values
+
+
+def audit(root,repo):
+    result=root/'result';r=json.loads((result/'metrics.json').read_text());terminal=json.loads((root/'terminal.json').read_text())
+    assert r['status']=='passed' and terminal['status']=='complete' and terminal['exit_code']==0
+    assert not list(root.rglob('watchdog-stop.json'))
+    output_checks={name:sha(result/name)==digest for name,digest in r['output_sha256'].items()}
+    assert all(output_checks.values())
+    sources={}
+    for name,digest in r['source_sha256'].items():
+        original=repo/('experiments/wan22_native/'+name if name.startswith('action_data/') else name)
+        saved=result/'measured-source'/(name+'.txt')
+        sources[name]=sha(original)==sha(saved)==digest
+    assert all(sources.values())
+    rgb=arrays(result/'rgb-input.safetensors')['rgb'];encoded=arrays(result/'encoded.safetensors')
+    reconstruction=arrays(result/'reconstruction.safetensors')['reconstruction']
+    assert rgb.shape==(17,288,512,3) and reconstruction.shape==(1,3,17,288,512)
+    assert encoded['target'].shape==(1,48,5,18,32) and encoded['observation'].shape==(1,48,1,18,32)
+    assert np.isfinite(reconstruction).all() and all(np.isfinite(v).all() for v in encoded.values())
+    exact_prefix=np.array_equal(encoded['target'][:,:,:1],encoded['observation']);assert exact_prefix
+    first=arrays(repo/'experiments/wan22_native/codec-results/first-image-v2/observation.safetensors')['observation']
+    assert np.array_equal(first,encoded['observation'])
+    pred=((reconstruction[0].transpose(1,2,3,0)+1)/2).clip(0,1)
+    truth=rgb.astype(np.float32)/255.;difference=(pred-truth).astype(np.float64)
+    scores={'mse_rgb_0_1':float(np.mean(difference**2)),'mae_rgb_0_1':float(np.mean(np.abs(difference)))}
+    assert scores['mse_rgb_0_1']==r['reconstruction']['all_frames']['mse_rgb_0_1']
+    assert scores['mae_rgb_0_1']==r['reconstruction']['all_frames']['mae_rgb_0_1']
+    expected=np.rint(pred*255).astype(np.uint8)
+    png_checks=[]
+    for i in range(17):
+        a=np.array(Image.open(result/'truth'/f'{i:04d}.png'));b=np.array(Image.open(result/'reconstruction'/f'{i:04d}.png'))
+        png_checks.append({'frame':i,'truth_exact':bool(np.array_equal(a,rgb[i])),'reconstruction_exact':bool(np.array_equal(b,expected[i]))})
+    assert all(x['truth_exact'] and x['reconstruction_exact'] for x in png_checks)
+    memory=[json.loads(line) for line in (result/'memory.jsonl').read_text().splitlines()]
+    cleanup=r['per_convolution_cleanup_report'];assert cleanup['cleanup_calls']==cleanup['completed_cleanups']==323
+    assert cleanup['hooks_removed'] and r['cache_clear_after_operations']
+    return {'status':'passed','scope':'Independent read-only artifact audit; no codec or model execution',
+        'metrics_sha256':sha(result/'metrics.json'),'terminal_sha256':sha(root/'terminal.json'),
+        'output_hash_checks':output_checks,'source_hash_checks':sources,'png_checks':png_checks,
+        'independently_recomputed_scores':scores,'prefix_exact':exact_prefix,'original_first_image_cache_exact':True,
+        'observation_tensor_sha256':array_sha(encoded['observation']),
+        'finite_all_encoded_and_decoded_values':True,'registered_convolution_layers':cleanup['registered_layers'],
+        'invoked_convolution_layers':sum(row['calls']>0 for row in cleanup['layers'].values()),
+        'completed_cleanup_calls':cleanup['completed_cleanups'],
+        'minimum_available_memory_bytes':min(row['available_bytes'] for row in memory),
+        'maximum_sampled_driver_bytes':max(row['mps_driver_bytes'] for row in memory),
+        'actual_weight_loads_in_audit':0,'actual_gpu_operations_in_audit':0}
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--repo',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+    if a.output.exists():raise ValueError('New audit output required')
+    a.output.write_text(json.dumps(audit(a.run,a.repo),indent=2)+'\n')

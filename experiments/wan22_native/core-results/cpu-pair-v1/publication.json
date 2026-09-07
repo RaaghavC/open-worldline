@@ -1,0 +1,121 @@
+{
+  "status": "complete_byte_exact_copy",
+  "files": [
+    {
+      "file": "inputs.safetensors",
+      "bytes": 1222608,
+      "sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5"
+    },
+    {
+      "file": "launch.json",
+      "bytes": 2410,
+      "sha256": "af8032c68f5a966dd0db68401f86f0ef2d2a902ebd2c2f149cb3518903657e65"
+    },
+    {
+      "file": "measured-source/config.json.txt",
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    {
+      "file": "measured-source/load_weights.py.txt",
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    {
+      "file": "measured-source/portable.py.txt",
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    {
+      "file": "measured-source/profile_core.py.txt",
+      "bytes": 19225,
+      "sha256": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0"
+    },
+    {
+      "file": "measured-source/provenance.json.txt",
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    {
+      "file": "measured-source/test_core.py.txt",
+      "bytes": 13235,
+      "sha256": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020"
+    },
+    {
+      "file": "measured-source/text-reuse.json.txt",
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    {
+      "file": "measured-source/vendor/attention.py.txt",
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    {
+      "file": "measured-source/vendor/model.py.txt",
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    {
+      "file": "measured-source/vendor/shared_config.py.txt.txt",
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    {
+      "file": "measured-source/weights.index.json.txt",
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    {
+      "file": "memory.jsonl",
+      "bytes": 147303,
+      "sha256": "d0aa592092af3b2e4c199b98410f8d145556773567714fea7c38aae31b7211a7"
+    },
+    {
+      "file": "metrics.json",
+      "bytes": 5580,
+      "sha256": "b8f1b035498278a1f5bc273b0526b7a17e70f09244f49b792952f2bd68df6b57"
+    },
+    {
+      "file": "outputs.safetensors",
+      "bytes": 2212200,
+      "sha256": "15b6993a7f5fe0057a41367208ea5f3d18fe49311fde28ce54c1f30a5d255c27"
+    },
+    {
+      "file": "reused-source/experiments/room_world/memory_train.py.txt",
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/native_control/portable.py.txt",
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt",
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/text_cache/cache.py.txt",
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    {
+      "file": "terminal.json",
+      "bytes": 100720,
+      "sha256": "bf7c395ff1544bf9195c0ccc949bcaf13e54f57bc10ca9abd17b7f61eb4943a5"
+    },
+    {
+      "file": "weight-load.json",
+      "bytes": 370671,
+      "sha256": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+    },
+    {
+      "file": "worker.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "no_external_foundation_weights_redistributed": true
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "worldline-wan22-post29-action-adapter-cpu-v1",
+  "status": "passed",
+  "tests": 24,
+  "test_records": [
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_native_parameter_count_and_all_fp32",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0034822910092771053
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_exact_zero_identity_to_untouched_native_core[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01950249998481013
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_exact_zero_identity_to_untouched_native_core[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.01219554099952802
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_encoder_retains_order_and_is_causal_with_fresh_per_call_state",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.028417249995982274
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_residual_masks_observed_tokens_and_padding_without_mutation",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0015562089974991977
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_nonzero_head_keeps_adapter_gradient_path_and_frozen_prefix[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012075999984517694
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_nonzero_head_keeps_adapter_gradient_path_and_frozen_prefix[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.011241915985010564
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_sequential_half_losses_equal_batch_pair_gradients[fp32]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.02064845900167711
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_sequential_half_losses_equal_batch_pair_gradients[selective_bf16]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.02141795799252577
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_disabled_external_autocast_and_normal_features_from_inference_caller",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.012951916985912248
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[noisy_shape]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005286333995172754
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[noisy_nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005156667000846937
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[command_shape]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004975249990820885
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[command_nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006618500017793849
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[pulse]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.005075624998426065
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[observation_mismatch]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004794707987457514
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[time_dtype]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0048817079805303365
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[time_prefix]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004892584023764357
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[time_future]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0049834169913083315
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[context_nan]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.006164750026073307
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[context_shape]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.0053758330177515745
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_invalid_inputs_are_rejected_before_frozen_extraction[adapter_dtype]",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004987916006939486
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_feature_ownership_and_metadata_rejection",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.011468915996374562
+    },
+    {
+      "test": "experiments/wan22_native/action_adapter/test_cpu.py::test_native_default_rejects_tiny_core_and_unfrozen_head",
+      "phase": "call",
+      "outcome": "passed",
+      "seconds": 0.004830791993299499
+    }
+  ],
+  "elapsed_seconds": 1.8425411250209436,
+  "source_sha256": {
+    "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "experiments/wan22_native/action_adapter/model.py": "77b1232757ce1f030b5526975791f795aba6e77cb06a3afb56d08ac1f28a6c6c",
+    "experiments/wan22_native/action_adapter/wrapper.py": "964432182196fd859ec6b965e7d66216f27166662584c8279724b5d86b3f4157",
+    "experiments/wan22_native/action_adapter/test_cpu.py": "54a96d07b7cea8fb5f4a66bf197b49eec8c606a42b79deea0360e6cbc49e1e01",
+    "experiments/wan22_native/action_adapter/README.md": "5e439b5381f931850600c4765517a780eb7fb6d1bc89586a294b3063d23bfbb4",
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "experiments/wan22_native/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+    "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/NOTICE": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+    "experiments/wan22_native/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+  },
+  "source_unchanged_after_tests": true,
+  "execution": {
+    "device": "cpu",
+    "threads": 1,
+    "official_parameter_values_loaded": false,
+    "gpu_used": false,
+    "model_training": "Only two-update tiny random-weight CPU fixtures; no native5B training"
+  },
+  "native_adapter_trainable_parameters": 947712,
+  "adapter_dtype": "float32",
+  "runtime": {
+    "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "torch": "2.5.1",
+    "diffusers": "0.34.0",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3",
+    "pytest": "7.4.4"
+  },
+  "command": "work/wan-adapter-env/bin/python work/report-wan22-action-adapter-cpu.py; append existing base site-packages after environment paths; pytest only action_adapter/test_cpu.py",
+  "report_source_sha256": "90b3d18dac0ac50f91aad94f51369d6cce9d208be1bca009fbb6bca0b64a770b",
+  "design_sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+  "initial_failure": {
+    "passed": 23,
+    "failed": 1,
+    "batch_size_rounding_max_abs": 2.9802322387695312e-08,
+    "correction": "Exact same-batch session isolation retained; B1/B2 agreement uses atol1e-7 and rtol1e-6. No product arithmetic changed to force equality."
+  },
+  "limits": [
+    "Random tiny CPU core values only, both FP32 and selective BF16.",
+    "No actual native5B backward memory, speed or image quality measurement.",
+    "Native fullclip visual failure keeps actual training gate closed.",
+    "Data and text provenance must be verified by the future guarded runner."
+  ]
+}

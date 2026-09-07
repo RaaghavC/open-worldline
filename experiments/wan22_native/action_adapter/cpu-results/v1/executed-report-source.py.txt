@@ -1,0 +1,68 @@
+"""Run only small CPU fixtures and retain exact source and result metadata."""
+import contextlib
+import hashlib
+import importlib.metadata
+import io
+import json
+from pathlib import Path
+import shutil
+import sys
+import time
+
+ROOT = Path(__file__).resolve().parents[1]
+REPO = ROOT / 'outputs/open-worldline'
+PACKAGE = REPO / 'experiments/wan22_native/action_adapter'
+OUT = PACKAGE / 'cpu-results/v1'
+OUT.mkdir(parents=True, exist_ok=False)
+sys.path.insert(0, str(REPO))
+sys.path.append(sys.base_prefix + '/lib/python3.11/site-packages')
+import pytest
+import torch
+
+torch.set_num_threads(1)
+files = ['experiments/wan22_native/action_adapter/' + n for n in ('__init__.py', 'model.py', 'wrapper.py', 'test_cpu.py', 'README.md')]
+files += ['experiments/wan22_native/' + n for n in ('__init__.py', 'portable.py', 'config.json', 'vendor/__init__.py', 'vendor/model.py', 'vendor/attention.py', 'NOTICE', 'LICENSE-APACHE-2.0.txt')]
+files += ['experiments/wan_adapter/native_control/portable.py']
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+before = {name: sha(REPO / name) for name in files}
+for name in files:
+    target = OUT / 'checked-source' / (name + '.txt')
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(REPO / name, target)
+shutil.copyfile(__file__, OUT / 'executed-report-source.py.txt')
+shutil.copytree(ROOT / 'work/wan22-action-adapter-cpu/attempt-1', OUT / 'initial-failed-test')
+
+class Records:
+    def __init__(self): self.results = []
+    def pytest_runtest_logreport(self, report):
+        if report.when == 'call' or report.failed:
+            self.results.append({'test': report.nodeid, 'phase': report.when, 'outcome': report.outcome, 'seconds': report.duration})
+
+records, log = Records(), io.StringIO()
+started = time.monotonic()
+with contextlib.redirect_stdout(log), contextlib.redirect_stderr(log):
+    status = pytest.main([str(PACKAGE / 'test_cpu.py'), '-q'], plugins=[records])
+elapsed = time.monotonic()-started
+after = {name: sha(REPO / name) for name in files}
+(OUT / 'pytest.log').write_text(log.getvalue())
+result = {
+    'schema': 'worldline-wan22-post29-action-adapter-cpu-v1',
+    'status': 'passed' if status == 0 and before == after else 'failed',
+    'tests': sum(row['phase'] == 'call' for row in records.results), 'test_records': records.results,
+    'elapsed_seconds': elapsed, 'source_sha256': before, 'source_unchanged_after_tests': before == after,
+    'execution': {'device': 'cpu', 'threads': 1, 'official_parameter_values_loaded': False, 'gpu_used': False,
+                  'model_training': 'Only two-update tiny random-weight CPU fixtures; no native5B training'},
+    'native_adapter_trainable_parameters': 947712, 'adapter_dtype': 'float32',
+    'runtime': {'python': sys.version, **{name: importlib.metadata.version(name) for name in ('torch', 'diffusers', 'numpy', 'safetensors', 'pytest')}},
+    'command': 'work/wan-adapter-env/bin/python work/report-wan22-action-adapter-cpu.py; append existing base site-packages after environment paths; pytest only action_adapter/test_cpu.py',
+    'report_source_sha256': sha(__file__), 'design_sha256': sha(ROOT/'work/native5b-adapter-feasibility.md'),
+    'initial_failure': {'passed': 23, 'failed': 1, 'batch_size_rounding_max_abs': 2.9802322387695312e-08,
+                        'correction': 'Exact same-batch session isolation retained; B1/B2 agreement uses atol1e-7 and rtol1e-6. No product arithmetic changed to force equality.'},
+    'limits': ['Random tiny CPU core values only, both FP32 and selective BF16.',
+               'No actual native5B backward memory, speed or image quality measurement.',
+               'Native fullclip visual failure keeps actual training gate closed.',
+               'Data and text provenance must be verified by the future guarded runner.']}
+(OUT/'report.json').write_text(json.dumps(result, indent=2)+'\n')
+print(json.dumps({'status':result['status'],'tests':result['tests'],'elapsed_seconds':elapsed,'report':str(OUT/'report.json'),'sha256':sha(OUT/'report.json')}))
+raise SystemExit(0 if result['status']=='passed' else 1)
