@@ -94,6 +94,8 @@ The separate [Wan2.2 TI2V-5B execution experiment](experiments/wan22_native/READ
 
 An [independent upstream-equation CPU comparison](experiments/wan22_native/official_cpu/README.md) subsequently completed in 507 seconds of worker time while loading one block at a time. All 825 original weight hashes matched. The earlier CPU guided prediction differed by 2.27% of the reference RMS at the initial noise level; the Mac difference was 1.99%. This numerical comparison does not identify the cause of the failed generated video.
 
+The next [prepared CUDA comparison](experiments/wan22_native/cuda_reference/README.md) uses the original FP32 weights, upstream model and FlashAttention 2 with the same retained inputs. It provides an initial prediction pair and a separately selected 50-step diagnostic clip. No CUDA run has occurred. The [one-GPU setup and cleanup plan](docs/cloud-gpu-diagnostic-2026-09-07.md) records current advertised prices and the distinction between stopping computation and ending rental charges.
+
 The [terrain-data scaling proposal](docs/cloud-experiment.md) specifies a paired comparison of training dataset sizes, fresh evaluation data, acceptance thresholds and optional compute costs. That proposed experiment has not been run or scheduled.
 
 ## Project layout

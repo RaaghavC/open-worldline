@@ -1,0 +1,12 @@
+{
+  "hypothetical_gpu_name": "NVIDIA A100-SXM4-80GB",
+  "hypothetical_only": true,
+  "hardware_probed": false,
+  "account_accessed": false,
+  "CUDA_used": false,
+  "parameter_values_loaded": false,
+  "raw_plan_report_sha256": "80b7c80b24569a98a44964e6501694c9f963bc20b0ab99305ceb274f55822ce8",
+  "command_working_directory": "repository root",
+  "executed_command": "../../work/wan-adapter-env/bin/python -m experiments.wan22_native.cuda_reference.run --mode pair --expected-gpu \"NVIDIA A100-SXM4-80GB\" --weights ../../work/wan22-ti2v5b-weights --pair-directory experiments/wan22_native/core-results/cpu-pair-v1 --text-directory experiments/wan_adapter/text_cache/native-results --cpu-report experiments/wan22_native/cuda_reference/cpu-results/author-v2/report.json --independent-report experiments/wan22_native/cuda_reference/cpu-results/independent-v1/report.json --output ../../work/wan22-cuda-reference-pair-plan-v1",
+  "limitation": "Expected GPU and weight-directory arguments are hypothetical execution inputs in this plan. This plan validates saved inputs and reviewed source, not GPU availability, weights at that path, or CUDA installation."
+}

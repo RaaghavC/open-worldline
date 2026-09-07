@@ -1,0 +1,170 @@
+# SPDX-License-Identifier: Apache-2.0
+"""CPU protocol tests only. No CUDA, full-weight reads or foundation forwards."""
+import argparse
+import copy
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+import unittest
+from unittest import mock
+import torch
+from ..official_cpu.inputs import load_inputs,read_exact
+from ..official_cpu.streaming import sha,tensor_sha
+from . import evidence,guards,sampling
+from .native import verify_sources
+
+REPO=evidence.REPO
+PAIR=REPO/'experiments/wan22_native/core-results/cpu-pair-v1'
+TEXT=REPO/'experiments/wan_adapter/text_cache/native-results'
+
+
+def gpu_fixture():
+    return {'name':'Fixture A100 80GB','total_memory_bytes':80*2**30,'capability':[8,0],
+        'bf16_supported':True,'torch':'2.5.1+cu124','cuda':'12.4','flash_attn':'2.7.4.post1',
+        'flash_attention_2_available':True,'flash_attention_3_available':False}
+
+
+def pair_fixture(root):
+    values,contexts,identity=load_inputs(PAIR,TEXT);mapping=evidence.sources();root=Path(root)
+    result=root/'core/result';result.mkdir(parents=True)
+    for name,digest in mapping.items():
+        path=root/'measured-source'/(name+'.txt');path.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(evidence.source_path(name),path)
+    for src,name in [(PAIR/'inputs.safetensors','inputs.safetensors'),(TEXT/'embeddings.safetensors','contexts.safetensors'),(TEXT/'manifest.json','text-manifest.json')]:
+        shutil.copyfile(src,root/name)
+    expected=json.loads((evidence.HERE/'expected-weights.json').read_text())['tensors']
+    weights={'convert_model_dtype':False,'all_shards_verified':True,'cuda_copy_exact':True,'tensor_count':825,
+        'parameter_count':4999787712,'parameter_bytes':19999150848,'tensors':{n:{'original_dtype':'float32','loaded_dtype':'float32',
+        'loaded_sha256':v['original_sha256'],'source_sha256':v['original_sha256'],'shape':v['shape'],'shard':v['shard'],
+        'cuda_copy_exact':True,'source_owner_released':True}for n,v in expected.items()}}
+    guards.atomic(result/'weight-load.json',weights)
+    for name in ('outputs.safetensors','completed-positive.safetensors','completed-negative.safetensors'):(result/name).write_bytes(b'fixture: no actual inference')
+    report={'status':'passed','source_sha256':mapping,'input_identity':identity,'settings':sampling.SETTINGS,'predictions':2,'solver_updates':0,
+        'finite_outputs':True,'limits':guards.LIMITS,'hardware':gpu_fixture(),'precision':evidence.PRECISION,'input_tensors_unchanged':True,
+        'load_seconds':10.,'pair_seconds':2.,'output_sha256':{p.name:sha(p)for p in result.iterdir()}}
+    guards.atomic(result/'metrics.json',report);guards.atomic(root/'core/terminal.json',{'status':'complete','exit_code':0})
+    parent={'status':'passed','mode':'pair','source_sha256':mapping,'input_identity':identity,'limits':guards.LIMITS,
+        'core_report_sha256':sha(result/'metrics.json'),'core_terminal_sha256':sha(root/'core/terminal.json'),'elapsed_seconds':15.,
+        'copied_input_sha256':{n:sha(root/n)for n in ('inputs.safetensors','contexts.safetensors','text-manifest.json')}}
+    guards.atomic(root/'metrics.json',parent)
+    return mapping,identity
+
+
+class Tests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):torch.set_num_threads(1)
+
+    def test_pinned_sources_and_saved_input_values(self):
+        verify_sources();values,contexts,identity=load_inputs(PAIR,TEXT)
+        self.assertFalse(identity['noise_regenerated']);self.assertEqual(values['token_times'].shape,(1,720))
+        self.assertTrue(torch.equal(values['initial_latent'][:,:1],values['observation'][0]))
+        self.assertEqual(contexts['atrium'].shape,(25,4096));self.assertEqual(contexts['native_negative'].shape,(126,4096))
+        self.assertEqual(sha(PAIR/'inputs.safetensors'),identity['pair_files']['inputs.safetensors'])
+
+    def test_cli_help_has_explicit_execution_and_no_model_or_gpu_probe(self):
+        from . import run
+        with mock.patch.object(sys,'argv',['run','--help']),mock.patch.object(run,'hardware',side_effect=AssertionError('GPU probe during help')):
+            with self.assertRaises(SystemExit)as caught:run.main()
+        self.assertEqual(caught.exception.code,0)
+
+    def test_schedule_mask_and_integer_times(self):
+        s=sampling.scheduler();self.assertEqual(len(s.timesteps),50);self.assertEqual(s.timesteps.dtype,torch.int64)
+        self.assertEqual(s.sigmas.dtype,torch.float32);self.assertEqual(s.sigmas[-1],0)
+        self.assertTrue((s.timesteps[:-1]>s.timesteps[1:]).all())
+        for t in s.timesteps:
+            value=sampling.times_at(t);self.assertTrue((value[:,:144]==0).all());self.assertTrue((value[:,144:]==t).all())
+        for bad in (torch.tensor(999.),torch.tensor([1,2]),torch.tensor(1000),torch.tensor(-1)):
+            with self.assertRaises(ValueError):sampling.times_at(bad)
+
+    def test_100_calls_projection_no_rng_and_future_state_feedback(self):
+        values,contexts,_=load_inputs(PAIR,TEXT);before={k:tensor_sha(v)for k,v in values.items()};calls=[];steps=[]
+        def predict(x,t,c):
+            self.assertTrue(torch.equal(x[:,:1],values['observation'][0]));self.assertTrue((t[:,:144]==0).all())
+            label='positive'if c is contexts['atrium']else'negative';calls.append((x.clone(),t.clone(),label))
+            return x*.02+(0.15 if label=='positive'else 0.1)
+        actual=sampling.sample(predict,values,contexts,event=lambda i,t,x,r:steps.append(x.clone()))
+        self.assertEqual(len(calls),100);self.assertEqual(len(steps),50)
+        for i in range(50):
+            pos,neg=calls[2*i:2*i+2];self.assertTrue(torch.equal(pos[0],neg[0]));self.assertTrue(torch.equal(pos[1],neg[1]))
+            self.assertEqual((pos[2],neg[2]),('positive','negative'))
+            if i:self.assertTrue(torch.equal(pos[0],steps[i-1]))
+        self.assertFalse(torch.equal(actual[:,1:],values['initial_noise'][:,1:]));self.assertEqual(before,{k:tensor_sha(v)for k,v in values.items()})
+        # Independent projected solver loop with the analytically guided velocity.
+        solver=sampling.scheduler();expected=values['initial_latent'].clone()
+        for t in solver.timesteps:
+            positive=expected*.02+.15;negative=expected*.02+.1
+            expected=solver.step((negative+5*(positive-negative)).unsqueeze(0),t,expected.unsqueeze(0),return_dict=False)[0][0]
+            expected[:,:1]=values['observation'][0]
+        self.assertTrue(torch.equal(actual,expected))
+
+    def test_pair_rejects_overflow_and_preserves_positive_partial(self):
+        values,contexts,_=load_inputs(PAIR,TEXT);kept=[]
+        def failure(x,t,c):
+            if c is contexts['native_negative']:raise KeyboardInterrupt('fixture')
+            return torch.ones_like(x)
+        with self.assertRaises(KeyboardInterrupt):sampling.pair(failure,values['initial_latent'],values['token_times'],contexts['atrium'],contexts['native_negative'],values['observation'],lambda label,r:kept.append(label))
+        self.assertEqual(kept,['positive'])
+        def huge(x,t,c):return torch.full_like(x,2e38 if c is contexts['atrium']else -2e38)
+        with self.assertRaises(FloatingPointError):sampling.pair(huge,values['initial_latent'],values['token_times'],contexts['atrium'],contexts['native_negative'],values['observation'])
+
+    def test_hardware_and_memory_deadline_rejection(self):
+        base=gpu_fixture();guards.validate_hardware(base,base['name'])
+        for k,v in [('total_memory_bytes',24*2**30),('total_memory_bytes',float('nan')),('bf16_supported',False),('flash_attention_2_available',False),
+                    ('flash_attention_3_available',True),('cuda','12.1'),('capability',[7,5])]:
+            bad=dict(base);bad[k]=v
+            with self.assertRaises(ValueError):guards.validate_hardware(bad,base['name'])
+        row={'host_rss_bytes':2**30,'cuda_reserved_bytes':20*2**30,'host_available_bytes':12*2**30,'cuda_available_bytes':40*2**30}
+        guards.check_sample(row,100,now=1)
+        for k,v in [('host_rss_bytes',49*2**30),('cuda_reserved_bytes',61*2**30),('host_available_bytes',7*2**30),('cuda_available_bytes',7*2**30)]:
+            bad=dict(row);bad[k]=v
+            with self.assertRaises(RuntimeError):guards.check_sample(bad,100,now=1)
+        with self.assertRaises(RuntimeError):guards.check_sample(row,100,now=100)
+
+    def test_completed_pair_gate_and_missing_changed_incomplete_evidence(self):
+        with tempfile.TemporaryDirectory()as d:
+            root=Path(d);mapping,identity=pair_fixture(root)
+            r=evidence.validate_pair(root,mapping,identity,gpu_fixture()['name']);self.assertEqual(r['estimated_seconds'],282.)
+            parent=json.loads((root/'metrics.json').read_text())
+            for key,value in [('status','failed'),('mode','clip'),('copied_input_sha256',{})]:
+                guards.atomic(root/'metrics.json',dict(parent,**{key:value}))
+                with self.assertRaises(ValueError):evidence.validate_pair(root,mapping,identity,gpu_fixture()['name'])
+            guards.atomic(root/'metrics.json',parent)
+            (root/'watchdog-stop.json').write_text('{}')
+            with self.assertRaises(ValueError):evidence.validate_pair(root,mapping,identity,gpu_fixture()['name'])
+            (root/'watchdog-stop.json').unlink();target=root/'measured-source/native.py.txt';target.write_text('changed fixture')
+            with self.assertRaises(ValueError):evidence.validate_pair(root,mapping,identity,gpu_fixture()['name'])
+
+    def test_stale_cpu_report_rejected(self):
+        with tempfile.TemporaryDirectory()as d:
+            p=Path(d)/'report.json';r={'status':'passed','tests':8,'source_sha256':evidence.sources()};guards.atomic(p,r)
+            evidence.preflight(p);r['source_sha256']['sampling.py']='changed';guards.atomic(p,r)
+            with self.assertRaises(ValueError):evidence.preflight(p)
+
+    def test_terminate_escalates_for_stubborn_child(self):
+        code='import signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);print("ready",flush=True);time.sleep(30)'
+        proc=subprocess.Popen([sys.executable,'-c',code],stdout=subprocess.PIPE,text=True)
+        try:self.assertEqual(proc.stdout.readline().strip(),'ready');guards.stop_child(proc);self.assertIsNotNone(proc.poll())
+        finally:
+            if proc.poll()is None:proc.kill();proc.wait()
+            proc.stdout.close()
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--output',type=Path);a=p.parse_args()
+    if a.output and a.output.exists():raise ValueError('Fresh CPU report directory required')
+    before=evidence.sources();started=time.monotonic();result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
+    after=evidence.sources();report={'status':'passed'if result.wasSuccessful()and before==after else'failed','tests':result.testsRun,
+        'elapsed_seconds':time.monotonic()-started,'source_sha256':after,'sources_unchanged':before==after,
+        'CUDA_used':False,'foundation_model_executed':False,'full_weight_values_read':False,'scope':'CPU protocol, source, input and guard checks only'}
+    if a.output:
+        a.output.mkdir(parents=True);guards.atomic(a.output/'report.json',report)
+        for name in before:
+            path=a.output/'checked-source'/(name+'.txt');path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(evidence.source_path(name),path)
+    if report['status']!='passed':raise SystemExit(1)
+
+
+if __name__=='__main__':main()
