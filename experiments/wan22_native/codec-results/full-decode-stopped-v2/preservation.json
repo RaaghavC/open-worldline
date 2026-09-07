@@ -1,0 +1,35 @@
+{
+  "status": "stopped",
+  "actual_output_created": false,
+  "decoder_completed": false,
+  "cause": "Available system memory fell below the unchanged2GiB minimum despite low watermark0.6",
+  "watchdog": {
+    "status": "stopped",
+    "reason": "Less than2 GiB available system RAM",
+    "last_sample": {
+      "seconds": 37.189839166007005,
+      "stage": "decode_full_17_frames",
+      "rss_bytes": 367525888,
+      "available_bytes": 1997963264,
+      "mps_active_bytes": 4707129344,
+      "mps_driver_bytes": 14925217792
+    }
+  },
+  "raw_files": {
+    "canonical-noise.safetensors": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1",
+    "decode-cpu-tests.json": "e213eb88222afe571bbbcb3c30d0ba4ae486fc8c924dc20f4cfa095c08d609f2",
+    "initial-codec-cpu-tests.json": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+    "measured-source/codec-source.json.txt": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "measured-source/codec.py.txt": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "measured-source/codec_decode_profile.py.txt": "767ec7ea72dc5dd5b2c7fd539d1a295d9e90c349da990f2ccb2e971cef81692c",
+    "measured-source/codec_profile.py.txt": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "measured-source/test_codec.py.txt": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "measured-source/test_codec_decode.py.txt": "e856daad264a977c6e2cd14a075568e3d9c4bbf3cbf045808d11ee07f8deee35",
+    "measured-source/vendor/vae2_2.py.txt": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "memory.jsonl": "19bfae9e35ac04633c9ffc227d67ca53bf6164583efa3027afc7fdbdf0e061ea",
+    "metrics.json": "47c903948799bf739894a09576ced6369ffd3c812d80fd6c5870c4d1cab25ab7",
+    "noise-provenance.json": "5e41b193ce10449c024dab56727174c61290831e131a409c177600d2d5969492",
+    "synthetic-input.safetensors": "52178bb8bf0362080e7f41160df94a5a51e3cd92d736cf8cc965aa9b894cd77c",
+    "watchdog-stop.json": "3c4c0b0d9bdfe222487363b9b33661dcfe5a3ae05b4426c9a61147ff3930d976"
+  }
+}

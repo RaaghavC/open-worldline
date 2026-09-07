@@ -1,0 +1,58 @@
+"""Retain the complete original state-intervention experiment as a local artifact."""
+import hashlib
+import io
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import tarfile
+
+ROOT = Path(__file__).resolve().parent.parent
+RUN = ROOT / 'work/room-memory-state-sensitivity-v1'
+DEST = ROOT / 'outputs/room-memory-state-sensitivity-v1.tar.zst'
+PUBLIC = ROOT / 'outputs/open-worldline/experiments/room_world/memory_artifacts/state-sensitivity-v1'
+
+def sha_bytes(value): return hashlib.sha256(value).hexdigest()
+def sha_file(path):
+    h = hashlib.sha256()
+    with path.open('rb') as handle:
+        for value in iter(lambda: handle.read(8 * 2**20), b''): h.update(value)
+    return h.hexdigest()
+
+assert not DEST.exists()
+files = [(f, 'original-run/' + f.relative_to(RUN).as_posix()) for f in sorted(RUN.rglob('*')) if f.is_file()]
+files += [(f, 'published-records/' + f.relative_to(PUBLIC).as_posix()) for f in sorted(PUBLIC.rglob('*')) if f.is_file()]
+files.append((Path(__file__), 'package-room-state-archive.py'))
+manifest = {name: {'bytes': path.stat().st_size, 'sha256': sha_file(path)} for path, name in files}
+manifest_bytes = (json.dumps({'schema': 'room-state-local-archive-v1', 'files': manifest,
+    'raw_measured_run_changed': False, 'reserved_test_opened': False}, indent=2) + '\n').encode()
+with DEST.open('xb') as output:
+    worker = subprocess.Popen(['zstd', '-3', '-T1', '-c'], stdin=subprocess.PIPE, stdout=output)
+    with tarfile.open(fileobj=worker.stdin, mode='w|') as tar:
+        for path, name in files:
+            info = tarfile.TarInfo(name)
+            info.size = path.stat().st_size
+            info.mode = 0o644
+            with path.open('rb') as handle: tar.addfile(info, handle)
+        info = tarfile.TarInfo('files.json')
+        info.size = len(manifest_bytes)
+        info.mode = 0o644
+        tar.addfile(info, io.BytesIO(manifest_bytes))
+    worker.stdin.close()
+    assert worker.wait() == 0
+worker = subprocess.Popen(['zstd', '-d', '-c', str(DEST)], stdout=subprocess.PIPE)
+count = 0
+with tarfile.open(fileobj=worker.stdout, mode='r|') as tar:
+    for item in tar:
+        data = tar.extractfile(item).read()
+        expected = manifest.get(item.name, {'bytes': len(manifest_bytes), 'sha256': sha_bytes(manifest_bytes)})
+        assert len(data) == expected['bytes'] and sha_bytes(data) == expected['sha256']
+        count += 1
+assert worker.wait() == 0 and count == len(files) + 1
+result = {'status': 'verified_local_only', 'file': DEST.name, 'bytes': DEST.stat().st_size,
+          'sha256': sha_file(DEST), 'verified_source_files': len(files), 'verified_archive_members': count,
+          'original_run_unchanged': True, 'uploaded': False}
+(ROOT / 'outputs/room-memory-state-sensitivity-v1.manifest.json').write_bytes(manifest_bytes)
+(PUBLIC / 'local-archive.json').write_text(json.dumps(result, indent=2) + '\n')
+shutil.copyfile(Path(__file__), PUBLIC / 'package-archive.py.txt')
+print(json.dumps(result))

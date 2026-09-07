@@ -1,0 +1,70 @@
+{
+  "schema": "worldline-wan22-profile-independent-review-v2",
+  "status": "passed",
+  "tests": 4,
+  "seconds": 0.061,
+  "command": "../../work/wan-adapter-env/bin/python -m experiments.wan22_native.test_profile_independent (from outputs/open-worldline)",
+  "source_sha256": {
+    "profile_core.py": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0",
+    "portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+    "test_core.py": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020",
+    "test_profile_independent.py": "7407fbd77bbaf27cef22a889cd291e8044ef4ccd9317463597ff0cd38c8ef171",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "weights.index.json": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe",
+    "provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+  },
+  "reused_source_sha256": {
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan_adapter/text_cache/cache.py": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff",
+    "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+  },
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "diffusers": "0.34.0",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3",
+    "psutil": "7.2.2"
+  },
+  "execution": {
+    "device": "cpu",
+    "model": "Synthetic stand-in returning fixed velocities; real official CPU scheduler",
+    "actual_native_model_forward": false,
+    "official_weight_values_loaded": false,
+    "gpu_access": false,
+    "current_room_results_read": false,
+    "reserved_test_access": false
+  },
+  "checks": [
+    "Source mismatch rejects worker before model loading",
+    "Mixed observation/action/target cache is rejected before any get_tensor call",
+    "Exactly one positive and one negative call, same latent/token times, inference mode, 720 tokens and fixed clean first observation",
+    "Guidance equals negative+5*(positive-negative); one original CPU UniPC step matches its first-order delta-sigma formula within 2e-6 absolute/relative, and clean prefix is restored exactly",
+    "Saved inputs preserve exact future noise and 144 zero-time observed tokens; timing includes exactly one stage per forward and one solver step",
+    "Metrics explicitly deny full-video and quality claims and record 900-second/18-GiB/2-GiB guards",
+    "Second-forward failure or KeyboardInterrupt retains input artifacts, omits completed outputs/pair timing and records failed/interrupted status"
+  ],
+  "fixed_issue": "Observation reader previously used load_file before checking keys, which could materialize rejected action/target values. It now uses safe_open, validates exact key set first, and reads observation only.",
+  "read_review": {
+    "guarding": "Parent handoff_and_guard covers stdin, child cleanup, wall time, process RSS and available RAM; worker adds Metal cap, periodic device sampling and stage checks. Forced-stop terminal/watchdog evidence must be read with metrics.",
+    "inputs": "Native codec source/file/tensor/original-image hashes and genuine cached UMT5 prompt identities checked before launch and again in worker. No decoder, renderer, pose/action inputs, target loader or full sampling loop.",
+    "precision_and_timing": "Reviewed selective-BF16 core with FP32 modulation/head/velocity/CFG/CPU solver. Forward timings synchronize MPS before/after. One-pair extrapolation is explicitly incomplete and cannot itself pass a generation budget gate.",
+    "provenance": "Parent snapshots current core and reused helper sources, hashes CPU reports, and worker rechecks source identities. Core loader verifies all original shard/index/config hashes and converted tensor values.",
+    "readiness": "No remaining concrete one-pair profiler blocker found. Current source is reviewed and four synthetic-worker/real-CPU-scheduler checks pass. Native actual-weight runtime remains unmeasured; full generation also requires successful full decode evidence."
+  },
+  "limits": "The worker tests use synthetic contexts and a stand-in denoiser, not genuine 5B inference or image-quality evaluation. Actual codec and text integrity are enforced by source-reviewed loaders and separately passing implementation checks.",
+  "previous_report_sha256": "6c8af263dfe392d409010e016ae921aa9c024e8dd1e2d2c3002c6b30cd282713",
+  "metadata_only_revision_review": {
+    "status": "passed",
+    "changed_computation": false,
+    "scope": "Records five inherited environment strings or null and recommended Metal memory before selecting the existing cap; exact child Popen environment is saved in launch.json. No weight loading, tensor arithmetic, timing boundaries, scheduler, guidance, clamp or guard policy changed.",
+    "implementation_report_sha256": "86798c37583bd203a1851eb135ccaa4499f98fc1145a0dc6de9abc27a859bef9",
+    "additional_implementation_tests": "Two CPU/mock tests verify exact inherited values, no environment mutation, and MPS memory API called only for a mocked MPS device."
+  }
+}

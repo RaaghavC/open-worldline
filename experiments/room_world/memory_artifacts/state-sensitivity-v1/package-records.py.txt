@@ -1,0 +1,71 @@
+"""Publish explicitly relocated metadata while retaining the measured run intact."""
+from copy import deepcopy
+import hashlib
+import json
+from pathlib import Path
+import shutil
+
+ROOT = Path(__file__).resolve().parent.parent
+REPO = ROOT / 'outputs/open-worldline'
+RUN = ROOT / 'work/room-memory-state-sensitivity-v1'
+DEST = REPO / 'experiments/room_world/memory_artifacts/state-sensitivity-v1'
+DEST.mkdir(parents=True, exist_ok=True)
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def write(path, value):
+    path.write_text(json.dumps(value, indent=2) + '\n')
+
+changes = []
+for name in ('plan.json', 'diagnostic.json'):
+    source = RUN / name
+    original = json.loads(source.read_text())
+    relocated = deepcopy(original)
+    jobs = relocated['plan']['jobs'] if name == 'diagnostic.json' else relocated['jobs']
+    old_jobs = original['plan']['jobs'] if name == 'diagnostic.json' else original['jobs']
+    mappings = []
+    for job, old in zip(jobs, old_jobs, strict=True):
+        relative = f"experiments/room_world/memory_artifacts/training-512-v2/{job['seed']}/{job['mode']}/training/memory-final.pt"
+        checkpoint = REPO / relative
+        assert checkpoint.is_file() and sha(checkpoint) == job['checkpoint_sha256']
+        job['checkpoint'] = relative
+        mappings.append({'seed': job['seed'], 'mode': job['mode'],
+                         'checkpoint_sha256': job['checkpoint_sha256'],
+                         'published_path': relative,
+                         'original_path_utf8_sha256': hashlib.sha256(old['checkpoint'].encode()).hexdigest()})
+    restored = deepcopy(relocated)
+    restore_jobs = restored['plan']['jobs'] if name == 'diagnostic.json' else restored['jobs']
+    for job, old in zip(restore_jobs, old_jobs, strict=True):
+        job['checkpoint'] = old['checkpoint']
+    assert restored == original
+    target = DEST / (source.stem + '-portable.json')
+    write(target, relocated)
+    changes.append({'original_file': name, 'original_sha256': sha(source),
+                    'published_file': target.name, 'published_sha256': sha(target),
+                    'changed_fields': 6, 'changes': mappings})
+
+for source, name in ((ROOT / 'work/room-memory-state-sensitivity-summary.json', 'summary.json'),):
+    shutil.copyfile(source, DEST / name)
+    assert sha(source) == sha(DEST / name)
+for source in sorted((RUN / 'source').iterdir()):
+    target = DEST / 'measured-source' / source.name
+    target.parent.mkdir(exist_ok=True)
+    shutil.copyfile(source, target)
+    assert sha(source) == sha(target)
+
+write(DEST / 'publication.json', {
+    'status': 'portable_score_records_complete_raw_artifacts_local_only',
+    'original_run_files': len([p for p in RUN.rglob('*') if p.is_file()]),
+    'original_run_bytes': sum(p.stat().st_size for p in RUN.rglob('*') if p.is_file()),
+    'raw_case_files': 48, 'prediction_tensors': 144,
+    'transformation': 'Only six checkpoint path strings per JSON document are replaced with repository-relative paths. Numerical values, identities, case order and tensor hashes are unchanged. JSON serialization changes are reflected in new hashes.',
+    'metadata': changes,
+    'independent_original_audit_sha256': '169989f693ab427a9eb5acaa1b22501754265783fcef7333a1d6d56c8b8a6d16',
+    'independent_audit_input': 'The original unmodified run, retained locally. The read-only audit requires its original JSON bytes and raw tensors.',
+    'public_raw_artifact_url': None,
+    'reserved_test_opened': False,
+})
+shutil.copyfile(Path(__file__), DEST / 'package-records.py.txt')
+print(json.dumps({'status': 'passed', 'changed_fields_per_document': 6,
+                  'all_other_report_values_unchanged': True, 'metadata_files': len(changes)}))

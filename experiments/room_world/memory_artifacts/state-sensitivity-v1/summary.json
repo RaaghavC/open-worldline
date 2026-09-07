@@ -1,0 +1,62 @@
+{
+  "source_sha256": "fc8889a3e20550247a8734e35938b376f3072ceca3601663905f8e4df7c93ab8",
+  "post_hoc": true,
+  "groups": {
+    "carry": {
+      "cases": 24,
+      "state_branch_l2_difference": {
+        "mean": 0.024597853188937348,
+        "minimum": 0.007972741424192653,
+        "maximum": 0.05574252355531505
+      },
+      "interventions": {
+        "normal": {
+          "pair_correct_count": 0,
+          "mean_return_region_mae": 0.10740372687635481
+        },
+        "swapped": {
+          "pair_correct_count": 0,
+          "mean_return_region_mae": 0.10740400215737193,
+          "mean_region_prediction_change": 2.815770547717194e-05,
+          "max_region_prediction_change": 0.00017995533937037407,
+          "bit_exact_cases": 0
+        },
+        "zero": {
+          "pair_correct_count": 0,
+          "mean_return_region_mae": 0.1038570668327256,
+          "mean_region_prediction_change": 0.022180566704197657,
+          "max_region_prediction_change": 0.03253377586064049,
+          "bit_exact_cases": 0
+        }
+      }
+    },
+    "reset": {
+      "cases": 24,
+      "state_branch_l2_difference": {
+        "mean": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "interventions": {
+        "normal": {
+          "pair_correct_count": 0,
+          "mean_return_region_mae": 0.10730441141646319
+        },
+        "swapped": {
+          "pair_correct_count": 0,
+          "mean_return_region_mae": 0.10730441141646319,
+          "mean_region_prediction_change": 0.0,
+          "max_region_prediction_change": 0.0,
+          "bit_exact_cases": 24
+        },
+        "zero": {
+          "pair_correct_count": 0,
+          "mean_return_region_mae": 0.10730441141646319,
+          "mean_region_prediction_change": 0.0,
+          "max_region_prediction_change": 0.0,
+          "bit_exact_cases": 24
+        }
+      }
+    }
+  }
+}

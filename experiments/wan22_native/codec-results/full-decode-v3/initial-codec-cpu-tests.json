@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "tests": 11,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 1.0401307080173865,
+  "device": "cpu",
+  "pretrained_weight_values_loaded": false,
+  "torch": "2.5.1",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "measurements": {
+    "first_latent_alone_vs_full_max_abs": 0.0,
+    "first_latent_after_future_change_max_abs": 0.0
+  },
+  "limits": "Tiny dim4/decoder4, native48 latent channels and native spatial/temporal stages; not actual-weight quality or MPS equality"
+}

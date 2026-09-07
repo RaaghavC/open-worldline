@@ -1,0 +1,565 @@
+# SPDX-License-Identifier: Apache-2.0
+"""One measured, gated Wan2.2 TI2V-5B clip using the attributed native port.
+
+The transformer and FP32 decoder run in separate child processes. This runner
+does not train parameters or read actions, adapters, future RGB or targets.
+"""
+import argparse
+from contextlib import nullcontext
+import importlib.metadata
+import json
+import math
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import threading
+import time
+
+import numpy as np
+from PIL import Image, ImageDraw
+import psutil
+import torch
+from safetensors import safe_open
+from safetensors.torch import save_file
+
+from experiments.room_world.memory_train import atomic_write, new_directory
+from .codec import Wan22Codec, cleanup_temporal_chunks, CONFIG, WEIGHT_SHA256, SOURCE_SHA256
+from .codec_profile import Guard
+from .codec_decode_profile import SOURCE_NAMES as DECODE_SOURCES, chunk_timings
+from .load_weights import load_core, sha256, tensor_sha256
+from .portable import NATIVE_GRID, NATIVE_LATENT_SHAPE, NATIVE_TOKENS, token_times
+from .profile_core import (HERE, REPO, SOURCE_NAMES as CORE_SOURCES, REUSED_NAMES,
+                           STEPS, SHIFT, GUIDANCE, SEED, make_scheduler, load_text)
+
+CAP_SECONDS = 900.
+EXTRA_SECONDS = 45.
+SETTINGS = {"steps": 50, "shift": 5., "guidance": 5.}
+SHAPE = (48, 5, 18, 32)
+INPUT_KEYS = {"initial_noise", "initial_latent", "observation", "token_times"}
+RUN_KEYS = INPUT_KEYS | {"positive", "negative"}
+SOURCES = tuple(dict.fromkeys((*CORE_SOURCES, *DECODE_SOURCES, "__init__.py", "vendor/__init__.py",
+    "sample_clip.py", "test_sample_clip.py", "requirements-sample.txt")))
+
+
+def finite_seconds(value, name):
+    if isinstance(value, bool) or not isinstance(value, (float, int)) or not math.isfinite(value) or value <= 0:
+        raise ValueError(name + " must be finite and positive")
+    return float(value)
+
+
+def confined(directory, name):
+    root = Path(directory).resolve()
+    path = root / name
+    if Path(name).is_absolute() or ".." in Path(name).parts or not path.resolve().is_relative_to(root) or not path.is_file():
+        raise ValueError("Evidence file must remain inside its run: " + name)
+    return path
+
+
+def checked_file(directory, name, expected):
+    path = confined(directory, name)
+    if not isinstance(expected, str) or sha256(path) != expected:
+        raise ValueError("Evidence file changed: " + name)
+    return path
+
+
+def check_sources(values, names, root):
+    if not isinstance(values, dict) or set(values) != set(names):
+        raise ValueError("Incomplete source identity")
+    for name in names:
+        if values[name] != sha256(Path(root) / name):
+            raise ValueError("Measured source is stale: " + name)
+
+
+def stages(report):
+    rows = report.get("timings", [])
+    if not rows or len({row["stage"] for row in rows}) != len(rows):
+        raise ValueError("Distinct measured stages required")
+    result = {row["stage"]: finite_seconds(row["seconds"], row["stage"]) for row in rows}
+    if sum(result.values()) > finite_seconds(report.get("elapsed_seconds"), "Elapsed time") + .01:
+        raise ValueError("Measured stages exceed total elapsed time")
+    return result
+
+
+def tensor_contract(values, *, with_text=False):
+    if set(values) != (RUN_KEYS if with_text else INPUT_KEYS):
+        raise ValueError("Unexpected input keys; actions and targets are prohibited")
+    expected = {"initial_noise": SHAPE, "initial_latent": SHAPE,
+                "observation": (1, 48, 1, 18, 32), "token_times": (1, 720)}
+    for name, value in values.items():
+        if value.device.type != "cpu" or not torch.isfinite(value).all():
+            raise ValueError("Finite CPU tensors required")
+        if name in expected and tuple(value.shape) != expected[name]:
+            raise ValueError("Wrong native input shape: " + name)
+        if value.dtype != (torch.int64 if name == "token_times" else torch.float32):
+            raise ValueError("Wrong native input dtype: " + name)
+    if with_text and (values["positive"].shape != (25, 4096) or values["negative"].shape != (126, 4096)):
+        raise ValueError("The measured genuine positive and native negative contexts are required")
+    prefix = values["observation"][0]
+    projected = values["initial_noise"].clone()
+    projected[:, :1] = prefix
+    if not torch.equal(projected, values["initial_latent"]):
+        raise ValueError("Saved initial latent is not exactly saved noise with the clean prefix")
+    times = token_times(torch.tensor([NATIVE_GRID]), make_scheduler().timesteps[:1], NATIVE_TOKENS)
+    if not torch.equal(times, values["token_times"]):
+        raise ValueError("Saved first-step token times differ from native 50/shift5")
+
+
+def read_tensors(path, keys):
+    # Reject a mixed or poisoned file before any tensor materialization.
+    if Path(path).stat().st_size > 8 * 2**20:
+        raise ValueError("Input exceeds the bounded tensor file size")
+    with safe_open(path, framework="pt", device="cpu") as handle:
+        if set(handle.keys()) != set(keys):
+            raise ValueError("Unexpected tensor keys")
+        return {name: handle.get_tensor(name) for name in sorted(keys)}
+
+
+def validate_profiles(pair_dir, decode_dir, text_dir, device):
+    """Read completed measured evidence and its small retained tensors only."""
+    pair_dir, decode_dir = Path(pair_dir), Path(decode_dir)
+    pair = json.loads(confined(pair_dir, "metrics.json").read_text())
+    terminal = json.loads(confined(pair_dir, "terminal.json").read_text())
+    decode = json.loads(confined(decode_dir, "metrics.json").read_text())
+    if (pair.get("status") != "passed" or terminal.get("status") != "complete" or terminal.get("exit_code") != 0
+            or (pair_dir / "watchdog-stop.json").exists() or (decode_dir / "watchdog-stop.json").exists()):
+        raise ValueError("Successful pair worker and parent completion without a watchdog stop required")
+    if (pair.get("sampling_configuration") != SETTINGS or pair.get("seed") != SEED
+            or pair.get("latent_shape") != list(SHAPE) or pair.get("tokens") != 720 or pair.get("observed_tokens") != 144
+            or pair.get("finite_outputs") is not True or pair.get("observed_prefix_exact") is not True):
+        raise ValueError("Pair sampling configuration or finite-prefix checks differ")
+    if pair.get("device") != device or decode.get("device") != device:
+        raise ValueError("Timing profiles must use the requested device")
+    check_sources(pair.get("source_sha256"), CORE_SOURCES, HERE)
+    check_sources(pair.get("reused_source_sha256"), REUSED_NAMES, REPO)
+    check_sources(decode.get("source_sha256"), DECODE_SOURCES, HERE)
+    if (decode.get("status") != "passed" or decode.get("finite_output") is not True
+            or decode.get("dtype") != "float32" or decode.get("latent_shape") != [1, *SHAPE]
+            or decode.get("decoded_shape") != [1, 3, 17, 288, 512] or decode.get("cache_clear_after_decode") is not True
+            or decode.get("automatic_mps_cpu_fallback") != "0"
+            or any(decode.get(key) is not False for key in ("denoiser_executed", "future_rgb_read", "actions_read", "target_read"))):
+        raise ValueError("Completed actual full-shape FP32 decoder cost report required")
+    chunks = decode.get("decoder_chunks", [])
+    if (len(chunks) != 5 or [x["first_chunk"] for x in chunks] != [True, False, False, False, False]
+            or [x["output_shape"][2] for x in chunks] != [1, 4, 4, 4, 4]
+            or any(x["output_dtype"] != "torch.float32" for x in chunks)):
+        raise ValueError("Full initial-plus-four temporal decode chunks required")
+    if decode.get("optional_allocator_cleanup") is True and decode.get("allocator_chunk_counts") != {"encoder": 0, "decoder": 5}:
+        raise ValueError("Decoder allocator cleanup evidence differs")
+    codec = decode.get("codec", {})
+    if codec.get("weight_sha256") != WEIGHT_SHA256 or codec.get("source_sha256") != SOURCE_SHA256 or codec.get("config") != CONFIG:
+        raise ValueError("Decoder weight/configuration identity differs")
+    ptime, dtime = stages(pair), stages(decode)
+    for name in ("positive native forward", "negative native forward", "verify and stream official transformer",
+                 "guided velocity transfer to CPU solver", "one official CPU UniPC step"):
+        finite_seconds(ptime.get(name), name)
+    for name in ("verify_and_load_fp32_codec", "decode_full_17_frames"):
+        finite_seconds(dtime.get(name), name)
+    if abs(finite_seconds(pair.get("pair_seconds"), "Actual pair duration") - ptime["positive native forward"] - ptime["negative native forward"]) > 1e-5:
+        raise ValueError("Reported pair duration differs from the two actual forwards")
+    outputs = pair.get("output_sha256", {})
+    if set(outputs) != {"inputs.safetensors", "outputs.safetensors", "weight-load.json"}:
+        raise ValueError("Pair artifact manifest is incomplete")
+    for name, digest in outputs.items():
+        checked_file(pair_dir, name, digest)
+    if pair.get("weight_load_sha256") != outputs["weight-load.json"]:
+        raise ValueError("Core weight conversion report differs")
+    weight_load = json.loads((pair_dir / "weight-load.json").read_text())
+    provenance = json.loads((HERE / "provenance.json").read_text())
+    if (weight_load.get("revision") != provenance["weight_revision"]
+            or weight_load.get("code_commit") != provenance["code_commit"]
+            or weight_load.get("repository") != provenance["repository"]
+            or weight_load.get("parameter_count") != 4_999_787_712
+            or weight_load.get("storage", {}).get("policy") != "selective_bf16"
+            or weight_load.get("storage", {}).get("parameters") != {"float32": 68_573_376, "bfloat16": 4_931_214_336}
+            or weight_load.get("input_files") != {row["file"]: row for row in provenance["weights"]}
+            or weight_load.get("config_sha256") != sha256(HERE / "config.json")
+            or weight_load.get("index_sha256") != sha256(HERE / "weights.index.json")):
+        raise ValueError("Measured actual pretrained core or declared precision differs")
+    for name, digest in decode.get("output_sha256", {}).items():
+        checked_file(decode_dir, name, digest)
+    if not decode.get("output_sha256"):
+        raise ValueError("Full decode artifacts are absent")
+    values = read_tensors(pair_dir / "inputs.safetensors", INPUT_KEYS)
+    tensor_contract(values)
+    if tensor_sha256(values["observation"]) != pair.get("observation", {}).get("observation_tensor_sha256"):
+        raise ValueError("Saved pair observation identity differs")
+    d_observation = decode.get("observation", {})
+    p_observation = pair["observation"]
+    if (d_observation.get("observation_tensor_sha256") != p_observation["observation_tensor_sha256"]
+            or d_observation.get("first_image_metrics_sha256") != p_observation.get("codec_report_sha256")
+            or d_observation.get("observation_file_sha256") != p_observation.get("cache_sha256")):
+        raise ValueError("Pair and full decoder did not use the same independently encoded first image")
+    positive, negative, text = load_text(text_dir)
+    if text != pair.get("text"):
+        raise ValueError("Genuine text contexts changed after pair measurement")
+    values.update(positive=positive, negative=negative)
+    tensor_contract(values, with_text=True)
+    evidence = {"pair_metrics_sha256": sha256(pair_dir / "metrics.json"),
+        "pair_terminal_sha256": sha256(pair_dir / "terminal.json"),
+        "pair_inputs_sha256": outputs["inputs.safetensors"], "weight_load_sha256": outputs["weight-load.json"],
+        "decode_metrics_sha256": sha256(decode_dir / "metrics.json"), "text": text,
+        "observation": p_observation, "tensor_sha256": {name: tensor_sha256(value) for name, value in values.items()},
+        "optional_allocator_cleanup": decode["optional_allocator_cleanup"]}
+    return values, evidence, pair, decode
+
+
+def timing_gate(pair, decode, solver_seconds, preflight_seconds):
+    """Conservative admission estimate, including measured unassigned overhead."""
+    ptime, _ = stages(pair), stages(decode)
+    load = finite_seconds(ptime.get("verify and stream official transformer"), "Core load")
+    pair_time = finite_seconds(pair.get("pair_seconds"), "Pair duration")
+    unassigned = pair["elapsed_seconds"] - load - pair_time
+    if not math.isfinite(unassigned) or unassigned < 0:
+        raise ValueError("Pair report has invalid unassigned overhead")
+    solver = finite_seconds(solver_seconds, "Full CPU solver benchmark")
+    if not math.isfinite(preflight_seconds) or preflight_seconds < 0:
+        raise ValueError("Invalid actual preflight elapsed time")
+    rows = {"measured_core_load_seconds": load,
+        "fifty_measured_pairs_seconds": 50 * pair_time,
+        "fifty_conservative_auxiliary_seconds": 50 * unassigned,
+        "measured_full_cpu_solver_seconds": solver,
+        "measured_complete_decoder_seconds": finite_seconds(decode.get("elapsed_seconds"), "Full decoder elapsed"),
+        "startup_and_artifact_allowance_seconds": EXTRA_SECONDS,
+        "already_elapsed_preflight_seconds": preflight_seconds}
+    total = sum(rows.values())
+    if not math.isfinite(total) or total > CAP_SECONDS:
+        raise ValueError(f"Measured estimate {total:.3f} seconds exceeds the 900-second cap")
+    return dict(rows, total_estimate_seconds=total, remaining_estimated_headroom_seconds=CAP_SECONDS-total,
+        limit="Linear estimate from one pair, not a guarantee. All pair elapsed time except weight loading is charged 50 times, including transfers, solver work and input/output overhead. The full CPU solver is charged again to cover later multistep work. No smaller step count or precision is substituted.")
+
+
+def solver_benchmark(noise, observation):
+    """CPU-only cost and finite oracle for all 50 native multistep updates."""
+    schedule = make_scheduler()
+    value = noise.clone()
+    initial_hash = tensor_sha256(noise)
+    started = time.monotonic()
+    for timestep in schedule.timesteps:
+        value[:, :1] = observation[0]
+        velocity = (value * .05 + .01).unsqueeze(0)
+        value = schedule.step(velocity, timestep, value.unsqueeze(0), return_dict=False)[0].squeeze(0)
+        value[:, :1] = observation[0]
+    elapsed = time.monotonic() - started
+    if not torch.isfinite(value).all() or tensor_sha256(noise) != initial_hash:
+        raise RuntimeError("CPU solver oracle failed or mutated input")
+    return {"status": "passed", "device": "cpu", "updates": 50, "seconds": elapsed,
+            "output_sha256": tensor_sha256(value), "model_executed": False}
+
+
+@torch.inference_mode()
+def integrate(model, noise, observation, positive, negative, *, device="cpu", on_step=None):
+    """Fixed native loop. Known prefix is checked on all 100 model calls."""
+    schedule = make_scheduler()
+    value = noise.clone()
+    obs = observation[0]
+    positive, negative, known = positive.to(device), negative.to(device), obs.to(device)
+    calls = 0
+    rows = []
+    for index, timestep in enumerate(schedule.timesteps):
+        started = time.monotonic()
+        value[:, :1] = obs
+        transfer_started = time.monotonic()
+        latent = value.to(device, copy=True)
+        times = token_times(torch.tensor([NATIVE_GRID]), timestep.reshape(1), NATIVE_TOKENS).to(device)
+        if device == "mps": torch.mps.synchronize()
+        transfer = time.monotonic() - transfer_started
+        outputs, forward_times = [], []
+        for context in (positive, negative):
+            latent[:, :1] = known
+            if not torch.equal(latent[:, :1], known) or not torch.equal(times[0, :144], torch.zeros_like(times[0, :144])):
+                raise RuntimeError("Clean zero-time observation failed at denoiser boundary")
+            tick = time.monotonic()
+            velocity = model([latent], times, [context], 720)[0]
+            if device == "mps": torch.mps.synchronize()
+            forward_times.append(time.monotonic()-tick)
+            if tuple(velocity.shape) != SHAPE or velocity.dtype != torch.float32 or not torch.isfinite(velocity).all():
+                raise FloatingPointError("Denoiser returned invalid velocity")
+            outputs.append(velocity)
+            calls += 1
+        tick = time.monotonic()
+        guided = outputs[1] + 5. * (outputs[0]-outputs[1])
+        if not torch.isfinite(guided).all(): raise FloatingPointError("Guided velocity is nonfinite")
+        guided_cpu = guided.cpu()
+        if device == "mps": torch.mps.synchronize()
+        guide_transfer = time.monotonic()-tick
+        tick = time.monotonic()
+        value = schedule.step(guided_cpu.unsqueeze(0), timestep, value.unsqueeze(0), return_dict=False)[0].squeeze(0)
+        value[:, :1] = obs
+        if value.dtype != torch.float32 or not torch.isfinite(value).all() or not torch.equal(value[:, :1], obs):
+            raise FloatingPointError("CPU solver output or restored observation failed")
+        row = {"step": index+1, "model_timestep": int(timestep), "sigma": float(schedule.sigmas[index]),
+            "observed_tokens": 144, "observed_token_time": 0, "future_token_time": int(timestep),
+            "cfg_calls_prefix_exact": [True, True], "post_step_prefix_exact": True,
+            "positive_seconds": forward_times[0], "negative_seconds": forward_times[1],
+            "input_transfer_seconds": transfer, "guidance_and_output_transfer_seconds": guide_transfer,
+            "cpu_solver_seconds": time.monotonic()-tick, "seconds": time.monotonic()-started}
+        rows.append(row)
+        if on_step: on_step(row, value)
+        del latent, times, outputs, velocity, guided, guided_cpu
+    if calls != 100 or len(rows) != 50: raise RuntimeError("Incomplete native schedule")
+    return value, rows
+
+
+def validate_cpu(path):
+    report = json.loads(Path(path).read_text())
+    if report.get("status") != "passed" or report.get("tests", 0) < 7:
+        raise ValueError("Completed source-matching sampler CPU tests required")
+    check_sources(report.get("source_sha256"), SOURCES, HERE)
+    check_sources(report.get("reused_source_sha256"), REUSED_NAMES, REPO)
+    return sha256(path)
+
+
+def source_snapshot(out):
+    sources = {name: sha256(HERE/name) for name in SOURCES}
+    reused = {name: sha256(REPO/name) for name in REUSED_NAMES}
+    for root, names, folder in ((HERE, sources, "measured-source"), (REPO, reused, "reused-source")):
+        for name, digest in names.items():
+            target = out/folder/(name+".txt")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(root/name, target)
+            if sha256(target) != digest: raise RuntimeError("Source changed during snapshot")
+    return sources, reused
+
+
+def child(config):
+    check_sources(config["source_sha256"], SOURCES, HERE)
+    check_sources(config["reused_source_sha256"], REUSED_NAMES, REPO)
+    if os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK", "0") != "0":
+        raise RuntimeError("Automatic CPU fallback must be disabled")
+    device = config["device"]
+    if device == "mps" and not torch.backends.mps.is_available(): raise RuntimeError("MPS unavailable")
+    torch.set_num_threads(2 if config["stage"] == "core" else 4)
+    out = Path(config["output"])
+    guard = Guard(out, device)
+    report, error, completed = guard.report, None, False
+    report.update(stage=config["stage"], external_pretrained_model=True, original_worldline_model=False,
+        device=device, automatic_mps_cpu_fallback="0", source_sha256=config["source_sha256"],
+        reused_source_sha256=config["reused_source_sha256"], input_sha256=config["input_sha256"],
+        global_deadline_monotonic=config["deadline"], actions_read=False, adapters_read=False, future_target_read=False,
+        future_rgb_read=False, known_initial_reconstruction_frames=1, newly_generated_future_frames=16)
+    try:
+        def deadline_check():
+            if time.monotonic() >= config["deadline"]: raise RuntimeError("Combined 900-second deadline reached")
+        deadline_check()
+        path = checked_file(config["run"], "inputs.safetensors", config["input_sha256"])
+        values = read_tensors(path, RUN_KEYS)
+        tensor_contract(values, with_text=True)
+        if config["stage"] == "core":
+            model, loaded = guard.measure("verify_and_load_selective_bf16_core",
+                lambda: load_core(config["weights"], device=device, check=deadline_check))
+            expected = json.loads(checked_file(config["run"], "profile-weight-load.json", config["weight_load_sha256"]).read_text())
+            if loaded != expected: raise ValueError("Loaded core differs from the measured source/weight/precision conversion")
+            atomic_write(out/"weight-load.json", loaded)
+            report["steps"] = []
+            def retain_step(row, value):
+                deadline_check()
+                report["steps"].append(row)
+                guard.save()
+                # One atomic last-completed latent preserves progress on failure.
+                temporary = out/"last-latent.tmp"
+                save_file({"latent": value.contiguous()}, str(temporary))
+                temporary.replace(out/"last-latent.safetensors")
+            latent, _ = guard.measure("native_50_step_sampling", lambda: integrate(model,
+                values["initial_noise"], values["observation"], values["positive"], values["negative"],
+                device=device, on_step=retain_step))
+            save_file({"latent": latent.unsqueeze(0).contiguous()}, str(out/"latents.safetensors"))
+            report.update(finite_output=True, completed_steps=50, completed_core_calls=100,
+                sampling_configuration=SETTINGS, all_prefix_checks_passed=True,
+                output_sha256={name: sha256(out/name) for name in ("latents.safetensors", "weight-load.json", "last-latent.safetensors")})
+        elif config["stage"] == "decode":
+            latent_path = checked_file(config["run"], "core/result/latents.safetensors", config["latent_file_sha256"])
+            latent = read_tensors(latent_path, {"latent"})["latent"]
+            if latent.shape != (1, *SHAPE) or latent.dtype != torch.float32 or not torch.isfinite(latent).all():
+                raise ValueError("Completed finite native latent required")
+            if not torch.equal(latent[:, :, :1], values["observation"]): raise ValueError("Final latent prefix changed")
+            codec = guard.measure("verify_and_load_fp32_codec", lambda: Wan22Codec(Path(config["weights"])/"Wan2.2_VAE.pth", device, check=deadline_check))
+            report["codec"] = codec.provenance
+            if device == "mps": torch.mps.empty_cache()
+            with chunk_timings(codec, device) as chunks, cleanup_temporal_chunks(codec) if config["allocator_cleanup"] else nullcontext() as counts:
+                video = guard.measure("decode_full_17_frames", lambda: codec.decode(latent))
+            if (video.shape != (1, 3, 17, 288, 512) or video.dtype != torch.float32 or not torch.isfinite(video).all()
+                    or not codec.cache_is_clear() or len(chunks) != 5
+                    or [x["first_chunk"] for x in chunks] != [True, False, False, False, False]
+                    or [x["output_shape"][2] for x in chunks] != [1, 4, 4, 4, 4]):
+                raise RuntimeError("Full native decode shape, finite values or cache checks failed")
+            if config["allocator_cleanup"] and counts != {"encoder": 0, "decoder": 5}:
+                raise RuntimeError("Decoder cleanup counts differ from timing profile")
+            report.update(decoder_chunks=chunks, allocator_chunk_counts=counts, cache_clear_after_decode=True)
+            def save_frames():
+                save_file({"video": video.cpu().contiguous()}, str(out/"decoded.safetensors"))
+                pixels = np.rint(((video[0].permute(1, 2, 3, 0).cpu().numpy()+1)/2).clip(0,1)*255).astype(np.uint8)
+                frames = out/"frames"; frames.mkdir()
+                images = []
+                for index, array in enumerate(pixels):
+                    image = Image.fromarray(array); image.save(frames/f"{index:04d}.png"); images.append(image)
+                images[0].save(out/"preview.gif", save_all=True, append_images=images[1:], duration=100, loop=0)
+                sheet = Image.new("RGB", (1024, 640), (241,239,232)); draw = ImageDraw.Draw(sheet)
+                for pos, index in enumerate((0,5,10,16)):
+                    x,y = (pos%2)*512, (pos//2)*320
+                    draw.text((x+8,y+5), f"Wan2.2 external baseline | frame {index}/16", fill=(25,25,25))
+                    draw.text((x+8,y+17), "Starting reconstruction" if index==0 else "Generated future", fill=(25,25,25))
+                    sheet.paste(images[index], (x,y+32))
+                sheet.save(out/"comparison.png")
+                return {str(path.relative_to(out)): sha256(path) for path in [*sorted(frames.glob("*.png")), out/"preview.gif", out/"comparison.png", out/"decoded.safetensors"]}
+            report["output_sha256"] = guard.measure("save_all_frames_and_raw_pixels", save_frames)
+            report.update(finite_output=True, preview_playback_fps=10, generated_future_frames=16,
+                original_model_claim=False, frame_count=17, display_fps_is_model_throughput=False)
+        else:
+            raise ValueError("Only core and decode stages are allowed")
+        deadline_check()
+        completed = True
+    except BaseException as caught:
+        error = caught
+        raise
+    finally:
+        if not completed and error is None: error = RuntimeError("Child did not complete")
+        guard.close(error)
+
+
+class CombinedGuard:
+    """One deadline over validation, both non-overlapping children and artifacts."""
+    def __init__(self, out):
+        self.out, self.started, self.process = out, time.monotonic(), None
+        self.deadline = self.started + CAP_SECONDS
+        self.stop = threading.Event()
+        self.peaks = {"combined_rss_bytes": 0, "minimum_available_bytes": psutil.virtual_memory().available}
+        def watch():
+            with (out/"parent-memory.jsonl").open("x") as log:
+                while not self.stop.is_set():
+                    rss = psutil.Process().memory_info().rss
+                    proc = self.process
+                    if proc is not None and proc.poll() is None:
+                        try: rss += psutil.Process(proc.pid).memory_info().rss
+                        except psutil.NoSuchProcess: pass
+                    available = psutil.virtual_memory().available
+                    elapsed = time.monotonic()-self.started
+                    row = {"seconds": elapsed, "combined_rss_bytes": rss, "available_bytes": available,
+                           "active_child_pid": proc.pid if proc and proc.poll() is None else None}
+                    self.peaks["combined_rss_bytes"] = max(self.peaks["combined_rss_bytes"], rss)
+                    self.peaks["minimum_available_bytes"] = min(self.peaks["minimum_available_bytes"], available)
+                    log.write(json.dumps(row)+"\n"); log.flush()
+                    if elapsed > CAP_SECONDS or rss > 18*2**30 or available < 2*2**30:
+                        atomic_write(out/"watchdog-stop.json", {"status": "stopped", "last_sample": row})
+                        self.terminate()
+                        os._exit(124)
+                    self.stop.wait(.5)
+        self.thread = threading.Thread(target=watch, daemon=True); self.thread.start()
+
+    def terminate(self):
+        proc = self.process
+        if proc and proc.poll() is None:
+            proc.terminate()
+            try: proc.wait(timeout=5)
+            except subprocess.TimeoutExpired: proc.kill(); proc.wait()
+
+    def close(self):
+        self.terminate(); self.stop.set(); self.thread.join(timeout=2)
+
+    def launch(self, config, wrapper):
+        if time.monotonic() >= self.deadline: raise RuntimeError("Combined deadline reached before child launch")
+        wrapper.mkdir()
+        atomic_write(wrapper/"launch.json", config)
+        began = time.monotonic()
+        with (wrapper/"worker.log").open("x") as log:
+            proc = subprocess.Popen([sys.executable, "-m", "experiments.wan22_native.sample_clip", "--worker"],
+                stdin=subprocess.PIPE, stdout=log, stderr=subprocess.STDOUT,
+                env=dict(os.environ, PYTORCH_ENABLE_MPS_FALLBACK="0"))
+            self.process = proc
+            error = None
+            try:
+                proc.communicate(json.dumps(config).encode())
+            except BaseException as caught:
+                error = caught; self.terminate(); raise
+            finally:
+                atomic_write(wrapper/"terminal.json", {"status": "failed" if error or proc.returncode != 0 else "complete",
+                    "exit_code": proc.returncode, "elapsed_seconds": time.monotonic()-began,
+                    "error_type": type(error).__name__ if error else None})
+        self.process = None
+        if proc.returncode != 0: raise RuntimeError("Child stage failed; preserved log and terminal record")
+        report = json.loads((wrapper/"result/metrics.json").read_text())
+        if report.get("status") != "passed" or (wrapper/"result/watchdog-stop.json").exists():
+            raise RuntimeError("Child stage did not finish its finite-output checks")
+        return report
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--worker", action="store_true", help=argparse.SUPPRESS)
+    for name in ("weights", "pair-profile", "decode-profile", "text-cache", "cpu-report", "output"):
+        p.add_argument("--"+name, type=Path)
+    p.add_argument("--device", choices=("cpu", "mps"), default="cpu")
+    p.add_argument("--plan-only", action="store_true", help="Validate evidence and CPU timing without launching model workers")
+    args = p.parse_args()
+    if args.worker:
+        child(json.loads(sys.stdin.read(131072))); return
+    if any(getattr(args, name) is None for name in ("weights", "pair_profile", "decode_profile", "text_cache", "cpu_report", "output")):
+        p.error("Weights, both actual profiles, genuine text, CPU report and a new output are required")
+    if os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK", "0") != "0": raise RuntimeError("Automatic CPU fallback must be disabled")
+    if args.output.resolve().is_relative_to(HERE.resolve()): raise ValueError("Output must be outside the source package")
+    out = new_directory(args.output); guard = CombinedGuard(out)
+    report = {"status": "running", "experiment": "External Wan2.2 native image-conditioned clip control",
+        "original_worldline_model": False, "novelty_claim": False, "model_training": False,
+        "actions_read": False, "adapters_read": False, "future_rgb_read": False, "target_read": False,
+        "sampling_configuration": SETTINGS, "seed_metadata": SEED,
+        "noise_identity": "Saved measured tensor bytes are canonical; no platform-specific seed regeneration check",
+        "known_initial_reconstruction_frames": 1, "newly_generated_future_frames": 16,
+        "max_combined_seconds": 900, "max_combined_rss_or_child_driver_gib": 18, "minimum_available_gib": 2,
+        "non_overlapping_core_and_codec_processes": True, "device": args.device,
+        "dependencies": {name: importlib.metadata.version(name) for name in ("torch", "diffusers", "numpy", "safetensors", "psutil", "pillow", "einops")}}
+    atomic_write(out/"metrics.json", report)
+    try:
+        torch.set_num_threads(2)
+        report["cpu_report_sha256"] = validate_cpu(args.cpu_report)
+        values, evidence, pair, decode = validate_profiles(args.pair_profile, args.decode_profile, args.text_cache, args.device)
+        report["input_evidence"] = evidence
+        sources, reused = source_snapshot(out)
+        report.update(source_sha256=sources, reused_source_sha256=reused)
+        for source, name in ((args.cpu_report, "cpu-tests.json"), (args.pair_profile/"metrics.json", "profile-core.json"),
+                (args.pair_profile/"terminal.json", "profile-core-terminal.json"),
+                (args.pair_profile/"weight-load.json", "profile-weight-load.json"),
+                (args.pair_profile/"inputs.safetensors", "profile-inputs.safetensors"),
+                (args.decode_profile/"metrics.json", "profile-decode.json"),
+                (args.text_cache/"manifest.json", "text-manifest.json")):
+            shutil.copyfile(source, out/name)
+        save_file(values, str(out/"inputs.safetensors"))
+        report["input_sha256"] = sha256(out/"inputs.safetensors")
+        benchmark = solver_benchmark(values["initial_noise"], values["observation"])
+        atomic_write(out/"cpu-solver.json", benchmark)
+        report["timing_gate"] = timing_gate(pair, decode, benchmark["seconds"], time.monotonic()-guard.started)
+        atomic_write(out/"metrics.json", report)
+        if args.plan_only:
+            report["status"] = "planned"
+            report["gpu_or_weight_load_executed"] = False
+            return
+        config = {"weights": str(args.weights.resolve()), "run": str(out.resolve()), "device": args.device,
+            "deadline": guard.deadline, "source_sha256": sources, "reused_source_sha256": reused,
+            "input_sha256": report["input_sha256"], "weight_load_sha256": evidence["weight_load_sha256"],
+            "allocator_cleanup": evidence["optional_allocator_cleanup"]}
+        core = guard.launch(dict(config, stage="core", output=str((out/"core/result").resolve())), out/"core")
+        if core.get("completed_steps") != 50 or core.get("completed_core_calls") != 100 or core.get("all_prefix_checks_passed") is not True:
+            raise RuntimeError("Complete 50-step native core evidence required before decoding")
+        latent_sha = core["output_sha256"]["latents.safetensors"]
+        checked_file(out, "core/result/latents.safetensors", latent_sha)
+        report["core_metrics_sha256"] = sha256(out/"core/result/metrics.json")
+        report["core_process_exited_before_decoder_launch"] = True
+        atomic_write(out/"metrics.json", report)
+        decoded = guard.launch(dict(config, stage="decode", latent_file_sha256=latent_sha,
+            output=str((out/"decode/result").resolve())), out/"decode")
+        if decoded.get("frame_count") != 17 or decoded.get("finite_output") is not True:
+            raise RuntimeError("All 17 finite decoded frames required")
+        report.update(status="passed", decode_metrics_sha256=sha256(out/"decode/result/metrics.json"),
+            generated_future_frames=16, output_latent_sha256=latent_sha, frame_count=17, preview_playback_fps=10)
+    except BaseException as caught:
+        report.update(status="interrupted" if isinstance(caught, KeyboardInterrupt) else "failed",
+            error_type=type(caught).__name__, error=str(caught))
+        raise
+    finally:
+        guard.close()
+        report.update(elapsed_seconds=time.monotonic()-guard.started, sampled_parent_limits=guard.peaks)
+        atomic_write(out/"metrics.json", report)
+
+
+if __name__ == "__main__":
+    main()

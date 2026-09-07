@@ -30,7 +30,7 @@ python -m pytest experiments/wan22_native/test_core.py \
   experiments/wan22_native/test_profile_independent.py -q
 ```
 
-The [retained CPU evidence](core-results/README.md) includes exact source snapshots, both independent reports, earlier failures and the weight-download manifest. Current implementation checks passed all 14 tests; the independent core and profiler checks passed seven and four tests respectively. No actual 5B forward was run for these records.
+The [retained CPU evidence](core-results/README.md) includes exact source snapshots, both independent reports, earlier failures and the weight-download manifest. Current implementation checks passed all 16 tests; the independent core and profiler checks passed seven and four tests respectively. The latest affected-source rerun passed 20 checks in total. No actual 5B forward was run for these records.
 
 The core runtime/test versions are listed in `requirements-core.txt`. No package installation was needed for the local tests: the existing pinned Wan environment was used, with its base Python's installed pytest appended after the environment's package paths. Execution reports record that command and the resulting versions.
 
@@ -41,11 +41,23 @@ python -m experiments.wan22_native.profile_core \
   --weights /path/to/wan22-ti2v5b-weights \
   --observation-cache /path/to/completed-new-vae-initial-observation \
   --text-cache experiments/wan_adapter/text_cache/native-results \
-  --cpu-report experiments/wan22_native/core-results/cpu-v2/report.json \
+  --cpu-report experiments/wan22_native/core-results/cpu-v3/report.json \
   --independent-report experiments/wan22_native/core-results/independent-core/report.json \
   --output /path/to/new-native5b-pair-profile --device mps
 ```
 
-The parent enforces 900 seconds, 18 GiB process RSS and at least 2 GiB available system memory. The worker applies an MPS allocator cap and samples Metal allocation during loading and inference. Both source copies and imported helper sources are snapshotted. Failures and partial outputs remain in the new run directory.
+The parent enforces 900 seconds, 18 GiB process RSS and at least 2 GiB available system memory. The worker applies an MPS allocator cap and samples Metal allocation during loading and inference. The core records its own five inherited MPS allocator/runtime environment values and the device recommended-memory bytes in `metrics.json`; `launch.json` also records the exact variables passed to the child process. Unset values remain JSON null. Codec settings are recorded separately and are not applied to the core automatically. Both source copies and imported helper sources are snapshotted. Failures and partial outputs remain in the new run directory.
 
-The profiler runs exactly one positive/negative forward pair at the initial native timestep and one official CPU UniPC step. It retains the initial noise, clean-prefix latent, token times, velocities and resulting latent. Defaults are the native 50 steps, shift 5 and guidance 5. The linear 50-pair timing estimate excludes decode and later-step variation and does not automatically authorize a full clip. There is no full generation loop in this profiler. Full-model GPU memory, speed and image quality must be measured separately; none follows from the parameter count or CPU tests.
+The profiler runs exactly one positive/negative forward pair at the initial native timestep and one official CPU UniPC step. It retains the initial noise, clean-prefix latent, token times, velocities and resulting latent. Defaults are the native 50 steps, shift 5 and guidance 5. The linear 50-pair timing estimate excludes decode and later-step variation and does not automatically authorize a full clip. There is no full generation loop in this profiler. Full-video GPU memory, speed and image quality require their own measurements; none follows from the parameter count or CPU tests.
+
+## Actual local core measurement
+
+The [first actual 5B core profile](core-results/pair-v1/README.md) completed on the M4 Pro: 96.110 seconds to verify and stream weights, 5.765 seconds for the positive forward and 3.263 seconds for the negative forward. All outputs were finite and the known prefix was preserved after one CPU UniPC step. The complete measured inputs, outputs, sources and load records are retained. This is one pair, not a video.
+
+The native codec reconstructed the original first image successfully. Two full 17-frame decode-cost attempts subsequently hit the fixed 2 GiB free-system-memory floor, including an attempt with an earlier allocator cleanup threshold. Those failures remain retained. The [third full decoder measurement](codec-results/full-decode-v3/README.md) completed in 86.92 seconds, including 79.99 seconds decoding, with synchronization and unused-buffer cleanup after each causal convolution. Its first reconstructed frame exactly matches the earlier saved RGB pixels. This used synthetic future latents and measured execution cost, not generated image quality.
+
+## Complete clip and failed visual inspection
+
+The [full native 50-step run](sample-results/clip50-v1/README.md) completed in 527.57 seconds. All 100 positive/negative calls and 50 prefix restorations passed their execution checks. The separate FP32 decoder produced one starting reconstruction and 16 generated future frames. All original frames, raw decoded pixels, final latents, source and measurements are retained.
+
+The future frames contain colored, warped surfaces around the doorway. The visual result failed inspection. Training an action adapter on this path is pending a complete real-video codec reconstruction and renewed sampling checks. The 17-frame, 512 × 288 result cannot establish the advertised 720P quality, useful action control or frontier-world-model performance. The [sampler documentation](SAMPLE.md) describes exact inputs, process separation and source-bound timing admission.

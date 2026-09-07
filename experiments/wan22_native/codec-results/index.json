@@ -1,7 +1,7 @@
 {
   "schema": "worldline-wan22-codec-evidence-index-v1",
-  "status": "cpu_review_complete_actual_weight_forward_not_run",
-  "gpu_executed": false,
+  "status": "first_image_and_full17_decode_passed_after_two_preserved_memory_stops",
+  "gpu_executed": true,
   "packages": [
     {
       "directory": "cpu",
@@ -18,10 +18,60 @@
     {
       "directory": "independent-cpu",
       "scope": "Seven independent codec and full-decode review checks, source identities and test source."
+    },
+    {
+      "directory": "cpu-v3",
+      "scope": "Eleven CPU tests after the opaque-RGBA input fix; native codec math unchanged."
+    },
+    {
+      "directory": "decode-cpu-v2",
+      "scope": "Seven dependent decode-input/chunk tests bound to the current input reader and report default."
+    },
+    {
+      "directory": "independent-cpu-v2",
+      "scope": "Independent actual PNG RGB-byte preservation, alpha/size/hash rejection, current validators and source identities."
+    },
+    {
+      "directory": "first-image-failed-v1",
+      "scope": "Exact original failed input-validation attempt, before any actual weight load."
+    },
+    {
+      "directory": "input-rgba-audit",
+      "scope": "Exact pinned original PNG and alpha/RGB metadata audit."
+    },
+    {
+      "directory": "full-decode-stopped-v1",
+      "scope": "Exact first full-shape decode attempt; available-memory watchdog stopped it before a completed decode."
+    },
+    {
+      "directory": "first-image-v2",
+      "scope": "Successful actual full-weight FP32 first-image reconstruction after opaque-RGBA input fix;14.171 seconds, source/input/output/memory retained."
+    },
+    {
+      "directory": "decode-cpu-v3",
+      "scope": "Eight CPU tests including metadata-only exact runtime environment recording without environment mutation or GPU initialization."
+    },
+    {
+      "directory": "full-decode-stopped-v2",
+      "scope": "Exact second full-shape decode attempt with low watermark0.6; available-memory watchdog stopped it before a completed decode."
+    },
+    {
+      "directory": "memory-cpu-v1",
+      "scope": "Four CPU native17-frame equality/lifecycle tests."
+    },
+    {
+      "directory": "decode-cpu-v4",
+      "scope": "Nine CPU decoder input/record/gate tests bound to optional per-convolution cleanup."
+    },
+    {
+      "directory": "full-decode-v3",
+      "scope": "Complete actual FP32 full17-frame decoder with low watermark0.6 and per-convolution cleanup;86.919 seconds, all169 cleanup events and all17 annotated images retained."
+    },
+    {
+      "directory": "memory-independent-v1",
+      "scope": "Independent CPU equality and cleanup lifecycle review; actual17 tiny frames, event sink failures and unrelated hooks."
     }
   ],
-  "planned_first_image_output": "work/wan22-native-codec-image-v1",
-  "planned_full_decode_output": "work/wan22-native-codec-decode17-v1",
   "artifacts": {
     "codec-results/cpu/checked-source/codec-source.json.txt": {
       "bytes": 1956,
@@ -83,6 +133,34 @@
       "bytes": 924,
       "sha256": "43e756d835fcbbd85a68a335b0c0f328148c2a15748fdd072089f33847d6319c"
     },
+    "codec-results/cpu-v3/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/cpu-v3/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/cpu-v3/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/cpu-v3/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/cpu-v3/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/cpu-v3/provenance.json": {
+      "bytes": 794,
+      "sha256": "5f166e48ad21e9157a402af842446242fabb5a19a1b315f15fc1489c018a22ab"
+    },
+    "codec-results/cpu-v3/tests.json": {
+      "bytes": 925,
+      "sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9"
+    },
     "codec-results/decode-cpu/checked-source/codec-source.json.txt": {
       "bytes": 1956,
       "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
@@ -119,6 +197,78 @@
       "bytes": 1105,
       "sha256": "b47a08b035f5c2a34e801c884b06f76be9dd0b9c7d404083ec7f81b14453e8c9"
     },
+    "codec-results/decode-cpu-v2/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/decode-cpu-v2/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/decode-cpu-v2/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 11617,
+      "sha256": "06552266eca3e919b704deefb8b3db7e3ec0f43968a7c619f88f60b92a4d0ea2"
+    },
+    "codec-results/decode-cpu-v2/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/decode-cpu-v2/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/decode-cpu-v2/checked-source/test_codec_decode.py.txt": {
+      "bytes": 8430,
+      "sha256": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e"
+    },
+    "codec-results/decode-cpu-v2/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/decode-cpu-v2/provenance.json": {
+      "bytes": 993,
+      "sha256": "e3903ec4e457d127116c87841a189e86b2e7efa3df88f4bc5245a07911b24aa5"
+    },
+    "codec-results/decode-cpu-v2/tests.json": {
+      "bytes": 1106,
+      "sha256": "b1d54f8288e447fe5532dfa87b841d95d9fa52fa676cb504ccf7e8eeacaa29fd"
+    },
+    "codec-results/first-image-failed-v1/cpu-tests.json": {
+      "bytes": 924,
+      "sha256": "43e756d835fcbbd85a68a335b0c0f328148c2a15748fdd072089f33847d6319c"
+    },
+    "codec-results/first-image-failed-v1/measured-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/first-image-failed-v1/measured-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/first-image-failed-v1/measured-source/codec_profile.py.txt": {
+      "bytes": 9503,
+      "sha256": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957"
+    },
+    "codec-results/first-image-failed-v1/measured-source/test_codec.py.txt": {
+      "bytes": 9110,
+      "sha256": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef"
+    },
+    "codec-results/first-image-failed-v1/measured-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/first-image-failed-v1/memory.jsonl": {
+      "bytes": 162,
+      "sha256": "15271267939658d7a5f8cf45d19c4fdb7ce599952b8efb05061799f6aa7a4f7b"
+    },
+    "codec-results/first-image-failed-v1/metrics.json": {
+      "bytes": 1930,
+      "sha256": "4556133a25ec044cb144a72cb3fa9fff285e66be1517f83e5fde39fcf4321b45"
+    },
+    "codec-results/first-image-failed-v1/preservation.json": {
+      "bytes": 1071,
+      "sha256": "4253a0946f2746a458b5ba4f0d00969cc6bbfc91acfb311448f99a1e958486be"
+    },
     "codec-results/independent-cpu/provenance.json": {
       "bytes": 286,
       "sha256": "2bbdaa5d9b34892f9d5be5e7b2be7113c371cc849f9a4fe4b5a8f209bdbaa414"
@@ -131,6 +281,62 @@
       "bytes": 10160,
       "sha256": "33bc1680458edd8bac003291233d764708d60a7d8f969eb0a4958cdc4f67cb1a"
     },
+    "codec-results/independent-cpu-v2/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/independent-cpu-v2/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/independent-cpu-v2/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 11617,
+      "sha256": "06552266eca3e919b704deefb8b3db7e3ec0f43968a7c619f88f60b92a4d0ea2"
+    },
+    "codec-results/independent-cpu-v2/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/independent-cpu-v2/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/independent-cpu-v2/checked-source/test_codec_decode.py.txt": {
+      "bytes": 8430,
+      "sha256": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e"
+    },
+    "codec-results/independent-cpu-v2/checked-source/test_codec_independent.py.txt": {
+      "bytes": 12179,
+      "sha256": "2fbc0ec4967bb43aea57bb276585f6efff3f80dc58b2f1fbc65620578e5b584d"
+    },
+    "codec-results/independent-cpu-v2/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/independent-cpu-v2/input-checks.json": {
+      "bytes": 903,
+      "sha256": "a3808f7c4fd69297b1646210947d2890ed80b25fa0a0f005694523b8c5f866d0"
+    },
+    "codec-results/independent-cpu-v2/previous-test_codec_independent.py.txt": {
+      "bytes": 10160,
+      "sha256": "33bc1680458edd8bac003291233d764708d60a7d8f969eb0a4958cdc4f67cb1a"
+    },
+    "codec-results/independent-cpu-v2/report.json": {
+      "bytes": 2922,
+      "sha256": "76909e2e6ebd1b8bf0cd10e5cfac4ace374bcbdb599a096d91380f6240d2f51f"
+    },
+    "codec-results/input-rgba-audit/audit-source.py.txt": {
+      "bytes": 3312,
+      "sha256": "318fd62cdb144ae65cd147155e2c2b8a65262e7573e7976c79bd9db316cd9ccb"
+    },
+    "codec-results/input-rgba-audit/original.png": {
+      "bytes": 184595,
+      "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+    },
+    "codec-results/input-rgba-audit/report.json": {
+      "bytes": 1125,
+      "sha256": "ff334e50cb894acd7a9a96b91e18724a23f95e1bd801cc1e9291d48fcee55f1f"
+    },
     "codec-inputs/generation-source.py.txt": {
       "bytes": 1394,
       "sha256": "6e9aa57958e5d58aebf399348ab2d8748b474e5ddf06d60540cbe60bac616c74"
@@ -142,6 +348,489 @@
     "codec-inputs/synthetic-noise.safetensors": {
       "bytes": 553048,
       "sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1"
+    },
+    "codec-results/full-decode-stopped-v1/canonical-noise.safetensors": {
+      "bytes": 553048,
+      "sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1"
+    },
+    "codec-results/full-decode-stopped-v1/decode-cpu-tests.json": {
+      "bytes": 1106,
+      "sha256": "b1d54f8288e447fe5532dfa87b841d95d9fa52fa676cb504ccf7e8eeacaa29fd"
+    },
+    "codec-results/full-decode-stopped-v1/initial-codec-cpu-tests.json": {
+      "bytes": 925,
+      "sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/codec_decode_profile.py.txt": {
+      "bytes": 11617,
+      "sha256": "06552266eca3e919b704deefb8b3db7e3ec0f43968a7c619f88f60b92a4d0ea2"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/test_codec_decode.py.txt": {
+      "bytes": 8430,
+      "sha256": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e"
+    },
+    "codec-results/full-decode-stopped-v1/measured-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/full-decode-stopped-v1/memory.jsonl": {
+      "bytes": 11959,
+      "sha256": "49389fec7fdeb3abda348acdb5625d841dd436756d909d26b0e61d36ee8bff95"
+    },
+    "codec-results/full-decode-stopped-v1/metrics.json": {
+      "bytes": 3097,
+      "sha256": "4b9417cde5f9ecbd69ead34d258223c3eb95749342859030e6bfe7bf87c63510"
+    },
+    "codec-results/full-decode-stopped-v1/noise-provenance.json": {
+      "bytes": 757,
+      "sha256": "5e41b193ce10449c024dab56727174c61290831e131a409c177600d2d5969492"
+    },
+    "codec-results/full-decode-stopped-v1/preservation.json": {
+      "bytes": 2244,
+      "sha256": "3c36a5b3691506fb3c7cd7475401df403fe1bd16d9f7ac1b74bd8afac8f28270"
+    },
+    "codec-results/full-decode-stopped-v1/synthetic-input.safetensors": {
+      "bytes": 663736,
+      "sha256": "52178bb8bf0362080e7f41160df94a5a51e3cd92d736cf8cc965aa9b894cd77c"
+    },
+    "codec-results/full-decode-stopped-v1/watchdog-stop.json": {
+      "bytes": 309,
+      "sha256": "89ed2b2ad5f8d1ec5d2b171e44b123dca107565694beb8fda2ab27b3c41882e3"
+    },
+    "codec-results/first-image-v2/comparison.png": {
+      "bytes": 258250,
+      "sha256": "60f3259f1baed96b98e2008aa48bbccbecb772879d2631053eea55824fe09863"
+    },
+    "codec-results/first-image-v2/cpu-tests.json": {
+      "bytes": 925,
+      "sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9"
+    },
+    "codec-results/first-image-v2/measured-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/first-image-v2/measured-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/first-image-v2/measured-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/first-image-v2/measured-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/first-image-v2/measured-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/first-image-v2/memory.jsonl": {
+      "bytes": 4433,
+      "sha256": "3e671e9ac50c612bcac79b8ebafe526c2fa9cb13f1de526488683f49f795a60a"
+    },
+    "codec-results/first-image-v2/metrics.json": {
+      "bytes": 4294,
+      "sha256": "024927e795ecd381412ac38fa7f0936e6621f494c3dd9b5d4a13e06a904d5c5e"
+    },
+    "codec-results/first-image-v2/observation.safetensors": {
+      "bytes": 110680,
+      "sha256": "b2154c91d4029c05d09faba34a1cd8cb838b9aebd247ff8d7e52bceb265edf76"
+    },
+    "codec-results/first-image-v2/original.png": {
+      "bytes": 184595,
+      "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+    },
+    "codec-results/first-image-v2/reconstruction.png": {
+      "bytes": 129780,
+      "sha256": "f312db2ffc145d14e201b7227d8c954a331b93c5e3894bb5b42be6e96bf96c4e"
+    },
+    "codec-results/decode-cpu-v3/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/decode-cpu-v3/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/decode-cpu-v3/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 12203,
+      "sha256": "767ec7ea72dc5dd5b2c7fd539d1a295d9e90c349da990f2ccb2e971cef81692c"
+    },
+    "codec-results/decode-cpu-v3/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/decode-cpu-v3/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/decode-cpu-v3/checked-source/test_codec_decode.py.txt": {
+      "bytes": 9361,
+      "sha256": "e856daad264a977c6e2cd14a075568e3d9c4bbf3cbf045808d11ee07f8deee35"
+    },
+    "codec-results/decode-cpu-v3/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/decode-cpu-v3/provenance.json": {
+      "bytes": 1178,
+      "sha256": "3269415c4d7f2f496fef8553b5f0b88ccbe7a2c5e345b3372eb5c378dc17772b"
+    },
+    "codec-results/decode-cpu-v3/tests.json": {
+      "bytes": 1106,
+      "sha256": "e213eb88222afe571bbbcb3c30d0ba4ae486fc8c924dc20f4cfa095c08d609f2"
+    },
+    "codec-results/full-decode-stopped-v2/canonical-noise.safetensors": {
+      "bytes": 553048,
+      "sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1"
+    },
+    "codec-results/full-decode-stopped-v2/decode-cpu-tests.json": {
+      "bytes": 1106,
+      "sha256": "e213eb88222afe571bbbcb3c30d0ba4ae486fc8c924dc20f4cfa095c08d609f2"
+    },
+    "codec-results/full-decode-stopped-v2/initial-codec-cpu-tests.json": {
+      "bytes": 925,
+      "sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/codec_decode_profile.py.txt": {
+      "bytes": 12203,
+      "sha256": "767ec7ea72dc5dd5b2c7fd539d1a295d9e90c349da990f2ccb2e971cef81692c"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/test_codec_decode.py.txt": {
+      "bytes": 9361,
+      "sha256": "e856daad264a977c6e2cd14a075568e3d9c4bbf3cbf045808d11ee07f8deee35"
+    },
+    "codec-results/full-decode-stopped-v2/measured-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/full-decode-stopped-v2/memory.jsonl": {
+      "bytes": 12536,
+      "sha256": "19bfae9e35ac04633c9ffc227d67ca53bf6164583efa3027afc7fdbdf0e061ea"
+    },
+    "codec-results/full-decode-stopped-v2/metrics.json": {
+      "bytes": 3544,
+      "sha256": "47c903948799bf739894a09576ced6369ffd3c812d80fd6c5870c4d1cab25ab7"
+    },
+    "codec-results/full-decode-stopped-v2/noise-provenance.json": {
+      "bytes": 757,
+      "sha256": "5e41b193ce10449c024dab56727174c61290831e131a409c177600d2d5969492"
+    },
+    "codec-results/full-decode-stopped-v2/preservation.json": {
+      "bytes": 2116,
+      "sha256": "0b5d8555b181654b439e7497e6aa9a6f2d25ed6f2ca40efe30f1cf9c25b169fd"
+    },
+    "codec-results/full-decode-stopped-v2/synthetic-input.safetensors": {
+      "bytes": 663736,
+      "sha256": "52178bb8bf0362080e7f41160df94a5a51e3cd92d736cf8cc965aa9b894cd77c"
+    },
+    "codec-results/full-decode-stopped-v2/watchdog-stop.json": {
+      "bytes": 309,
+      "sha256": "3c4c0b0d9bdfe222487363b9b33661dcfe5a3ae05b4426c9a61147ff3930d976"
+    },
+    "codec-results/memory-cpu-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/memory-cpu-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/memory-cpu-v1/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "codec-results/memory-cpu-v1/checked-source/test_codec_memory.py.txt": {
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    "codec-results/memory-cpu-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/memory-cpu-v1/provenance.json": {
+      "bytes": 803,
+      "sha256": "95f5a97c012983c1b22391cdc3f4d71d244efa5d4c9129fee53e6318acc43e36"
+    },
+    "codec-results/memory-cpu-v1/tests.json": {
+      "bytes": 2306,
+      "sha256": "ae7d0822d049124f7a78c02178aa0c9dbc81c8fd4737574a91327c12d6b4ab4c"
+    },
+    "codec-results/decode-cpu-v4/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/decode-cpu-v4/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/decode-cpu-v4/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    "codec-results/decode-cpu-v4/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "codec-results/decode-cpu-v4/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/decode-cpu-v4/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/decode-cpu-v4/checked-source/test_codec_decode.py.txt": {
+      "bytes": 10267,
+      "sha256": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8"
+    },
+    "codec-results/decode-cpu-v4/checked-source/test_codec_memory.py.txt": {
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    "codec-results/decode-cpu-v4/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/decode-cpu-v4/provenance.json": {
+      "bytes": 1179,
+      "sha256": "e01ce2b32ec805768a1c33ec00b8d5391bb18969f083fe99f861d03925dc4db8"
+    },
+    "codec-results/decode-cpu-v4/tests.json": {
+      "bytes": 1293,
+      "sha256": "585666a3d7a31ce5b9fffa8223f3503ea94c666fe0413093321dd041015db370"
+    },
+    "codec-results/full-decode-v3/artifact-audit-source.py.txt": {
+      "bytes": 7398,
+      "sha256": "313bbe1eb5987770c7092ce83e4a678503a2fe0a75d8a2518660d1d38bc7c26e"
+    },
+    "codec-results/full-decode-v3/artifact-audit.json": {
+      "bytes": 10579,
+      "sha256": "37416edb0c5f62548cabd1c379ed7543b4006e452707326a44bf07249f1c1659"
+    },
+    "codec-results/full-decode-v3/canonical-noise.safetensors": {
+      "bytes": 553048,
+      "sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1"
+    },
+    "codec-results/full-decode-v3/decode-cpu-tests.json": {
+      "bytes": 1293,
+      "sha256": "585666a3d7a31ce5b9fffa8223f3503ea94c666fe0413093321dd041015db370"
+    },
+    "codec-results/full-decode-v3/frames/0000-synthetic.png": {
+      "bytes": 133621,
+      "sha256": "129c731a1ec10597a10a2bcc1d3cbb7e461096d52843a6bd696a17cd0f5d3e8b"
+    },
+    "codec-results/full-decode-v3/frames/0001-synthetic.png": {
+      "bytes": 206743,
+      "sha256": "d18c2e6e930170eb13decebd46653dd7faf2f101e901035011300afcfbbaffe8"
+    },
+    "codec-results/full-decode-v3/frames/0002-synthetic.png": {
+      "bytes": 231702,
+      "sha256": "a0bbb7c9abebc06d08817fa37d976f378af7d765a7f9d71b28ed0f3d96c47738"
+    },
+    "codec-results/full-decode-v3/frames/0003-synthetic.png": {
+      "bytes": 240969,
+      "sha256": "78cbaa4fecfbfe401f8a4c965df03b84d270e9c16fef1bafa50e591e134fee19"
+    },
+    "codec-results/full-decode-v3/frames/0004-synthetic.png": {
+      "bytes": 250354,
+      "sha256": "e00083c7a49848191ec32f8fe1b6b778709c75c63efa5bfb7be3e5bc64497a4d"
+    },
+    "codec-results/full-decode-v3/frames/0005-synthetic.png": {
+      "bytes": 235933,
+      "sha256": "59165f037c62b3b6f1643a42501b1ef6a8999aef9c81de80da444f4d55acc043"
+    },
+    "codec-results/full-decode-v3/frames/0006-synthetic.png": {
+      "bytes": 241731,
+      "sha256": "af7443c967c95cbaf8d5b120876031dfbd588c98159736288b6787bcd07c2e3b"
+    },
+    "codec-results/full-decode-v3/frames/0007-synthetic.png": {
+      "bytes": 245163,
+      "sha256": "c3e0b2fde3e5cf8f8a8c4377fb658b464a4090f1821a8c5c1850da25ca010821"
+    },
+    "codec-results/full-decode-v3/frames/0008-synthetic.png": {
+      "bytes": 253963,
+      "sha256": "8642393edd76302b31ea8d0e493bbb91f7cb6a45a84ec9854557566129d2947a"
+    },
+    "codec-results/full-decode-v3/frames/0009-synthetic.png": {
+      "bytes": 239473,
+      "sha256": "cc0d80eebb6122f897e4dd49a3c8c4a07d62885da0a5c2007c21aa27a21c4a90"
+    },
+    "codec-results/full-decode-v3/frames/0010-synthetic.png": {
+      "bytes": 245116,
+      "sha256": "813c9b50b282bb4e03e929a5c7e6f5563180920ca3d9b58db20513f8e68004f1"
+    },
+    "codec-results/full-decode-v3/frames/0011-synthetic.png": {
+      "bytes": 247908,
+      "sha256": "c7878fedf7022d1389706b95519c5c2c9a36e56a699a06b6ab27abe81c2b3f58"
+    },
+    "codec-results/full-decode-v3/frames/0012-synthetic.png": {
+      "bytes": 256228,
+      "sha256": "2702502e9ce12c5bd5ccf6e44d904c241ad61b019951d8e5cb3ef0a08e59c7ac"
+    },
+    "codec-results/full-decode-v3/frames/0013-synthetic.png": {
+      "bytes": 240549,
+      "sha256": "0a426fd1739ad4724257bfd6435d99b284a1a963e1733ddf558142caa6610e94"
+    },
+    "codec-results/full-decode-v3/frames/0014-synthetic.png": {
+      "bytes": 244682,
+      "sha256": "6e690775d836d396cbce7ffdc2c00439de5d2e53b25eebb5a36f081e7059d9c6"
+    },
+    "codec-results/full-decode-v3/frames/0015-synthetic.png": {
+      "bytes": 246856,
+      "sha256": "0c968cd1745b430452bd97a1e46d3b4af762074bb95c0ea970e0d057f6694d7f"
+    },
+    "codec-results/full-decode-v3/frames/0016-synthetic.png": {
+      "bytes": 254896,
+      "sha256": "06ceb925fe18321556f0c41e360f48165d4feaf3bf91916e8ee821ccc8925d25"
+    },
+    "codec-results/full-decode-v3/initial-codec-cpu-tests.json": {
+      "bytes": 925,
+      "sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9"
+    },
+    "codec-results/full-decode-v3/measured-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/full-decode-v3/measured-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/full-decode-v3/measured-source/codec_decode_profile.py.txt": {
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    "codec-results/full-decode-v3/measured-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "codec-results/full-decode-v3/measured-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/full-decode-v3/measured-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "codec-results/full-decode-v3/measured-source/test_codec_decode.py.txt": {
+      "bytes": 10267,
+      "sha256": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8"
+    },
+    "codec-results/full-decode-v3/measured-source/test_codec_memory.py.txt": {
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    "codec-results/full-decode-v3/measured-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/full-decode-v3/memory-cpu-tests.json": {
+      "bytes": 2306,
+      "sha256": "ae7d0822d049124f7a78c02178aa0c9dbc81c8fd4737574a91327c12d6b4ab4c"
+    },
+    "codec-results/full-decode-v3/memory.jsonl": {
+      "bytes": 18750,
+      "sha256": "426bbcfb4427c50ef26795d4c8b7e80f377dbf5343cac0d2374b326c15c9a591"
+    },
+    "codec-results/full-decode-v3/metrics.json": {
+      "bytes": 47262,
+      "sha256": "b533559026aa31fd0fc1aace5c3ef9d318f7c736f3407459848ff59f37d9c07d"
+    },
+    "codec-results/full-decode-v3/noise-provenance.json": {
+      "bytes": 757,
+      "sha256": "5e41b193ce10449c024dab56727174c61290831e131a409c177600d2d5969492"
+    },
+    "codec-results/full-decode-v3/per-convolution-cleanup.jsonl": {
+      "bytes": 20968,
+      "sha256": "58cae47bb329b1b1c6e6387553c417e9c8d3fa8cc5729313493e690d40512aac"
+    },
+    "codec-results/full-decode-v3/synthetic-comparison.png": {
+      "bytes": 885123,
+      "sha256": "e63b3b59db76b8dea7b5bb8d99648220fe73629d6a2bf931177cc325fec5ab9c"
+    },
+    "codec-results/full-decode-v3/synthetic-input.safetensors": {
+      "bytes": 663736,
+      "sha256": "52178bb8bf0362080e7f41160df94a5a51e3cd92d736cf8cc965aa9b894cd77c"
+    },
+    "codec-results/full-decode-v3/synthetic-preview.gif": {
+      "bytes": 1867879,
+      "sha256": "9beb9309e047b6c203c3d0443c2d70ff3fa98e7aec2a4dea3ca6ceab1414cf9d"
+    },
+    "codec-results/memory-independent-v1/report.json": {
+      "bytes": 3466,
+      "sha256": "d26badda9e48b7a5ce0907bfcac2df557ad414c44b95e7c9ab7091982c5e9319"
+    },
+    "codec-results/memory-independent-v1/source/codec.py": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/memory-independent-v1/source/codec_decode_profile.py": {
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    "codec-results/memory-independent-v1/source/codec_memory.py": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "codec-results/memory-independent-v1/source/codec_profile.py": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "codec-results/memory-independent-v1/source/test_codec_decode.py": {
+      "bytes": 10267,
+      "sha256": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8"
+    },
+    "codec-results/memory-independent-v1/source/test_codec_memory.py": {
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    "codec-results/memory-independent-v1/source/test_codec_memory_independent.py": {
+      "bytes": 6243,
+      "sha256": "8ad3f58f047eaf073a67cac25aa9fe4aa15393807c560371dcdf4703f3b9a26a"
+    },
+    "codec-results/memory-independent-v1/source/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/memory-independent-v1/tests.json": {
+      "bytes": 1247,
+      "sha256": "4fea73c79e563b5665326b5daad57ceaadf4770475ed2196e4e51cc0e880ddec"
     }
-  }
+  },
+  "gpu_execution_scope": "Actual full-weight first-image reconstruction and synthetic full17-frame decoder cost completed; no world-model denoiser in these codec runs",
+  "completed_full_decode_output": "codec-results/full-decode-v3",
+  "completed_first_image_output": "codec-results/first-image-v2"
 }

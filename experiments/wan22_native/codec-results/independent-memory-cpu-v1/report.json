@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 0.8556837090000045,
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "test_codec_memory.py": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e",
+    "test_codec_memory_independent.py": "8ad3f58f047eaf073a67cac25aa9fe4aa15393807c560371dcdf4703f3b9a26a",
+    "test_codec_decode.py": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "measurements": {
+    "full17_max_absolute_difference": 0.0,
+    "registered_layers": 46,
+    "native_calls": 129
+  },
+  "device": "cpu",
+  "actual_gpu_calls": false,
+  "external_weight_values_loaded": false,
+  "scope": "Tiny native full17 equations, hook ownership and event/synchronization failure paths. No measured memory saving or full-weight decode.",
+  "schema": "worldline-wan22-codec-memory-independent-review-v1",
+  "readiness": "Ready for separately scheduled full-shape synthetic decoder v3 only",
+  "blockers": [],
+  "source_math_unchanged": true,
+  "input_report_sha256": {
+    "codec-results/cpu-v3/tests.json": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+    "codec-results/memory-cpu-v1/tests.json": "ae7d0822d049124f7a78c02178aa0c9dbc81c8fd4737574a91327c12d6b4ab4c",
+    "codec-results/decode-cpu-v4/tests.json": "585666a3d7a31ce5b9fffa8223f3503ea94c666fe0413093321dd041015db370"
+  },
+  "read_review": {
+    "coverage": "Registers only native CausalConv3d modules. On the independent tiny17 fixture all 129 native calls across 46 registered modules receive exactly one callback, including the pre-decoder conv2 and five native decoder chunks. Encoder modules stay unused.",
+    "equations": "Forward hooks return None and never edit inputs, outputs, module parameters, normalization or precision. Existing chunk cleanup composes exactly; all 17 output frames and input latent are bit-exact. codec.py and codec_profile.py retain their prior hashes.",
+    "lifecycle": "Own hook handles removed on normal completion, native error, registration error, cleanup callback failure, event sink failure or interruption. Existing unrelated hooks remain. Cache clearing is outside the completed native decode or in its error exit. Mocked synchronization failure skips empty_cache and propagates failure.",
+    "timing": "Cleanup events include synchronization wait plus allocator call time, excluding event sink writing; whole decode includes every callback and JSONL flush. Per-layer values must not be called isolated allocator overhead. Hooks cannot clear buffers still referenced by live tensors; actual memory benefit is unproved until runtime.",
+    "inputs_and_guard": "Current source-bound codec/memory/decode CPU gates pass. Input reader admits only the verified new48 first-observation tensor; synthetic future is exact retained canonical noise. No future RGB, action, target, old16 latent or denoiser. Same900-second/18GiB/2GiB guard, source snapshots and flushed per-event evidence. No full-clip admission from this diagnostic."
+  }
+}

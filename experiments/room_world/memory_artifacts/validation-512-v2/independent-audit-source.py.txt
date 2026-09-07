@@ -1,0 +1,375 @@
+"""Independent CPU artifact arithmetic audit. Never executes model inference."""
+import hashlib
+import json
+import math
+from pathlib import Path
+import re
+import statistics
+import sys
+
+import numpy as np
+import torch
+
+WORK = Path(__file__).resolve().parent
+REPO = WORK.parent / 'outputs/open-worldline'
+TRAIN = WORK / 'room-memory-training-batched-512-v2'
+EVAL = WORK / 'room-memory-validation-batched-512-v2'
+PLAN = WORK / 'room-memory-fixed512-plan-v2/study.json'
+PROTOCOL = REPO / 'experiments/room_world/memory_artifacts/training-protocol-v2/PROTOCOL.md'
+DATA = WORK / 'room-memory-data'
+BASE = REPO / 'experiments/room_world/artifacts/predictor/model.pt'
+SEEDS = [20260907, 20260908, 20260909]
+SCENES = list(range(300000, 300008))
+PROTOCOL_SHA = '8bdb44e8f3a3a71345ef76524c78efa4856a63e865eb1301fa0fef9cbcc2593b'
+PLAN_SHA = '7c4ef593192624f2635dd0a84e824715acb3e5ff8bbddb6e61104efd411b0f2f'
+sys.path.insert(0, str(REPO))
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as handle:
+        for block in iter(lambda: handle.read(2**20), b''):
+            h.update(block)
+    return h.hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def tensor_hashes(values):
+    return {name: {'shape': list(value.shape), 'dtype': str(value.dtype),
+        'sha256': hashlib.sha256(value.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest()}
+        for name, value in sorted(values.items())}
+
+
+def finite(value):
+    if isinstance(value, torch.Tensor):
+        assert torch.isfinite(value).all()
+    elif isinstance(value, dict):
+        for item in value.values(): finite(item)
+    elif isinstance(value, (tuple, list)):
+        for item in value: finite(item)
+    elif isinstance(value, float):
+        assert math.isfinite(value)
+
+
+def file_inventory(root):
+    return {str(path.relative_to(root)): {'bytes': path.stat().st_size, 'sha256': sha(path)}
+            for path in sorted(root.rglob('*')) if path.is_file()}
+
+
+def audit_training():
+    torch.set_num_threads(1)
+    assert sha(PROTOCOL) == PROTOCOL_SHA and sha(PLAN) == PLAN_SHA
+    study, plan = read(TRAIN / 'study.json'), read(PLAN)
+    assert study['status'] == 'complete' and study['phase'] == 'train' and study['matched_budgets'] is True
+    assert study['sequence_path'] == 'batched' and study['seeds'] == SEEDS and study['arms'] == ['carry', 'reset']
+    assert study['requested_updates_per_arm'] == 512 and study['max_seconds_per_arm'] == 600
+    assert not study['reserved_test_opened'] and not study['evaluation_executed'] and not study['controls_evaluated']
+    for key in ('source_sha256', 'training', 'validation', 'schedules', 'checkpoint_selection', 'base_checkpoint_sha256'):
+        assert study[key] == plan[key]
+    declared_sources = dict(re.findall(r'\| ([a-z_]+\.py) \| ([0-9a-f]{64}) \|', PROTOCOL.read_text()))
+    assert study['source_sha256'] == declared_sources
+    for name, expected in declared_sources.items():
+        assert sha(TRAIN / 'measured-source' / (name + '.txt')) == expected
+        assert sha(REPO / 'experiments/room_world' / name) == expected
+    assert sha(BASE) == study['base_checkpoint_sha256'] == '9376e684e3abd103313d13d04bd4a1afc1b202fccb7e7b6fe133e7232a486d69'
+    base_tensors = torch.load(BASE, weights_only=True, map_location='cpu')['state_dict']
+    data_files = {}
+    for key, split, scenes in [('training', 'train', list(range(5000, 5032))), ('validation', 'validation', SCENES)]:
+        record = study[key]
+        assert record['split'] == split and record['scene_ids'] == scenes
+        assert sha(DATA / split / 'manifest.json') == record['manifest_sha256']
+        for row in record['files']:
+            path = DATA / split / row['file']
+            assert sha(path) == row['file_sha256']
+            data_files[f'{split}/{row["file"]}'] = row['file_sha256']
+    from experiments.room_world.memory_train import make_model
+    arms = []
+    identities = {}
+    assert len(study['runs']) == 6
+    for seed in SEEDS:
+        initial_path = TRAIN / str(seed) / 'initial-memory.pt'
+        initial = torch.load(initial_path, weights_only=True, map_location='cpu')
+        finite(initial)
+        assert len(initial) == 6 and sum(v.numel() for v in initial.values()) == 24960
+        # Constructor only, no inference or GPU: reproduce the declared fresh seeded initialization.
+        fresh = make_model(BASE, seed, 'cpu')
+        fresh_values = {name: value for name, value in fresh.named_parameters() if value.requires_grad}
+        assert tensor_hashes(initial) == tensor_hashes(fresh_values)
+        del fresh, fresh_values
+        assert all(torch.count_nonzero(value) == 0 for name, value in initial.items() if name.startswith('condition.'))
+        identities[str(seed)] = {'file_sha256': sha(initial_path), 'tensors': tensor_hashes(initial)}
+        schedule = study['schedules'][str(seed)]
+        assert len(schedule) == 512
+        rng = np.random.default_rng(seed)
+        independent_schedule = np.concatenate([rng.permutation(np.arange(5000,5032)) for _ in range(16)]).tolist()
+        assert schedule == independent_schedule
+        for start in range(0,512,32): assert sorted(schedule[start:start+32]) == list(range(5000,5032))
+        pair = []
+        for mode in ('carry', 'reset'):
+            rows = [row for row in study['runs'] if row['seed'] == seed and row['mode'] == mode]
+            assert len(rows) == 1
+            entry = rows[0]
+            path = TRAIN / entry['metrics']
+            assert sha(path) == entry['metrics_sha256']
+            metric = read(path)
+            terminal = read(path.parent.parent / 'terminal.json')
+            assert entry['terminal_status'] == entry['training_status'] == metric['status'] == terminal['status'] == 'complete'
+            assert terminal['exit_code'] == 0 and terminal['reason'] is None
+            assert metric['seed'] == seed and metric['mode'] == mode and metric['phase'] == 'train'
+            assert metric['sequence_path'] == entry['sequence_path'] == 'batched'
+            assert metric['loss_implementation'] == 'experiments.room_world.memory_sequence.sequence_loss_batched'
+            assert metric['completed_updates'] == metric['requested_updates'] == entry['completed_updates'] == 512
+            assert metric['completed_scene_schedule'] == metric['scene_schedule'] == schedule
+            assert metric['initial_memory'] == tensor_hashes(initial)
+            assert metric['base_before'] == metric['base_after'] == tensor_hashes(base_tensors)
+            assert metric['data'] == study['training']
+            assert metric['runtime']['mps_fallback'] == '0' and torch.device(metric['device']).type == 'mps'
+            assert metric['parameter_counts']['trainable'] == 24960
+            updates = metric['updates']
+            assert len(updates) == 512 and [row['update'] for row in updates] == list(range(1,513))
+            assert [row['scene'] for row in updates] == schedule
+            assert all(math.isfinite(row['loss']) and row['loss'] >= 0 and math.isfinite(row['gradient_norm_before_clip']) and row['gradient_norm_before_clip'] > 0 for row in updates)
+            checkpoints = {}
+            for filename, field in [('memory-final.pt','memory_final_sha256'),('memory-last.pt','memory_last_sha256'),('recovery-last.pt','recovery_last_sha256')]:
+                assert sha(path.parent / filename) == metric[field]
+                loaded = torch.load(path.parent / filename, weights_only=True, map_location='cpu')
+                finite(loaded)
+                assert loaded['mode'] == mode and loaded['seed'] == seed and loaded['completed_updates'] == 512
+                assert loaded['sequence_path'] == 'batched' and loaded['base_checkpoint_sha256'] == sha(BASE)
+                assert tensor_hashes(loaded['memory_state_dict']) == metric['final_memory']
+                checkpoints[filename] = loaded
+            assert metric['memory_final_sha256'] == metric['memory_last_sha256']
+            recovery = checkpoints['recovery-last.pt']
+            assert recovery['completed_scene_schedule'] == schedule
+            assert set(recovery['rng']) == {'torch_cpu','torch_mps','python','numpy'}
+            opt = recovery['optimizer_state_dict']
+            assert len(opt['state']) == 6 and len(opt['param_groups']) == 1
+            group = opt['param_groups'][0]
+            assert group['params'] == list(range(6))
+            for key, expected in [('lr',.0003),('weight_decay',.0001),('betas',(.9,.999)),('eps',1e-8)]: assert group[key] == expected
+            for index, value in enumerate(initial.values()):
+                state = opt['state'][index]
+                assert set(state) == {'step','exp_avg','exp_avg_sq'} and state['step'].item() == 512
+                assert state['exp_avg'].shape == state['exp_avg_sq'].shape == value.shape
+                assert state['exp_avg'].dtype == state['exp_avg_sq'].dtype == value.dtype
+                assert (state['exp_avg_sq'] >= 0).all()
+            assert terminal['max_seconds'] == 600 and terminal['max_rss_gib'] == 18 and terminal['minimum_available_gib'] == 2
+            assert terminal['elapsed_seconds'] <= 600 and metric['elapsed_seconds'] <= 600
+            assert all(row['rss_bytes'] <= 18*2**30 and row['available_bytes'] >= 2*2**30 for row in terminal['samples'])
+            assert all(row['mps_driver_bytes'] <= 18*2**30 for row in updates)
+            arms.append({'seed':seed,'mode':mode,'completed_updates':512,'optimizer_states':6,'all_optimizer_steps':512,
+                'training_seconds':metric['elapsed_seconds'],'supervised_seconds':terminal['elapsed_seconds'],
+                'maximum_sampled_driver_gib':max(row['mps_driver_bytes'] for row in updates)/2**30,
+                'minimum_sampled_available_gib':min(row['available_bytes'] for row in terminal['samples'])/2**30,
+                'final_sha256':metric['memory_final_sha256'],'recovery_sha256':metric['recovery_last_sha256'],
+                'gradient_norm_range':[min(row['gradient_norm_before_clip'] for row in updates),max(row['gradient_norm_before_clip'] for row in updates)]})
+            pair.append(metric)
+        for key in ('optimizer','initial_memory','base_before','base_after','data','scene_schedule','completed_scene_schedule'):
+            assert pair[0][key] == pair[1][key]
+    inventory = file_inventory(TRAIN)
+    assert len(inventory) == 46 and sum(row['bytes'] for row in inventory.values()) == 5180236
+    return {'status':'passed','study_sha256':sha(TRAIN/'study.json'),'protocol_sha256':sha(PROTOCOL),'plan_sha256':sha(PLAN),
+        'source_sha256':study['source_sha256'],'base_checkpoint_sha256':sha(BASE),'initializations':identities,'arms':arms,
+        'full_training_inventory':inventory,'data_files_sha256':data_files,'seeds':SEEDS,'updates_each':512,
+        'epochs_each':16,'transitions_each':66560,'transitions_all_arms':399360,'all_base_tensors_unchanged':True,
+        'all_initializations_reproduced_fresh_on_cpu_without_forward':True,'no_reserved_test_access':True}
+
+
+NUMERIC_CHECKS = {'count':0,'maximum_absolute_difference':0.}
+PROTOCOLS = ('uninterrupted_generated_history','observed_prefix_then_generated_return')
+CONTROL_ACTIONS = {'translation_cycle':[1]*4+[2]*8+[1]*4,
+    'out_of_reach_interaction':[2]*6+[5]+[0]*3+[1]*6,
+    'turn_open_close':[3]*4+[4]*4+[5]+[0]*3+[5]+[0]*3}
+
+
+def expect(actual, expected):
+    if isinstance(expected, dict):
+        for key, value in expected.items(): expect(actual[key],value)
+    elif isinstance(expected,(list,tuple)):
+        assert len(actual)==len(expected)
+        for a,b in zip(actual,expected):expect(a,b)
+    elif expected is None or isinstance(expected,(str,bool)):
+        assert actual==expected,(actual,expected)
+    else:
+        assert math.isfinite(actual) and math.isfinite(expected)
+        delta=abs(float(actual)-float(expected));NUMERIC_CHECKS['count']+=1
+        NUMERIC_CHECKS['maximum_absolute_difference']=max(NUMERIC_CHECKS['maximum_absolute_difference'],delta)
+        assert math.isclose(actual,expected,rel_tol=1e-9,abs_tol=1e-12),(actual,expected)
+
+
+def interval(values):
+    values=np.asarray(values,dtype=np.float64);valid=np.isfinite(values)
+    return {'percentile_95':np.percentile(values,[2.5,97.5]).tolist() if valid.all() else None,
+            'defined_resamples':int(valid.sum()),'undefined_resamples':int((~valid).sum())}
+
+
+def audit_evaluation(training):
+    torch.set_num_threads(1)
+    top=read(EVAL/'validation.json')
+    assert top['status']=='complete' and top['controls_evaluated'] is True and not top['reserved_test_opened']
+    assert top['training_study_sha256']==training['study_sha256'] and top['training_source_sha256']==training['source_sha256']
+    assert top['sequence_path']=='batched' and top['base_checkpoint_sha256']==training['base_checkpoint_sha256']
+    assert top['validation']['scene_ids']==SCENES and top['controls']['scene_ids']==SCENES and top['control_input_issue'] is None
+    assert top['validation']['manifest_sha256']==sha(DATA/'validation/manifest.json')
+    assert top['controls']['manifest_sha256']==sha(DATA/'validation-controls/manifest.json')=='b8b49ab3a6afef7541b33ee648b769f8a0b322daefba40c84875d1e2b5534b98'
+    for name,value in top['source_sha256'].items():
+        assert sha(EVAL/'measured-source'/(name+'.txt'))==value==training['source_sha256'][name]
+    visibility=top['visibility_audit'];assert visibility['status']=='verified'
+    audit_path=REPO/'experiments/room_world/memory_artifacts/control-validation/visibility-report.json'
+    assert visibility['file_sha256']==sha(audit_path)=='3cafc4c158a0db9f72fbac046d1b366a914f45df68ce9152e0e9f952a7cb3981'
+    assert visibility['capture_manifest_sha256']==top['controls']['manifest_sha256'] and visibility['scene_seeds']==SCENES
+    assert all(value>0 for value in visibility['visible_door_pixels'].values())
+    control_data_files={row['file']:row['file_sha256'] for row in top['controls']['files']}
+    assert len(control_data_files)==40
+    for name,value in control_data_files.items():assert sha(DATA/'validation-controls'/name)==value
+    keys=[f'{seed}-{mode}' for seed in SEEDS for mode in ('carry','reset')]+['frozen']
+    assert len(top['runs'])==7
+    reports,controls,pairs,prediction_files={}, {}, {}, {}
+    checkpoint_map={(row['seed'],row['mode']):row['final_sha256'] for row in training['arms']}
+    model_rows=[]
+    for run in top['runs']:
+        key='frozen' if run['mode']=='frozen' else f'{run["seed"]}-{run["mode"]}'
+        assert key in keys and key not in reports and run['status']==run['terminal_status']=='complete'
+        path=EVAL/run['evaluation'];assert sha(path)==run['evaluation_sha256']
+        measured=read(path);reports[key]=measured;identity=measured['provenance']
+        terminal=read(path.parent.parent/'terminal.json')
+        assert terminal['status']=='complete' and terminal['exit_code']==0 and terminal['reason'] is None
+        assert measured['status']=='complete' and measured['controls_evaluated'] is True and not measured['reserved_test_opened']
+        assert measured['data']==top['validation'] and measured['control_results']['provenance']==top['controls']
+        assert measured['control_results']['status']=='complete'
+        assert identity['training_study_sha256']==training['study_sha256'] and identity['training_source_sha256']==training['source_sha256']
+        assert identity['training_sequence_path']=='batched' and identity['mode']==run['mode'] and identity['seed']==run['seed']
+        assert identity['sequence_path']==run['sequence_path']==(None if key=='frozen' else 'batched')
+        assert identity['updates']==(0 if key=='frozen' else 512)
+        assert identity['checkpoint_sha256']==(training['base_checkpoint_sha256'] if key=='frozen' else checkpoint_map[(run['seed'],run['mode'])])
+        assert terminal['max_seconds']==600 and terminal['max_rss_gib']==18 and terminal['minimum_available_gib']==2
+        single=measured['control_results']['single_cases'];assert len(single)==24
+        arrays=[]
+        for kind,actions in CONTROL_ACTIONS.items():
+            selected=sorted([row for row in single if row['kind']==kind],key=lambda row:row['scene_seed'])
+            assert [row['scene_seed'] for row in selected]==SCENES
+            arrays.append([row['mae'] for row in selected])
+            for row in selected:
+                assert row['branches']==1 and row['steps']==16 and len(row['per_step'])==16
+                assert [(step['branch'],step['transition'],step['action']) for step in row['per_step']]==[(0,i,a) for i,a in enumerate(actions)]
+                errors=np.array([step['mae'] for step in row['per_step']],dtype=np.float64)
+                assert np.isfinite(errors).all() and (errors>=0).all();expect(row['mae'],errors.mean())
+                for action in range(6):
+                    subset=errors[np.array(actions)==action]
+                    expect(row['per_action'][str(action)],{'count':len(subset),'mae':float(subset.mean()) if len(subset) else None})
+            summary=measured['control_results']['single_summary']['types'][kind]
+            expect(summary,{'available':True,'scenes':8,'equal_scene_mae':np.mean(arrays[-1])})
+            for action in range(6):
+                values=[row['per_action'][str(action)] for row in selected if row['per_action'][str(action)]['count']]
+                count=sum(row['count'] for row in values)
+                expect(summary['per_action'][str(action)],{'count':count,'scenes_with_action':len(values),
+                    'equal_scene_mae':float(np.mean([row['mae'] for row in values])) if values else None,
+                    'occurrence_weighted_mae':sum(row['mae']*row['count'] for row in values)/count if count else None})
+        controls[key]=np.asarray(arrays,dtype=np.float64)
+        expect(measured['control_results']['single_summary'],{'available':True,'overall_equal_type_mae':controls[key].mean()})
+        all_rows=list(single)
+        for waiting,first in [(8,33),(16,41),(32,57)]:
+            records=measured['scenes'] if waiting==16 else measured['control_results']['paired_waits'][str(waiting)]['cases']
+            records=sorted(records,key=lambda row:row['scene_seed']);assert [row['scene_seed'] for row in records]==SCENES
+            for row in records:
+                assert row['first_return_action_index']==first
+                for protocol in PROTOCOLS:
+                    score=row[protocol];assert score['return_frames']==24 and score['eligible_pair'] is True and score['different_pixel_count']>0
+                    assert len(score['branches'])==2
+                    for index,branch in enumerate(score['branches']):
+                        assert branch['branch']==index and branch['own_strictly_closer']==(branch['own_truth_mae']<branch['opposite_truth_mae'])
+                    expect(score['return_region_mae'],sum(branch['own_truth_mae'] for branch in score['branches'])/2)
+                    assert score['pair_correct']==all(branch['own_strictly_closer'] for branch in score['branches'])
+                u,o=(row[name] for name in PROTOCOLS)
+                assert u['generated_steps']==first+24 and u['true_frames_after_start']==0
+                assert o['observed_prefix_actions']==first and o['observed_prefix_frames']==first+1 and o['generated_steps']==24 and o['true_frames_after_prefix']==0
+            aggregate=measured['aggregate'] if waiting==16 else measured['control_results']['paired_waits'][str(waiting)]['aggregate']
+            for protocol in PROTOCOLS:
+                error=np.array([row[protocol]['return_region_mae'] for row in records]);correct=np.array([row[protocol]['pair_correct'] for row in records],dtype=np.float64)
+                pairs[key,waiting,protocol]=(error,correct)
+                expect(aggregate[protocol],{'scenes':8,'eligible_scenes':8,'mean_scene_return_region_mae':error.mean(),'correct_pairs':correct.sum(),'correct_pair_fraction':correct.mean()})
+            all_rows.extend(records)
+        assert len(all_rows)==48
+        for row in all_rows:
+            file=path.parent/row['prediction_file'];relative=str(file.relative_to(EVAL));assert relative not in prediction_files
+            assert sha(file)==row['prediction_file_sha256']
+            values=torch.load(file,weights_only=True,map_location='cpu');finite(values)
+            assert tensor_hashes(values)==row['predictions']
+            if row in single:
+                assert set(values)=={'observed_next_rgb'} and values['observed_next_rgb'].shape==(1,16,3,64,64)
+            else:
+                assert set(values)=={'uninterrupted','observed_prefix_return'}
+                assert values['uninterrupted'].shape==(2,row['first_return_action_index']+24,3,64,64)
+                assert values['observed_prefix_return'].shape==(2,24,3,64,64)
+            assert all(value.dtype==torch.float32 and value.min()>=-1 and value.max()<=1 for value in values.values())
+            prediction_files[relative]={'file_sha256':row['prediction_file_sha256'],'tensors':row['predictions']}
+            del values
+        model_rows.append({'model':key,'scene_pairs':24,'single_controls':24,'prediction_files':48,'elapsed_seconds':measured['elapsed_seconds']})
+    assert set(reports)==set(keys) and len(prediction_files)==336
+    comparison=top['comparison'];expect(comparison,{'status':'complete','numerical_results_available':True,'gates_available':True,'reasons':[]})
+    indices=np.random.default_rng(20260907).integers(0,8,size=(10000,8),dtype=np.int64)
+    expect(comparison['bootstrap'],{'status':'complete','resamples':10000,'seed':20260907,'scene_ids':SCENES,'shared_scene_index_sha256':hashlib.sha256(indices.tobytes()).hexdigest()})
+    names=[*CONTROL_ACTIONS,'overall_equal_type'];control_passes=[];across={name:{'carry':[],'reset':[],'increase_vs_reset':[],'increase_vs_frozen':[]} for name in names}
+    for seed in SEEDS:
+        c,r,f=(controls[key] for key in (f'{seed}-carry',f'{seed}-reset','frozen'))
+        for index,name in enumerate(names):
+            cv,rv,fv=[value[index] if index<3 else value.mean(0) for value in (c,r,f)]
+            cm,rm,fm=[float(v.mean()) for v in (cv,rv,fv)]
+            assert rm>0 and fm>0
+            cb,rb,fb=[value[indices].mean(1) for value in (cv,rv,fv)]
+            assert (rb>0).all() and (fb>0).all()
+            passed=cm<=1.05*rm and cm<=1.05*fm;control_passes.append(passed)
+            expected={'carry_mae':cm,'reset_mae':rm,'frozen_mae':fm,'reset_limit_1_05':1.05*rm,'frozen_limit_1_05':1.05*fm,
+                'exceeds_reset_by_more_than_5_percent':cm>1.05*rm,'exceeds_frozen_by_more_than_5_percent':cm>1.05*fm,
+                'relative_increase_vs_reset':cm/rm-1,'relative_increase_vs_frozen':cm/fm-1,'point_comparison_passed':passed,'gate_passed':passed,
+                'intervals':{name:interval(value) for name,value in [('carry_mae',cb),('reset_mae',rb),('frozen_mae',fb),('relative_increase_vs_reset',cb/rb-1),('relative_increase_vs_frozen',cb/fb-1)]}}
+            expect(comparison['control_retention'][str(seed)][name],expected)
+            for label,value in [('carry',cb),('reset',rb),('increase_vs_reset',cb/rb-1),('increase_vs_frozen',cb/fb-1)]:across[name][label].append(value)
+    expect(comparison['control_retention_passed'],all(control_passes))
+    for name,values in across.items():
+        expect(comparison['control_retention_across_seeds'][name],{
+            'mean_seed_carry_mae':np.mean([comparison['control_retention'][str(s)][name]['carry_mae'] for s in SEEDS]),
+            'mean_seed_reset_mae':np.mean([comparison['control_retention'][str(s)][name]['reset_mae'] for s in SEEDS]),
+            'intervals':{key:interval(np.mean(value,axis=0)) for key,value in values.items()}})
+    point_results=[]
+    for waiting in (8,16,32):
+        for protocol in PROTOCOLS:
+            result=comparison['paired_memory'][str(waiting)][protocol];gains=[];correct_means=[];boot_gains=[];boot_correct=[]
+            for seed in SEEDS:
+                c,cp=pairs[f'{seed}-carry',waiting,protocol];r,rp=pairs[f'{seed}-reset',waiting,protocol]
+                assert r.mean()>0 and (r[indices].mean(1)>0).all()
+                gain=1-c.mean()/r.mean();gb=1-c[indices].mean(1)/r[indices].mean(1);pb=cp[indices].mean(1)
+                expect(result['seeds'][str(seed)],{'carry_return_region_mae':c.mean(),'reset_return_region_mae':r.mean(),'relative_gain':gain,
+                    'carry_pair_correct_fraction':cp.mean(),'reset_pair_correct_fraction':rp.mean(),
+                    'intervals':{'relative_gain':interval(gb),'carry_pair_correct_fraction':interval(pb)}})
+                gains.append(gain);correct_means.append(cp.mean());boot_gains.append(gb);boot_correct.append(pb)
+            mean_gain=float(np.mean(gains));mean_correct=float(np.mean(correct_means));passed=mean_gain>=.30 and mean_correct>=.80 and all(g>0 for g in gains)
+            expect(result,{'mean_seed_relative_gain':mean_gain,'mean_seed_carry_pair_correct_fraction':mean_correct,
+                'provisional_point_comparison_passed':passed,'provisional_gate_passed':passed,
+                'thresholds':{'mean_relative_gain':.30,'mean_pair_correct':.80,'positive_gain_each_seed':True},
+                'intervals':{'mean_seed_relative_gain':interval(np.mean(boot_gains,axis=0)),'mean_seed_carry_pair_correct_fraction':interval(np.mean(boot_correct,axis=0))}})
+            point_results.append({'wait':waiting,'protocol':protocol,'mean_relative_gain':mean_gain,'mean_pair_correct':mean_correct,'passed':passed,
+                'relative_gain_each_seed':gains,'gain_interval_95':interval(np.mean(boot_gains,axis=0))['percentile_95']})
+    inventory=file_inventory(EVAL)
+    return {'status':'passed','validation_sha256':sha(EVAL/'validation.json'),'models':model_rows,'source_sha256':top['source_sha256'],
+        'full_evaluation_inventory':inventory,'prediction_files_and_tensor_hashes':prediction_files,'control_data_files_sha256':control_data_files,
+        'all_reported_comparison_numbers_recomputed_from_scene_values':True,'numeric_checks':dict(NUMERIC_CHECKS),
+        'bootstrap_shared_index_sha256':hashlib.sha256(indices.tobytes()).hexdigest(),'bootstrap_resamples':10000,
+        'control_retention_passed':all(control_passes),'paired_memory_results':point_results,'visibility_audit_file_sha256':sha(audit_path),
+        'no_reserved_test_access':True,'scope':'Development data only. No model inference rerun and no pixel-score recomputation; saved tensor identities, score rollups, point thresholds and all comparison intervals were verified.'}
+
+
+if __name__ == '__main__':
+    training=read(WORK/'room-memory-512-independent-training-cache.json')
+    assert training['full_training_inventory']==file_inventory(TRAIN)
+    evaluation=audit_evaluation(training)
+    output=WORK/'room-memory-512-independent-audit.json';assert not output.exists()
+    result={'schema':'worldline-room-memory-fixed512-independent-audit-v1','status':'passed','audit_device':'cpu',
+        'audit_source_sha256':sha(__file__),'training':training,'evaluation':evaluation,
+        'limits':'Completed original 64-pixel development study, not protected-test evidence, scientific novelty or Genie 3 parity. Original failed L1-gradient probe remains failed. No model inference or GPU execution was performed by this audit.'}
+    output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    print(json.dumps({'status':result['status'],'audit_sha256':sha(output),'numeric_checks':evaluation['numeric_checks'],
+        'control_retention_passed':evaluation['control_retention_passed'],'paired_memory_results':evaluation['paired_memory_results']},indent=2))

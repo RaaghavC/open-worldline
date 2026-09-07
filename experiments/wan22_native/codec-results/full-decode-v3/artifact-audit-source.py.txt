@@ -1,0 +1,76 @@
+from collections import Counter
+from pathlib import Path
+import hashlib,json,shutil
+import numpy as np
+from PIL import Image
+from safetensors import safe_open
+root=Path.cwd();package=root/'outputs/open-worldline/experiments/wan22_native';source=root/'work/wan22-native-codec-decode17-v3';initial=root/'work/wan22-native-codec-image-v2'
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def tensor_sha(value):return hashlib.sha256(value.detach().cpu().contiguous().view(__import__('torch').uint8).numpy().tobytes()).hexdigest()
+r=json.loads((source/'metrics.json').read_text());first=json.loads((initial/'metrics.json').read_text())
+assert r['status']=='passed' and r['finite_output'] and r['cache_clear_after_decode'] and not (source/'watchdog-stop.json').exists()
+assert r['decoded_shape']==[1,3,17,288,512] and r['latent_shape']==[1,48,5,18,32]
+for name,digest in r['source_sha256'].items():
+    assert sha(source/'measured-source'/(name+'.txt'))==digest and sha(package/name)==digest
+for name,digest in r['output_sha256'].items():assert sha(source/name)==digest
+assert sha(source/'per-convolution-cleanup.jsonl')==r['per_convolution_cleanup_log_sha256']
+log=[json.loads(row) for row in (source/'per-convolution-cleanup.jsonl').read_text().splitlines()]
+stats=r['per_convolution_cleanup_report'];assert log==stats['events']
+assert stats['cleanup_calls']==stats['completed_cleanups']==len(log)==169 and stats['registered_layers']==len(stats['layers'])==62 and stats['hooks_removed']
+assert all(row['status']=='passed' for row in log) and [row['call'] for row in log]==list(range(1,170))
+counts=Counter(row['layer'] for row in log)
+assert dict(counts)=={name:row['calls'] for name,row in stats['layers'].items() if row['calls']}
+assert all(row['calls']==row['completed_cleanups'] for row in stats['layers'].values())
+assert abs(sum(row['cleanup_seconds'] for row in log)-stats['cleanup_seconds'])<1e-8
+assert r['allocator_chunk_counts']=={'encoder':0,'decoder':5}
+assert [row['first_chunk'] for row in r['decoder_chunks']]==[True,False,False,False,False]
+assert [row['output_shape'][2] for row in r['decoder_chunks']]==[1,4,4,4,4]
+with safe_open(source/'synthetic-input.safetensors',framework='pt',device='cpu') as f:
+    assert set(f.keys())=={'synthetic_latent','observation'}
+    observation=f.get_tensor('observation');latent=f.get_tensor('synthetic_latent')
+assert tensor_sha(observation)==first['latent_tensor_sha256'] and tensor_sha(latent)==r['synthetic_tensor_sha256']
+assert __import__('torch').equal(latent[:,:,:1],observation)
+pixel_frames=[]
+for i in range(17):
+    with Image.open(source/f'frames/{i:04d}-synthetic.png') as image:
+        assert image.mode=='RGB' and image.size==(512,320)
+        pixel_frames.append(np.array(image,dtype=np.uint8,copy=True)[32:,:,:])
+pixels=np.stack(pixel_frames);assert hashlib.sha256(pixels.tobytes()).hexdigest()==r['decoded_pixels_sha256']
+with Image.open(initial/'reconstruction.png') as image:
+    assert image.mode=='RGB' and image.size==(512,288)
+    initial_pixels=np.array(image,dtype=np.uint8,copy=True)
+difference=pixels[0].astype(np.int16)-initial_pixels.astype(np.int16)
+memory=[json.loads(line) for line in (source/'memory.jsonl').read_text().splitlines()]
+assert min(row['available_bytes'] for row in memory)>=2*2**30
+for key in ('rss_bytes','mps_active_bytes','mps_driver_bytes'):assert max(row[key] for row in memory)==r['peaks_sampled'][key]
+assert all(max(row['rss_bytes'],row['mps_driver_bytes'])<=18*2**30 for row in memory)
+dest=package/'codec-results/full-decode-v3';shutil.copytree(source,dest)
+audit={'schema':'worldline-wan22-completed-decoder-audit-v1','status':'passed','cpu_only_artifact_audit':True,'model_execution_in_audit':False,
+    'measured_report_sha256':sha(source/'metrics.json'),'initial_image_report_sha256':sha(initial/'metrics.json'),
+    'raw_files':{str(path.relative_to(source)):{'bytes':path.stat().st_size,'sha256':sha(path)} for path in sorted(source.rglob('*')) if path.is_file()},
+    'all_source_and_output_hashes_verified':True,'source_math_unchanged':True,'complete_temporal_chunks':[1,4,4,4,4],
+    'registered_causal_layers':62,'invoked_causal_layers':len(counts),'cleanup_calls':169,'successful_cleanup_calls':169,'per_layer_counts':dict(counts),
+    'event_log_matches_report_exactly':True,'hooks_removed':True,'cache_clear_after_decode':True,
+    'callback_seconds_including_gpu_sync_wait':stats['cleanup_seconds'],
+    'first_reconstruction':{'comparison':'Saved8-bit RGB pixels; remove only32-pixel diagnostic header from full-decode frame0',
+        'exact_pixel_identity':bool(np.array_equal(pixels[0],initial_pixels)),
+        'changed_channel_values':int(np.count_nonzero(difference)), 'changed_pixels':int(np.count_nonzero(np.any(difference!=0,axis=-1))),
+        'max_abs_difference_uint8':int(np.abs(difference).max()),'mean_abs_difference_uint8':float(np.abs(difference).mean()),
+        'first_image_pixels_sha256':hashlib.sha256(initial_pixels.tobytes()).hexdigest(),
+        'full_decode_first_pixels_sha256':hashlib.sha256(pixels[0].tobytes()).hexdigest(),
+        'scope':'Known initial reconstruction only. No FP32 tensor identity claim because only PNG pixels were retained.'},
+    'elapsed_seconds':r['elapsed_seconds'],'timings':r['timings'],'decoder_chunks':r['decoder_chunks'],'peaks_sampled':r['peaks_sampled'],
+    'minimum_sampled_available_bytes':min(row['available_bytes'] for row in memory),
+    'all_sampled_limits_passed':True,'no_denoiser_executed':r['denoiser_executed'] is False,
+    'scope':'Synthetic full-shape codec cost and memory; four future latents are retained Gaussian noise, not model predictions; no image-quality claim'}
+shutil.copyfile(Path(__file__),dest/'artifact-audit-source.py.txt');audit['audit_source_sha256']=sha(dest/'artifact-audit-source.py.txt')
+(dest/'artifact-audit.json').write_text(json.dumps(audit,indent=2)+'\n')
+independent=root/'work/wan22-codec-memory-independent-v1';inddest=package/'codec-results/memory-independent-v1'
+if not inddest.exists():shutil.copytree(independent,inddest)
+index=package/'codec-results/index.json';data=json.loads(index.read_text());data['status']='first_image_and_full17_decode_passed_after_two_preserved_memory_stops';data['gpu_execution_scope']='Actual full-weight first-image reconstruction and synthetic full17-frame decoder cost completed; no world-model denoiser in these codec runs';data['completed_full_decode_output']='codec-results/full-decode-v3';data.pop('planned_full_decode_output',None)
+data['packages'].extend([{'directory':'full-decode-v3','scope':'Complete actual FP32 full17-frame decoder with low watermark0.6 and per-convolution cleanup;86.919 seconds, all169 cleanup events and all17 annotated images retained.'},{'directory':'memory-independent-v1','scope':'Independent CPU equality and cleanup lifecycle review; actual17 tiny frames, event sink failures and unrelated hooks.'}])
+for directory in (dest,inddest):
+    for path in sorted(directory.rglob('*')):
+        if path.is_file():data['artifacts'][str(path.relative_to(package))]={'bytes':path.stat().st_size,'sha256':sha(path)}
+index.write_text(json.dumps(data,indent=2)+'\n')
+print(json.dumps({key:audit[key] for key in ('registered_causal_layers','invoked_causal_layers','cleanup_calls','first_reconstruction','elapsed_seconds','minimum_sampled_available_bytes','peaks_sampled')},indent=2))

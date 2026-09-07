@@ -1,0 +1,173 @@
+{
+  "_id": "6a4fc696bbf6c494b5e022db",
+  "id": "acvlab/ABot-World-0-5B-LF",
+  "private": false,
+  "pipeline_tag": "image-to-video",
+  "library_name": "diffusers",
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "ti2v",
+    "world_model",
+    "abot-world",
+    "image-to-video",
+    "en",
+    "zh",
+    "dataset:acvlab/ABot-World-Explorer-500h",
+    "arxiv:2607.19191",
+    "base_model:Wan-AI/Wan2.2-TI2V-5B",
+    "base_model:finetune:Wan-AI/Wan2.2-TI2V-5B",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 425,
+  "likes": 77,
+  "modelId": "acvlab/ABot-World-0-5B-LF",
+  "author": "acvlab",
+  "sha": "d26a3003701e70d38cd17e2af2faf63bd4ff7632",
+  "lastModified": "2026-08-21T12:26:18.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "model_type": "ti2v"
+  },
+  "cardData": {
+    "license": "apache-2.0",
+    "language": [
+      "en",
+      "zh"
+    ],
+    "base_model": [
+      "Wan-AI/Wan2.2-TI2V-5B"
+    ],
+    "pipeline_tag": "image-to-video",
+    "tags": [
+      "world_model",
+      "abot-world"
+    ],
+    "datasets": [
+      "acvlab/ABot-World-Explorer-500h"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "07f874b7db7f30c11fa24f55b05d80798fb60342",
+      "size": 1586
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "679ce03d1aa8bfdcd40968db20dff2992323cdc2",
+      "size": 11380
+    },
+    {
+      "rfilename": "NOTICE",
+      "blobId": "217059f5cfb7bf77292b78efe6ed6c254f3a006e",
+      "size": 230
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "55b6a938f6775dadcbd1cb4d193af693567de292",
+      "size": 10466
+    },
+    {
+      "rfilename": "THIRD_PARTY_NOTICES.md",
+      "blobId": "c166c8529017dad7862a85b4b5f087da7626b5af",
+      "size": 1655
+    },
+    {
+      "rfilename": "Wan2.2_VAE.pth",
+      "blobId": "2264ad59a1f3be73cf56ff0dcf7d0a8e06efe8ed",
+      "size": 2818839170,
+      "lfs": {
+        "sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+        "size": 2818839170,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "05f179b02036433a59c8a886c4ef29af654a3500",
+      "size": 292
+    },
+    {
+      "rfilename": "configuration.json",
+      "blobId": "d64db5cb6ceecfb2c7f0929427dc5f48bc4b7f37",
+      "size": 43
+    },
+    {
+      "rfilename": "diffusion_pytorch_model.safetensors",
+      "blobId": "5ef839a300239d87cd1b2304f25f7db75ae3cb60",
+      "size": 10540744232,
+      "lfs": {
+        "sha256": "fab41e21ee927eeebfd4d9d5b7120d0660f39d22c54fae45178b1db2e0fba127",
+        "size": 10540744232,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "google/umt5-xxl/special_tokens_map.json",
+      "blobId": "14855e7052ffbb595057dfd791d293c1c940db2c",
+      "size": 6623
+    },
+    {
+      "rfilename": "google/umt5-xxl/spiece.model",
+      "blobId": "2fe5f347e9f9367585589ae89e997dfbd5cf802c",
+      "size": 4548313,
+      "lfs": {
+        "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+        "size": 4548313,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "google/umt5-xxl/tokenizer.json",
+      "blobId": "7bd4ee3cf5633e49c0e06a3aac2a621559e6222a",
+      "size": 16837417,
+      "lfs": {
+        "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+        "size": 16837417,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "google/umt5-xxl/tokenizer_config.json",
+      "blobId": "4e1cc1cd85599ce0b47fd0a746af188fe4043ff2",
+      "size": 61728
+    },
+    {
+      "rfilename": "models_t5_umt5-xxl-enc-bf16.pth",
+      "blobId": "d5dad910304ab4b909a2c8a225a71840606e6de4",
+      "size": 11361920418,
+      "lfs": {
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+        "size": 11361920418,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "taew2_2.pth",
+      "blobId": "da473db55fef14fde069b5bdf4f6af96a8358cc3",
+      "size": 22884021,
+      "lfs": {
+        "sha256": "d053e216ca50e2bb837bbcd79b85f0366bea00e5938025572382a773b74c559a",
+        "size": 22884021,
+        "pointerSize": 133
+      }
+    }
+  ],
+  "spaces": [
+    "acvlab/abot-world-interactive",
+    "prernaaa12/abot-world-interactive",
+    "Aeonicc/abot-world-interactive"
+  ],
+  "createdAt": "2026-07-09T16:04:38.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 5270329536
+    },
+    "total": 5270329536
+  },
+  "usedStorage": 24765773571
+}

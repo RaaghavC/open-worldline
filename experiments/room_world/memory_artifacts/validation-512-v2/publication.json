@@ -1,0 +1,35 @@
+{
+  "status": "score_records_published_full_packages_local_only",
+  "evaluation_sha256": "33b08c887b98af949eba677ab7b7070f85eb4d8b3e2a147a8c710461e4c8a02e",
+  "full_package": {
+    "file": "room-memory-512-validation-v2.tar.zst",
+    "bytes": 1427512313,
+    "sha256": "d3cffe9129fab68971da8550bcdfebc2a69abbc2a464046b80b48e8879716d08",
+    "source_members_verified_after_decompression": 805,
+    "scope": "Six training arms, all validation predictions, all comparison videos and contact pages, summaries, audits and exact source"
+  },
+  "visual_review": {
+    "file": "room-memory-512-visual-review-v2.zip",
+    "bytes": 94380238,
+    "sha256": "b934a3ce3146bcf79fc7f906834394578b3a638e2954b2cbfc3679954998aeaa",
+    "source_files_verified_after_decompression": 388,
+    "videos": 48,
+    "contact_pages": 288
+  },
+  "archive_manifest": {
+    "file": "room-memory-512-validation-v2.manifest.json",
+    "bytes": 154221,
+    "sha256": "fb8d35a63c4aee7f987880810bed34087566ab4973dc9997e13055094160b50d"
+  },
+  "github_large_file_transfer": {
+    "status": "draft_unpublished_upload_incomplete",
+    "repository": "RaaghavC/open-worldline",
+    "release_id": 384206604,
+    "tag": "room-memory-512-v2",
+    "complete_package_uploaded": false,
+    "failures": "Repeated TLS bad-record-MAC or EOF errors; verified system CA trust retained",
+    "retained_draft_assets": ["complete archive manifest", "first 32 MiB archive part"],
+    "audit_sha256": "b0ebea3ae997fc351ec2ff28efeacc7e1bce24e08675129a6bf59ff4c5a75bec"
+  },
+  "reserved_test_opened": false
+}

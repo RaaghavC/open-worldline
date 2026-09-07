@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "tests": 9,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 1.3675568340113387,
+  "device": "cpu",
+  "external_weight_values_loaded": false,
+  "canonical_noise_sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "test_codec_decode.py": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "test_codec_memory.py": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+  },
+  "scope": "Canonical synthetic inputs, one-observation access and native five-chunk decode timing hooks on tiny CPU model; no full-shape pretrained timing or quality claim"
+}

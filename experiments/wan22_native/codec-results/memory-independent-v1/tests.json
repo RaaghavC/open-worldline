@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 0.8556837090000045,
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "test_codec_memory.py": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e",
+    "test_codec_memory_independent.py": "8ad3f58f047eaf073a67cac25aa9fe4aa15393807c560371dcdf4703f3b9a26a",
+    "test_codec_decode.py": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "measurements": {
+    "full17_max_absolute_difference": 0.0,
+    "registered_layers": 46,
+    "native_calls": 129
+  },
+  "device": "cpu",
+  "actual_gpu_calls": false,
+  "external_weight_values_loaded": false,
+  "scope": "Tiny native full17 equations, hook ownership and event/synchronization failure paths. No measured memory saving or full-weight decode."
+}

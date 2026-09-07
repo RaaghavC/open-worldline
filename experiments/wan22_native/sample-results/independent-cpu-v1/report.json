@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "tests": 5,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 0.17604441702133045,
+  "source_sha256": {
+    "portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+    "profile_core.py": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0",
+    "test_core.py": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "weights.index.json": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe",
+    "provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "codec_decode_profile.py": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf",
+    "test_codec_decode.py": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "test_codec_memory.py": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e",
+    "__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+    "sample_clip.py": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a",
+    "test_sample_clip.py": "8890986433884d1a2d63d815b858c5e468dc8a51683f013a1e3efb14f9898fe3",
+    "requirements-sample.txt": "161dde8340cf09f65fa67a9a100787f2df4211a2c9e71249e7a81eb16f01b1ba"
+  },
+  "reused_source_sha256": {
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan_adapter/text_cache/cache.py": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff",
+    "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+  },
+  "independent_test_sha256": "cf2b1a4270990fdafd15574ebd74e6592dd746483a61ae6c205393c94c594153",
+  "device": "cpu",
+  "actual_gpu_calls": false,
+  "actual_pretrained_inference": false,
+  "official_weight_values_loaded": false,
+  "scope": "Full native CPU solver with synthetic time/state/context-dependent velocity and mocked failed child handoff; source/evidence and exact input boundaries. No generated-quality or runtime guarantee.",
+  "schema": "worldline-wan22-sample-independent-review-v1",
+  "code_review": "passed",
+  "actual_full_clip_admission": false,
+  "actual_failed_decoder_rejections": [
+    {
+      "decode": "wan22-native-codec-decode17-v1",
+      "result": "rejected",
+      "reason": "Successful pair worker and parent completion without a watchdog stop required",
+      "metrics_sha256": "4b9417cde5f9ecbd69ead34d258223c3eb95749342859030e6bfe7bf87c63510",
+      "watchdog_sha256": "89ed2b2ad5f8d1ec5d2b171e44b123dca107565694beb8fda2ab27b3c41882e3"
+    },
+    {
+      "decode": "wan22-native-codec-decode17-v2",
+      "result": "rejected",
+      "reason": "Successful pair worker and parent completion without a watchdog stop required",
+      "metrics_sha256": "47c903948799bf739894a09576ced6369ffd3c812d80fd6c5870c4d1cab25ab7",
+      "watchdog_sha256": "3c4c0b0d9bdfe222487363b9b33661dcfe5a3ae05b4426c9a61147ff3930d976"
+    }
+  ],
+  "review": {
+    "native_contract": "50 official CPU UniPC steps, shift5 applied once, native actual integer times, 144 observed tokens time0, 576 future tokens current scheduler time, positive then negative, CFG negative+5*(positive-negative). All100 calls and50 restored prefixes match a separately written time/state/context-dependent CPU oracle bit-exactly.",
+    "input_boundary": "Only exact retained original noise/observation and genuine measured positive/native-negative contexts. Exact-key checks precede tensor materialization. No action/target/adapter/renderer input or inherited model state.",
+    "budget": "Core loading+50 whole measured nonloading pair durations+measured50-step CPU solver+complete decoder process duration+45s startup/artifact allowance+elapsed preflight. Reject above900s. Shared parent deadline includes both children, and each stage has unchanged memory guards. One measured pair cannot guarantee later runtimes.",
+    "lifecycle": "Parent process creation returns one child only. Communicate failure or interrupt terminates child and retains failed terminal; no completed-stage outputs required afterward. Deadline rejected before new stage creation. Decoder is launched only after successful core exit,50steps,100calls,prefix checks and final latent hash verification.",
+    "decoder": "Uses the successful profile exact FP32 codec and chunk/convolution cleanup counts. Core and decoder inherit separately measured allocator variables, including removal of previously absent variables. No numerical or policy substitution.",
+    "evidence": "Current author10-test source gate passes and5independent tests bind all current sampler/core/codec/helper source hashes. Separate stopped actual decoder profilesv1/v2 are correctly rejected. Full clip remains inadmissible until actual successful decoder evidence passes and the measured total fits900s.",
+    "limitations": "Synthetic CPU velocity oracle and mocked process failures do not prove pretrained visual quality, MPS numerical identity or actual runtime. No full model execution occurred in this review."
+  }
+}

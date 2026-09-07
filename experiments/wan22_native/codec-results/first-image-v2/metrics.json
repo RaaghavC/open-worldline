@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "max_seconds": 900,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "timings": [
+    {
+      "stage": "verify_and_load_one_rgb",
+      "seconds": 0.014587457990273833
+    },
+    {
+      "stage": "verify_and_load_fp32_codec",
+      "seconds": 4.99138658301672
+    },
+    {
+      "stage": "encode_initial_rgb_alone",
+      "seconds": 2.2074970829999074
+    },
+    {
+      "stage": "decode_initial_observation",
+      "seconds": 6.851877249981044
+    }
+  ],
+  "peaks_sampled": {
+    "rss_bytes": 2907308032,
+    "mps_active_bytes": 3617930496,
+    "mps_driver_bytes": 7624867840
+  },
+  "experiment": "Official Wan2.2 FP32 first-image codec reconstruction",
+  "original_model": false,
+  "external_pretrained_codec": true,
+  "device": "mps",
+  "dtype": "float32",
+  "input_image_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+  "input_rgb_frames": 1,
+  "future_rgb_read": false,
+  "old_latent_read": false,
+  "actions_read": false,
+  "target_read": false,
+  "source_image": "Original Atrium open/0000.png",
+  "data_license": "CC0-1.0",
+  "input_transform": "Original 512x288 RGB bytes from RGB or fully opaque RGBA PNG; discard alpha only when all values are 255; pixel/127.5-1; no crop, resize or compositing",
+  "expected_latent_shape": [
+    1,
+    48,
+    1,
+    18,
+    32
+  ],
+  "expected_reconstruction_shape": [
+    1,
+    3,
+    1,
+    288,
+    512
+  ],
+  "optional_allocator_cleanup": true,
+  "automatic_mps_cpu_fallback": "0",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "dependencies": {
+    "torch": "2.5.1",
+    "einops": "0.8.1",
+    "numpy": "1.26.4",
+    "psutil": "7.2.2",
+    "safetensors": "0.5.3",
+    "pillow": "12.3.0"
+  },
+  "cpu_report_sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "input_image_metadata": {
+    "mode": "RGBA",
+    "size": [
+      512,
+      288
+    ],
+    "alpha_discarded": true,
+    "alpha_value": 255,
+    "rgb_bytes_sha256": "6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705"
+  },
+  "codec": {
+    "external_pretrained_model": true,
+    "weight_sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+    "weight_bytes": 2818839170,
+    "loaded_keys": 196,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameters": 704688668,
+    "source_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "config": {
+      "dim": 160,
+      "dec_dim": 256,
+      "z_dim": 48,
+      "dim_mult": [
+        1,
+        2,
+        4,
+        4
+      ],
+      "num_res_blocks": 2,
+      "attn_scales": [],
+      "temperal_downsample": [
+        false,
+        true,
+        true
+      ],
+      "dropout": 0.0
+    },
+    "load": "Meta architecture; weights_only=True, mmap=True; strict FP32 state; no full dtype conversion",
+    "compute_dtype": "float32",
+    "device": "mps"
+  },
+  "cache_clear_after_encode": true,
+  "cache_clear_after_decode": true,
+  "allocator_chunk_counts": {
+    "encoder": 1,
+    "decoder": 1
+  },
+  "reconstruction": {
+    "mse_rgb_0_1": 2.3928576410980895e-05,
+    "mae_rgb_0_1": 0.0030017641838639975,
+    "psnr_db": 46.210831382125626,
+    "scope": "Known original first-frame codec reconstruction, not generated future quality"
+  },
+  "latent_tensor_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+  "output_sha256": {
+    "observation.safetensors": "b2154c91d4029c05d09faba34a1cd8cb838b9aebd247ff8d7e52bceb265edf76",
+    "original.png": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+    "reconstruction.png": "f312db2ffc145d14e201b7227d8c954a331b93c5e3894bb5b42be6e96bf96c4e",
+    "comparison.png": "60f3259f1baed96b98e2008aa48bbccbecb772879d2631053eea55824fe09863"
+  },
+  "finite_output": true,
+  "elapsed_seconds": 14.171191708010156
+}

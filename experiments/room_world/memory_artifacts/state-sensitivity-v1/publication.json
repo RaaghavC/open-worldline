@@ -1,0 +1,116 @@
+{
+  "status": "portable_score_records_complete_raw_artifacts_local_only",
+  "original_run_files": 59,
+  "original_run_bytes": 359253744,
+  "raw_case_files": 48,
+  "prediction_tensors": 144,
+  "transformation": "Only six checkpoint path strings per JSON document are replaced with repository-relative paths. Numerical values, identities, case order and tensor hashes are unchanged. JSON serialization changes are reflected in new hashes.",
+  "metadata": [
+    {
+      "original_file": "plan.json",
+      "original_sha256": "f69bbd2838b23c6c664655be6b7d1806c81c6976b34512d3b847f208a8f44d04",
+      "published_file": "plan-portable.json",
+      "published_sha256": "076941ce944cc172a0d020c66b777202b26685a2779dca63913ce196dada65fa",
+      "changed_fields": 6,
+      "changes": [
+        {
+          "seed": 20260907,
+          "mode": "carry",
+          "checkpoint_sha256": "02633e48b7410a095dfd8296c87dc6f120a3287e332d0e23795ca2e5de72a5c4",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260907/carry/training/memory-final.pt",
+          "original_path_utf8_sha256": "66642318ae106f33cb8a36779cffa514e753526adb1f01933f371a2aca860d0c"
+        },
+        {
+          "seed": 20260907,
+          "mode": "reset",
+          "checkpoint_sha256": "0388c114092307d6021f92c0c315b237f3ec0bb10e6dd06841602741ef088f48",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260907/reset/training/memory-final.pt",
+          "original_path_utf8_sha256": "f539d5d13fe97bb9836ed1e2dbb526143f1ad2efa05e453ac13d79910f7a2af8"
+        },
+        {
+          "seed": 20260908,
+          "mode": "carry",
+          "checkpoint_sha256": "1d628d12a0c1f48f8a53357f6bd280aaafb701258f051b66112718dc7aaa16f3",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260908/carry/training/memory-final.pt",
+          "original_path_utf8_sha256": "434954792fc74db8a51229cfd133a724c4daa961346c5d5c584a7fd5048c1f48"
+        },
+        {
+          "seed": 20260908,
+          "mode": "reset",
+          "checkpoint_sha256": "135fea28f5a522a870432e580b73d400156123d2a6b5154fd90404b3cba79d0b",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260908/reset/training/memory-final.pt",
+          "original_path_utf8_sha256": "1a82e9fa37c09443bf1ac9243ae940a2f57cf740a3c4f8d68bf902d35e393950"
+        },
+        {
+          "seed": 20260909,
+          "mode": "carry",
+          "checkpoint_sha256": "3ed449b10ccfe996356983e108d834034c97f4bbba68b3e97db12a1280bd2d5a",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260909/carry/training/memory-final.pt",
+          "original_path_utf8_sha256": "071a40a56c24b0f8282c8591ac15312f6918d1d1b5febc5df41c9011b6b6d83e"
+        },
+        {
+          "seed": 20260909,
+          "mode": "reset",
+          "checkpoint_sha256": "61abbd84897c2600675e703716dd837ed4f8faa1374358b71ef3d703c0ee6b32",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260909/reset/training/memory-final.pt",
+          "original_path_utf8_sha256": "c0e778b563a2023e5f46174d45de00c22cf73514a6f7d73da5c52b58706dbfe1"
+        }
+      ]
+    },
+    {
+      "original_file": "diagnostic.json",
+      "original_sha256": "fc8889a3e20550247a8734e35938b376f3072ceca3601663905f8e4df7c93ab8",
+      "published_file": "diagnostic-portable.json",
+      "published_sha256": "a0bbfe0bf83af89e5741d1a71a07cbd0d42c18c7471ce57dc730ec74ad9f7412",
+      "changed_fields": 6,
+      "changes": [
+        {
+          "seed": 20260907,
+          "mode": "carry",
+          "checkpoint_sha256": "02633e48b7410a095dfd8296c87dc6f120a3287e332d0e23795ca2e5de72a5c4",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260907/carry/training/memory-final.pt",
+          "original_path_utf8_sha256": "66642318ae106f33cb8a36779cffa514e753526adb1f01933f371a2aca860d0c"
+        },
+        {
+          "seed": 20260907,
+          "mode": "reset",
+          "checkpoint_sha256": "0388c114092307d6021f92c0c315b237f3ec0bb10e6dd06841602741ef088f48",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260907/reset/training/memory-final.pt",
+          "original_path_utf8_sha256": "f539d5d13fe97bb9836ed1e2dbb526143f1ad2efa05e453ac13d79910f7a2af8"
+        },
+        {
+          "seed": 20260908,
+          "mode": "carry",
+          "checkpoint_sha256": "1d628d12a0c1f48f8a53357f6bd280aaafb701258f051b66112718dc7aaa16f3",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260908/carry/training/memory-final.pt",
+          "original_path_utf8_sha256": "434954792fc74db8a51229cfd133a724c4daa961346c5d5c584a7fd5048c1f48"
+        },
+        {
+          "seed": 20260908,
+          "mode": "reset",
+          "checkpoint_sha256": "135fea28f5a522a870432e580b73d400156123d2a6b5154fd90404b3cba79d0b",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260908/reset/training/memory-final.pt",
+          "original_path_utf8_sha256": "1a82e9fa37c09443bf1ac9243ae940a2f57cf740a3c4f8d68bf902d35e393950"
+        },
+        {
+          "seed": 20260909,
+          "mode": "carry",
+          "checkpoint_sha256": "3ed449b10ccfe996356983e108d834034c97f4bbba68b3e97db12a1280bd2d5a",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260909/carry/training/memory-final.pt",
+          "original_path_utf8_sha256": "071a40a56c24b0f8282c8591ac15312f6918d1d1b5febc5df41c9011b6b6d83e"
+        },
+        {
+          "seed": 20260909,
+          "mode": "reset",
+          "checkpoint_sha256": "61abbd84897c2600675e703716dd837ed4f8faa1374358b71ef3d703c0ee6b32",
+          "published_path": "experiments/room_world/memory_artifacts/training-512-v2/20260909/reset/training/memory-final.pt",
+          "original_path_utf8_sha256": "c0e778b563a2023e5f46174d45de00c22cf73514a6f7d73da5c52b58706dbfe1"
+        }
+      ]
+    }
+  ],
+  "independent_original_audit_sha256": "169989f693ab427a9eb5acaa1b22501754265783fcef7333a1d6d56c8b8a6d16",
+  "independent_audit_input": "The original unmodified run, retained locally. The read-only audit requires its original JSON bytes and raw tensors.",
+  "public_raw_artifact_url": null,
+  "reserved_test_opened": false
+}

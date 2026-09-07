@@ -1,0 +1,192 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Independent codec boundary checks using tiny CPU models and synthetic files."""
+import ast
+import copy
+import inspect
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from unittest import mock
+
+import numpy as np
+from PIL import Image
+import torch
+from safetensors.torch import save_file
+
+from . import codec as c
+from . import codec_profile as first
+from . import codec_decode_profile as full
+
+
+def tiny():
+    torch.manual_seed(181)
+    return c.Wan22Codec.from_model(c.make_model(small=True, device='cpu'))
+
+
+class Tests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.previous_threads = torch.get_num_threads()
+        torch.set_num_threads(1)
+
+    @classmethod
+    def tearDownClass(cls):
+        torch.set_num_threads(cls.previous_threads)
+
+    def test_all_normalization_values_and_stride_match_literal_native_wrapper(self):
+        tree = ast.parse((c.HERE / 'vendor/vae2_2.py').read_text())
+        wrapper = next(node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == 'Wan2_2_VAE')
+        init = next(node for node in wrapper.body if isinstance(node, ast.FunctionDef) and node.name == '__init__')
+        source_values = {}
+        for node in init.body:
+            if isinstance(node, ast.Assign) and isinstance(node.targets[0], ast.Name) and node.targets[0].id in ('mean', 'std'):
+                source_values[node.targets[0].id] = ast.literal_eval(node.value.args[0])
+        manifest = json.loads((c.HERE / 'codec-source.json').read_text())
+        self.assertEqual(source_values, manifest['normalization'])
+        mean, inverse = c.scales()
+        self.assertTrue(torch.equal(mean, torch.tensor(source_values['mean'], dtype=torch.float32)))
+        self.assertTrue(torch.equal(inverse, torch.tensor(source_values['std'], dtype=torch.float32).reciprocal()))
+        defaults = {arg.arg: ast.literal_eval(value) for arg, value in zip(init.args.args[-len(init.args.defaults):], init.args.defaults)
+                    if isinstance(value, (ast.Constant, ast.List))}
+        self.assertEqual(c.CONFIG['z_dim'], defaults['z_dim'])
+        self.assertEqual(c.CONFIG['dim'], defaults['c_dim'])
+        self.assertEqual(c.CONFIG['dim_mult'], defaults['dim_mult'])
+        self.assertEqual(c.CONFIG['temperal_downsample'], defaults['temperal_downsample'])
+        self.assertEqual(c.CONFIG['dec_dim'], inspect.signature(c.WanVAE_).parameters['dec_dim'].default)
+        self.assertEqual(c.CONFIG['temperal_downsample'], [False, True, True])
+
+    def test_published_metadata_has_complete_distinct_fp32_rows_and_correct_counts(self):
+        report = json.loads((c.HERE / 'codec-results/cpu/metadata.json').read_text())
+        rows = report['rows']
+        self.assertEqual(len(rows), report['loaded_keys'])
+        self.assertEqual(len({row['name'] for row in rows}), 196)
+        self.assertEqual(sum(row['elements'] for row in rows), 704688668)
+        self.assertEqual(report['parameters'], 704688668)
+        self.assertEqual(report['missing_keys'], [])
+        self.assertEqual(report['unexpected_keys'], [])
+        self.assertTrue(all(row['dtype'] == 'torch.float32' for row in rows))
+        self.assertEqual(report['config'], c.CONFIG)
+        self.assertEqual(report['weight_sha256'], c.WEIGHT_SHA256)
+        self.assertFalse(report['tensor_values_materialized'])
+
+    def test_loader_rejects_missing_extra_shape_dtype_and_nonfinite_tensors(self):
+        state = c.make_model(small=True, device='cpu').state_dict()
+        name = next(iter(state))
+        for problem in ('missing', 'extra', 'shape', 'dtype', 'nonfinite'):
+            with self.subTest(problem=problem):
+                changed = dict(state)
+                if problem == 'missing':
+                    del changed[name]
+                elif problem == 'extra':
+                    changed['unrequested.teacher_state'] = torch.zeros(1)
+                elif problem == 'shape':
+                    changed[name] = torch.zeros(1)
+                elif problem == 'dtype':
+                    changed[name] = changed[name].half()
+                else:
+                    changed[name] = changed[name].clone()
+                    changed[name].flatten()[0] = float('nan')
+                original_factory = c.make_model
+                with mock.patch.object(c, 'verify_weight_file'), \
+                     mock.patch.object(c, 'make_model', side_effect=lambda: original_factory(small=True)), \
+                     mock.patch.object(torch, 'load', return_value=changed) as loaded:
+                    with self.assertRaises(ValueError):
+                        c.Wan22Codec('synthetic-not-a-real-checkpoint', 'cpu')
+                    self.assertEqual(loaded.call_args.kwargs, {'map_location': 'cpu', 'weights_only': True, 'mmap': True})
+
+    def test_ambient_autocast_cannot_change_declared_fp32_encode_or_decode(self):
+        codec = tiny()
+        image = torch.rand(1, 3, 1, 16, 16) * 2 - 1
+        latent = codec.encode(image)
+        decoded = codec.decode(latent)
+        types = []
+        handles = [layer.register_forward_hook(lambda module, args, output: types.append(output.dtype))
+                   for layer in (codec.model.encoder, codec.model.decoder)]
+        try:
+            with torch.autocast('cpu', dtype=torch.bfloat16):
+                encoded_again = codec.encode(image)
+                decoded_again = codec.decode(latent)
+        finally:
+            for handle in handles:
+                handle.remove()
+        self.assertEqual(types, [torch.float32, torch.float32])
+        self.assertTrue(torch.equal(latent, encoded_again))
+        self.assertTrue(torch.equal(decoded, decoded_again))
+        self.assertTrue(codec.cache_is_clear())
+
+    def test_first_image_reader_reads_one_rgb_without_crop_resize_or_future_loader(self):
+        pixels = np.arange(288 * 512 * 3, dtype=np.uint32).reshape(288, 512, 3).astype(np.uint8)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'synthetic.png'
+            Image.fromarray(pixels).save(path)
+            with mock.patch.object(first, 'IMAGE_SHA256', c.sha(path)), \
+                 mock.patch.object(first.Image, 'open', wraps=Image.open) as opened, \
+                 mock.patch.object(torch, 'load', side_effect=AssertionError('No tensor checkpoint input')):
+                actual, tensor = first.read_image(path)
+            self.assertEqual(opened.call_count, 1)
+            self.assertEqual(opened.call_args.args, (path,))
+        self.assertTrue(np.array_equal(actual, pixels))
+        expected = torch.from_numpy(pixels.copy()).permute(2, 0, 1)[None, :, None].float() / 127.5 - 1
+        self.assertTrue(torch.equal(tensor, expected))
+        self.assertEqual(tuple(tensor.shape), (1, 3, 1, 288, 512))
+
+    def test_mixed_observation_action_target_file_rejected_before_tensor_access(self):
+        observation = torch.zeros(1, 48, 1, 18, 32)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            file = path / 'observation.safetensors'
+            save_file({'observation': observation, 'actions': torch.zeros(1), 'target': torch.zeros(1)}, file)
+            record = {'status': 'passed', 'finite_output': True, 'input_image_sha256': full.IMAGE_SHA256,
+                'input_rgb_frames': 1, 'future_rgb_read': False, 'expected_latent_shape': [1,48,1,18,32],
+                'dtype': 'float32', 'cache_clear_after_encode': True, 'cache_clear_after_decode': True,
+                'codec': {'weight_sha256': c.WEIGHT_SHA256, 'source_sha256': c.SOURCE_SHA256, 'config': c.CONFIG},
+                'source_sha256': {name: c.sha(c.HERE / name) for name in full.INITIAL_SOURCES},
+                'output_sha256': {'observation.safetensors': c.sha(file)}, 'latent_tensor_sha256': full.tensor_sha(observation)}
+            (path / 'metrics.json').write_text(json.dumps(record))
+            real_open = full.safe_open
+            accessed = []
+
+            class Reader:
+                def __init__(self, *args, **kwargs):
+                    self.inner = real_open(*args, **kwargs)
+                def __enter__(self):
+                    self.handle = self.inner.__enter__()
+                    return self
+                def __exit__(self, *args):
+                    return self.inner.__exit__(*args)
+                def keys(self):
+                    return self.handle.keys()
+                def get_tensor(self, name):
+                    accessed.append(name)
+                    raise AssertionError('No mixed-file tensor may be materialized')
+
+            with mock.patch.object(full, 'safe_open', Reader):
+                with self.assertRaisesRegex(ValueError, 'Unexpected observed-latent keys'):
+                    full.read_observation(path)
+            self.assertEqual(accessed, [])
+
+    def test_future_decoder_latents_cannot_change_first_reconstruction(self):
+        codec = tiny()
+        latent = torch.randn(1, 48, 5, 1, 1)
+        before = latent.clone()
+        first_only = codec.decode(latent[:, :, :1])
+        decoded = codec.decode(latent)
+        changed = latent.clone()
+        changed[:, :, 1:] = torch.randn_like(changed[:, :, 1:]) * 3
+        with full.chunk_timings(codec, 'cpu') as chunks, c.cleanup_temporal_chunks(codec) as counts:
+            other = codec.decode(changed)
+        torch.testing.assert_close(first_only, decoded[:, :, :1], atol=2e-6, rtol=2e-6)
+        self.assertTrue(torch.equal(decoded[:, :, :1], other[:, :, :1]))
+        self.assertFalse(torch.equal(decoded[:, :, 1:], other[:, :, 1:]))
+        self.assertEqual([row['output_shape'][2] for row in chunks], [1, 4, 4, 4, 4])
+        self.assertEqual([row['first_chunk'] for row in chunks], [True, False, False, False, False])
+        self.assertEqual(counts, {'encoder': 0, 'decoder': 5})
+        self.assertTrue(torch.equal(latent, before))
+        self.assertTrue(codec.cache_is_clear())
+        self.assertFalse(codec.model.decoder._forward_hooks)
+        self.assertFalse(codec.model.decoder._forward_pre_hooks)
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

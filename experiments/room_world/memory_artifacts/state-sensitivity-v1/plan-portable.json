@@ -1,0 +1,80 @@
+{
+  "schema": "worldline-room-state-sensitivity-plan-v1",
+  "purpose": "Post hoc causal sensitivity, not a new acceptance test or scientific novelty claim",
+  "training_study_sha256": "71a6ed7982293da9255e00b8d3e1e6adabb0d8156665cc6dfc6ec559d8594c4f",
+  "evaluation_sha256": "33b08c887b98af949eba677ab7b7070f85eb4d8b3e2a147a8c710461e4c8a02e",
+  "data_manifest_sha256": "ad7e37e91de8fb26a3ad1ed43e1cc63d9239255b3f58915b5058955da96e5cf7",
+  "base_checkpoint_sha256": "9376e684e3abd103313d13d04bd4a1afc1b202fccb7e7b6fe133e7232a486d69",
+  "sources": {
+    "memory_state_diagnostic.py": "68616ed0e11a45a1d861ba39ffed91cfac7880dff8cc84891edfd61fd19c479c",
+    "memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+    "memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+    "memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "memory_data.py": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+    "memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+  },
+  "jobs": [
+    {
+      "seed": 20260907,
+      "mode": "carry",
+      "checkpoint": "experiments/room_world/memory_artifacts/training-512-v2/20260907/carry/training/memory-final.pt",
+      "checkpoint_sha256": "02633e48b7410a095dfd8296c87dc6f120a3287e332d0e23795ca2e5de72a5c4"
+    },
+    {
+      "seed": 20260907,
+      "mode": "reset",
+      "checkpoint": "experiments/room_world/memory_artifacts/training-512-v2/20260907/reset/training/memory-final.pt",
+      "checkpoint_sha256": "0388c114092307d6021f92c0c315b237f3ec0bb10e6dd06841602741ef088f48"
+    },
+    {
+      "seed": 20260908,
+      "mode": "carry",
+      "checkpoint": "experiments/room_world/memory_artifacts/training-512-v2/20260908/carry/training/memory-final.pt",
+      "checkpoint_sha256": "1d628d12a0c1f48f8a53357f6bd280aaafb701258f051b66112718dc7aaa16f3"
+    },
+    {
+      "seed": 20260908,
+      "mode": "reset",
+      "checkpoint": "experiments/room_world/memory_artifacts/training-512-v2/20260908/reset/training/memory-final.pt",
+      "checkpoint_sha256": "135fea28f5a522a870432e580b73d400156123d2a6b5154fd90404b3cba79d0b"
+    },
+    {
+      "seed": 20260909,
+      "mode": "carry",
+      "checkpoint": "experiments/room_world/memory_artifacts/training-512-v2/20260909/carry/training/memory-final.pt",
+      "checkpoint_sha256": "3ed449b10ccfe996356983e108d834034c97f4bbba68b3e97db12a1280bd2d5a"
+    },
+    {
+      "seed": 20260909,
+      "mode": "reset",
+      "checkpoint": "experiments/room_world/memory_artifacts/training-512-v2/20260909/reset/training/memory-final.pt",
+      "checkpoint_sha256": "61abbd84897c2600675e703716dd837ed4f8faa1374358b71ef3d703c0ee6b32"
+    }
+  ],
+  "scene_ids": [
+    300000,
+    300001,
+    300002,
+    300003,
+    300004,
+    300005,
+    300006,
+    300007
+  ],
+  "first_return_action": 41,
+  "observed_prefix_frames": 42,
+  "generated_return_frames": 24,
+  "interventions": [
+    "normal",
+    "swapped",
+    "zero"
+  ],
+  "device": "cpu",
+  "reserved_test_opened": false,
+  "training": false,
+  "fitted_probes": false,
+  "all_cases": 48,
+  "prediction_tensors": 144,
+  "raw_prediction_bytes": 339738624
+}

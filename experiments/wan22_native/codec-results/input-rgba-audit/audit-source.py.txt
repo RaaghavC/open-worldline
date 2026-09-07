@@ -1,0 +1,25 @@
+from pathlib import Path
+import hashlib,json,shutil,sys
+import numpy as np
+from PIL import Image
+ROOT=Path.cwd();package=ROOT/'outputs/open-worldline/experiments/wan22_native'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,indent=2)+'\n')
+for name,source in [('cpu-v3','work/wan22-codec-cpu-opaque-rgba-v1.json'),('decode-cpu-v2','work/wan22-codec-decode/cpu-opaque-rgba-v1.json')]:
+    dest=package/'codec-results'/name;dest.mkdir()
+    report=json.loads((ROOT/source).read_text());assert report['status']=='passed'
+    shutil.copyfile(ROOT/source,dest/'tests.json')
+    for rel,digest in report['source_sha256'].items():
+        assert sha(package/rel)==digest
+        target=dest/'checked-source'/(rel+'.txt');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(package/rel,target)
+    write(dest/'provenance.json',{'scope':'CPU source/input validation after accepting the verified opaque RGBA initial image; native codec equations unchanged','tests_sha256':sha(dest/'tests.json'),'source_sha256':report['source_sha256'],'external_weight_forward_executed':False,'retained_previous_report':'../cpu-v2/tests.json' if name=='cpu-v3' else '../decode-cpu/tests.json'})
+failed=ROOT/'work/wan22-native-codec-image-v1';dest=package/'codec-results/first-image-failed-v1';shutil.copytree(failed,dest)
+write(dest/'preservation.json',{'status':'failed','reason':'Exact prescribed original PNG uses RGBA with uniformly255 alpha; pre-fix reader accepted only RGB','model_weights_loaded':False,'raw_files':{str(p.relative_to(failed)):sha(p) for p in failed.rglob('*') if p.is_file()},'new_attempt_directory':'work/wan22-native-codec-image-v2'})
+audit=package/'codec-results/input-rgba-audit';audit.mkdir()
+source=ROOT/'work/atrium-pilot/dense-pair/open/0000.png';image=Image.open(source);a=np.array(image);rgb=a[:,:,:3].copy();assert image.mode=='RGBA' and a.shape==(288,512,4) and np.all(a[:,:,3]==255)
+sys.path.insert(0,str(ROOT/'outputs/open-worldline'))
+from experiments.wan22_native.codec_profile import read_image
+pixels,video=read_image(source);assert np.array_equal(pixels,rgb)
+shutil.copyfile(source,audit/'original.png');shutil.copyfile(Path(__file__),audit/'audit-source.py.txt')
+write(audit/'report.json',{'status':'passed','source_file':'Original Atrium dense-pair/open/0000.png','data_license':'CC0-1.0','image_file_sha256':sha(source),'image_mode':image.mode,'image_size':list(image.size),'array_shape':list(a.shape),'alpha_min':int(a[:,:,3].min()),'alpha_max':int(a[:,:,3].max()),'rgb_sha256':hashlib.sha256(rgb.tobytes()).hexdigest(),'reader_rgb_sha256':hashlib.sha256(pixels.tobytes()).hexdigest(),'rgb_bytes_preserved_exactly':True,'resize':False,'crop':False,'color_conversion':False,'compositing':False,'input_transform':'Discard uniformly255 alpha, retain RGB bytes; then float32 pixel/127.5-1','video_shape':list(video.shape),'video_dtype':str(video.dtype),'source_sha256':sha(package/'codec_profile.py'),'codec_math_sha256':sha(package/'codec.py'),'audit_source_sha256':sha(audit/'audit-source.py.txt')})
+print(json.dumps({'packaged':['cpu-v3','decode-cpu-v2','first-image-failed-v1','input-rgba-audit'],'actual_image_rgb_sha256':hashlib.sha256(rgb.tobytes()).hexdigest()},indent=2))

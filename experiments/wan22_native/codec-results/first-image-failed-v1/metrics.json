@@ -1,0 +1,62 @@
+{
+  "status": "failed",
+  "max_seconds": 900,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "timings": [],
+  "peaks_sampled": {
+    "rss_bytes": 193298432,
+    "mps_active_bytes": 0,
+    "mps_driver_bytes": 475136
+  },
+  "experiment": "Official Wan2.2 FP32 first-image codec reconstruction",
+  "original_model": false,
+  "external_pretrained_codec": true,
+  "device": "mps",
+  "dtype": "float32",
+  "input_image_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+  "input_rgb_frames": 1,
+  "future_rgb_read": false,
+  "old_latent_read": false,
+  "actions_read": false,
+  "target_read": false,
+  "source_image": "Original Atrium open/0000.png",
+  "data_license": "CC0-1.0",
+  "input_transform": "Original512x288 RGB PNG; pixel/127.5-1; no crop or resize",
+  "expected_latent_shape": [
+    1,
+    48,
+    1,
+    18,
+    32
+  ],
+  "expected_reconstruction_shape": [
+    1,
+    3,
+    1,
+    288,
+    512
+  ],
+  "optional_allocator_cleanup": true,
+  "automatic_mps_cpu_fallback": "0",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "dependencies": {
+    "torch": "2.5.1",
+    "einops": "0.8.1",
+    "numpy": "1.26.4",
+    "psutil": "7.2.2",
+    "safetensors": "0.5.3",
+    "pillow": "12.3.0"
+  },
+  "cpu_report_sha256": "43e756d835fcbbd85a68a335b0c0f328148c2a15748fdd072089f33847d6319c",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "test_codec.py": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "elapsed_seconds": 0.050468666973756626,
+  "error_type": "ValueError",
+  "error": "Expected original RGB512x288 without resizing"
+}

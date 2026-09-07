@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "selected_tests": [
+    "test_first_image_reader_reads_one_rgb_without_crop_resize_or_future_loader",
+    "test_opaque_rgba_reader_preserves_every_rgb_byte_without_compositing",
+    "test_rgba_reader_rejects_nonopaque_wrong_shape_and_wrong_hash"
+  ],
+  "tests": 3,
+  "seconds": 0.03433779199258424,
+  "actual_original_image": {
+    "file_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+    "mode": "RGBA",
+    "size": [
+      512,
+      288
+    ],
+    "alpha_min": 255,
+    "alpha_max": 255,
+    "rgb_bytes_preserved": true,
+    "rgb_sha256": "6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705",
+    "normalized_tensor_bit_exact": true,
+    "normalized_tensor_sha256": "4bc838be97819dee4a0efe0a16b817355c896034e57c713c5bda9b46b5c33bcc"
+  },
+  "codec_math_sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+  "schema": "worldline-wan22-opaque-rgba-independent-review-v2",
+  "scope": "Narrow input-reader correction only; codec math remains the previously reviewed FP32 source.",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "codec_decode_profile.py": "06552266eca3e919b704deefb8b3db7e3ec0f43968a7c619f88f60b92a4d0ea2",
+    "test_codec_decode.py": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e",
+    "test_codec_independent.py": "2fbc0ec4967bb43aea57bb276585f6efff3f80dc58b2f1fbc65620578e5b584d"
+  },
+  "cpu_gates": {
+    "codec_report_sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+    "codec_tests": 11,
+    "decode_report_sha256": "b1d54f8288e447fe5532dfa87b841d95d9fa52fa676cb504ccf7e8eeacaa29fd",
+    "decode_tests": 7,
+    "both_current_source_validators_passed": true
+  },
+  "previous_independent_report_sha256": "91f914498f3e010d29a4737a5842b7ef501a85acf9381055cca0d2bc025f0c6e",
+  "previous_independent_test_sha256": "33bc1680458edd8bac003291233d764708d60a7d8f969eb0a4958cdc4f67cb1a",
+  "execution": {
+    "device": "cpu",
+    "neural_forward_run": false,
+    "official_weight_values_loaded": false,
+    "gpu_access": false
+  },
+  "readiness": "Current first-image and full-decode CPU gates are ready. The previous actual-image attempt remains failed; a fresh measured output directory is required.",
+  "limits": "Input-byte and source-evidence verification only. No actual codec reconstruction, full-shape runtime or generated-quality claim.",
+  "input_checks_sha256": "a3808f7c4fd69297b1646210947d2890ed80b25fa0a0f005694523b8c5f866d0"
+}

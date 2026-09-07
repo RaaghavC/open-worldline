@@ -1,0 +1,243 @@
+{
+  "schema": "worldline-wan22-sampler-cpu-evidence-v1",
+  "status": "implementation_cpu_passed_independent_review_pending",
+  "gpu_executed": false,
+  "actual_weight_generation_executed": false,
+  "current_report": "cpu-v1/tests.json",
+  "first_test_failure": "oracle-failed-v1/tests.json",
+  "first_failure_reason": "Constant-velocity test assumed native sigma began at1; corrected oracle uses actual native sigma interval0.9997998476 to0. Sampling implementation matched an independently written projected UniPC loop.",
+  "artifacts": {
+    "cpu-v1/checked-source/__init__.py.txt": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "cpu-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "cpu-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "cpu-v1/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    "cpu-v1/checked-source/codec_memory.py.txt": {
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    "cpu-v1/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "cpu-v1/checked-source/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "cpu-v1/checked-source/load_weights.py.txt": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "cpu-v1/checked-source/portable.py.txt": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "cpu-v1/checked-source/profile_core.py.txt": {
+      "bytes": 19225,
+      "sha256": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0"
+    },
+    "cpu-v1/checked-source/provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "cpu-v1/checked-source/requirements-sample.txt.txt": {
+      "bytes": 107,
+      "sha256": "161dde8340cf09f65fa67a9a100787f2df4211a2c9e71249e7a81eb16f01b1ba"
+    },
+    "cpu-v1/checked-source/sample_clip.py.txt": {
+      "bytes": 39918,
+      "sha256": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a"
+    },
+    "cpu-v1/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "cpu-v1/checked-source/test_codec_decode.py.txt": {
+      "bytes": 10267,
+      "sha256": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8"
+    },
+    "cpu-v1/checked-source/test_codec_memory.py.txt": {
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    "cpu-v1/checked-source/test_core.py.txt": {
+      "bytes": 13235,
+      "sha256": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020"
+    },
+    "cpu-v1/checked-source/test_sample_clip.py.txt": {
+      "bytes": 16310,
+      "sha256": "8890986433884d1a2d63d815b858c5e468dc8a51683f013a1e3efb14f9898fe3"
+    },
+    "cpu-v1/checked-source/text-reuse.json.txt": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "cpu-v1/checked-source/vendor/__init__.py.txt": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "cpu-v1/checked-source/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "cpu-v1/checked-source/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "cpu-v1/checked-source/vendor/shared_config.py.txt.txt": {
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    "cpu-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "cpu-v1/checked-source/weights.index.json.txt": {
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    "cpu-v1/reused-source/experiments/room_world/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "cpu-v1/reused-source/experiments/wan_adapter/native_control/portable.py.txt": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "cpu-v1/reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "cpu-v1/reused-source/experiments/wan_adapter/text_cache/cache.py.txt": {
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    "cpu-v1/tests.json": {
+      "bytes": 3230,
+      "sha256": "a5bdbdd96e3eb9fc9a56da695dcf9f87aa966a707ef4e6a4e3dc549e092f005a"
+    },
+    "oracle-failed-v1/checked-source/__init__.py.txt": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "oracle-failed-v1/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "oracle-failed-v1/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "oracle-failed-v1/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 11617,
+      "sha256": "06552266eca3e919b704deefb8b3db7e3ec0f43968a7c619f88f60b92a4d0ea2"
+    },
+    "oracle-failed-v1/checked-source/codec_profile.py.txt": {
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    "oracle-failed-v1/checked-source/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "oracle-failed-v1/checked-source/load_weights.py.txt": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "oracle-failed-v1/checked-source/portable.py.txt": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "oracle-failed-v1/checked-source/profile_core.py.txt": {
+      "bytes": 18333,
+      "sha256": "35ac93970e1a537df5d236e5126b3ad3b809117c2f6c3281888634915377132e"
+    },
+    "oracle-failed-v1/checked-source/provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "oracle-failed-v1/checked-source/requirements-sample.txt.txt": {
+      "bytes": 107,
+      "sha256": "161dde8340cf09f65fa67a9a100787f2df4211a2c9e71249e7a81eb16f01b1ba"
+    },
+    "oracle-failed-v1/checked-source/sample_clip.py.txt": {
+      "bytes": 35084,
+      "sha256": "8b111c6cf4a152421c56a8f589000e57a62cdef10354be7e53510ef1405abbf2"
+    },
+    "oracle-failed-v1/checked-source/test_codec.py.txt": {
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    "oracle-failed-v1/checked-source/test_codec_decode.py.txt": {
+      "bytes": 8430,
+      "sha256": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e"
+    },
+    "oracle-failed-v1/checked-source/test_core.py.txt": {
+      "bytes": 12068,
+      "sha256": "857f7de85dabf8e7082f4024454f9c3956bb250da2458bdd7140d5ab903160cd"
+    },
+    "oracle-failed-v1/checked-source/test_sample_clip.py.txt": {
+      "bytes": 14034,
+      "sha256": "6f99aea514c005e812b7c36f4fb5c8acd35f2095aed8190d25e29f6932f3b627"
+    },
+    "oracle-failed-v1/checked-source/text-reuse.json.txt": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "oracle-failed-v1/checked-source/vendor/__init__.py.txt": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "oracle-failed-v1/checked-source/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "oracle-failed-v1/checked-source/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "oracle-failed-v1/checked-source/vendor/shared_config.py.txt.txt": {
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    "oracle-failed-v1/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "oracle-failed-v1/checked-source/weights.index.json.txt": {
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    "oracle-failed-v1/reused-source/experiments/room_world/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "oracle-failed-v1/reused-source/experiments/wan_adapter/native_control/portable.py.txt": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "oracle-failed-v1/reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "oracle-failed-v1/reused-source/experiments/wan_adapter/text_cache/cache.py.txt": {
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    "oracle-failed-v1/tests.json": {
+      "bytes": 3041,
+      "sha256": "a75b51fc72182074fba53ffcf86ddd963f7b7f6b9a46c1da9d4780716a21260f"
+    }
+  }
+}

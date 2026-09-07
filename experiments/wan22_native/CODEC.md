@@ -1,6 +1,10 @@
 # Wan2.2 first-image codec
 
-The separate FP32 codec wrapper passed ten small CPU tests. The official checkpoint's metadata matches all 196 architecture tensors and 704,688,668 parameters. No real checkpoint tensor values were loaded for computation, and no GPU encode/decode has run. [Current CPU tests and exact checked source](codec-results/cpu-v2/provenance.json)
+The full pretrained FP32 codec reconstructed the original starting image on MPS in a 14.17-second measured run. Loading took 4.99 seconds, encoding 2.21 seconds and decoding 6.85 seconds. Reconstruction PSNR was 46.21 dB and mean RGB error was 0.00300 on a 0 to 1 scale. Sampled Metal driver memory peaked at 7.10 GiB. These measure reconstruction of one known image. [Actual result and source](codec-results/first-image-v2/metrics.json)
+
+The codec loaded all 196 architecture tensors and 704,688,668 parameters, with no missing or unexpected keys. The wrapper and input reader passed eleven small CPU tests. [Current CPU tests and exact checked source](codec-results/cpu-v3/provenance.json)
+
+The pinned source PNG is RGBA with every alpha byte equal to 255. The original RGB-only reader rejected it. The reader now accepts that fully opaque image and discards only its alpha channel, preserving every RGB byte without resizing, color conversion or compositing. Nonopaque RGBA is rejected. The native codec arithmetic is unchanged. [Preserved failed attempt](codec-results/first-image-failed-v1/metrics.json) and [actual image metadata and RGB-byte audit](codec-results/input-rgba-audit/report.json)
 
 Independent review found that a caller's ambient autocast could reduce internal precision despite the original wrapper returning FP32 tensors. Explicit autocast-disabled contexts now surround native encode/decode. A regression checks every Conv3d output and exact equality inside and outside CPU BF16 autocast. The previous nine-test package and its metadata/source inspection remain [preserved](codec-results/cpu/provenance.json); the loader and architecture were unchanged by this fix.
 
@@ -32,7 +36,7 @@ The optional MPS cleanup callback only releases unused allocator buffers after e
 
 ## Bounded reconstruction profile
 
-The profiler accepts only the original Atrium `open/0000.png` image, SHA-256 `7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780`. It requires the original 512 by 288 RGB pixels and performs no resizing or cropping. It reads no old latent, actions, future image or training target.
+The profiler accepts only the original Atrium `open/0000.png` image, SHA-256 `7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780`. It requires the original 512 by 288 RGB pixels and performs no resizing or cropping. The pinned PNG has an additional uniformly 255 alpha channel, which is discarded after validation. The retained RGB byte SHA-256 is `6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705`. It reads no old latent, actions, future image or training target.
 
 For this workspace, run from `outputs/open-worldline` after the GPU run has been scheduled. The first-image output directory must not already exist:
 
@@ -40,9 +44,9 @@ For this workspace, run from `outputs/open-worldline` after the GPU run has been
 PYTORCH_ENABLE_MPS_FALLBACK=0 ../../work/wan-adapter-env/bin/python experiments/wan22_native/codec_profile.py \
   --weights ../../work/wan22-ti2v5b-weights/Wan2.2_VAE.pth \
   --image ../../work/atrium-pilot/dense-pair/open/0000.png \
-  --cpu-report experiments/wan22_native/codec-results/cpu-v2/tests.json \
+  --cpu-report experiments/wan22_native/codec-results/cpu-v3/tests.json \
   --device mps --allocator-cleanup \
-  --output ../../work/wan22-native-codec-image-v1
+  --output ../../work/wan22-native-codec-image-v2
 ```
 
 Use `--device cpu` for explicit CPU execution. Add `--allocator-cleanup` only when choosing the already CPU-tested per-chunk allocator callback; the flag is retained in the report. Each process has a 900-second wall-clock limit after startup, an 18 GiB sampled RSS/Metal allocation ceiling and a 2 GiB minimum available-memory stop. Automatic MPS CPU fallback must be disabled. A watchdog stop retains its own terminal record and cannot qualify as a successful profile.
@@ -50,3 +54,5 @@ Use `--device cpu` for explicit CPU execution. Add `--allocator-cleanup` only wh
 The run saves the separately encoded `observation.safetensors` tensor, original and reconstructed images, side-by-side comparison, file/source/weight hashes, PSNR and pixel MAE, cache checks, stage timings and sampled memory. The saved latent key is `observation`, shape `[1,48,1,18,32]`. These are first-image codec reconstruction measurements, not generated future frames or a world-model quality result. No weight download is performed by the helper or profiler.
 
 After this process exits successfully, the separate [full 17-frame decoder cost profile](CODEC_DECODE.md) reads its saved observation. The [evidence index](codec-results/index.json) includes the original CPU/meta records, the autocast fix, current checked source and independent review. For reproduction outside this workspace, replace only the environment, weight, original-image and new-output paths with their local equivalents.
+
+That full profile subsequently completed with per-convolution buffer cleanup: 86.92 seconds total and a 10.30 GiB sampled Metal driver peak. Its first reconstructed frame was pixel-identical to this standalone reconstruction. Both earlier full-decode memory stops remain preserved. [Completed full-decode artifact audit](codec-results/full-decode-v3/artifact-audit.json)

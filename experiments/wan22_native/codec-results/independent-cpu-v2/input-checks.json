@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "selected_tests": [
+    "test_first_image_reader_reads_one_rgb_without_crop_resize_or_future_loader",
+    "test_opaque_rgba_reader_preserves_every_rgb_byte_without_compositing",
+    "test_rgba_reader_rejects_nonopaque_wrong_shape_and_wrong_hash"
+  ],
+  "tests": 3,
+  "seconds": 0.03433779199258424,
+  "actual_original_image": {
+    "file_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+    "mode": "RGBA",
+    "size": [
+      512,
+      288
+    ],
+    "alpha_min": 255,
+    "alpha_max": 255,
+    "rgb_bytes_preserved": true,
+    "rgb_sha256": "6754e1dd25290854ddea0052b04154bfc1e750a7b4a7cd408a07e7878b50f705",
+    "normalized_tensor_bit_exact": true,
+    "normalized_tensor_sha256": "4bc838be97819dee4a0efe0a16b817355c896034e57c713c5bda9b46b5c33bcc"
+  },
+  "codec_math_sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+}

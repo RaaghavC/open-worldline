@@ -1,0 +1,378 @@
+{
+  "status": "complete_byte_exact_copy",
+  "files": [
+    {
+      "file": "core/launch.json",
+      "bytes": 6872,
+      "sha256": "bbf19607444855dcc8ed4a09964829ccf6e31a44c820fcbddd9172d16ba1fb02"
+    },
+    {
+      "file": "core/result/last-latent.safetensors",
+      "bytes": 553048,
+      "sha256": "bef5342c59085487dfebe462c80b2be41d2d7f939e3701400b0914508124e84c"
+    },
+    {
+      "file": "core/result/latents.safetensors",
+      "bytes": 553048,
+      "sha256": "3097dd63bdce426735ebb1b58f4395efaee1dc58e984a343c81bffca6aa8a1cb"
+    },
+    {
+      "file": "core/result/memory.jsonl",
+      "bytes": 164264,
+      "sha256": "ca521b8708fe0be67ef2425584abb813c74be15c5866c5be16d513b2ca59a2f2"
+    },
+    {
+      "file": "core/result/metrics.json",
+      "bytes": 34509,
+      "sha256": "521e900332fa15f4fcb36b393fefe7b73ed05eff06f05623405f9a4f73396d6d"
+    },
+    {
+      "file": "core/result/weight-load.json",
+      "bytes": 370671,
+      "sha256": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+    },
+    {
+      "file": "core/terminal.json",
+      "bytes": 107,
+      "sha256": "e430d7d2eaba645f125a6191fac1b44bfd1e523338b9701bd08b7a01964b0e5b"
+    },
+    {
+      "file": "core/worker.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "cpu-solver.json",
+      "bytes": 209,
+      "sha256": "0e82ac35132ce5f841cfcac602ba8ae7e8277fab79b839382723f1675659ad34"
+    },
+    {
+      "file": "cpu-tests.json",
+      "bytes": 3230,
+      "sha256": "a5bdbdd96e3eb9fc9a56da695dcf9f87aa966a707ef4e6a4e3dc549e092f005a"
+    },
+    {
+      "file": "decode/launch.json",
+      "bytes": 6969,
+      "sha256": "4f6e8736654ae76b6c82332410071ea939d50a6921336839d8d5e3ac0a63a873"
+    },
+    {
+      "file": "decode/result/comparison.png",
+      "bytes": 680307,
+      "sha256": "1379f04164663b3c451cb726a7e3214360ce410ee5128ea9290dc18b698f250b"
+    },
+    {
+      "file": "decode/result/decoded.safetensors",
+      "bytes": 30081112,
+      "sha256": "b990b9b32ba2dc0fe9c1b70d0ca5341d644b76006b6948f0b245444b0d46099d"
+    },
+    {
+      "file": "decode/result/frames/0000.png",
+      "bytes": 129780,
+      "sha256": "f312db2ffc145d14e201b7227d8c954a331b93c5e3894bb5b42be6e96bf96c4e"
+    },
+    {
+      "file": "decode/result/frames/0001.png",
+      "bytes": 144870,
+      "sha256": "3eb1fc755fa9e9a1be26deccf3904aa0ec36b502d526e17493231839db1ea1fc"
+    },
+    {
+      "file": "decode/result/frames/0002.png",
+      "bytes": 146283,
+      "sha256": "0215568deaf1d58dbefa91eee42ffa24d0a893e8f6ea02b781c09c36e329789e"
+    },
+    {
+      "file": "decode/result/frames/0003.png",
+      "bytes": 152214,
+      "sha256": "c82b605e437ce4ed413810b6c5f1acc03bdea21ac3082c01fce122e46f1edcd5"
+    },
+    {
+      "file": "decode/result/frames/0004.png",
+      "bytes": 154283,
+      "sha256": "837d1938866798a047812b05f9a75e69b8c4381a83c5d1c7aed9f6206f9f6112"
+    },
+    {
+      "file": "decode/result/frames/0005.png",
+      "bytes": 159159,
+      "sha256": "20a22ac8400d9ca8d32364214d93e0e0bb8fad84e771ae9a7e53c8e9406746e0"
+    },
+    {
+      "file": "decode/result/frames/0006.png",
+      "bytes": 177945,
+      "sha256": "24e4e5611333b366370ac5f24ed2c62a9b59525c80b57740b424286a88aa4236"
+    },
+    {
+      "file": "decode/result/frames/0007.png",
+      "bytes": 184167,
+      "sha256": "be4cdc8791767391e9e78c1db2ce75cca13bf34952e679479da4eb6d47538a7b"
+    },
+    {
+      "file": "decode/result/frames/0008.png",
+      "bytes": 183970,
+      "sha256": "8e9ebf0d23f1800d8050c076b9ce21df8e7f48b3ecade431caea8fbc8bcf85fb"
+    },
+    {
+      "file": "decode/result/frames/0009.png",
+      "bytes": 175954,
+      "sha256": "32a5bea6c78c109261bd357f88089708d49b38c63d2c6e924385d5f6709e6de7"
+    },
+    {
+      "file": "decode/result/frames/0010.png",
+      "bytes": 182487,
+      "sha256": "48ae83cce53e09b679a09e40ddba5d266a39c31212d00ea33c58c0f5b35cadb5"
+    },
+    {
+      "file": "decode/result/frames/0011.png",
+      "bytes": 195254,
+      "sha256": "4a27478a67041e89865220b94a0343a989882e0194589b80a793fbb8e103fb08"
+    },
+    {
+      "file": "decode/result/frames/0012.png",
+      "bytes": 196682,
+      "sha256": "a221de17d29b78c393ab9b14491f768387b77c778cc1fc722d622f9c10c6716e"
+    },
+    {
+      "file": "decode/result/frames/0013.png",
+      "bytes": 194842,
+      "sha256": "289a868ac76060bf8d0c79bcdd7f47a72fff9ac562db88a026a058a21e2d7613"
+    },
+    {
+      "file": "decode/result/frames/0014.png",
+      "bytes": 191627,
+      "sha256": "f4817d7fbaf009933164c087852ec9c8e51e51857a2d366772ceedaf6ef9608c"
+    },
+    {
+      "file": "decode/result/frames/0015.png",
+      "bytes": 194018,
+      "sha256": "61a9609f65331dadfa401c4158fa0309873861843a0ea820a46a1986f3cf9d42"
+    },
+    {
+      "file": "decode/result/frames/0016.png",
+      "bytes": 198306,
+      "sha256": "6559a5b4ab2039c6af70fc604ec3c11d58f194c7912c0b009e189fcfa9d4c346"
+    },
+    {
+      "file": "decode/result/memory.jsonl",
+      "bytes": 18792,
+      "sha256": "1c4251df01f976c5dd85839fd36cf52da3c02937655e2a7b7780801497b38078"
+    },
+    {
+      "file": "decode/result/metrics.json",
+      "bytes": 50371,
+      "sha256": "0e354b92a2845ddef05a77beb6c442d4b3f72dd8b3003d7f5a5dd7886fa28b78"
+    },
+    {
+      "file": "decode/result/per-convolution-cleanup.jsonl",
+      "bytes": 20963,
+      "sha256": "253160bd0b0f5d1d621aec2dfcbae54e22749aac81d6f3af31fb6ac1431a1372"
+    },
+    {
+      "file": "decode/result/preview.gif",
+      "bytes": 1294891,
+      "sha256": "89fa18a606551e5d125a4a2c06c814f9611132da38aa0f8cc84bebdef17d8887"
+    },
+    {
+      "file": "decode/terminal.json",
+      "bytes": 107,
+      "sha256": "27c58dd9526c9b9fef38a550ce8217d845b6d0b10b1b558e7d109af946f9b651"
+    },
+    {
+      "file": "decode/worker.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "inputs.safetensors",
+      "bytes": 3696752,
+      "sha256": "0419e16b8699b408a1c085a382ca7751074c0be8c1927164b970de03b1e42753"
+    },
+    {
+      "file": "measured-source/__init__.py.txt",
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    {
+      "file": "measured-source/codec-source.json.txt",
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    {
+      "file": "measured-source/codec.py.txt",
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    {
+      "file": "measured-source/codec_decode_profile.py.txt",
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    {
+      "file": "measured-source/codec_memory.py.txt",
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    {
+      "file": "measured-source/codec_profile.py.txt",
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    {
+      "file": "measured-source/config.json.txt",
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    {
+      "file": "measured-source/load_weights.py.txt",
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    {
+      "file": "measured-source/portable.py.txt",
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    {
+      "file": "measured-source/profile_core.py.txt",
+      "bytes": 19225,
+      "sha256": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0"
+    },
+    {
+      "file": "measured-source/provenance.json.txt",
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    {
+      "file": "measured-source/requirements-sample.txt.txt",
+      "bytes": 107,
+      "sha256": "161dde8340cf09f65fa67a9a100787f2df4211a2c9e71249e7a81eb16f01b1ba"
+    },
+    {
+      "file": "measured-source/sample_clip.py.txt",
+      "bytes": 39918,
+      "sha256": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a"
+    },
+    {
+      "file": "measured-source/test_codec.py.txt",
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    {
+      "file": "measured-source/test_codec_decode.py.txt",
+      "bytes": 10267,
+      "sha256": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8"
+    },
+    {
+      "file": "measured-source/test_codec_memory.py.txt",
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    {
+      "file": "measured-source/test_core.py.txt",
+      "bytes": 13235,
+      "sha256": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020"
+    },
+    {
+      "file": "measured-source/test_sample_clip.py.txt",
+      "bytes": 16310,
+      "sha256": "8890986433884d1a2d63d815b858c5e468dc8a51683f013a1e3efb14f9898fe3"
+    },
+    {
+      "file": "measured-source/text-reuse.json.txt",
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    {
+      "file": "measured-source/vendor/__init__.py.txt",
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    {
+      "file": "measured-source/vendor/attention.py.txt",
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    {
+      "file": "measured-source/vendor/model.py.txt",
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    {
+      "file": "measured-source/vendor/shared_config.py.txt.txt",
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    {
+      "file": "measured-source/vendor/vae2_2.py.txt",
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    {
+      "file": "measured-source/weights.index.json.txt",
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    {
+      "file": "metrics.json",
+      "bytes": 11956,
+      "sha256": "17d52167ef71b804f4de36b9855607410ae3134bb0d4d36cdc948dd6f9bea1bc"
+    },
+    {
+      "file": "parent-memory.jsonl",
+      "bytes": 127391,
+      "sha256": "2446bcea88efcbd7fc8584c6dae624399184f2dabfff543cb9109753851b9709"
+    },
+    {
+      "file": "profile-core-terminal.json",
+      "bytes": 25029,
+      "sha256": "f1bc1c73298ce1fe1f1869a33a0aed0fd5aa9e310d40bd1438b15263705f41fe"
+    },
+    {
+      "file": "profile-core.json",
+      "bytes": 5596,
+      "sha256": "aef64c777014d295a4e5d2498081b145083bdf9aca463810b6c0c9f422165887"
+    },
+    {
+      "file": "profile-decode.json",
+      "bytes": 47262,
+      "sha256": "b533559026aa31fd0fc1aace5c3ef9d318f7c736f3407459848ff59f37d9c07d"
+    },
+    {
+      "file": "profile-inputs.safetensors",
+      "bytes": 1222608,
+      "sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5"
+    },
+    {
+      "file": "profile-weight-load.json",
+      "bytes": 370671,
+      "sha256": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+    },
+    {
+      "file": "reused-source/experiments/room_world/memory_train.py.txt",
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/native_control/portable.py.txt",
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt",
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/text_cache/cache.py.txt",
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    {
+      "file": "text-manifest.json",
+      "bytes": 32126,
+      "sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c"
+    }
+  ],
+  "measured_source_changed": false,
+  "external_pretrained_weights_included": false,
+  "scope": "Completed execution with failed visual quality; original metadata and all frames preserved"
+}

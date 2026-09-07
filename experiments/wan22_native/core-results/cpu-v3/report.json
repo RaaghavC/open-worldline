@@ -1,0 +1,74 @@
+{
+  "schema": "worldline-wan22-native-core-cpu-v1",
+  "status": "passed",
+  "tests": 20,
+  "pytest_seconds": null,
+  "command": "work/wan-adapter-env/bin/python; append sys.base_prefix/lib/python3.11/site-packages after existing sys.path; pytest.main(['experiments/wan22_native/test_core.py','experiments/wan22_native/test_profile_independent.py','-q'])",
+  "source_sha256": {
+    "portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+    "profile_core.py": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0",
+    "test_core.py": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "weights.index.json": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe",
+    "provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/shared_config.py.txt": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+  },
+  "reused_source_sha256": {
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan_adapter/text_cache/cache.py": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff",
+    "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+  },
+  "execution": {
+    "device": "cpu/meta",
+    "gpu_access": false,
+    "official_parameter_values_loaded": false,
+    "reserved_test_opened": false
+  },
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "diffusers": "0.34.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "psutil": "7.2.2",
+    "pytest": "7.4.4"
+  },
+  "prior_startup_failures": [
+    "The pinned Wan environment lacks pytest; first direct -m pytest invocation collected no tests.",
+    "The unrelated Atrium environment imports incompatible system Diffusers/HuggingFace Hub; no model ran in that check."
+  ],
+  "warnings": "Two literal official reference calls warn that CUDA autocast is disabled on CPU; no CUDA or MPS call was made.",
+  "meta_storage": {
+    "parameters": {
+      "float32": 68573376,
+      "bfloat16": 4931214336
+    },
+    "bytes": 10136722176,
+    "total_parameters": 4999787712,
+    "policy": "selective_bf16"
+  },
+  "official_shard_headers": {
+    "parameter_count": 4999787712,
+    "tensor_count": 825,
+    "shards": [
+      "diffusion_pytorch_model-00001-of-00003.safetensors",
+      "diffusion_pytorch_model-00002-of-00003.safetensors",
+      "diffusion_pytorch_model-00003-of-00003.safetensors"
+    ],
+    "original_dtype": "F32"
+  },
+  "wall_seconds": 2.815090458985651,
+  "previous_report_sha256": "f626b17e09ec342328a622b810a578e82981e55d0e9e020a4092b9fc729a1cc4",
+  "source_unchanged_after_tests": true,
+  "implementation_tests": 16,
+  "independent_profiler_tests": 4,
+  "change_since_v2": "Metadata only: inherited MPS allocator/runtime strings and device recommended memory recorded before allocation policy/model work; exact child environment retained in launch.json. Model/loader/sampling math unchanged.",
+  "extra_test_sha256": {
+    "test_profile_independent.py": "7407fbd77bbaf27cef22a889cd291e8044ef4ccd9317463597ff0cd38c8ef171"
+  }
+}

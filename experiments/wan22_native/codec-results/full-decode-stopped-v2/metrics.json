@@ -1,0 +1,88 @@
+{
+  "status": "running",
+  "max_seconds": 900,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "timings": [
+    {
+      "stage": "verify_and_load_fp32_codec",
+      "seconds": 4.126999917003559
+    }
+  ],
+  "peaks_sampled": {
+    "rss_bytes": 2990915584,
+    "mps_active_bytes": 2818758144,
+    "mps_driver_bytes": 3376922624
+  },
+  "experiment": "Synthetic full 17-frame Wan2.2 decoder cost diagnostic",
+  "device": "mps",
+  "dtype": "float32",
+  "latent_shape": [
+    1,
+    48,
+    5,
+    18,
+    32
+  ],
+  "decoded_shape": [
+    1,
+    3,
+    17,
+    288,
+    512
+  ],
+  "observed_prefix_latent_frames": 1,
+  "synthetic_future_latent_frames": 4,
+  "decoded_initial_reconstruction_frames": 1,
+  "decoded_synthetic_future_frames": 16,
+  "denoiser_executed": false,
+  "generated_world_frames": 0,
+  "image_quality_claim": false,
+  "future_rgb_read": false,
+  "actions_read": false,
+  "target_read": false,
+  "canonical_noise_file_sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1",
+  "canonical_noise_tensor_sha256": "a6dcd35bf33a4262f8c5bd7b1e8ba0231839c421a3a84e07e7c05e606ea8212a",
+  "noise_identity": "Retained exact CPU-generated tensor bytes; seed regeneration is not a cross-platform identity check",
+  "optional_allocator_cleanup": true,
+  "preview_playback_fps": 10,
+  "frame_image_annotation": "Synthetic decode cost diagnostic; header outside the unmodified 512x288 decoded pixel region",
+  "automatic_mps_cpu_fallback": "0",
+  "runtime_environment": {
+    "environment": {
+      "PYTORCH_MPS_LOW_WATERMARK_RATIO": "0.6",
+      "PYTORCH_MPS_HIGH_WATERMARK_RATIO": null,
+      "PYTORCH_ENABLE_MPS_FALLBACK": "0",
+      "PYTORCH_MPS_FAST_MATH": null,
+      "PYTORCH_MPS_PREFER_METAL": null
+    },
+    "recommended_max_memory_bytes": 19069665280,
+    "record_only": true,
+    "meaning": "Environment present before process startup; no variable is changed by this record"
+  },
+  "initial_codec_cpu_sha256": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+  "decode_cpu_sha256": "e213eb88222afe571bbbcb3c30d0ba4ae486fc8c924dc20f4cfa095c08d609f2",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "codec_decode_profile.py": "767ec7ea72dc5dd5b2c7fd539d1a295d9e90c349da990f2ccb2e971cef81692c",
+    "test_codec_decode.py": "e856daad264a977c6e2cd14a075568e3d9c4bbf3cbf045808d11ee07f8deee35"
+  },
+  "observation": {
+    "first_image_metrics_sha256": "024927e795ecd381412ac38fa7f0936e6621f494c3dd9b5d4a13e06a904d5c5e",
+    "observation_file_sha256": "b2154c91d4029c05d09faba34a1cd8cb838b9aebd247ff8d7e52bceb265edf76",
+    "observation_tensor_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+    "original_image_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+    "materialized_tensor_keys": [
+      "observation"
+    ],
+    "rgb_files_read": false,
+    "actions_read": false,
+    "future_targets_read": false
+  },
+  "synthetic_tensor_sha256": "390c667e113353ca874c612118cfdaa1cc329a65b7106b431ca3485fbeba4302",
+  "synthetic_input_sha256": "52178bb8bf0362080e7f41160df94a5a51e3cd92d736cf8cc965aa9b894cd77c"
+}

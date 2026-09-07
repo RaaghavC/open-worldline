@@ -1,0 +1,36 @@
+{
+  "status": "stopped",
+  "actual_output_created": false,
+  "decoder_completed": false,
+  "cause": "Available system memory fell below the unchanged2GiB minimum",
+  "watchdog": {
+    "status": "stopped",
+    "reason": "Less than2 GiB available system RAM",
+    "last_sample": {
+      "seconds": 39.403975709021324,
+      "stage": "decode_full_17_frames",
+      "rss_bytes": 322994176,
+      "available_bytes": 1680408576,
+      "mps_active_bytes": 4394622976,
+      "mps_driver_bytes": 15940239360
+    }
+  },
+  "raw_files": {
+    "canonical-noise.safetensors": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1",
+    "decode-cpu-tests.json": "b1d54f8288e447fe5532dfa87b841d95d9fa52fa676cb504ccf7e8eeacaa29fd",
+    "initial-codec-cpu-tests.json": "78241de666076e72010de3dc9bb8b8609fb564463c3118392b6cbf28a8d8b6e9",
+    "measured-source/codec-source.json.txt": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "measured-source/codec.py.txt": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "measured-source/codec_decode_profile.py.txt": "06552266eca3e919b704deefb8b3db7e3ec0f43968a7c619f88f60b92a4d0ea2",
+    "measured-source/codec_profile.py.txt": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+    "measured-source/test_codec.py.txt": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+    "measured-source/test_codec_decode.py.txt": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e",
+    "measured-source/vendor/vae2_2.py.txt": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "memory.jsonl": "49389fec7fdeb3abda348acdb5625d841dd436756d909d26b0e61d36ee8bff95",
+    "metrics.json": "4b9417cde5f9ecbd69ead34d258223c3eb95749342859030e6bfe7bf87c63510",
+    "noise-provenance.json": "5e41b193ce10449c024dab56727174c61290831e131a409c177600d2d5969492",
+    "synthetic-input.safetensors": "52178bb8bf0362080e7f41160df94a5a51e3cd92d736cf8cc965aa9b894cd77c",
+    "watchdog-stop.json": "89ed2b2ad5f8d1ec5d2b171e44b123dca107565694beb8fda2ab27b3c41882e3"
+  },
+  "subsequent_attempt_policy": "New output directory and a separately recorded runtime setting; source arithmetic and resource limits remain unchanged"
+}

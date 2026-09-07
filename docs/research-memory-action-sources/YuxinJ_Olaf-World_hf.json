@@ -1,0 +1,82 @@
+{
+  "_id": "69e082faeb7f72c908308dee",
+  "id": "YuxinJ/Olaf-World",
+  "private": false,
+  "tags": [
+    "world model",
+    "latent action",
+    "video generation",
+    "dataset:TencentARC/MiraData",
+    "dataset:CSU-JPG/MIND",
+    "arxiv:2602.10104",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 1,
+  "modelId": "YuxinJ/Olaf-World",
+  "author": "YuxinJ",
+  "sha": "9bc978f2079f51fa21ffd8a3b4640d8680c0a76b",
+  "lastModified": "2026-04-20T10:30:43.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "apache-2.0",
+    "tags": [
+      "world model",
+      "latent action",
+      "video generation"
+    ],
+    "datasets": [
+      "TencentARC/MiraData",
+      "CSU-JPG/MIND"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "b8e991e5032d3445fe88f7c1d4ed0ae98b87ba63",
+      "size": 730
+    },
+    {
+      "rfilename": "lam/lam.ckpt",
+      "blobId": "6f6e2e833e548f0238278c3474ee68ebc63ff429",
+      "size": 1898982813,
+      "lfs": {
+        "sha256": "503e68c299b0eff82e8a767649e2994230f48d06eb36d725c3a8eb59993d915f",
+        "size": 1898982813,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "lam/lam_vjepa_align.ckpt",
+      "blobId": "a33e660c67f6b0a8f4068511e292206a1ab44fbe",
+      "size": 1899223145,
+      "lfs": {
+        "sha256": "0906f2e737a8968bb26981440c947cd86de2519b8cf4a9eeb08c4446af0e014e",
+        "size": 1899223145,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "world_model/pretrain/model.pt",
+      "blobId": "6296ef17fc3fd1ef1a7d6f14ec9636999bd0a03f",
+      "size": 15645917769,
+      "lfs": {
+        "sha256": "009ae87154824f2b7f88312606d1e774005e0b7c383f350e643d73dc89d8cde4",
+        "size": 15645917769,
+        "pointerSize": 136
+      }
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-04-16T06:34:34.000Z",
+  "usedStorage": 19444123727
+}

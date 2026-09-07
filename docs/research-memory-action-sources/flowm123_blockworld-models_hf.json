@@ -1,0 +1,174 @@
+{
+  "_id": "695f12be5a99784dac433952",
+  "id": "flowm123/blockworld-models",
+  "private": false,
+  "pipeline_tag": "image-to-video",
+  "tags": [
+    "image-to-video",
+    "arxiv:2601.01075",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 0,
+  "modelId": "flowm123/blockworld-models",
+  "author": "flowm123",
+  "sha": "693920b5fc0331a436c1ecb7aaf9bcc26e81138a",
+  "lastModified": "2026-07-04T20:54:59.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "pipeline_tag": "image-to-video"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "MODEL_INDEX.json",
+      "blobId": "e2988ce4784e5c73ed6d1382f3f937f3432da10f",
+      "size": 2203
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "37b06608c0b2fc7832d57a66fa387c8ae1e9a86c",
+      "size": 1968
+    },
+    {
+      "rfilename": "blockworld/dynamic/dfot-ssm/v2_dynamic.ckpt",
+      "blobId": "91344092d1ca9583f49486b445a27529f72e1345",
+      "size": 1564438561,
+      "lfs": {
+        "sha256": "83bc374941c38035b3b79948bd1f70bc0b6cdbff593cbe52d3087e9995a2b591",
+        "size": 1564438561,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/dynamic/dfot/v2_dynamic.ckpt",
+      "blobId": "cb4ed4a6a960ae95adc3889d22300d9ad40776eb",
+      "size": 1524999062,
+      "lfs": {
+        "sha256": "b4f6770b217e100e6f00a5e02f989971e914a2aea1c69e4d899bf0f82d40c082",
+        "size": 1524999062,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/dynamic/flowm/v2_dynamic.ckpt",
+      "blobId": "b85a9907acf1655dc993f1be43dd93b4625736c3",
+      "size": 154335485,
+      "lfs": {
+        "sha256": "e523c75b3bb337d067a2132842e808c766d55f7b5c8420b85217f8fda249cfe7",
+        "size": 154335485,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "blockworld/dynamic/rssm/v2_dynamic_400m.ckpt",
+      "blobId": "da3547f07a9632239fbaca6b17bd628fe8182e62",
+      "size": 5587656563,
+      "lfs": {
+        "sha256": "044c30f7ada6f0d72990037c0fb1249c70875851094c696a1786348ea15fa54f",
+        "size": 5587656563,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/dynamic/rssm/v2_dynamic_50m.ckpt",
+      "blobId": "75d547af101f321fd1303771dc58b3414fa088fa",
+      "size": 621654931,
+      "lfs": {
+        "sha256": "3942b7baa3c08da8b8ad2f8bf28fc2ed05cbfa3dddb529c326168e41148e4657",
+        "size": 621654931,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "blockworld/static/dfot-ssm/v2_static.ckpt",
+      "blobId": "9ec884c3945db1ac1633adbd5b34b9bba20fdd63",
+      "size": 1564432353,
+      "lfs": {
+        "sha256": "d6142046ee66c9cefaa29c028f07b03c6ffa1d65b7515fcfbeab7fa10189802c",
+        "size": 1564432353,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/static/dfot/v2_static.ckpt",
+      "blobId": "393fddbcff71d16b9c7ea0c888bce26bdf6c1945",
+      "size": 1524999062,
+      "lfs": {
+        "sha256": "8795f213167981695b1d579ec586dbfff20c3d10e8acd38a8a618fd6023a4476",
+        "size": 1524999062,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/static/flowm/v2_static.ckpt",
+      "blobId": "2a908ae7a7eb8f51115ec8c06e31a0a9408a7890",
+      "size": 154335485,
+      "lfs": {
+        "sha256": "62c70d8c53287d1d11e316388a2113a0e2e28fd58a034a5216d701b206adf8d4",
+        "size": 154335485,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "blockworld/tex/dfot-ssm/tex.ckpt",
+      "blobId": "0786af4aa2f90085ea068924f6a98c7d3d031b96",
+      "size": 1564430689,
+      "lfs": {
+        "sha256": "687c96960f4b42ebe92adcbe2f972007b7ab01bc79bb9a3d9868028de6f16561",
+        "size": 1564430689,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/tex/dfot/tex.ckpt",
+      "blobId": "b44e9cc9c6e390be9747ee20921895e281e24cbe",
+      "size": 1524992534,
+      "lfs": {
+        "sha256": "206d46c17dea24ac5feea362e327a82e9e3c4a5e2286a308d718d4c7d7fbc4ac",
+        "size": 1524992534,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/tex/flowm/tex.ckpt",
+      "blobId": "a81e0076ebd0f8e34ad7acac3ead3068c8824de8",
+      "size": 154349245,
+      "lfs": {
+        "sha256": "454c89f26cfe4708c5ea84c772a518378a8597516fc496abff74339c4204ef35",
+        "size": 154349245,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "blockworld/vae/blockworld_tex_vae.ckpt",
+      "blobId": "14131ef85e3c7e23c304cc70e0df2e379dc5e41b",
+      "size": 1060612933,
+      "lfs": {
+        "sha256": "233e524c61b243f3316fb1dede461fe591e5f86ed567a7a0dff6298ed0450a32",
+        "size": 1060612933,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "blockworld/vae/blockworld_vae.ckpt",
+      "blobId": "d286f3975ee4962af263253a5da31da3a7cf2c59",
+      "size": 1060600837,
+      "lfs": {
+        "sha256": "e79c94cb7110dd876fef561cd5fdee094721f9ce12f06811b4913cf0ec451038",
+        "size": 1060600837,
+        "pointerSize": 135
+      }
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-01-08T02:13:18.000Z",
+  "usedStorage": 18061837740
+}

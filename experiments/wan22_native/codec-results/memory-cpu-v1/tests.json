@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "seconds": 1.2834451660164632,
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "test_codec_memory.py": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+  },
+  "measurements": {
+    "registered_layers": 46,
+    "observed_native_calls": 129,
+    "full_17_frame_max_abs": 0.0,
+    "native_call_counts": {
+      "conv2": 1,
+      "decoder.conv1": 5,
+      "decoder.middle.0.residual.2": 5,
+      "decoder.middle.0.residual.6": 5,
+      "decoder.middle.2.residual.2": 5,
+      "decoder.middle.2.residual.6": 5,
+      "decoder.upsamples.0.upsamples.0.residual.2": 5,
+      "decoder.upsamples.0.upsamples.0.residual.6": 5,
+      "decoder.upsamples.0.upsamples.1.residual.2": 5,
+      "decoder.upsamples.0.upsamples.1.residual.6": 5,
+      "decoder.upsamples.0.upsamples.2.time_conv": 4,
+      "decoder.upsamples.1.upsamples.0.residual.2": 5,
+      "decoder.upsamples.1.upsamples.0.residual.6": 5,
+      "decoder.upsamples.1.upsamples.1.residual.2": 5,
+      "decoder.upsamples.1.upsamples.1.residual.6": 5,
+      "decoder.upsamples.1.upsamples.2.time_conv": 4,
+      "decoder.upsamples.2.upsamples.0.residual.2": 5,
+      "decoder.upsamples.2.upsamples.0.residual.6": 5,
+      "decoder.upsamples.2.upsamples.0.shortcut": 5,
+      "decoder.upsamples.2.upsamples.1.residual.2": 5,
+      "decoder.upsamples.2.upsamples.1.residual.6": 5,
+      "decoder.upsamples.3.upsamples.0.residual.2": 5,
+      "decoder.upsamples.3.upsamples.0.residual.6": 5,
+      "decoder.upsamples.3.upsamples.0.shortcut": 5,
+      "decoder.upsamples.3.upsamples.1.residual.2": 5,
+      "decoder.upsamples.3.upsamples.1.residual.6": 5,
+      "decoder.head.2": 5
+    }
+  },
+  "device": "cpu",
+  "actual_mps_operations": false,
+  "external_weight_values_loaded": false,
+  "scope": "Tiny native48-channel codec with all17 output frames; exact equation/hook equality, not actual memory savings or full-weight timing"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "wan22-codec-synthetic-noise-v1",
+  "seed": 20260918,
+  "generator": "torch CPU Generator",
+  "shape": [
+    1,
+    48,
+    5,
+    18,
+    32
+  ],
+  "dtype": "torch.float32",
+  "torch": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "file": "synthetic-noise.safetensors",
+  "file_sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1",
+  "tensor_sha256": "a6dcd35bf33a4262f8c5bd7b1e8ba0231839c421a3a84e07e7c05e606ea8212a",
+  "generation_source_sha256": "6e9aa57958e5d58aebf399348ab2d8748b474e5ddf06d60540cbe60bac616c74",
+  "canonical_identity": "The retained file/tensor bytes and hashes, not cross-platform seed regeneration",
+  "use": "Synthetic decoder runtime input only, not a generated-world prediction"
+}
