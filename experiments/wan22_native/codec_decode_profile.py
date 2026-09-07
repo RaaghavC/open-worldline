@@ -1,0 +1,165 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Full 17-frame native VAE decode cost from retained noise and one observation.
+
+Synthetic decoder-input diagnostic only. No denoiser, actions, future images or
+training targets are read. Saved noise bytes are canonical across platforms.
+"""
+import argparse
+from contextlib import contextmanager,nullcontext
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import sys
+import time
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+import numpy as np
+from PIL import Image,ImageDraw
+import torch
+from safetensors import safe_open
+from safetensors.torch import save_file
+from wan22_native.codec import Wan22Codec,cleanup_temporal_chunks,HERE,sha,WEIGHT_SHA256,SOURCE_SHA256,CONFIG
+from wan22_native.codec_profile import Guard,IMAGE_SHA256,SOURCE_NAMES as INITIAL_SOURCES,validate_cpu
+
+NOISE_SHA256='aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1'
+NOISE_TENSOR_SHA256='a6dcd35bf33a4262f8c5bd7b1e8ba0231839c421a3a84e07e7c05e606ea8212a'
+SHAPE=(1,48,5,18,32)
+SOURCE_NAMES=tuple(INITIAL_SOURCES)+('codec_decode_profile.py','test_codec_decode.py')
+
+
+def tensor_sha(value):
+    return hashlib.sha256(value.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
+
+
+def canonical_noise():
+    path=HERE/'codec-inputs/synthetic-noise.safetensors'
+    if sha(path)!=NOISE_SHA256:raise ValueError('Retained canonical CPU noise file changed')
+    with safe_open(path,framework='pt',device='cpu') as handle:
+        if set(handle.keys())!={'noise'}:raise ValueError('Unexpected canonical-noise keys')
+        noise=handle.get_tensor('noise')
+    if noise.shape!=SHAPE or noise.dtype!=torch.float32 or not torch.isfinite(noise).all() or tensor_sha(noise)!=NOISE_TENSOR_SHA256:raise ValueError('Canonical noise tensor differs')
+    return noise
+
+
+def read_observation(directory):
+    directory=Path(directory);r=json.loads((directory/'metrics.json').read_text())
+    if r.get('status')!='passed' or r.get('finite_output') is not True:raise ValueError('Completed finite first-image codec profile required')
+    if r.get('input_image_sha256')!=IMAGE_SHA256 or r.get('input_rgb_frames')!=1 or r.get('future_rgb_read') is not False:raise ValueError('Different or unverified initial RGB input')
+    if r.get('expected_latent_shape')!=[1,48,1,18,32] or r.get('dtype')!='float32':raise ValueError('Different codec latent contract')
+    if not r.get('cache_clear_after_encode') or not r.get('cache_clear_after_decode'):raise ValueError('Initial codec caches were not cleared')
+    codec=r.get('codec',{})
+    if codec.get('weight_sha256')!=WEIGHT_SHA256 or codec.get('source_sha256')!=SOURCE_SHA256 or codec.get('config')!=CONFIG:raise ValueError('Different initial-image codec weights or source')
+    for name in INITIAL_SOURCES:
+        if r.get('source_sha256',{}).get(name)!=sha(HERE/name):raise ValueError('First-image codec source changed: '+name)
+    path=directory/'observation.safetensors'
+    if sha(path)!=r.get('output_sha256',{}).get('observation.safetensors'):raise ValueError('Saved observation file changed')
+    with safe_open(path,framework='pt',device='cpu') as handle:
+        if set(handle.keys())!={'observation'}:raise ValueError('Unexpected observed-latent keys')
+        observation=handle.get_tensor('observation')
+    if observation.shape!=(1,48,1,18,32) or observation.dtype!=torch.float32 or not torch.isfinite(observation).all():raise ValueError('Invalid first-image latent')
+    if tensor_sha(observation)!=r.get('latent_tensor_sha256'):raise ValueError('First-image tensor hash changed')
+    return observation,{'first_image_metrics_sha256':sha(directory/'metrics.json'),
+        'observation_file_sha256':sha(path),'observation_tensor_sha256':tensor_sha(observation),
+        'original_image_sha256':IMAGE_SHA256,'materialized_tensor_keys':['observation'],
+        'rgb_files_read':False,'actions_read':False,'future_targets_read':False}
+
+
+def synthetic_input(noise,observation):
+    if noise.shape!=SHAPE or observation.shape!=(1,48,1,18,32):raise ValueError('Incorrect full-shape synthetic input')
+    if any(v.device.type!='cpu' or v.dtype!=torch.float32 or not torch.isfinite(v).all() for v in (noise,observation)):raise ValueError('Finite CPU FP32 inputs required')
+    return torch.cat((observation,noise[:,:,1:]),dim=2)
+
+
+@contextmanager
+def chunk_timings(codec,device):
+    """Time each native decoder call, preserving its output and temporal cache."""
+    rows=[];started=[None]
+    def before(module,args,kwargs):
+        if device=='mps':torch.mps.synchronize()
+        started[0]=time.perf_counter()
+    def after(module,args,kwargs,output):
+        if device=='mps':torch.mps.synchronize()
+        rows.append({'chunk':len(rows),'seconds':time.perf_counter()-started[0],
+            'first_chunk':kwargs.get('first_chunk',False),'output_shape':list(output.shape),'output_dtype':str(output.dtype)})
+    handles=[]
+    try:
+        handles.append(codec.model.decoder.register_forward_pre_hook(before,with_kwargs=True))
+        handles.append(codec.model.decoder.register_forward_hook(after,with_kwargs=True))
+        yield rows
+    finally:
+        for handle in handles:handle.remove()
+
+
+def validate_decode_cpu(path):
+    report=json.loads(Path(path).read_text())
+    if report.get('status')!='passed' or report.get('tests',0)<6:raise ValueError('Passed full-decode CPU checks required')
+    for name in SOURCE_NAMES:
+        if report.get('source_sha256',{}).get(name)!=sha(HERE/name):raise ValueError('Decode profile source changed: '+name)
+    if report.get('canonical_noise_sha256')!=NOISE_SHA256:raise ValueError('Different synthetic noise in CPU report')
+    return sha(path)
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    for name in ('weights','observation-run','cpu-report','output'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--codec-cpu-report',type=Path,default=HERE/'codec-results/cpu-v2/tests.json')
+    p.add_argument('--device',choices=('cpu','mps'),default='cpu')
+    p.add_argument('--allocator-cleanup',action='store_true')
+    args=p.parse_args()
+    if os.environ.get('PYTORCH_ENABLE_MPS_FALLBACK','0')!='0':raise RuntimeError('Automatic CPU fallback must be disabled')
+    if args.device=='mps' and not torch.backends.mps.is_available():raise RuntimeError('MPS unavailable')
+    torch.set_num_threads(4);guard=Guard(args.output,args.device);r=guard.report;error=None;completed=False
+    r.update(experiment='Synthetic full 17-frame Wan2.2 decoder cost diagnostic',device=args.device,dtype='float32',
+        latent_shape=list(SHAPE),decoded_shape=[1,3,17,288,512],observed_prefix_latent_frames=1,
+        synthetic_future_latent_frames=4,decoded_initial_reconstruction_frames=1,decoded_synthetic_future_frames=16,
+        denoiser_executed=False,generated_world_frames=0,image_quality_claim=False,future_rgb_read=False,actions_read=False,target_read=False,
+        canonical_noise_file_sha256=NOISE_SHA256,canonical_noise_tensor_sha256=NOISE_TENSOR_SHA256,
+        noise_identity='Retained exact CPU-generated tensor bytes; seed regeneration is not a cross-platform identity check',
+        optional_allocator_cleanup=args.allocator_cleanup,preview_playback_fps=10,
+        frame_image_annotation='Synthetic decode cost diagnostic; header outside the unmodified 512x288 decoded pixel region',
+        automatic_mps_cpu_fallback=os.environ.get('PYTORCH_ENABLE_MPS_FALLBACK','0'))
+    try:
+        r['initial_codec_cpu_sha256']=validate_cpu(args.codec_cpu_report)
+        r['decode_cpu_sha256']=validate_decode_cpu(args.cpu_report)
+        for source,name in ((args.codec_cpu_report,'initial-codec-cpu-tests.json'),(args.cpu_report,'decode-cpu-tests.json')):shutil.copyfile(source,args.output/name)
+        r['source_sha256']={}
+        for name in SOURCE_NAMES:
+            dest=args.output/'measured-source'/(name+'.txt');dest.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(HERE/name,dest);r['source_sha256'][name]=sha(dest)
+        observation,r['observation']=read_observation(args.observation_run)
+        noise=canonical_noise();latent=synthetic_input(noise,observation)
+        save_file({'synthetic_latent':latent,'observation':observation},str(args.output/'synthetic-input.safetensors'))
+        shutil.copyfile(HERE/'codec-inputs/synthetic-noise.safetensors',args.output/'canonical-noise.safetensors')
+        shutil.copyfile(HERE/'codec-inputs/manifest.json',args.output/'noise-provenance.json')
+        r['synthetic_tensor_sha256']=tensor_sha(latent);r['synthetic_input_sha256']=sha(args.output/'synthetic-input.safetensors');guard.save()
+        codec=guard.measure('verify_and_load_fp32_codec',lambda:Wan22Codec(args.weights,args.device));r['codec']=codec.provenance
+        if args.device=='mps':torch.mps.empty_cache()
+        with chunk_timings(codec,args.device) as chunks,cleanup_temporal_chunks(codec) if args.allocator_cleanup else nullcontext() as counts:
+            video=guard.measure('decode_full_17_frames',lambda:codec.decode(latent))
+        r['decoder_chunks']=chunks;r['allocator_chunk_counts']=counts;r['cache_clear_after_decode']=codec.cache_is_clear()
+        if len(chunks)!=5 or [x['first_chunk'] for x in chunks]!=[True,False,False,False,False] or [x['output_shape'][2] for x in chunks]!=[1,4,4,4,4]:raise RuntimeError('Unexpected native temporal chunks')
+        if args.allocator_cleanup and counts!={'encoder':0,'decoder':5}:raise RuntimeError('Unexpected allocator-hook calls')
+        if list(video.shape)!=r['decoded_shape'] or not torch.isfinite(video).all() or not codec.cache_is_clear():raise RuntimeError('Invalid full decode output/cache')
+        if tensor_sha(latent)!=r['synthetic_tensor_sha256']:raise RuntimeError('Decoder mutated the synthetic input')
+        pixels=np.rint(((video[0].permute(1,2,3,0).cpu().numpy()+1)/2).clip(0,1)*255).astype(np.uint8)
+        frames=args.output/'frames';frames.mkdir();images=[]
+        for index,array in enumerate(pixels):
+            image=Image.new('RGB',(512,320),(241,239,232));draw=ImageDraw.Draw(image)
+            draw.text((8,3),f'Synthetic decode cost diagnostic | frame {index}/16',fill=(25,25,25))
+            draw.text((8,16),'Known initial latent' if index==0 else 'Noise latent, no world-model prediction',fill=(25,25,25))
+            image.paste(Image.fromarray(array),(0,32));image.save(frames/f'{index:04d}-synthetic.png');images.append(image)
+        images[0].save(args.output/'synthetic-preview.gif',save_all=True,append_images=images[1:],duration=100,loop=0)
+        sheet=Image.new('RGB',(1024,640),(241,239,232))
+        for pos,index in enumerate((0,5,10,16)):sheet.paste(images[index],((pos%2)*512,(pos//2)*320))
+        sheet.save(args.output/'synthetic-comparison.png')
+        r['decoded_pixels_sha256']=hashlib.sha256(pixels.tobytes()).hexdigest();r['finite_output']=True
+        r['output_sha256']={str(path.relative_to(args.output)):sha(path) for path in [*sorted(frames.glob('*.png')),args.output/'synthetic-preview.gif',args.output/'synthetic-comparison.png',args.output/'synthetic-input.safetensors',args.output/'canonical-noise.safetensors']}
+        completed=True
+    except BaseException as problem:error=problem;raise
+    finally:
+        if not completed and error is None:error=RuntimeError('Synthetic full-decode profile did not complete')
+        guard.close(error)
+    print(json.dumps({'status':r['status'],'timings':r['timings'],'chunks':r['decoder_chunks'],'elapsed_seconds':r['elapsed_seconds'],'peaks':r['peaks_sampled']},indent=2))
+
+if __name__=='__main__':main()

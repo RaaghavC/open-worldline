@@ -1,0 +1,263 @@
+{
+  "schema": "worldline-wan22-core-publication-v1",
+  "gpu_execution_included": false,
+  "external_weight_files_included": false,
+  "files": {
+    "README.md": {
+      "bytes": 1954,
+      "sha256": "abf6542ae0be52a954fa8032ae4f61a6baa771fb5a8ae5bb564d8c076fa6ee28"
+    },
+    "cpu-v1/measured-source/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "cpu-v1/measured-source/load_weights.py.txt": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "cpu-v1/measured-source/portable.py.txt": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "cpu-v1/measured-source/profile_core.py.txt": {
+      "bytes": 17980,
+      "sha256": "40e0797f3f9cb2bfc480484e0f08b8ef279686078f6e9a8d67f54a103e55d3c6"
+    },
+    "cpu-v1/measured-source/provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "cpu-v1/measured-source/test_core.py.txt": {
+      "bytes": 12068,
+      "sha256": "857f7de85dabf8e7082f4024454f9c3956bb250da2458bdd7140d5ab903160cd"
+    },
+    "cpu-v1/measured-source/text-reuse.json.txt": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "cpu-v1/measured-source/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "cpu-v1/measured-source/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "cpu-v1/measured-source/vendor/shared_config.py.txt.txt": {
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    "cpu-v1/measured-source/weights.index.json.txt": {
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    "cpu-v1/report.json": {
+      "bytes": 3102,
+      "sha256": "cff7d8eba9fbcb9f89cf7e1949ed240983ea478d9500e7ff6d32fa79fff4984f"
+    },
+    "cpu-v1/reused-source/experiments/room_world/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "cpu-v1/reused-source/experiments/wan_adapter/native_control/portable.py.txt": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "cpu-v1/reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "cpu-v1/reused-source/experiments/wan_adapter/text_cache/cache.py.txt": {
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    "cpu-v2/measured-source/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "cpu-v2/measured-source/load_weights.py.txt": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "cpu-v2/measured-source/portable.py.txt": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "cpu-v2/measured-source/profile_core.py.txt": {
+      "bytes": 18333,
+      "sha256": "35ac93970e1a537df5d236e5126b3ad3b809117c2f6c3281888634915377132e"
+    },
+    "cpu-v2/measured-source/provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "cpu-v2/measured-source/test_core.py.txt": {
+      "bytes": 12068,
+      "sha256": "857f7de85dabf8e7082f4024454f9c3956bb250da2458bdd7140d5ab903160cd"
+    },
+    "cpu-v2/measured-source/text-reuse.json.txt": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "cpu-v2/measured-source/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "cpu-v2/measured-source/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "cpu-v2/measured-source/vendor/shared_config.py.txt.txt": {
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    "cpu-v2/measured-source/weights.index.json.txt": {
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    "cpu-v2/report.json": {
+      "bytes": 3465,
+      "sha256": "f626b17e09ec342328a622b810a578e82981e55d0e9e020a4092b9fc729a1cc4"
+    },
+    "cpu-v2/reused-source/experiments/room_world/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "cpu-v2/reused-source/experiments/wan_adapter/native_control/portable.py.txt": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "cpu-v2/reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "cpu-v2/reused-source/experiments/wan_adapter/text_cache/cache.py.txt": {
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    "independent-core/checked-source/experiments/wan22_native/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "independent-core/checked-source/experiments/wan22_native/load_weights.py.txt": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "independent-core/checked-source/experiments/wan22_native/portable.py.txt": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "independent-core/checked-source/experiments/wan22_native/provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "independent-core/checked-source/experiments/wan22_native/test_independent.py.txt": {
+      "bytes": 8813,
+      "sha256": "05811b4ceb65633d063a794b595393587def4a55911c6a0df46fb72e7fc01a89"
+    },
+    "independent-core/checked-source/experiments/wan22_native/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "independent-core/checked-source/experiments/wan22_native/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "independent-core/checked-source/experiments/wan22_native/weights.index.json.txt": {
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    "independent-core/checked-source/experiments/wan_adapter/native_control/portable.py.txt": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "independent-core/publication.json": {
+      "bytes": 362,
+      "sha256": "035a04cd28d5a3c4f3973d87b2abec133542f07f40e7961ec1bb305596baea2b"
+    },
+    "independent-core/report.json": {
+      "bytes": 3854,
+      "sha256": "ff1e944affdcc89312f308c14274e1fb940898b4e62f303761db2080678b5ab0"
+    },
+    "independent-profile/checked-source/config.json.txt": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "independent-profile/checked-source/experiments/room_world/memory_train.py.txt": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "independent-profile/checked-source/experiments/wan_adapter/native_control/portable.py.txt": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "independent-profile/checked-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "independent-profile/checked-source/experiments/wan_adapter/text_cache/cache.py.txt": {
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    "independent-profile/checked-source/load_weights.py.txt": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "independent-profile/checked-source/portable.py.txt": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "independent-profile/checked-source/profile_core.py.txt": {
+      "bytes": 18333,
+      "sha256": "35ac93970e1a537df5d236e5126b3ad3b809117c2f6c3281888634915377132e"
+    },
+    "independent-profile/checked-source/provenance.json.txt": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "independent-profile/checked-source/test_core.py.txt": {
+      "bytes": 12068,
+      "sha256": "857f7de85dabf8e7082f4024454f9c3956bb250da2458bdd7140d5ab903160cd"
+    },
+    "independent-profile/checked-source/test_profile_independent.py.txt": {
+      "bytes": 9306,
+      "sha256": "7407fbd77bbaf27cef22a889cd291e8044ef4ccd9317463597ff0cd38c8ef171"
+    },
+    "independent-profile/checked-source/text-reuse.json.txt": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "independent-profile/checked-source/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "independent-profile/checked-source/vendor/model.py.txt": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "independent-profile/checked-source/vendor/shared_config.py.txt.txt": {
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    "independent-profile/checked-source/weights.index.json.txt": {
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    "independent-profile/publication.json": {
+      "bytes": 162,
+      "sha256": "687002840353a3433629b308475d831f4ab17d56202bdeae098449e311afa1a6"
+    },
+    "independent-profile/report.json": {
+      "bytes": 4911,
+      "sha256": "6c8af263dfe392d409010e016ae921aa9c024e8dd1e2d2c3002c6b30cd282713"
+    },
+    "weight-download/download-manifest.json": {
+      "bytes": 1638,
+      "sha256": "c0ea1798b98c9eba5a90044329ac4a629726798b8a19146cc236b5f6435e6192"
+    },
+    "weight-download/identity.json": {
+      "bytes": 412,
+      "sha256": "80497abcee329951fdbbd6bb73cbc8608280fec458390676cb58d4ef1b65e90a"
+    }
+  }
+}

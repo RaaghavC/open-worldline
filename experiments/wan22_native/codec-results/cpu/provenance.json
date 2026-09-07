@@ -1,0 +1,25 @@
+{
+  "status": "cpu_tests_and_meta_keys_passed",
+  "actual_weight_forward_executed": false,
+  "gpu_executed": false,
+  "checks": {
+    "first_latent_alone_vs_full_max_abs": 0.0,
+    "first_latent_after_future_change_max_abs": 0.0
+  },
+  "source_sha256": {
+    "codec.py": "e4b1ba84251fa5a98646879beefe2c423819116afede9623b9d047aafb4f35e2",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "test_codec.py": "2a8ea2058b29207a6957f882b9f07d2353a6748baa0844c70b9db623f873fafd",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "artifacts": {
+    "checked-source/codec-source.json.txt": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "checked-source/codec.py.txt": "e4b1ba84251fa5a98646879beefe2c423819116afede9623b9d047aafb4f35e2",
+    "checked-source/codec_profile.py.txt": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "checked-source/test_codec.py.txt": "2a8ea2058b29207a6957f882b9f07d2353a6748baa0844c70b9db623f873fafd",
+    "checked-source/vendor/vae2_2.py.txt": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "metadata.json": "6527ada15115b372734354428132fd4d2ec37c738289d3e13f766f9a3bd7e857",
+    "tests.json": "79e72838859c7e70c9f24042111d48225c9dd486f77888c0bf88c02cf9d21747"
+  }
+}

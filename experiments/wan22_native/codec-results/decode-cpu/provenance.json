@@ -1,0 +1,25 @@
+{
+  "status": "seven_cpu_tests_passed",
+  "actual_weight_decode_executed": false,
+  "gpu_executed": false,
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "test_codec.py": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "codec_decode_profile.py": "86c43b0ce9bed35b53894a8c0d261bae436d4ca2b54bb076e8cd2fd51805023a",
+    "test_codec_decode.py": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e"
+  },
+  "canonical_noise_sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1",
+  "artifacts": {
+    "checked-source/codec-source.json.txt": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "checked-source/codec.py.txt": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "checked-source/codec_decode_profile.py.txt": "86c43b0ce9bed35b53894a8c0d261bae436d4ca2b54bb076e8cd2fd51805023a",
+    "checked-source/codec_profile.py.txt": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "checked-source/test_codec.py.txt": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef",
+    "checked-source/test_codec_decode.py.txt": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e",
+    "checked-source/vendor/vae2_2.py.txt": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "tests.json": "b47a08b035f5c2a34e801c884b06f76be9dd0b9c7d404083ec7f81b14453e8c9"
+  }
+}

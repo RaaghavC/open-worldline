@@ -1,0 +1,24 @@
+{
+  "status": "10_cpu_tests_passed",
+  "actual_weight_forward_executed": false,
+  "gpu_executed": false,
+  "change_from_prior_cpu_package": "Explicitly disable ambient autocast around native encode/decode. A new regression checks internal Conv3d FP32 outputs and exact output equality.",
+  "previous_evidence": "../cpu/provenance.json",
+  "architecture_metadata": "../cpu/metadata.json",
+  "metadata_note": "Prior meta inspection used the preserved prior helper source; the constructor and loader are unchanged by this forward precision guard.",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_profile.py": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "test_codec.py": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "artifacts": {
+    "checked-source/codec-source.json.txt": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "checked-source/codec.py.txt": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "checked-source/codec_profile.py.txt": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "checked-source/test_codec.py.txt": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef",
+    "checked-source/vendor/vae2_2.py.txt": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "tests.json": "43e756d835fcbbd85a68a335b0c0f328148c2a15748fdd072089f33847d6319c"
+  }
+}

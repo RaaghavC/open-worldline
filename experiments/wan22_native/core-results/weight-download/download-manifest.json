@@ -1,0 +1,46 @@
+{
+  "repository": "Wan-AI/Wan2.2-TI2V-5B",
+  "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+  "source_metadata_sha256": "4bfd5925f84bc943b29ef36943515b74942ffed085f8432bdef613148d5e7bae",
+  "status": "complete",
+  "files": [
+    {
+      "file": "Wan2.2_VAE.pth",
+      "bytes": 2818839170,
+      "sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+      "lfs_sha256_verified": true
+    },
+    {
+      "file": "config.json",
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "lfs_sha256_verified": false
+    },
+    {
+      "file": "diffusion_pytorch_model-00001-of-00003.safetensors",
+      "bytes": 9825014472,
+      "sha256": "720b06c4ade5e87c1246bba8ac95b664c638749cd9b102cf84d823bb44c026a1",
+      "lfs_sha256_verified": true
+    },
+    {
+      "file": "diffusion_pytorch_model-00002-of-00003.safetensors",
+      "bytes": 9995661736,
+      "sha256": "09ec5ef720d8396f6cfa51fbdcbdb2327e37722afd6e89fd38f1e7e5e782c283",
+      "lfs_sha256_verified": true
+    },
+    {
+      "file": "diffusion_pytorch_model-00003-of-00003.safetensors",
+      "bytes": 178558176,
+      "sha256": "6306f7894c345de9093ad588771c2abfaeb668a81f7a6d9a918bd26ba3568e49",
+      "lfs_sha256_verified": true
+    },
+    {
+      "file": "diffusion_pytorch_model.safetensors.index.json",
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe",
+      "lfs_sha256_verified": false
+    }
+  ],
+  "text_weights": "Not downloaded again; existing identical UMT5 checkpoint can be reused.",
+  "elapsed_seconds": 381.2851107500028
+}

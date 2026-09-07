@@ -1,0 +1,147 @@
+{
+  "schema": "worldline-wan22-codec-evidence-index-v1",
+  "status": "cpu_review_complete_actual_weight_forward_not_run",
+  "gpu_executed": false,
+  "packages": [
+    {
+      "directory": "cpu",
+      "scope": "Original nine CPU tests, safe meta checkpoint inspection and pre-autocast-fix source. Preserved unchanged."
+    },
+    {
+      "directory": "cpu-v2",
+      "scope": "Ten CPU tests after explicitly disabling ambient autocast, with exact current source snapshots."
+    },
+    {
+      "directory": "decode-cpu",
+      "scope": "Seven full17 synthetic decode-input/chunk-timing tests with exact checked source."
+    },
+    {
+      "directory": "independent-cpu",
+      "scope": "Seven independent codec and full-decode review checks, source identities and test source."
+    }
+  ],
+  "planned_first_image_output": "work/wan22-native-codec-image-v1",
+  "planned_full_decode_output": "work/wan22-native-codec-decode17-v1",
+  "artifacts": {
+    "codec-results/cpu/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/cpu/checked-source/codec.py.txt": {
+      "bytes": 8266,
+      "sha256": "e4b1ba84251fa5a98646879beefe2c423819116afede9623b9d047aafb4f35e2"
+    },
+    "codec-results/cpu/checked-source/codec_profile.py.txt": {
+      "bytes": 9503,
+      "sha256": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957"
+    },
+    "codec-results/cpu/checked-source/test_codec.py.txt": {
+      "bytes": 8335,
+      "sha256": "2a8ea2058b29207a6957f882b9f07d2353a6748baa0844c70b9db623f873fafd"
+    },
+    "codec-results/cpu/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/cpu/metadata.json": {
+      "bytes": 39008,
+      "sha256": "6527ada15115b372734354428132fd4d2ec37c738289d3e13f766f9a3bd7e857"
+    },
+    "codec-results/cpu/provenance.json": {
+      "bytes": 1451,
+      "sha256": "72de1a18877e3412d17c63fbfc6733bb28c3db042f0691dfd2c7eda18f066f19"
+    },
+    "codec-results/cpu/tests.json": {
+      "bytes": 924,
+      "sha256": "79e72838859c7e70c9f24042111d48225c9dd486f77888c0bf88c02cf9d21747"
+    },
+    "codec-results/cpu-v2/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/cpu-v2/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/cpu-v2/checked-source/codec_profile.py.txt": {
+      "bytes": 9503,
+      "sha256": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957"
+    },
+    "codec-results/cpu-v2/checked-source/test_codec.py.txt": {
+      "bytes": 9110,
+      "sha256": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef"
+    },
+    "codec-results/cpu-v2/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/cpu-v2/provenance.json": {
+      "bytes": 1674,
+      "sha256": "21faac4000ad5a3bb88ed0872978393180f5c17cecea94df8ecdcfa53ceca694"
+    },
+    "codec-results/cpu-v2/tests.json": {
+      "bytes": 924,
+      "sha256": "43e756d835fcbbd85a68a335b0c0f328148c2a15748fdd072089f33847d6319c"
+    },
+    "codec-results/decode-cpu/checked-source/codec-source.json.txt": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "codec-results/decode-cpu/checked-source/codec.py.txt": {
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    "codec-results/decode-cpu/checked-source/codec_decode_profile.py.txt": {
+      "bytes": 11617,
+      "sha256": "86c43b0ce9bed35b53894a8c0d261bae436d4ca2b54bb076e8cd2fd51805023a"
+    },
+    "codec-results/decode-cpu/checked-source/codec_profile.py.txt": {
+      "bytes": 9503,
+      "sha256": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957"
+    },
+    "codec-results/decode-cpu/checked-source/test_codec.py.txt": {
+      "bytes": 9110,
+      "sha256": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef"
+    },
+    "codec-results/decode-cpu/checked-source/test_codec_decode.py.txt": {
+      "bytes": 8430,
+      "sha256": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e"
+    },
+    "codec-results/decode-cpu/checked-source/vendor/vae2_2.py.txt": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "codec-results/decode-cpu/provenance.json": {
+      "bytes": 1759,
+      "sha256": "342879612b31b17f1c91fa6b8e4026aa671c03e40e93ed0a246f8b00bbf010d2"
+    },
+    "codec-results/decode-cpu/tests.json": {
+      "bytes": 1105,
+      "sha256": "b47a08b035f5c2a34e801c884b06f76be9dd0b9c7d404083ec7f81b14453e8c9"
+    },
+    "codec-results/independent-cpu/provenance.json": {
+      "bytes": 286,
+      "sha256": "2bbdaa5d9b34892f9d5be5e7b2be7113c371cc849f9a4fe4b5a8f209bdbaa414"
+    },
+    "codec-results/independent-cpu/report.json": {
+      "bytes": 4013,
+      "sha256": "91f914498f3e010d29a4737a5842b7ef501a85acf9381055cca0d2bc025f0c6e"
+    },
+    "codec-results/independent-cpu/test_codec_independent.py.txt": {
+      "bytes": 10160,
+      "sha256": "33bc1680458edd8bac003291233d764708d60a7d8f969eb0a4958cdc4f67cb1a"
+    },
+    "codec-inputs/generation-source.py.txt": {
+      "bytes": 1394,
+      "sha256": "6e9aa57958e5d58aebf399348ab2d8748b474e5ddf06d60540cbe60bac616c74"
+    },
+    "codec-inputs/manifest.json": {
+      "bytes": 757,
+      "sha256": "5e41b193ce10449c024dab56727174c61290831e131a409c177600d2d5969492"
+    },
+    "codec-inputs/synthetic-noise.safetensors": {
+      "bytes": 553048,
+      "sha256": "aa4725c2d1ada01de94b46aa43110a8d16f24ee596e7cee96b2035a72368bcc1"
+    }
+  }
+}

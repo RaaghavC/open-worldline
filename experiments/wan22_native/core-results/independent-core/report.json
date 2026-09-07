@@ -1,0 +1,72 @@
+{
+  "schema": "worldline-wan22-native-independent-review-v1",
+  "status": "passed",
+  "tests": 7,
+  "pytest_seconds": 11.66,
+  "command": "work/wan-adapter-env/bin/python; append sys.base_prefix/lib/python3.11/site-packages after existing sys.path; pytest.main(['experiments/wan22_native/test_independent.py','-q','--disable-warnings'])",
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "diffusers": "0.34.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pytest": "7.4.4"
+  },
+  "source_sha256": {
+    "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+    "experiments/wan22_native/test_independent.py": "05811b4ceb65633d063a794b595393587def4a55911c6a0df46fb72e7fc01a89",
+    "experiments/wan22_native/test_core.py": "2ca3a4d4334f4bea8c800b88f9933cef76c71686ebcdfa85ff761ac99f4f643b",
+    "experiments/wan22_native/provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "experiments/wan22_native/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/weights.index.json": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe",
+    "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+  },
+  "execution": {
+    "device": "cpu",
+    "official_weights_loaded": false,
+    "gpu_access": false,
+    "reserved_test_access": false,
+    "current_room_512_results_read": false
+  },
+  "checks": [
+    "Production 128-wide rotary axes and unchanged padding versus literal official complex-double calculation",
+    "Complete nonzero-head literal forward with mixed token times and variable sequence lengths under FP32 and selective BF16",
+    "Changing another batch item leaves the first result bit-exact",
+    "Native spatial-patch enumeration yields exactly 144 zero-time observed tokens and 576 future tokens",
+    "Instance-bound methods leave official classes unchanged",
+    "Only one safe_open handle is active; a guard failure after one assignment closes it",
+    "Hash-valid nonfinite source is rejected before any parameter assignment"
+  ],
+  "numerical_tolerances": {
+    "rotary": {
+      "atol": 5e-07,
+      "rtol": 2e-06
+    },
+    "fp32_forward": {
+      "atol": 2e-06,
+      "rtol": 2e-05
+    },
+    "selective_bf16_forward": {
+      "atol": 0.0002,
+      "rtol": 0.002
+    }
+  },
+  "read_review": {
+    "network_equations": "No concrete mismatch found in patch order, text padding before projection, FP32 time/norm/modulation/residual/head paths or tokenwise time axes.",
+    "loader_issue_resolved": "CPU FP32 destination now uses copy=True, preventing retained source mmap ownership; documentation acknowledges temporary verification storage; MPS device-index comparison normalized.",
+    "limits": "CPU SDPA and the declared selective precision policy only. No CUDA FlashAttention or actual MPS full-model numerical equivalence claim. A guarded actual-weight pair profile and new-codec decode allowance remain necessary before a complete clip."
+  },
+  "prior_startup_failures": [
+    {
+      "environment": "Wan venv without appended pytest location",
+      "result": "No module named pytest; no tests collected or model executed"
+    },
+    {
+      "environment": "repository .venv",
+      "result": "Diffusers import failed because installed huggingface_hub lacks cached_download; no tests collected or model executed"
+    }
+  ]
+}

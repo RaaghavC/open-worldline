@@ -1,0 +1,6 @@
+# Preserve byte-exact upstream source, licenses and measured snapshots.
+vendor/** -text
+LICENSE-APACHE-2.0.txt -text
+config.json -text
+weights.index.json -text
+core-results/** -text

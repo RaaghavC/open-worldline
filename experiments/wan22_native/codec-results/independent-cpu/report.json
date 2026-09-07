@@ -1,0 +1,63 @@
+{
+  "schema": "worldline-wan22-codec-independent-review-v1",
+  "status": "passed",
+  "tests": 7,
+  "seconds": 3.059,
+  "command": "work/wan-adapter-env/bin/python -m experiments.wan22_native.test_codec_independent (working directory outputs/open-worldline)",
+  "source_sha256": {
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec_profile.py": "30664033a3266ce23316b597526a44778304d7ace0a8e887b7a3925893cc5957",
+    "codec_decode_profile.py": "86c43b0ce9bed35b53894a8c0d261bae436d4ca2b54bb076e8cd2fd51805023a",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "test_codec.py": "a2f4d2dbab104ea0a040917f736cdaf83448600fef4fdd0ab50533adf6e3ceef",
+    "test_codec_decode.py": "8f2d78640c453e5e4a07bc50509c95d1b2e87c7cf06cc46f157036d4d750698e",
+    "test_codec_independent.py": "33bc1680458edd8bac003291233d764708d60a7d8f969eb0a4958cdc4f67cb1a",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "einops": "0.8.1",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3",
+    "pillow": "12.3.0"
+  },
+  "execution": {
+    "device": "cpu",
+    "pretrained_weight_values_loaded": false,
+    "gpu_access": false,
+    "current_room_training_results_read": false,
+    "reserved_test_access": false
+  },
+  "checks": [
+    "All 48 means and inverse standard deviations exactly match retained native source; native 48-channel temporal and spatial configuration matches",
+    "Published meta-only record covers 196 distinct FP32 tensors and 704688668 parameters",
+    "Synthetic checkpoint loader rejects missing and extra keys, wrong shape/dtype and nonfinite values using weights_only=True and mmap=True",
+    "Ambient BF16 autocast leaves complete encoder/decoder outputs bit-exact FP32 after explicit guard",
+    "Single-image reader preserves 512x288 RGB pixel order without resize and cannot call a checkpoint loader",
+    "Observation file containing action/target keys is rejected before any get_tensor call",
+    "Changing only future latents leaves the first reconstruction bit-exact; all five native chunks produce 1/4/4/4/4 frames and clean up cache/hooks"
+  ],
+  "fixed_issue": {
+    "finding": "Ambient autocast could lower internal precision while a final cast made output appear FP32. Current CLI contexts were unaffected.",
+    "pre_fix_tiny_probe": {
+      "encoder_output_dtypes": [
+        "torch.float32",
+        "torch.bfloat16"
+      ],
+      "returned_dtypes": [
+        "torch.float32",
+        "torch.float32"
+      ],
+      "latent_max_abs_difference": 0.0024511218070983887
+    },
+    "fix": "Disable autocast around native encode and decode; independent regression checks internal output types and exact output equality."
+  },
+  "read_review": {
+    "first_image_profile": "Pinned original-image file hash, one RGB frame, independent 48-channel observation, no old latent/actions/future target loader; source-bound CPU checks before weights. Watchdog 900 seconds, 18 GiB process/driver cap and 2 GiB available-memory floor.",
+    "full_decode_profile": "Hash-bound successful first-image evidence; observation-only safe_open; retained canonical noise and exact prefix concatenation. No denoiser or image-quality claim. Original temporal loop and optional cache allocator hook; all 17 synthetic outputs labeled.",
+    "normalization_provenance": "The JSON constants are checked against exact vendor source by both CPU suites, and profiler gates bind the full JSON and implementation hashes.",
+    "readiness": "No remaining concrete codec or decode-profiler blocker found. Full-shape actual-weight speed/memory and MPS output behavior remain unmeasured."
+  },
+  "limits": "Tiny FP32 CPU neural fixtures, synthetic checkpoint values and existing meta-only evidence. This does not establish actual-weight reconstruction quality, MPS parity, generated video quality or the cost of a full native clip."
+}

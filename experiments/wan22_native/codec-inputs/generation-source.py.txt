@@ -1,0 +1,20 @@
+"""Create the once-retained CPU noise input. Saved bytes are canonical, not seed regeneration."""
+from pathlib import Path
+import hashlib,json,platform
+import torch
+from safetensors.torch import save_file
+out=Path('outputs/open-worldline/experiments/wan22_native/codec-inputs')
+if out.exists():raise ValueError('Noise input must be new')
+out.mkdir()
+noise=torch.randn((1,48,5,18,32),generator=torch.Generator(device='cpu').manual_seed(20260918),dtype=torch.float32)
+save_file({'noise':noise},str(out/'synthetic-noise.safetensors'))
+source=Path(__file__)
+report={'schema':'wan22-codec-synthetic-noise-v1','seed':20260918,'generator':'torch CPU Generator',
+ 'shape':list(noise.shape),'dtype':str(noise.dtype),'torch':torch.__version__,'platform':platform.platform(),
+ 'file':'synthetic-noise.safetensors','file_sha256':hashlib.sha256((out/'synthetic-noise.safetensors').read_bytes()).hexdigest(),
+ 'tensor_sha256':hashlib.sha256(noise.numpy().tobytes()).hexdigest(),'generation_source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+ 'canonical_identity':'The retained file/tensor bytes and hashes, not cross-platform seed regeneration',
+ 'use':'Synthetic decoder runtime input only, not a generated-world prediction'}
+(out/'manifest.json').write_text(json.dumps(report,indent=2)+'\n')
+(out/'generation-source.py.txt').write_bytes(source.read_bytes())
+print(json.dumps(report,indent=2))

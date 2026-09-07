@@ -11,3 +11,5 @@ work/
 .env
 .env.*
 !.env.example
+# Retained original CPU noise input for the bounded Wan2.2 decoder test.
+!experiments/wan22_native/codec-inputs/synthetic-noise.safetensors
