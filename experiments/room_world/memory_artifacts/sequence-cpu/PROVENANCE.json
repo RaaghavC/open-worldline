@@ -1,0 +1,100 @@
+{
+  "schema": "worldline-room-memory-sequence-cpu-package-v1",
+  "license": "Apache-2.0",
+  "measurement_files_unchanged": true,
+  "optimizer_updates": 0,
+  "gpu_executed": false,
+  "external_weights_bundled": false,
+  "base_checkpoint_sha256": "9376e684e3abd103313d13d04bd4a1afc1b202fccb7e7b6fe133e7232a486d69",
+  "source_sha256": {
+    "memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "memory_train.py": "5422b878462820646e1b85cce40c750e8a2fce72dd58f3438d95f71a107cfbe8",
+    "memory_evaluate.py": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+    "memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+  },
+  "initial_checker_source": {
+    "file": "measured-source/check-room-memory-sequence-initial.py.txt",
+    "sha256": "8e60e7d2e52f68501140bc059cc963023ee9f945241628ae352f30a3e6d3bf88",
+    "retention": "Reconstructed by reversing the two recorded assertion edits; its bytes match the SHA-256 in the original failed measurement."
+  },
+  "corrected_checker_sha256": "1b67eafc65f828306065b64cad877c11632f83d7efdb30096d2289862210e08b",
+  "limits": "CPU equivalence on synthetic RGB with the actual frozen predictor. CPU timing was slower for the batched path. No MPS speed or learned quality conclusion.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4283,
+      "sha256": "1b771c3c362865f67b62de14f810567a956db3afa5b27234bed5e7a40939c503"
+    },
+    {
+      "path": "assertion-correction.patch",
+      "bytes": 1904,
+      "sha256": "a2b92a7126363f44e1dfe88f80202d160656771342fac4e75f2e8093b019d5ad"
+    },
+    {
+      "path": "failed-16-initial/comparison.json",
+      "bytes": 7583,
+      "sha256": "a1eb5eb31b70943e8b1fe6e1ad00efcefd221c4c1502395d102f3d45dfd47866"
+    },
+    {
+      "path": "independent-review.json",
+      "bytes": 766,
+      "sha256": "d07fc17c926fa8db88d8c3867722d6daaaa403f0f16c4a780f023a1f13445976"
+    },
+    {
+      "path": "measured-source/check-room-memory-sequence-initial.py.txt",
+      "bytes": 6759,
+      "sha256": "8e60e7d2e52f68501140bc059cc963023ee9f945241628ae352f30a3e6d3bf88"
+    },
+    {
+      "path": "measured-source/check-room-memory-sequence.py.txt",
+      "bytes": 7105,
+      "sha256": "1b67eafc65f828306065b64cad877c11632f83d7efdb30096d2289862210e08b"
+    },
+    {
+      "path": "measured-source/memory_evaluate.py.txt",
+      "bytes": 39904,
+      "sha256": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5"
+    },
+    {
+      "path": "measured-source/memory_model.py.txt",
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    {
+      "path": "measured-source/memory_sequence.py.txt",
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    {
+      "path": "measured-source/memory_train.py.txt",
+      "bytes": 37726,
+      "sha256": "5422b878462820646e1b85cce40c750e8a2fce72dd58f3438d95f71a107cfbe8"
+    },
+    {
+      "path": "measured-source/model.py.txt",
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    {
+      "path": "measured-source/test_room_memory_sequence_independent.py.txt",
+      "bytes": 5970,
+      "sha256": "40b546a44d015c0a7d9eb78d9fdffdfe68be96e6eed65c01cb738173082837e5"
+    },
+    {
+      "path": "passed-16/comparison.json",
+      "bytes": 13566,
+      "sha256": "1f9437acdbc6ec94ad80188162b77294a6a705e5008de923ca08d9e6b7ad423b"
+    },
+    {
+      "path": "passed-64/comparison.json",
+      "bytes": 13584,
+      "sha256": "cb4c44cdb6e9ec51780ba478997885859680a7439acdee865d6028c9899f1b5d"
+    }
+  ]
+}

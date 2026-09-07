@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.7887099999934435,
+  "device": "cpu",
+  "torch": "2.5.1",
+  "pretrained_weights_loaded": false,
+  "source_sha256": {
+    "tokenwise_time/test_independent.py": "e83a1b8638270428fc65519b5571f1022cb9ed7b8c8efc1947ccb7343968fee2",
+    "tokenwise_time/portable.py": "54ef9b1c869774dd43379d5587c0676ca1175ffba869f9cd7dd44a7590b6bd32",
+    "native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+    "native_control/sampling.py": "297522d2880a3534b507737d4d03a948987adc2f21d3d6a6493d0724fed78fc7",
+    "native_control/vendor/model.py": "c1572ade3bf7345bd4c00d4a19535788fab62f9c08b5aeb15f6d01f4435bb47a",
+    "native_control/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+  },
+  "scope": "Token order, exact integer noise labels, every block/head modulation, parameter identity and input guards. Untrained mathematical extension only; no GPU, image sampling or world-quality result."
+}

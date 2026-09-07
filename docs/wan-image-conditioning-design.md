@@ -1,0 +1,56 @@
+# Image-conditioning design after the clamp failure
+
+Reviewed September 7, 2026. This audit inspected official source, model cards, file metadata and licenses. Parameter counts came from CPU meta-tensor instantiation, which allocates no parameter storage. No new model weights were downloaded, and no GPU training or generation was performed for this audit. [The source, metadata and hashes are retained](../experiments/wan_adapter/tokenwise_time/source-audit/).
+
+The next local experiment should train the existing 1.3B foundation with an explicit noise level for each video token. Training and inference must agree on which tokens contain a clean observation and which contain noisy future frames. A separate CPU prototype now implements the required time conditioning. Its uniform-time outputs and intermediate modulation match the existing core exactly in the checked small tests. Mixed-time image conditioning remains untrained.
+
+## What the controlled failure showed
+
+The pure T2V control and the initial-image clamp used the same saved Gaussian noise, pretrained weights, positive and native negative text, full FP32 arithmetic, CPU UniPC solver, 50 steps, shift 8, guidance 6 and FP32 decoder. Adding the independently encoded clean first latent brought repeated lattice-like texture, altered doorway geometry and invented objects into generated futures. All 50 post-update prefix checks were exactly 0.0. The runner read the observation tensor only, with no action, adapter or future target. [The comparison and complete evidence are available](../experiments/wan_adapter/native_control/results/clamp50/README.md).
+
+This one-image, one-seed result implicates the added clamp under the tested T2V contract. It does not show that every image-conditioning method fails. Correctly preserving the observed latent did not ensure that the generated future preserved the scene.
+
+## The native model represents clean and noisy frames differently
+
+The official Wan2.2 TI2V-5B image path encodes the initial image alone, inserts its clean latent, and supplies timestep 0 for the observed tokens while supplying the current solver timestep for future tokens. It restores the observed latent after each solver update. Its transformer computes time embeddings, block modulation and head modulation separately for each token. Our tested Wan2.1 T2V core instead supplied the same scalar timestep to both clean observed and noisy future tokens. [Official image path, lines 512 to 598](https://github.com/Wan-Video/Wan2.2/blob/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/textimage2video.py#L512), [official tokenwise time computation](https://github.com/Wan-Video/Wan2.2/blob/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/modules/model.py#L459).
+
+This provides a concrete source-backed design for a matching training contract. It does not transfer the 5B model's learned image-continuation behavior into 1.3B weights. The released inference source also does not expose all pretraining data or the complete training-noise sampler.
+
+Diffusion Forcing and History-Guided Video Diffusion provide further evidence for training with varying noise levels and corresponding time conditioning. They do not establish that a uniformly trained T2V model already supports clean history at arbitrary future noise levels. [Diffusion Forcing](https://arxiv.org/abs/2407.01392), [History-Guided Video Diffusion](https://arxiv.org/abs/2502.06764).
+
+## Released native I2V foundations
+
+| Foundation | Actual parameters from official config/source | FP32 parameter payload | BF16 parameter payload | Additional image mechanism |
+|---|---:|---:|---:|---|
+| Wan2.2 TI2V-5B | 4,999,787,712 | 18.626 GiB | 9.313 GiB | Clean first latent and tokenwise times; new 48-channel VAE |
+| Wan2.1 I2V-14B-480P | 16,394,878,784 | 61.076 GiB | 30.538 GiB | CLIP image context plus VAE/mask conditioning channels |
+
+The published model names are not substituted for measured complete parameter counts. These counts include the layers constructed by each exact official config. Storage calculations exclude activations, temporary copies and other models. [Meta-count result and executed source](../experiments/wan_adapter/tokenwise_time/source-audit/parameter-counts.json).
+
+### Wan2.2 TI2V-5B
+
+The source is pinned to [commit 42bf4cfa](https://github.com/Wan-Video/Wan2.2/tree/42bf4cfaa384bc21833865abc2f9e6c0e67233dc), dated March 17, 2026. The weight repository is pinned to [revision 921dbaf3](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/921dbaf3f1674a56f47e83fb80a34bac8a8f203e), last modified August 7, 2025. Its three official transformer shards total 19,999,234,384 bytes. The new VAE adds 2,818,839,170 bytes, making the core-plus-VAE download 22.818 GB. The listed UMT5 checkpoint hash matches the text encoder already downloaded for this project.
+
+The model uses 48 latent channels, width 3,072, 30 layers and 24 heads. Its VAE compresses time by 4 and each spatial axis by 16. At 512 × 288 with 17 pixel frames, this gives 48 × 5 × 18 × 32 latents and 720 transformer tokens. Our current Wan2.1 path has 16 × 5 × 36 × 64 latents and 2,880 tokens. The existing 16-channel cached observations cannot be reused as 5B inputs. The smaller token count reduces attention activation size, while the larger model increases parameter memory. [Official weight config](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/blob/921dbaf3f1674a56f47e83fb80a34bac8a8f203e/config.json), [official VAE and inference config](https://github.com/Wan-Video/Wan2.2/blob/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/configs/wan_ti2v_5B.py).
+
+The official README describes inference on a 24 GB RTX 4090 using model offload, lower precision and CPU text encoding. That does not establish training feasibility on a Mac with 24 GB shared by the GPU, CPU and operating system. The full FP32 core alone exceeds the current 18 GiB experiment guard. A reviewed BF16 core with cached text and separate codec/core lifetimes could fit a reduced-size frozen-base adaptation, but this remains a size-based estimate. It needs actual forward/backward and precision checks. The existing 1.3B timing cannot supply that result. [Official inference instructions](https://github.com/Wan-Video/Wan2.2/tree/42bf4cfaa384bc21833865abc2f9e6c0e67233dc#run-text-image-to-video-generation).
+
+The pinned model card declares Apache-2.0. Its Hugging Face repository has no separate license file; the official code repository contains the Apache-2.0 text. This distinction is preserved in the evidence. The 5B image path requires no CLIP encoder. The inference repository releases code and weights, but does not supply its full pretraining dataset or a complete pretraining pipeline. Its community training links require separate source and dependency review before adoption. [Pinned model card](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/blob/921dbaf3f1674a56f47e83fb80a34bac8a8f203e/README.md), [official code license](https://github.com/Wan-Video/Wan2.2/blob/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/LICENSE.txt).
+
+### Wan2.1 I2V-14B-480P
+
+The official I2V architecture supplies CLIP image features plus a 20-channel VAE/mask condition alongside 16 noisy video channels. The denoised video begins from noise; the image enters through learned conditioning channels and image-aware cross-attention. It uses the existing Wan2.1 VAE, but requires a separate 4,772,359,047-byte CLIP checkpoint. The current T2V weights cannot load that architecture unchanged. [Official image-conditioning source](https://github.com/Wan-Video/Wan2.1/blob/9737cba9c1c3c4d04b33fcad41c111989865d315/wan/image2video.py#L235).
+
+The pinned [weight revision 6b73f84e](https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P/tree/6b73f84e66371cdfe870c72acd6826e1d61cf279) was last modified February 26, 2025. Its seven transformer shards total 65,579,648,512 bytes. BF16 parameter storage alone exceeds this computer's total memory, before activations or the codec. It is a poor next bounded local training foundation without substantial quantization or streaming work. The card and its included license file declare Apache-2.0. [Pinned license](https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P/blob/6b73f84e66371cdfe870c72acd6826e1d61cf279/LICENSE.txt).
+
+## Bounded adaptation of the existing 1.3B model
+
+The separate [tokenwise-time prototype](../experiments/wan_adapter/tokenwise_time/README.md) adds no parameters. It changes time broadcasting while retaining all parameter names and values. It passes per-token time embeddings into the existing block and head operations. The source attributes the Wan2.2 design and preserves both successful native-control and failed-clamp implementations.
+
+The CPU tests use the actual 128-wide attention heads, unequal padded sequences and several timesteps. Uniform time fields match final velocities, block outputs, time embeddings and expanded modulation exactly in all 56 checked comparisons. This is a small random-weight CPU result. It does not prove full pretrained GPU equivalence. For image conditioning, the first latent's spatial tokens receive 0, and future plus padding tokens receive the exact integer solver time in the patch embedding's time-height-width order. The module has no cache loader and reads no image, action or future-target file. [Six independent CPU tests](../experiments/wan_adapter/tokenwise_time/results/independent-tests.json) also passed, covering every official solver timestep, actual patch order, block/head equations and preservation of original parameter objects.
+
+Before image-quality evaluation, a training experiment must use independently encoded observed frames, the matching clean-prefix time field, noisy future latents, and future-only flow-matching loss. A declared mixture of ordinary T2V and image-conditioned examples can test whether adaptation preserves the base behavior. If training corrupts the prefix, its supplied time must match that corruption. A frozen foundation with an original trainable LoRA or residual adapter still needs a measured full-shape backward profile, checkpointed gradients, and held-out original scenes. The existing single-layout eight-window pilot can test training mechanics; it cannot establish general image continuation or action control.
+
+An alternative projection would noise the known prefix as `x_observed(σ) = (1 − σ) × observation + σ × fixed_noise`, matching a shared scalar noise level. This preserves that region's marginal noise distribution, but it does not establish a conditional rectified-flow video sampler. RePaint's evidence concerns DDPM image inpainting with resampling. It does not validate an inference-only projection fix for this video foundation. [RePaint paper and official implementation](https://github.com/andreas128/RePaint).
+
+No new GPU generation or training is part of this source audit or CPU prototype. The immediate next decision is the training contract and its resource test, rather than another claim that an untrained conditioning change solved image continuation.

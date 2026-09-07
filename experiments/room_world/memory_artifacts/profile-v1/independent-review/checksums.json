@@ -1,0 +1,28 @@
+{
+  "schema": "worldline-independent-profile-review-package-v1",
+  "status": "passed",
+  "original_report_reproduced": true,
+  "only_report_difference": "audit_source_sha256 identifies the portable path-argument wrapper",
+  "files": {
+    "README.md": {
+      "bytes": 1901,
+      "sha256": "8d821b24c05acc7df57f64b7fd38dc6228c58a11821469691cbdff07ec374f54"
+    },
+    "audit_profile.py": {
+      "bytes": 8049,
+      "sha256": "cebbf2009148135b235dd8f72433a54742e8fcd72b30e98d9f0288867036915d"
+    },
+    "original-audit.py.txt": {
+      "bytes": 7809,
+      "sha256": "fa16767dea45c89b370795a3f0042188703f0fa18d41a617888330420483b30f"
+    },
+    "original-report.json": {
+      "bytes": 3665,
+      "sha256": "6074c0e0226b5507d60e5390039d13600651a70a92225d5da5fea3ccbd306526"
+    },
+    "report.json": {
+      "bytes": 3665,
+      "sha256": "61a61f152667de8f6c88dda6407884a6b00d30cae996bf06cfbbd12c95a66111"
+    }
+  }
+}

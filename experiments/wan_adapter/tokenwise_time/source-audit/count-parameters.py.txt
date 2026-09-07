@@ -1,0 +1,14 @@
+from pathlib import Path
+import sys,types,importlib.util,json,torch
+root=Path(__file__).parent
+result=[]
+for pkg,folder,config in [('audit21','wan21','Wan2.1-I2V-14B-480P'),('audit22','wan22','Wan2.2-TI2V-5B')]:
+ package=types.ModuleType(pkg);package.__path__=[];sys.modules[pkg]=package
+ a=types.ModuleType(pkg+'.attention');a.flash_attention=lambda *args,**kwargs: None;sys.modules[a.__name__]=a
+ spec=importlib.util.spec_from_file_location(pkg+'.model',root/folder/'wan/modules/model.py');m=importlib.util.module_from_spec(spec);sys.modules[spec.name]=m;spec.loader.exec_module(m)
+ c=json.loads((root/config/'config.json').read_text());c={k:v for k,v in c.items() if not k.startswith('_')}
+ with torch.device('meta'): model=m.WanModel(**c)
+ n=sum(p.numel() for p in model.parameters())
+ result.append({'model':config,'parameters_from_meta_instantiation':n,'fp32_parameter_bytes':4*n,'bf16_parameter_bytes':2*n,'allocation':'meta tensors only, no pretrained weights or GPU inference'})
+ del model
+print(json.dumps(result,indent=2));(root/'parameter-counts.json').write_text(json.dumps(result,indent=2)+'\n')

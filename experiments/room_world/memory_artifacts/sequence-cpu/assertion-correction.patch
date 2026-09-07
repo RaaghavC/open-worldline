@@ -1,0 +1,26 @@
+--- initial-checker.py
++++ corrected-checker.py
+@@ -64,7 +64,12 @@
+     gradients = {name: parameter.grad.detach().clone() for name, parameter in candidate.named_parameters() if parameter.requires_grad}
+     assert all(parameter.grad is None for parameter in candidate.base.parameters())
+     assert tensor_hashes(candidate.state_dict()) == model_hashes
+-    assert all(torch.isfinite(value).all() and value.abs().sum() > 0 for value in gradients.values())
++    assert all(torch.isfinite(value).all() for value in gradients.values())
++    for name, value in gradients.items():
++        if mode == "reset" and name == "gru.weight_hh":
++            assert value.abs().sum() == 0  # Every prior state is exactly zero.
++        else:
++            assert value.abs().sum() > 0
+     return {"loss": float(loss.detach()), "gradients": gradients, "rgb_gradient": rgb.grad.detach().clone(),
+             "forward_seconds": forward_seconds, "forward_backward_seconds": total_seconds,
+             "rss_after_bytes": psutil.Process().memory_info().rss}
+@@ -93,7 +98,8 @@
+         assert loss_delta <= report["thresholds"]["loss_abs"]
+         for row in gradient_comparison.values():
+             assert row["all_finite"] and row["max_abs_difference"] <= report["thresholds"]["gradient_abs_max"]
+-            assert row["relative_l2_difference"] <= report["thresholds"]["gradient_relative_l2"]
++            assert (row["relative_l2_difference"] is None and row["l2_difference"] == 0
++                    or row["relative_l2_difference"] is not None and row["relative_l2_difference"] <= report["thresholds"]["gradient_relative_l2"])
+         assert input_comparison["all_finite"] and input_comparison["max_abs_difference"] <= report["thresholds"]["rgb_gradient_abs_max"]
+         assert input_comparison["relative_l2_difference"] <= report["thresholds"]["rgb_gradient_relative_l2"]
+         del reference, candidate

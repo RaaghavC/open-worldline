@@ -1,0 +1,18 @@
+{
+  "record_type": "Summary of the independently executed CPU test result reported by the reviewer",
+  "test_file": "tests/test_room_memory_sequence_independent.py",
+  "test_file_sha256": "40b546a44d015c0a7d9eb78d9fdffdfe68be96e6eed65c01cb738173082837e5",
+  "passed_cases": 5,
+  "elapsed_seconds": 1.92,
+  "raw_pytest_log_retained": false,
+  "checks": [
+    "Full65-step loss and all six memory/RGB gradients, both carry/reset",
+    "No future-frame/action or other-session influence",
+    "Initial-state temporal gradient in carry and no initial-state dependency in reset",
+    "No input/action/state/parameter mutation",
+    "Exact time-major history/action order and final-state parity"
+  ],
+  "device": "cpu",
+  "gpu_executed": false,
+  "optimizer_updates": 0
+}

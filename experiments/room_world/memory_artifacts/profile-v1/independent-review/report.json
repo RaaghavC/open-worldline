@@ -1,0 +1,85 @@
+{
+  "schema": "worldline-room-memory-profile-independent-audit-v1",
+  "status": "passed",
+  "device_used_for_audit": "cpu",
+  "audit_source_sha256": "cebbf2009148135b235dd8f72433a54742e8fcd72b30e98d9f0288867036915d",
+  "study_sha256": "aab2aec3616592d2abbea756b998a867dff408275405898688a03e1f62bc2edd",
+  "source_sha256": {
+    "memory_train.py": "5422b878462820646e1b85cce40c750e8a2fce72dd58f3438d95f71a107cfbe8",
+    "memory_evaluate.py": "52a7557f8a20106dfbffc72d4ead8d5d5e222cad154a237c78eea778cfcd57c5",
+    "memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "memory_data.py": "50c828d191866d2eaae0ab3b1b2e90675b30b8cdf41887adc9fb2540fe2edfe3",
+    "model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+  },
+  "base_checkpoint_sha256": "9376e684e3abd103313d13d04bd4a1afc1b202fccb7e7b6fe133e7232a486d69",
+  "initial_memory_sha256": "293301759d0ece1630a8b8d5875b2bdf613a620631bd246243615e05ebc924b6",
+  "matched_realized_updates": true,
+  "completed_updates_each": 50,
+  "seed": 20260907,
+  "full_temporal_graph_steps": 65,
+  "base_tensors_equal_to_published_checkpoint": true,
+  "recovery_optimizer_steps_all50": true,
+  "reserved_test_opened": false,
+  "quality_evaluation_executed": false,
+  "arms": [
+    {
+      "mode": "carry",
+      "completed_updates": 50,
+      "training_seconds": 72.99253066600068,
+      "supervised_seconds": 74.9946813340066,
+      "update_seconds_mean": 1.4574771024397342,
+      "update_seconds_median": 1.3839160000061383,
+      "update_seconds_range": [
+        0.9677537080133334,
+        4.286176499997964
+      ],
+      "loss_first": 0.010677842423319817,
+      "loss_last": 0.012564503587782383,
+      "loss_range": [
+        0.008081804029643536,
+        0.01261014211922884
+      ],
+      "gradient_norm_range": [
+        0.001435412559658289,
+        0.0032460775692015886
+      ],
+      "all_memory_tensors_changed": true,
+      "final_sha256": "32254661c9d64645ebd902284bf408df47694befc742e7296e5d61e2089389b6",
+      "recovery_sha256": "636545db829b6ba4dff3bb0458e17a7f068d7b7443935cccd74a8ec5ba161a2f",
+      "peak_mps_driver_sampled_gib": 0.9493408203125,
+      "peak_mps_active_sampled_gib": 0.012951374053955078,
+      "peak_rss_sampled_gib": 0.5023040771484375,
+      "minimum_available_sampled_gib": 9.312896728515625
+    },
+    {
+      "mode": "reset",
+      "completed_updates": 50,
+      "training_seconds": 73.98794754198752,
+      "supervised_seconds": 76.02024925002479,
+      "update_seconds_mean": 1.477268573360052,
+      "update_seconds_median": 1.429034833505284,
+      "update_seconds_range": [
+        1.0781600000045728,
+        2.3892458330083173
+      ],
+      "loss_first": 0.010677842423319817,
+      "loss_last": 0.012597770430147648,
+      "loss_range": [
+        0.008096490055322647,
+        0.012664023786783218
+      ],
+      "gradient_norm_range": [
+        0.0008703306084498763,
+        0.002261228859424591
+      ],
+      "all_memory_tensors_changed": true,
+      "final_sha256": "7f772c9b4c42edddcfa38de084b78a79e4ce6c6c9acc673e1bd539c1b023f0e3",
+      "recovery_sha256": "11eb38e26a6e5ebfc05f15d68bc61d90c6bfaa7fbb556929e1341feb953a4428",
+      "peak_mps_driver_sampled_gib": 0.9571380615234375,
+      "peak_mps_active_sampled_gib": 0.012947797775268555,
+      "peak_rss_sampled_gib": 0.501739501953125,
+      "minimum_available_sampled_gib": 9.287765502929688
+    }
+  ],
+  "limits": "Profile only, one initialization seed and scheduled teacher-observed training scenes; no validation/control result or learned-memory claim. Memory values are sampled, not proven instantaneous peaks, and RSS/Metal values overlap."
+}

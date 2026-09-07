@@ -41,6 +41,10 @@ jobs:
         working-directory: experiments/wan_adapter
       - run: python native_control/test_clamp_independent.py
         working-directory: experiments/wan_adapter
+      - run: python tokenwise_time/test_parity.py --output results/ci-tokenwise-parity.json
+        working-directory: experiments/wan_adapter
+      - run: python tokenwise_time/test_independent.py --output results/ci-tokenwise-independent.json
+        working-directory: experiments/wan_adapter
   text-cache-cpu:
     runs-on: ubuntu-latest
     timeout-minutes: 15

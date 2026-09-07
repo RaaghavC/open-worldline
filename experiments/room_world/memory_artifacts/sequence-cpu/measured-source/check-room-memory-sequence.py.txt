@@ -1,0 +1,123 @@
+"""Bounded CPU numerical comparison; never optimizes weights or uses a renderer."""
+import argparse
+import copy
+import hashlib
+import json
+from pathlib import Path
+import sys
+import time
+
+import psutil
+import torch
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--repo", type=Path, required=True)
+parser.add_argument("--output", type=Path, required=True)
+parser.add_argument("--size", type=int, default=16)
+args = parser.parse_args()
+args.output.mkdir(parents=True, exist_ok=False)
+sys.path.insert(0, str(args.repo.resolve()))
+from experiments.room_world.memory_train import make_model, sequence_loss, sha256, BASE, tensor_hashes
+from experiments.room_world.memory_sequence import sequence_loss_batched, observed_sequence
+
+torch.set_num_threads(2)
+torch.manual_seed(123)
+model = make_model(BASE, 20260907).train()
+with torch.no_grad():
+    model.condition.weight.normal_(0, .01)
+    model.condition.bias.normal_(0, .005)
+model_hashes = tensor_hashes(model.state_dict())
+generator = torch.Generator().manual_seed(2718)
+observations = torch.rand((2, 66, 3, args.size, args.size), generator=generator) * .4 - .2
+actions = torch.randint(0, 6, (2, 65), generator=generator)
+report = {"schema": "worldline-room-memory-sequence-cpu-equivalence-v1", "status": "running",
+    "device": "cpu", "torch": str(torch.__version__), "threads": torch.get_num_threads(),
+    "rgb_shape": list(observations.shape), "all_conditioning_values_zero": False,
+    "optimizer_steps": 0, "renderer_used": False, "base_checkpoint_sha256": sha256(BASE),
+    "source_sha256": {name: sha256(args.repo / "experiments/room_world" / name)
+        for name in ("memory_model.py", "memory_train.py", "memory_evaluate.py", "memory_sequence.py", "model.py")},
+    "script_sha256": sha256(__file__), "parameter_counts": model.parameter_counts(), "modes": {},
+    "thresholds": {"loss_abs": 2e-7, "gradient_abs_max": 5e-7, "gradient_relative_l2": 5e-5,
+                   "rgb_gradient_abs_max": 1e-8, "rgb_gradient_relative_l2": 5e-5},
+    "limits": "CPU numerical check on synthetic RGB with actual frozen checkpoint; not a training or model-quality result"}
+
+def save():
+    (args.output / "comparison.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+
+def difference(actual, expected):
+    actual, expected = actual.double(), expected.double()
+    delta = actual - expected
+    norm = expected.norm()
+    return {"max_abs_difference": float(delta.abs().max()), "l2_difference": float(delta.norm()),
+        "relative_l2_difference": float(delta.norm() / norm) if norm else None,
+        "reference_l2_norm": float(norm), "candidate_l2_norm": float(actual.norm()),
+        "all_finite": bool(torch.isfinite(actual).all() and torch.isfinite(expected).all())}
+
+def one(loss_function, mode):
+    candidate = copy.deepcopy(model)
+    rgb = observations.clone().requires_grad_()
+    start = time.perf_counter()
+    loss = loss_function(candidate, rgb, actions, mode)
+    forward_seconds = time.perf_counter() - start
+    loss.backward()
+    total_seconds = time.perf_counter() - start
+    gradients = {name: parameter.grad.detach().clone() for name, parameter in candidate.named_parameters() if parameter.requires_grad}
+    assert all(parameter.grad is None for parameter in candidate.base.parameters())
+    assert tensor_hashes(candidate.state_dict()) == model_hashes
+    assert all(torch.isfinite(value).all() for value in gradients.values())
+    for name, value in gradients.items():
+        if mode == "reset" and name == "gru.weight_hh":
+            assert value.abs().sum() == 0  # Every prior state is exactly zero.
+        else:
+            assert value.abs().sum() > 0
+    return {"loss": float(loss.detach()), "gradients": gradients, "rgb_gradient": rgb.grad.detach().clone(),
+            "forward_seconds": forward_seconds, "forward_backward_seconds": total_seconds,
+            "rss_after_bytes": psutil.Process().memory_info().rss}
+
+save()
+try:
+    for mode in ("carry", "reset"):
+        reference = one(sequence_loss, mode)
+        candidate = one(sequence_loss_batched, mode)
+        gradient_comparison = {name: difference(candidate["gradients"][name], reference["gradients"][name])
+                               for name in reference["gradients"]}
+        input_comparison = difference(candidate["rgb_gradient"], reference["rgb_gradient"])
+        loss_delta = abs(candidate["loss"] - reference["loss"])
+        report["modes"][mode] = {"reference_loss": reference["loss"], "batched_loss": candidate["loss"],
+            "loss_abs_difference": loss_delta, "parameter_gradients": gradient_comparison,
+            "rgb_gradient": input_comparison,
+            "reference_gradients_sha256": tensor_hashes(reference["gradients"]),
+            "batched_gradients_sha256": tensor_hashes(candidate["gradients"]),
+            "reference_rgb_gradient_sha256": tensor_hashes({"rgb": reference["rgb_gradient"]})["rgb"],
+            "batched_rgb_gradient_sha256": tensor_hashes({"rgb": candidate["rgb_gradient"]})["rgb"],
+            "reference_seconds": reference["forward_backward_seconds"],
+            "batched_seconds": candidate["forward_backward_seconds"],
+            "reference_forward_seconds": reference["forward_seconds"], "batched_forward_seconds": candidate["forward_seconds"],
+            "rss_after_reference_bytes": reference["rss_after_bytes"], "rss_after_batched_bytes": candidate["rss_after_bytes"]}
+        save()
+        assert loss_delta <= report["thresholds"]["loss_abs"]
+        for row in gradient_comparison.values():
+            assert row["all_finite"] and row["max_abs_difference"] <= report["thresholds"]["gradient_abs_max"]
+            assert (row["relative_l2_difference"] is None and row["l2_difference"] == 0
+                    or row["relative_l2_difference"] is not None and row["relative_l2_difference"] <= report["thresholds"]["gradient_relative_l2"])
+        assert input_comparison["all_finite"] and input_comparison["max_abs_difference"] <= report["thresholds"]["rgb_gradient_abs_max"]
+        assert input_comparison["relative_l2_difference"] <= report["thresholds"]["rgb_gradient_relative_l2"]
+        del reference, candidate
+    # Batch extraction must not allow later observed frames to alter earlier predictions.
+    with torch.inference_mode():
+        prefix = observations[:, :12].clone()
+        control = actions[:, :12]
+        original, _ = observed_sequence(model, prefix, control)
+        changed = prefix.clone()
+        changed[:, 6:] = -.8
+        alternative, _ = observed_sequence(model, changed, control)
+        report["future_rgb_prefix_max_abs_difference"] = float((original[:, :6] - alternative[:, :6]).abs().max())
+        assert report["future_rgb_prefix_max_abs_difference"] <= 1e-7
+    report["status"] = "passed"
+except BaseException as error:
+    report.update(status="failed", error_type=type(error).__name__, error=str(error))
+    raise
+finally:
+    save()
+print(json.dumps({"status": report["status"], "size": args.size,
+    "loss_abs_differences": {key: value["loss_abs_difference"] for key, value in report["modes"].items()}}))
