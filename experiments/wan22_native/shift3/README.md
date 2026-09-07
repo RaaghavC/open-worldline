@@ -1,6 +1,6 @@
 # Fixed shift-3 sampling ablation
 
-This separate experiment changes the official UniPC schedule shift from 5 to 3. It keeps the completed shift-5 clip, all original sampling sources and all model/codec parameters unchanged. The prior clip completed execution but produced severe visual distortion. This new experiment is prepared and CPU-tested; no shift-3 model run has occurred in this package.
+This separate experiment changes the official UniPC schedule shift from 5 to 3. It keeps the completed shift-5 clip, all original sampling sources and all model/codec parameters unchanged. The prior clip completed execution but produced severe visual distortion. The [completed shift-3 run](results/clip50-v1/README.md) took 477.50 seconds and produced all 17 frames, but severe future-frame distortion remained. Its execution passed and its visual inspection failed. The original outputs and the [plan](results/plan-v1/README.md) are retained.
 
 The pinned official image-to-video docstring recommends shift 3 for 480p output. Our fixed 512 by 288 shape is smaller than 480p. Testing shift 3 here is a hypothesis about a documented setting, not evidence of a discovered bug or a known correction. [Official docstring, commit 42bf4cfaa384bc21833865abc2f9e6c0e67233dc](https://github.com/Wan-Video/Wan2.2/blob/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/textimage2video.py#L439), [exact retained source](official-source/textimage2video.py).
 

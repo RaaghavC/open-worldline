@@ -1,0 +1,19 @@
+{
+  "status": "byte_exact_initial_failure_and_mac_diagnostic",
+  "files": [
+    {
+      "file": "linux-ci-failure.log",
+      "bytes": 13084,
+      "sha256": "811e41bf595099f216d81ab923e6e623af93647434df8dcff5a017e99e8c57b9"
+    },
+    {
+      "file": "mac-diagnostic.json",
+      "bytes": 16736,
+      "sha256": "f8bbca50fa1c676b8010dd420553cf62ed503e01e652c02b0897874b56a911eb"
+    }
+  ],
+  "linux_ci_run": 34149366497,
+  "linux_diagnostic_pending": true,
+  "actual_cache_changed": false,
+  "production_prefix_check_relaxed": false
+}

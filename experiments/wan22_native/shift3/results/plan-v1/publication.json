@@ -1,0 +1,257 @@
+{
+  "schema": "worldline-shift3-publication-v1",
+  "status": "complete_byte_exact_copy",
+  "files": [
+    {
+      "file": "ablation-source/__init__.py.txt",
+      "bytes": 115,
+      "sha256": "df59970eb5ebe47b90e0d749c834fdb10a71b59d91e186f189f18ad0a0d0ec01"
+    },
+    {
+      "file": "ablation-source/sample.py.txt",
+      "bytes": 24963,
+      "sha256": "fe0feaba493054d1e93e4f542ca1a5f2c1073a1611ba5c576661407e85703e30"
+    },
+    {
+      "file": "ablation-source/test_cpu.py.txt",
+      "bytes": 10382,
+      "sha256": "31926f79c207d4de9e6c1348674473e62bf3466abaa0f5a619b909ff3e3db936"
+    },
+    {
+      "file": "ablation-source/test_independent.py.txt",
+      "bytes": 8459,
+      "sha256": "01d328713a21efab20cb3a8394c896af423578aa056647b1c481979a19ccd650"
+    },
+    {
+      "file": "control-inputs.safetensors",
+      "bytes": 3696752,
+      "sha256": "0419e16b8699b408a1c085a382ca7751074c0be8c1927164b970de03b1e42753"
+    },
+    {
+      "file": "control-metrics.json",
+      "bytes": 11956,
+      "sha256": "17d52167ef71b804f4de36b9855607410ae3134bb0d4d36cdc948dd6f9bea1bc"
+    },
+    {
+      "file": "cpu-solver.json",
+      "bytes": 300,
+      "sha256": "24eccbfab1d7d5b0f82876b1444c1100a36e49a512fbe6b6d9474643015f5922"
+    },
+    {
+      "file": "cpu-tests.json",
+      "bytes": 3585,
+      "sha256": "c232828f4e1635f02fa2f85b92ee818f4e7012f8a92f510fe59f3a3dea614e4a"
+    },
+    {
+      "file": "independent-tests.json",
+      "bytes": 3651,
+      "sha256": "81d703e44bd67d5c2abdcbe44027fc851a339dd8282f5f9e1ab2e75208e5f287"
+    },
+    {
+      "file": "inputs.safetensors",
+      "bytes": 3696752,
+      "sha256": "0419e16b8699b408a1c085a382ca7751074c0be8c1927164b970de03b1e42753"
+    },
+    {
+      "file": "measured-source/__init__.py.txt",
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    {
+      "file": "measured-source/codec-source.json.txt",
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    {
+      "file": "measured-source/codec.py.txt",
+      "bytes": 8428,
+      "sha256": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30"
+    },
+    {
+      "file": "measured-source/codec_decode_profile.py.txt",
+      "bytes": 14231,
+      "sha256": "7a58bbea7fd49e7ef76effa6b460f60dd7d4fb0654c7fd1c68cb689bc0803bbf"
+    },
+    {
+      "file": "measured-source/codec_memory.py.txt",
+      "bytes": 3108,
+      "sha256": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177"
+    },
+    {
+      "file": "measured-source/codec_profile.py.txt",
+      "bytes": 10170,
+      "sha256": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a"
+    },
+    {
+      "file": "measured-source/config.json.txt",
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    {
+      "file": "measured-source/load_weights.py.txt",
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    {
+      "file": "measured-source/portable.py.txt",
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    {
+      "file": "measured-source/profile_core.py.txt",
+      "bytes": 19225,
+      "sha256": "f449a8f4314af366943fb6fa43679e17b5adf4c687be130d0a910e324023a7d0"
+    },
+    {
+      "file": "measured-source/provenance.json.txt",
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    {
+      "file": "measured-source/requirements-sample.txt.txt",
+      "bytes": 107,
+      "sha256": "161dde8340cf09f65fa67a9a100787f2df4211a2c9e71249e7a81eb16f01b1ba"
+    },
+    {
+      "file": "measured-source/sample_clip.py.txt",
+      "bytes": 39918,
+      "sha256": "b564f4df405081bbba3566e44718b07bbc226e7e2220179af427e031baccbf0a"
+    },
+    {
+      "file": "measured-source/test_codec.py.txt",
+      "bytes": 10433,
+      "sha256": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff"
+    },
+    {
+      "file": "measured-source/test_codec_decode.py.txt",
+      "bytes": 10267,
+      "sha256": "325b1573fd3848c1d56144d04137f9cce2b987e34f3b2ad1fd5859bb10a4b8c8"
+    },
+    {
+      "file": "measured-source/test_codec_memory.py.txt",
+      "bytes": 6450,
+      "sha256": "c965e8cc7fcd06b396709084faf978b20ba842aa36a9e5fc65e8472c243a956e"
+    },
+    {
+      "file": "measured-source/test_core.py.txt",
+      "bytes": 13235,
+      "sha256": "76950848ed569371ee90fe0179e7bceaa3abb9011454f57cde8e15f360d8d020"
+    },
+    {
+      "file": "measured-source/test_sample_clip.py.txt",
+      "bytes": 16310,
+      "sha256": "8890986433884d1a2d63d815b858c5e468dc8a51683f013a1e3efb14f9898fe3"
+    },
+    {
+      "file": "measured-source/text-reuse.json.txt",
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    {
+      "file": "measured-source/vendor/__init__.py.txt",
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    {
+      "file": "measured-source/vendor/attention.py.txt",
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    {
+      "file": "measured-source/vendor/model.py.txt",
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    {
+      "file": "measured-source/vendor/shared_config.py.txt.txt",
+      "bytes": 945,
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe"
+    },
+    {
+      "file": "measured-source/vendor/vae2_2.py.txt",
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    {
+      "file": "measured-source/weights.index.json.txt",
+      "bytes": 72865,
+      "sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe"
+    },
+    {
+      "file": "metrics.json",
+      "bytes": 13720,
+      "sha256": "61ef3ddbaf2f3e21191f334faa35259354eee9de2b1c5bd63a41bec5bb48359e"
+    },
+    {
+      "file": "native-cpu-tests.json",
+      "bytes": 3230,
+      "sha256": "a5bdbdd96e3eb9fc9a56da695dcf9f87aa966a707ef4e6a4e3dc549e092f005a"
+    },
+    {
+      "file": "parent-memory.jsonl",
+      "bytes": 125,
+      "sha256": "fa0fe6abb102c3880136e062fcb88fefcea2df0d3acbc7f9b7d49cdce04630dd"
+    },
+    {
+      "file": "profile-core-terminal.json",
+      "bytes": 25029,
+      "sha256": "f1bc1c73298ce1fe1f1869a33a0aed0fd5aa9e310d40bd1438b15263705f41fe"
+    },
+    {
+      "file": "profile-core.json",
+      "bytes": 5596,
+      "sha256": "aef64c777014d295a4e5d2498081b145083bdf9aca463810b6c0c9f422165887"
+    },
+    {
+      "file": "profile-decode.json",
+      "bytes": 47262,
+      "sha256": "b533559026aa31fd0fc1aace5c3ef9d318f7c736f3407459848ff59f37d9c07d"
+    },
+    {
+      "file": "profile-inputs.safetensors",
+      "bytes": 1222608,
+      "sha256": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5"
+    },
+    {
+      "file": "profile-weight-load.json",
+      "bytes": 370671,
+      "sha256": "b6caa0d99ac474a6a34eb70b7a9c9b2901f4da42c2c9b4d95ea4bddfbf7a5d28"
+    },
+    {
+      "file": "reused-source/experiments/room_world/memory_train.py.txt",
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/native_control/portable.py.txt",
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/native_control/vendor/fm_solvers_unipc.py.txt",
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    {
+      "file": "reused-source/experiments/wan_adapter/text_cache/cache.py.txt",
+      "bytes": 2321,
+      "sha256": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff"
+    },
+    {
+      "file": "schedule.json",
+      "bytes": 1848,
+      "sha256": "e1029fae6eeb73cad0c61783c38ddc15b06d9454b7af9d651cbb5f9bd48f34ef"
+    },
+    {
+      "file": "text-manifest.json",
+      "bytes": 32126,
+      "sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c"
+    }
+  ],
+  "file_count": 49,
+  "total_bytes": 9566748,
+  "original_measurements_changed": false,
+  "external_foundation_weights_redistributed": false,
+  "execution_status": "planned",
+  "visual_status": "not_executed"
+}

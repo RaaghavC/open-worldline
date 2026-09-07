@@ -1,0 +1,457 @@
+{
+  "schema": "worldline-wan22-cpu-prefix-backend-diagnostic-v1",
+  "status": "completed",
+  "source_sha256": {
+    "codec_cpu_diagnostic.py": "b793a4f6e2793760f4916d9041b27d808aa8d109d47eadee5edd2e963e354e8b",
+    "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "codec_memory.py": "e94f05d82179484425b7077d7db894c00b7b1c19fcd1bf2ec8cbf9bc1a30d177",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "action_data/operations.py": "6b075c4632c98018faea5e43e5ba58de082f2fa7f0bd520da4b1ba4d256a67ae",
+    "action_data/test_codec_path.py": "0a4cd06a6a8e64d1a6552cf8e2619ee1861297b9fce158a3b8c3b35c068bb7b9"
+  },
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "torch_version": "2.5.1",
+  "torch_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 201703\n  - clang 14.0.3\n  - OpenMP 201811\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: NO AVX\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, CXX_COMPILER=/Applications/Xcode_14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_XNNPACK -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Wno-missing-braces -Qunused-arguments -fcolor-diagnostics -faligned-new -Wno-unused-but-set-variable -fno-math-errno -fno-trapping-math -Werror=format -DUSE_MPS -Wno-unused-private-field -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.5.1, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, \n",
+  "initial_num_threads": 10,
+  "initial_mkldnn_enabled": true,
+  "mkldnn_available": false,
+  "environment": {
+    "OMP_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "DNNL_MAX_CPU_ISA": null,
+    "ONEDNN_MAX_CPU_ISA": null,
+    "DNNL_VERBOSE": null,
+    "ONEDNN_VERBOSE": null
+  },
+  "external_weights_loaded": false,
+  "gpu_operations": false,
+  "production_exact_prefix_changed": false,
+  "selects_test_backend": false,
+  "results": [
+    {
+      "status": "completed",
+      "requested_mkldnn_enabled": true,
+      "mkldnn_available": false,
+      "recorded_mkldnn_enabled": true,
+      "requested_threads": 1,
+      "recorded_threads": 1,
+      "interop_threads": 14,
+      "seconds": 0.4883778329822235,
+      "fixture_seed": 762,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "rgb_sha256": "31fe394962ce4424f29ddf37f7f256fb57e323d4d8e6ca6c11e0ec9e5a6f0e50",
+      "input_rgb_unchanged": true,
+      "all_four_comparisons_exact": true,
+      "comparisons": {
+        "full_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "perturbed_future_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "full_prefix_vs_perturbed_future_prefix": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "standalone_A_before_and_after_other_encodes": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "allocator_chunk_counts": {
+        "encoder": 12,
+        "decoder": 0
+      },
+      "cleanup_calls": 212,
+      "cleanup_hooks_removed": true,
+      "cache_clear": true
+    },
+    {
+      "status": "completed",
+      "requested_mkldnn_enabled": true,
+      "mkldnn_available": false,
+      "recorded_mkldnn_enabled": true,
+      "requested_threads": 2,
+      "recorded_threads": 2,
+      "interop_threads": 14,
+      "seconds": 0.034716750000370666,
+      "fixture_seed": 762,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "rgb_sha256": "31fe394962ce4424f29ddf37f7f256fb57e323d4d8e6ca6c11e0ec9e5a6f0e50",
+      "input_rgb_unchanged": true,
+      "all_four_comparisons_exact": true,
+      "comparisons": {
+        "full_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "perturbed_future_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "full_prefix_vs_perturbed_future_prefix": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "standalone_A_before_and_after_other_encodes": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "allocator_chunk_counts": {
+        "encoder": 12,
+        "decoder": 0
+      },
+      "cleanup_calls": 212,
+      "cleanup_hooks_removed": true,
+      "cache_clear": true
+    },
+    {
+      "status": "completed",
+      "requested_mkldnn_enabled": false,
+      "mkldnn_available": false,
+      "recorded_mkldnn_enabled": false,
+      "requested_threads": 1,
+      "recorded_threads": 1,
+      "interop_threads": 14,
+      "seconds": 0.03407320799306035,
+      "fixture_seed": 762,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "rgb_sha256": "31fe394962ce4424f29ddf37f7f256fb57e323d4d8e6ca6c11e0ec9e5a6f0e50",
+      "input_rgb_unchanged": true,
+      "all_four_comparisons_exact": true,
+      "comparisons": {
+        "full_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "perturbed_future_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "full_prefix_vs_perturbed_future_prefix": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "standalone_A_before_and_after_other_encodes": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "allocator_chunk_counts": {
+        "encoder": 12,
+        "decoder": 0
+      },
+      "cleanup_calls": 212,
+      "cleanup_hooks_removed": true,
+      "cache_clear": true
+    },
+    {
+      "status": "completed",
+      "requested_mkldnn_enabled": false,
+      "mkldnn_available": false,
+      "recorded_mkldnn_enabled": false,
+      "requested_threads": 2,
+      "recorded_threads": 2,
+      "interop_threads": 14,
+      "seconds": 0.03207683301297948,
+      "fixture_seed": 762,
+      "fixture_state_sha256": "0401654f26419d4e3aca98f8f3a7ff47cba5b2a0dc6706d6df4889e26c7621a2",
+      "fixture_state_unchanged": true,
+      "rgb_sha256": "31fe394962ce4424f29ddf37f7f256fb57e323d4d8e6ca6c11e0ec9e5a6f0e50",
+      "input_rgb_unchanged": true,
+      "all_four_comparisons_exact": true,
+      "comparisons": {
+        "full_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "perturbed_future_prefix_vs_standalone": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "full_prefix_vs_perturbed_future_prefix": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        },
+        "standalone_A_before_and_after_other_encodes": {
+          "torch_equal": true,
+          "bytes_equal": true,
+          "left_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "right_sha256": "f87ac30c9a689ef355a429800ffa0ea430580eb0f2142f43ca541a33943dc641",
+          "shape": [
+            1,
+            48,
+            1,
+            2,
+            2
+          ],
+          "dtype": "torch.float32",
+          "total_elements": 192,
+          "different_elements": 0,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "both_finite": true,
+          "first_differences": []
+        }
+      },
+      "allocator_chunk_counts": {
+        "encoder": 12,
+        "decoder": 0
+      },
+      "cleanup_calls": 212,
+      "cleanup_hooks_removed": true,
+      "cache_clear": true
+    }
+  ],
+  "source_unchanged": true,
+  "seconds": 0.6159220829722472
+}
