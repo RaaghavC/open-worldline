@@ -6,7 +6,7 @@ This is a single-scene development experiment. The fixed denoising error improve
 
 ## Reproducible inputs
 
-The [original Atrium capture](../experiments/atrium_data/README.md) contains 132 native RGB/depth observations in two branches of one architectural layout. One branch opens a door; both turn away, wait and return. The camera has a fixed position. Indirect light reveals door state while it is offscreen, so the pair does not isolate hidden-state memory. Independent geometric checks verified the camera convention and axial depth.
+The [original Atrium capture](../experiments/atrium_data/README.md) contains 132 native RGB/depth observations in two branches of one architectural layout. One branch opens a door; both turn away, wait and return. The camera has a fixed position. Indirect light reveals door state while it is offscreen, so the pair does not isolate hidden-state memory. Independent geometric checks verified the camera convention and axial depth. The [RGB-only data release](https://github.com/RaaghavC/open-worldline/releases/tag/atrium-rgb-v1) contains all 132 original PNGs and the unchanged capture manifest; EXR and scene files are omitted from that archive.
 
 The [released development cache](../experiments/wan_adapter/data_cache/README.md) contains eight 17-frame windows, starting at frames 0, 8, 32 and 49 in both branches. Their frames overlap and they share geometry. All eight belong to development. Native RGB values are converted to [-1,1] without resizing and encoded independently by the official Wan VAE. Eleven actual future-perturbation, first-frame and inter-clip cache checks passed with maximum difference zero. The starting observation is encoded alone; later clean images are training targets only.
 

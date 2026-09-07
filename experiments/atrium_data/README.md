@@ -10,6 +10,12 @@ The 132 frames supply 130 adjacent RGB transitions. They are suitable for codec,
 
 The [complete paired preview](results/paired-render.mp4) plays every captured frame at 12 frames per second. Playback rate does not measure rendering or neural inference speed. The left branch leaves the door closed; the right branch opens it.
 
+## Download the measured RGB capture
+
+The [RGB development release](https://github.com/RaaghavC/open-worldline/releases/tag/atrium-rgb-v1) contains all 132 native PNGs, the unchanged capture manifest, the CC0 dedication and an archive scope note. The `atrium-rgb-v1.zip` asset is 22,386,589 bytes with SHA-256 `3e65d7e606fc9bd2929b6d832090bace6499d205117dc6f39eda46330c4383fe`. GitHub's uploaded asset digest was verified against the local archive.
+
+This RGB-only archive intentionally omits the EXR passes and scene file referenced by the unchanged manifest. Use it with the [training-window reader](../wan_adapter/capture_data.py). The complete capture validator and geometric ray checks below require the full outputs from rerunning the renderer. The [eight encoded development windows](../wan_adapter/data_cache/README.md) are also included in the repository.
+
 ## Generate a capture
 
 Tested with Blender 5.1.2 and its Cycles Metal renderer on an M4 Pro with 24 GB memory. The script starts a separate background process with factory settings. Its output directory must be empty or new. Run from the repository root:
