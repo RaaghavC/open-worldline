@@ -1,0 +1,114 @@
+{
+  "mode": "clip",
+  "expected_gpu": "NVIDIA A100-SXM4-80GB",
+  "deadline": 909668.76540739,
+  "source_sha256": {
+    "__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+    "native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+    "guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+    "decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+    "evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+    "run.py": "2758066cfb9bc2859b3457ee3614e11f8c710ebd60204cfaaa47811de5a497da",
+    "test_cpu.py": "2f8eb2602817f0ee7fdeabddfc17c236067be776b7b61a6bfa986bd2b74a3a9f",
+    "vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+    "LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "shared/experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "shared/experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+  },
+  "input_identity": {
+    "pair_files": {
+      "metrics.json": "b8f1b035498278a1f5bc273b0526b7a17e70f09244f49b792952f2bd68df6b57",
+      "terminal.json": "bf7c395ff1544bf9195c0ccc949bcaf13e54f57bc10ca9abd17b7f61eb4943a5",
+      "inputs.safetensors": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5"
+    },
+    "text_files": {
+      "manifest.json": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+      "embeddings.safetensors": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406"
+    },
+    "observation": {
+      "codec_report_sha256": "024927e795ecd381412ac38fa7f0936e6621f494c3dd9b5d4a13e06a904d5c5e",
+      "cache_sha256": "b2154c91d4029c05d09faba34a1cd8cb838b9aebd247ff8d7e52bceb265edf76",
+      "observation_tensor_sha256": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "input_image_sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780",
+      "codec_source_sha256": {
+        "codec.py": "16f4a1df1219e91edcfebb56a9fee209dd67c7b9ac43b24519ea778f3ed26e30",
+        "codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "codec_profile.py": "1ea6268a7a74b35f06864ff525a6bb967318e8eae9ef6bfc5098a2ab835ea24a",
+        "test_codec.py": "c7e96bbbbbdc9a3f4db0567334a8ea40a0c09e6f0c5a2953d0d411ad951626ff",
+        "vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+      }
+    },
+    "text": {
+      "manifest_sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+      "reuse_evidence_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "positive_tensor_sha256": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093",
+      "negative_tensor_sha256": "aa6911f67cb7a4e5cf934131594b6fe264dff9983f84ab188e9199c706cf60cc"
+    },
+    "input_tensor_sha256": {
+      "initial_latent": "59a60814a1f4eaa8afdd7ba927b3fc6946c04be06ca363dd4eed94e85da13cfb",
+      "initial_noise": "976ecd5ea20b269da0c3a3cfd4a1cd768f0472546e6ce3dc5280963ad384d90c",
+      "observation": "b4079acc3433b419d3c2ff7a1e0560cb1c7abf160780b97430468a0797ddf2be",
+      "token_times": "c33795e46bac9af3b71a0c8b21d41d8a0137b154febf5225d3f70fe7e984c3e3"
+    },
+    "noise_regenerated": false,
+    "actions_read": false,
+    "future_target_read": false
+  },
+  "pair_admission": {
+    "pair_report_sha256": "e1890cbfb224c93ae788a1a035c1cafdf3cadd7937c4d7060665662ded70217f",
+    "pair_worker_sha256": "3a7e90b9544533e06ec049f783dd8eb001dee1346b571ebb295047c4e7e3b2e7",
+    "hardware": {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "total_memory_bytes": 85093777408,
+      "capability": [
+        8,
+        0
+      ],
+      "bf16_supported": true,
+      "torch": "2.5.1+cu124",
+      "cuda": "12.4",
+      "flash_attn": "2.7.4.post1",
+      "flash_attention_2_available": true,
+      "flash_attention_3_available": false,
+      "cudnn": 90100,
+      "matmul_allow_tf32": false,
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false,
+      "dependencies": {
+        "diffusers": "0.34.0",
+        "numpy": "1.26.4",
+        "safetensors": "0.5.3",
+        "psutil": "7.2.2",
+        "einops": "0.8.1",
+        "Pillow": "12.3.0"
+      },
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": null,
+        "PYTORCH_CUDA_ALLOC_CONF": null,
+        "CUBLAS_WORKSPACE_CONFIG": null,
+        "NVIDIA_TF32_OVERRIDE": null
+      }
+    },
+    "estimated_seconds": 562.9730354639701,
+    "equation": "1.2 * (measured core load + 50 * measured first pair) + 120 + 30",
+    "unmeasured_decode_load_and_decode_allowance_seconds": 120.0,
+    "artifact_allowance_seconds": 30.0,
+    "decoder_cost_measured": false,
+    "estimate_is_not_a_completion_guarantee": true
+  },
+  "weights": "/workspace/wan22-reference-weights",
+  "pair_directory": "/workspace/cuda-ref-unpack/wan22-cuda-reference-f0daa5de/experiments/wan22_native/core-results/cpu-pair-v1",
+  "text_directory": "/workspace/cuda-ref-unpack/wan22-cuda-reference-f0daa5de/experiments/wan_adapter/text_cache/native-results",
+  "stage": "core",
+  "output": "/workspace/results/clip-run-v1/core/result"
+}

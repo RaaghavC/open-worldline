@@ -1,0 +1,5 @@
+{"at": "2026-09-07T22:07:46.087830Z", "target_pod_id": "diagnostic-pod-1", "command": "get", "exit_code": 0, "kind": "present", "pod_id": "diagnostic-pod-1", "runtime_status": "initializing", "desired_status": "RUNNING", "network_volume_present": false, "created_at": null}
+{"at": "2026-09-07T22:31:48.408060Z", "target_pod_id": "diagnostic-pod-1", "command": "get", "exit_code": 0, "kind": "present", "pod_id": "diagnostic-pod-1", "runtime_status": "running", "desired_status": "RUNNING", "network_volume_present": false, "created_at": null}
+{"at": "2026-09-07T22:31:49.186351Z", "target_pod_id": "diagnostic-pod-1", "command": "delete", "exit_code": 0, "kind": "delete_ack", "pod_id": "diagnostic-pod-1"}
+{"at": "2026-09-07T22:31:49.633724Z", "target_pod_id": "diagnostic-pod-1", "command": "get", "exit_code": 1, "kind": "absent", "http_status": 404, "error_code": "not_found"}
+{"at": "2026-09-07T22:31:50.093195Z", "target_pod_id": "diagnostic-pod-1", "command": "list", "exit_code": 0, "kind": "list", "target_present": false, "pod_count": 0}

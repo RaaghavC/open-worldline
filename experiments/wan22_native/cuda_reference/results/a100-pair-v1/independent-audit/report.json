@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "scope": "Independent saved-file audit only; no model, CUDA, cloud or credential calls",
+  "source_sha256": "9f44bf7026e0c9443a277aaa1a423455318e47fc7066bb15e78dd34f7159acaf",
+  "comparison_sha256": "2dd5328841b3f1c424ce50f86e00c645fbed40afde0edbf6533557c9bc8878b3",
+  "raw_files_unchanged": true,
+  "raw_file_sha256": {
+    "metrics.json": "e1890cbfb224c93ae788a1a035c1cafdf3cadd7937c4d7060665662ded70217f",
+    "text-manifest.json": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c",
+    "contexts.safetensors": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+    "independent-test.py.txt": "219e117a13a2ba352e443d5ac022a99b689685f0fbdaa48b7881b5269131d2c9",
+    "cpu-report.json": "f52dad9dd7b9e3969296828d1ef664971160fa823045a12640938a380879495d",
+    "inputs.safetensors": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+    "independent-report.json": "0d651cfebf2652879b395baabc7a9c73dd7c604f300856a19f525d070ce1d45c",
+    "measured-source/requirements.txt.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+    "measured-source/decode.py.txt": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+    "measured-source/codec-source.json.txt": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "measured-source/run.py.txt": "2758066cfb9bc2859b3457ee3614e11f8c710ebd60204cfaaa47811de5a497da",
+    "measured-source/upstream-provenance.json.txt": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "measured-source/expected-weights.json.txt": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "measured-source/guards.py.txt": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+    "measured-source/native.py.txt": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "measured-source/__init__.py.txt": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+    "measured-source/evidence.py.txt": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+    "measured-source/config.json.txt": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "measured-source/sampling.py.txt": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+    "measured-source/test_cpu.py.txt": "2f8eb2602817f0ee7fdeabddfc17c236067be776b7b61a6bfa986bd2b74a3a9f",
+    "measured-source/LICENSE-APACHE-2.0.txt.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "measured-source/shared/experiments/wan22_native/official_cpu/inputs.py.txt": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "measured-source/shared/experiments/wan22_native/official_cpu/streaming.py.txt": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "measured-source/vendor/vae2_2.py.txt": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "measured-source/vendor/fm_solvers_unipc.py.txt": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "measured-source/vendor/attention.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "measured-source/vendor/__init__.py.txt": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+    "measured-source/vendor/model.py.txt": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "core/worker.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "core/terminal.json": "bcdeaa409b06c94631e77ecf6b14e13a255e71f98cac048fae0109f0aa7c43cb",
+    "core/launch.json": "62130871d5d7319b041d8271e82b7810df3fb491f8dbcc76176e369ee8c236d5",
+    "core/parent-memory.jsonl": "613cb4ac63b20cb45d691293b80862e6260dc163d2452774efd5db1f365f06a3",
+    "core/result/metrics.json": "3a7e90b9544533e06ec049f783dd8eb001dee1346b571ebb295047c4e7e3b2e7",
+    "core/result/outputs.safetensors": "ddaf1fde1253d4cbd591fabe99217a344ca31a5fecc4aa92afcdfc2f1d536205",
+    "core/result/memory.jsonl": "016da51a7c7be1ca795093189c6f2cba85775a020335dc905d10b1e77499ae3e",
+    "core/result/completed-positive.safetensors": "d36feba1ecc44e4dcdbeb8907b6eece8d635659d4b1f09be96a38587413fcac8",
+    "core/result/completed-negative.safetensors": "f128c208bf318fddf0f147fcd21d34870f80461531ecb1e84de288234cd81635",
+    "core/result/weight-load.json": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+  },
+  "matched_original_fp32_tensors": 825,
+  "matched_parameter_count": 4999787712,
+  "input_and_context_files_exact": true,
+  "clean_observed_prefix_and_144_zero_times_exact": true,
+  "finite_velocity_arrays": 12,
+  "cross_run_metric_rows_recomputed_exact": 27,
+  "guidance_metric_rows_recomputed_exact": 12,
+  "normalization": "Fixed streamed official CPU RMS for each region and velocity, including CUDA versus portable CPU and MPS.",
+  "future_values_per_velocity": 110592,
+  "future_rmse_over_official_cpu_rms": {
+    "official_cpu": {
+      "positive_velocity": 0.003738234009265376,
+      "negative_velocity": 0.00469125206102643,
+      "guided_velocity": 0.02294356540917079
+    },
+    "portable_cpu": {
+      "positive_velocity": 0.004154149983864688,
+      "negative_velocity": 0.004833675880274555,
+      "guided_velocity": 0.0228896697074685
+    },
+    "portable_mps": {
+      "positive_velocity": 0.0025215937197193864,
+      "negative_velocity": 0.0027198858469494208,
+      "guided_velocity": 0.01586724873495304
+    }
+  },
+  "guidance_residuals": {
+    "cuda": {
+      "exact": true,
+      "maximum_absolute_residual": 0.0
+    },
+    "official_cpu": {
+      "exact": true,
+      "maximum_absolute_residual": 0.0
+    },
+    "portable_cpu": {
+      "exact": true,
+      "maximum_absolute_residual": 0.0
+    },
+    "portable_mps": {
+      "exact": true,
+      "maximum_absolute_residual": 0.0
+    }
+  },
+  "resources": {
+    "parent_seconds": 243.18611842102837,
+    "worker_seconds": 237.86258138902485,
+    "load_seconds": 232.9606649170164,
+    "pair_seconds": 2.2236706260591745,
+    "peak_combined_host_rss_bytes": 2858819584,
+    "peak_sampled_cuda_reserved_bytes": 20430454784,
+    "peak_sampled_cuda_allocated_bytes": 20118647808,
+    "minimum_sampled_cuda_free_bytes": 64117211136,
+    "sampled_guards_passed": true
+  },
+  "limitations": "First-step predictions only. No new numerical acceptance threshold, CUDA equivalence, full-trajectory agreement, image-quality or failure-cause conclusion. Host available memory is the psutil-reported system figure, not a cgroup quota measurement."
+}

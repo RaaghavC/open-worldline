@@ -1,6 +1,8 @@
-# Prepared CUDA reference
+# Native CUDA reference
 
-This package prepares a comparison that has not run on CUDA. Its first mode computes one positive and one negative prediction using the original Wan2.2 TI2V-5B model equations, original FP32 parameters, native CUDA BF16 autocast and FlashAttention 2. A separately requested second mode performs 50 solver updates from the exact same retained initial noise, image latent and text. Neither mode trains parameters or adds an original Worldline model contribution.
+This package completed an [initial prediction pair](results/a100-pair-v1/README.md) and a separate [50-step clip](results/a100-clip50-v1/README.md) on one NVIDIA A100-SXM4-80GB on September 7, 2026. The pair completed in 243.19 seconds and the clip in 476.44 seconds, including model loading and verification. All 17 decoded frames are retained. Generated future frames still develop severe colored, warped surfaces. The numerical execution passed; visual quality failed.
+
+The first mode computes one positive and one negative prediction using the original Wan2.2 TI2V-5B model equations, original FP32 parameters, native CUDA BF16 autocast and FlashAttention 2. The separate second mode performs 50 solver updates from the exact same retained initial noise, image latent and text. Neither mode trains parameters or adds an original Worldline model contribution. The [completed cloud record](../../../docs/cloud-gpu-diagnostic-results-2026-09-07.md) includes setup, result recovery and confirmed instance deletion.
 
 The completed preparation includes [9 author CPU checks](cpu-results/author-v2/report.json), [12 independent CPU checks](cpu-results/independent-v1/report.json), and a [validated plan](plans/pair-v1/metrics.json). The plan's A100 80GB name is explicitly hypothetical in [plan-context.json](plans/pair-v1/plan-context.json); no GPU or account was inspected. Earlier author-v1 records are preserved. They did not include the CLI import check, and their earlier source does not qualify for the current runner.
 
@@ -32,7 +34,7 @@ Clip admission estimates `1.2 * (measured core load + 50 * measured first pair) 
 
 ## Installation recipe
 
-This is a prepared recipe, not an executed CUDA installation. Run it in a fresh Python 3.11 environment on Linux with the CUDA 12.4 toolkit and a compatible NVIDIA driver. The [official PyTorch archive](https://pytorch.org/get-started/previous-versions/) documents the CUDA 12.4 wheel index. The pinned [FlashAttention installation instructions](https://github.com/Dao-AILab/flash-attention/tree/v2.7.4.post1#installation-and-features) require the CUDA toolkit and recommend limiting parallel build jobs on hosts with less than 96 GB RAM. Compilation is outside this experiment's 900-second deadline.
+The commands below describe direct installation. The completed diagnostic instead used the pinned PyTorch container and matching FlashAttention binary recorded in [setup evidence](results/a100-pair-v1/README.md). Run it in a fresh Python 3.11 environment on Linux with the CUDA 12.4 toolkit and a compatible NVIDIA driver. The [official PyTorch archive](https://pytorch.org/get-started/previous-versions/) documents the CUDA 12.4 wheel index. The pinned [FlashAttention installation instructions](https://github.com/Dao-AILab/flash-attention/tree/v2.7.4.post1#installation-and-features) require the CUDA toolkit and recommend limiting parallel build jobs on hosts with less than 96 GB RAM. Compilation is outside this experiment's 900-second deadline.
 
 From the repository root:
 

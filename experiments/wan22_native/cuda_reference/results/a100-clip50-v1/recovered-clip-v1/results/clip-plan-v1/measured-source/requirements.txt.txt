@@ -1,0 +1,9 @@
+# Install torch==2.5.1 from the official cu124 index first; see README.
+diffusers==0.34.0
+huggingface-hub==0.34.0
+safetensors==0.5.3
+numpy==1.26.4
+psutil==7.2.2
+einops==0.8.1
+Pillow==12.3.0
+# Install flash-attn==2.7.4.post1 with --no-build-isolation after Torch.

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "scope": "CLI help/import and one denominator fixture only; no CUDA output comparison, model or account calls",
+  "source_sha256": "4d176c74dd99bed6dbb47f3014452fd5b8205babd311912e96f95a3466508a5a",
+  "reused_comparator_sha256": "30c0de0f3b1ecebcfe195ffd616d5763cbee75a43405f2e62d6430af6c382e70",
+  "standard_inspect_imported": true,
+  "fixed_official_cpu_denominator_fixture": {
+    "elements": 2,
+    "exact_value_equal": false,
+    "nonzero_difference_elements": 2,
+    "maximum_absolute_difference": 4.0,
+    "mean_absolute_difference": 3.0,
+    "rmse": 3.1622776601683795,
+    "cosine": 0.9701425001453319,
+    "comparison_baseline_rms": 1.0,
+    "official_cpu_normalization_rms": 2.0,
+    "rmse_over_official_cpu_rms": 1.5811388300841898
+  },
+  "earlier_import_collision": "The first help attempt imported a sibling operational inspect.py and performed a Pod status read. Root renamed that helper; this comparator now also excludes its script directory from the import search path."
+}

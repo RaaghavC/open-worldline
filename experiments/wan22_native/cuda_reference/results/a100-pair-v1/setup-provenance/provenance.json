@@ -1,0 +1,39 @@
+{
+  "schema": "executed-setup-script-provenance-v1",
+  "scripts": [
+    {
+      "file": "prepare-v2.sh",
+      "sha256": "12c4cf98afa50706fb4b1a5e2c94a3ec12938973256325cc853a7a96a5b9b6ef",
+      "bytes": 184,
+      "transport_archive": "setup-retry-scripts.tar.gz",
+      "transport_archive_sha256": "dedb58178ec888fad52251034537c378d48456d8178fc94a75575f691bcff7ec",
+      "member": "prepare-v2.sh",
+      "archive_member_exact": true
+    },
+    {
+      "file": "prepare.sh",
+      "sha256": "5214ef1622099c383589f99bbb167ad89f0918ae6da495be21a3c7b3bb790646",
+      "bytes": 3077,
+      "transport_archive": "container-scripts.tar.gz",
+      "transport_archive_sha256": "57165796829299b9ade9e070e4a29173500fb26eb1ba67d6dc231155611bd791",
+      "member": "prepare.sh",
+      "archive_member_exact": true
+    },
+    {
+      "file": "runtime-check.py",
+      "sha256": "28d1de707cea6195af3c7af8e30df0c15352f1ef86347590ae71c4dcf275eb89",
+      "bytes": 2490,
+      "transport_archive": "container-scripts.tar.gz",
+      "transport_archive_sha256": "57165796829299b9ade9e070e4a29173500fb26eb1ba67d6dc231155611bd791",
+      "member": "runtime-check.py",
+      "archive_member_exact": true
+    }
+  ],
+  "runtime_check_matches_recovered_executed_copy": true,
+  "setup_v1_failure": "The SSH PATH did not include /usr/local/cuda/bin; the runtime check could not resolve nvcc.",
+  "setup_v2_correction": "prepare-v2.sh prepended /opt/conda/bin and /usr/local/cuda/bin to PATH and reran the unchanged prepare.sh into a fresh setup-evidence-v2 directory.",
+  "compiler_present": "/usr/local/cuda/bin/nvcc",
+  "reported_compiler_version": "CUDA 12.4.131",
+  "measured_setup_records_modified": false,
+  "script_execution_during_packaging": false
+}
