@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "embeddings_file_sha256": "fb9fe2cc1383e1c258e7774ac2c11f90ffa2c014ac3a12656f8cdc4b4e749ab7",
+  "real_embeddings": [
+    {
+      "id": "unconditional",
+      "token_length": 1,
+      "dtype": "torch.float32",
+      "all_finite": true,
+      "tensor_sha256": "83f2f74c6ec7e2fe1618a53db9d08105c1b5f70ce2c7904964683a386fbfe045"
+    },
+    {
+      "id": "atrium",
+      "token_length": 25,
+      "dtype": "torch.float32",
+      "all_finite": true,
+      "tensor_sha256": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093"
+    }
+  ],
+  "maximum_observed_intermediate_abs": 301166.15625,
+  "maximum_progress_sample_mps_driver_bytes": 1110179840,
+  "memory_note": "MPS progress measurements occur after each block release and do not measure within-block peaks; watchdogRSS is sampled every0.5seconds."
+}

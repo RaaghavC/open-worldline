@@ -1,0 +1,235 @@
+{
+  "status": "passed",
+  "experiment": "official external Wan VAE reconstruction on original Blender capture",
+  "generated_video_quality_evidence": false,
+  "device": "mps",
+  "dtype": "float16",
+  "torch": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "automatic_mps_cpu_fallback": "0",
+  "mps_allocator_cache_policy": "empty unused allocator cache after each load/encode/decode stage; timing includes cleanup",
+  "weights_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+  "source_rgb_transform": "original PNG sRGB with Blender AgX view; no crop/resize",
+  "pixel_shape": [
+    1,
+    3,
+    17,
+    288,
+    512
+  ],
+  "source_arm": "open",
+  "source_start": 0,
+  "input_images": [
+    {
+      "file": "0000.png",
+      "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+    },
+    {
+      "file": "0001.png",
+      "sha256": "18ba823611f1183a1c3b675456b6c2b6ae4d042911df4c0a7a75e2759ba21835"
+    },
+    {
+      "file": "0002.png",
+      "sha256": "4eac06bf7d5269476e53c924fbe340e77340b2b3e16c4eacb07edc0ce846576b"
+    },
+    {
+      "file": "0003.png",
+      "sha256": "48904e7eca2f75281b9ce5f7f6a0b189e9f239d8df51c656ef748baf10cf91a2"
+    },
+    {
+      "file": "0004.png",
+      "sha256": "da92af403ac43cb77326c63a757af07c06c8e1525c4a3dd41cf4473da7bc9dcb"
+    },
+    {
+      "file": "0005.png",
+      "sha256": "c4ef33b8e7291f937d05ae0e13b9fd81c800a63ab9cdef207061378bfcbb9611"
+    },
+    {
+      "file": "0006.png",
+      "sha256": "cea2946dfa89a38b661a463699d052f65cc8bb2f1a4bcf36c7c89fed85aa96cc"
+    },
+    {
+      "file": "0007.png",
+      "sha256": "9639073f57ab07715048cf527b661b19746df5f7476afb816a70d53a257aafbe"
+    },
+    {
+      "file": "0008.png",
+      "sha256": "800dc876844ed9f54752c0a877a07573bb1784bc6aebdd7f7f95095e539daf80"
+    },
+    {
+      "file": "0009.png",
+      "sha256": "9a5e3d28eb9a67fcbf58b898da3cccb4ac81bd6a7759731356120bade1d731c5"
+    },
+    {
+      "file": "0010.png",
+      "sha256": "fd68a0e1dd790d1b376eb9a90d48ad7870edcaa48c0189fc35a5b3d02e47698e"
+    },
+    {
+      "file": "0011.png",
+      "sha256": "acc38f3c4bf97874ab13329f3bd459cd0474f8e5beb9d01ef706a8c22274c683"
+    },
+    {
+      "file": "0012.png",
+      "sha256": "5a86d8dced79d8e6dfcb40ab65d63e2b0d31da75c9ec21c66144af2fc24bf40d"
+    },
+    {
+      "file": "0013.png",
+      "sha256": "80fb93d933b11f2d9df24d3348c0e9a5d890ad463132c658f504359fc65e4006"
+    },
+    {
+      "file": "0014.png",
+      "sha256": "f1f2acd91462ede7fffed9ecf0e305bbebaae38f6e49ac6f7f931f3f5e634599"
+    },
+    {
+      "file": "0015.png",
+      "sha256": "863a37822f83397de02e72e3726e5a81320cbe3906b772262265ba518542a54d"
+    },
+    {
+      "file": "0016.png",
+      "sha256": "ca10715064bb0997003efab9f2a384fd94dbca34c46a1c27d1229d89159e91c2"
+    }
+  ],
+  "input_license": "CC0-1.0 original procedural Blender scene",
+  "psnr_definition": "RGB float32 [0,1], whole-clip MSE, 10*log10(1/MSE)",
+  "ssim_definition": "skimage structural_similarity RGB mean, Gaussian sigma1.5, 11-pixel window, population covariance, data_range1",
+  "causal_check": "same first RGB frame encoded alone versus first latent frame of all17 RGB frames",
+  "causal_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "load_seconds": 1.0568227500189096,
+  "vae_parameters": 126892531,
+  "loaded_keys": 194,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "first_frame_encode_seconds": 2.372072375001153,
+  "full_clip_encode_seconds": 18.83914037499926,
+  "latent_shape": [
+    1,
+    16,
+    5,
+    36,
+    64
+  ],
+  "first_latent_max_abs_difference": 0.0,
+  "first_latent_mean_abs_difference": 0.0,
+  "first_latent_causal_check_passed": true,
+  "full_clip_decode_seconds": 28.241737083997577,
+  "all_latents_and_reconstructions_finite": true,
+  "clip_mse": 0.0005627715133946767,
+  "clip_psnr_db": 32.496678939818004,
+  "per_frame": [
+    {
+      "frame": 0,
+      "mse": 3.605145015402751e-05,
+      "psnr_db": 44.43077261285043,
+      "ssim": 0.9910550713539124
+    },
+    {
+      "frame": 1,
+      "mse": 0.00022420290126735226,
+      "psnr_db": 36.49358771775617,
+      "ssim": 0.9742297530174255
+    },
+    {
+      "frame": 2,
+      "mse": 0.00028304436969444827,
+      "psnr_db": 35.48145479659276,
+      "ssim": 0.9700544476509094
+    },
+    {
+      "frame": 3,
+      "mse": 0.00027706880592150596,
+      "psnr_db": 35.57412366959574,
+      "ssim": 0.9741349816322327
+    },
+    {
+      "frame": 4,
+      "mse": 0.0007153245757869705,
+      "psnr_db": 31.454968540198447,
+      "ssim": 0.9611207842826843
+    },
+    {
+      "frame": 5,
+      "mse": 0.0009414173860317008,
+      "psnr_db": 30.2621778543466,
+      "ssim": 0.955112874507904
+    },
+    {
+      "frame": 6,
+      "mse": 0.0009230234214506229,
+      "psnr_db": 30.347872787382165,
+      "ssim": 0.9566619396209717
+    },
+    {
+      "frame": 7,
+      "mse": 0.0005402147188277703,
+      "psnr_db": 32.674335870893366,
+      "ssim": 0.9719869494438171
+    },
+    {
+      "frame": 8,
+      "mse": 0.0007080687096441425,
+      "psnr_db": 31.49924597152832,
+      "ssim": 0.9681251645088196
+    },
+    {
+      "frame": 9,
+      "mse": 0.000660085354672422,
+      "psnr_db": 31.803999028422815,
+      "ssim": 0.9692686200141907
+    },
+    {
+      "frame": 10,
+      "mse": 0.0006629378766125175,
+      "psnr_db": 31.78527167083117,
+      "ssim": 0.9691464304924011
+    },
+    {
+      "frame": 11,
+      "mse": 0.0005073727998630901,
+      "psnr_db": 32.94672818915636,
+      "ssim": 0.9767401814460754
+    },
+    {
+      "frame": 12,
+      "mse": 0.0007288773056018887,
+      "psnr_db": 31.373455717981752,
+      "ssim": 0.969799280166626
+    },
+    {
+      "frame": 13,
+      "mse": 0.0007057432974975322,
+      "psnr_db": 31.513532376920725,
+      "ssim": 0.9692058563232422
+    },
+    {
+      "frame": 14,
+      "mse": 0.0007829953998347079,
+      "psnr_db": 31.06240789451981,
+      "ssim": 0.9670740962028503
+    },
+    {
+      "frame": 15,
+      "mse": 0.00047438927577456006,
+      "psnr_db": 33.23865137360015,
+      "ssim": 0.9784829020500183
+    },
+    {
+      "frame": 16,
+      "mse": 0.00039629807907423734,
+      "psnr_db": 34.01978032761649,
+      "ssim": 0.9817736744880676
+    }
+  ],
+  "mean_frame_ssim": 0.9708219416001264,
+  "mean_frame_psnr_db": 33.29190390589372,
+  "latents_sha256": "69124e9f72e3b7b16a4ed2151482f1239eada57349ced34e6bba5c16e2be172e",
+  "comparison_sha256": "671af7087b88ab6bf989a33fb804bd9a273a2d7f87db4eedd76841b22bd2e0b3",
+  "peaks_sampled": {
+    "rss_bytes": 842858496,
+    "mps_active_bytes": 1858566912,
+    "mps_driver_bytes": 13018005504
+  },
+  "total_seconds": 52.70607241700054
+}

@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "purpose": "Real flow-matching updates of original adapter on single-layout development data",
+  "protocol": "worldline-wan-atrium-17-v1",
+  "split": "single-layout development",
+  "independent_layouts": 1,
+  "causal_streaming": false,
+  "persistent_memory": false,
+  "torch": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "device": "mps",
+  "max_seconds": 900.0,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "automatic_mps_cpu_fallback": "0",
+  "core_dtype": "float16",
+  "adapter_dtype": "float32",
+  "timings": [
+    {
+      "stage": "load_frozen_core",
+      "seconds": 6.934241250011837
+    },
+    {
+      "stage": "fixed_prediction_untrained",
+      "seconds": 10.341419125004904
+    },
+    {
+      "stage": "fixed_prediction_trained_after",
+      "seconds": 5.365575874981005
+    },
+    {
+      "stage": "fixed_prediction_shuffled_actions",
+      "seconds": 5.088012082997011
+    },
+    {
+      "stage": "fixed_prediction_masked_observation_tokens",
+      "seconds": 5.257933707995107
+    },
+    {
+      "stage": "verify_frozen_core",
+      "seconds": 3.425221875018906
+    }
+  ],
+  "peaks_sampled": {
+    "rss_bytes": 3161899008,
+    "mps_active_bytes": 4552370688,
+    "mps_driver_bytes": 5966528512
+  },
+  "seed": 20260907,
+  "requested_updates": 10,
+  "batch_size": 1,
+  "window_order": [
+    "closed-0000",
+    "open-0000",
+    "closed-0008",
+    "open-0008",
+    "closed-0032",
+    "open-0032",
+    "closed-0049",
+    "open-0049",
+    "closed-0000",
+    "open-0000"
+  ],
+  "capture_cache_manifest_sha256": "8d7675d96f9f71d27cd4107c9fd2540b05ebc02eb6834c24a98dcf6a76802a5f",
+  "text": {
+    "manifest_sha256": "4b6bd57b9eda50eb1a27879918565446d0de85e66d0733cb9c4d1bf484a92600",
+    "embeddings_file_sha256": "fb9fe2cc1383e1c258e7774ac2c11f90ffa2c014ac3a12656f8cdc4b4e749ab7",
+    "positive_id": "atrium",
+    "negative_id": "unconditional",
+    "token_lengths": [
+      25,
+      1
+    ],
+    "padding": "Pass unpadded context; frozen Wan pads to512 before projection, context_lens=None"
+  },
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0
+  },
+  "flow": {
+    "noising": "x_sigma=(1-sigma)*target+sigma*noise; overwrite latent0 with observation",
+    "prediction_target": "noise-target",
+    "sigma_distribution": "Uniform[.05,.95], CPU generator seed",
+    "model_timestep": "1000*sigma",
+    "loss": "Mean squared error on latent frames1..4 only; observed frame0 excluded"
+  },
+  "conditioning": {
+    "observation": "separately encoded first RGB, initial latent clamped and 32 observation tokens",
+    "actions": "16 ordered six-channel raw commands",
+    "text": "same atrium prompt for both arms",
+    "training_cfg": false,
+    "clean_future_conditioning": false
+  },
+  "evaluation": {
+    "window": "open-0000",
+    "sigma": 0.5,
+    "noise_seed": 20261907,
+    "controls": [
+      "untrained_before",
+      "trained_after",
+      "shuffled_actions",
+      "masked_observation_tokens"
+    ],
+    "masked_observation_tokens": "Adapter observation input zeroed; learned biases can create nonzero tokens; observed latent0 remains clamped",
+    "use": "fixed development flow predictions, not semantic control or generalization evidence",
+    "shuffled_action_permutation": [
+      5,
+      6,
+      7,
+      11,
+      3,
+      8,
+      0,
+      2,
+      13,
+      14,
+      12,
+      10,
+      15,
+      4,
+      9,
+      1
+    ],
+    "noise_tensor_sha256": "18d7d41625aa8f5de1e5c2383d58904b3f71ac0cdf7d59c974d1dcf288bc9e52",
+    "fixed_noised_input_sha256": "aa1b41d8c6283b8479dde614bd16bcefa74fd8d4d47d6c97ff501a255a7ccc6e"
+  },
+  "source_sha256": {
+    "train_clip.py": "11ded4922f1e281338b23b7f9547122130d203922f7e0693d0e34a2d175aac80",
+    "training_common.py": "8b3e64a8eff3c7258bcdabf09e29601234b1b9d8b968976483f40389eaad342a",
+    "adapter.py": "c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8",
+    "compat.py": "c613d2347aed07e03e027be59ec77cf7c432c9a7278b9a51a91e9b06f18290e4",
+    "PROTOCOL.md": "b2f2ae4be3171f226194811e771301350614fb9ce364fc3de7db15fbbaaadf85"
+  },
+  "updates": [
+    {
+      "step": 0,
+      "window_id": "closed-0000",
+      "sigma": 0.4102685213088989,
+      "future_latent_mse": 0.1005575954914093,
+      "gradient_norm_before_clip": 0.09149011969566345,
+      "gradient_tensors": 42,
+      "seconds": 12.627043499989668
+    },
+    {
+      "step": 1,
+      "window_id": "open-0000",
+      "sigma": 0.1236758828163147,
+      "future_latent_mse": 0.26477545499801636,
+      "gradient_norm_before_clip": 0.03520544245839119,
+      "gradient_tensors": 42,
+      "seconds": 12.37479924998479
+    },
+    {
+      "step": 2,
+      "window_id": "closed-0008",
+      "sigma": 0.797012323141098,
+      "future_latent_mse": 0.18846403062343597,
+      "gradient_norm_before_clip": 0.28995317220687866,
+      "gradient_tensors": 42,
+      "seconds": 12.132623792014783
+    },
+    {
+      "step": 3,
+      "window_id": "open-0008",
+      "sigma": 0.5545940577983857,
+      "future_latent_mse": 0.09733346849679947,
+      "gradient_norm_before_clip": 0.157319113612175,
+      "gradient_tensors": 42,
+      "seconds": 12.183688041986898
+    },
+    {
+      "step": 4,
+      "window_id": "closed-0032",
+      "sigma": 0.8856639444828034,
+      "future_latent_mse": 0.1369229406118393,
+      "gradient_norm_before_clip": 0.18644016981124878,
+      "gradient_tensors": 42,
+      "seconds": 12.132261207996635
+    },
+    {
+      "step": 5,
+      "window_id": "open-0032",
+      "sigma": 0.6328775465488434,
+      "future_latent_mse": 0.10076521337032318,
+      "gradient_norm_before_clip": 0.21486634016036987,
+      "gradient_tensors": 42,
+      "seconds": 12.219991082994966
+    },
+    {
+      "step": 6,
+      "window_id": "closed-0049",
+      "sigma": 0.21506121158599856,
+      "future_latent_mse": 0.15653176605701447,
+      "gradient_norm_before_clip": 0.04669191315770149,
+      "gradient_tensors": 42,
+      "seconds": 12.206328416010365
+    },
+    {
+      "step": 7,
+      "window_id": "open-0049",
+      "sigma": 0.3623218357563019,
+      "future_latent_mse": 0.10728354007005692,
+      "gradient_norm_before_clip": 0.051235731691122055,
+      "gradient_tensors": 42,
+      "seconds": 12.215819958975771
+    },
+    {
+      "step": 8,
+      "window_id": "closed-0000",
+      "sigma": 0.3783033490180969,
+      "future_latent_mse": 0.09874259680509567,
+      "gradient_norm_before_clip": 0.0586463026702404,
+      "gradient_tensors": 42,
+      "seconds": 12.244021916994825
+    },
+    {
+      "step": 9,
+      "window_id": "open-0000",
+      "sigma": 0.3359213352203369,
+      "future_latent_mse": 0.1107645258307457,
+      "gradient_norm_before_clip": 0.04977225512266159,
+      "gradient_tensors": 42,
+      "seconds": 12.196186667017173
+    }
+  ],
+  "foundation": {
+    "repository": "Wan-AI/Wan2.1-T2V-1.3B",
+    "revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+    "source_sha256": "96b6b242ca1c2f24e9d02cd6596066fab6d310e2d7538f33ae267cb18d957e8f",
+    "config_sha256": "ab37994c43740513f94b3ba6233a784035a67b43c8cde83c8f31aa90468c67ce",
+    "converted_base_sha256": "c464f23bb1401491a5322ec14b8b2b0a0b36b9a9cf50b8a07104efcbf5377010",
+    "loaded_keys": 825,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameters": 1418996800
+  },
+  "adapter_parameters": 1349376,
+  "initial_adapter_sha256": "d8aa1acec5747a61390f9e12acd63fcb1cc34dc15d66842c4bb002de45f0bd5b",
+  "actual_zero_init_equal": true,
+  "fixed_development_predictions": {
+    "untrained_before": {
+      "future_latent_mse": 0.1119067519903183,
+      "prediction_sha256": "9dfab6f3404d4c8178651d32ed94c962509dcc228188321ca0eed4bec82db425"
+    },
+    "trained_after": {
+      "future_latent_mse": 0.09817049652338028,
+      "prediction_sha256": "f1feed5c78dabb8ec90fca173722cee8360b495995e396b339cc1a4c4d2d63ac"
+    },
+    "shuffled_actions": {
+      "future_latent_mse": 0.09821542352437973,
+      "prediction_sha256": "4cd0df0aa331ff26da0936838ddc85246c998514fa0ee6aaba831ca34951789d"
+    },
+    "masked_observation_tokens": {
+      "future_latent_mse": 0.10269045829772949,
+      "prediction_sha256": "3f412bb317f97d91a9d9eca540f4541e6522f76755e98ddbaef5b7958a9c8a90"
+    }
+  },
+  "updated_adapter_sha256": "6d10f13938c65ce7e6f45b2e43e82c7b988ba3e2f404c907637766adcce2adf3",
+  "adapter_checkpoint_sha256": "ddd9336109fc9d3bd362ece7cab077ea3b55e60dda296938e9bfcca0f15327a7",
+  "base_sha256_after": "c464f23bb1401491a5322ec14b8b2b0a0b36b9a9cf50b8a07104efcbf5377010",
+  "base_parameters_unchanged": true,
+  "training_state_sha256": "ffb0e7f674ec3616b564ce98057196256f085a49d9b7a60d3f2e8e4ea40eeb49",
+  "elapsed_seconds": 159.32509295799537
+}

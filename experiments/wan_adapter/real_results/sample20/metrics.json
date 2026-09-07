@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "purpose": "Matched base and trained-adapter planned clips from initial observed RGB only",
+  "protocol": "worldline-wan-atrium-17-v1",
+  "split": "single-layout development",
+  "independent_layouts": 1,
+  "causal_streaming": false,
+  "persistent_memory": false,
+  "torch": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "device": "mps",
+  "max_seconds": 900.0,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "automatic_mps_cpu_fallback": "0",
+  "core_dtype": "float16",
+  "adapter_dtype": "float32",
+  "timings": [
+    {
+      "stage": "load_frozen_core",
+      "seconds": 6.560442042013165
+    },
+    {
+      "stage": "base_denoise",
+      "seconds": 211.27451524999924
+    },
+    {
+      "stage": "trained_denoise",
+      "seconds": 209.02615366701502
+    },
+    {
+      "stage": "verify_frozen_core",
+      "seconds": 2.7934359169739764
+    },
+    {
+      "stage": "load_official_vae",
+      "seconds": 0.4717708750104066
+    },
+    {
+      "stage": "base_decode",
+      "seconds": 27.799186958000064
+    },
+    {
+      "stage": "trained_decode",
+      "seconds": 27.21814133299631
+    }
+  ],
+  "peaks_sampled": {
+    "rss_bytes": 4018487296,
+    "mps_active_bytes": 5744577280,
+    "mps_driver_bytes": 13080657920
+  },
+  "window": "open-0000",
+  "capture_cache_manifest_sha256": "8d7675d96f9f71d27cd4107c9fd2540b05ebc02eb6834c24a98dcf6a76802a5f",
+  "text": {
+    "manifest_sha256": "4b6bd57b9eda50eb1a27879918565446d0de85e66d0733cb9c4d1bf484a92600",
+    "embeddings_file_sha256": "fb9fe2cc1383e1c258e7774ac2c11f90ffa2c014ac3a12656f8cdc4b4e749ab7",
+    "positive_id": "atrium",
+    "negative_id": "unconditional",
+    "token_lengths": [
+      25,
+      1
+    ],
+    "padding": "Pass unpadded context; frozen Wan pads to512 before projection, context_lens=None"
+  },
+  "training_report_sha256": "00af1eae55faf5d6881e624f0ee9f239c2467a33b5466eded741a480db6715c7",
+  "training_updates": 10,
+  "source_sha256": {
+    "sample_clip.py": "56f362cc7ac2d4e5595246d2c40d70b1027087d50ac1390dd12f43452a456a94",
+    "training_common.py": "8b3e64a8eff3c7258bcdabf09e29601234b1b9d8b968976483f40389eaad342a",
+    "adapter.py": "c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8",
+    "compat.py": "c613d2347aed07e03e027be59ec77cf7c432c9a7278b9a51a91e9b06f18290e4",
+    "PROTOCOL.md": "b2f2ae4be3171f226194811e771301350614fb9ce364fc3de7db15fbbaaadf85"
+  },
+  "seed": 20260908,
+  "sampler": {
+    "method": "Euler flow matching",
+    "steps": 20,
+    "shift": 5.0,
+    "cfg": 5.0,
+    "sigmas": [
+      1.0,
+      0.9895833333333334,
+      0.9782608695652175,
+      0.9659090909090908,
+      0.9523809523809523,
+      0.9375,
+      0.9210526315789475,
+      0.9027777777777778,
+      0.8823529411764706,
+      0.8593749999999999,
+      0.8333333333333334,
+      0.8035714285714286,
+      0.7692307692307692,
+      0.7291666666666666,
+      0.6818181818181819,
+      0.625,
+      0.5555555555555556,
+      0.46875000000000006,
+      0.35714285714285715,
+      0.20833333333333334,
+      0.0
+    ],
+    "solver_dtype": "float32",
+    "denoiser_dtype": "float16",
+    "timestep": "1000*sigma",
+    "velocity": "v_empty + cfg*(v_atrium-v_empty)",
+    "update": "x_next=x+(sigma_next-sigma)*velocity",
+    "prefix": "first observed latent clamped before every denoiser and after every Euler update",
+    "cfg_conditioning": "identical observed image and ordered actions on both text passes"
+  },
+  "generation_inputs": [
+    "independently encoded first observed RGB",
+    "16 planned actual commands",
+    "genuine text context",
+    "seeded Gaussian noise"
+  ],
+  "future_target_values_loaded": false,
+  "renderer_after_initialization": false,
+  "claims": "Single-layout development comparison only; not scene generalization, causal streaming or persistent memory",
+  "clips": [
+    {
+      "label": "base",
+      "denoise_seconds": 211.27632254202035,
+      "adapter_sha256": "d8aa1acec5747a61390f9e12acd63fcb1cc34dc15d66842c4bb002de45f0bd5b"
+    },
+    {
+      "label": "trained",
+      "denoise_seconds": 209.0280672920053,
+      "adapter_sha256": "6d10f13938c65ce7e6f45b2e43e82c7b988ba3e2f404c907637766adcce2adf3"
+    }
+  ],
+  "foundation": {
+    "repository": "Wan-AI/Wan2.1-T2V-1.3B",
+    "revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+    "source_sha256": "96b6b242ca1c2f24e9d02cd6596066fab6d310e2d7538f33ae267cb18d957e8f",
+    "config_sha256": "ab37994c43740513f94b3ba6233a784035a67b43c8cde83c8f31aa90468c67ce",
+    "converted_base_sha256": "c464f23bb1401491a5322ec14b8b2b0a0b36b9a9cf50b8a07104efcbf5377010",
+    "loaded_keys": 825,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameters": 1418996800
+  },
+  "generated_latents_sha256": "ba164a9bd56120a8cefb5057b69f8bcac2e842207f1ffa172cd36e76643d8bd2",
+  "base_sha256_after": "c464f23bb1401491a5322ec14b8b2b0a0b36b9a9cf50b8a07104efcbf5377010",
+  "comparison_sha256": "217a2f0fff90842e0b747be999baddb36c0ba85944272a0ab3f6c013c4140c15",
+  "elapsed_seconds": 489.8037631670013
+}

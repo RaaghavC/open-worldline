@@ -1,0 +1,9 @@
+Wan core copyright 2024-2025 The Alibaba Wan Team Authors.
+Selected core implementation extracted from shengshu-ai/minWM at
+75322cc41e1d8386b32919a54a058d7841acbf90 under Apache License 2.0.
+Original file headers are retained. vendor/extraction.patch documents edits.
+The source does not bundle pretrained model weights.
+
+The original Worldline adapter, compatibility layer, tests and profiling
+program are new code. They do not make the externally pretrained Wan
+foundation an originally trained Worldline foundation.

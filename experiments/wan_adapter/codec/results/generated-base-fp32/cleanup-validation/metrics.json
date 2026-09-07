@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "purpose": "Small spatial crop validates allocator hook and FP32 MPS against unmodified CPU VAE",
+  "weights_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+  "latents_sha256": "ba164a9bd56120a8cefb5057b69f8bcac2e842207f1ffa172cd36e76643d8bd2",
+  "new_latent_generation": false,
+  "crop": "base[:, :, :, :4, :4]",
+  "source_sha256": {
+    "validate_decode_policy.py": "8dc154607c494181c18887fb0c31d182efac2a1067d13bffdc1c793ea0d568ec",
+    "decode_policy.py": "ded64fa60ba8a2fde21b81a84386506fac0c18060be38c9e71663c026a808445",
+    "helper.py": "df5ac96a583180ea1e8b82edf0552b3d35e2d7a7b14a33e4117d43efb4bdf735"
+  },
+  "input_shape": [
+    1,
+    16,
+    5,
+    4,
+    4
+  ],
+  "output_shape": [
+    1,
+    3,
+    17,
+    32,
+    32
+  ],
+  "cpu_hook_max_abs": 0.0,
+  "cpu_hook": {
+    "completed_temporal_chunks": 5
+  },
+  "mps_cpu_max_abs": 1.214444637298584e-05,
+  "mps_cpu_mean_abs": 6.766959472770395e-07,
+  "mps_hook": {
+    "completed_temporal_chunks": 5
+  },
+  "mps_cpu_tolerance": {
+    "atol": 0.002,
+    "rtol": 0.002
+  },
+  "finite": true,
+  "hooks_remaining": 0,
+  "seconds": 3.9505301249737386
+}

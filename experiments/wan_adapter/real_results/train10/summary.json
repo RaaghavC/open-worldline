@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "completed_updates": 10,
+  "single_architectural_layout": true,
+  "split": "development",
+  "real_vae_latents_and_real_UMT5_context": true,
+  "base_parameters_frozen": true,
+  "original_adapter_parameters": 1349376,
+  "mean_update_seconds": 12.253276383396587,
+  "fixed_development_flow_mse": {
+    "untrained_before": 0.1119067519903183,
+    "trained_after": 0.09817049652338028,
+    "shuffled_actions": 0.09821542352437973,
+    "adapter_observation_input_zeroed": 0.10269045829772949
+  },
+  "relative_development_mse_reduction_percent": 12.274733403151957,
+  "relative_mse_increase_from_shuffled_actions_percent": 0.04576425972211608,
+  "interpretation": "Development fitting demonstrated. Very small shuffled-action effect does not establish useful action control. These are latent flow predictions, not generated-video quality metrics.",
+  "optimizer_rng_state_bundled": false,
+  "unchanged_external_foundation_bundled": false,
+  "measured_interval_seconds": 159.32509295799537,
+  "timing_scope": "After CPU real-cache/text validation; includes model loading, evaluation, updates and final verification/saving"
+}

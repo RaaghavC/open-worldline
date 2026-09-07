@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 37.50675924998359,
+  "sampled_peak_rss_bytes": 1119289344,
+  "sampled_minimum_available_bytes": 7689879552,
+  "sampling_interval_seconds": 0.5,
+  "limits": {
+    "max_seconds": 600.0,
+    "max_rss_gib": 17.0,
+    "min_available_gib": 2.0
+  },
+  "scope": "Monitors encoder process RSS and host available RAM; sampled values can miss short peaks."
+}

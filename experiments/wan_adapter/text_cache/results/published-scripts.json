@@ -1,0 +1,12 @@
+{
+  "files": {
+    "encoder.py": "2e055ca0472958a354eb74db83ec089d6f67c4705dbdef853a532049ba9a1bd4",
+    "worker.py": "1cb562f650532e8dfa2f8f4046266285e2c8ad87203db15805bf52fb62e997dd",
+    "run_cache.py": "02e27782a78766b47656f0ce13bfa8ac489dd1d4d2d83bfaaccc2a56daaedca8",
+    "cache.py": "e9cc09ed3f600ded2c4ab7f5a2e64fcd613689a2578f0e4767ad09a789a1cfff",
+    "fetch_weights.py": "4c69d4aed5670c625e15a69c11b1c16014d128320c0e76ab05108042d16a13be",
+    "probe.py": "71afba1db2f297c2a782fa5f9d67f3ae60f962477801ed5458a912570edca0b3",
+    "prompts.json": "d845b5bb35a15e6432e57c9e1aae2457533553e1b3ee0d0f159449c5bd8263b7"
+  },
+  "note": "Encoder and worker match the executed hashes in manifest.json. Cache consumer was strengthened afterward to reject dtype-conversion overflow; measured outputs are unchanged."
+}

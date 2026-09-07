@@ -4,7 +4,7 @@ An original, locally trained spatial generator with a 3D explorer, learned ecosy
 
 **Research prototype. Genie 3 parity has not been established.** Worldline generates small terrain fields and learns synthetic water, vegetation and heat transitions. Three.js renders those fields. It is not a general-purpose neural video model, and it does not claim three new scientific breakthroughs.
 
-The editor requires no inference API, hosted generative service, external foundation-model weights, or API key. The original source, trained checkpoints, training data generator, evaluation code, and research review are included under Apache-2.0. Optional external-model measurement scripts are separate, with their own attribution and download instructions.
+The editor requires no inference API, hosted generative service, external foundation-model weights, or API key. Its original source, trained checkpoints, training data generator, evaluation code, and research review use Apache-2.0. Optional experiments have separate source, data and external-weight notices, as listed below.
 
 ![A generated alien landscape in the Worldline browser renderer](docs/images/alien-preview.png)
 
@@ -81,6 +81,8 @@ The separate [original RGB experiment](docs/room-rgb-experiment.md) trains actio
 
 The [external neural baseline study](docs/neural-baseline-study.md) records actual local runs of DIAMOND and WorldFM, with pinned artifacts and reproduction scripts. Those external models are not used by the editor and their weights are not redistributed here.
 
+The [512 × 288 video-adapter pilot](docs/wan-atrium-pilot.md) trains an original action and starting-image adapter through an attributed, frozen Wan2.1 base on the Mac. Ten real-data updates completed, but generated clips fail the door interaction and camera turn and contain strong texture artifacts. Both perform worse than repeating the starting image in the reported RGB comparison. Original adapter weights, complete failure videos, real training inputs and measurements are included. The [132-frame Atrium capture](experiments/atrium_data/README.md) provides original Blender training data with independently checked camera/action labels. The [foundation training audit](docs/foundation-training-audit.md) and [data source audit](docs/data-source-audit.md) explain available training recipes and license evidence.
+
 The [terrain-data scaling proposal](docs/cloud-experiment.md) specifies a paired comparison of training dataset sizes, fresh evaluation data, acceptance thresholds and optional compute costs. That proposed experiment has not been run or scheduled.
 
 ## Project layout
@@ -95,12 +97,14 @@ web/                   Interactive browser renderer and controls
 checkpoints/           Original learned weights and training measurements
 experiments/room_world/ Original RGB prediction experiment and weights
 experiments/baselines/  Optional external-model measurement scripts
+experiments/atrium_data/ Original higher-resolution capture and validation
+experiments/wan_adapter/ Original adapter with an attributed frozen Wan core
 tests/                 Correctness tests and local benchmark runner
 docs/                  Research, model card, evaluation and limitations
 ```
 
 ## License and contributions
 
-Original source and original synthetic-data-trained weights: [Apache-2.0](LICENSE). Dependencies retain their own licenses. Papers in the research review are references, not redistributed model dependencies. No association or endorsement by those authors is implied.
+The editor, original neural architectures and their original synthetic-data-trained weights use [Apache-2.0](LICENSE). The separately licensed Atrium Blender scripts use [GPL-3.0-or-later](experiments/atrium_data/LICENSE); the original Atrium scene and generated data use [CC0-1.0](experiments/atrium_data/DATA-LICENSE). Its independent validator uses Apache-2.0. Optional pretrained-model experiments retain their [source and weight notices](experiments/wan_adapter/NOTICE). Dependencies retain their own licenses. Papers in the research review are references; their inclusion alone does not make them model dependencies. No association or endorsement by those authors is implied.
 
 Contributions should include reproducible measurements, an explicit learned/programmed distinction and relevant prior art. A visual example alone is insufficient evidence of world-model accuracy or scientific novelty.

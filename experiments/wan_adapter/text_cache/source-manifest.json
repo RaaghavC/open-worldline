@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/shengshu-ai/minWM",
+  "revision": "75322cc41e1d8386b32919a54a058d7841acbf90",
+  "origin": "Wan2.1 wan/modules/t5.py and wan/modules/tokenizers.py; Alibaba Wan Team copyright retained",
+  "modifications": [
+    "Removed T5EncoderModel wrapper, which allocated the complete model before loading and used unrestricted torch.load. Neural layer definitions and math remain unchanged."
+  ],
+  "files": [
+    {
+      "upstream_path": "minwm/modeling/wan21/t5.py",
+      "upstream_sha256": "617629759f2b9de0e609ebd0e052eccf75582db6ae8048492f54ed3e6b32913a",
+      "local_path": "vendor/t5.py",
+      "local_sha256": "b8f2df0392b68717436b3db25323f04d15aaf0710713e1c7d3ceffd82f78d44d"
+    },
+    {
+      "upstream_path": "minwm/modeling/wan21/tokenizers.py",
+      "upstream_sha256": "4e1fee1659fcd345fbc4f8e68263145a091b936744ecb6a7ebaecbe1e429f215",
+      "local_path": "vendor/tokenizers.py",
+      "local_sha256": "4e1fee1659fcd345fbc4f8e68263145a091b936744ecb6a7ebaecbe1e429f215"
+    }
+  ]
+}

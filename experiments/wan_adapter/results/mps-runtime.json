@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "purpose": "synthetic runtime and adapter-gradient probe only",
+  "quality_evidence": false,
+  "causal_streaming": false,
+  "persistent_memory": false,
+  "observation": "first latent frame only, pooled to 32 conditioning tokens",
+  "pose_conditioning": false,
+  "text_embeddings": "synthetic normal tensors, not UMT5 outputs",
+  "latent_input": "synthetic normal tensors, not encoded video",
+  "weights_repository": "Wan-AI/Wan2.1-T2V-1.3B",
+  "weights_revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+  "weights_source_sha256": "96b6b242ca1c2f24e9d02cd6596066fab6d310e2d7538f33ae267cb18d957e8f",
+  "source_dtype": "float32",
+  "compute_dtype": "float16",
+  "adapter_dtype": "float32",
+  "device": "mps",
+  "torch": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "mps_automatic_cpu_fallback": "0",
+  "seed": 20260907,
+  "pixel_equivalent_shape": [
+    1,
+    17,
+    288,
+    512
+  ],
+  "latent_shape": [
+    1,
+    16,
+    5,
+    36,
+    64
+  ],
+  "patch_tokens": 2880,
+  "text_tokens": 512,
+  "action_shape": [
+    1,
+    16,
+    6
+  ],
+  "action_order": "four ordered intervals per later latent frame",
+  "checkpointing": "per Wan block, non-reentrant",
+  "adapter_blocks": [
+    9,
+    19,
+    29
+  ],
+  "max_seconds": 600,
+  "max_memory_gib": 18.0,
+  "steps": [
+    {
+      "index": 0,
+      "forward_seconds": 8.458066958992276,
+      "backward_seconds": 10.535799540986773,
+      "optimizer_and_gradient_validation_seconds": 0.42168925001169555,
+      "total_seconds": 19.415555749990745,
+      "synthetic_mse": 3.253268241882324,
+      "adapter_gradient_norm_before_clipping": 0.37298285961151123,
+      "adapter_gradient_tensors": 42
+    }
+  ],
+  "loaded_keys": 825,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "base_parameters": 1418996800,
+  "converted_base_sha256_before": "c464f23bb1401491a5322ec14b8b2b0a0b36b9a9cf50b8a07104efcbf5377010",
+  "adapter_parameters": 1349376,
+  "load_seconds": 7.498781709000468,
+  "peaks_sampled": {
+    "rss_bytes": 4127375360,
+    "mps_allocated_bytes": 4090288640,
+    "mps_driver_bytes": 5932744704
+  },
+  "converted_base_sha256_after": "c464f23bb1401491a5322ec14b8b2b0a0b36b9a9cf50b8a07104efcbf5377010",
+  "base_parameters_unchanged": true,
+  "initial_adapter_sha256": "d8aa1acec5747a61390f9e12acd63fcb1cc34dc15d66842c4bb002de45f0bd5b",
+  "updated_adapter_sha256": "47244657b6e2c3ff9e75aec7be5ea46a161d334abeadf6edf94ca56b0dfcb3d6",
+  "adapter_checkpoint_sha256": "c9c4def833679c8d39abd0c4999db268f180a472452d9f2d1c0073100f2082dd",
+  "total_seconds": 31.097347041999456
+}

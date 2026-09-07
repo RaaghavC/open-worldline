@@ -1,0 +1,6 @@
+# A unified diff requires a leading context marker on otherwise blank lines.
+experiments/wan_adapter/vendor/extraction.patch -whitespace
+
+# Preserve the hashed upstream file endings.
+experiments/wan_adapter/text_cache/vendor/t5.py whitespace=-blank-at-eof
+experiments/wan_adapter/vendor/wan21/blocks.py whitespace=-blank-at-eof

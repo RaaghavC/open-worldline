@@ -1,0 +1,10 @@
+.venv/
+external-weights/
+__pycache__/
+*.pyc
+*.safetensors
+!data_cache/*.safetensors
+!real_results/train10/trained-adapter.safetensors
+!real_results/train10/untrained-adapter.safetensors
+!real_results/train10/development-flow-predictions.safetensors
+!real_results/sample20/generated-latents.safetensors

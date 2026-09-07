@@ -1,0 +1,26 @@
+{
+  "schema": "worldline-real-adapter-training-evidence-v1",
+  "date": "2026-09-07",
+  "source_snapshot": "measured-source",
+  "source_snapshot_taken": "before the executed real-data training run",
+  "external_foundation": "Wan-AI/Wan2.1-T2V-1.3B, Apache-2.0, separate download required",
+  "adapter_license": "Apache-2.0",
+  "data_license": "CC0-1.0",
+  "checkpoint_meaning": "Original adapter after ten updates on one original development scene",
+  "artifact_sha256": {
+    "metrics.json": "00af1eae55faf5d6881e624f0ee9f239c2467a33b5466eded741a480db6715c7",
+    "summary.json": "0f7a23750fa71bd79a71ec0e9f0eaf4d0da13e76e0017eef29851759a01f392d",
+    "trained-adapter.safetensors": "ddd9336109fc9d3bd362ece7cab077ea3b55e60dda296938e9bfcca0f15327a7",
+    "untrained-adapter.safetensors": "0c2b68860053ad36e6d56d727ff497575574139f04e38b93d8a083a707c2900a",
+    "memory.jsonl": "af068a842a6ce179ca84cbb99bafb5582b677337e0a9a56fd96bc3543df8dd31",
+    "development-flow-predictions.safetensors": "5676e3e42162272fc0dc15c99ac96d9b47a541f03bc82fc7a3e747c603a4a483",
+    "measured-source/adapter.py.txt": "c40596379c0eafcf7255fffdcc96797e242b54082a90d7a20dd377257ebdc2a8",
+    "measured-source/wan-core-source-manifest.json": "0598c72ee5ec4d9530759f3c93b71f7e62901072604253d36161dc339b3a7052",
+    "measured-source/runtime-requirements-lock.txt": "000d2987fd180586a52748c2960fc99e75b5be49eb4c76d52b26b6aa5ce0fb8e",
+    "measured-source/TRAINING.md.txt": "66c83a1c5c7b834789e3ca58c6f766efbf10a4ce3cda2bc36b9176b85e6b4086",
+    "measured-source/compat.py.txt": "c613d2347aed07e03e027be59ec77cf7c432c9a7278b9a51a91e9b06f18290e4",
+    "measured-source/PROTOCOL.md.txt": "b2f2ae4be3171f226194811e771301350614fb9ce364fc3de7db15fbbaaadf85",
+    "measured-source/training_common.py.txt": "8b3e64a8eff3c7258bcdabf09e29601234b1b9d8b968976483f40389eaad342a",
+    "measured-source/train_clip.py.txt": "11ded4922f1e281338b23b7f9547122130d203922f7e0693d0e34a2d175aac80"
+  }
+}

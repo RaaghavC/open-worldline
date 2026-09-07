@@ -1,0 +1,46 @@
+# Ten-update original Atrium adapter pilot
+
+The executable development protocol is [PROTOCOL.md](PROTOCOL.md). This pilot trains only the original 1,349,376-parameter action/initial-observation adapter. The 1,418,996,800-parameter Wan foundation is externally pretrained, attributed and frozen. All eight windows come from the same atrium layout and remain development data.
+
+The selected order is closed-0000, open-0000, closed-0008, open-0008, closed-0032, open-0032, closed-0049, open-0049, then the first two again. Each window contains 17 original 512 x 288 RGB frames and 16 ordered six-channel commands. The real-cache builder must pass its 11 VAE causality/cache checks. Real UMT5 caches must contain the agreed `atrium` prompt and the actual empty-string encoding.
+
+The first run uses ten updates, batch one, seed 20260907, AdamW with learning rate 1e-4, betas (0.9,0.999), epsilon 1e-8, weight decay 0.01 and global gradient clipping at 1.0. Sigma is sampled uniformly from [0.05,0.95]. Future target latents are mixed with independent Gaussian noise as `(1-sigma)*target + sigma*noise`, and the model predicts `noise-target`. Only latent frames 1 through 4 contribute to MSE. The separately encoded first observed frame overwrites latent frame 0 and supplies the adapter observation input. No clean future latent enters a conditioning branch.
+
+Before training, the actual zero-output adapter is compared against the untouched frozen core. The fixed development evaluation uses open-0000, sigma 0.5 and noise seed 20261907. It retains the untrained prediction, trained prediction, a command permutation that actually changes the command tensor, and a zeroed adapter observation input. The latter still keeps the observed prefix clamped, and learned projection biases can produce nonzero observation tokens. These are flow-prediction controls, not semantic correctness scores.
+
+## Run after the real caches pass
+
+From this directory in the isolated environment:
+
+```sh
+python -m pip install -r requirements-real.txt
+python train_clip.py \
+  --weights /path/to/official-wan-weights \
+  --capture-cache /path/to/verified-atrium-cache \
+  --text-cache /path/to/verified-umt5-cache \
+  --output /path/to/new-training-run \
+  --device mps --steps 10 --seed 20260907 --max-seconds 900
+```
+
+Use a new output directory. The runner checks configuration and foundation hashes, all cache file/tensor hashes, genuine text and protocol identities, finite losses/gradients/updated parameters, and unchanged base weights. It retains initial and trained adapters, optimizer/RNG state, fixed development predictions, loss records and memory/timing samples. It stops after 900 seconds, above 18 GiB process/Metal memory, or below 2 GiB available system memory. These memory measures overlap and are not additive.
+
+## Matched planned-clip generation
+
+The declared comparison generates two clips for open-0000, one with the untrained adapter and one after the ten updates. Both use noise seed 20260908, 20 Euler steps, a shift of 5 and text guidance of 5. The shifted schedule is `5*s/(1+4*s)` for a uniform grid from 1 to 0. The solver accumulates in float32; the frozen denoiser uses float16. The update is `x += (next_sigma-sigma)*velocity`.
+
+Both text-guidance passes receive identical initial observation and action tensors. The negative text is the real empty-string encoding. The first observed latent is clamped before every denoiser evaluation and after every Euler update. This is an explicitly added image-continuation constraint. It is not attributed to the untouched T2V model or the initial zero-output adapter.
+
+```sh
+python sample_clip.py \
+  --weights /path/to/official-wan-weights \
+  --capture-cache /path/to/verified-atrium-cache \
+  --text-cache /path/to/verified-umt5-cache \
+  --training-run /path/to/completed-training-run \
+  --output /path/to/new-sample-run \
+  --device mps --seed 20260908 --denoise-steps 20 --shift 5 --cfg 5 \
+  --max-seconds 900
+```
+
+The sampling reader materializes only `observation` and `actions` from the cache. It verifies the whole file's integrity but never materializes future target tensor values. The decoder is loaded only after the denoising transformer is released. The output includes every generated PNG, a preview loop, generated latent hashes and a base/trained comparison. Preview playback rate is not generation speed.
+
+Neither ten updates nor one matched clip pair can establish scene generalization, reliable object interaction, persistent memory, causal streaming, or frontier visual quality. Actual measured results and inspected generated frames determine what this development run supports.

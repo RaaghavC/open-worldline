@@ -1,0 +1,8 @@
+This component uses external pretrained UMT5 weights distributed by the Alibaba Wan Team.
+It is not an original Worldline text model. The extracted encoder and tokenizer code
+come from shengshu-ai/minWM at the revision recorded in source-manifest.json,
+which attributes these modules to Wan2.1 and the Alibaba Wan Team (2024-2025).
+The T5 implementation also identifies its origin in Hugging Face Transformers T5.
+Apache-2.0 license copies for minWM code and the official Wan weight distribution
+are included separately in vendor/. All upstream copyright notices are retained.
+Original loading, caching, tests and measurement code in this directory is Apache-2.0.

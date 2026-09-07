@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/shengshu-ai/minWM",
+  "revision": "75322cc41e1d8386b32919a54a058d7841acbf90",
+  "files": [
+    {
+      "upstream_path": "minwm/modeling/wan21/model.py",
+      "local_path": "vendor/wan21/model.py",
+      "upstream_sha256": "8fa94d676a57db0cbe23115f53ec28c6b9a70ab081d66796c55410f0973881e7",
+      "local_sha256": "1be3279ebcf38acb67fbd2646366d91d9d524b627fd828986d64e20226b5e692"
+    },
+    {
+      "upstream_path": "minwm/modeling/wan21/attention.py",
+      "local_path": "vendor/wan21/attention.py",
+      "upstream_sha256": "e0480d0165e41f2adc4b32aedf96de3f8eb1893b368faa43d473b7903ac4db69",
+      "local_sha256": "5155a63c71dffb96fd9191c2b5c9795f85ba5670c67afe48aa2f70e334de3751"
+    },
+    {
+      "upstream_path": "minwm/modeling/wan21/blocks.py",
+      "local_path": "vendor/wan21/blocks.py",
+      "upstream_sha256": "859b465493f163f37f837b62a894679975a055be9b0879178347e04385eb96ac",
+      "local_sha256": "1e2ac628cb26fa76eba340684fe928327b587d25a0e61cc1e5c597f0cc2c21f8"
+    },
+    {
+      "upstream_path": "minwm/modeling/wan21/layers/norm.py",
+      "local_path": "vendor/wan21/layers/norm.py",
+      "upstream_sha256": "25a9ea21f54e85f208d0e3219bd18fa9be9ce0f53890e8cf85ae8b2ffd42a16b",
+      "local_sha256": "0685959690294644642e3fb4bfd58ada118e8cf38c5d2fb15c875eb8518e3a3b"
+    },
+    {
+      "upstream_path": "minwm/modeling/wan21/layers/rope.py",
+      "local_path": "vendor/wan21/layers/rope.py",
+      "upstream_sha256": "1d8eef096a6695a8c721a1be387709c8ff1ef8cff2fa36df70a32927e2280d0d",
+      "local_sha256": "a1875359c7bd99308dbdaf7ff1d4718dc59e86ca792e472ea7fba1176d834ff5"
+    },
+    {
+      "upstream_path": "minwm/modeling/wan21/layers/attention.py",
+      "local_path": "vendor/wan21/layers/attention.py",
+      "upstream_sha256": "90a810c4bfb665f08e88021d916ac042ea2afcd8304974bf951e19b79f70af5a",
+      "local_sha256": "90a810c4bfb665f08e88021d916ac042ea2afcd8304974bf951e19b79f70af5a"
+    },
+    {
+      "upstream_path": "minwm/modeling/common/norm.py",
+      "local_path": "vendor/common/norm.py",
+      "upstream_sha256": "fdd503cbb29e540630945bedf34e3e5ced48b24b55e0842eb26a3ff0e513cd31",
+      "local_sha256": "a4fa861f315c0c89171ae41c627b7b92a36258dd5d30d7dbe1c3cb59965460cd"
+    },
+    {
+      "upstream_path": "minwm/modeling/common/embedding.py",
+      "local_path": "vendor/common/embedding.py",
+      "upstream_sha256": "f4ab3987f907a712a0e7b2c6116a03a6931ac9e0b3b1cec78a38160c2aad1af9",
+      "local_sha256": "f4ab3987f907a712a0e7b2c6116a03a6931ac9e0b3b1cec78a38160c2aad1af9"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "worldline-atrium-pilot-v1",
+  "blender": "5.1.2",
+  "script_sha256": "cf794ac98a01209be8ea70b3849f5f87174f0750b2990159cb052002836f7a56",
+  "scene_seed": 51000,
+  "scene_family": "single_atrium_layout_v1",
+  "seed_scope": "Accent color and plant leaf placement only; not independent architectural layouts",
+  "dataset_license": "CC0-1.0",
+  "assets": "Original procedural geometry and materials only",
+  "render_engine": "Cycles",
+  "samples": 32,
+  "rgb_transform": {
+    "view": "AgX",
+    "look": "None",
+    "exposure": 0.0,
+    "gamma": 1.0,
+    "display": "sRGB",
+    "exr": "scene-linear"
+  },
+  "resolution": [
+    512,
+    288
+  ],
+  "protocol": "interact or wait, then24left turns,16waits,24right turns; each turn7.5degrees",
+  "interaction_semantics": "Programmed remote door toggle; no reach/contact/collision simulation",
+  "blend_sha256": "f23fdeab673f018c07746ee0f67428d4b2f906e2a294b95bd2604167d50304ab",
+  "source_manifest_sha256": "942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0",
+  "sampled_arm": "open",
+  "sampled_frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}

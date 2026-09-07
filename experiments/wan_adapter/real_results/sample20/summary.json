@@ -1,0 +1,31 @@
+{
+  "status": "completed, visual failure",
+  "conditions": "Same observed starting frame, commands, genuine texts and noise for both clips",
+  "observed_reconstructed_frames_per_clip": 1,
+  "newly_generated_future_frames_per_clip": 16,
+  "preview_playback_fps": 10,
+  "timed_interval_seconds": 489.8037631670013,
+  "timing_scope": "After CPU cache/text validation; includes model loading, denoising, decoding and artifact writes",
+  "clips": {
+    "base": {
+      "denoise_seconds": 211.27451524999924,
+      "decode_seconds": 27.799186958000064,
+      "future_frames_per_second_denoise_and_decode": 0.06692496854413395
+    },
+    "trained": {
+      "denoise_seconds": 209.02615366701502,
+      "decode_seconds": 27.21814133299631,
+      "future_frames_per_second_denoise_and_decode": 0.06772650319449718
+    }
+  },
+  "visual_findings": [
+    "Future frames are blurred and show a repeated lattice texture.",
+    "Door remains closed in inspected generated frames.",
+    "Requested leftward camera turn is not apparent.",
+    "Trained and base outputs look very similar."
+  ],
+  "interpretation": "Ten adapter updates completed a real training/generation path but did not demonstrate useful generated visual control.",
+  "future_target_values_loaded": false,
+  "external_weights_bundled": false,
+  "latent_precision": "Solver output float32; original decode float16"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "completed; visible lattice persists",
+  "same_saved_latents": true,
+  "new_generation": false,
+  "external_weights_bundled": false,
+  "comparison": "FP32 VAE floats versus saved FP16 rounded PNGs from the same generated base latents",
+  "inference": "Decoder precision is not the dominant source of the visible lattice in this saved clip. This does not identify the denoiser or sampler defect.",
+  "future_only_mae": 0.001048764138582109,
+  "mean_frame_ssim": 0.9990688842885634,
+  "decode_seconds": 27.78806958399946,
+  "peak_mps_driver_gib": 10.351043701171875,
+  "precision_scope": "VAE decode only. Generated latents remain the original float32 solver outputs from the declared FP16-denoiser adaptation.",
+  "native_wan_quality_evaluated": false,
+  "first_attempt": "Full FP32 decode with cleanup only between stages stopped at the 2 GiB available-memory guard. Original status-running metrics and watchdog stop are retained unchanged.",
+  "retry_change": "Unused MPS allocator buffers cleared after each of the five original temporal decoder calls, retaining all feature caches and official math.",
+  "small_input_validation": "CPU hook output equals unmodified CPU exactly; MPS versus CPU max absolute difference 1.21444e-5 on 17 decoded 32x32 frames."
+}

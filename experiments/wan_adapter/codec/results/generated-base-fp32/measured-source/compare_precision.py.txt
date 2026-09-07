@@ -1,0 +1,194 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Decode saved base latents with the official FP32 VAE, without generation.
+
+The comparison is against rounded PNG pixels from the completed FP16 run.
+No original future frames, text encoder or denoising transformer are loaded.
+"""
+import argparse
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import platform
+import shutil
+import sys
+import threading
+import time
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import numpy as np
+from PIL import Image, ImageDraw
+import psutil
+from safetensors import safe_open
+from skimage.metrics import structural_similarity
+import torch
+from codec.helper import OfficialWanCodec, VAE_SHA256, MEAN, STD, sha
+from codec.decode_policy import cleanup_after_temporal_chunk
+
+GIB = 1024**3
+
+
+def write_json(path, data):
+    tmp = path.with_suffix('.tmp')
+    tmp.write_text(json.dumps(data, indent=2) + '\n')
+    tmp.replace(path)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--weights', type=Path, required=True)
+    parser.add_argument('--sample-run', type=Path, required=True)
+    parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--device', choices=['mps', 'cpu'], default='mps')
+    parser.add_argument('--cleanup-each-chunk', action='store_true')
+    args = parser.parse_args()
+    if args.output.exists() or args.output.is_symlink():
+        parser.error('Output directory must be new; earlier evidence is never overwritten')
+    args.output.mkdir(parents=True)
+    torch.set_num_threads(4)
+    if args.device == 'mps':
+        if not torch.backends.mps.is_available():
+            raise RuntimeError('MPS unavailable')
+        torch.mps.set_per_process_memory_fraction(min(1., 18*GIB/torch.mps.recommended_max_memory()))
+    report = {
+        'status': 'running', 'experiment': 'FP32 decoding of unchanged saved generated base latents',
+        'device': args.device, 'dtype': 'float32', 'torch': torch.__version__, 'platform': platform.platform(),
+        'weights_sha256': VAE_SHA256, 'tensor_key': 'base',
+        'new_latent_generation': False, 'future_ground_truth_loaded': False,
+        'network_changes': 'None: official neural layers and temporal cache behavior remain unchanged',
+        'allocator_cache_policy': 'Empty unused MPS allocator cache after load and full decode only',
+        'normalization': {'mean': MEAN, 'std': STD, 'output_clamp': [-1, 1]},
+        'max_seconds': 600, 'max_memory_gib': 18, 'minimum_available_gib': 2,
+        'automatic_mps_cpu_fallback': os.environ.get('PYTORCH_ENABLE_MPS_FALLBACK', '0'),
+        'pixel_comparison': 'FP32 decoded RGB floats [0,1] versus saved rounded FP16 PNG RGB [0,1]; FP16 PNG rounding adds up to 0.5/255 per channel',
+        'elapsed_scope': 'After interpreter/import startup; includes source/input validation, loading, decode and artifact writing',
+        'timings': [],
+    }
+    if args.cleanup_each_chunk:
+        report['allocator_cache_policy'] = 'Empty unused MPS allocator cache after load, after each existing Decoder3d temporal chunk, and after full decode; no tensor or feature cache mutations'
+    started = time.perf_counter()
+    stop = threading.Event()
+    stage = ['validate-inputs']
+    peak = {'rss_bytes': 0, 'mps_active_bytes': 0, 'mps_driver_bytes': 0}
+    write_json(args.output/'metrics.json', report)
+
+    def monitor():
+        process = psutil.Process()
+        with (args.output/'memory.jsonl').open('x') as log:
+            while not stop.is_set():
+                row = {'seconds': time.perf_counter()-started, 'stage': stage[0],
+                       'rss_bytes': process.memory_info().rss, 'available_system_bytes': psutil.virtual_memory().available}
+                if args.device == 'mps':
+                    row.update(mps_active_bytes=torch.mps.current_allocated_memory(), mps_driver_bytes=torch.mps.driver_allocated_memory())
+                for key in peak:
+                    peak[key] = max(peak[key], row.get(key, 0))
+                log.write(json.dumps(row)+'\n')
+                log.flush()
+                reason = None
+                if row['seconds'] > 600:
+                    reason = 'time-cap-600-seconds'
+                elif max(row['rss_bytes'], row.get('mps_driver_bytes', 0)) > 18*GIB:
+                    reason = 'memory-cap-18-GiB'
+                elif row['available_system_bytes'] < 2*GIB:
+                    reason = 'available-system-memory-below-2-GiB'
+                if reason:
+                    write_json(args.output/'watchdog-stop.json', {'status': 'stopped', 'reason': reason, 'last_sample': row})
+                    os._exit(124)
+                stop.wait(.5)
+    thread = threading.Thread(target=monitor, daemon=True)
+    thread.start()
+
+    def timed(label, function):
+        stage[0] = label
+        if args.device == 'mps':
+            torch.mps.synchronize()
+        start = time.perf_counter()
+        output = function()
+        if args.device == 'mps':
+            torch.mps.synchronize()
+            torch.mps.empty_cache()
+        report['timings'].append({'stage': label, 'seconds': time.perf_counter()-start})
+        write_json(args.output/'metrics.json', report)
+        return output
+
+    try:
+        sampling = json.loads((args.sample_run/'metrics.json').read_text())
+        if sampling.get('status') != 'passed' or sampling.get('seed') != 20260908:
+            raise ValueError('Require the completed declared matched sampling run')
+        latent_path = args.sample_run/'generated-latents.safetensors'
+        digest = sha(latent_path)
+        if digest != 'ba164a9bd56120a8cefb5057b69f8bcac2e842207f1ffa172cd36e76643d8bd2':
+            raise ValueError('Saved generated latent file differs from the measured base/trained pair')
+        with safe_open(latent_path, framework='pt', device='cpu') as tensors:
+            latent = tensors.get_tensor('base')
+        if list(latent.shape) != [1, 16, 5, 36, 64] or latent.dtype != torch.float32 or not torch.isfinite(latent).all():
+            raise ValueError('Invalid saved base latents')
+        report.update(latent_file_sha256=digest, sampling_metrics_sha256=sha(args.sample_run/'metrics.json'),
+                      latent_shape=list(latent.shape), stored_latent_dtype=str(latent.dtype),
+                      latent_tensor_sha256=hashlib.sha256(latent.contiguous().numpy().tobytes()).hexdigest())
+        images = [args.sample_run/'base'/f'{i:04d}.png' for i in range(17)]
+        reference = np.stack([np.asarray(Image.open(path).convert('RGB'), dtype=np.float32)/255 for path in images])
+        if reference.shape != (17, 288, 512, 3):
+            raise ValueError('Expected 17 native FP16 decoder reference images')
+        report['fp16_pngs'] = [{'file': f'base/{path.name}', 'sha256': sha(path)} for path in images]
+        source_dir = args.output/'measured-source'
+        source_dir.mkdir()
+        files = [Path(__file__), Path(__file__).with_name('helper.py'), Path(__file__).with_name('decode_policy.py'), Path(__file__).parent/'vendor/wan_vae.py']
+        report['source_sha256'] = {}
+        for source in files:
+            shutil.copyfile(source, source_dir/(source.name+'.txt'))
+            report['source_sha256'][source.name] = sha(source)
+        codec = timed('load_official_vae', lambda: OfficialWanCodec(args.weights, args.device, torch.float32))
+        report.update(loaded_keys=codec.loaded_keys, missing_keys=codec.missing_keys, unexpected_keys=codec.unexpected_keys)
+        if args.cleanup_each_chunk:
+            with cleanup_after_temporal_chunk(codec) as cleanup:
+                decoded = timed('base_decode_fp32', lambda: codec.decode(latent))
+            report['allocator_hook'] = cleanup
+        else:
+            decoded = timed('base_decode_fp32', lambda: codec.decode(latent))
+        if list(decoded.shape) != [1, 3, 17, 288, 512] or not torch.isfinite(decoded).all():
+            raise RuntimeError('Invalid decoded pixels')
+        report['decoded_finite'] = True
+        values = (decoded[0].permute(1, 2, 3, 0).cpu().numpy()+1)/2
+        stage[0] = 'compare-and-save'
+        destination = args.output/'fp32'
+        destination.mkdir()
+        per_frame = []
+        for index, (fp16, fp32) in enumerate(zip(reference, values)):
+            delta = fp32.astype(np.float64)-fp16
+            mse = float(np.mean(delta**2))
+            per_frame.append({'frame': index, 'mae': float(np.mean(np.abs(delta))),
+                              'max_abs': float(np.max(np.abs(delta))), 'mse': mse,
+                              'psnr_db': 10*math.log10(1/mse) if mse else None,
+                              'ssim': float(structural_similarity(fp16, fp32, data_range=1., channel_axis=-1,
+                                   gaussian_weights=True, sigma=1.5, use_sample_covariance=False))})
+            Image.fromarray(np.rint(fp32*255).clip(0, 255).astype(np.uint8)).save(destination/f'{index:04d}.png')
+        delta = values.astype(np.float64)-reference
+        report.update(per_frame=per_frame, mae=float(np.mean(np.abs(delta))),
+                      future_only_mae=float(np.mean(np.abs(delta[1:]))), max_abs=float(np.max(np.abs(delta))),
+                      mse=float(np.mean(delta**2)), mean_frame_ssim=float(np.mean([r['ssim'] for r in per_frame])))
+        canvas = Image.new('RGB', (1024, 3*312), (239, 238, 230))
+        draw = ImageDraw.Draw(canvas)
+        for row, index in enumerate([0, 8, 16]):
+            y = row*312
+            draw.text((8, y+5), f'Saved FP16 decode, frame {index}', fill=(20, 20, 20))
+            draw.text((520, y+5), f'Same latents, FP32 decode, frame {index}', fill=(20, 20, 20))
+            canvas.paste(Image.open(images[index]), (0, y+24))
+            canvas.paste(Image.open(destination/f'{index:04d}.png'), (512, y+24))
+        canvas.save(args.output/'comparison.png')
+        report['output_sha256'] = {str(path.relative_to(args.output)): sha(path) for path in sorted(destination.glob('*.png'))}
+        report['output_sha256']['comparison.png'] = sha(args.output/'comparison.png')
+        report['status'] = 'passed'
+    except BaseException as error:
+        report.update(status='failed', error_type=type(error).__name__, error=str(error))
+        raise
+    finally:
+        stop.set()
+        thread.join(timeout=2)
+        report.update(elapsed_seconds=time.perf_counter()-started, peaks_sampled=peak)
+        write_json(args.output/'metrics.json', report)
+    print(json.dumps({key: value for key, value in report.items() if key not in ['per_frame', 'output_sha256', 'fp16_pngs']}, indent=2))
+
+
+if __name__ == '__main__':
+    main()

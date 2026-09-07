@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "pretrained_weights": false,
+  "quality_evidence": false,
+  "torch": "2.5.1",
+  "rope_max_abs_error": 2.384185791015625e-07,
+  "rope_gradient_max_abs_error": 9.5367431640625e-07,
+  "full_tiny_core_max_abs_error": 4.76837158203125e-07,
+  "full_tiny_core_gradient_max_abs_error": 1.0477378964424133e-09,
+  "zero_init_bit_exact": true,
+  "checkpoint_gradient_max_abs_error": 0.0,
+  "ordered_action_mean_abs_difference_after_one_update": 0.007212856784462929,
+  "all_adapter_gradients_finite": true,
+  "base_parameters_unchanged": true,
+  "base_sha256": "4ffdcffe691041a4321891b48c5daec9b7f0ccde67fc695ab781d93f303bf466",
+  "note": "Random tiny core, synthetic tensors, numerical and gradient checks only."
+}

@@ -1,0 +1,154 @@
+{
+  "status": "running",
+  "experiment": "FP32 decoding of unchanged saved generated base latents",
+  "device": "mps",
+  "dtype": "float32",
+  "torch": "2.5.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "weights_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+  "tensor_key": "base",
+  "new_latent_generation": false,
+  "future_ground_truth_loaded": false,
+  "network_changes": "None: official neural layers and temporal cache behavior remain unchanged",
+  "allocator_cache_policy": "Empty unused MPS allocator cache after load and full decode only",
+  "normalization": {
+    "mean": [
+      -0.7571,
+      -0.7089,
+      -0.9113,
+      0.1075,
+      -0.1745,
+      0.9653,
+      -0.1517,
+      1.5508,
+      0.4134,
+      -0.0715,
+      0.5517,
+      -0.3632,
+      -0.1922,
+      -0.9497,
+      0.2503,
+      -0.2921
+    ],
+    "std": [
+      2.8184,
+      1.4541,
+      2.3275,
+      2.6558,
+      1.2196,
+      1.7708,
+      2.6052,
+      2.0743,
+      3.2687,
+      2.1526,
+      2.8652,
+      1.5579,
+      1.6382,
+      1.1253,
+      2.8251,
+      1.916
+    ],
+    "output_clamp": [
+      -1,
+      1
+    ]
+  },
+  "max_seconds": 600,
+  "max_memory_gib": 18,
+  "minimum_available_gib": 2,
+  "automatic_mps_cpu_fallback": "0",
+  "pixel_comparison": "FP32 decoded RGB floats [0,1] versus saved rounded FP16 PNG RGB [0,1]; FP16 PNG rounding adds up to 0.5/255 per channel",
+  "elapsed_scope": "After interpreter/import startup; includes source/input validation, loading, decode and artifact writing",
+  "timings": [
+    {
+      "stage": "load_official_vae",
+      "seconds": 0.8366304170049261
+    }
+  ],
+  "latent_file_sha256": "ba164a9bd56120a8cefb5057b69f8bcac2e842207f1ffa172cd36e76643d8bd2",
+  "sampling_metrics_sha256": "3d8c2bc316650636e806a418fa11e35b32553131e306647074fd7122a92ea148",
+  "latent_shape": [
+    1,
+    16,
+    5,
+    36,
+    64
+  ],
+  "stored_latent_dtype": "torch.float32",
+  "latent_tensor_sha256": "453410b794767c1b28af929039e9c382230336611c578f1dd5b9a6b90d09bbca",
+  "fp16_pngs": [
+    {
+      "file": "base/0000.png",
+      "sha256": "3d1973d3e19ca3d8a77f394dc20a2b37457c229fd641e65a23bed99f8fb28688"
+    },
+    {
+      "file": "base/0001.png",
+      "sha256": "bada846c35ec58f976632ed22026d4c5858e1ad2ac587df9eb76457f73f7302c"
+    },
+    {
+      "file": "base/0002.png",
+      "sha256": "1c754dab19ffbf1ed9e8a2b7810d329735d6a5081d151f3fed22246fee70e05e"
+    },
+    {
+      "file": "base/0003.png",
+      "sha256": "465e4e222854e43ccfc319fb59258c87ec6682411511beccdf840688da14dc45"
+    },
+    {
+      "file": "base/0004.png",
+      "sha256": "4b63ab749d27c1b63a904972dc9561546ba827400ec49896c751e6121261219e"
+    },
+    {
+      "file": "base/0005.png",
+      "sha256": "8e635bdf9b5dfec163921a593b7b7514e143002cbff3c91d42c11cdf932f4b90"
+    },
+    {
+      "file": "base/0006.png",
+      "sha256": "00ce687c4d1aeb305e84a6574ed4ac56ad4ebea441dd87e9f6327b68e5f58915"
+    },
+    {
+      "file": "base/0007.png",
+      "sha256": "9bcbff977cf42e09cbbb24ebde6a50ac4931aea0e65b529946d3cdca2111a9b6"
+    },
+    {
+      "file": "base/0008.png",
+      "sha256": "6072e9df16cf701aedd648be7651c486caca6204d9ab19cd57448077fedc4879"
+    },
+    {
+      "file": "base/0009.png",
+      "sha256": "cccfcca59c8db3c59ce7f4def84af7b4d19787faf3893e18733143b074afa94e"
+    },
+    {
+      "file": "base/0010.png",
+      "sha256": "19f09b615657c3a16d9c73d59657f851a0ce4cfd2bf20bd8ccf99eec924e48c7"
+    },
+    {
+      "file": "base/0011.png",
+      "sha256": "7c816b1bf5c6c47ccb4133b6b45dd256fc18a76a8a943c505113d65f47875003"
+    },
+    {
+      "file": "base/0012.png",
+      "sha256": "b5023b094370c807fa063a027790dd907b005b3273428c7a87e0d699aeddd9a4"
+    },
+    {
+      "file": "base/0013.png",
+      "sha256": "8c9fe92168413e96a26dccdab4b33b727bcf0b175b190f2e512efdf75e3f9a66"
+    },
+    {
+      "file": "base/0014.png",
+      "sha256": "38170f71b9fa943ba09dba7d57db2f772186c6e6dd2cd82bd6e9fdc3ef9efb76"
+    },
+    {
+      "file": "base/0015.png",
+      "sha256": "50f99f7b9b74da54d928a13711769bef545ab47e74f7b6e847bec6659385de74"
+    },
+    {
+      "file": "base/0016.png",
+      "sha256": "d5e2cd26d1d5881fbe2f3c93481ae7594c1325ecea9a462c2139d6e53aa9ab0d"
+    }
+  ],
+  "source_sha256": {
+    "compare_precision.py": "27ade642c2b89ecd3cdf2f04598333889e9f033ce9546d93ad314654732208ca",
+    "helper.py": "df5ac96a583180ea1e8b82edf0552b3d35e2d7a7b14a33e4117d43efb4bdf735",
+    "wan_vae.py": "4912ffd7a9fbb17ceef9a17d4a9c4b8aee36ec37c32594f54e57693b29909498"
+  }
+}
