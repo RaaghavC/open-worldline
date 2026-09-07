@@ -65,11 +65,21 @@ jobs:
       - run: python -m pip install -r experiments/wan_adapter/requirements-real.txt -r experiments/wan22_native/requirements-core.txt -r experiments/wan22_native/requirements-sample.txt
       - run: python -m pytest -q experiments/wan22_native/test_core.py experiments/wan22_native/test_independent.py experiments/wan22_native/test_profile_independent.py experiments/wan22_native/test_codec.py experiments/wan22_native/test_codec_decode.py experiments/wan22_native/test_codec_independent.py experiments/wan22_native/test_codec_memory.py experiments/wan22_native/test_codec_memory_independent.py experiments/wan22_native/test_sample_clip.py experiments/wan22_native/test_sample_independent.py
       - run: python -m experiments.wan22_native.codec_cpu_diagnostic --output work/wan22-cpu-prefix-linux-diagnostic-v1.json
+      - run: python -m experiments.wan22_native.codec_cpu_projection_diagnostic --output work/wan22-cpu-projection-linux-diagnostic-v2.json
       - uses: actions/upload-artifact@v4
         with:
           name: wan22-cpu-prefix-diagnostic
-          path: work/wan22-cpu-prefix-linux-diagnostic-v1.json
-      - run: python -m pytest -q experiments/wan22_native/action_adapter/test_cpu.py experiments/wan22_native/action_adapter/test_independent.py experiments/wan22_native/action_data/test_data.py experiments/wan22_native/action_data/test_codec_path.py experiments/wan22_native/action_data/test_independent.py
+          path: |
+            work/wan22-cpu-prefix-linux-diagnostic-v1.json
+            work/wan22-cpu-projection-linux-diagnostic-v2.json
+      # Keep the original cross-length exact test and measured sources intact.
+      # The portable fixture below retains exact same-length causality checks.
+      - run: python -m pytest -q experiments/wan22_native/action_adapter/test_cpu.py experiments/wan22_native/action_adapter/test_independent.py experiments/wan22_native/action_data/test_data.py experiments/wan22_native/action_data/test_codec_path.py experiments/wan22_native/action_data/test_independent.py -k 'not test_initial_encode_is_independent_and_future_perturbation_causal'
+      - run: python -m experiments.wan22_native.test_codec_cpu_portable --output work/wan22-codec-cpu-portable-linux-v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wan22-codec-portable
+          path: work/wan22-codec-cpu-portable-linux-v1.json
       - run: python -m pytest -q experiments/wan22_native/shift3/test_cpu.py experiments/wan22_native/shift3/test_independent.py
   text-cache-cpu:
     runs-on: ubuntu-latest

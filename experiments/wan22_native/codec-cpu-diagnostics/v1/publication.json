@@ -10,10 +10,16 @@
       "file": "mac-diagnostic.json",
       "bytes": 16736,
       "sha256": "f8bbca50fa1c676b8010dd420553cf62ed503e01e652c02b0897874b56a911eb"
+    },
+    {
+      "file": "linux-diagnostic.json",
+      "bytes": 35944,
+      "sha256": "ded50d53be823a6f7825a38db3e4ef4b807ed517b6905c88acb6172ceec0de27"
     }
   ],
   "linux_ci_run": 34149366497,
-  "linux_diagnostic_pending": true,
+  "linux_diagnostic_pending": false,
   "actual_cache_changed": false,
-  "production_prefix_check_relaxed": false
+  "production_prefix_check_relaxed": false,
+  "linux_diagnostic_run": 34150251059
 }
