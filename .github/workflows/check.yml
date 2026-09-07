@@ -86,6 +86,11 @@ jobs:
       - run: python -m pytest -q experiments/wan22_native/action_training/test_cpu.py experiments/wan22_native/action_training/test_independent.py
       - run: python -m pytest -q experiments/wan22_native/official_cpu/test_cpu.py experiments/wan22_native/official_cpu/test_independent.py
       - run: python -m pytest -q experiments/wan22_native/cuda_reference/test_cpu.py experiments/wan22_native/cuda_reference/test_independent.py
+      - run: python -m experiments.wan22_native.spatial_reference.test_protocol --output work/wan22-spatial-cpu-review.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wan22-spatial-cpu-review
+          path: work/wan22-spatial-cpu-review.json
   text-cache-cpu:
     runs-on: ubuntu-latest
     timeout-minutes: 15

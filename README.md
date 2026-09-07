@@ -69,6 +69,8 @@ The [September 7, 2026 research review](docs/research-2026-09-07.md) includes cu
 
 A [source-level ABot feasibility review](docs/abot-local-feasibility-2026-09-07.md) covers its September 4 code release, exact checkpoint structure, camera-command limits, streaming cache, local memory estimates and decoder provenance. It retains 53 primary-source records. No ABot inference or camera-control result is claimed.
 
+The next [two-size native diagnostic](experiments/wan22_native/spatial_reference/README.md) prepares independent image encoding and a controlled 512 × 288 versus 1248 × 704 comparison. It retains the original 17-frame duration and sampling settings, with separate measured codec, pair and clip stages. This package has no GPU result yet; the earlier native A100 clip still fails visual review.
+
 
 The three immediate engineering capabilities are:
 

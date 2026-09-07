@@ -4,6 +4,8 @@ This package contains an explicit CPU/MPS execution port of the **external pretr
 
 Official code is pinned to commit `42bf4cfaa384bc21833865abc2f9e6c0e67233dc`; weights are pinned to `Wan-AI/Wan2.2-TI2V-5B` revision `921dbaf3f1674a56f47e83fb80a34bac8a8f203e`. The model, attention and shared configuration source copies are byte-exact. See `NOTICE`, `LICENSE-APACHE-2.0.txt` and `provenance.json` for attribution, URLs and hashes. No external weights are included in the repository.
 
+The separate [two-size native CUDA diagnostic](spatial_reference/README.md) prepares the next spatial comparison after the actual 512 × 288 A100 clip also failed visually. It adds fresh original-VAE encoding at both sizes and explicit measured admission. The frozen packages below remain unchanged; no GPU result is claimed for the new package.
+
 ## Precision and loading
 
 The native transformer has 4,999,787,712 parameters in 825 tensors. The declared storage policy retains 68,573,376 parameters in FP32 and stores 4,931,214,336 in BF16, requiring 10,136,722,176 bytes, or 9.44056 GiB, for parameters. That count comes from a meta model and source headers. It excludes activations, temporary conversions, allocator caches, the VAE, text encoding and other applications.

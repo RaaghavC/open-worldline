@@ -21,7 +21,7 @@ The [clip evidence](../experiments/wan22_native/cuda_reference/results/a100-clip
 
 ![Conditioned frame and sampled generated futures from the completed CUDA diagnostic](../experiments/wan22_native/cuda_reference/results/a100-clip50-v1/recovered-clip-v1/results/clip-run-v1/decode/result/comparison.png)
 
-This reproduces the same category of failure seen on the Mac. It shows that Mac-specific execution is not necessary for this particular failure. It does not establish a cause or pixel-level agreement. Shared reduced dimensions, cached observation/text preparation and other common inputs remain possible contributors. A separately prepared spatial-size control is proposed in the clip evidence; it has not run. Broad quality, action learning, persistent world memory and Genie 3 parity remain unproven.
+This reproduces the same category of failure seen on the Mac. It shows that Mac-specific execution is not necessary for this particular failure. It does not establish a cause or pixel-level agreement. Shared reduced dimensions, cached observation/text preparation and other common inputs remain possible contributors. The [separate two-size package](../experiments/wan22_native/spatial_reference/README.md) prepares fresh image encoding and a 1248 × 704 control while keeping 17 frames and the sampling settings fixed. It has not run on a GPU. Broad quality, action learning, persistent world memory and Genie 3 parity remain unproven.
 
 ## Setup and recovered records
 
