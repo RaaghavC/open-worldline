@@ -1,6 +1,6 @@
 # Two-size native Wan2.2 diagnostic
 
-This package prepares a controlled resolution experiment after the [native A100 diagnostic](../../../docs/cloud-gpu-diagnostic-results-2026-09-07.md) also produced severely distorted future frames. It does not contain a new trained model or establish a quality improvement. GPU results for this package have not been produced.
+The [completed A100 result](results/a100-v1/README.md) contains both-size codec measurements, fresh-encoding prediction pairs and one 1248 × 704 clip. The 17-frame clip took 594.877 seconds and retains a recognizable room without the earlier severe color distortion. It is nearly static, the door stays closed and some requested details are missing. Four saved-file audits passed. This is an external pretrained reference, with no action training or general quality benchmark. A matching full baseline clip remains necessary before attributing the visual difference solely to resolution.
 
 The retained model is the external Apache-2.0 Wan2.2 TI2V-5B at the exact revisions and parameter hashes documented in [the frozen CUDA reference](../cuda_reference/README.md). This package imports that unchanged parameter loader, FlashAttention 2 implementation, VAE and upstream CPU UniPC solver. Its own code handles two shapes, independent image encoding, measured admission, resource limits and retained evidence.
 

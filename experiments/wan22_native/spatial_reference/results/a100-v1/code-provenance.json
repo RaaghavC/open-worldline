@@ -1,0 +1,654 @@
+{
+  "schema": "worldline-spatial-small-payload-provenance-v1",
+  "runtime_commit": "ffee84129b9c29a7d3c29449e10b6a18a660aebf",
+  "auditor_commit": "1142cbbd409285cd69fbc7c637a4153ad5eb91bc",
+  "runtime_source_sha256": {
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+    "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+    "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+    "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+    "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+    "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+    "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+    "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+    "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+    "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+    "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+    "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+    "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+    "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+  },
+  "audit_source_sha256": {
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+    "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+    "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+    "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+    "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+    "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+    "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+    "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+    "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+    "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+    "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+    "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+    "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+    "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+    "experiments/wan22_native/spatial_audit/__init__.py": "fd8c81d7e525dedddf4ca5429745327159e443503e1a47e46a56ceb7b1a05853",
+    "experiments/wan22_native/spatial_audit/weights.py": "e1e2f39f0aacbe093c06849cf6f0dcc0604a3d96a215f35e433611e01c117a12",
+    "experiments/wan22_native/spatial_audit/predictions.py": "3d2eeed8bdc03df1a53f7175ff8bc7a4eee8c44987e591d6c7242809986f1b26",
+    "experiments/wan22_native/spatial_audit/rgb.py": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+    "experiments/wan22_native/spatial_audit/run.py": "1d8726739b3b7ed86aad797f3646dc05f854f16ffbda3d1169f1fc2293725ded"
+  },
+  "source_bundle": "source/",
+  "original_file_copies": {
+    "metrics/codec/parent.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/metrics.json",
+      "bytes": 4852,
+      "sha256": "dae313dcd9caedab17bec9e4344f83aee501bdb51ebe6a1de62bf4979e8b51db",
+      "transformation": "none"
+    },
+    "plans/codec.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-plan-v1/metrics.json",
+      "bytes": 4618,
+      "sha256": "32d9d8c4dedef249dce0ed942b1fabf118b99f5b1209844be7ae2f6e354299ef",
+      "transformation": "none"
+    },
+    "metrics/codec/codec/metrics.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/codec/result/metrics.json",
+      "bytes": 11734,
+      "sha256": "b75072954e305fe327b3a8f80ba39375c7816578066fc8d22f24fb02730f17cf",
+      "transformation": "none"
+    },
+    "metrics/codec/codec/terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/codec/terminal.json",
+      "bytes": 543,
+      "sha256": "482cffe38e2c950f3d15a4e067f7beb2049f5a443998d3b63e9ee9dd36104db5",
+      "transformation": "none"
+    },
+    "metrics/codec/codec/monitor-terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/codec/result/monitor-terminal.json",
+      "bytes": 403,
+      "sha256": "98b7507368e89316f02bdf52ba6e05a5ddd6004e435d15e48f3f874d667e424f",
+      "transformation": "none"
+    },
+    "metrics/baseline-pair/parent.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-baseline-run-v1/metrics.json",
+      "bytes": 4954,
+      "sha256": "49b8e3609d144a39301baa88270e8d3d46543d700fa0ee038bc120c16a71c49e",
+      "transformation": "none"
+    },
+    "plans/baseline-pair.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-baseline-plan-v1/metrics.json",
+      "bytes": 4721,
+      "sha256": "f91280fb9d99217aa53593e0e8ed53bccea39b4ac2e9593d6662ad8ad005b194",
+      "transformation": "none"
+    },
+    "metrics/baseline-pair/core/metrics.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-baseline-run-v1/core/result/metrics.json",
+      "bytes": 6770,
+      "sha256": "700e66dc7334d18b384f951771ce3b9c504b4ca09ed7173953e964a99934cb67",
+      "transformation": "none"
+    },
+    "metrics/baseline-pair/core/terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-baseline-run-v1/core/terminal.json",
+      "bytes": 542,
+      "sha256": "5f5a5b03051f1e904c7d4ed2a9f9ac5b679c04de6e2de8e6276c96ef9f0d9483",
+      "transformation": "none"
+    },
+    "metrics/baseline-pair/core/monitor-terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-baseline-run-v1/core/result/monitor-terminal.json",
+      "bytes": 403,
+      "sha256": "cd89f34653b70609f9038c3aa811e4de77eabd8ee627a4e4d656291942ee6449",
+      "transformation": "none"
+    },
+    "metrics/spatial-pair/parent.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-spatial-run-v1/metrics.json",
+      "bytes": 4953,
+      "sha256": "8eab9eb067085947a3ecc12cf681e0554cd9956d7cb4d2ecf23fbb9e98d05e33",
+      "transformation": "none"
+    },
+    "plans/spatial-pair.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-spatial-plan-v1/metrics.json",
+      "bytes": 4720,
+      "sha256": "e61ae80145471d797f5ae2239a14b9bdee76058c17989fa9a17a1465d557243f",
+      "transformation": "none"
+    },
+    "metrics/spatial-pair/core/metrics.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-spatial-run-v1/core/result/metrics.json",
+      "bytes": 6770,
+      "sha256": "f261be6198cdfa203cf912418007a6e7bffefeab09683c59c52c2575dd8971b5",
+      "transformation": "none"
+    },
+    "metrics/spatial-pair/core/terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-spatial-run-v1/core/terminal.json",
+      "bytes": 541,
+      "sha256": "c6a549ae5998a9d87af201a06a47cde374de5ac0e1eace4789c1961bad6ee623",
+      "transformation": "none"
+    },
+    "metrics/spatial-pair/core/monitor-terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/pair-spatial-run-v1/core/result/monitor-terminal.json",
+      "bytes": 403,
+      "sha256": "934fa9c5755ac003a1f6a4e5272d42e29b0f5f1a79027884606047afe072dede",
+      "transformation": "none"
+    },
+    "metrics/clip/parent.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/metrics.json",
+      "bytes": 5876,
+      "sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9",
+      "transformation": "none"
+    },
+    "plans/clip.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-plan-v1/metrics.json",
+      "bytes": 5447,
+      "sha256": "de983d00b11c84431a5eae2a396dca099f64e7ec597d1073f5612cdb4f93616e",
+      "transformation": "none"
+    },
+    "metrics/clip/core/metrics.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/core/result/metrics.json",
+      "bytes": 11403,
+      "sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08",
+      "transformation": "none"
+    },
+    "metrics/clip/core/terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/core/terminal.json",
+      "bytes": 543,
+      "sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0",
+      "transformation": "none"
+    },
+    "metrics/clip/core/monitor-terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/core/result/monitor-terminal.json",
+      "bytes": 403,
+      "sha256": "216a7fe684e12888ef44ed8157e8c25c7490ece933933e71ddaa637040079197",
+      "transformation": "none"
+    },
+    "metrics/clip/decode/metrics.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/decode/result/metrics.json",
+      "bytes": 10144,
+      "sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b",
+      "transformation": "none"
+    },
+    "metrics/clip/decode/terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/decode/terminal.json",
+      "bytes": 543,
+      "sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d",
+      "transformation": "none"
+    },
+    "metrics/clip/decode/monitor-terminal.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/decode/result/monitor-terminal.json",
+      "bytes": 404,
+      "sha256": "7c5c0b449afa758d926d99d7219f23d337d19bb0c01493ff99eca0fb5a307947",
+      "transformation": "none"
+    },
+    "audits/codec/report.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/report.json",
+      "bytes": 44913,
+      "sha256": "a6252e5131f0fe392229fa0c8e80c977f23670f027a730c3c1270e925b50ce2f",
+      "transformation": "none"
+    },
+    "audits/codec/input-inventory.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/input-inventory.json",
+      "bytes": 16940,
+      "sha256": "f7b5d8dca974dfc4a13b68f491292dc1ce63cb0b701302af48e6f4fed2841dbe",
+      "transformation": "none"
+    },
+    "audits/baseline-pair/report.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-baseline-pair-audit-v1/report.json",
+      "bytes": 17581,
+      "sha256": "12bc390b3d3fe0feb373448025d759e7ec1496bd6d803f645e39646201103fac",
+      "transformation": "none"
+    },
+    "audits/baseline-pair/input-inventory.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-baseline-pair-audit-v1/input-inventory.json",
+      "bytes": 25897,
+      "sha256": "efe1336aa5987b5857a372077e30d412ae357f4a7a55c796b1b3680fc4d74ec4",
+      "transformation": "none"
+    },
+    "audits/spatial-pair/report.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-spatial-pair-audit-v1/report.json",
+      "bytes": 17578,
+      "sha256": "09b79c3c77f96f6371589c149131a59950d5ee38bdfd65aa263aa2009106c60c",
+      "transformation": "none"
+    },
+    "audits/spatial-pair/input-inventory.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-spatial-pair-audit-v1/input-inventory.json",
+      "bytes": 25898,
+      "sha256": "02d4c0b4c84a85f2af0deeca91ef0e6bcf167dfb0f992413fd97ac9d21627f36",
+      "transformation": "none"
+    },
+    "audits/clip/report.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-clip-audit-v1/report.json",
+      "bytes": 79449,
+      "sha256": "a7531c9de42ea9e27b712dbf0308703110a9f9ef958db8f40501525614a0093b",
+      "transformation": "none"
+    },
+    "audits/clip/input-inventory.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-clip-audit-v1/input-inventory.json",
+      "bytes": 49321,
+      "sha256": "5ba28ba49feb9ea001182ef1e1ab7ba84ffda076827dd3b3a7cb991e213901b2",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/__init__.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/__init__.py",
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/__init__.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/__init__.py",
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/codec-source.json",
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/config.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/config.json",
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/decode.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/decode.py",
+      "bytes": 3901,
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/evidence.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/evidence.py",
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/guards.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/guards.py",
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/native.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/native.py",
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/sampling.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/sampling.py",
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/official_cpu/__init__.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/official_cpu/__init__.py",
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/official_cpu/inputs.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/official_cpu/inputs.py",
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/official_cpu/streaming.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/official_cpu/streaming.py",
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/__init__.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/__init__.py",
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/codec.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/codec.py",
+      "bytes": 5767,
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/config.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/config.py",
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/evidence.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/evidence.py",
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/guards.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/guards.py",
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/inputs.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/inputs.py",
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/native.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/native.py",
+      "bytes": 3550,
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/output.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/output.py",
+      "bytes": 3374,
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/run.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/run.py",
+      "bytes": 21001,
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/sampling.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_reference/sampling.py",
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_audit/__init__.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_audit/__init__.py",
+      "bytes": 119,
+      "sha256": "fd8c81d7e525dedddf4ca5429745327159e443503e1a47e46a56ceb7b1a05853",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_audit/weights.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_audit/weights.py",
+      "bytes": 8880,
+      "sha256": "e1e2f39f0aacbe093c06849cf6f0dcc0604a3d96a215f35e433611e01c117a12",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_audit/predictions.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_audit/predictions.py",
+      "bytes": 22897,
+      "sha256": "3d2eeed8bdc03df1a53f7175ff8bc7a4eee8c44987e591d6c7242809986f1b26",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_audit/rgb.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_audit/rgb.py",
+      "bytes": 20764,
+      "sha256": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_audit/run.py": {
+      "original_workspace_relative": "work/wan22-spatial-actual-codec-audit-v1/source/experiments/wan22_native/spatial_audit/run.py",
+      "bytes": 11051,
+      "sha256": "1d8726739b3b7ed86aad797f3646dc05f854f16ffbda3d1169f1fc2293725ded",
+      "transformation": "none"
+    },
+    "audits/baseline-pair/earlier-a100-guidance-comparison.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-baseline-pair-audit-v1/earlier-a100-guidance-comparison.json",
+      "bytes": 4798,
+      "sha256": "e9a563c8dce157ecc5108aeedd2a2893beb620606afe2f1a6db5078e6623e761",
+      "transformation": "none"
+    },
+    "recovery/index.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/index.json",
+      "bytes": 108517,
+      "sha256": "834053b3fd4b0428740bdc78853225dde07ee269bdb6e43bc2b88916f0f6690d",
+      "transformation": "none"
+    },
+    "recovery/recovery-verified.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovery-verified.json",
+      "bytes": 316,
+      "sha256": "e80b81b9ecf165de240a974517908b22a6dee641fbf0b4fc0b2af8744f4e6ed7",
+      "transformation": "none"
+    },
+    "recovery/earlier-recovery-preservation.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/earlier-recovery-preservation.json",
+      "bytes": 158,
+      "sha256": "508ba9fd61d6b965a33e1109d8929dc0bea3e4e9885a707be3b1c63d6ea2fc96",
+      "transformation": "none"
+    },
+    "preflight/runtime-cpu-v2.json": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/cpu-report.json",
+      "bytes": 21515,
+      "sha256": "da82405a14812008776510a71715cf69aa1965ab4d52306cadf4ea3174b4405e",
+      "transformation": "none"
+    },
+    "preflight/auditor-cpu-v1.json": {
+      "original_workspace_relative": "outputs/open-worldline/experiments/wan22_native/spatial_audit/reviews/cpu-v1.json",
+      "bytes": 11916,
+      "sha256": "55f878770cbbd75784aa865bbd4f2d259f7885ad5a864e111b693899382922e3",
+      "transformation": "none"
+    },
+    "preflight/source-transfer-v2.json": {
+      "original_workspace_relative": "work/wan22-spatial-transfer-v2/transfer.json",
+      "bytes": 269,
+      "sha256": "cc8194ebeffa28f471e7bd1a8f2d3b8cefae6595f6b2cb60f0a8fa8c412a50d1",
+      "transformation": "none"
+    },
+    "previews/codec-baseline-reconstructed-initial.png": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/codec/result/baseline/reconstructed-initial.png",
+      "bytes": 129164,
+      "sha256": "ea18a4886da05eccfc5e2a13dbb2daa261b8341e21a5fba67822127459b7d40f",
+      "transformation": "none"
+    },
+    "previews/codec-spatial-reconstructed-initial.png": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/codec-both-run-v1/codec/result/spatial/reconstructed-initial.png",
+      "bytes": 602052,
+      "sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+      "transformation": "none"
+    },
+    "previews/clip-comparison.png": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/decode/result/comparison.png",
+      "bytes": 6310108,
+      "sha256": "963d29a83a0fbdd18835aba8206452596603bc1536c8e69f50e3b44a2fdc0bea",
+      "transformation": "none"
+    },
+    "previews/clip-preview.gif": {
+      "original_workspace_relative": "work/wan22-spatial-recovered-final-v1/recovered/spatial-results/clip-spatial-run-v1/decode/result/preview.gif",
+      "bytes": 7501085,
+      "sha256": "b75e4d350c3b168bef2ee1cdaa5a3c0264e35e2aa1d695f5f32af3a9dcdc5a31",
+      "transformation": "none"
+    },
+    "licenses/PROJECT-APACHE-2.0.txt": {
+      "original_workspace_relative": "outputs/open-worldline/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "original_workspace_relative": "outputs/open-worldline/experiments/wan22_native/LICENSE-APACHE-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "original_workspace_relative": "outputs/open-worldline/experiments/wan22_native/NOTICE",
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none"
+    },
+    "licenses/ORIGINAL-SCENE-CC0.txt": {
+      "original_workspace_relative": "outputs/open-worldline/experiments/atrium_data/DATA-LICENSE",
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none"
+    },
+    "fetch_artifacts.py": {
+      "original_workspace_relative": "work/wan22-spatial-publication-v1/fetch_artifacts.py",
+      "bytes": 10082,
+      "sha256": "e8ea4fb6e929ba23288c3356bb81f2ca313e3a3bb320850bec2ae3241dbd5e7a",
+      "transformation": "none"
+    },
+    "test_fetch_artifacts.py": {
+      "original_workspace_relative": "work/wan22-spatial-publication-v1/test_fetch_artifacts.py",
+      "bytes": 6624,
+      "sha256": "9ebc4a6fcc3b61e3268563e12afde0f20b613e80d4554f44a109b84f46a3b29f",
+      "transformation": "none"
+    },
+    "downloader-cpu-review-v1.json": {
+      "original_workspace_relative": "work/wan22-spatial-publication-v1/downloader-cpu-review-v1.json",
+      "bytes": 1055,
+      "sha256": "e72c457961fcc4e4b8af85c1600d408db028c3935aa2df5435a178e0c73e7911",
+      "transformation": "none"
+    },
+    "assembly-source.py": {
+      "original_workspace_relative": "work/wan22-spatial-publication-v1/assemble_payload.py",
+      "bytes": 8679,
+      "sha256": "dcb13a8fa9f06b4e283ab73dcbe73ea66e463287a568a70c3c9c9f7c0d6613c7",
+      "transformation": "none"
+    },
+    "audits/clip/visual-review.json": {
+      "original_workspace_relative": "work/wan22-spatial-actual-clip-audit-v1/visual-review.json",
+      "bytes": 4476,
+      "sha256": "673cf09db4a94dfaf186136d2bb385a9d229f19e94cb56f716c76b6a584966b6",
+      "transformation": "none"
+    },
+    "audits/clip/visual-review.md": {
+      "original_workspace_relative": "work/wan22-spatial-actual-clip-audit-v1/visual-review.md",
+      "bytes": 1053,
+      "sha256": "33aa32da70a43893173df6d31030356861a42fd316dc67e0ec025db7462c9f0a",
+      "transformation": "none"
+    },
+    "preflight/downloader-preparation.md": {
+      "original_workspace_relative": "work/wan22-spatial-publication-v1/DOWNLOADER.md",
+      "bytes": 3066,
+      "sha256": "e5082bff0605e0891ec03e04a98d2fc6ebdbe7795c7f6659e460c7579c5a0fa1",
+      "transformation": "none"
+    }
+  },
+  "raw_artifacts": {
+    "files": 536,
+    "bytes": 803541766,
+    "parts": [
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-000",
+        "sha256": "bdece57b3cbd548d0f17cd980f4d9f81fbeb3bbb4b7352f0402f59a79c269f44"
+      },
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-001",
+        "sha256": "3173980df8ddc030edc24abb29e1c8a8d4f3a63500212cc358addf14e66331cf"
+      },
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-002",
+        "sha256": "424b459d6ab926ff1ed93bd7c3debf0e47cc43f79b0af85dd5d11bb59a8fb161"
+      },
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-003",
+        "sha256": "609e3e7adcd6a4c4b8312589c5268d5a5fc7b9e07d6461742f33511c3ade2901"
+      },
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-004",
+        "sha256": "0b7b7276479082b3b044a48370c85af6465d39b72748c003da0a3438afdba9c1"
+      },
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-005",
+        "sha256": "372e10711d470bdd8b7d7dd889105c09ba0516312f792ffd2f243faeaf02322c"
+      },
+      {
+        "bytes": 90000000,
+        "name": "evidence.tar.gz.part-006",
+        "sha256": "c4b1ac873f10fdcb91a12d2c32b1332604e09da0569f4be8e6344fae730559f1"
+      },
+      {
+        "bytes": 6908966,
+        "name": "evidence.tar.gz.part-007",
+        "sha256": "a168aab64c73837f76580635064c02b9887701800016569208c846b49ef5b743"
+      }
+    ],
+    "transport_bytes": 636908966,
+    "stream_sha256": "e900c18faab7de9747c2369ce5579e3ffd6352731d5ba4b3f9fa6139b5635136",
+    "index_sha256": "834053b3fd4b0428740bdc78853225dde07ee269bdb6e43bc2b88916f0f6690d",
+    "copied_into_git_payload": false
+  },
+  "derived_publication_updates": {
+    "DOWNLOADER.md": {
+      "prepared_version_preserved_at": "preflight/downloader-preparation.md",
+      "changes": "Replace pending-release instructions with verified public download metadata and observed certificate setup note.",
+      "measured_artifacts_changed": false
+    }
+  }
+}

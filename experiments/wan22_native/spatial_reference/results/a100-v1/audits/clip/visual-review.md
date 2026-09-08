@@ -1,0 +1,5 @@
+All 17 retained frames were inspected individually. The closed wooden door, wall panels, floor seams and left window keep the same recognizable layout. Warm beige, brown, gold and pale blue colors remain stable. I did not see the severe prismatic colored distortion present in the earlier reduced-size clips.
+
+The clip is nearly static, with minor edge, texture and brightness changes. The door stays closed and there is no clear purposeful camera or object movement. Surfaces and door trim remain somewhat soft. The saved prompt mentions green plants; none are visible in these frames.
+
+The automated artifact audit passed separately. This clip contains one reconstructed conditioned frame and 16 generated future frames. It used the external Wan2.2 TI2V-5B foundation without actions or an adapter. It does not establish action control, sustained dynamics, persistent memory, broad visual quality, novelty or Genie 3 parity. The resized input and freshly encoded CUDA observation also prevent attributing the improvement solely to spatial resolution.

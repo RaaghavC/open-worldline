@@ -1,6 +1,6 @@
 # Post-block29 action adapter
 
-This is original Worldline adapter code for the frozen, externally pretrained Wan2.2 TI2V-5B model. It has **947,712 FP32 trainable parameters**. Its checks use random tiny CPU models; no real native 5B adapter training has run. The separate native full-clip experiment produced severe visual artifacts, so this package does not establish a working visual foundation, action control, memory, or improved image quality.
+This is original Worldline adapter code for the frozen, externally pretrained Wan2.2 TI2V-5B model. It has **947,712 FP32 trainable parameters**. Its checks use random tiny CPU models; a separate [real MPS numerical probe](../action_training/results/probe-v2/README.md) completed two adapter updates. The separate native full-clip experiment produced severe visual artifacts, so this package does not establish a working visual foundation, action control, memory, or improved image quality.
 
 The adapter runs after the last transformer block and before the unchanged frozen output head. All transformer blocks run without an autograd graph. The head remains in the gradient path to the adapter even though its weights are frozen. There are no forward hooks, replacements of core methods, persistent session state, multi-site adapters, feature-cache trainer or optimizer in this package.
 
@@ -62,7 +62,7 @@ python -m pytest experiments/wan22_native/action_adapter/test_cpu.py -q
 
 The local measured invocation used `work/wan-adapter-env` with Python 3.11.9, Torch 2.5.1, Diffusers 0.34.0, NumPy 1.26.4 and safetensors 0.5.3, appending the already installed pytest location after the environment's existing search paths. The report preserves the exact command and versions. Tests use one CPU thread and load no official parameter values.
 
-These are software correctness checks. They do not measure real native 5B backward memory or speed. Full native training remains unexecuted, and the visual foundation gate remains failed. Any later guarded run must preserve native solver/text/prefix conventions, a verified canonical initial observation for both start-0 interventions, independently encoded 48-channel targets, exact source/data/model hashes and the existing memory limits.
+These are software correctness checks. They do not measure real native 5B backward memory or speed. The fixed16 pilot, native CUDA adapter training and action-quality evaluation remain unexecuted, and the visual foundation gate remains failed. Any later guarded run must preserve native solver/text/prefix conventions, a verified canonical initial observation for both start-0 interventions, independently encoded 48-channel targets, exact source/data/model hashes and the existing memory limits.
 
 ## Attribution
 

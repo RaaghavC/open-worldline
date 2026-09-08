@@ -1,0 +1,99 @@
+{
+  "schema": "wan22-spatial-all-frame-visual-review-v1",
+  "method": "Assistant visually inspected each original retained PNG at indices 0 through 16 using image viewing, separately from the automated artifact audit.",
+  "automated_audit_report_sha256": "a7531c9de42ea9e27b712dbf0308703110a9f9ef958db8f40501525614a0093b",
+  "frames_inspected": [
+    {
+      "index": 0,
+      "sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503"
+    },
+    {
+      "index": 1,
+      "sha256": "07ec6017f7fc0c422d80966770c23c53eec730f8687a00eeab804b91ecf91f88"
+    },
+    {
+      "index": 2,
+      "sha256": "97aeb2bb6b1a70c04f25c64aa34f36b22006798ff95272caa9b194e0df400a08"
+    },
+    {
+      "index": 3,
+      "sha256": "0ea1de1c4c9c280c91eb3a28fb0ea7ba398dafa4c48ff2c76010f81be79d8470"
+    },
+    {
+      "index": 4,
+      "sha256": "0da1f61f0987509dcd8a6f770b59cb9fd85ae9002d13137ec799b6f662b014e2"
+    },
+    {
+      "index": 5,
+      "sha256": "94a46b08c1e93c63daac1b1ecd564b00ae00df73467e9a6e2f854fe2b25fd98f"
+    },
+    {
+      "index": 6,
+      "sha256": "d7240376692f6c56b830e26d81812b0c7be04a85f2aac3d8d5c25413d66b6346"
+    },
+    {
+      "index": 7,
+      "sha256": "6de8dee2617e4181ee47c758c4db15f8d1a508dd65a46100409131fe721f2ea0"
+    },
+    {
+      "index": 8,
+      "sha256": "f6f7c311e19a1d1e36e9ae03d6607a3b684045f29407f7330bcbf026146cdf10"
+    },
+    {
+      "index": 9,
+      "sha256": "d2e70b7356e5a9e45fae78bb476f853e6c74d8bba3eb6ddd6529f80ef9959f27"
+    },
+    {
+      "index": 10,
+      "sha256": "cf8933482482c1d83ce0400b258cb36e3caf932e3d98dd7e4efb60c292d71a77"
+    },
+    {
+      "index": 11,
+      "sha256": "96bbfa4dd944f82ec98cf0babf71e421e46da966e3218858747d52cc96d615ee"
+    },
+    {
+      "index": 12,
+      "sha256": "5f33cc564089111eccc18e2c3cfd511fb659e5aa1fbefdf28c84fa45d62741c1"
+    },
+    {
+      "index": 13,
+      "sha256": "0391440554f7ad0b4abb63809e942273db984013603fca10c8afc00c81374735"
+    },
+    {
+      "index": 14,
+      "sha256": "ab2451f4985ac06133230c3718e9c8d85da6ab87db0a5cb4d76cb4809f21ebdf"
+    },
+    {
+      "index": 15,
+      "sha256": "acb64b7ec3bf1b626e7c208295691769de367607c94adaed67b683c7368dc7dd"
+    },
+    {
+      "index": 16,
+      "sha256": "5306c4195687150df8e461aadec55cb4072b3b3acd09811d912b53b145f4368c"
+    }
+  ],
+  "image_size": [
+    1248,
+    704
+  ],
+  "positive_prompt": "A sunlit interior with warm plaster walls, a wooden door, limestone flooring, brass details, and green plants.",
+  "positive_prompt_text_sha256": "28b2a417e8444313da5b0408204bce155c5b6230a825cba357744f3e748d26da",
+  "layout": "The closed wooden door, wall-panel divisions, floor-tile seams and left window remain recognizable and in the same arrangement throughout all 17 frames.",
+  "color": "Warm beige plaster and flooring, brown wood, muted gold door details and pale blue window light remain stable. The severe prismatic colored distortion seen in the earlier reduced-size clips is not visible in this clip.",
+  "motion": "The clip is nearly static. Minor edge, texture and brightness changes are visible; there is no clear door opening, object movement or purposeful camera movement.",
+  "detail": "Edges and surfaces remain somewhat soft, particularly around the door trim and wall texture. This is not evidence of additional scene detail beyond the conditioned render.",
+  "prompt_alignment": "The visible interior, wooden door, pale stone-like floor and gold details match those parts of the saved prompt. Green plants requested in the prompt are not visible.",
+  "scope": {
+    "conditioned_reconstructed_frames": 1,
+    "generated_future_frames": 16,
+    "actions_supplied": false,
+    "adapter_used": false,
+    "external_foundation": "Wan2.2 TI2V-5B"
+  },
+  "limitations": [
+    "Passing the artifact audit verifies saved bytes, tensors, records and pixel mappings. The visual observations are a separate qualitative assessment of this one clip.",
+    "The short, nearly static clip does not demonstrate action control, sustained motion, physical consistency, persistent memory, diverse scene quality or Genie 3 parity.",
+    "The spatial input was resized and cropped from the same original render, and a fresh CUDA observation was encoded. This result alone does not isolate spatial resolution as the cause of improvement over earlier runs.",
+    "The successful appearance uses an attributed external pretrained foundation. No original-model or research-novelty claim follows from this result."
+  ]
+}

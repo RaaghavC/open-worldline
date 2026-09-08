@@ -1,0 +1,54 @@
+{
+  "schema": "worldline-wan22-native-provenance-v1",
+  "attribution": "Official Wan2.2 TI2V-5B external baseline with local explicit execution port; not an original Worldline model",
+  "code_commit": "42bf4cfaa384bc21833865abc2f9e6c0e67233dc",
+  "repository": "Wan-AI/Wan2.2-TI2V-5B",
+  "weight_revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+  "license": "Apache-2.0",
+  "official_sources": {
+    "vendor/model.py": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/modules/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "bytes": 18097
+    },
+    "vendor/attention.py": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/modules/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "bytes": 5435
+    },
+    "LICENSE-APACHE-2.0.txt": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "vendor/shared_config.py.txt": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/42bf4cfaa384bc21833865abc2f9e6c0e67233dc/wan/configs/shared_config.py",
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "bytes": 945
+    }
+  },
+  "weights": [
+    {
+      "file": "diffusion_pytorch_model-00001-of-00003.safetensors",
+      "bytes": 9825014472,
+      "sha256": "720b06c4ade5e87c1246bba8ac95b664c638749cd9b102cf84d823bb44c026a1"
+    },
+    {
+      "file": "diffusion_pytorch_model-00002-of-00003.safetensors",
+      "bytes": 9995661736,
+      "sha256": "09ec5ef720d8396f6cfa51fbdcbdb2327e37722afd6e89fd38f1e7e5e782c283"
+    },
+    {
+      "file": "diffusion_pytorch_model-00003-of-00003.safetensors",
+      "bytes": 178558176,
+      "sha256": "6306f7894c345de9093ad588771c2abfaeb668a81f7a6d9a918bd26ba3568e49"
+    }
+  ],
+  "config_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+  "index_sha256": "bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe",
+  "index_git_blob_sha1": "2a1d8b9ee7cd1456f79f944ae15c87724d49110e",
+  "index_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/resolve/921dbaf3f1674a56f47e83fb80a34bac8a8f203e/diffusion_pytorch_model.safetensors.index.json",
+  "shared_text_encoder_sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+  "native_vae_sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+  "gpu_forward_measured": false
+}

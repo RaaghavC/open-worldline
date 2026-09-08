@@ -102,6 +102,7 @@ jobs:
             work/wan22-spatial-cpu-review.json
             work/wan22-spatial-codec-plan/metrics.json
       - run: python -m experiments.wan22_native.spatial_audit.test_suite --output work/wan22-spatial-audit-cpu-review.json
+      - run: python experiments/wan22_native/spatial_reference/results/a100-v1/verify_payload.py
       - uses: actions/upload-artifact@v4
         with:
           name: wan22-spatial-audit-cpu-review

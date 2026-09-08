@@ -1,0 +1,129 @@
+{
+  "schema": "wan22-spatial-versus-earlier-A100-guidance-v1",
+  "status": "passed",
+  "meaning": "Descriptive saved-array comparison, not a numerical-equivalence or image-quality test. The new run uses a freshly encoded CUDA observation; the earlier run uses the retained MPS observation.",
+  "difference_direction": "new spatial-reference baseline minus earlier public A100 pair",
+  "relative_rmse_denominator": "RMS of earlier public A100 tensor values in the same region",
+  "regions": {
+    "future": "Four latent frames at indices 1,2,3,4; 110592 values per velocity tensor",
+    "observed": "One conditioned latent frame at index0"
+  },
+  "checks": {
+    "initial_noise_equal": true,
+    "token_times_equal": true,
+    "future_initial_latent_equal": true,
+    "observed_latent_equal": false,
+    "contexts_equal": true,
+    "all_825_original_source_weight_hashes_equal": true
+  },
+  "observation_difference": {
+    "rmse": 0.0016233974061587854,
+    "reference_rms": 0.519697986765838,
+    "relative_rmse": 0.0031237323358927014,
+    "max_absolute_difference": 0.015988245606422424
+  },
+  "comparisons": [
+    {
+      "tensor": "guided_velocity",
+      "region": "all",
+      "elements": 138240,
+      "rmse": 0.026439423374159485,
+      "earlier_A100_rms": 1.2452855973459471,
+      "relative_rmse": 0.021231614202002588,
+      "max_absolute_difference": 0.62890625,
+      "cosine": 0.9997745838734174
+    },
+    {
+      "tensor": "guided_velocity",
+      "region": "observed",
+      "elements": 27648,
+      "rmse": 0.03555349131305317,
+      "earlier_A100_rms": 0.7068243452615701,
+      "relative_rmse": 0.050300320795962555,
+      "max_absolute_difference": 0.273681640625,
+      "cosine": 0.9987341916670203
+    },
+    {
+      "tensor": "guided_velocity",
+      "region": "future",
+      "elements": 110592,
+      "rmse": 0.023617603589499225,
+      "earlier_A100_rms": 1.3466700078092455,
+      "relative_rmse": 0.017537780935598466,
+      "max_absolute_difference": 0.62890625,
+      "cosine": 0.9998462015261452
+    },
+    {
+      "tensor": "negative_velocity",
+      "region": "all",
+      "elements": 138240,
+      "rmse": 0.005157487215990816,
+      "earlier_A100_rms": 1.1906050647133986,
+      "relative_rmse": 0.004331820322998813,
+      "max_absolute_difference": 0.15234375,
+      "cosine": 0.9999906349016555
+    },
+    {
+      "tensor": "negative_velocity",
+      "region": "observed",
+      "elements": 27648,
+      "rmse": 0.0077122853763834445,
+      "earlier_A100_rms": 0.6532718225603327,
+      "relative_rmse": 0.01180562992317211,
+      "max_absolute_difference": 0.0625,
+      "cosine": 0.9999303121628687
+    },
+    {
+      "tensor": "negative_velocity",
+      "region": "future",
+      "elements": 110592,
+      "rmse": 0.004287161828901656,
+      "earlier_A100_rms": 1.2904396563240261,
+      "relative_rmse": 0.0033222489776191136,
+      "max_absolute_difference": 0.15234375,
+      "cosine": 0.9999945014613321
+    },
+    {
+      "tensor": "positive_velocity",
+      "region": "all",
+      "elements": 138240,
+      "rmse": 0.005026286222272647,
+      "earlier_A100_rms": 1.1938241543385142,
+      "relative_rmse": 0.004210240012322133,
+      "max_absolute_difference": 0.07421875,
+      "cosine": 0.9999911439597831
+    },
+    {
+      "tensor": "positive_velocity",
+      "region": "observed",
+      "elements": 27648,
+      "rmse": 0.007803269608144206,
+      "earlier_A100_rms": 0.6518066805585432,
+      "relative_rmse": 0.011971754572164655,
+      "max_absolute_difference": 0.07421875,
+      "cosine": 0.9999283463261828
+    },
+    {
+      "tensor": "positive_velocity",
+      "region": "future",
+      "elements": 110592,
+      "rmse": 0.004044340161375281,
+      "earlier_A100_rms": 1.294336568342021,
+      "relative_rmse": 0.0031246433580686623,
+      "max_absolute_difference": 0.0625,
+      "cosine": 0.9999951274662673
+    }
+  ],
+  "input_file_sha256": {
+    "new_outputs": "684663e54e521cb6a85a70cf517f00eeb9ac7f1287e3d7464b6cd253fc81776e",
+    "old_outputs": "ddaf1fde1253d4cbd591fabe99217a344ca31a5fecc4aa92afcdfc2f1d536205",
+    "new_inputs": "ce63f32174b59449097e0dc812bf7fdee01901331bd83a31a84226d7b34561a2",
+    "old_inputs": "363ee00416161de834ab8213eb50a386abd42ce9cf3f34ff818e9213b9e9d2b5",
+    "new_contexts": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+    "old_contexts": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+    "new_weights": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+    "old_weights": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+  },
+  "input_files_unchanged": true,
+  "method": "Read finite saved FP32 arrays with safetensors.numpy; subtract and reduce in NumPy FP64. No model or CUDA execution; no acceptance threshold."
+}
