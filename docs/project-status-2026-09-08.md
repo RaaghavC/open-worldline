@@ -30,12 +30,12 @@ The [complete results](../experiments/wan22_native/action_effect/results/README.
 
 A [saved-prediction analysis](../experiments/action_effect_diagnostics/README.md) found that even an ideal, target-fitted multiplier explains less than 0.7% of the required initial latent change. The response is poorly aligned, rather than merely too small. This is a post hoc analysis of the same room, not a new quality result.
 
-The [intermediate action bridge](../experiments/wan22_native/intermediate_action/README.md) now lets the final native transformer block process the original adapter's commands. Its 25 CPU checks passed, including exact output and gradient comparisons and frozen-base checks. CUDA execution and the new model's visible behavior remain unmeasured.
+The [intermediate action bridge](../experiments/wan22_native/intermediate_action/README.md) lets the final native transformer block process the original adapter's commands. Its [actual A100 profile](../experiments/wan22_native/intermediate_action/results/a100-profile-v1/README.md) passed 16 exact native/full/cached comparisons and two updates at each of two placements. All 825 foundation records remained unchanged. The new placement needs about 4.92 GiB more peak training allocation in this profile. Its saved response after one update remains poorly aligned with the intended change; no new video was generated.
 
-The [new camera/door capture](../experiments/atrium_factorial/README.md) contains six native 1248 × 704 sequences with independently varied camera and door commands. All 102 original training images passed file/label validation. The images are programmed targets; no model has been trained on them yet. A later comparison must give both model placements identical data and training settings.
+The [new camera/door capture](../experiments/atrium_factorial/README.md) contains six native 1248 × 704 sequences with independently varied camera and door commands. All 102 original training images passed file/label validation. The original VAE has now encoded all six clips without resizing or replacing their prefixes. All 12 prefix comparisons were exact and all 196 VAE records remained unchanged. The images are programmed targets; no model has been trained on them yet. A later comparison must give both model placements identical data and training settings.
 
 ## Run the editor
 
 Return to the [installation and controls](../README.md#run). The shipped small models run locally without an inference API. The experimental Wan adapter uses external open foundation weights and requires a separate CUDA environment; it is not the model powering the main editor.
 
-The two GPU instances used for the latest experiment were deleted, the temporary provider key was revoked and rejected by the provider, and the local private key files were removed. No training job from this experiment remains active.
+The GPU instances used for the completed experiments, including the placement profile and six-arm encoding, were deleted. Their temporary provider keys were revoked and rejected by the provider, and local private key files were removed. No training job from these experiments remains active.

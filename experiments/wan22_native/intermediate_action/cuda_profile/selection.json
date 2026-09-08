@@ -1,0 +1,583 @@
+{
+  "schema": "intermediate-cuda-exact-selection-v1",
+  "public_release": "https://github.com/RaaghavC/open-worldline/releases/tag/wan22-action-effect-training-a100-v1",
+  "public_index_sha256": "2e231b055914202d0d6a34ae7b7a7026a24fa339e5f78f199b3b80be5b749241",
+  "files": {
+    "action-results/cache-spatial-run-v1/result/closed-0000.safetensors": {
+      "bytes": 3954288,
+      "sha256": "9f36c4ef4fe6dd14da11a95e172acb536d580a5202a2fa2fd97889f4eeb2ba83",
+      "header": {
+        "commands": {
+          "shape": [
+            1,
+            16,
+            6
+          ],
+          "dtype": "F32"
+        },
+        "observation": {
+          "shape": [
+            1,
+            48,
+            1,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "target": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        }
+      },
+      "selected": {
+        "commands": "65092443014452cf6da0df95edd7d44444279ace867691110ec004bd6d06bfa1",
+        "observation": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+        "target": "049663630c562c16b2e3b51afc1ab86387efe0f1d7afbd95292542394cb866af"
+      }
+    },
+    "action-results/cache-spatial-run-v1/result/open-0000.safetensors": {
+      "bytes": 3954288,
+      "sha256": "a4a8a5fde4783674e77238938caec3ae3c2ba8b72ab77e5cccb0c174f0b2fc02",
+      "header": {
+        "commands": {
+          "shape": [
+            1,
+            16,
+            6
+          ],
+          "dtype": "F32"
+        },
+        "observation": {
+          "shape": [
+            1,
+            48,
+            1,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "target": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        }
+      },
+      "selected": {
+        "commands": "ff269f0b83e7ba85c0203bb674c738d305f5e1388c34de7e0184f8b584c779ae",
+        "observation": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+        "target": "7e5a63d4eea8e2d71652db64c69f604ba685e98b78b6de6d9f432699f2736865"
+      }
+    },
+    "action-results/effect128-spatial-v1/training/checkpoint-0000/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0",
+      "header": {
+        "action.0.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "F32"
+        },
+        "action.0.weight": {
+          "shape": [
+            128,
+            24
+          ],
+          "dtype": "F32"
+        },
+        "action.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "F32"
+        },
+        "action.2.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "F32"
+        },
+        "command_gru.bias_hh": {
+          "shape": [
+            384
+          ],
+          "dtype": "F32"
+        },
+        "command_gru.bias_ih": {
+          "shape": [
+            384
+          ],
+          "dtype": "F32"
+        },
+        "command_gru.weight_hh": {
+          "shape": [
+            384,
+            128
+          ],
+          "dtype": "F32"
+        },
+        "command_gru.weight_ih": {
+          "shape": [
+            384,
+            128
+          ],
+          "dtype": "F32"
+        },
+        "key.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "F32"
+        },
+        "key.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "F32"
+        },
+        "observation.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "F32"
+        },
+        "observation.weight": {
+          "shape": [
+            128,
+            48
+          ],
+          "dtype": "F32"
+        },
+        "output.bias": {
+          "shape": [
+            3072
+          ],
+          "dtype": "F32"
+        },
+        "output.weight": {
+          "shape": [
+            3072,
+            128
+          ],
+          "dtype": "F32"
+        },
+        "query.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "F32"
+        },
+        "query.weight": {
+          "shape": [
+            128,
+            3072
+          ],
+          "dtype": "F32"
+        },
+        "value.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "F32"
+        },
+        "value.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "F32"
+        }
+      },
+      "selected": {
+        "action.0.bias": "a94d61d91244a556fcc70681830e55492a78982f9abb937aa783b61768f6ae1f",
+        "action.0.weight": "000878f0edad2ee194aa06c96890d64d36c9f27d80434e1f937660172ee0631c",
+        "action.2.bias": "1d0440c4d6342ff1ffa9d73ff160fcc55c639a81acdd043c1381621ff87f79ae",
+        "action.2.weight": "dc3ab9ef3f27401080dba3a2159102e55075281ecb87dc854971ab011311f076",
+        "command_gru.bias_hh": "ed2ce4b855fa670d6e1eb665be7c880054ae1e3092e1bda50e62f51755626063",
+        "command_gru.bias_ih": "3d8b30d86dcac7ca267084cd3142884226afc99d8576b41dccc865f08002cc23",
+        "command_gru.weight_hh": "f37f9f613bde75b63f4a8e07c98597e5acdaa50dae8f97a7c4154844eefea463",
+        "command_gru.weight_ih": "ff73ea2356eec2d43d52de651f6338058f4a7c9d29c12e572754de5732d429bd",
+        "key.bias": "334db40fb4114a9193f69ba12a568e777365e9641cc497f35b40bd4541e4d745",
+        "key.weight": "0508fb9fdecfa27790f0750b8bd7d09266b76ae1628426a15f065cca87569031",
+        "observation.bias": "2bbbeef06b41683dcdd3890945f94e098bbc62a41257cef6e4c574e0463893f7",
+        "observation.weight": "9f3efff92d9b8db0fd1e64d45e6bb953c9a36da9ac6d314cfbc9bd4760338183",
+        "output.bias": "f3cc103136423a57975750907ebc1d367e2985ac6338976d4d5a439f50323f4a",
+        "output.weight": "106f0647ae10a6516b1ab2968038161e287ef40d1b22ca047531ed768e594ef1",
+        "query.bias": "e2fcd78605784df7945f902c52c3d7f50791ca7581fae5398908fb60b4db7dff",
+        "query.weight": "e1138b8f0f35724607940d51b78bb5731a57b9a2594fa7d8f1eaf50c9a180ec2",
+        "value.bias": "39a17ecd89f8d4611a16bab55500e38f25e22515be639b1fc362757fa25017c7",
+        "value.weight": "b9c46fcfe0c79ce915d40a3b50cbe25526154f9d5c7b3ed967fc342a9c1acc35"
+      }
+    },
+    "action-results/effect128-spatial-v1/draws-0000-0015.safetensors": {
+      "bytes": 52804256,
+      "sha256": "59772049308434db5444b8265605b1dc17198ca775793f196759ec995b1a8bfa",
+      "header": {
+        "noise_0000": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0001": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0002": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0003": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0004": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0005": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0006": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0007": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0008": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0009": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0010": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0011": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0012": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0013": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0014": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "noise_0015": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "F32"
+        },
+        "rng_after_0000": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0001": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0002": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0003": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0004": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0005": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0006": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0007": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0008": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0009": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0010": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0011": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0012": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0013": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0014": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_after_0015": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        },
+        "rng_initial": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        }
+      },
+      "selected": {
+        "noise_0000": "9c75c2ed9929741fc9f393d6d2ab508e52a726ddd9d8eb608d2d19075c812394",
+        "noise_0004": "7c5b09d2f3ac5f0613e104c7496b3c6059de8209f5365c83a93bafd532c3d4c5"
+      }
+    },
+    "action-results/effect128-spatial-v1/positive.safetensors": {
+      "bytes": 409680,
+      "sha256": "7fa41dd8290100b206141607e8844fbd0b9545e744248f13d4423f33b4462779",
+      "header": {
+        "context": {
+          "shape": [
+            25,
+            4096
+          ],
+          "dtype": "F32"
+        }
+      },
+      "selected": {
+        "context": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093"
+      }
+    },
+    "action-results/effect128-spatial-v1/negative.safetensors": {
+      "bytes": 2064472,
+      "sha256": "857b4a10c4d340865bbdec33563399c74c466baa21c4f1b2187d4bdbd3adacf0",
+      "header": {
+        "context": {
+          "shape": [
+            126,
+            4096
+          ],
+          "dtype": "F32"
+        }
+      },
+      "selected": {
+        "context": "aa6911f67cb7a4e5cf934131594b6fe264dff9983f84ab188e9199c706cf60cc"
+      }
+    },
+    "action-results/effect128-spatial-v1/initial-cpu-rng.safetensors": {
+      "bytes": 5128,
+      "sha256": "329a1225e66a7309fbe1cae51d05bace726c10058a7d4101df95851800e985e0",
+      "header": {
+        "rng": {
+          "shape": [
+            5056
+          ],
+          "dtype": "U8"
+        }
+      },
+      "selected": {
+        "rng": "1628fe4b2f36ee10ab4c576599b376df2f75975672224d28764fc97b0efa50ee"
+      }
+    },
+    "action-results/effect128-spatial-v1/plan.json": {
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+    },
+    "action-results/effect128-spatial-v1/training/checkpoint-0000/manifest.json": {
+      "bytes": 5001,
+      "sha256": "d90871941fadc1a3a650b909221adc118586237249089ddab93af2552f372cc9"
+    },
+    "action-results/cache-spatial-run-v1/result/manifest.json": {
+      "bytes": 142043,
+      "sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e"
+    },
+    "action-results/cache-spatial-run-v1/result/completion.json": {
+      "bytes": 63408,
+      "sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8"
+    }
+  },
+  "schedule": [
+    {
+      "profile_update": 1,
+      "original_update": 1,
+      "start": 0,
+      "noise_key": "noise_0000",
+      "k": 506,
+      "sigma": 0.506,
+      "auxiliary": true
+    },
+    {
+      "profile_update": 2,
+      "original_update": 5,
+      "start": 0,
+      "noise_key": "noise_0004",
+      "k": 265,
+      "sigma": 0.265,
+      "auxiliary": true
+    }
+  ]
+}

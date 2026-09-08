@@ -1,6 +1,6 @@
 # Experimental intermediate-block action bridge
 
-This experimental implementation moves the unchanged `PostBlockActionAdapter` to the output of a selected native Wan transformer block. It does not edit the published bridge, adapter, core, precision policy, weight loader, solver or training code. It has not run on CUDA or pretrained weights and is not a trained model or a quality result.
+This experimental implementation moves the unchanged `PostBlockActionAdapter` to the output of a selected native Wan transformer block. It preserves the published adapter, core, precision policy, weight loader and solver. The [actual A100 profile](results/a100-profile-v1/README.md) passed 16 exact initial comparisons and two training updates at each of two placements. It establishes execution correctness and resource use; visible action quality remains unresolved.
 
 The default is `block_index=28`, after block 28 and before block 29 in the 30-block native core. Exactly one frozen transformer block then follows the adapter. `block_index=29` is the matched final-block control. Earlier indices are configurable but have not been admitted or profiled. A placement comparison must keep the same data, initialization, noise, losses, schedule and optimizer; new factorial data would be a separate experimental change.
 
@@ -51,12 +51,12 @@ OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q \
 
 The original report was produced in the existing Wan Python environment with the already installed system pytest package appended to its module search path. No dependency installation, model download, provider operation or real training run occurred.
 
-The separate [frozen-prefix cache](CACHE.md) now provides the paired objective's `extract_features` and `predict_from_features` methods. Its 29 additional CPU checks passed. This adds an execution path; actual GPU performance remains unmeasured.
+The separate [frozen-prefix cache](CACHE.md) provides the paired objective's `extract_features` and `predict_from_features` methods. Its 29 additional CPU checks passed. The subsequent CUDA profile measures this path with the actual pretrained core and unchanged native attention.
 
-## Required actual measurements
+## Actual CUDA measurements and remaining limits
 
-Actual native CUDA zero-adapter parity remains unmeasured. No existing parity tolerance or training admission is weakened by this prototype. A separate bounded profile must measure both the proposed placement and final-block control with identical saved tensors and unchanged precision, verify the full native zero-adapter output, finite later adapter gradients and all frozen foundation values, and retain failures without changing thresholds.
+The completed bounded profile used identical saved tensors and unchanged precision for both placements. All full and cached initial outputs matched native outputs bit for bit; all 825 retained foundation value records remained unchanged. Recurrent adapter gradients became positive on the second update. The combined parent took 353.189 seconds. These checks retained the original thresholds.
 
-Freezing the suffix weights does not remove its backward activation cost. For the spatial profile, one FP32 hidden tensor alone contains `1 * 4290 * 3072` values, or 52,715,520 bytes (50.27 MiB). This is not an estimate of the total backward peak: attention, normalization, feed-forward intermediates, time/context tensors and kernel workspaces also matter. Actual peak memory, load/forward/backward time and an appropriate device budget require measurement. No resource or action-quality claim follows from the CPU tests.
+Freezing the suffix weights does not remove its backward activation cost. For the spatial profile, one FP32 hidden tensor alone contains `1 * 4290 * 3072` values, or 52,715,520 bytes (50.27 MiB). The actual training allocation peaked at 25.012 GiB after block 28 and 20.093 GiB after block 29. Two updates took 4.089 and 3.873 seconds respectively, excluding load and validation. The retained command-response diagnostic remains poorly aligned with the target difference. Longer training and generated-video evaluation remain necessary to measure usable control.
 
 This new wrapper is Apache 2.0 experiment code. The unchanged adapter and literal Wan dependencies retain their existing repository and upstream licenses and notices. The wrapper makes no novelty claim about intermediate action conditioning.

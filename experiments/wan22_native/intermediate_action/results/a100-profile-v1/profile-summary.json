@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 353.189367613988,
+  "worker_elapsed_seconds": 348.4163770120358,
+  "weight_load_seconds": 128.51105500000995,
+  "parity_exact": 16,
+  "parameters_unchanged": true,
+  "worker_memory_sample_count": 1367,
+  "peak_sampled_host_rss_gib": 2.4251251220703125,
+  "peak_sampled_cuda_reserved_gib": 25.431640625,
+  "placements": {
+    "28": {
+      "parity_seconds": 3.733119398006238,
+      "parity_memory": {
+        "peak_allocated_bytes": 21315864576,
+        "peak_reserved_bytes": 21581791232,
+        "allocated_bytes": 20014723584,
+        "reserved_bytes": 21581791232
+      },
+      "training_seconds": 4.089294885052368,
+      "training_memory": {
+        "peak_allocated_bytes": 26856662528,
+        "peak_reserved_bytes": 27307016192,
+        "allocated_bytes": 20033175552,
+        "reserved_bytes": 27307016192
+      },
+      "updates": [
+        {
+          "seconds": 2.0516015259781852,
+          "total_objective": 0.3516898900270462,
+          "gradient_l2_before_clip": 0.005102682858705521,
+          "command_gru_gradient_l2": 0.0
+        },
+        {
+          "seconds": 1.9614438320277259,
+          "total_objective": 0.4909563362598419,
+          "gradient_l2_before_clip": 0.008154173381626606,
+          "command_gru_gradient_l2": 9.063867037184536e-05
+        }
+      ]
+    },
+    "29": {
+      "parity_seconds": 3.049520435044542,
+      "parity_memory": {
+        "peak_allocated_bytes": 21265819648,
+        "peak_reserved_bytes": 21602762752,
+        "allocated_bytes": 20014723584,
+        "reserved_bytes": 21602762752
+      },
+      "training_seconds": 3.8727220229338855,
+      "training_memory": {
+        "peak_allocated_bytes": 21574774272,
+        "peak_reserved_bytes": 21799895040,
+        "allocated_bytes": 20033026560,
+        "reserved_bytes": 21799895040
+      },
+      "updates": [
+        {
+          "seconds": 1.8708208439638838,
+          "total_objective": 0.3516898900270462,
+          "gradient_l2_before_clip": 0.0055886986665427685,
+          "command_gru_gradient_l2": 0.0
+        },
+        {
+          "seconds": 1.8444641400128603,
+          "total_objective": 0.49091900885105133,
+          "gradient_l2_before_clip": 0.008112813346087933,
+          "command_gru_gradient_l2": 7.969352736836299e-05
+        }
+      ]
+    }
+  }
+}

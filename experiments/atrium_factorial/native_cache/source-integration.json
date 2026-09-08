@@ -1,0 +1,422 @@
+{
+  "schema": "worldline-frozen-source-integration-v1",
+  "source_directory": "work/atrium-factorial-native-cache-v1",
+  "destination": "experiments/atrium_factorial/native_cache",
+  "exact_files": {
+    "packet.py": {
+      "source": "work/atrium-factorial-native-cache-v1/packet.py",
+      "sha256": "54834f588874ed6bc72c04c20a42e2fc88b2660ce438a80d7446d966812182b0",
+      "bytes": 7148
+    },
+    "cache.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cache.py",
+      "sha256": "d17fafd4331bba7458cad9c443f179d797073375433f7f08f67940587c2c11db",
+      "bytes": 11620
+    },
+    "run.py": {
+      "source": "work/atrium-factorial-native-cache-v1/run.py",
+      "sha256": "a3b352b28b140345fb99519e81ebe81de7f7c3e0f7225229e17b7337843d9d98",
+      "bytes": 15185
+    },
+    "test_cpu.py": {
+      "source": "work/atrium-factorial-native-cache-v1/test_cpu.py",
+      "sha256": "139b7aa03e74a400dd0ca9d0e54839e73fb36d20539bedcc403469daa807f65e",
+      "bytes": 8745
+    },
+    "cpu-v1/report.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/report.json",
+      "sha256": "bdfa0233757ef11f61e724a9b3b097f174110baa0abca54384db25ce6561fcc6",
+      "bytes": 9482
+    },
+    "prepared-read-v1.json": {
+      "source": "work/atrium-factorial-native-cache-v1/prepared-read-v1.json",
+      "sha256": "9911f2ba900f205fa99a18bd938333e4a26395a63008d1a8e90db0dc06ae40b5",
+      "bytes": 8909
+    },
+    "cpu-v1/source/local/cache.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/local/cache.py",
+      "sha256": "d17fafd4331bba7458cad9c443f179d797073375433f7f08f67940587c2c11db",
+      "bytes": 11620
+    },
+    "cpu-v1/source/local/packet.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/local/packet.py",
+      "sha256": "54834f588874ed6bc72c04c20a42e2fc88b2660ce438a80d7446d966812182b0",
+      "bytes": 7148
+    },
+    "cpu-v1/source/local/run.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/local/run.py",
+      "sha256": "a3b352b28b140345fb99519e81ebe81de7f7c3e0f7225229e17b7337843d9d98",
+      "bytes": 15185
+    },
+    "cpu-v1/source/local/test_cpu.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/local/test_cpu.py",
+      "sha256": "139b7aa03e74a400dd0ca9d0e54839e73fb36d20539bedcc403469daa807f65e",
+      "bytes": 8745
+    },
+    "cpu-v1/source/repo/LICENSE": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "cpu-v1/source/repo/experiments/atrium_data/DATA-LICENSE": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/atrium_data/DATA-LICENSE",
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "bytes": 7840
+    },
+    "cpu-v1/source/repo/experiments/atrium_factorial/reader.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/atrium_factorial/reader.py",
+      "sha256": "5e5165c7e8f8011078cc8dd23f690ec3fee3a11a7b4544ff63baa2bac4e07a3e",
+      "bytes": 11369
+    },
+    "cpu-v1/source/repo/experiments/atrium_factorial/results/dataset-index.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/atrium_factorial/results/dataset-index.json",
+      "sha256": "ca29b3f1ac8f68d289b1d9fb54d3a4b15cf8d5d80dd41b917a4aa79dfcb8821a",
+      "bytes": 3025
+    },
+    "cpu-v1/source/repo/experiments/atrium_factorial/results/validation-v1.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/atrium_factorial/results/validation-v1.json",
+      "sha256": "1ce4b1bccab9f46f0b4843eb29a706401c4fb4d02a5290381e1f643a2d236e99",
+      "bytes": 31872
+    },
+    "cpu-v1/source/repo/experiments/atrium_factorial/validate.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/atrium_factorial/validate.py",
+      "sha256": "9722a699ecb9ee74757d556f8604760200de63b1df659116eb75d7ef63cd299f",
+      "bytes": 16754
+    },
+    "cpu-v1/source/repo/experiments/room_world/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/room_world/__init__.py",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "bytes": 82
+    },
+    "cpu-v1/source/repo/experiments/room_world/memory_evaluate.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/room_world/memory_evaluate.py",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "bytes": 43810
+    },
+    "cpu-v1/source/repo/experiments/room_world/memory_model.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/room_world/memory_model.py",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "bytes": 6862
+    },
+    "cpu-v1/source/repo/experiments/room_world/memory_sequence.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/room_world/memory_sequence.py",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "bytes": 4839
+    },
+    "cpu-v1/source/repo/experiments/room_world/memory_train.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/room_world/memory_train.py",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "bytes": 39603
+    },
+    "cpu-v1/source/repo/experiments/room_world/model.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/room_world/model.py",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "bytes": 5261
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/__init__.py",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "bytes": 125
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_adapter/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_adapter/__init__.py",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "bytes": 193
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_adapter/model.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_adapter/model.py",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "bytes": 5459
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_adapter/pooling.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_adapter/pooling.py",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "bytes": 1776
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/__init__.py",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "bytes": 121
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/bridge.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/bridge.py",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "bytes": 14738
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/cache_run.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/cache_run.py",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "bytes": 10181
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "bytes": 3638
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "bytes": 1949
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/data.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/data.py",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "bytes": 33216
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/probe.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/probe.py",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "bytes": 24439
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "bytes": 15730
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/probe_math.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/probe_math.py",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "bytes": 14380
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/test_cpu.py",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "bytes": 15098
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/test_independent.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/test_independent.py",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "bytes": 7882
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_cuda/test_probe.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_cuda/test_probe.py",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "bytes": 16253
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_data/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_data/__init__.py",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "bytes": 122
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_data/data.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_data/data.py",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "bytes": 8558
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_training/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_training/__init__.py",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "bytes": 116
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/action_training/objective.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/action_training/objective.py",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "bytes": 12121
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/__init__.py",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "bytes": 105
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/codec-source.json",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "bytes": 1956
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/config.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/config.json",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "bytes": 251
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/decode.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/decode.py",
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "bytes": 3901
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/evidence.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/evidence.py",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "bytes": 7774
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "bytes": 206154
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/guards.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/guards.py",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "bytes": 6767
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/native.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/native.py",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "bytes": 3102
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/requirements.txt",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "bytes": 263
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/sampling.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/sampling.py",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "bytes": 2503
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "bytes": 2710
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "bytes": 108
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "bytes": 5435
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "bytes": 32558
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "bytes": 18097
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "bytes": 31846
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/load_weights.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/load_weights.py",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "bytes": 8146
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/official_cpu/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/official_cpu/__init__.py",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "bytes": 113
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/official_cpu/inputs.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/official_cpu/inputs.py",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "bytes": 3429
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/official_cpu/streaming.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/official_cpu/streaming.py",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "bytes": 10387
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/portable.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/portable.py",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "bytes": 11880
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/spatial_reference/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/spatial_reference/__init__.py",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "bytes": 110
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/spatial_reference/config.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/spatial_reference/config.py",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "bytes": 1348
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/spatial_reference/evidence.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/spatial_reference/evidence.py",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "bytes": 22089
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/spatial_reference/guards.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/spatial_reference/guards.py",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "bytes": 10133
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/spatial_reference/inputs.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/spatial_reference/inputs.py",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "bytes": 9961
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/spatial_reference/sampling.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/spatial_reference/sampling.py",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "bytes": 7526
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/text-reuse.json": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/text-reuse.json",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "bytes": 2309
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/vendor/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/vendor/__init__.py",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "bytes": 119
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/vendor/attention.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "bytes": 5435
+    },
+    "cpu-v1/source/repo/experiments/wan22_native/vendor/model.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan22_native/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "bytes": 18097
+    },
+    "cpu-v1/source/repo/experiments/wan_adapter/capture_data.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan_adapter/capture_data.py",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "bytes": 6043
+    },
+    "cpu-v1/source/repo/experiments/wan_adapter/native_control/__init__.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan_adapter/native_control/__init__.py",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "bytes": 80
+    },
+    "cpu-v1/source/repo/experiments/wan_adapter/native_control/portable.py": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/source/repo/experiments/wan_adapter/native_control/portable.py",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "bytes": 4570
+    },
+    "import-coverage-v1.json": {
+      "source": "work/atrium-factorial-native-cache-v1/import-coverage-v1.json",
+      "sha256": "9900b94f76c053cffbae661d575e7b7430f2eeea0a62f14bc584955dbe76056c",
+      "bytes": 42
+    },
+    "PREPARATION.md": {
+      "source": "work/atrium-factorial-native-cache-v1/README.md",
+      "sha256": "eeb72f40e5517f1c74f1eb44fe7f5b04c0d30d33cf34c2760b37800e5e4d1f56",
+      "bytes": 8373
+    }
+  },
+  "metadata_derivatives": {
+    "independent-review.public.md": {
+      "source": "work/atrium-factorial-native-cache-v1/independent-review.md",
+      "original_sha256": "d28bdfb5affcc9e91f1887f4d8ac3985ee469e0e34a227a3efb3e964451f2485",
+      "published_sha256": "84bbfe976a25ba245c126f622d084ac098919995686b21123318d62e89b64c0c",
+      "replacement_count": 2,
+      "rule": "Remove only the literal local workspace prefix; preserve all remaining bytes",
+      "exact_copy": false
+    },
+    "cpu-v1/pytest.public.log": {
+      "source": "work/atrium-factorial-native-cache-v1/cpu-v1/pytest.log",
+      "original_sha256": "d7c8154fee91f4bb11e463540e33ef7f019f296122e0ed88a16b8a42279bc72f",
+      "published_sha256": "d7c8154fee91f4bb11e463540e33ef7f019f296122e0ed88a16b8a42279bc72f",
+      "replacement_count": 0,
+      "rule": "Remove only the literal local workspace prefix; preserve all remaining bytes",
+      "exact_copy": true
+    }
+  },
+  "code_modified": false,
+  "raw_inputs_or_model_outputs_copied": false
+}

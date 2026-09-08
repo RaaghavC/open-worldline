@@ -1,0 +1,28 @@
+{
+  "schema": "worldline-wan22-action-cuda-cpu-v1",
+  "status": "passed",
+  "exit_code": 0,
+  "elapsed_seconds": 1.0236449999792967,
+  "source_sha256": {
+    "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+    "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+    "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+    "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+    "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+  },
+  "python": "3.11.9",
+  "torch": "2.5.1",
+  "pytest": "7.4.4",
+  "command": "work/wan-adapter-env/bin/python; append installed pytest path; pytest.main(['experiments/wan22_native/action_cuda/test_cpu.py','-q','-p','no:cacheprovider'])",
+  "pytest_location": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pytest",
+  "model_execution": false,
+  "cuda_execution": false,
+  "real_weights_loaded": false,
+  "meaning": "Random small CPU stand-ins test bridge mechanics; native CUDA parity remains unexecuted",
+  "log_sha256": "b99414f026c1f68115486216007cee2ec3e8f405967d23c2d53afd22d168a054",
+  "sources_unchanged": true
+}

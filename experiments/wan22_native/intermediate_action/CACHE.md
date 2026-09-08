@@ -1,6 +1,6 @@
 # Frozen prefix cache for the intermediate action bridge
 
-This separate prototype adds `extract_features` and `predict_from_features` to the published `IntermediateActionBridge`. It preserves the inherited full-forward implementation and the unchanged `PostBlockActionAdapter`. It supports the previous auxiliary objective's two feature extractions and four command/text prediction paths. No real weights, CUDA run, new training protocol or quality result are included.
+This implementation adds `extract_features` and `predict_from_features` to the published `IntermediateActionBridge`. It preserves the inherited full-forward implementation and the unchanged `PostBlockActionAdapter`. It supports the previous auxiliary objective's two feature extractions and four command/text prediction paths. The [subsequent CUDA profile](results/a100-profile-v1/README.md) measures its exact native parity, gradients and resource use with real weights. It contains no generated-video quality result.
 
 The default is after block 28, before the final native block 29. The final-block control uses index 29. Both are zero-based. The existing baseline/spatial shapes, input validation, FP32 stored parameters, BF16 CUDA autocast, original complex RoPE and FA2-only production requirements remain unchanged.
 
@@ -50,8 +50,8 @@ OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q \
 
 ## Memory and execution limits
 
-The cache makes prefix reuse possible; its actual performance is unmeasured. At the spatial profile, hidden plus raw time plus the six-way projected time tensor alone occupy 421,724,160 bytes, or 402.19 MiB, per feature bundle. This excludes projected context, the observed prefix, shared rotary storage, metadata and all suffix backward activations. Two text-context bundles therefore retain more than 804 MiB before the command-dependent graphs. The original final-head cache did not retain the six-way projected time tensor.
+The cache makes prefix reuse possible. At the spatial profile, hidden plus raw time plus the six-way projected time tensor alone occupy 421,724,160 bytes, or 402.19 MiB, per feature bundle. This excludes projected context, the observed prefix, shared rotary storage, metadata and all suffix backward activations. Two text-context bundles therefore retain more than 804 MiB before the command-dependent graphs. The original final-head cache did not retain the six-way projected time tensor.
 
-Actual CUDA zero-adapter parity, four-path gradient behavior, peak memory and runtime still require a separate bounded profile. Frozen suffix weights continue to require backward activations. This API alone does not establish that an existing runner's source snapshots, counts, checkpoints, budgets and admissions support the new placement. It changes no current gate, tolerance or experiment result.
+The completed bounded CUDA profile passed all 16 native/full/cached initial comparisons across both placements and both text/command branches. Four training updates retained finite gradients and unchanged foundation value records. After-block-28 training peaked at 25.012 GiB allocated and 25.432 GiB reserved. Frozen suffix weights continue to require backward activations. These are measurements from two updates per placement in one seen room, with no quality promotion or relaxed tolerance.
 
 This prototype is Apache 2.0 code using the unchanged repository and upstream Wan components under their existing licenses. It makes no novelty or action-quality claim.

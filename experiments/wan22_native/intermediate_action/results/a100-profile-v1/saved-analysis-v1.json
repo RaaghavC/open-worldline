@@ -1,0 +1,246 @@
+{
+  "status": "passed",
+  "model_execution": false,
+  "source_sha256": {
+    "analyze_saved.py": "687c1201570bd5c4bc5ddd69c4ea2fabdf55d3ca0272f31cc44fd6d20e8e9c09",
+    "experiments/action_effect_diagnostics/analyze.py": "58ee2088f08054e80cf4ddc7d8f6503a499031512f5506a21b8ed6811686815a"
+  },
+  "parent_metrics_sha256": "432c4c2a7e36311e53c13da7b2aa34f2ea0c9cf71ddb4a535a32a9532509254e",
+  "result_metrics_sha256": "d51c6fab4b948ea0d3a35d1dec88f12ebbfc94e5cbf426b409f36621c1f4aaf4",
+  "original_control_update1": {
+    "main/closed": {
+      "velocity": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "auxiliary/closed/positive": {
+      "velocity": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "auxiliary/closed/negative": {
+      "velocity": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "main/open": {
+      "velocity": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "auxiliary/open/positive": {
+      "velocity": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "auxiliary/open/negative": {
+      "velocity": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "gradients": {
+      "action.0.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "action.0.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "action.2.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "action.2.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "command_gru.bias_hh": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "command_gru.bias_ih": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "command_gru.weight_hh": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "command_gru.weight_ih": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "key.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "key.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "observation.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "observation.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "output.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "output.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "query.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "query.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "value.bias": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      },
+      "value.weight": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": null
+      }
+    }
+  },
+  "one_update_saved_endpoint_response": {
+    "28": {
+      "after_completed_updates": 1,
+      "saved_draw": "noise_0004",
+      "ordinary": {
+        "actual_normalized_mse": 1.00019440556293,
+        "unconstrained_oracle_gain": 0.17468948658368694,
+        "unconstrained_oracle_normalized_mse": 0.9999908816946779,
+        "nonnegative_oracle_gain": 0.17468948658368694,
+        "nonnegative_oracle_normalized_mse": 0.9999908816946779,
+        "cosine": 0.0030196531791020294,
+        "response_rms": 0.007660010197928199,
+        "target_rms": 0.4431380590203436
+      },
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.0011709547609897635,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0002958327355607,
+          "unconstrained_oracle_gain": 0.06555780078971532,
+          "unconstrained_oracle_normalized_mse": 0.9999985367013139,
+          "nonnegative_oracle_gain": 0.06555780078971532,
+          "nonnegative_oracle_normalized_mse": 0.9999985367013139,
+          "cosine": 0.0012096688334358922,
+          "response_rms": 0.0076555241215901775,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.99993508691092,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.10586945937630152
+      }
+    },
+    "29": {
+      "after_completed_updates": 1,
+      "saved_draw": "noise_0004",
+      "ordinary": {
+        "actual_normalized_mse": 0.9999942830200715,
+        "unconstrained_oracle_gain": 0.7069409622423153,
+        "unconstrained_oracle_normalized_mse": 0.9999930967039119,
+        "nonnegative_oracle_gain": 0.7069409622423153,
+        "nonnegative_oracle_normalized_mse": 0.9999930967039119,
+        "cosine": 0.00262741243206479,
+        "response_rms": 0.0016469641845311927,
+        "target_rms": 0.4431380590203436
+      },
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.0012589040515757054,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0000253285125853,
+          "unconstrained_oracle_gain": -0.30468163329501374,
+          "unconstrained_oracle_normalized_mse": 0.9999985390069426,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.001208715457709109,
+          "response_rms": 0.0016459271731115866,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.9999720807586192,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.14616327804624865
+      }
+    }
+  },
+  "consumed": {
+    "historical/action-results/effect128-spatial-v1/training/prediction-0001-closed.safetensors": "134c0217636ca30d2a169e91ecbad0d31102af459e94e45005da6ec1c81b06d4",
+    "block29/main-0001-closed.safetensors": "134c0217636ca30d2a169e91ecbad0d31102af459e94e45005da6ec1c81b06d4",
+    "historical/action-results/effect128-spatial-v1/training/auxiliary-0001-closed-positive.safetensors": "79d880be144e0ce41a421c3daf09fd7665f15e4e81e301d5111ca45971c60a52",
+    "block29/auxiliary-0001-closed-positive.safetensors": "79d880be144e0ce41a421c3daf09fd7665f15e4e81e301d5111ca45971c60a52",
+    "historical/action-results/effect128-spatial-v1/training/auxiliary-0001-closed-negative.safetensors": "782f06f7f84711d87af1a3551949c964a7ad72ffcb017528f6d70696891dd5fb",
+    "block29/auxiliary-0001-closed-negative.safetensors": "782f06f7f84711d87af1a3551949c964a7ad72ffcb017528f6d70696891dd5fb",
+    "historical/action-results/effect128-spatial-v1/training/prediction-0001-open.safetensors": "c332e205ee542aa0973403524ed4b1fe433825bdf3a2cc8307fd10aea278e4d6",
+    "block29/main-0001-open.safetensors": "c332e205ee542aa0973403524ed4b1fe433825bdf3a2cc8307fd10aea278e4d6",
+    "historical/action-results/effect128-spatial-v1/training/auxiliary-0001-open-positive.safetensors": "79d880be144e0ce41a421c3daf09fd7665f15e4e81e301d5111ca45971c60a52",
+    "block29/auxiliary-0001-open-positive.safetensors": "79d880be144e0ce41a421c3daf09fd7665f15e4e81e301d5111ca45971c60a52",
+    "historical/action-results/effect128-spatial-v1/training/auxiliary-0001-open-negative.safetensors": "782f06f7f84711d87af1a3551949c964a7ad72ffcb017528f6d70696891dd5fb",
+    "block29/auxiliary-0001-open-negative.safetensors": "782f06f7f84711d87af1a3551949c964a7ad72ffcb017528f6d70696891dd5fb",
+    "historical/action-results/effect128-spatial-v1/training/gradients-after-clip-0001.safetensors": "fd2fbe6aff93bb046ae1154a68d7102112e30bf3b9d40f36bcba046731ce70be",
+    "block29/gradients-after-clip-0001.safetensors": "fd2fbe6aff93bb046ae1154a68d7102112e30bf3b9d40f36bcba046731ce70be",
+    "inputs/action-results/cache-spatial-run-v1/result/closed-0000.safetensors": "9f36c4ef4fe6dd14da11a95e172acb536d580a5202a2fa2fd97889f4eeb2ba83",
+    "inputs/action-results/cache-spatial-run-v1/result/open-0000.safetensors": "a4a8a5fde4783674e77238938caec3ae3c2ba8b72ab77e5cccb0c174f0b2fc02",
+    "block28/auxiliary-0002-closed-positive.safetensors": "0c9bca2a3c7cc040068fd58e48f1b06667efcd8c8773dfaa46053666bf424f5b",
+    "block28/auxiliary-0002-closed-negative.safetensors": "dde04df5a6b6efb402d47a0b8bb4bee727ac76b95b3fbf29d07b5c338b4331d6",
+    "block28/auxiliary-0002-open-positive.safetensors": "468b7b54570aa2a884d5f5b1afafc846b5cebd513b9a5fbfa71fd576341b440c",
+    "block28/auxiliary-0002-open-negative.safetensors": "bed492e7261f4d496ceee6b530abb9390af0c822a66fca4e61a8680591154056",
+    "block29/auxiliary-0002-closed-positive.safetensors": "a8779f17a4bac410e26bcc65503db2e334ceb9fb150a8d362c5e85e038739e20",
+    "block29/auxiliary-0002-closed-negative.safetensors": "741725da60a99faaf92a2f69e353c747e2ae696c4f9686053cd162327311b43e",
+    "block29/auxiliary-0002-open-positive.safetensors": "dcde271bae600f52b20f550f6750ce28fb7ece16ae1bc7f77fa7c7da9f32369a",
+    "block29/auxiliary-0002-open-negative.safetensors": "995b06b4f618ee55ca4ca3932a6c70bb3ebe3209d7c524c1a7b9eec2ed9a942d"
+  },
+  "limitations": [
+    "Historical control comparison is descriptive and does not relax the native parity requirement.",
+    "Response uses already-seen training targets and one saved draw after one completed update.",
+    "The target-fitted scalar is a post hoc diagnostic, not a deployable model or a video quality score.",
+    "No new forward, training, sampling or decoding was performed by this analyzer."
+  ]
+}
