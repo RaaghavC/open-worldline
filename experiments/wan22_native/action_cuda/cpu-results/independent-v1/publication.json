@@ -1,0 +1,35 @@
+{
+  "schema": "worldline-evidence-publication-v2",
+  "all_source_files_copied_byte_exact": true,
+  "source_directory": "work/wan22-action-cuda-independent-v1",
+  "files": {
+    "checked-source/experiments/wan22_native/action_adapter/__init__.py.txt": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "checked-source/experiments/wan22_native/action_adapter/model.py.txt": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+    "checked-source/experiments/wan22_native/action_adapter/pooling.py.txt": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "checked-source/experiments/wan22_native/action_cuda/__init__.py.txt": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+    "checked-source/experiments/wan22_native/action_cuda/bridge.py.txt": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+    "checked-source/experiments/wan22_native/action_cuda/test_cpu.py.txt": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+    "checked-source/experiments/wan22_native/action_cuda/test_independent.py.txt": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+    "checked-source/experiments/wan22_native/cuda_reference/native.py.txt": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "checked-source/experiments/wan22_native/cuda_reference/vendor/attention.py.txt": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "checked-source/experiments/wan22_native/cuda_reference/vendor/model.py.txt": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "pytest-output.txt": "4cacbda5d647589b24c522c7fcca5eea99a0ab369872839f0aa0dd8aef54d359",
+    "report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+    "run-review.py": "1d5ce0c42c9c7fcddc22abef40315f7729b0a533afc56c4bf604f7ea06070d8f"
+  },
+  "all_files_copied_byte_exact": false,
+  "report_copied_byte_exact": true,
+  "transformations": [
+    {
+      "file": "pytest-output.txt",
+      "raw_sha256": "f9eec3ee3fe26c323f6e941c11eff8f7a1c82b27b155cd4dead465ba294025ec",
+      "published_sha256": "4cacbda5d647589b24c522c7fcca5eea99a0ab369872839f0aa0dd8aef54d359",
+      "operation": "literal UTF-8 prefix replacement",
+      "original_prefix_sha256": "9083a6313a474b2e0f507f97b47c556d850b2746cefeea496f18492c0ee4bfe0",
+      "original_prefix_bytes": 39,
+      "replacement": "<LOCAL_WORKSPACE>",
+      "replacement_count": 1,
+      "reason": "Remove the private local username and workspace path from a Torch warning. Original log remains unchanged in source_directory."
+    }
+  ]
+}

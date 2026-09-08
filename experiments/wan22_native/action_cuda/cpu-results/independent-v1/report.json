@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "tests": 5,
+  "pytest_exit_code": 0,
+  "elapsed_seconds": 1.7919765000115149,
+  "test_results": [
+    {
+      "name": "experiments/wan22_native/action_cuda/test_independent.py::test_literal_head_boundary_time_grid_and_zero_adapter_identity[baseline]",
+      "stage": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.08281000002170913
+    },
+    {
+      "name": "experiments/wan22_native/action_cuda/test_independent.py::test_literal_head_boundary_time_grid_and_zero_adapter_identity[spatial]",
+      "stage": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00941774999955669
+    },
+    {
+      "name": "experiments/wan22_native/action_cuda/test_independent.py::test_activated_adapter_paired_gradients_match_direct_literal_head",
+      "stage": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.04156658300780691
+    },
+    {
+      "name": "experiments/wan22_native/action_cuda/test_independent.py::test_sentinel_traceback_release_foreign_exception_and_failure_cleanup",
+      "stage": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.004270125005859882
+    },
+    {
+      "name": "experiments/wan22_native/action_cuda/test_independent.py::test_external_hook_and_changed_observation_are_rejected_without_deletion",
+      "stage": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0028263750136829913
+    }
+  ],
+  "source_sha256": {
+    "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+    "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+    "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+    "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+    "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+  },
+  "sources_unchanged": true,
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "pillow": "12.3.0",
+    "safetensors": "0.5.3",
+    "pytest": "7.4.4",
+    "pytest_location": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pytest",
+    "pytest_plugin_autoload_disabled": true
+  },
+  "author_report_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+  "output_sha256": "f9eec3ee3fe26c323f6e941c11eff8f7a1c82b27b155cd4dead465ba294025ec",
+  "scope": "CPU-only small literal upstream zero-attention-block model/head/unpatchify and existing adapter. No external weights, CUDA/FA2 inference, training study, cloud calls or quality claim.",
+  "pre_test_setup_failure": "Initial invocation stopped before tests at ModuleNotFoundError: pytest in isolated environment. This invocation appended the existing system pytest path; no packages installed."
+}

@@ -1,0 +1,111 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Source/input identities and completed-pair admission, without model calls."""
+import json
+import math
+from pathlib import Path
+import shutil
+from ..official_cpu.streaming import sha,bounded_file
+from .guards import LIMITS,validate_hardware
+from .sampling import SETTINGS
+
+HERE=Path(__file__).resolve().parent;REPO=HERE.parents[2]
+NAMES=('__init__.py','native.py','sampling.py','guards.py','decode.py','evidence.py','run.py','test_cpu.py',
+       'vendor/__init__.py','vendor/model.py','vendor/attention.py','vendor/fm_solvers_unipc.py','vendor/vae2_2.py',
+       'config.json','codec-source.json','upstream-provenance.json','expected-weights.json','requirements.txt','LICENSE-APACHE-2.0.txt')
+SHARED=('experiments/wan22_native/official_cpu/inputs.py','experiments/wan22_native/official_cpu/streaming.py')
+PRECISION={'parameter_storage':'Original FP32','convert_model_dtype':False,
+    'outer_autocast':'Native CUDA BF16 with default cache setting','inner_contexts':'Unmodified upstream contexts',
+    'attention':'Unmodified upstream FlashAttention 2','rope':'Unmodified upstream complex RoPE'}
+
+
+def sources():
+    return {**{name:sha(HERE/name)for name in NAMES},**{'shared/'+name:sha(REPO/name)for name in SHARED}}
+
+
+def source_path(name):
+    if name.startswith('shared/'):
+        if name[7:]not in SHARED:raise ValueError('Unknown shared source')
+        return REPO/name[7:]
+    if name not in NAMES and name!='test_independent.py':raise ValueError('Unknown local source')
+    return HERE/name
+
+
+def preflight(path,independent=False):
+    report=json.loads(Path(path).read_text());expected=sources()
+    if independent:expected['test_independent.py']=sha(HERE/'test_independent.py')
+    if report.get('status')!='passed'or report.get('tests',0)<4 or report.get('source_sha256')!=expected:
+        raise ValueError('Completed source-matching CPU review required')
+    return sha(path)
+
+
+def snapshot(out):
+    mapping=sources()
+    for name,digest in mapping.items():
+        target=Path(out)/'measured-source'/(name+'.txt');target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(source_path(name),target)
+        if sha(target)!=digest:raise RuntimeError('Source changed during snapshot')
+    return mapping
+
+
+def positive_number(value):
+    if isinstance(value,bool)or not isinstance(value,(float,int))or not math.isfinite(value)or value<=0:
+        raise ValueError('Finite positive timing required')
+    return value
+
+
+def validate_pair(directory,source_hashes,input_identity,expected_gpu):
+    root=Path(directory);parent=json.loads(bounded_file(root,'metrics.json').read_text())
+    terminal=json.loads(bounded_file(root/'core','terminal.json').read_text())
+    result=json.loads(bounded_file(root/'core/result','metrics.json').read_text())
+    if list(root.rglob('watchdog-stop.json'))or parent.get('status')!='passed'or parent.get('mode')!='pair':
+        raise ValueError('Completed CUDA pair required; stopped or clip runs do not qualify')
+    if terminal.get('status')!='complete'or terminal.get('exit_code')!=0 or result.get('status')!='passed':
+        raise ValueError('Successful parent and terminal pair completion required')
+    if parent.get('source_sha256')!=source_hashes or result.get('source_sha256')!=source_hashes or parent.get('input_identity')!=input_identity or result.get('input_identity')!=input_identity:
+        raise ValueError('Pair source/input identity differs')
+    for name,digest in source_hashes.items():
+        if sha(bounded_file(root/'measured-source',name+'.txt'))!=digest:raise ValueError('Pair measured source snapshot differs')
+    if result.get('settings')!=SETTINGS or result.get('predictions')!=2 or result.get('solver_updates')!=0 or result.get('finite_outputs')is not True:
+        raise ValueError('Exact finite native CUDA pair required')
+    if result.get('limits')!=LIMITS or parent.get('limits')!=LIMITS or result.get('precision')!=PRECISION:
+        raise ValueError('Measured resource limits or native precision differ')
+    if result.get('input_tensors_unchanged')is not True:raise ValueError('Pair caller input integrity missing')
+    if sha(root/'core/result/metrics.json')!=parent.get('core_report_sha256'):raise ValueError('Pair report changed')
+    if sha(root/'core/terminal.json')!=parent.get('core_terminal_sha256'):raise ValueError('Pair terminal changed')
+    if set(result.get('output_sha256',{}))!={'weight-load.json','outputs.safetensors','completed-positive.safetensors','completed-negative.safetensors'}:
+        raise ValueError('Every required pair artifact must be retained')
+    for name,digest in result['output_sha256'].items():
+        if sha(bounded_file(root/'core/result',name))!=digest:raise ValueError('Pair artifact changed')
+    for name,digest in parent['copied_input_sha256'].items():
+        if sha(bounded_file(root,name))!=digest:raise ValueError('Retained pair input file changed')
+    expected_files={'inputs.safetensors':input_identity['pair_files']['inputs.safetensors'],
+                    'contexts.safetensors':input_identity['text_files']['embeddings.safetensors'],
+                    'text-manifest.json':input_identity['text_files']['manifest.json']}
+    if parent['copied_input_sha256']!=expected_files:raise ValueError('Pair copied files differ from fixed saved inputs')
+    weights=json.loads((root/'core/result/weight-load.json').read_text())
+    if (weights.get('convert_model_dtype')is not False or weights.get('all_shards_verified')is not True
+            or weights.get('cuda_copy_exact')is not True or weights.get('tensor_count')!=825
+            or weights.get('parameter_count')!=4999787712 or weights.get('parameter_bytes')!=19999150848
+            or len(weights.get('tensors',{}))!=825):raise ValueError('Complete original FP32 weight records required')
+    expected=json.loads((HERE/'expected-weights.json').read_text())['tensors']
+    if set(weights['tensors'])!=set(expected):raise ValueError('Exact original 825 parameter names required')
+    for name,row in weights['tensors'].items():
+        digest=row.get('source_sha256')
+        if not isinstance(digest,str)or len(digest)!=64 or any(c not in '0123456789abcdef'for c in digest):
+            raise ValueError('Every parameter hash must be a complete SHA256')
+        if (row.get('original_dtype')!='float32'or row.get('loaded_dtype')!='float32'
+                or row.get('loaded_sha256')!=digest or digest!=expected[name]['original_sha256']
+                or row.get('shape')!=expected[name]['shape']or row.get('shard')!=expected[name]['shard']
+                or row.get('cuda_copy_exact')is not True
+                or row.get('source_owner_released')is not True):raise ValueError('Weight precision or copy evidence differs')
+    device=validate_hardware(result['hardware'],expected_gpu)
+    elapsed=positive_number(parent['elapsed_seconds'])
+    load=positive_number(result['load_seconds']);pair_seconds=positive_number(result['pair_seconds'])
+    if elapsed>=LIMITS['seconds']or load+pair_seconds>elapsed:raise ValueError('Invalid measured pair duration')
+    # This is a conservative admission estimate, not a measured CUDA decoder cost.
+    estimate=1.2*(load+50*pair_seconds)+120.+30.
+    if estimate>LIMITS['seconds']:raise ValueError('Estimated 50-step clip exceeds fixed deadline')
+    return {'pair_report_sha256':sha(root/'metrics.json'),'pair_worker_sha256':sha(root/'core/result/metrics.json'),
+        'hardware':device,'estimated_seconds':estimate,'equation':'1.2 * (measured core load + 50 * measured first pair) + 120 + 30',
+        'unmeasured_decode_load_and_decode_allowance_seconds':120.,'artifact_allowance_seconds':30.,
+        'decoder_cost_measured':False,'estimate_is_not_a_completion_guarantee':True}

@@ -1,0 +1,12 @@
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+experiments/wan22_native/action_cuda/test_independent.py::test_literal_head_boundary_time_grid_and_zero_adapter_identity[baseline]
+experiments/wan22_native/action_cuda/test_independent.py::test_literal_head_boundary_time_grid_and_zero_adapter_identity[spatial]
+experiments/wan22_native/action_cuda/test_independent.py::test_activated_adapter_paired_gradients_match_direct_literal_head
+experiments/wan22_native/action_cuda/test_independent.py::test_sentinel_traceback_release_foreign_exception_and_failure_cleanup
+experiments/wan22_native/action_cuda/test_independent.py::test_external_hook_and_changed_observation_are_rejected_without_deletion
+  <LOCAL_WORKSPACE>/work/wan-adapter-env/lib/python3.11/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+5 passed, 5 warnings in 1.76s

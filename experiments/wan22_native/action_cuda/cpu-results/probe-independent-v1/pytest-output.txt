@@ -1,0 +1,10 @@
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+experiments/wan22_native/action_cuda/test_probe_independent.py::test_two_paired_adamw_updates_match_independent_future_flow_objective
+experiments/wan22_native/action_cuda/test_probe_independent.py::test_pretraining_failures_preserve_native_output_and_never_update[parity]
+experiments/wan22_native/action_cuda/test_probe_independent.py::test_pretraining_failures_preserve_native_output_and_never_update[bridge]
+  <LOCAL_WORKSPACE>/work/wan-adapter-env/lib/python3.11/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+5 passed, 3 warnings in 1.92s
