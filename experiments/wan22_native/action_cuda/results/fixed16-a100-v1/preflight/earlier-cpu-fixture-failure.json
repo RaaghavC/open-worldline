@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "tests": 9,
+  "passed": 5,
+  "failed": 4,
+  "seconds": 4.19,
+  "finding": "Four mocked runner fixtures stopped before their intended checks because the Mac temporary path includes the /var symlink. The production no-symlink guard correctly rejected it. The fixture is changed to resolve its own temporary root, matching the existing prototype fixture. No guard tolerance or runtime behavior is changed by this fixture correction.",
+  "model_execution": false
+}

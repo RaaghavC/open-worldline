@@ -74,6 +74,8 @@ The [completed spatial CUDA diagnostic](experiments/wan22_native/spatial_referen
 
 The [native CUDA action-training result](experiments/wan22_native/action_cuda/results/a100-v1/README.md) trained the original 947,712-parameter adapter for two paired updates on an A100. Native predictions and the initially zero adapter matched bit for bit, recurrent gradients became nonzero, and all 825 base-model parameter records remained unchanged. Independent audits and a fresh public download of the complete evidence passed. This result measures numerical training behavior; it contains no generated clip from the trained adapter and does not establish command response or visual quality.
 
+A subsequent [fresh sixteen-update CUDA run](experiments/wan22_native/action_cuda/results/fixed16-a100-v1/README.md) completed in 260.465 seconds. All seventeen checkpoints, thirty-two saved training predictions and sixteen saved gradient bundles passed independent checks. The complete public archive can be downloaded without a provider account. Generated image quality and command response remain unmeasured by this training run.
+
 The three immediate engineering capabilities are:
 
 1. Preserve generated fields and edits across camera movement, reloads and process restarts.

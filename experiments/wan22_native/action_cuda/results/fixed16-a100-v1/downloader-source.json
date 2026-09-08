@@ -1,0 +1,11 @@
+{
+  "source": "../a100-v1/fetch_artifacts.py",
+  "source_sha256": "966eb406718cc2417af42584611954592e14b63c82dd641faa50c5ff8ba53df7",
+  "published_sha256": "b6449d75606c102b540d3a9f5d153e8ae0f89fdf194a757cd7adcd52381a8844",
+  "changes": [
+    "Module description names fixed16",
+    "Restore 90,000,000-byte per-part ceiling for the six pinned parts; same action download/recovery schemas and algorithm"
+  ],
+  "test_source_sha256": "d7cb26252d8365debaa740a211acba80e3f5f19e418f497ffef1826dc4c88341",
+  "test_bytes_unchanged": true
+}

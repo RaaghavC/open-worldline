@@ -64,3 +64,6 @@ The separate [numerical probe guide](PROBE.md) documents the implemented plan-fi
 ## Attribution
 
 This bridge and its fixtures are original Apache-2.0 Worldline code under the repository [license](../../../LICENSE). They reuse the unchanged original [action adapter](../action_adapter/README.md). Wan2.2 architecture, model parameters and native source remain external Apache-2.0 components, attributed in [NOTICE](../NOTICE), the [native provenance](../cuda_reference/upstream-provenance.json), and the retained [Apache license](../LICENSE-APACHE-2.0.txt). No foundation weights or new trained adapter weights are bundled in this package. Original Atrium RGB and metadata have their separate [CC0 license](../../atrium_data/DATA-LICENSE).
+
+
+The subsequent [fresh sixteen-update A100 result](results/fixed16-a100-v1/README.md) completed and passed its independent retained-file audit. Its original adapter checkpoint and full recovery archive are public. This measures training mechanics; it contains no generated clip from that checkpoint.

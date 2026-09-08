@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "Listed credential patterns and personal absolute paths in all 347 decodable raw text files and the selected payload; not a claim about arbitrary secret formats",
+  "raw_text_files_scanned": 347,
+  "raw_text_inventory_sha256": "6e0b4db1f3521fa331b997d9ec7520f693406446cdd1de5363bddbdf9a67deb8",
+  "raw_findings": [
+    {
+      "file": "action-setup-v1/pip-freeze.txt",
+      "kind": "personal_path",
+      "matching_lines": 74,
+      "classification": "public base-image Conda build paths",
+      "raw_transformation": "none"
+    }
+  ],
+  "selected_payload_findings": [],
+  "external_wrapper_transformation": "Remove only pod_id; source and published hashes recorded in code-provenance.json"
+}

@@ -1,0 +1,602 @@
+{
+  "schema": "worldline-fixed16-cuda-publication-v1",
+  "repository_commit": "099eeae6268da852b0acb580258e4c168f900520",
+  "executed_local_sources": {
+    "prototype.py": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1",
+    "runner.py": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27",
+    "test_prototype.py": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107",
+    "test_runner.py": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf"
+  },
+  "repository_source_references": {
+    "experiments/room_world/__init__.py": {
+      "path": "../a100-v1/source/experiments/room_world/__init__.py",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/room_world/memory_evaluate.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_evaluate.py",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/room_world/memory_model.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_model.py",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/room_world/memory_sequence.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_sequence.py",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/room_world/memory_train.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_train.py",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/room_world/model.py": {
+      "path": "../a100-v1/source/experiments/room_world/model.py",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/__init__.py",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_adapter/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_adapter/__init__.py",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_adapter/model.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_adapter/model.py",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_adapter/pooling.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_adapter/pooling.py",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/__init__.py",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/bridge.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/bridge.py",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/cache_run.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/cache_run.py",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/data.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/data.py",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/probe.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/probe.py",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/probe_math.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/probe_math.py",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/test_cpu.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/test_cpu.py",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/test_independent.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/test_independent.py",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/test_probe.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/test_probe.py",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "path": "source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py",
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "origin": "Exact executed source copy"
+    },
+    "experiments/wan22_native/action_data/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_data/__init__.py",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_data/data.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_data/data.py",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_training/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_training/__init__.py",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/action_training/objective.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_training/objective.py",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/__init__.py",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/codec-source.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/codec-source.json",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/config.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/config.json",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/evidence.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/evidence.py",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/guards.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/guards.py",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/native.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/native.py",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/requirements.txt": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/requirements.txt",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/sampling.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/sampling.py",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/load_weights.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/load_weights.py",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/official_cpu/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/official_cpu/__init__.py",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/official_cpu/inputs.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/official_cpu/inputs.py",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/official_cpu/streaming.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/official_cpu/streaming.py",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/portable.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/portable.py",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/spatial_reference/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/__init__.py",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/spatial_reference/config.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/config.py",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/spatial_reference/evidence.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/evidence.py",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/spatial_reference/guards.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/guards.py",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/spatial_reference/inputs.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/inputs.py",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/spatial_reference/sampling.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/sampling.py",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/text-reuse.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/text-reuse.json",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/vendor/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/vendor/__init__.py",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/vendor/attention.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan22_native/vendor/model.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan_adapter/capture_data.py": {
+      "path": "../a100-v1/source/experiments/wan_adapter/capture_data.py",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan_adapter/native_control/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan_adapter/native_control/__init__.py",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    },
+    "experiments/wan_adapter/native_control/portable.py": {
+      "path": "../a100-v1/source/experiments/wan_adapter/native_control/portable.py",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "origin": "Shared unchanged repository dependency retained in the earlier public probe payload"
+    }
+  },
+  "copied_files": {
+    "metrics/parent.json": {
+      "bytes": 846,
+      "sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/metrics.json",
+      "source_sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea",
+      "transformation": "none"
+    },
+    "metrics/worker.json": {
+      "bytes": 23670,
+      "sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/worker/metrics.json",
+      "source_sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3",
+      "transformation": "none"
+    },
+    "metrics/training.json": {
+      "bytes": 781775,
+      "sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/metrics.json",
+      "source_sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7",
+      "transformation": "none"
+    },
+    "metrics/terminal.json": {
+      "bytes": 542,
+      "sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/terminal.json",
+      "source_sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a",
+      "transformation": "none"
+    },
+    "metrics/monitor.json": {
+      "bytes": 403,
+      "sha256": "b660f498b86d8a4381b0ccd1f0eb8931114999f29232af2692befec4d7fe6763",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/worker/monitor-terminal.json",
+      "source_sha256": "b660f498b86d8a4381b0ccd1f0eb8931114999f29232af2692befec4d7fe6763",
+      "transformation": "none"
+    },
+    "metrics/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/worker/weight-load.json",
+      "source_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "metrics/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/core-before.json",
+      "source_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/core-after.json",
+      "source_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/last-valid.json": {
+      "bytes": 153,
+      "sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/last-valid.json",
+      "source_sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461",
+      "transformation": "none"
+    },
+    "plans/plan.json": {
+      "bytes": 709761,
+      "sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/plan.json",
+      "source_sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb",
+      "transformation": "none"
+    },
+    "plans/admission.json": {
+      "bytes": 702866,
+      "sha256": "1465329851f8275dd8b7a93300424d24b1183b109837e04b0114a36b2d750dda",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/executed-admission.json",
+      "source_sha256": "1465329851f8275dd8b7a93300424d24b1183b109837e04b0114a36b2d750dda",
+      "transformation": "none"
+    },
+    "plans/execution-attempt.json": {
+      "bytes": 70,
+      "sha256": "5c941ee2831bc6b93b0d522ca3964066352ed7b61d367d20754e83fe4aad69f7",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/execution-attempt.json",
+      "source_sha256": "5c941ee2831bc6b93b0d522ca3964066352ed7b61d367d20754e83fe4aad69f7",
+      "transformation": "none"
+    },
+    "inputs/window-tensor-hashes.json": {
+      "bytes": 2203,
+      "sha256": "3b7aa6a94bd60eb86bb61f246b251c602a778797c7ffb51ba0f7c2b3182e78a1",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/window-tensor-hashes.json",
+      "source_sha256": "3b7aa6a94bd60eb86bb61f246b251c602a778797c7ffb51ba0f7c2b3182e78a1",
+      "transformation": "none"
+    },
+    "checkpoint-0016/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/checkpoint-0016/adapter.safetensors",
+      "source_sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+      "transformation": "none"
+    },
+    "checkpoint-0016/manifest.json": {
+      "bytes": 740101,
+      "sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/training/checkpoint-0016/manifest.json",
+      "source_sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac",
+      "transformation": "none"
+    },
+    "source/local/runner.py": {
+      "bytes": 22213,
+      "sha256": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-executed-source/runner.py",
+      "source_sha256": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27",
+      "transformation": "none"
+    },
+    "source/local/prototype.py": {
+      "bytes": 12867,
+      "sha256": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-executed-source/prototype.py",
+      "source_sha256": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1",
+      "transformation": "none"
+    },
+    "source/local/test_runner.py": {
+      "bytes": 8180,
+      "sha256": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-executed-source/test_runner.py",
+      "source_sha256": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf",
+      "transformation": "none"
+    },
+    "source/local/test_prototype.py": {
+      "bytes": 7702,
+      "sha256": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-executed-source/test_prototype.py",
+      "source_sha256": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107",
+      "transformation": "none"
+    },
+    "preflight/runner-cpu-report-v2.json": {
+      "bytes": 8444,
+      "sha256": "e777a2c260c2a750be6be501fad365d2c712ea394d09d00c848c27d0e321ada7",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-executed-source/runner-cpu-report-v2.json",
+      "source_sha256": "e777a2c260c2a750be6be501fad365d2c712ea394d09d00c848c27d0e321ada7",
+      "transformation": "none"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovered/action-results/fixed16-spatial-v1/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py",
+      "source_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "transformation": "none"
+    },
+    "audit/report.json": {
+      "bytes": 33050,
+      "sha256": "9c751fb0e7284edce0459740e203788fa1e371b691576c9eaa352d2b1c49cc54",
+      "source": "work/wan22-action-cuda-fixed16-actual-audit-v1/report.json",
+      "source_sha256": "9c751fb0e7284edce0459740e203788fa1e371b691576c9eaa352d2b1c49cc54",
+      "transformation": "none"
+    },
+    "audit/audit.py": {
+      "bytes": 18872,
+      "sha256": "95ff7fe282f43f64f0962eda612e860c994f0481d791acaead853a082032e217",
+      "source": "work/wan22-action-cuda-fixed16-actual-audit-v1/audit.py",
+      "source_sha256": "95ff7fe282f43f64f0962eda612e860c994f0481d791acaead853a082032e217",
+      "transformation": "none"
+    },
+    "audit/inventory.json": {
+      "bytes": 31505,
+      "sha256": "db7c4950ca2b0b944b9e4bb6fadf5cf7ec62718b24d3e5fa12c3cc0f6e74a52c",
+      "source": "work/wan22-action-cuda-fixed16-actual-audit-v1/inventory.json",
+      "source_sha256": "db7c4950ca2b0b944b9e4bb6fadf5cf7ec62718b24d3e5fa12c3cc0f6e74a52c",
+      "transformation": "none"
+    },
+    "recovery/index.json": {
+      "bytes": 98888,
+      "sha256": "09ac05c19f18d881ddde0d2242fdb828e1262ae3361e178e220ea1a8b799ef2a",
+      "source": "work/wan22-action-cuda-recovered-final-v1/index.json",
+      "source_sha256": "09ac05c19f18d881ddde0d2242fdb828e1262ae3361e178e220ea1a8b799ef2a",
+      "transformation": "none"
+    },
+    "recovery/recovery-verified.json": {
+      "bytes": 316,
+      "sha256": "66f982ab512a166120d0b079a19619f985ed527412986dfcd5f2ee7a5aae9e3c",
+      "source": "work/wan22-action-cuda-recovered-final-v1/recovery-verified.json",
+      "source_sha256": "66f982ab512a166120d0b079a19619f985ed527412986dfcd5f2ee7a5aae9e3c",
+      "transformation": "none"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "source": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/a100-v1/licenses/WAN-NOTICE.txt",
+      "source_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/a100-v1/licenses/WAN-APACHE-2.0.txt",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/a100-v1/licenses/WORLDLINE-APACHE-2.0.txt",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "source": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/a100-v1/licenses/ATRIUM-CC0.txt",
+      "source_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none"
+    },
+    "preflight/preparation-package.json": {
+      "bytes": 1398,
+      "sha256": "1f2f8f14122862917c0c07bc024f6744a0ba637f18b0acb57701f44a7ce523db",
+      "source": "work/wan22-action-cuda-fixed16-prep-v1/package.json",
+      "source_sha256": "1f2f8f14122862917c0c07bc024f6744a0ba637f18b0acb57701f44a7ce523db",
+      "transformation": "none"
+    },
+    "preflight/earlier-cpu-fixture-failure.json": {
+      "bytes": 487,
+      "sha256": "4cd9d2f6ada33ba9abb1841bb7dc517f19fd5e4fd7f1da631a9ca258c20f96db",
+      "source": "work/wan22-action-cuda-fixed16-prep-v1/preparation-history/runner-cpu-v1/failure.json",
+      "source_sha256": "4cd9d2f6ada33ba9abb1841bb7dc517f19fd5e4fd7f1da631a9ca258c20f96db",
+      "transformation": "none"
+    },
+    "execution/remaining-time-public.json": {
+      "bytes": 253,
+      "sha256": "c0ad2cb71a6826702aa4a19241062f1b43651af0a2e3c1ae7148831d28e8e2ac",
+      "source": "work/runpod-action-cuda-launch-v1/fixed16-remaining-time.json",
+      "source_sha256": "9a05e5a88df63869a8c5a1e1d0b50b76bea809247981b210548d5529dac7708b",
+      "transformation": {
+        "removed_fields": [
+          "pod_id"
+        ],
+        "reason": "Omit the provider resource identifier; all timing, reserve and limit values are preserved"
+      }
+    },
+    "recovery/local-downloader-verification.json": {
+      "bytes": 460,
+      "sha256": "cee26743d45b3a3cccdb72d811ad93e5226ec415e92eaf08d03328884da0a0fc",
+      "source": "work/wan22-fixed16-public-fetch-local-v1/verification.json",
+      "source_sha256": "cee26743d45b3a3cccdb72d811ad93e5226ec415e92eaf08d03328884da0a0fc",
+      "transformation": "none"
+    },
+    "release/published-release.json": {
+      "bytes": 35482,
+      "sha256": "90a204698c186ba405f06390f2da7e21ea53bbad80efeb34160f5f976aaf3074",
+      "source": "work/wan22-action-fixed16-publication-v1/published-release.json",
+      "source_sha256": "90a204698c186ba405f06390f2da7e21ea53bbad80efeb34160f5f976aaf3074",
+      "transformation": "none"
+    },
+    "release/remote-asset-verification.json": {
+      "bytes": 5398,
+      "sha256": "8ee4cfb1ae4b6e6e85df980b0617bf256d2b6fd8181f2979b76b8766eadf02ac",
+      "source": "work/wan22-action-fixed16-publication-v1/remote-asset-verification.json",
+      "source_sha256": "8ee4cfb1ae4b6e6e85df980b0617bf256d2b6fd8181f2979b76b8766eadf02ac",
+      "transformation": "none"
+    },
+    "recovery/public-download-verification.json": {
+      "bytes": 461,
+      "sha256": "70f5c454e2778317bbcf63a00a2a6662b4d28fbecdcac70751a191fb4afb2a96",
+      "source": "work/wan22-fixed16-public-download-v1/verification.json",
+      "source_sha256": "70f5c454e2778317bbcf63a00a2a6662b4d28fbecdcac70751a191fb4afb2a96",
+      "transformation": "none"
+    }
+  },
+  "original_preparation_archives": [
+    {
+      "name": "fixed16-preparation.tar.gz",
+      "bytes": 21968,
+      "sha256": "4d778c1d23a9b44984b6a6ced96fc93c2c85c87816fc0bf846badb254308f67c"
+    },
+    {
+      "name": "worldline-action-cuda-099eeae6268d.tar.gz",
+      "bytes": 23684273,
+      "sha256": "0f6002281bae9d1d2f8af8134ed76cdf1c156e165fcde2846b0b980ce0888d0c"
+    },
+    {
+      "name": "scripts.tar.gz",
+      "bytes": 13765,
+      "sha256": "b6f3673adeb2cf6659a3012db47844818e829eb3f75b36cf5b3f1f524cd9b47c"
+    }
+  ],
+  "scope": "Compact fixed16 result only; all seventeen checkpoints and complete raw run records remain in the release archive",
+  "independent_actual_audit": "passed"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "worldline-work-only-fixed16-preparation-package-v1",
+  "files": {
+    "prototype.py": {
+      "bytes": 12867,
+      "sha256": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1"
+    },
+    "runner.py": {
+      "bytes": 22213,
+      "sha256": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27"
+    },
+    "test_prototype.py": {
+      "bytes": 7702,
+      "sha256": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107"
+    },
+    "test_runner.py": {
+      "bytes": 8180,
+      "sha256": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf"
+    },
+    "runner-cpu-report-v2.json": {
+      "bytes": 8444,
+      "sha256": "e777a2c260c2a750be6be501fad365d2c712ea394d09d00c848c27d0e321ada7"
+    },
+    "runner-cpu-output-v2.txt": {
+      "bytes": 1465,
+      "sha256": "76d392c6a40b744fd3f4b08e8c7ae72c34b955e3386d1a75d835085c30e1ed7e"
+    },
+    "README.md": {
+      "bytes": 8622,
+      "sha256": "e993c52a1100fbe515ede265c15e20f0819c5868dde2cce62f9f18efb17b35d0"
+    },
+    "RUN.md": {
+      "bytes": 2790,
+      "sha256": "639a422eef5a622c39ccdfa199c7214e86b6d21c491f0d839188c3018017fcc0"
+    }
+  },
+  "repository_commit": "099eeae6268da852b0acb580258e4c168f900520",
+  "execution_performed": false,
+  "cpu_checks": 9,
+  "requires_parent_exact_plan_admission": true,
+  "requires_external_900_plus_300_seconds_remaining": true
+}

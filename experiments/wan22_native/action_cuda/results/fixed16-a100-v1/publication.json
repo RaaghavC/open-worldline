@@ -1,0 +1,212 @@
+{
+  "schema": "worldline-fixed16-cuda-small-publication-v1",
+  "scope": "Actual fresh 16-update CUDA numerical training evidence; no generated images or rendered action-control measurement.",
+  "file_count": 51,
+  "file_bytes": 7852569,
+  "files": {
+    "DOWNLOADER.md": {
+      "bytes": 1950,
+      "sha256": "5e1abf9387367685dbab3fbdae1f12b5de8f7678c720e989ecaa30b9450c1f71"
+    },
+    "LICENSE-NOTES.md": {
+      "bytes": 934,
+      "sha256": "ce1dd5f404d6a3438ecec9b10c8fb643d2b97b04e53af57e5de8a536c1001caa"
+    },
+    "README.md": {
+      "bytes": 8385,
+      "sha256": "c85f1ae872f0f20c8e0c71105f220083d10c7adb241cbb390b416fc822db3fb6"
+    },
+    "audit/audit.py": {
+      "bytes": 18872,
+      "sha256": "95ff7fe282f43f64f0962eda612e860c994f0481d791acaead853a082032e217"
+    },
+    "audit/inventory.json": {
+      "bytes": 31505,
+      "sha256": "db7c4950ca2b0b944b9e4bb6fadf5cf7ec62718b24d3e5fa12c3cc0f6e74a52c"
+    },
+    "audit/report.json": {
+      "bytes": 33050,
+      "sha256": "9c751fb0e7284edce0459740e203788fa1e371b691576c9eaa352d2b1c49cc54"
+    },
+    "checkpoint-0016/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d"
+    },
+    "checkpoint-0016/manifest.json": {
+      "bytes": 740101,
+      "sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac"
+    },
+    "code-provenance.json": {
+      "bytes": 36364,
+      "sha256": "94f22c2548a6d2b18fc8b6dd755c356a14b29806ef7303ae87dd0e1dd305128a"
+    },
+    "downloader-cpu-review-v1.json": {
+      "bytes": 518,
+      "sha256": "232a8f2f21a39c6f8350d0ce8c2d0912dcba54c033d25741ccf652c3b5e54301"
+    },
+    "downloader-source.json": {
+      "bytes": 534,
+      "sha256": "2e6078ca2ffb0b9f0678cc05f5552bf28be4e01146558ea2f31e7434781a32a7"
+    },
+    "downloader-test-output.txt": {
+      "bytes": 800,
+      "sha256": "24ac38c7d5c8320b2c10683541a1dbe8e4af6304ba0c3b5838e1044fa9a3b8ae"
+    },
+    "execution/remaining-time-public.json": {
+      "bytes": 253,
+      "sha256": "c0ad2cb71a6826702aa4a19241062f1b43651af0a2e3c1ae7148831d28e8e2ac"
+    },
+    "fetch_artifacts.py": {
+      "bytes": 10130,
+      "sha256": "b6449d75606c102b540d3a9f5d153e8ae0f89fdf194a757cd7adcd52381a8844"
+    },
+    "inputs/window-tensor-hashes.json": {
+      "bytes": 2203,
+      "sha256": "3b7aa6a94bd60eb86bb61f246b251c602a778797c7ffb51ba0f7c2b3182e78a1"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "metrics/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "metrics/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "metrics/last-valid.json": {
+      "bytes": 153,
+      "sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461"
+    },
+    "metrics/monitor.json": {
+      "bytes": 403,
+      "sha256": "b660f498b86d8a4381b0ccd1f0eb8931114999f29232af2692befec4d7fe6763"
+    },
+    "metrics/parent.json": {
+      "bytes": 846,
+      "sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea"
+    },
+    "metrics/terminal.json": {
+      "bytes": 542,
+      "sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a"
+    },
+    "metrics/training.json": {
+      "bytes": 781775,
+      "sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7"
+    },
+    "metrics/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "metrics/worker.json": {
+      "bytes": 23670,
+      "sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3"
+    },
+    "plans/admission.json": {
+      "bytes": 702866,
+      "sha256": "1465329851f8275dd8b7a93300424d24b1183b109837e04b0114a36b2d750dda"
+    },
+    "plans/execution-attempt.json": {
+      "bytes": 70,
+      "sha256": "5c941ee2831bc6b93b0d522ca3964066352ed7b61d367d20754e83fe4aad69f7"
+    },
+    "plans/plan.json": {
+      "bytes": 709761,
+      "sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb"
+    },
+    "preflight/earlier-cpu-fixture-failure.json": {
+      "bytes": 487,
+      "sha256": "4cd9d2f6ada33ba9abb1841bb7dc517f19fd5e4fd7f1da631a9ca258c20f96db"
+    },
+    "preflight/preparation-package.json": {
+      "bytes": 1398,
+      "sha256": "1f2f8f14122862917c0c07bc024f6744a0ba637f18b0acb57701f44a7ce523db"
+    },
+    "preflight/runner-cpu-report-v2.json": {
+      "bytes": 8444,
+      "sha256": "e777a2c260c2a750be6be501fad365d2c712ea394d09d00c848c27d0e321ada7"
+    },
+    "privacy-scan.json": {
+      "bytes": 729,
+      "sha256": "05d831c767d639a424a63085144a494c30ee58ec8c6cc03ed61707d4c8f46bcb"
+    },
+    "recovery/index.json": {
+      "bytes": 98888,
+      "sha256": "09ac05c19f18d881ddde0d2242fdb828e1262ae3361e178e220ea1a8b799ef2a"
+    },
+    "recovery/local-downloader-verification.json": {
+      "bytes": 460,
+      "sha256": "cee26743d45b3a3cccdb72d811ad93e5226ec415e92eaf08d03328884da0a0fc"
+    },
+    "recovery/public-download-verification.json": {
+      "bytes": 461,
+      "sha256": "70f5c454e2778317bbcf63a00a2a6662b4d28fbecdcac70751a191fb4afb2a96"
+    },
+    "recovery/recovery-verified.json": {
+      "bytes": 316,
+      "sha256": "66f982ab512a166120d0b079a19619f985ed527412986dfcd5f2ee7a5aae9e3c"
+    },
+    "release/published-release.json": {
+      "bytes": 35482,
+      "sha256": "90a204698c186ba405f06390f2da7e21ea53bbad80efeb34160f5f976aaf3074"
+    },
+    "release/remote-asset-verification.json": {
+      "bytes": 5398,
+      "sha256": "8ee4cfb1ae4b6e6e85df980b0617bf256d2b6fd8181f2979b76b8766eadf02ac"
+    },
+    "release-download.json": {
+      "bytes": 2183,
+      "sha256": "f75bb5fa80dfdb1d8c50be8363dfb8eecb8c2d62a2466a4012fbaea9b8847396"
+    },
+    "release-status.json": {
+      "bytes": 966,
+      "sha256": "1678a844180e48973d10edba61ea6411894372ba46c388ed701583747145c629"
+    },
+    "source/local/prototype.py": {
+      "bytes": 12867,
+      "sha256": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1"
+    },
+    "source/local/runner.py": {
+      "bytes": 22213,
+      "sha256": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27"
+    },
+    "source/local/test_prototype.py": {
+      "bytes": 7702,
+      "sha256": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107"
+    },
+    "source/local/test_runner.py": {
+      "bytes": 8180,
+      "sha256": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "summary.json": {
+      "bytes": 5408,
+      "sha256": "3df15fb3e844f6bccde5dc115b1fc2fae55afdbffa736ed27b4f84e45226c532"
+    },
+    "test_fetch_artifacts.py": {
+      "bytes": 6623,
+      "sha256": "d7cb26252d8365debaa740a211acba80e3f5f19e418f497ffef1826dc4c88341"
+    },
+    "verify_payload.py": {
+      "bytes": 3023,
+      "sha256": "44b5e94ca5846a4e0f33ca5b65146e46e59298ec6af7851fc636a4fc7937f34f"
+    }
+  }
+}

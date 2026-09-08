@@ -1,0 +1,22 @@
+{
+  "schema": "worldline-action-cuda-fixed16-run-v1",
+  "status": "passed",
+  "model_execution": true,
+  "limits": {
+    "seconds": 900.0,
+    "host_rss_bytes": 51539607552,
+    "cuda_reserved_bytes": 64424509440,
+    "minimum_host_available_bytes": 8589934592,
+    "minimum_cuda_available_bytes": 8589934592,
+    "minimum_gpu_total_bytes": 75161927680
+  },
+  "completed_updates": 16,
+  "worker_metrics_sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3",
+  "terminal_sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a",
+  "plan_sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb",
+  "admission": {
+    "sha256": "1465329851f8275dd8b7a93300424d24b1183b109837e04b0114a36b2d750dda",
+    "scope": "fixed16-fresh-cuda-training-only"
+  },
+  "elapsed_seconds": 260.465301829041
+}
