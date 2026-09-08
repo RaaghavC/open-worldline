@@ -1,0 +1,136 @@
+name: Publish verified source bundle once
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-verified-source-bundle
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'RaaghavC/open-worldline' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPECTED_BASE: ff4933dd08efad2cf33adcdde165d96f66ad75c2
+      SOURCE_FIRST: c18a4c57f4221fe345bc78a3b132a43ca8babe04
+      SOURCE_FINAL: 379dc0a31cb4888b3966c042010e768c6299075d
+      EXPECTED_TREE: 5e6c0d47e283404c5b2b8d0670d526dd070d869d
+      MANIFEST_URL: https://github.com/RaaghavC/open-worldline/releases/download/worldline-source-action-effect-v1/source-bundle.json
+      MANIFEST_SHA256: 5fbdbcabb306ff0a8f0c699fdf5ff3540195ca000f6bf16eecdbdd3788b431d5
+      TEMP_WORKFLOW: .github/workflows/publish-bundle.yml
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Verify workflow-only starting commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_EVENT_NAME" = workflow_dispatch
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(git show -s --format=%P HEAD)" = "$EXPECTED_BASE"
+          test "$(git diff --name-only "$EXPECTED_BASE" HEAD)" = "$TEMP_WORKFLOW"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+          test -z "$(git status --porcelain)"
+          git config core.hooksPath /dev/null
+          git config user.name github-actions\[bot\]
+          git config user.email 41898282+github-actions\[bot\]@users.noreply.github.com
+      - name: Download and verify public bundle bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, os, re, urllib.request
+          from pathlib import Path
+          prefix = 'https://github.com/RaaghavC/open-worldline/releases/download/worldline-source-action-effect-v1/'
+          def sha(data): return hashlib.sha256(data).hexdigest()
+          def valid_hash(value): return isinstance(value, str) and re.fullmatch('[0-9a-f]{64}', value)
+          def number(value, minimum, maximum):
+              return type(value) is int and minimum <= value <= maximum
+          def download(url, limit):
+              if not isinstance(url, str) or not url.startswith(prefix):
+                  raise ValueError('Unexpected public source URL')
+              with urllib.request.urlopen(url, timeout=120) as response:
+                  if not response.geturl().startswith('https://'):
+                      raise ValueError('Non-HTTPS redirect')
+                  data = response.read(limit + 1)
+              if len(data) > limit: raise ValueError('Download exceeds declared bound')
+              return data
+          expected_manifest = os.environ['MANIFEST_SHA256']
+          if not valid_hash(expected_manifest): raise ValueError('Manifest hash is not filled')
+          raw = download(os.environ['MANIFEST_URL'], 2_000_000)
+          if sha(raw) != expected_manifest: raise ValueError('Manifest hash mismatch')
+          meta = json.loads(raw)
+          first, final = os.environ['SOURCE_FIRST'], os.environ['SOURCE_FINAL']
+          expected = {'schema':'worldline-source-bundle-v1', 'base_commit':os.environ['EXPECTED_BASE'],
+                      'commits':[first, final], 'final_commit':final, 'final_tree':os.environ['EXPECTED_TREE']}
+          if any(meta.get(k) != v for k, v in expected.items()):
+              raise ValueError('Bundle source identities differ')
+          bundle, parts = meta['bundle'], meta['parts']
+          if not number(bundle['bytes'], 1, 512 * 1024 * 1024) or not valid_hash(bundle['sha256']):
+              raise ValueError('Malformed bundle identity')
+          if not isinstance(parts, list) or not 1 <= len(parts) <= 256:
+              raise ValueError('Malformed part count')
+          out = Path(os.environ['RUNNER_TEMP']) / 'verified-source-bundle'
+          out.mkdir(exist_ok=False)
+          full = hashlib.sha256(); total = 0
+          with (out / 'source.bundle').open('xb') as target:
+              for index, part in enumerate(parts):
+                  name = 'source.bundle.part-%03d' % index
+                  if part['name'] != name or part['url'] != prefix + name:
+                      raise ValueError('Part order or URL mismatch')
+                  if not number(part['bytes'], 1, 8_000_000) or not valid_hash(part['sha256']):
+                      raise ValueError('Malformed part identity')
+                  data = download(part['url'], part['bytes'])
+                  if len(data) != part['bytes'] or sha(data) != part['sha256']:
+                      raise ValueError('Part bytes mismatch')
+                  total += len(data)
+                  if total > bundle['bytes']: raise ValueError('Bundle exceeds declared size')
+                  full.update(data); target.write(data)
+          if total != bundle['bytes'] or full.hexdigest() != bundle['sha256']:
+              raise ValueError('Full bundle hash or size mismatch')
+          (out / 'source-bundle.json').write_bytes(raw)
+          print(json.dumps({'verified_bundle_bytes':total, 'sha256':full.hexdigest(), 'parts':len(parts)}))
+          PY
+      - name: Apply exactly the two reviewed source commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          bundle="$RUNNER_TEMP/verified-source-bundle/source.bundle"
+          git bundle verify "$bundle"
+          test "$(git bundle list-heads "$bundle")" = "$SOURCE_FINAL refs/heads/main"
+          git fetch --no-tags "$bundle" refs/heads/main:refs/remotes/verified-bundle/main
+          test "$(git show -s --format=%P "$SOURCE_FIRST")" = "$EXPECTED_BASE"
+          test "$(git show -s --format=%P "$SOURCE_FINAL")" = "$SOURCE_FIRST"
+          test "$(git rev-parse "$SOURCE_FINAL^{tree}")" = "$EXPECTED_TREE"
+          if git cat-file -e "$SOURCE_FINAL:$TEMP_WORKFLOW" 2>/dev/null; then
+            echo 'Expected final tree contains temporary workflow' >&2
+            exit 1
+          fi
+          git cherry-pick --no-gpg-sign "$SOURCE_FIRST" "$SOURCE_FINAL"
+          git rm -- "$TEMP_WORKFLOW"
+          git -c commit.gpgsign=false commit -m 'Remove completed source publication workflow [skip ci]'
+          test "$(git rev-parse HEAD^{tree})" = "$EXPECTED_TREE"
+          test "$(git rev-list --count "$GITHUB_SHA"..HEAD)" = 3
+          test -z "$(git status --porcelain)"
+      - name: Push only if main has not moved
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+          git merge-base --is-ancestor "$GITHUB_SHA" HEAD
+          git push origin HEAD:refs/heads/main
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$(git rev-parse HEAD)"
+          {
+            echo 'Verified source tree published by ordinary fast-forward.'
+            echo "Published commit: $(git rev-parse HEAD)"
+            echo "Source tree: $EXPECTED_TREE"
+            echo 'Root must manually dispatch check.yml; this token push does not trigger push workflows.'
+          } >> "$GITHUB_STEP_SUMMARY"
