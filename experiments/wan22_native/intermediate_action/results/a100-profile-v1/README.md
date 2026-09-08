@@ -47,7 +47,7 @@ python3 experiments/wan22_native/intermediate_action/results/a100-profile-v1/fet
   --output /absolute/path/to/fresh-profile-and-cache-download
 ```
 
-The helper verifies each of the 39 download pieces, the combined archive and every extracted file. [Artifact details](ARTIFACTS.md) explain public derivation, licensing and compatibility with the original scientific readers.
+The helper verifies each of the 150 download pieces, the combined archive and every extracted file. [Artifact details](ARTIFACTS.md) explain public derivation, licensing and compatibility with the original scientific readers. The [transport note](TRANSPORT.md) records the smaller pieces used after interrupted uploads; all 511 extracted file bytes and the combined archive remain unchanged.
 
 The exact GPU instance was deleted, with explicit provider 404 and absence from the complete instance list. The temporary management key was revoked and returned HTTP 401. All three local private key files were removed. [Cleanup record](operations/pod-cleanup.json) and [key retirement](operations/key-retirement.json) are retained. No subsequent training started on this rental.
 
