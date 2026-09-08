@@ -1,0 +1,40 @@
+{
+  "actual_input_read": {
+    "controller_parameters": 4936448,
+    "input_manifest_sha256": "4f37fa59791d7b0645529e4b97978f08d928baf8987e79a9aad6da1b42f3046a",
+    "original_source_files": 858,
+    "profile_source_files": 16,
+    "status": "passed",
+    "windows": 6
+  },
+  "actual_input_read_reused_from_sha256": "ae18ba63620cec51a5a030a1422d59f12e7cfcc2087efdd5eb068ed8f3b730af",
+  "change": "Return recorded phase timings and failure/cleanup reasons in the audit report; numerical functions and source/input checks unchanged.",
+  "elapsed_seconds": 0.01588449999690056,
+  "errors": 0,
+  "failures": 0,
+  "log_sha256": "d06d10a9c3338873f7afbae848a08a9e90098cf01319c259fb4d0d027b44e72d",
+  "model_execution": false,
+  "network_calls": false,
+  "numpy": "1.26.4",
+  "provider_calls": false,
+  "python": "3.11.9",
+  "schema": "worldline-command-attention-profile-audit-cpu-v1",
+  "skipped": 0,
+  "source_sha256": {
+    "README.md": "44693046883ec76337ff6988e5abe8c26d6c3981f7334bde91edc081c7ada69b",
+    "arrays.py": "5d03c159978df228a613af93f1610eccb07f4becaceff31ea77263df5d71ae53",
+    "audit.py": "b6a3c9a52cb05e462069197a91f9801f90ca210bcac362f316803ea5cf188967",
+    "original-transfer-manifest.json": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932",
+    "pins.json": "e46ecd557e89a6fdcddbb579b1382d1c1ae5727af9407a1f7121831dc242d93c",
+    "protocol.json": "e619447d70f85f3fb3d5c188d5fc998a05e8a0f4aae1f374c879eb358a1e4875",
+    "test_audit.py": "e5d223230e94922833c844d6502a906e39fb58778edd7c7daaebca2af1a3ea8c"
+  },
+  "sources_unchanged": true,
+  "status": "passed",
+  "test_names": [
+    "test_audit.AuditTests.test_corrupted_scalar_parity_record_and_retained_file_hash_rejected",
+    "test_audit.AuditTests.test_valid_tiny_analytic_losses_gradient_and_parity_records"
+  ],
+  "tests_run": 2,
+  "torch_imported": false
+}

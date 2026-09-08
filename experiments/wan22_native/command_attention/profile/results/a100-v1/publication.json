@@ -1,0 +1,252 @@
+{
+  "schema": "worldline-command-attention-profile-publication-v1",
+  "scope": "Exact small records and existing saved-file auditor; raw tensors and input packet not included",
+  "copied_record_files": 20,
+  "copied_record_bytes": 1073906,
+  "copied_auditor_files": 9,
+  "files": {
+    "records/profile/launch.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/launch.json",
+      "bytes": 3955,
+      "sha256": "7ae5f5f1291a6fd4d7f47e8867e180dad35f0212c07b46853e66251118a0f01d",
+      "transformation": "none"
+    },
+    "records/profile/terminal.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/terminal.json",
+      "bytes": 542,
+      "sha256": "1dd5fc011055cbfdcf3c991fd14d0457651362e60a8f8816108a2ced3c1effcc",
+      "transformation": "none"
+    },
+    "records/profile/result/metrics.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/result/metrics.json",
+      "bytes": 40212,
+      "sha256": "f66110f4dcde1df703cb34b35d542a65653f4069a7b57682fb70402330b4a510",
+      "transformation": "none"
+    },
+    "records/profile/result/monitor-terminal.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/result/monitor-terminal.json",
+      "bytes": 403,
+      "sha256": "2afb58a411998167a8f38597fb13987f521bbfe6fa9a2c414a4b36b59bc4e4f3",
+      "transformation": "none"
+    },
+    "records/profile/result/weight-load.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/result/weight-load.json",
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "records/profile/result/core-before.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/result/core-before.json",
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "records/profile/result/core-after-parity.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/result/core-after-parity.json",
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "records/profile/result/core-after-updates.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-v1/result/core-after-updates.json",
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "records/dispatch/request.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-dispatch-v1/request.json",
+      "bytes": 149353,
+      "sha256": "54c8890bbf8aaaa4f2c22ba144e006551ec5c0fb9c93428f6af564deeabadb64",
+      "transformation": "none"
+    },
+    "records/dispatch/stage-pid.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-dispatch-v1/stage-pid.json",
+      "bytes": 393,
+      "sha256": "9e711b1d2aed15ba748d9dfe8fc4834d2d9d1f9ffb9327a6f88e26c7339e96c2",
+      "transformation": "none"
+    },
+    "records/dispatch/stage-terminal.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-results/command-attention-profile-dispatch-v1/stage-terminal.json",
+      "bytes": 1423,
+      "sha256": "adb12cd95100cf081eb396cddc6c25f2260b08bf316a0d5b96fb01b7a82cef70",
+      "transformation": "none"
+    },
+    "records/recovery/index.json": {
+      "source": "work/command-attention-profile-recovered-v1/index.json",
+      "bytes": 15832,
+      "sha256": "7cf2b80a23249d0438c11c3167b9d7bdf4d37c17084dc59bab83503b76c2c736",
+      "transformation": "none"
+    },
+    "records/recovery/recovery-verified.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovery-verified.json",
+      "bytes": 421,
+      "sha256": "d817afdfe7bb52140d59d506a078435886c702425a038bc4f7e6506715da7cc9",
+      "transformation": "none"
+    },
+    "records/recovery/input-comparison.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-recovery/profile-v1/input-comparison.json",
+      "bytes": 295,
+      "sha256": "d7b5588ad5e62b6e528dacd101dec5d7dff7f5217f4361ec28469bf78a0ce27b",
+      "transformation": "none"
+    },
+    "records/recovery/original-transfer-binding.json": {
+      "source": "work/command-attention-profile-recovered-v1/recovered/action-recovery/profile-v1/original-transfer-binding.json",
+      "bytes": 937,
+      "sha256": "4372fffb7f066568b8b031bd521743703f565234bbc0b6a542e5c6c8fed7e5ec",
+      "transformation": "none"
+    },
+    "records/audit.json": {
+      "source": "work/command-attention-profile-actual-audit-v1/report.json",
+      "bytes": 15274,
+      "sha256": "0fbc81ffcde580b3917f44c43ab377cfc12796afdb9536f7d8539120c83f9964",
+      "transformation": "none"
+    },
+    "records/forecast.json": {
+      "source": "work/runpod-command-attention-launch-v1/profile-forecast.json",
+      "bytes": 483,
+      "sha256": "67c8a3d94b6791185d757a6f95e789e6c983f13bcdd8a5a0d676dc84623c5ed8",
+      "transformation": "none"
+    },
+    "records/cleanup/plan.json": {
+      "source": "work/runpod-command-attention-launch-v1/cleanup-yqq97iw0p4axmr/plan.json",
+      "bytes": 467,
+      "sha256": "b5ddba0862a9a53eff37572a2cde7492ad50e991370e81a8db3b5dc031541150",
+      "transformation": "none"
+    },
+    "records/cleanup/cleanup-result.json": {
+      "source": "work/runpod-command-attention-launch-v1/cleanup-yqq97iw0p4axmr/cleanup-result.json",
+      "bytes": 397,
+      "sha256": "f71a24d41e025595406ee544a8030600ac0e7d509e282519c00ac0aa9f632948",
+      "transformation": "none"
+    },
+    "records/cleanup/completion.json": {
+      "source": "work/runpod-command-attention-launch-v1/cleanup-yqq97iw0p4axmr/completion.json",
+      "bytes": 209,
+      "sha256": "25b3664d6d55692f98b63903733816420d2a6c8b88b29cc6bc15df89d0356601",
+      "transformation": "none"
+    },
+    "audit/README.md": {
+      "source": "work/command-attention-profile-audit-v1/README.md",
+      "bytes": 4324,
+      "sha256": "44693046883ec76337ff6988e5abe8c26d6c3981f7334bde91edc081c7ada69b",
+      "transformation": "none"
+    },
+    "audit/arrays.py": {
+      "source": "work/command-attention-profile-audit-v1/arrays.py",
+      "bytes": 3417,
+      "sha256": "5d03c159978df228a613af93f1610eccb07f4becaceff31ea77263df5d71ae53",
+      "transformation": "none"
+    },
+    "audit/audit.py": {
+      "source": "work/command-attention-profile-audit-v1/audit.py",
+      "bytes": 31859,
+      "sha256": "b6a3c9a52cb05e462069197a91f9801f90ca210bcac362f316803ea5cf188967",
+      "transformation": "none"
+    },
+    "audit/freeze.json": {
+      "source": "work/command-attention-profile-audit-v1/freeze.json",
+      "bytes": 867,
+      "sha256": "909f4fd7f4c12c8d94c9e43348b4962c5377ce2b0210acf6d1f4fbb9376466d9",
+      "transformation": "none"
+    },
+    "audit/original-transfer-manifest.json": {
+      "source": "work/command-attention-profile-audit-v1/original-transfer-manifest.json",
+      "bytes": 192683,
+      "sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932",
+      "transformation": "none"
+    },
+    "audit/pins.json": {
+      "source": "work/command-attention-profile-audit-v1/pins.json",
+      "bytes": 433,
+      "sha256": "e46ecd557e89a6fdcddbb579b1382d1c1ae5727af9407a1f7121831dc242d93c",
+      "transformation": "none"
+    },
+    "audit/protocol.json": {
+      "source": "work/command-attention-profile-audit-v1/protocol.json",
+      "bytes": 1424,
+      "sha256": "e619447d70f85f3fb3d5c188d5fc998a05e8a0f4aae1f374c879eb358a1e4875",
+      "transformation": "none"
+    },
+    "audit/test_audit.py": {
+      "source": "work/command-attention-profile-audit-v1/test_audit.py",
+      "bytes": 6245,
+      "sha256": "e5d223230e94922833c844d6502a906e39fb58778edd7c7daaebca2af1a3ea8c",
+      "transformation": "none"
+    },
+    "audit/cpu-report.json": {
+      "source": "work/command-attention-profile-audit-v1/cpu-v2/report.json",
+      "bytes": 1849,
+      "sha256": "eafa36f9a4436db6f4482257aeb33b234ceb1ae8599d2d42d0d4b8c6255002f0",
+      "transformation": "none"
+    }
+  },
+  "recorded_producer_sources_in_repository": {
+    "profiler/run_profile.py": {
+      "repository_path": "experiments/wan22_native/command_attention/profile/run_profile.py",
+      "sha256": "548fe77df7685be34416f56a382896eddd58ae70e65399f2f7000734828a568f"
+    },
+    "profiler/engine.py": {
+      "repository_path": "experiments/wan22_native/command_attention/profile/engine.py",
+      "sha256": "85968ec855af857c31c39db4188fac040cce089a955d43baba3741b76b53b82d"
+    },
+    "profiler/native_worker.py": {
+      "repository_path": "experiments/wan22_native/command_attention/profile/native_worker.py",
+      "sha256": "1e06422b1ab93fd723bd80907330c85a45de42e0ea2208a5744995b7a8d3fcd0"
+    },
+    "controller/controller.py": {
+      "repository_path": "experiments/wan22_native/command_attention/controller.py",
+      "sha256": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45"
+    },
+    "controller/bridge.py": {
+      "repository_path": "experiments/wan22_native/command_attention/bridge.py",
+      "sha256": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f"
+    },
+    "training/math_steps.py": {
+      "repository_path": "experiments/wan22_native/command_attention/training/math_steps.py",
+      "sha256": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50"
+    },
+    "training/packet.py": {
+      "repository_path": "experiments/wan22_native/command_attention/training/packet.py",
+      "sha256": "f838763a9777c61a08179a70c1fee8f8a3588063853abb243ee4d11b35bdcaa3"
+    },
+    "repository/cuda_reference/native.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/native.py",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "repository/cuda_reference/guards.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/guards.py",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "repository/spatial_reference/guards.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/guards.py",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "repository/cuda_reference/config.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/config.json",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "repository/cuda_reference/upstream-provenance.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "repository/cuda_reference/expected-weights.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/expected-weights.json",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "repository/action_training/objective.py": {
+      "repository_path": "experiments/wan22_native/action_training/objective.py",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "repository/action_cuda/probe.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/probe.py",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "repository/official_cpu/streaming.py": {
+      "repository_path": "experiments/wan22_native/official_cpu/streaming.py",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    }
+  },
+  "redactions": [],
+  "absolute_path_disclosure": "Exact copied records retain only owned nonsecret /workspace runtime paths, plus a public task Pod ID and process IDs. No local user paths or credentials are included.",
+  "raw_publication": "Pending. Original 63-file recovery and five transport parts are preserved outside Git; no public raw download URL is claimed."
+}

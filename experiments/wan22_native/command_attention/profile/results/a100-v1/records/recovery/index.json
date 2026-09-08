@@ -1,0 +1,385 @@
+{
+  "excludes": [
+    "unchanged original source/input transfer files",
+    "foundation weights",
+    "installed runtime",
+    "credentials",
+    "unrelated output directories"
+  ],
+  "file_bytes": 114158423,
+  "files": {
+    "action-download-weights.sh": {
+      "bytes": 2317,
+      "sha256": "2350f1572bf8fc3192358c3938d3975d7ea3b7d204ec396c1b5e8c20b80a020d"
+    },
+    "action-extract.py": {
+      "bytes": 20894,
+      "sha256": "fa994686743f0540f9cd74261f98332215e7f9b6275cba911b3fd27aa6341eca"
+    },
+    "action-recovery/profile-v1/input-comparison.json": {
+      "bytes": 295,
+      "sha256": "d7b5588ad5e62b6e528dacd101dec5d7dff7f5217f4361ec28469bf78a0ce27b"
+    },
+    "action-recovery/profile-v1/original-transfer-binding.json": {
+      "bytes": 937,
+      "sha256": "4372fffb7f066568b8b031bd521743703f565234bbc0b6a542e5c6c8fed7e5ec"
+    },
+    "action-recovery/profile-v1/quiet-before.json": {
+      "bytes": 1972,
+      "sha256": "8aad91516ef066204a0675e0e505530607b972e6aaf419a5e1f69d16d2275322"
+    },
+    "action-results/command-attention-profile-dispatch-v1/request.json": {
+      "bytes": 149353,
+      "sha256": "54c8890bbf8aaaa4f2c22ba144e006551ec5c0fb9c93428f6af564deeabadb64"
+    },
+    "action-results/command-attention-profile-dispatch-v1/stage-console.log": {
+      "bytes": 40212,
+      "sha256": "f66110f4dcde1df703cb34b35d542a65653f4069a7b57682fb70402330b4a510"
+    },
+    "action-results/command-attention-profile-dispatch-v1/stage-pid.json": {
+      "bytes": 393,
+      "sha256": "9e711b1d2aed15ba748d9dfe8fc4834d2d9d1f9ffb9327a6f88e26c7339e96c2"
+    },
+    "action-results/command-attention-profile-dispatch-v1/stage-terminal.json": {
+      "bytes": 1423,
+      "sha256": "adb12cd95100cf081eb396cddc6c25f2260b08bf316a0d5b96fb01b7a82cef70"
+    },
+    "action-results/command-attention-profile-v1/launch.json": {
+      "bytes": 3955,
+      "sha256": "7ae5f5f1291a6fd4d7f47e8867e180dad35f0212c07b46853e66251118a0f01d"
+    },
+    "action-results/command-attention-profile-v1/parent-memory.jsonl": {
+      "bytes": 184324,
+      "sha256": "748bbaaf62ece78a9e7a0199349e9026abb1c51bde8401751051da8522bb5d59"
+    },
+    "action-results/command-attention-profile-v1/result/controller-final.safetensors": {
+      "bytes": 19751208,
+      "sha256": "384eb4088c62417cbfeb49ed1dd19cf6bf02b83f32362dde31016a45301cd14b"
+    },
+    "action-results/command-attention-profile-v1/result/controller-initial.safetensors": {
+      "bytes": 19751208,
+      "sha256": "a87ef9fb9fe97909bd5ecaaa46e46d35942624d32840529dd2c1245651be5ba2"
+    },
+    "action-results/command-attention-profile-v1/result/core-after-parity.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-profile-v1/result/core-after-updates.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-profile-v1/result/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-profile-v1/result/memory.jsonl": {
+      "bytes": 292141,
+      "sha256": "3d55ef4c45eb89af783b2e26dc79d1bc374652688c21a1c2564a672dee2e5e97"
+    },
+    "action-results/command-attention-profile-v1/result/metrics.json": {
+      "bytes": 40212,
+      "sha256": "f66110f4dcde1df703cb34b35d542a65653f4069a7b57682fb70402330b4a510"
+    },
+    "action-results/command-attention-profile-v1/result/monitor-terminal.json": {
+      "bytes": 403,
+      "sha256": "2afb58a411998167a8f38597fb13987f521bbfe6fa9a2c414a4b36b59bc4e4f3"
+    },
+    "action-results/command-attention-profile-v1/result/parity/native-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a737effa625dd7e3cff110dc3ce14286cbc1dc623d79625f55e7eb274f8163c4"
+    },
+    "action-results/command-attention-profile-v1/result/parity/native-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ceebfa609e97708476fe3b80b18c70d46494f363a4e871b0a04ee63d2f3093fd"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-0-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a02e75fbaa2dadebecd43c14d7212989e12262c82eb56326eef33091d3b916e4"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-0-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fccff587691c1f6f0add26545a979dfba2c8338c534835fc19d021b5b5e74801"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-1-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a02e75fbaa2dadebecd43c14d7212989e12262c82eb56326eef33091d3b916e4"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-1-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fccff587691c1f6f0add26545a979dfba2c8338c534835fc19d021b5b5e74801"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "4b44f756c74a0c397342bbd5a7ec14bce7baaf30ed28d964d60df0ee441b3731"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/main-stationary_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ceebfa609e97708476fe3b80b18c70d46494f363a4e871b0a04ee63d2f3093fd"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/main-stationary_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "09b4e48b8132e3432c725d438bd19769c951b822cc82c00f0cbc8df116224816"
+    },
+    "action-results/command-attention-profile-v1/result/update-2/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "04132de4c0d81eec8fcc15efbb67586be7cc30051357ffde0c4dd66555f410c5"
+    },
+    "action-results/command-attention-profile-v1/result/update-2/main-left_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "502057a6805acf3988e2087f29688f818a465402babcdbc7eeec35e413479309"
+    },
+    "action-results/command-attention-profile-v1/result/update-2/main-left_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "526efdbe2fc9974ee955a02ca9e92f8f3644fc5551c83a1a364e785e9c4e092b"
+    },
+    "action-results/command-attention-profile-v1/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/command-attention-profile-v1/terminal.json": {
+      "bytes": 542,
+      "sha256": "1dd5fc011055cbfdcf3c991fd14d0457651362e60a8f8816108a2ced3c1effcc"
+    },
+    "action-results/command-attention-profile-v1/worker.log": {
+      "bytes": 40212,
+      "sha256": "f66110f4dcde1df703cb34b35d542a65653f4069a7b57682fb70402330b4a510"
+    },
+    "action-results/pre-download-packet-check.json": {
+      "bytes": 405,
+      "sha256": "73f55878928a51475b3b485be0ff80b28affe660a7e19fd2607864027ca2471e"
+    },
+    "action-results/source-transfer-manifest.json": {
+      "bytes": 117678,
+      "sha256": "6afd7bb3b2dcd53d6142649cd8874a339239da57d0a59d17d2bf31bbe65b0b18"
+    },
+    "action-results/transfer-check.json": {
+      "bytes": 405,
+      "sha256": "73f55878928a51475b3b485be0ff80b28affe660a7e19fd2607864027ca2471e"
+    },
+    "action-results/weight-download-terminal.txt": {
+      "bytes": 12,
+      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120"
+    },
+    "action-results/weight-download.log": {
+      "bytes": 2433,
+      "sha256": "4dcb9b2e80128d247cffa302077313df93ab1c0b6d6be68706c074a8f39d75b2"
+    },
+    "action-results/weight-hash-check.txt": {
+      "bytes": 251,
+      "sha256": "9954890a0d54958610964893defdac0aeecd994933bd64b1adae983076fd9316"
+    },
+    "action-setup-console.log": {
+      "bytes": 11271,
+      "sha256": "c9c96adc9195084804269db9a99c6e8f99e3d568933232d465988b3762944503"
+    },
+    "action-setup-pid.json": {
+      "bytes": 71,
+      "sha256": "eca8bf1364b61771a36dfd1e5ac61353e4885eb73035810fa17476df5ee57bba"
+    },
+    "action-setup-terminal.txt": {
+      "bytes": 12,
+      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120"
+    },
+    "action-setup-v1/action-setup-check.json": {
+      "bytes": 1107,
+      "sha256": "4e84f5c356013d7f695abbde912367dd508d6f5736009853a0028f6ae87a4118"
+    },
+    "action-setup-v1/after.json": {
+      "bytes": 992,
+      "sha256": "0b284845d2cb789ee5bd7d0d60c01280ddffe11955aaafac8b3bd374083abd01"
+    },
+    "action-setup-v1/before.json": {
+      "bytes": 711,
+      "sha256": "090897f71c8fcf3fd7c7950b48a7eee65dd99d9abfecd3f30910686ec7f446e6"
+    },
+    "action-setup-v1/setup.log": {
+      "bytes": 10451,
+      "sha256": "893531744d5b50dbb28db999a49403234189ec06632f38d735c530e488b88803"
+    },
+    "action-setup-v1/terminal.txt": {
+      "bytes": 12,
+      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120"
+    },
+    "action-setup-v1/wheel-download.json": {
+      "bytes": 348,
+      "sha256": "d52747bee74c19a20a33af23426a8b2bbc0f1b0c34cf8df81e9aa4bbeff3ac66"
+    },
+    "action-verify-packet.py": {
+      "bytes": 5602,
+      "sha256": "320368058002678e94eabe3a70942932bce4229c8d77b60d2da37c3f48f645ec"
+    },
+    "check_setup.py": {
+      "bytes": 5907,
+      "sha256": "82315346fca300180d2298120c347658c92a4cef15429b307dbbde2ba9a6e070"
+    },
+    "command-attention-manifest.json": {
+      "bytes": 192683,
+      "sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932"
+    },
+    "command-attention-recovery-v1/common.py": {
+      "bytes": 2634,
+      "sha256": "36ea99bdf1f18d670ea0572bcd27a663277bb1bd346dcd0e209b34ce9d293cb1"
+    },
+    "command-attention-recovery-v1/original-transfer-manifest.json": {
+      "bytes": 192683,
+      "sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932"
+    },
+    "command-attention-recovery-v1/pack-recovery.sh": {
+      "bytes": 653,
+      "sha256": "8c97855d7ad6753edc1b325157cdd2254f76f69135f0cf9f2019ba89bc48c719"
+    },
+    "command-attention-recovery-v1/recovery_snapshot.py": {
+      "bytes": 11111,
+      "sha256": "560e676a61549c9f73ec6ab4fb88217caa6667ddfc6491fb4fa7bb8136b5f76c"
+    },
+    "command-attention-recovery-v1/transfer-bindings.json": {
+      "bytes": 937,
+      "sha256": "4372fffb7f066568b8b031bd521743703f565234bbc0b6a542e5c6c8fed7e5ec"
+    },
+    "command-attention-v1/transfer-verified.json": {
+      "bytes": 243,
+      "sha256": "dfa8c411d956229e725a55df56f9c5c5e2b1e1239a5d8f95390f2968721d5ad4"
+    },
+    "dispatch_command_attention.py": {
+      "bytes": 15465,
+      "sha256": "f76897d8415648b8b7545f503d77169a0f27423216f4a083c6b217fde5a1e7e2"
+    },
+    "prepare-v1.sh": {
+      "bytes": 1284,
+      "sha256": "e2e7473b7259d33580df8500c227db148992f6660fc1743652d4e613afbc3567"
+    },
+    "prepare.sh": {
+      "bytes": 3077,
+      "sha256": "5214ef1622099c383589f99bbb167ad89f0918ae6da495be21a3c7b3bb790646"
+    },
+    "runtime-check.py": {
+      "bytes": 2490,
+      "sha256": "28d1de707cea6195af3c7af8e30df0c15352f1ef86347590ae71c4dcf275eb89"
+    },
+    "start-action-setup.sh": {
+      "bytes": 1688,
+      "sha256": "c86d830429ee51012062a0436fe83a61d6a92881dab01a524dba58a3bb71c68a"
+    }
+  },
+  "input_comparison": {
+    "changed_or_added": {},
+    "meaning": "Original source/input packet retained separately. Changed or added regular files are recovered; absent original files are recorded.",
+    "missing": {},
+    "original_files": 901,
+    "original_inventory_and_bytes_unchanged": true,
+    "unchanged_files": 901
+  },
+  "label": "profile-v1",
+  "original_transfer": {
+    "archive_bytes": 1617286707,
+    "archive_sha256": "f917864d57bc7ccc75d7228795c7e4d9bf31ce1bc5facbbe6689721c64b45107",
+    "elapsed_seconds": 59.815130584000144,
+    "files": 901,
+    "inputs_manifest_sha256": "4f37fa59791d7b0645529e4b97978f08d928baf8987e79a9aad6da1b42f3046a",
+    "manifest_sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932",
+    "meaning": "These original source and input bytes are retained separately locally. Recovery compares every remote file with this original manifest and retains changed or added files.",
+    "repository_source_manifest_sha256": "d2df23de91d018a8088f384019b31ce10f264819ca64ad46669ad1930d139995",
+    "runtime_root": "/workspace/command-attention-v1",
+    "schema": "worldline-command-attention-recovery-transfer-binding-v1",
+    "source_manifest_sha256": "b1d4d7e9ee4ea9c46755bf05a6da6499b95fdbeebc5431a7883f7c2c6d750ae3",
+    "status": "packed",
+    "uncompressed_bytes": 1757732061
+  },
+  "parts": [
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-000",
+      "sha256": "1625f0082098887b80dee7f4f9827cc05c05cc8a0bc28c562c0b12ad4d549707"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-001",
+      "sha256": "1a9a00dc64ee7180aa6acd1cf635ddb95e15ddbb1e7e7c97ddf120b6e38f84eb"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-002",
+      "sha256": "a0eeb524d2f623b0fa0e67a0a683e7b039afc7d2cc28ee49124c1b2d3e7f565d"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-003",
+      "sha256": "57de0e4466278737273e24ea445260e9aa0b082af805df1eefef87752bc19ca2"
+    },
+    {
+      "bytes": 8262339,
+      "name": "evidence.tar.gz.part-004",
+      "sha256": "25f70c467d334fb015dc01249aff51ccba8b69a895455bff69f18ae855c622a1"
+    }
+  ],
+  "publication": "Original raw recovery. Public derivatives require a separate hash mapping.",
+  "quiet_after": {
+    "active_matching_processes": 0,
+    "meaning": "No matching live task process. Missing or malformed terminals remain incomplete evidence; quiet does not mean passed.",
+    "process_arguments_retained": false,
+    "recorded_parents": [
+      {
+        "exited": true,
+        "file": "action-setup-pid.json",
+        "pid": 5751,
+        "sha256": "eca8bf1364b61771a36dfd1e5ac61353e4885eb73035810fa17476df5ee57bba"
+      },
+      {
+        "exited": true,
+        "file": "action-results/command-attention-profile-dispatch-v1/stage-pid.json",
+        "pid": 6469,
+        "sha256": "9e711b1d2aed15ba748d9dfe8fc4834d2d9d1f9ffb9327a6f88e26c7339e96c2"
+      }
+    ],
+    "stages": [
+      {
+        "directory": "action-results/command-attention-profile-v1",
+        "present": true,
+        "records": {
+          "result/metrics.json": {
+            "bytes": 40212,
+            "sha256": "f66110f4dcde1df703cb34b35d542a65653f4069a7b57682fb70402330b4a510",
+            "status": "passed"
+          },
+          "result/monitor-terminal.json": {
+            "bytes": 403,
+            "sha256": "2afb58a411998167a8f38597fb13987f521bbfe6fa9a2c414a4b36b59bc4e4f3",
+            "status": "complete"
+          },
+          "terminal.json": {
+            "bytes": 542,
+            "sha256": "1dd5fc011055cbfdcf3c991fd14d0457651362e60a8f8816108a2ced3c1effcc",
+            "status": "complete"
+          }
+        },
+        "terminal_present": true
+      },
+      {
+        "directory": "action-results/command-attention-training-v1",
+        "present": false
+      },
+      {
+        "directory": "action-results/command-attention-profile-dispatch-v1",
+        "present": true,
+        "records": {
+          "stage-terminal.json": {
+            "bytes": 1423,
+            "sha256": "adb12cd95100cf081eb396cddc6c25f2260b08bf316a0d5b96fb01b7a82cef70",
+            "status": "complete"
+          }
+        },
+        "terminal_present": false
+      },
+      {
+        "directory": "action-results/command-attention-training-dispatch-v1",
+        "present": false
+      }
+    ],
+    "status": "quiet"
+  },
+  "redactions": [],
+  "schema": "worldline-action-recovery-v1",
+  "source_inventory_and_bytes_unchanged": true,
+  "stream_sha256": "225e47c22c44aaa2f8c85c7b8114f6f13e313b9b68222046d6843c7930b94762",
+  "transport_bytes": 72262339
+}

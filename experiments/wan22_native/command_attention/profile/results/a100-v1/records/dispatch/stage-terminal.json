@@ -1,0 +1,40 @@
+{
+  "schema": "worldline-command-attention-stage-dispatch-v1",
+  "stage": "profile",
+  "status": "complete",
+  "pid": 6469,
+  "request_sha256": "54c8890bbf8aaaa4f2c22ba144e006551ec5c0fb9c93428f6af564deeabadb64",
+  "runner_pid": 6470,
+  "argv": [
+    "/workspace/action-setup-v1/venv/bin/python",
+    "/workspace/command-attention-v1/profile/run_profile.py",
+    "--execute",
+    "--repository",
+    "/workspace/command-attention-v1/repository",
+    "--controller-source",
+    "/workspace/command-attention-v1/controller",
+    "--training-source",
+    "/workspace/command-attention-v1/training",
+    "--prepared",
+    "/workspace/command-attention-v1/inputs",
+    "--inputs-sha256",
+    "4f37fa59791d7b0645529e4b97978f08d928baf8987e79a9aad6da1b42f3046a",
+    "--expected-gpu",
+    "NVIDIA A100-SXM4-80GB",
+    "--deadline-utc",
+    "2026-09-08T23:16:45Z",
+    "--weights",
+    "/workspace/wan22-reference-weights",
+    "--output",
+    "/workspace/action-results/command-attention-profile-v1"
+  ],
+  "exit_code": 0,
+  "runner_records_sha256": {
+    "terminal.json": "1dd5fc011055cbfdcf3c991fd14d0457651362e60a8f8816108a2ced3c1effcc",
+    "launch.json": "7ae5f5f1291a6fd4d7f47e8867e180dad35f0212c07b46853e66251118a0f01d",
+    "result/metrics.json": "f66110f4dcde1df703cb34b35d542a65653f4069a7b57682fb70402330b4a510"
+  },
+  "seconds": 363.857596905902,
+  "finished_at": "2026-09-08T23:08:40.619623Z",
+  "runner_exited": true
+}

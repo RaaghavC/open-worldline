@@ -2,7 +2,7 @@
 
 This candidate replaces the previous single residual adapter with trainable command-controlled query, key, value and output projections across six native Wan2.2 attention blocks. It has **4,936,448 trainable parameters**. All original foundation parameters remain frozen.
 
-**Implementation and CPU checks only. No training or generated-video result is available for this candidate yet.** The [previous six-video experiment failed visible control](../intermediate_action/results/factorial-video-a100-v1/README.md). This is a different architecture and training objective, with no claim of scientific novelty or improvement until measured.
+The [first A100 resource profile](profile/results/a100-v1/README.md) completed 24 recorded exact zero-initialization comparisons and two optimizer updates, with a passed saved-file audit. The planned 512-update run did not start on that pod because its forecast exceeded the remaining lease after recovery time was reserved. This profile provides no final trained checkpoint or generated-video result. The [previous six-video experiment failed visible control](../intermediate_action/results/factorial-video-a100-v1/README.md). This is a different architecture and training objective, with no claim of scientific novelty or measured control improvement.
 
 ## Model and objective
 
@@ -15,6 +15,8 @@ The first 128 training noise/time draws are preserved from the previous experime
 ## Resource profile and execution
 
 The [profiler](profile/run_profile.py) defaults to printing its plan. On a separately supplied GPU it requires 24 exact original/full/cached comparisons before optimization, then measures a complete mixed training update and an ordinary flow-matching update. The mixed update retains all four guidance-branch graphs before its auxiliary backward pass. Its measured runtime and memory determine whether the longer run fits the declared limits.
+
+The first profile took 358.207 seconds in the worker and reached 56,461,623,296 bytes of reserved CUDA memory. Its 1,573.155-second training forecast fit the 1,800-second cap but exceeded the 1,336.298 seconds available on that original lease after the 600-second recovery reserve. All profile evidence was recovered and that pod's deletion was confirmed. The audit checked recorded hashes for the 24 discarded controller outputs against two retained native arrays; it did not replay backward or optimizer computations. The linked result retains these limits and the exact cleanup receipt. Raw recovery publication is pending.
 
 The [training runner](training/run_training.py) also defaults to printing its protocol. Actual execution requires exact source and input hashes, a successful matching resource profile, the saved initial controller, the original foundation weights, and a fixed external cleanup deadline. It caps training at 1,800 seconds and reserves 600 seconds before instance deletion for recovery. This is offline training; it does not start a video sampler or modify the main editor.
 
