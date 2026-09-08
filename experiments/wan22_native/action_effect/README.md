@@ -32,6 +32,7 @@ python -m pip install -r experiments/wan_adapter/requirements-real.txt \
   -r experiments/wan22_native/requirements-sample.txt
 
 EFFECT_CODE="$PWD/experiments/wan22_native/action_effect"
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
 python -m pytest -q "$EFFECT_CODE/training/test_effect.py" "$EFFECT_CODE/training/test_runner.py"
 python -m pytest -q "$EFFECT_CODE/assessment/test_reader.py" "$EFFECT_CODE/assessment/test_assessment.py" \
   -k 'not actual_packet and not actual_original_input_reader_and_small_checkpoint_loads'
@@ -39,6 +40,8 @@ python -m pytest -q "$EFFECT_CODE/visual/test_run.py"
 ```
 
 Run those as separate processes. The unchanged historical files use sibling module names such as `inputs`, `runner` and `reader`; combining stages in one pytest process can collide. The two excluded assessment tests require the original saved input packets at their historical paths. The other listed tests use small CPU fixtures. `training/test_prototype.py` additionally runs the complete 128-update sequence on a tiny random CPU fixture, not on Wan weights.
+
+The original bridge test module has a single-thread pytest fixture. Importing its small model factory into the assessment tests does not inherit that fixture. The first Linux CI run failed the exact cached-versus-direct prediction comparison. CI now sets the same one-thread limit explicitly, retaining the original `torch.equal` assertions and all frozen test files. This CI setting does not change the recorded A100 experiment.
 
 The original reports record 14 training checks, 14 assessment checks and 11 visual checks. Relocation did not rerun those suites or create new CUDA evidence. [relocation-check.json](relocation-check.json) records three successful `--help` imports and three successful comparisons of the relocated source graphs with their existing CPU reports. CUDA remained uninitialized.
 
