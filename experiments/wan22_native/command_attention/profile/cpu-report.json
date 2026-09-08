@@ -1,0 +1,21 @@
+{
+  "schema": "worldline-command-attention-profile-cpu-v1",
+  "status": "passed",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 0.82,
+  "model_execution": false,
+  "provider_calls": false,
+  "scope": "Portable orchestration checks only; no native CUDA measurement",
+  "command": "python3 -m pytest -q work/command-attention-profile-v1/test_cpu.py",
+  "source_sha256": {
+    "run_profile.py": "548fe77df7685be34416f56a382896eddd58ae70e65399f2f7000734828a568f",
+    "engine.py": "85968ec855af857c31c39db4188fac040cce089a955d43baba3741b76b53b82d",
+    "native_worker.py": "1e06422b1ab93fd723bd80907330c85a45de42e0ea2208a5744995b7a8d3fcd0",
+    "test_cpu.py": "2d77a96962606846374436705597edefbb282030b394db384368c0dc40f52c6a",
+    "README.md": "27c6853bc3edb92d039856c05e7ce18540f737d78655b4d8bd2eb45bb53296db"
+  },
+  "sources_unchanged": true
+}

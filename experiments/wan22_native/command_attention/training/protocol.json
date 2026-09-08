@@ -1,0 +1,75 @@
+{
+  "automatic_checkpoint_selection": false,
+  "automatic_sampling": false,
+  "auxiliary_feature_extracts": 256,
+  "auxiliary_predictions": 512,
+  "auxiliary_updates": 128,
+  "blocks": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "checkpoints": [
+    0,
+    128,
+    256,
+    384,
+    512
+  ],
+  "controller_parameters": 4936448,
+  "evaluation": {
+    "arms": [
+      "stationary_closed",
+      "stationary_interact",
+      "left_closed",
+      "left_interact",
+      "right_closed",
+      "right_interact"
+    ],
+    "contexts": [
+      "positive",
+      "negative"
+    ],
+    "final_predictions": 48,
+    "future_only": true,
+    "ideal_sigma": 1.0,
+    "initial_predictions": 48,
+    "noises": 4,
+    "raw_payload_bytes": 316293120,
+    "time": 999
+  },
+  "final_checkpoint_only": true,
+  "guard": {
+    "purpose": "Training time and memory limits only; no image generation",
+    "recovery_reserve_seconds": 600,
+    "reused_mode": "clip",
+    "seconds": 1800
+  },
+  "initialization_seed": 2026090803,
+  "main_predictions": 1024,
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "lr": 0.0001,
+    "weight_decay": 0.01
+  },
+  "quality_assessed": false,
+  "rank": 32,
+  "raw_updates": [
+    1,
+    2,
+    5,
+    509,
+    512
+  ],
+  "retention_limit": "Only five declared gradient/prediction updates are retained; omitted training gradients/velocities cannot be independently replayed.",
+  "schema": "worldline-command-attention-training-v1",
+  "scope": "fixed512-command-attention-seven-edge-fitting-only",
+  "updates": 512
+}

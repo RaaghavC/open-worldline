@@ -1,0 +1,185 @@
+{
+  "cuda_initialized": false,
+  "default_trainable_parameter_count": 4936448,
+  "elapsed_seconds": 0.5856553330086172,
+  "limits": [
+    "CPU attention fixture is mathematical FP32 attention, not FlashAttention2 or CUDA BF16 validation.",
+    "No high-resolution model, resource test, training result or quality claim."
+  ],
+  "literal_tiny_native_model_executed": true,
+  "model_weights_loaded": false,
+  "packages": {
+    "diffusers": "0.34.0",
+    "numpy": "1.26.4",
+    "pytest": "7.4.4",
+    "torch": "2.5.1"
+  },
+  "production_cuda_behavior_measured": false,
+  "pytest_exit_code": 0,
+  "python": "3.11.9",
+  "schema": "worldline-command-attention-controller-cpu-v1",
+  "source_sha256": {
+    "fixture/test_bridge.py": "3f7fb9782ad8dfc14da197c190e64bca520b33f9900fa54c5fdb037ba6d673f6",
+    "local/bridge.py": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f",
+    "local/controller.py": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45",
+    "local/run_cpu_review.py": "6398e9967db7ab827601544785eeb0ade4c9c0398ff1ffbf49ed0a53251a01de",
+    "local/test_cpu.py": "b0d020d8ed7ccdcbec7833352e568cbe078627be296e185461e6638bfcfb81cc",
+    "vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+  },
+  "sources_unchanged": true,
+  "status": "passed",
+  "test_records": [
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_default_exact_parameter_count_and_zero_b",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_zero_native_full_cache_identity_and_native_call_counts[0]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_zero_native_full_cache_identity_and_native_call_counts[3]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_mask_and_destination_aligned_history",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_direct_linear_oracle_and_gate_derivative",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_full_cached_four_paths_all_gradients_and_foundation_unchanged",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_two_adamw_updates_reuse_cache_and_reach_encoder",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[noise-nan]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[time-prefix]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[time-padding]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[commands-shape]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[command-nan]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[interaction]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[observation]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[context]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[grad-input]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_malformed_inputs_fail_before_native_execution[inference-input]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_failure_cleanup_and_original_exception[prefix]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_failure_cleanup_and_original_exception[projection]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_failure_cleanup_and_original_exception[suffix]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_failure_cleanup_and_original_exception[head]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_failure_cleanup_and_original_exception[registration]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_failure_cleanup_and_original_exception[reentrant]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_cache_identity_rejects_changes[mutated-hidden]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_cache_identity_rejects_changes[wrong-owner]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_cache_identity_rejects_changes[changed-core]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_cache_identity_rejects_changes[changed-rotary]",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_capture_registration_failure_foreign_sentinel_and_context_restore",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_production_rejects_cpu_and_nonboolean_modes",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "name": "work/command-attention-controller-v1/test_cpu.py::test_independent_native_projection_oracle_output_and_all_parameter_gradients",
+      "outcome": "passed",
+      "phase": "call"
+    }
+  ],
+  "tests_passed": 30
+}

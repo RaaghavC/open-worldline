@@ -73,6 +73,8 @@ The three working editor features are persistent edits, local brushes and altern
 
 The separate high-resolution experiment trains an original action adapter through an attributed, frozen Wan2.2 model. The newest checkpoint completed 128 updates on six camera and door sequences and passed its [saved-file audit](experiments/wan22_native/intermediate_action/results/factorial128-a100-v1/README.md). Its [six-video evaluation](experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/README.md) failed visible camera and door control. Passing file and training checks did not establish usable interaction.
 
+A [different controller and training setup](experiments/wan22_native/command_attention/README.md) now has CPU-checked source. It adds command-controlled attention across six blocks and direct camera-contrast training. This candidate has not yet run its GPU profile, training or video evaluation.
+
 To try the separate original 64 × 64 RGB predictor, double-click **start-room-lab.command**. It opens Room Lab at **http://127.0.0.1:8788**. Every action generates another small image locally; the enlarged display adds no detail. Its [evaluation](docs/room-rgb-experiment.md) records failures in detail and door memory.
 
 The [complete experiment record](docs/experiment-history-2026-09-08.md) retains earlier runs, failed videos, independent audits and releases. The [research plan](docs/research-plan.md) states what remains necessary for general neural world generation, stronger graphics, scientific novelty and a defensible comparison with Genie 3.

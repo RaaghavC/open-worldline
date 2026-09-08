@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "exact_copied_files": 26,
+  "controller": {
+    "tests": 30,
+    "pytest_seconds": 3.11
+  },
+  "training": {
+    "tests": 15,
+    "pytest_seconds": 3.27
+  },
+  "profiler": {
+    "tests": 8,
+    "pytest_seconds": 1.29
+  },
+  "model_weights_loaded": false,
+  "cuda_profile_run": false,
+  "source_integration_sha256": "f5ae985c5809b0e3e7915199456887e0cfae4bc99c8ea52bc403c4b9e82dd868",
+  "cpu_warnings": "Existing native CUDA-autocast decorators disable CUDA autocast on this CPU-only test host; fixtures use CPU attention."
+}

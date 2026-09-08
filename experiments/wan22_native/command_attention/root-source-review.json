@@ -1,0 +1,16 @@
+{
+  "status": "source-read-and-CPU-evidence-reviewed",
+  "controller_sha256": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45",
+  "bridge_sha256": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f",
+  "checks": [
+    "Native Q/K/V/O hooks retain projection dtype and native norm/RoPE",
+    "All output factors zero initialized, native identity checked in CPU suite",
+    "Observed and padded projection residuals masked",
+    "Prefix cache restores owner/core/tensor stamps and native block keyword arguments",
+    "Controller graph begins inside six conditioned suffix blocks",
+    "No original core trainable parameters and hooks removed on errors"
+  ],
+  "cpu_tests": 30,
+  "cuda_profile": "not run",
+  "finding": "No material issue found in bounded static review; high-resolution dtype/parity and memory remain for actual profile"
+}

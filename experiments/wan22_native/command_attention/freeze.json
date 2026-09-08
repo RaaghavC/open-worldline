@@ -1,0 +1,19 @@
+{
+  "cpu_report_sha256": "c67f07643a095f34b5083d7687cac0a19123870aa733fe3a297e7a293e7191cc",
+  "cuda_execution": false,
+  "default_trainable_parameters": 4936448,
+  "files": {
+    "README.md": "80edefc59c0198cd3618b01332227687f4c15be7f3b5bde984b070764f2822fa",
+    "bridge.py": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f",
+    "controller.py": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45",
+    "run_cpu_review.py": "6398e9967db7ab827601544785eeb0ade4c9c0398ff1ffbf49ed0a53251a01de",
+    "test_cpu.py": "b0d020d8ed7ccdcbec7833352e568cbe078627be296e185461e6638bfcfb81cc"
+  },
+  "model_weights_loaded": false,
+  "native_low_rank_matrix_parameters": 4718592,
+  "profile_api": "NativeCommandAttentionBridge.forward / extract_features / predict_from_features",
+  "resource_profiler_owner": "Separate work/command-attention-profile-v1 task",
+  "schema": "worldline-command-attention-controller-freeze-v1",
+  "status": "implemented_cpu_verified_cuda_unmeasured",
+  "tests_passed": 30
+}

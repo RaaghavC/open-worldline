@@ -110,6 +110,19 @@ jobs:
         env:
           PYTHONPATH: 'experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/scoring'
         run: python -m pytest -q experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/scoring/test_cpu.py
+      - name: Check conditional attention on tiny native models
+        env:
+          PYTHONPATH: '.:experiments/wan22_native/command_attention'
+        run: python -m pytest -q experiments/wan22_native/command_attention/test_cpu.py
+      - name: Check conditional attention training and evaluation
+        env:
+          PYTHONPATH: '.:experiments/wan22_native/command_attention/training'
+          WORLDLINE_COMMAND_CONTROLLER_SOURCE: 'experiments/wan22_native/command_attention'
+        run: python -m pytest -q experiments/wan22_native/command_attention/training/test_math.py experiments/wan22_native/command_attention/training/test_run_training.py
+      - name: Check conditional attention resource profiler
+        env:
+          PYTHONPATH: '.:experiments/wan22_native/command_attention/profile'
+        run: python -m pytest -q experiments/wan22_native/command_attention/profile/test_cpu.py
       - run: python -m pytest -q experiments/wan22_native/test_core.py experiments/wan22_native/test_independent.py experiments/wan22_native/test_profile_independent.py experiments/wan22_native/test_codec.py experiments/wan22_native/test_codec_decode.py experiments/wan22_native/test_codec_independent.py experiments/wan22_native/test_codec_memory.py experiments/wan22_native/test_codec_memory_independent.py experiments/wan22_native/test_sample_clip.py experiments/wan22_native/test_sample_independent.py
       - run: python -m experiments.wan22_native.codec_cpu_diagnostic --output work/wan22-cpu-prefix-linux-diagnostic-v1.json
       - run: python -m experiments.wan22_native.codec_cpu_projection_diagnostic --output work/wan22-cpu-projection-linux-diagnostic-v2.json
