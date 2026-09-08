@@ -1,0 +1,60 @@
+{
+  "schema": "worldline-first-trained-visual-summary-v1",
+  "numerical_execution": "passed",
+  "rendered_command_following": "failed_on_this_layout_and_noise",
+  "appearance": "Recognizable room, natural colors, soft detail and nearly static framing; door stays closed in both arms",
+  "all_frames_reviewed_per_arm": 17,
+  "paired_future_correct_counts": {
+    "full_frame": 0,
+    "paired_truth_difference": 0
+  },
+  "future_frame_mean_rgb_mae": {
+    "closed": {
+      "generated_vs_target": 0.18355059142756472,
+      "repeat_start_vs_target": 0.17896263812652824,
+      "generated_vs_start": 0.019368893996099215
+    },
+    "open": {
+      "generated_vs_target": 0.19552292138584326,
+      "repeat_start_vs_target": 0.19035594893749191,
+      "generated_vs_start": 0.0194029578586525
+    }
+  },
+  "parent_seconds": 420.00951866060495,
+  "sampling_seconds": {
+    "closed": 44.15306176058948,
+    "open": 43.822807057760656
+  },
+  "decode_only_seconds": {
+    "closed": 3.40387549251318,
+    "open": 3.26206770259887
+  },
+  "core_load_seconds": 151.21515885740519,
+  "core_before_hash_seconds": 53.91421766206622,
+  "core_after_hash_seconds": 53.98268208093941,
+  "gif_frame_duration_ms": 120,
+  "gif_frames_per_arm": 17,
+  "gif_duration_ms": 2040,
+  "playback_is_generation_speed": false,
+  "model_frozen": true,
+  "foundation_value_hashes": 825,
+  "sampler_steps_per_arm": 50,
+  "predictions_per_arm": 100,
+  "solver": "Native UniPC, shift 5, CFG 5",
+  "frame_shape": [
+    704,
+    1248,
+    3
+  ],
+  "fixed16_adapter_sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+  "model_training_in_this_run": false,
+  "evidence_sha256": {
+    "metrics/parent.json": "ff0dcce9bdf0f0da72de82fcac66b51a063b5e3d11ad3641301e96c65c60b70a",
+    "metrics/core.json": "d4e65da8ac84c3117edc8ae133eea6b7fd143d418d64faa0cd71ad1811f78f00",
+    "metrics/decode.json": "b3b97c00154c1b46bf2228525ee012887b6957ed1b45975c3acd5f56fce1a40c",
+    "audit/report.json": "96a88abbad812878551e92d8d9b3ef781d7ee45c3d45caeeb0d068a6078085d3",
+    "analysis/report.json": "6693ba5434dd07dd9016ca660613ce19e5ce833512ce4a8d0c8dc839550faae3",
+    "reviews/parent-visual-review.json": "d2221f0998472d5575e2f712c9d47a9aa178c12c1b51b20ffe05f3fa124389e0"
+  },
+  "limits": "One seen room, one saved noise draw and 16-update adapter. No diagnosis of cause or broad quality/generalization/memory claim."
+}

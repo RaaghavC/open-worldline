@@ -2,6 +2,8 @@
 
 The existing **947,712-parameter FP32 Worldline action adapter** completed a [two-update A100 numerical probe](results/a100-v1/README.md) on the literal, externally pretrained Wan2.2 TI2V-5B CUDA model. Native versus zero-adapter predictions were bit-exact on both tested inputs, the second update reached the GRU, and all 825 foundation values remained unchanged. **That probe did not execute fixed16 or evaluate rendered action quality.**
 
+The later [sixteen-update checkpoint](results/fixed16-a100-v1/README.md) has now undergone a [matched visual evaluation](results/visual-a100-v1/README.md). The room remains recognizable, but both the door interaction and camera turn fail. This numerical training path is working; useful action control is not yet demonstrated. The complete clips and captured-frame comparison are retained.
+
 The separate high-resolution native clip passed its severe-distortion visual check: it showed a recognizable room with natural colors and little motion. That is an external foundation diagnostic. It did not execute this adapter or test action control. The earlier MPS visual experiment remains failed; its [two-update numerical probe](../action_training/results/probe-v2/README.md) is separate evidence for the previous MPS wrapper.
 
 ## Boundary and inputs
@@ -63,7 +65,7 @@ The separate [numerical probe guide](PROBE.md) documents the implemented plan-fi
 
 ## Attribution
 
-This bridge and its fixtures are original Apache-2.0 Worldline code under the repository [license](../../../LICENSE). They reuse the unchanged original [action adapter](../action_adapter/README.md). Wan2.2 architecture, model parameters and native source remain external Apache-2.0 components, attributed in [NOTICE](../NOTICE), the [native provenance](../cuda_reference/upstream-provenance.json), and the retained [Apache license](../LICENSE-APACHE-2.0.txt). No foundation weights or new trained adapter weights are bundled in this package. Original Atrium RGB and metadata have their separate [CC0 license](../../atrium_data/DATA-LICENSE).
+This bridge and its fixtures are original Apache-2.0 Worldline code under the repository [license](../../../LICENSE). They reuse the unchanged original [action adapter](../action_adapter/README.md). Wan2.2 architecture, model parameters and native source remain external Apache-2.0 components, attributed in [NOTICE](../NOTICE), the [native provenance](../cuda_reference/upstream-provenance.json), and the retained [Apache license](../LICENSE-APACHE-2.0.txt). Original trained adapter checkpoints are included in the result bundles; external foundation weights are not redistributed. Original Atrium RGB and metadata have their separate [CC0 license](../../atrium_data/DATA-LICENSE).
 
 
 The subsequent [fresh sixteen-update A100 result](results/fixed16-a100-v1/README.md) completed and passed its independent retained-file audit. Its original adapter checkpoint and full recovery archive are public. This measures training mechanics; it contains no generated clip from that checkpoint.

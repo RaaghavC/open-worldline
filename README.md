@@ -76,6 +76,8 @@ The [native CUDA action-training result](experiments/wan22_native/action_cuda/re
 
 A subsequent [fresh sixteen-update CUDA run](experiments/wan22_native/action_cuda/results/fixed16-a100-v1/README.md) completed in 260.465 seconds. All seventeen checkpoints, thirty-two saved training predictions and sixteen saved gradient bundles passed independent checks. The complete public archive can be downloaded without a provider account. Generated image quality and command response remain unmeasured by this training run.
 
+The [first generated clips from that trained adapter](experiments/wan22_native/action_cuda/results/visual-a100-v1/README.md) are now evaluated. Both 1248 × 704 clips show a recognizable room, but the door stays closed and the requested camera turn is absent. They took 420.010 seconds together, including loading and verification. Both score worse against the captured target sequence than repeating the starting image. Every generated frame, the comparison, exact source and failure findings are retained. Action control remains unresolved.
+
 The three immediate engineering capabilities are:
 
 1. Preserve generated fields and edits across camera movement, reloads and process restarts.

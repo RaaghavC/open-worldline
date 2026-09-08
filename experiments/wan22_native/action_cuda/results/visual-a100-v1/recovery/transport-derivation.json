@@ -1,0 +1,34 @@
+{
+  "schema": "worldline-visual-transport-split-v1",
+  "status": "verified_locally",
+  "change": "Split only the originally absent last transport part into two contiguous pieces. No recovered file or stream bytes changed.",
+  "original_index_sha256": "765ed01dde7f9b3720b6d56ed907230d8a7f25bd7fe0e9d3bba5cdbe7b6b8741",
+  "derived_index_sha256": "d28990c7625822e14ca6772a93cf12fd680bd88ef5dca915354f15bebcc47fc8",
+  "original_metadata_sha256": "ff8081ca097f11177fa7a698e9301fbd2509843bfc59063a9b7853f858762c49",
+  "derived_metadata_sha256": "a7b3229f6fe4346234b29c555e4015a3a3e1b6330af964d089fa8e2c185b3627",
+  "original_parts": 8,
+  "public_transport_parts": 9,
+  "original_last_part": {
+    "bytes": 89774742,
+    "name": "evidence.tar.gz.part-007",
+    "sha256": "2c825a6bd8a487b959456855c8778a7a85c1a6787e7089fc939a1b84076f31cc"
+  },
+  "replacement_parts": [
+    {
+      "name": "evidence.tar.gz.part-007",
+      "bytes": 44887371,
+      "sha256": "29933cbaed283db5857f832920474762e77959137c8cc0544df3f437ad906c4c"
+    },
+    {
+      "name": "evidence.tar.gz.part-008",
+      "bytes": 44887371,
+      "sha256": "a0cceac78397bccc213d3d5264a1ece5a33de4941e0e16c0315ab55ba5d6a27a"
+    }
+  ],
+  "replacement_concatenation_sha256": "2c825a6bd8a487b959456855c8778a7a85c1a6787e7089fc939a1b84076f31cc",
+  "compressed_stream_sha256": "94f18b51add5c910446cadf830ddcc66f6c378c067c15fc6b2f1f38e6eebc7bf",
+  "transport_bytes": 719774742,
+  "original_files": 443,
+  "original_file_bytes": 806023735,
+  "original_file_inventory_equal": true
+}

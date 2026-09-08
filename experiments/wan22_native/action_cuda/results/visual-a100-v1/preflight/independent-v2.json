@@ -1,0 +1,59 @@
+{
+  "schema": "worldline-action-cuda-visual-independent-review-v2",
+  "status": "passed",
+  "scope": "Narrow read-only review of the reported total GPU memory compatibility change; the v1 full integration review remains separate.",
+  "prior_review_sha256": "c432fba71ebb96966df12d4c18ee17a639bc8f45ff8c1f62949129319cdf9d79",
+  "source_sha256": {
+    "inputs.py": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+    "run.py": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+    "sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+    "test_run.py": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098"
+  },
+  "repository_sources_verified": 66,
+  "cpu_report_sha256": "55c454f61b75f8008d19a6c9442b01aa27a273b94151054efa507b18855de577",
+  "author_tests": 8,
+  "new_test_runs_by_reviewer": 0,
+  "prepared_plan_sha256": "6feb229e4e27f2c44aa740184a1687bdad5b1ff06ada2eca1b4bb8d3b14e13f4",
+  "prior_prepared_plan_sha256": "49f0fd93b7680af1b3d987a068a517f6a1879c760f04957794075357af2ea527",
+  "input_identity_unchanged": true,
+  "retained_tensor_file_sha256": {
+    "sampling-inputs.safetensors": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade",
+    "contexts.safetensors": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee",
+    "commands.safetensors": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405",
+    "adapter.safetensors": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d"
+  },
+  "preserved_v1_source_hashes_verified": true,
+  "v1_preservation_manifest_sha256": "c6769db7554e81d9d986cb90474a0effdf63cd444dd41620a8a4812e75963554",
+  "policy": {
+    "capacity_field": "total_memory_bytes",
+    "capacity_types": "Both values must have exact Python int type; bool and float reject.",
+    "admission": "Actual reported capacity must be equal to or greater than the training record.",
+    "all_other_fields": "Field sets and JSON values/types must match exactly, including nested runtime dependencies and environment.",
+    "observed_training_bytes": 85093777408,
+    "observed_new_bytes": 85095874560,
+    "observed_difference_bytes": 2097152
+  },
+  "verified_integration": [
+    "Each worker calls the unchanged hardware validator before this compatibility comparison and before model loading.",
+    "The worker records the full actual hardware identity and the comparison, including the additional reported bytes.",
+    "The focused author case covers equal capacity, the observed 2 MiB increase, lower capacity, malformed types, changed hardware/runtime/nested fields and the existing limits.",
+    "Fresh v2 preparation has identical complete input identity and byte-exact checkpoint, commands, contexts and noise/observation file versus retained v1.",
+    "No model, sampler, decoder, source input or training equation changed."
+  ],
+  "unchanged_limits": {
+    "seconds": 1800.0,
+    "host_rss_bytes": 51539607552,
+    "cuda_reserved_bytes": 64424509440,
+    "minimum_host_available_bytes": 8589934592,
+    "minimum_cuda_available_bytes": 8589934592,
+    "minimum_gpu_total_bytes": 75161927680
+  },
+  "remaining_blockers": [],
+  "limitations": [
+    "Readiness review only; no CUDA/model execution or visual-quality result.",
+    "Exact-plan parent admission and the external lease/deletion controller remain required; the worker deadline does not terminate provider billing."
+  ],
+  "source_edits_by_reviewer": false,
+  "actual_model_execution": false,
+  "cloud_operations": false
+}

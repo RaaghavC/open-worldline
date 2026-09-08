@@ -1,0 +1,37 @@
+{
+  "schema": "worldline-first-action-visual-interpretation-v1",
+  "image_correspondence_analysis": "completed",
+  "intended_door_and_camera_response": "not_observed_in_inspected_fixed_contact_frames",
+  "generated_run_completed": true,
+  "action_quality_success_claimed": false,
+  "source_report_sha256": "6693ba5434dd07dd9016ca660613ce19e5ce833512ce4a8d0c8dc839550faae3",
+  "contact_sha256": "96620502c87b2a5378a1e27e3aa3920d6dedb3106005332ec3bef7f30ba40d4e",
+  "scored_frames_per_arm": 17,
+  "future_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "strict_both_own_closer_future_counts": {
+    "full_frame": 0,
+    "paired_truth_difference": 0
+  },
+  "independent_integrity_audit_sha256": "96a88abbad812878551e92d8d9b3ef781d7ee45c3d45caeeb0d068a6078085d3",
+  "raw_recovery_verification_sha256": "1caaa5469c13b7dc0219280ec21822c3f5159f6de2d9516c553ee682428a32dc",
+  "raw_measurements_modified": false,
+  "model_execution": false,
+  "limitations": "One seen room and one noise draw. Small generated differences are present, but are not the captured door or camera response. No broad quality, memory, physics or generalization conclusion."
+}

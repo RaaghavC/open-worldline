@@ -1,0 +1,51 @@
+{
+  "schema": "worldline-action-cuda-visual-independent-review-v1",
+  "status": "passed",
+  "scope": "Independent read-only source and integration review before the first trained-adapter visual pair; no execution admission is issued by this report.",
+  "source_sha256": {
+    "inputs.py": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+    "run.py": "a4fddb56c934aa4c8651e8d3f6dde4e957f30ccd8513412d9cf5859f200eb28e",
+    "sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+    "test_run.py": "af99a885ed16f7fbf76c2f4ac59e79c1a4b70ce55f68f7d28d16029ce2fc0674"
+  },
+  "repository_sources_verified": 66,
+  "cpu_report": {
+    "sha256": "f02223c338ff2375ade52003577befb25a68c2f250efe37f9461e5d14f05b6d2",
+    "tests": 7,
+    "status": "passed",
+    "rerun_by_this_review": false
+  },
+  "corrected_sampler_cpu_report": {
+    "sha256": "54b600362614d345fcfe491d077348ce1872567ced2980c7e54a71e6ff47c60b",
+    "tests": 21,
+    "rerun_by_this_review": false
+  },
+  "prepared_plan_sha256": "49f0fd93b7680af1b3d987a068a517f6a1879c760f04957794075357af2ea527",
+  "actual_preparation_record_sha256": "c15a7836b0f2787df7bb130afd725bbbd496ad4f663695c7f1ef66e4ff889aa2",
+  "self_contained_read_record_sha256": "d2175b5f8ba4a63716085ff06dda0b00aa6446f802704336d241f8618a6666ac",
+  "checkpoint16_sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+  "shared_observation_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+  "closed_findings": [
+    "The prepared reader now accepts the genuine unpadded native negative context with 126 tokens; the positive context has 25 tokens. Native model padding remains unchanged.",
+    "The child launcher rejects an expired shared deadline before Popen. The focused CPU suite includes this rejection and verifies that no child launches."
+  ],
+  "reviewed_contract": [
+    "Both arms use the same hash-bound checkpoint 16, independently encoded starting observation, retained Gaussian noise and genuine positive/negative contexts. Only the first interaction command differs.",
+    "The corrected sampler keeps adapter parameter flags compatible with the unchanged bridge while inference uses no_grad and track_grad=False. Native core load and sampling have no outer inference_mode.",
+    "Commands are identical on both CFG branches of each arm. Native CPU UniPC uses 50 steps, shift 5 and guidance 5, with clean observed-prefix restoration and zero observed-token times.",
+    "Each arm saves all 50 post-update latent states and the final latent. Only the first step retains raw positive, negative and guided velocities; 100 calls per arm are supported by reviewed sampler counters.",
+    "Core and FP32 decoder execute in separate serialized child processes under one 1800-second deadline. Failure evidence, child cleanup and completed-first-arm artifacts are retained.",
+    "The prepared directory binds copied prior evidence, current source snapshots, checkpoint and condition files. Actual original-evidence preparation and an isolated self-contained read passed without model execution.",
+    "The decoder is configured to save 17 raw RGB frames and 17 authoritative PNGs per arm, with one conditioned initial reconstruction and 16 generated future frames."
+  ],
+  "remaining_blockers": [],
+  "limitations": [
+    "This is a source/readiness review, not an actual CUDA visual execution or a quality result.",
+    "Checkpoint training used the development capture and positive context. This review establishes no generalization, action success or persistent-memory claim.",
+    "A worker deadline does not terminate provider billing. Exact-plan admission and the external lease/deletion controller remain the parent operator responsibility."
+  ],
+  "new_test_runs": 0,
+  "actual_model_execution": false,
+  "cloud_operations": false,
+  "source_edits": false
+}

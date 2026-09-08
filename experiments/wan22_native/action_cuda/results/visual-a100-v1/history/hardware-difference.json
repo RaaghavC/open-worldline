@@ -1,0 +1,40 @@
+{
+  "actual": {
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_bytes": 85095874560,
+    "capability": [
+      8,
+      0
+    ],
+    "bf16_supported": true,
+    "torch": "2.5.1+cu124",
+    "cuda": "12.4",
+    "flash_attn": "2.7.4.post1",
+    "flash_attention_2_available": true,
+    "flash_attention_3_available": false,
+    "cudnn": 90100,
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false,
+    "dependencies": {
+      "diffusers": "0.34.0",
+      "numpy": "1.26.4",
+      "safetensors": "0.5.3",
+      "psutil": "7.2.2",
+      "einops": "0.8.1",
+      "Pillow": "12.3.0"
+    },
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": null,
+      "PYTORCH_CUDA_ALLOC_CONF": null,
+      "CUBLAS_WORKSPACE_CONFIG": null,
+      "NVIDIA_TF32_OVERRIDE": null
+    }
+  },
+  "different": {
+    "total_memory_bytes": {
+      "expected": 85093777408,
+      "actual": 85095874560
+    }
+  }
+}
