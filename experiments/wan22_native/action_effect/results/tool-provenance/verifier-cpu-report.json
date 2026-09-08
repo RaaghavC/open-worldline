@@ -1,0 +1,16 @@
+{
+  "schema": "worldline-action-effect-compact-verifier-cpu-v1",
+  "status": "passed",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "checks": [
+    "Original payload byte mutation rejected",
+    "Old part index versus repartitioned metadata rejected",
+    "Duplicate nested archive member rejected",
+    "Traversal and absolute names rejected"
+  ],
+  "verifier_sha256": "4ab284492407060dcc2908bfbf294abd1a4d2e5062b29cd538903627a5ba1f48",
+  "test_source_sha256": "c1de50b156df421a1a1ff7501860899e06d7ca222edbdc3c8781cc0a8819acc4",
+  "network_or_model_calls": false
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "worldline-action-effect-assessment-actual-summary-v1",
+  "audit_sha256": "99528e0e654ad1de451d31a02ebbf2b92d19345f4c85179f7b24e9c973d4fe1a",
+  "artifact_integrity": "passed",
+  "predeclared_four_noise_criterion": "passed",
+  "historical_12_file_and_tensor_equality": true,
+  "heldout": [
+    {
+      "noise_index": 0,
+      "zero_mse": 0.19637133935231751,
+      "old128_mse": 0.19640000089739568,
+      "effect128_mse": 0.19538651673170562,
+      "relative_improvement_vs_zero_percent": 0.501510364934153,
+      "relative_improvement_vs_old128_percent": 0.5160306319038785,
+      "cosine": 0.08092997608813014,
+      "effect_contrast_rms": 0.018503916129231076,
+      "target_contrast_rms": 0.4431380590203436
+    },
+    {
+      "noise_index": 1,
+      "zero_mse": 0.19637133935231751,
+      "old128_mse": 0.19640048281258576,
+      "effect128_mse": 0.19539327674473403,
+      "relative_improvement_vs_zero_percent": 0.4980679007483393,
+      "relative_improvement_vs_old128_percent": 0.5128327860644092,
+      "cosine": 0.08025426181022761,
+      "effect_contrast_rms": 0.01863104475572612,
+      "target_contrast_rms": 0.4431380590203436
+    },
+    {
+      "noise_index": 2,
+      "zero_mse": 0.19637133935231751,
+      "old128_mse": 0.19641644245053816,
+      "effect128_mse": 0.19539994890452242,
+      "relative_improvement_vs_zero_percent": 0.49467017488345666,
+      "relative_improvement_vs_old128_percent": 0.5175195789790942,
+      "cosine": 0.07988811078607468,
+      "effect_contrast_rms": 0.018612385876938864,
+      "target_contrast_rms": 0.4431380590203436
+    },
+    {
+      "noise_index": 3,
+      "zero_mse": 0.19637133935231751,
+      "old128_mse": 0.19638308523802248,
+      "effect128_mse": 0.19533823641549794,
+      "relative_improvement_vs_zero_percent": 0.5260965985296071,
+      "relative_improvement_vs_old128_percent": 0.5320462407738151,
+      "cosine": 0.0834319527438999,
+      "effect_contrast_rms": 0.018701227726210298,
+      "target_contrast_rms": 0.4431380590203436
+    }
+  ],
+  "seen506": {
+    "closed": {
+      "old128_mse": 0.1479280550266104,
+      "effect128_mse": 0.14793662824488632,
+      "relative_worsening_percent": 0.005795532344676779
+    },
+    "open": {
+      "old128_mse": 0.16156097004017397,
+      "effect128_mse": 0.16166139613761407,
+      "relative_worsening_percent": 0.06215987525646227
+    }
+  },
+  "original999": {
+    "zero": {
+      "mse": 0.19637133935231751,
+      "cosine": null,
+      "predicted_difference_rms": 0.0
+    },
+    "old128": {
+      "mse": 0.1963961454384446,
+      "cosine": -8.698813093067718e-05,
+      "predicted_difference_rms": 0.0049421722824138994
+    },
+    "new128": {
+      "mse": 0.19534103813041664,
+      "cosine": 0.08428155640693172,
+      "predicted_difference_rms": 0.018253885225483334
+    }
+  },
+  "interpretation": "The auxiliary improved the predeclared held-out-noise endpoint contrast by about half a percent on this one seen scene. Alignment is positive but small and predicted contrast remains much smaller than the target. The original seen506 main-objective errors are slightly higher than old128. Neither result establishes visible action success.",
+  "model_execution": false
+}

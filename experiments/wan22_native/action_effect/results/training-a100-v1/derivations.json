@@ -1,0 +1,312 @@
+{
+  "schema": "worldline-prefix-only-public-derivations-v1",
+  "originals_retained": true,
+  "changes": [
+    {
+      "path": "audit/v2/report.json",
+      "original_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+      "published_sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4",
+      "changed_json_field": "run",
+      "replacement_count": 1,
+      "rule": "Replace the one literal original workspace prefix in report.run with [WORKSPACE]/. Every other byte remains unchanged.",
+      "original_report_retained": true
+    },
+    {
+      "path": "audit/v1/report.json",
+      "original_sha256": "d897ed4c81c73d37af9e906b37bd098b3594b58e560358ab8e03e17926fb8db4",
+      "published_sha256": "c0a0911df0926bc626772a4417513e531e63e0e8b093bf799becef09f78fe490",
+      "changed_json_field": "run",
+      "replacement_count": 1,
+      "rule": "Replace the one literal original workspace prefix in report.run with [WORKSPACE]/. Every other byte remains unchanged.",
+      "original_report_retained": true
+    }
+  ],
+  "private_prefix_literal_omitted_from_public_record": true,
+  "exact_original_files": {
+    "metrics/parent.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/metrics.json",
+      "original_bytes": 847,
+      "original_sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae",
+      "staged_bytes": 847,
+      "staged_sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae",
+      "transformation": "none"
+    },
+    "metrics/worker.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/worker/metrics.json",
+      "original_bytes": 91348,
+      "original_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+      "staged_bytes": 91348,
+      "staged_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+      "transformation": "none"
+    },
+    "metrics/training.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/training/metrics.json",
+      "original_bytes": 417501,
+      "original_sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32",
+      "staged_bytes": 417501,
+      "staged_sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32",
+      "transformation": "none"
+    },
+    "metrics/terminal.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+      "staged_bytes": 543,
+      "staged_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+      "transformation": "none"
+    },
+    "metrics/monitor-terminal.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/worker/monitor-terminal.json",
+      "original_bytes": 404,
+      "original_sha256": "f10e7ab04f4e4036969cba8b1a8901b03539616de18334d5c96d8e23fe4e01eb",
+      "staged_bytes": 404,
+      "staged_sha256": "f10e7ab04f4e4036969cba8b1a8901b03539616de18334d5c96d8e23fe4e01eb",
+      "transformation": "none"
+    },
+    "metrics/weight-load.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/worker/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "metrics/core-before.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/training/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/core-after.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/training/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "plans/plan.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/plan.json",
+      "original_bytes": 817529,
+      "original_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "staged_bytes": 817529,
+      "staged_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "transformation": "none"
+    },
+    "preflight/cpu-report.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/cpu-report.json",
+      "original_bytes": 10982,
+      "original_sha256": "3ad62e5ef526e393d90511118e28334666a7c93e3db42989cbe3d6ae8bfe639d",
+      "staged_bytes": 10982,
+      "staged_sha256": "3ad62e5ef526e393d90511118e28334666a7c93e3db42989cbe3d6ae8bfe639d",
+      "transformation": "none"
+    },
+    "plans/executed-admission.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/executed-admission.json",
+      "original_bytes": 776706,
+      "original_sha256": "dc06b7e63285222c239319e3a6cf54a7323d8be8ed60e733bb232481d2fc2f3e",
+      "staged_bytes": 776706,
+      "staged_sha256": "dc06b7e63285222c239319e3a6cf54a7323d8be8ed60e733bb232481d2fc2f3e",
+      "transformation": "none"
+    },
+    "plans/launch.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/launch.json",
+      "original_bytes": 725,
+      "original_sha256": "f0330131fa844ba8d536afb4f009bacfc817bc6ca41bd4f927a4f1587a3f5c43",
+      "staged_bytes": 725,
+      "staged_sha256": "f0330131fa844ba8d536afb4f009bacfc817bc6ca41bd4f927a4f1587a3f5c43",
+      "transformation": "none"
+    },
+    "checkpoint-0128/adapter.safetensors": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/training/checkpoint-0128/adapter.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "staged_bytes": 3792296,
+      "staged_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "transformation": "none"
+    },
+    "checkpoint-0128/manifest.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/training/checkpoint-0128/manifest.json",
+      "original_bytes": 5003,
+      "original_sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f",
+      "staged_bytes": 5003,
+      "staged_sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f",
+      "transformation": "none"
+    },
+    "audit/v2/report.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v2/report.json",
+      "original_bytes": 259731,
+      "original_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+      "staged_bytes": 259703,
+      "staged_sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4",
+      "transformation": "report.run workspace prefix only"
+    },
+    "audit/v2/audit.py": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v2/audit.py",
+      "original_bytes": 29874,
+      "original_sha256": "0ab1ea225f4189bc0b51f6ea843d130368c46300b80090ca5e1aaa3f490bbf0e",
+      "staged_bytes": 29874,
+      "staged_sha256": "0ab1ea225f4189bc0b51f6ea843d130368c46300b80090ca5e1aaa3f490bbf0e",
+      "transformation": "none"
+    },
+    "audit/v2/checks.py": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v2/checks.py",
+      "original_bytes": 10606,
+      "original_sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+      "staged_bytes": 10606,
+      "staged_sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+      "transformation": "none"
+    },
+    "audit/v2/pins.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v2/pins.json",
+      "original_bytes": 11355,
+      "original_sha256": "c2f200959b489a5c8bbdbe5c5f4cee0e93a592fe8f3737b58d08b7fac95ac3e8",
+      "staged_bytes": 11355,
+      "staged_sha256": "c2f200959b489a5c8bbdbe5c5f4cee0e93a592fe8f3737b58d08b7fac95ac3e8",
+      "transformation": "none"
+    },
+    "audit/v2/inventory.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v2/inventory.json",
+      "original_bytes": 107898,
+      "original_sha256": "4f932e2e1090253cc08f8efdbbcb4a8a049d812189bd9d1054f201e5a4375a2e",
+      "staged_bytes": 107898,
+      "staged_sha256": "4f932e2e1090253cc08f8efdbbcb4a8a049d812189bd9d1054f201e5a4375a2e",
+      "transformation": "none"
+    },
+    "audit/v2/invocation-correction.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v2/invocation-correction.json",
+      "original_bytes": 980,
+      "original_sha256": "5f6af37e8a29abbaa6a617676e3d921df0e0020d748673846df90874bcd6430e",
+      "staged_bytes": 980,
+      "staged_sha256": "5f6af37e8a29abbaa6a617676e3d921df0e0020d748673846df90874bcd6430e",
+      "transformation": "none"
+    },
+    "audit/v1/report.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-actual-audit-v1/report.json",
+      "original_bytes": 791,
+      "original_sha256": "d897ed4c81c73d37af9e906b37bd098b3594b58e560358ab8e03e17926fb8db4",
+      "staged_bytes": 763,
+      "staged_sha256": "c0a0911df0926bc626772a4417513e531e63e0e8b093bf799becef09f78fe490",
+      "transformation": "report.run workspace prefix only"
+    },
+    "preflight/auditor-cpu-report.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-audit-prep-v1/cpu-v1/report.json",
+      "original_bytes": 12051,
+      "original_sha256": "7a11447f211aee9111be7dfdab949348da653185552ee9b322c25f8a7767d0a6",
+      "staged_bytes": 12051,
+      "staged_sha256": "7a11447f211aee9111be7dfdab949348da653185552ee9b322c25f8a7767d0a6",
+      "transformation": "none"
+    },
+    "preflight/auditor-independent-review.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-audit-independent-review-v1/report.json",
+      "original_bytes": 13001,
+      "original_sha256": "1f0882317eec640d7c7446c2c1879a99f045f9f149ac89d23c2c21fc6a741da3",
+      "staged_bytes": 13001,
+      "staged_sha256": "1f0882317eec640d7c7446c2c1879a99f045f9f149ac89d23c2c21fc6a741da3",
+      "transformation": "none"
+    },
+    "preflight/training-independent-review.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-independent-review-v3/report.json",
+      "original_bytes": 12474,
+      "original_sha256": "826c76de0c717d20f3cd9d5d88692f52569f626091cb22c91618afbd0abfc54a",
+      "staged_bytes": 12474,
+      "staged_sha256": "826c76de0c717d20f3cd9d5d88692f52569f626091cb22c91618afbd0abfc54a",
+      "transformation": "none"
+    },
+    "preflight/prepared-read.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-prep-v1/prepared-read-v3.json",
+      "original_bytes": 11138,
+      "original_sha256": "d35d04aa35a24070d32c45d3e83221e549d41bf9a1a8d3438aaefc206807222a",
+      "staged_bytes": 11138,
+      "staged_sha256": "d35d04aa35a24070d32c45d3e83221e549d41bf9a1a8d3438aaefc206807222a",
+      "transformation": "none"
+    },
+    "recovery/original-recovery-verified.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/recovery-verified.json",
+      "original_bytes": 319,
+      "original_sha256": "8f32e401ce0799398f20cced6c150c6df4e23f80773fc29f5ffd3dc8b557bd38",
+      "staged_bytes": 319,
+      "staged_sha256": "8f32e401ce0799398f20cced6c150c6df4e23f80773fc29f5ffd3dc8b557bd38",
+      "transformation": "none"
+    },
+    "recovery/original-index.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-recovered-final-v1/index.json",
+      "original_bytes": 223057,
+      "original_sha256": "61cd2d48160ee1db5b74a288328516850356cd1fc15b1bff4969c7f83d16c142",
+      "staged_bytes": 223057,
+      "staged_sha256": "61cd2d48160ee1db5b74a288328516850356cd1fc15b1bff4969c7f83d16c142",
+      "transformation": "none"
+    },
+    "reproducibility/training-transfer.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-transfer-v2/transfer.json",
+      "original_bytes": 656,
+      "original_sha256": "9041ad984d52727e3c83298501bc11ceea00ad86a66e02658883e9f0cd6b3e6e",
+      "staged_bytes": 656,
+      "staged_sha256": "9041ad984d52727e3c83298501bc11ceea00ad86a66e02658883e9f0cd6b3e6e",
+      "transformation": "none"
+    },
+    "reproducibility/training-transfer-manifest.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-transfer-v2/manifest.json",
+      "original_bytes": 125309,
+      "original_sha256": "22637196450641952cb1632ecb64b6bde5adab2e9872b1028ea047fb49623ae9",
+      "staged_bytes": 125309,
+      "staged_sha256": "22637196450641952cb1632ecb64b6bde5adab2e9872b1028ea047fb49623ae9",
+      "transformation": "none"
+    },
+    "reproducibility/fresh-transfer-read.json": {
+      "original_location_relative_to_workspace": "work/wan22-action-effect-transfer-v2/fresh-input-read-v1.json",
+      "original_bytes": 20876,
+      "original_sha256": "c1239e9412ba25e05e2bc39eb4c4dd3f4980febe479ed09fa93e4793606ba7de",
+      "staged_bytes": 20876,
+      "staged_sha256": "c1239e9412ba25e05e2bc39eb4c4dd3f4980febe479ed09fa93e4793606ba7de",
+      "transformation": "none"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "original_location_relative_to_workspace": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/ATRIUM-CC0.txt",
+      "original_bytes": 7840,
+      "original_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "staged_bytes": 7840,
+      "staged_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "original_location_relative_to_workspace": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/WAN-APACHE-2.0.txt",
+      "original_bytes": 11357,
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "staged_bytes": 11357,
+      "staged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "original_location_relative_to_workspace": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/WAN-NOTICE.txt",
+      "original_bytes": 1252,
+      "original_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "staged_bytes": 1252,
+      "staged_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "original_location_relative_to_workspace": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/WORLDLINE-APACHE-2.0.txt",
+      "original_bytes": 11358,
+      "original_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "staged_bytes": 11358,
+      "staged_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-NOTICE.txt": {
+      "original_location_relative_to_workspace": "outputs/open-worldline/NOTICE",
+      "original_bytes": 428,
+      "original_sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "staged_bytes": 428,
+      "staged_sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "transformation": "none"
+    }
+  },
+  "notes": [
+    "Both original audit reports remain unchanged locally. Their canonical hashes, not the path-redacted derivatives, identify the actual evaluator gates.",
+    "The v1 error came from relative CLI input paths. V2 passed with absolute arguments, without changing auditor or producer source.",
+    "Raw worker/provider console and account-lifecycle records are not included in this compact payload. Complete originals remain in local recovery."
+  ]
+}

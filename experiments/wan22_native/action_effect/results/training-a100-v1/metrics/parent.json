@@ -1,0 +1,22 @@
+{
+  "schema": "worldline-action-effect128-run-v1",
+  "status": "passed",
+  "model_execution": true,
+  "limits": {
+    "seconds": 900.0,
+    "host_rss_bytes": 51539607552,
+    "cuda_reserved_bytes": 64424509440,
+    "minimum_host_available_bytes": 8589934592,
+    "minimum_cuda_available_bytes": 8589934592,
+    "minimum_gpu_total_bytes": 75161927680
+  },
+  "completed_updates": 128,
+  "worker_metrics_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+  "terminal_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+  "plan_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+  "admission": {
+    "sha256": "dc06b7e63285222c239319e3a6cf54a7323d8be8ed60e733bb232481d2fc2f3e",
+    "scope": "effect128-fresh-cuda-training-only"
+  },
+  "elapsed_seconds": 412.0499526578933
+}

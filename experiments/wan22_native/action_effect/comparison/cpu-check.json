@@ -1,0 +1,28 @@
+{
+  "schema": "worldline-effect128-rgb-comparison-cpu-v1",
+  "status": "passed",
+  "checks": [
+    "Exact effect plan/checkpoint and both original report/input identities",
+    "Exact synthetic target-MAE deltas; both old midpoint ties fail",
+    "Identical model arrays produce zero inter-model and target-error differences",
+    "Missing model/branch data rejected",
+    "Contact placement includes all 34 frames exactly once with unique cells"
+  ],
+  "seconds": 0.12271433399291709,
+  "source_sha256": {
+    "wrapper": "6ddf720516b7e6001f63a0b97d31377f9c13ac436870cb19f0cf87e0f24d978d",
+    "reused": {
+      "analyze.py": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "experiments/wan22_native/spatial_audit/rgb.py": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "experiments/wan22_native/action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    }
+  },
+  "check_source_sha256": "6b694a7bc8a1def447731785784c24c9794ca6a11fab24b1545dbaa037494933",
+  "actual_effect_images_read": false,
+  "models_executed": false,
+  "cloud_calls": 0
+}

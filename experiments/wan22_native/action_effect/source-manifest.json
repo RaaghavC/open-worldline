@@ -1,0 +1,906 @@
+{
+  "schema": "worldline-action-effect-source-publication-v1",
+  "status": "exact-sources-staged",
+  "files": {
+    "training/prototype.py": {
+      "source": "work/wan22-action-effect-prep-v1/prototype.py",
+      "bytes": 14432,
+      "sha256": "774c95ca2a38e65a39d20adf62766b3911721f9e7a26a99b8c5b2f6bf99506c7",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/runner.py": {
+      "source": "work/wan22-action-effect-prep-v1/runner.py",
+      "bytes": 27221,
+      "sha256": "e1874bc1ade82cc59f3ce2617bd868fc97671023d8075e9a0c4fd83e4bef2025",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/extension.py": {
+      "source": "work/wan22-action-effect-prep-v1/extension.py",
+      "bytes": 9817,
+      "sha256": "1609e4675aeb75ab918a4efb49c04ba0e9ece016b795551e1fbd023883abcd20",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/test_prototype.py": {
+      "source": "work/wan22-action-effect-prep-v1/test_prototype.py",
+      "bytes": 8923,
+      "sha256": "cb3da3d6774b281d984f4431413bb37e623970046bcdd26707e9a5c1249a5615",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/test_runner.py": {
+      "source": "work/wan22-action-effect-prep-v1/test_runner.py",
+      "bytes": 5681,
+      "sha256": "b6105e98fac5105deebf11997fe334095fb7615fc5ed42575357be85109e1b08",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference-identities.json": {
+      "source": "work/wan22-action-effect-prep-v1/reference-identities.json",
+      "bytes": 703496,
+      "sha256": "1565691fae48875ffd141349c6e158ec06551bf3be4b57143245e19a9ee15dcf",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/effect.py": {
+      "source": "work/wan22-action-effect-prep-v1/effect.py",
+      "bytes": 15056,
+      "sha256": "1b1fa2c40e9bd85473bf371c30a9251f1daffcd1b0402dbe7bd3d619bbc4d866",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/effect_inputs.py": {
+      "source": "work/wan22-action-effect-prep-v1/effect_inputs.py",
+      "bytes": 3895,
+      "sha256": "949ac5c75db56262c0ce08626eec9cebb1a330d78afb20b79e2275a48bb6e203",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/test_effect.py": {
+      "source": "work/wan22-action-effect-prep-v1/test_effect.py",
+      "bytes": 5983,
+      "sha256": "1e25bd6752385fccf106d71cf9e5180ae2c9b560ba7a0041ede72d044b34a29b",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/original128-plan.json": {
+      "source": "work/wan22-action-effect-prep-v1/original128-plan.json",
+      "bytes": 813167,
+      "sha256": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/original-source.json": {
+      "source": "work/wan22-action-effect-prep-v1/original-source.json",
+      "bytes": 1606,
+      "sha256": "b43ee152d9b9b711316c1b1cad792749f6f920d39e92a4720122c74b19f2e812",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/heldout-manifest.json": {
+      "source": "work/wan22-action-effect-prep-v1/heldout-manifest.json",
+      "bytes": 5106,
+      "sha256": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_fixed16/runner.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_fixed16/runner.py",
+      "bytes": 22213,
+      "sha256": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_fixed16/test_prototype.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_fixed16/test_prototype.py",
+      "bytes": 7702,
+      "sha256": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_fixed16/test_runner.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_fixed16/test_runner.py",
+      "bytes": 8180,
+      "sha256": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_fixed16/prototype.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_fixed16/prototype.py",
+      "bytes": 12867,
+      "sha256": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_diagnostic/test_diagnostic.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_diagnostic/test_diagnostic.py",
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_diagnostic/diagnostic.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_diagnostic/diagnostic.py",
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_diagnostic/visual/run.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_diagnostic/visual/run.py",
+      "bytes": 15532,
+      "sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_diagnostic/visual/test_run.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_diagnostic/visual/test_run.py",
+      "bytes": 9311,
+      "sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_diagnostic/visual/inputs.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_diagnostic/visual/inputs.py",
+      "bytes": 18266,
+      "sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/reference_diagnostic/visual/sampler.py": {
+      "source": "work/wan22-action-effect-prep-v1/reference_diagnostic/visual/sampler.py",
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "training/cpu-v3.json": {
+      "source": "work/wan22-action-effect-prep-v1/cpu-v3.json",
+      "bytes": 10982,
+      "sha256": "3ad62e5ef526e393d90511118e28334666a7c93e3db42989cbe3d6ae8bfe639d",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "assessment/assessment.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/assessment.py",
+      "bytes": 20057,
+      "sha256": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/bindings.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/bindings.py",
+      "bytes": 6149,
+      "sha256": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reader.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reader.py",
+      "bytes": 12281,
+      "sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/test_reader.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/test_reader.py",
+      "bytes": 5032,
+      "sha256": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/test_assessment.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/test_assessment.py",
+      "bytes": 9609,
+      "sha256": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/effect-training-source.json": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/effect-training-source.json",
+      "bytes": 10576,
+      "sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/effect-training-plan.json": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/effect-training-plan.json",
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/test_diagnostic.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/test_diagnostic.py",
+      "bytes": 6668,
+      "sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/diagnostic.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/diagnostic.py",
+      "bytes": 20797,
+      "sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/reference14/test_diagnostic.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/reference14/test_diagnostic.py",
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/reference14/diagnostic.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/reference14/diagnostic.py",
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/training_reader/training-source.json": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/training_reader/training-source.json",
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/training_reader/inputs.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/training_reader/inputs.py",
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/visual/run.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/visual/run.py",
+      "bytes": 15532,
+      "sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/visual/test_run.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/visual/test_run.py",
+      "bytes": 9311,
+      "sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/visual/inputs.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/visual/inputs.py",
+      "bytes": 18266,
+      "sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/reference20/visual/sampler.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/reference20/visual/sampler.py",
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "assessment/cpu-assessment-v1/report.json": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/cpu-assessment-v1/report.json",
+      "bytes": 11140,
+      "sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "visual/inputs.py": {
+      "source": "work/wan22-action-effect-visual-prep-v1/inputs.py",
+      "bytes": 21490,
+      "sha256": "6a58a89b4274ddc8b248bec2e6ee4115bf6354d914a2a2ad5b4eb152e0edbd13",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/run.py": {
+      "source": "work/wan22-action-effect-visual-prep-v1/run.py",
+      "bytes": 15968,
+      "sha256": "7f39872dcf7edeae2fa55751addb806e13f8df159b6fa08006e72addfbd2ea97",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/sampler.py": {
+      "source": "work/wan22-action-effect-visual-prep-v1/sampler.py",
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/test_run.py": {
+      "source": "work/wan22-action-effect-visual-prep-v1/test_run.py",
+      "bytes": 12925,
+      "sha256": "5eed91b9f29e03068d44ffe8836eb94679ead23b6762c2597708d3adce989ad7",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/training-source.json": {
+      "source": "work/wan22-action-effect-visual-prep-v1/training-source.json",
+      "bytes": 10576,
+      "sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/training-contract.json": {
+      "source": "work/wan22-action-effect-visual-prep-v1/training-contract.json",
+      "bytes": 54448,
+      "sha256": "daf0657204d8d2ce850b6f76b0746866e8769d599fb23b61845b25ac0ba2ed34",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/cpu-v2.json": {
+      "source": "work/wan22-action-effect-visual-prep-v1/cpu-v2.json",
+      "bytes": 9279,
+      "sha256": "d45181f62705a5370f396843e9496db575dad865852c7d6935da0b05070a4fea",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "audits/training/audit.py": {
+      "source": "work/wan22-action-effect-audit-prep-v1/audit.py",
+      "bytes": 29874,
+      "sha256": "0ab1ea225f4189bc0b51f6ea843d130368c46300b80090ca5e1aaa3f490bbf0e",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/training/checks.py": {
+      "source": "work/wan22-action-effect-audit-prep-v1/checks.py",
+      "bytes": 10606,
+      "sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/training/test_checks.py": {
+      "source": "work/wan22-action-effect-audit-prep-v1/test_checks.py",
+      "bytes": 10055,
+      "sha256": "154cd658f7cb3be5d13007e9daa0941d9beb41009342a6da43713a129f9ac963",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/training/pins.json": {
+      "source": "work/wan22-action-effect-audit-prep-v1/pins.json",
+      "bytes": 11355,
+      "sha256": "c2f200959b489a5c8bbdbe5c5f4cee0e93a592fe8f3737b58d08b7fac95ac3e8",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/training/reference/fixed128-audit.py": {
+      "source": "work/wan22-action-effect-audit-prep-v1/reference/fixed128-audit.py",
+      "bytes": 23954,
+      "sha256": "4fa1d4932e95934ddd1d51791e612441953fb08fd1d0531082fb5195e6bfbdc2",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/training/run_review.py": {
+      "source": "work/wan22-action-effect-audit-prep-v1/run_review.py",
+      "bytes": 1862,
+      "sha256": "a4e4c6d5860da69794d998b9bcbdc14c6a7bad116bda96126a863c5d09e58aa0",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/training/cpu-v1/report.json": {
+      "source": "work/wan22-action-effect-audit-prep-v1/cpu-v1/report.json",
+      "bytes": 12051,
+      "sha256": "7a11447f211aee9111be7dfdab949348da653185552ee9b322c25f8a7767d0a6",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "audits/training/HISTORICAL-NOTES.md": {
+      "source": "work/wan22-action-effect-audit-prep-v1/README.md",
+      "bytes": 5743,
+      "sha256": "1a98440bed03b8ad693763fba33ed12df6191cc2e4942e28a9e3f61f71387cf3",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "audits/assessment/audit.py": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/audit.py",
+      "bytes": 28262,
+      "sha256": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/assessment/test_audit.py": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/test_audit.py",
+      "bytes": 7448,
+      "sha256": "fe9a83b1c9ea8bc3fd961f7b81dc55ae58d3c44a62f1d2a9639995239c3e7ae1",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/assessment/pins.json": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/pins.json",
+      "bytes": 46893,
+      "sha256": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/assessment/reference/reader.py": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/reference/reader.py",
+      "bytes": 12281,
+      "sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/assessment/reference/array_checks.py": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/reference/array_checks.py",
+      "bytes": 10606,
+      "sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/assessment/cpu-v1.json": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/cpu-v1.json",
+      "bytes": 830,
+      "sha256": "afa4e180dfe6f3ca6d8ab13b2e50e31a8b2ef297229d72f990e80d192e7bc922",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "audits/assessment/HISTORICAL-NOTES.md": {
+      "source": "work/wan22-action-effect-assessment-audit-prep-v1/README.md",
+      "bytes": 4072,
+      "sha256": "03f2824b599180e77314ad25dd436bfb8a9b35c39ee164b7a5a5dc738ac45c43",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "audits/visual/audit.py": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/audit.py",
+      "bytes": 29939,
+      "sha256": "8e12dfab2b8aff084b3e89902f8e832f69706be8ac08daa001c1ffc82215cc91",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/visual/binding.py": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/binding.py",
+      "bytes": 7524,
+      "sha256": "e34c03c40d24c102b4c46076e05943d6ad8abb64fc508204afa080d810b9e06c",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/visual/pins.json": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/pins.json",
+      "bytes": 78743,
+      "sha256": "91b2f14675f2b9fce680d5f0198f7596fa9c48647d8f938d088d0c020a972ae6",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/visual/test_audit.py": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/test_audit.py",
+      "bytes": 6795,
+      "sha256": "239ed5c59388524db6a005399eb7f0df88c254386252b1a46c6cd8248bf52bf3",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/visual/reference/final128-audit.py": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/reference/final128-audit.py",
+      "bytes": 29256,
+      "sha256": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "audits/visual/cpu-v1.json": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/cpu-v1.json",
+      "bytes": 735,
+      "sha256": "e96385ea93c7888d92227407fd56d0bd6b063f7796c61f94f03d4aa417803afe",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "audits/visual/HISTORICAL-NOTES.md": {
+      "source": "work/wan22-action-effect-visual-audit-prep-v1/README.md",
+      "bytes": 3273,
+      "sha256": "8236a8c26be79cc9bb627dd66933b8055813f871f6e7f50950a61d282e25e0a9",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "training/HISTORICAL-NOTES.md": {
+      "source": "work/wan22-action-effect-prep-v1/README.md",
+      "bytes": 3559,
+      "sha256": "4bc17c8538bca723ebb2234982fde379c56234c7cf4735c9012dfb304ae2cf4b",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "assessment/HISTORICAL-DESIGN.md": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/DESIGN.md",
+      "bytes": 7278,
+      "sha256": "f6b50b87403b1f34634b278e8947f7d46d9a427d51c748d85c58d9a22fc17dee",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "assessment/heldout-generation/prepare.py": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/prepare.py",
+      "bytes": 6811,
+      "sha256": "c87608287196de5c6858e7d9f95ca7af8e85a01cf1c7728074d3703957fa9f11",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "visual/HISTORICAL-NOTES.md": {
+      "source": "work/wan22-action-effect-visual-prep-v1/README.md",
+      "bytes": 1048,
+      "sha256": "7ff6d20b1096728cf149a6e2f155df135280201f7535d49a0909913fa0815a79",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "visual/check.py": {
+      "source": "work/wan22-action-effect-visual-prep-v1/check.py",
+      "bytes": 1184,
+      "sha256": "c91de657296e50efeb31939a40cf15a9d580433b90fede42b3e581b35e4321d6",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "comparison/analyze.py": {
+      "source": "work/wan22-action-effect-visual-comparison-prep-v1/analyze.py",
+      "bytes": 13954,
+      "sha256": "6ddf720516b7e6001f63a0b97d31377f9c13ac436870cb19f0cf87e0f24d978d",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "comparison/check.py": {
+      "source": "work/wan22-action-effect-visual-comparison-prep-v1/check.py",
+      "bytes": 2636,
+      "sha256": "6b694a7bc8a1def447731785784c24c9794ca6a11fab24b1545dbaa037494933",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "comparison/cpu-check.json": {
+      "source": "work/wan22-action-effect-visual-comparison-prep-v1/cpu-check.json",
+      "bytes": 1639,
+      "sha256": "06e3796a940b7050a58a30cda829af885ec71216da1900a90789982ba129b2f9",
+      "copy": "byte-exact",
+      "category": "historical-cpu-report"
+    },
+    "comparison/HISTORICAL-NOTES.md": {
+      "source": "work/wan22-action-effect-visual-comparison-prep-v1/README.md",
+      "bytes": 5265,
+      "sha256": "fa1a83b2fcff4b498d6c76a216a24fa3cc200158183d5a1a15ce26af4017177d",
+      "copy": "byte-exact",
+      "category": "historical-documentation"
+    },
+    "comparison/reference_rgb/analyze.py": {
+      "source": "work/wan22-action-cuda-visual-analysis-prep-v1/analyze.py",
+      "bytes": 16963,
+      "sha256": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "copy": "byte-exact",
+      "category": "exact-source"
+    },
+    "reviews/training.json": {
+      "source": "work/wan22-action-effect-independent-review-v3/report.json",
+      "bytes": 12474,
+      "sha256": "826c76de0c717d20f3cd9d5d88692f52569f626091cb22c91618afbd0abfc54a",
+      "copy": "byte-exact",
+      "category": "independent-source-review"
+    },
+    "reviews/assessment.json": {
+      "source": "work/wan22-action-effect-evaluation-prep-v1/independent-review-v1.json",
+      "bytes": 23805,
+      "sha256": "f8085962a6f5a8c1a871864dc20aeb7b5ab8dd517787cc6c43938a6a2b7a7bca",
+      "copy": "byte-exact",
+      "category": "independent-source-review"
+    },
+    "reviews/visual.json": {
+      "source": "work/wan22-action-effect-visual-independent-review-v1/report.json",
+      "bytes": 11142,
+      "sha256": "797e12fcdafad9f64f941e4b4ab2270e1b03ce936ffee614ca77f6d333a773bb",
+      "copy": "byte-exact",
+      "category": "independent-source-review"
+    },
+    "reviews/training-auditor.json": {
+      "source": "work/wan22-action-effect-audit-independent-review-v1/report.json",
+      "bytes": 13001,
+      "sha256": "1f0882317eec640d7c7446c2c1879a99f045f9f149ac89d23c2c21fc6a741da3",
+      "copy": "byte-exact",
+      "category": "independent-source-review"
+    },
+    "reviews/comparison.json": {
+      "source": "work/wan22-action-effect-visual-comparison-independent-review-v1/report.json",
+      "bytes": 2640,
+      "sha256": "40c62a3e2e123b1783ba8544e0f93db8a70804d6c68c9fc02971e18ce2eae316",
+      "copy": "byte-exact",
+      "category": "independent-source-review"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "source": "work/wan22-action-effect-training-publication-v1/payload/licenses/WAN-APACHE-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "copy": "byte-exact",
+      "category": "license"
+    },
+    "licenses/WORLDLINE-NOTICE.txt": {
+      "source": "work/wan22-action-effect-training-publication-v1/payload/licenses/WORLDLINE-NOTICE.txt",
+      "bytes": 428,
+      "sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "copy": "byte-exact",
+      "category": "license"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "source": "work/wan22-action-effect-training-publication-v1/payload/licenses/WAN-NOTICE.txt",
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "copy": "byte-exact",
+      "category": "license"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "source": "work/wan22-action-effect-training-publication-v1/payload/licenses/ATRIUM-CC0.txt",
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "copy": "byte-exact",
+      "category": "license"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "source": "work/wan22-action-effect-training-publication-v1/payload/licenses/WORLDLINE-APACHE-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "copy": "byte-exact",
+      "category": "license"
+    }
+  },
+  "file_count": 90,
+  "bytes": 3452660,
+  "source_graphs": {
+    "training": {
+      "repository": {
+        "experiments/room_world/__init__.py": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+        "experiments/room_world/memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+        "experiments/room_world/memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+        "experiments/room_world/memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+        "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+        "experiments/room_world/model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+        "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+        "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+        "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+        "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+        "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+        "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+        "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+        "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+        "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+        "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+        "experiments/wan22_native/action_cuda/probe.py": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+        "experiments/wan22_native/action_cuda/probe_evidence.py": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+        "experiments/wan22_native/action_cuda/probe_math.py": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+        "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+        "experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+        "experiments/wan22_native/action_cuda/test_probe.py": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+        "experiments/wan22_native/action_cuda/test_probe_independent.py": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+        "experiments/wan22_native/action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+        "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+        "experiments/wan22_native/action_training/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+        "experiments/wan22_native/action_training/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+        "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+        "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+        "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+        "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+        "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+        "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+        "experiments/wan22_native/cuda_reference/requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+        "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+        "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+        "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+        "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+        "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+        "experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+        "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+        "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+        "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+        "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+        "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+        "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+        "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+        "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+        "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+        "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+        "experiments/wan22_native/text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+        "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+        "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+        "experiments/wan_adapter/native_control/__init__.py": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+        "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+        "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+        "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+        "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+        "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+        "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+      },
+      "local": {
+        "prototype.py": "774c95ca2a38e65a39d20adf62766b3911721f9e7a26a99b8c5b2f6bf99506c7",
+        "runner.py": "e1874bc1ade82cc59f3ce2617bd868fc97671023d8075e9a0c4fd83e4bef2025",
+        "extension.py": "1609e4675aeb75ab918a4efb49c04ba0e9ece016b795551e1fbd023883abcd20",
+        "test_prototype.py": "cb3da3d6774b281d984f4431413bb37e623970046bcdd26707e9a5c1249a5615",
+        "test_runner.py": "b6105e98fac5105deebf11997fe334095fb7615fc5ed42575357be85109e1b08",
+        "reference-identities.json": "1565691fae48875ffd141349c6e158ec06551bf3be4b57143245e19a9ee15dcf",
+        "effect.py": "1b1fa2c40e9bd85473bf371c30a9251f1daffcd1b0402dbe7bd3d619bbc4d866",
+        "effect_inputs.py": "949ac5c75db56262c0ce08626eec9cebb1a330d78afb20b79e2275a48bb6e203",
+        "test_effect.py": "1e25bd6752385fccf106d71cf9e5180ae2c9b560ba7a0041ede72d044b34a29b",
+        "original128-plan.json": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a",
+        "original-source.json": "b43ee152d9b9b711316c1b1cad792749f6f920d39e92a4720122c74b19f2e812",
+        "heldout-manifest.json": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19"
+      },
+      "reference": {
+        "reference_fixed16/runner.py": "b5c0b03565fb7c9d34c208658ea317d06075eaff5ad1171d1fadf26abab8ee27",
+        "reference_fixed16/test_prototype.py": "17fae56a1ca94e4d4a96479aa542262d6cf4a3a54ab691a2ae7f4409521e8107",
+        "reference_fixed16/test_runner.py": "a8a24734a0c0155c9251b285a0093017816283a5f4b332bda1ef6ec847ac6bbf",
+        "reference_fixed16/prototype.py": "ee5b9f15667a672331ee32c05b25bdd49208efb9328599f326a2ec40a477aba1",
+        "reference_diagnostic/test_diagnostic.py": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+        "reference_diagnostic/diagnostic.py": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+        "reference_diagnostic/visual/run.py": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+        "reference_diagnostic/visual/test_run.py": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+        "reference_diagnostic/visual/inputs.py": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+        "reference_diagnostic/visual/sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+      }
+    },
+    "assessment": {
+      "repository": {
+        "experiments/room_world/__init__.py": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+        "experiments/room_world/memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+        "experiments/room_world/memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+        "experiments/room_world/memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+        "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+        "experiments/room_world/model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+        "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+        "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+        "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+        "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+        "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+        "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+        "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+        "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+        "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+        "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+        "experiments/wan22_native/action_cuda/probe.py": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+        "experiments/wan22_native/action_cuda/probe_evidence.py": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+        "experiments/wan22_native/action_cuda/probe_math.py": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+        "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+        "experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+        "experiments/wan22_native/action_cuda/test_probe.py": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+        "experiments/wan22_native/action_cuda/test_probe_independent.py": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+        "experiments/wan22_native/action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+        "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+        "experiments/wan22_native/action_training/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+        "experiments/wan22_native/action_training/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+        "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+        "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+        "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+        "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+        "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+        "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+        "experiments/wan22_native/cuda_reference/requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+        "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+        "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+        "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+        "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+        "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+        "experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+        "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+        "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+        "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+        "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+        "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+        "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+        "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+        "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+        "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+        "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+        "experiments/wan22_native/text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+        "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+        "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+        "experiments/wan_adapter/native_control/__init__.py": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+        "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+        "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+        "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+        "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+        "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+        "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+      },
+      "local": {
+        "assessment.py": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328",
+        "bindings.py": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c",
+        "reader.py": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+        "test_reader.py": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2",
+        "test_assessment.py": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f",
+        "effect-training-source.json": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+        "effect-training-plan.json": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+      },
+      "reference": {
+        "test_diagnostic.py": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+        "diagnostic.py": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+        "reference14/test_diagnostic.py": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+        "reference14/diagnostic.py": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+        "training_reader/training-source.json": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+        "training_reader/inputs.py": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+        "visual/run.py": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+        "visual/test_run.py": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+        "visual/inputs.py": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+        "visual/sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+      }
+    },
+    "visual": {
+      "repository": {
+        "experiments/room_world/__init__.py": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+        "experiments/room_world/memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+        "experiments/room_world/memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+        "experiments/room_world/memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+        "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+        "experiments/room_world/model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+        "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+        "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+        "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+        "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+        "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+        "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+        "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+        "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+        "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+        "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+        "experiments/wan22_native/action_cuda/probe.py": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+        "experiments/wan22_native/action_cuda/probe_evidence.py": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+        "experiments/wan22_native/action_cuda/probe_math.py": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+        "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+        "experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+        "experiments/wan22_native/action_cuda/test_probe.py": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+        "experiments/wan22_native/action_cuda/test_probe_independent.py": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+        "experiments/wan22_native/action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+        "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+        "experiments/wan22_native/action_training/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+        "experiments/wan22_native/action_training/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+        "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+        "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+        "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+        "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+        "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+        "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+        "experiments/wan22_native/cuda_reference/requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+        "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+        "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+        "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+        "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+        "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+        "experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+        "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+        "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+        "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+        "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+        "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+        "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+        "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+        "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+        "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+        "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+        "experiments/wan22_native/text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+        "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+        "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+        "experiments/wan_adapter/native_control/__init__.py": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+        "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+        "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+        "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+        "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+        "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+        "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+      },
+      "local": {
+        "inputs.py": "6a58a89b4274ddc8b248bec2e6ee4115bf6354d914a2a2ad5b4eb152e0edbd13",
+        "run.py": "7f39872dcf7edeae2fa55751addb806e13f8df159b6fa08006e72addfbd2ea97",
+        "sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+        "test_run.py": "5eed91b9f29e03068d44ffe8836eb94679ead23b6762c2597708d3adce989ad7",
+        "training-source.json": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+        "training-contract.json": "daf0657204d8d2ce850b6f76b0746866e8769d599fb23b61845b25ac0ba2ed34"
+      }
+    }
+  },
+  "scope": "Local/reference experiment source, saved auditors, scorer and historical review evidence; foundation weights and result tensors excluded."
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "worldline-effect128-parent-visual-review-v1",
+  "status": "reviewed",
+  "reviewed_at": "2026-09-08T09:57:57.889048+00:00",
+  "artifact_audit_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+  "comparison_sha256": "d56e25c7ac4c94cd6f2be3c729af56f0a709b28629640a42d2f7610729779aa2",
+  "all_frames_reviewed": 34,
+  "frame_indices_per_arm": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "full_resolution_endpoints_reviewed": 4,
+  "viewed_files": {
+    "work/wan22-action-effect-visual-comparison-v1/all-34-frames.png": "521f53080b735a099926153f2c0cd93084e06e924e6bcc9f93b5dbbeb483d7f3",
+    "work/wan22-action-effect-visual-comparison-v1/checkpoint-target-comparison.png": "caa895fbf4bf7e021ac3f627d0bfc15781789612693001c4f4b087ba7d4b9697",
+    "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/open/frames/0000.png": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+    "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/open/frames/0016.png": "0efefb12620e6b473752b43c0ebe6b914b3cdac977ac5a26c033da811b6862ee",
+    "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/closed/frames/0000.png": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+    "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/closed/frames/0016.png": "e9bfec1b0a174223dd72c2da5ab7a871f552130790f620906080d4a11bff9983"
+  },
+  "observations": {
+    "door_in_wait_sequence": "Remains visibly closed throughout all17 frames.",
+    "door_in_interact_sequence": "Remains visibly closed throughout all17 frames; recorded target opens immediately after interaction.",
+    "camera": "Only small framing drift; requested left-turn sequence and target view changes do not occur.",
+    "comparison": "No successful door interaction or camera following demonstrated versus prior16/prior128."
+  },
+  "visible_door_control_passed": false,
+  "visible_camera_control_passed": false,
+  "genie3_parity_demonstrated": false,
+  "three_scientific_breakthroughs_demonstrated": false,
+  "selected_hypothesis": "Small endpoint-contrast improvement confirmed; visible control failed. No additional updates admitted by this experiment."
+}

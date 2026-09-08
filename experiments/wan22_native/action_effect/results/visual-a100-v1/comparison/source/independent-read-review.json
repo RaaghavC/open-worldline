@@ -1,0 +1,35 @@
+{
+  "schema": "worldline-effect128-rgb-comparison-independent-review-v1",
+  "status": "passed",
+  "source_sha256": {
+    "wrapper": "6ddf720516b7e6001f63a0b97d31377f9c13ac436870cb19f0cf87e0f24d978d",
+    "reused": {
+      "analyze.py": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "experiments/wan22_native/spatial_audit/rgb.py": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "experiments/wan22_native/action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    }
+  },
+  "cpu_report_sha256": "06e3796a940b7050a58a30cda829af885ec71216da1900a90789982ba129b2f9",
+  "actual_structural_audit_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+  "read_only": true,
+  "tests_rerun": false,
+  "model_execution": false,
+  "checks": [
+    "Exact actual family/plan/training-audit/final-checkpoint and recovery identity gate matches the now-passed structural audit.",
+    "Original ground-truth canonicalization, spatial resize/crop, RGB conversion, score, paired-frame and raw-frame functions are imported unchanged.",
+    "All three original input files must match both historical runs; both-arm original command and observed/noise/text identities are checked.",
+    "All17 frames per arm are scored; frame0 is excluded from future means. Old16 and old128 recorded per-frame scores must recompute exactly.",
+    "All34 effect PNGs appear exactly once in the quarter-size contact; four original endpoint PNGs are copied byte-exact. The separate comparison contact is visibly labeled at half size.",
+    "Both-close-to-own counts use existing strict inequalities and RGB difference regions, with no semantic door-mask or control-success claim.",
+    "Negative-context scope accurately distinguishes effect auxiliary training from prior positive-only training."
+  ],
+  "limitations": [
+    "This source review does not replace the actual image comparison or human visual judgment.",
+    "Historical metric equality is a strict same-local-reader check; no claim about arbitrary CPU reduction backends."
+  ],
+  "findings": []
+}

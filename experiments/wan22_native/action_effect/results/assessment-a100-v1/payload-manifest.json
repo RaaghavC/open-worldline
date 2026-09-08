@@ -1,0 +1,190 @@
+{
+  "schema": "worldline-action-effect-assessment-payload-v1",
+  "files": {
+    "README.md": {
+      "bytes": 8248,
+      "sha256": "668e71bb6f57e1ba10538fac9f7ab13552cd6288fa4c662335cbd7b5eaeb9438"
+    },
+    "audit/audit.py": {
+      "bytes": 28262,
+      "sha256": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2"
+    },
+    "audit/binding.json": {
+      "bytes": 59069,
+      "sha256": "f2abe14412d9a3b3dd4de02797ff7e071dfd7802a0ec41a9916cf211823d1bc5"
+    },
+    "audit/inventory.json": {
+      "bytes": 56052,
+      "sha256": "fb1491d895ccdaa0c8167855bc5ebd043c52501a4bc5a068ae9cb1b6711b2b11"
+    },
+    "audit/pins.json": {
+      "bytes": 46893,
+      "sha256": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea"
+    },
+    "audit/reference/array_checks.py": {
+      "bytes": 10606,
+      "sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079"
+    },
+    "audit/reference/reader.py": {
+      "bytes": 12281,
+      "sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4"
+    },
+    "audit/report.json": {
+      "bytes": 101010,
+      "sha256": "99528e0e654ad1de451d31a02ebbf2b92d19345f4c85179f7b24e9c973d4fe1a"
+    },
+    "checkpoints/effect128-final.safetensors": {
+      "bytes": 3792296,
+      "sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce"
+    },
+    "derivations.json": {
+      "bytes": 162759,
+      "sha256": "092123b2993e632854452d7a377d5d220c92896591d0a340aa606b440ddea996"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/WORLDLINE-NOTICE.txt": {
+      "bytes": 428,
+      "sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915"
+    },
+    "metrics/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "metrics/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "metrics/monitor-terminal.json": {
+      "bytes": 402,
+      "sha256": "9f2bb0010aae1a46cc3ad52a0e48e1247ecc24c8637a3bf55fea372b1f8fd4d0"
+    },
+    "metrics/parent.json": {
+      "bytes": 413,
+      "sha256": "cc8ab2ce1a1889ef9779f4066cc6ecadf96ded0b6f8c107f268fb1ab08e5670e"
+    },
+    "metrics/result.json": {
+      "bytes": 106439,
+      "sha256": "81515906b86395ce8e9443d877ca244a5ae703f459d4ed4402f03dd86f04732f"
+    },
+    "metrics/terminal.json": {
+      "bytes": 543,
+      "sha256": "c59ce86d692e2fb7e0422838be2146ceb23399b43bd49b751ecea4a866a09147"
+    },
+    "metrics/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "plans/actual-plan-review.json": {
+      "bytes": 13275,
+      "sha256": "3e7af0e5942683433d77dce27ecd6ee5da428ea69e00096dd23c2d375d3ddae2"
+    },
+    "plans/audit-binding.json": {
+      "bytes": 59069,
+      "sha256": "f2abe14412d9a3b3dd4de02797ff7e071dfd7802a0ec41a9916cf211823d1bc5"
+    },
+    "plans/executed-admission.json": {
+      "bytes": 11421,
+      "sha256": "a5cec8b6d3de40678da480a6264bc998fe68ae69ecf1451f3f3747dffcffd864"
+    },
+    "plans/launch.json": {
+      "bytes": 402,
+      "sha256": "013c0047bd5c60d72b1afe45514f8ce73373ff0a1da0b3b33a5e4038dbb81b56"
+    },
+    "plans/plan.json": {
+      "bytes": 981775,
+      "sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698"
+    },
+    "preflight/assessment-cpu-report.json": {
+      "bytes": 11140,
+      "sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884"
+    },
+    "preflight/assessment-independent-review.json": {
+      "bytes": 23805,
+      "sha256": "f8085962a6f5a8c1a871864dc20aeb7b5ab8dd517787cc6c43938a6a2b7a7bca"
+    },
+    "preflight/auditor-cpu-report.json": {
+      "bytes": 830,
+      "sha256": "afa4e180dfe6f3ca6d8ab13b2e50e31a8b2ef297229d72f990e80d192e7bc922"
+    },
+    "preflight/auditor-independent-review.json": {
+      "bytes": 2563,
+      "sha256": "2fbec14ecce0b86876e9816b40b785428e09426c19712de840d7176663768af1"
+    },
+    "preflight/plan-review-cpu-report.json": {
+      "bytes": 1117,
+      "sha256": "552fc62cf7d9ed7098c9664e845dcd6b5ac87c58467b4f937751246e00bae139"
+    },
+    "preflight/plan-review-helper/pins.json": {
+      "bytes": 963,
+      "sha256": "42a7d73124adc92c8c1429c61063795d5eaccf1a1b84120f2b209b343279b8c3"
+    },
+    "preflight/plan-review-helper/review.py": {
+      "bytes": 6591,
+      "sha256": "191bcb7eb0d8508881560b1cc86562156f3e5880c7313d2b0d2b498084607c90"
+    },
+    "preflight/plan-review-helper/test_review.py": {
+      "bytes": 4335,
+      "sha256": "6641c1cc96ec789fa41c97d7106e1e9e40cdf8f160e2449313342893a2cfd75f"
+    },
+    "preflight/test_audit.py": {
+      "bytes": 7448,
+      "sha256": "fe9a83b1c9ea8bc3fd961f7b81dc55ae58d3c44a62f1d2a9639995239c3e7ae1"
+    },
+    "privacy-check.json": {
+      "bytes": 326,
+      "sha256": "6335f87321e517d859d07ba772a5c036a07f2de9310b2eb45d79b2c68d613a41"
+    },
+    "recovery/local-original-reference.json": {
+      "bytes": 1174,
+      "sha256": "0bd305cddc75f52f07692ec775fd1cd62da7447b273fc60cbfe54f6a36166d2f"
+    },
+    "recovery/original-index.json": {
+      "bytes": 71819,
+      "sha256": "7cbe124f446623d4d3fa87cd8364478f0cb09cb040bb47f5d86bc4dbb710b0e8"
+    },
+    "recovery/original-recovery-verified.json": {
+      "bytes": 315,
+      "sha256": "ccc57a88877e462eafae5e005cfd3b49e98e80cf3eff9e2325f2b2b1f196193f"
+    },
+    "reproducibility/executed-source.tar.gz": {
+      "bytes": 457525,
+      "sha256": "e3a3736f1fb7bcaec12d4cfaa306d34c9fbc179a474cb5ab19ba1db9662daae7"
+    },
+    "reproducibility/prepared-inputs.tar.gz": {
+      "bytes": 58328905,
+      "sha256": "ec4ed64345cb2d29cbf42517cc6ba6f0f75220781c50bebbd1838bf7cbeedbd7"
+    },
+    "reproducibility/source-and-inputs.json": {
+      "bytes": 60837,
+      "sha256": "c8edf712c48ae8829df6035efc23048c71c8a44c153d2dd067e958fafad74e42"
+    },
+    "staging-status.json": {
+      "bytes": 456,
+      "sha256": "55dcdacc1b0621afadfbfbe6d80ec1dc8930c4083a153e35d9bfb67d9e737756"
+    },
+    "summary.json": {
+      "bytes": 3205,
+      "sha256": "ed5016a150ccbfb1e3e6513107efeb62841ad6fab408592d050eca3ab6af3a04"
+    }
+  },
+  "file_count": 45,
+  "file_bytes": 65159541,
+  "excludes_self": true,
+  "full_raw_recovery_included": false,
+  "public_release_urls_pending": true
+}

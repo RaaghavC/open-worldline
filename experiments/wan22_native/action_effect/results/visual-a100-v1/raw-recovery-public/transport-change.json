@@ -1,0 +1,16 @@
+{
+  "schema": "worldline-release-transport-change-v1",
+  "reason": "Two bounded 16MB uploads returned broken pipe; remaining pieces reduced to 8MB. Completed remote assets retained.",
+  "completed_prefix_parts": 1,
+  "part_count": 88,
+  "stream_sha256": "c762b5aa63f2ef19d0e1d491c75008f957219009f48acebcddd87eab0c5bfd04",
+  "stream_unchanged": true,
+  "original_metadata_sha256": "f2e405b0b439de5b49e7eb0868086f0eb27fa8d5dccd0ec70ec9f8f493d349bb",
+  "final_metadata_sha256": "1a4f2dd8cba13f263ea6016fffc294d0caa3cb26a344c92310f0e359ca16440e",
+  "historical_preparation_counts_refer_to_original_transport": true,
+  "original_index_sha256": "66a3eb0ea3a470e27de1d9443ded653ee92131c805dbdad20c93c0c3a2f3b2fa",
+  "final_index_sha256": "6e392b2635b66dce5ae175accb96990e058d058b14b72a8c0b121b0dd0bc1fe9",
+  "index_file_inventory_unchanged": true,
+  "index_transport_parts_updated": true,
+  "prior_mismatched_metadata_preserved": "history/before-index-layout-fix-v1/release-download.draft.json"
+}

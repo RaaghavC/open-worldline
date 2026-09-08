@@ -6,6 +6,8 @@ An original, locally trained spatial generator with a 3D explorer, learned ecosy
 
 The editor requires no inference API, hosted generative service, external foundation-model weights, or API key. Its original source, trained checkpoints, training data generator, evaluation code, and research review use Apache-2.0. Optional experiments have separate source, data and external-weight notices, as listed below.
 
+The [September 8 project status](docs/project-status-2026-09-08.md) summarizes the working editor, research, and latest model experiment. The new action-effect adapter improved a small numerical test but failed visible door and camera control. This result does not meet the requested Genie 3 comparison.
+
 ![A generated alien landscape in the Worldline browser renderer](docs/images/alien-preview.png)
 
 The image shows the programmed 3D renderer displaying learned terrain fields. See the [measured results](docs/initial-results.md) for what the models and software have actually demonstrated.
@@ -85,6 +87,8 @@ The [first generated clips from that trained adapter](experiments/wan22_native/a
 The [fourteen-prediction diagnostic](experiments/wan22_native/action_cuda/results/diagnostic-a100-v1/README.md) found small gains on a previously seen training draw and a small first-step command effect. A subsequent [fresh 128-update run](experiments/wan22_native/action_cuda/results/fixed128-a100-v1/README.md) completed in 388.465 seconds. Its 256 saved predictions, 128 gradient bundles and nine checkpoints passed independent checks. The combined public archive retains all 957 recovery files, with two disclosed path-prefix replacements in one historical dependency log. A fresh public download passed verification. These training checks do not establish visible command control.
 
 The [final checkpoint evaluation](experiments/wan22_native/action_cuda/results/post128-a100-v1/README.md) also failed both requested controls. All 34 frames retain a closed door and almost static framing. The two clips completed in 398.633 seconds and score slightly worse against the targets than the 16-update clips. A separate 20-prediction comparison found slightly higher fixed-case error at 128 updates, despite a 2.52-fold increase in initial command sensitivity. All repeated reference predictions matched their earlier files exactly. Complete clips, raw predictions, independent audits and the failed first audit reader are retained with the corrected reader and its review.
+
+A subsequent [action-effect experiment](experiments/wan22_native/action_effect/results/README.md) adds a paired command-difference objective to a fresh 128-update run. Its final adapter reduces contrast error by 0.513–0.532% across four reserved noise samples in the same room. The generated videos still fail door interaction and the requested camera turn. Both branches score worse against the targets than repeating the starting image. The release includes original experiment code, the trained adapter, all 66 assessment predictions, all 34 generated frames, and complete retained training evidence. No further training under this hypothesis is admitted.
 
 The three immediate engineering capabilities are:
 

@@ -1,0 +1,1089 @@
+{
+  "schema": "worldline-action-effect-assessment-audit-binding-v1",
+  "status": "bound",
+  "plan_sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698",
+  "prepared_files": {
+    "cpu-report.json": {
+      "bytes": 11140,
+      "sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884"
+    },
+    "heldout/environment.json": {
+      "bytes": 2245,
+      "sha256": "c773bdf1c37e264e512d1d21a2869f9f0b1c14a86161e44b71be8c69b199c40f"
+    },
+    "heldout/generation-status.json": {
+      "bytes": 98,
+      "sha256": "eb723338d81029aaf6e15f4fd680e0ea275337b0f8d6c7c81c6119780402267f"
+    },
+    "heldout/generator-states.safetensors": {
+      "bytes": 25640,
+      "sha256": "522276a0d47c5e701caf63dbb39d6bc823de5d1959828c49962d2f327d75a66f"
+    },
+    "heldout/manifest.json": {
+      "bytes": 5106,
+      "sha256": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19"
+    },
+    "heldout/noise-0000.safetensors": {
+      "bytes": 3294808,
+      "sha256": "521016371ee1eea6d19db071b479ee65745988e93f3e9ed69beac349b22e2e48"
+    },
+    "heldout/noise-0001.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6ff785e7120dfdbb5f128e0a652277540bc65441a3dbd089a5c704b4ac2b7ed7"
+    },
+    "heldout/noise-0002.safetensors": {
+      "bytes": 3294808,
+      "sha256": "89e519d68f0ef8ba29128bf8cf0470a1b1da4c5c010bd6d29c8685d949ffce76"
+    },
+    "heldout/noise-0003.safetensors": {
+      "bytes": 3294808,
+      "sha256": "237d744f49623ca6f5349ad4e3002b84f7345fa5b6fdb490e5698307113e2bbe"
+    },
+    "heldout/prepare.py": {
+      "bytes": 6811,
+      "sha256": "c87608287196de5c6858e7d9f95ca7af8e85a01cf1c7728074d3703957fa9f11"
+    },
+    "heldout/training-comparison.json": {
+      "bytes": 71277,
+      "sha256": "08025cea4b3f08f037f3ca32575ff77dc4158be60e35622df2b697bb4dae27ac"
+    },
+    "new-training-audit.json": {
+      "bytes": 259731,
+      "sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1"
+    },
+    "new-training-evidence/metrics.json": {
+      "bytes": 847,
+      "sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae"
+    },
+    "new-training-evidence/plan.json": {
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+    },
+    "new-training-evidence/terminal.json": {
+      "bytes": 543,
+      "sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d"
+    },
+    "new-training-evidence/training/checkpoint-0128/manifest.json": {
+      "bytes": 5003,
+      "sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f"
+    },
+    "new-training-evidence/training/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "new-training-evidence/training/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "new-training-evidence/training/last-valid.json": {
+      "bytes": 154,
+      "sha256": "5cdc7404ae620db89de7ad52838fb048dc37b54399e4f9ae3dc87e0827c8454e"
+    },
+    "new-training-evidence/training/metrics.json": {
+      "bytes": 417501,
+      "sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32"
+    },
+    "new-training-evidence/worker/metrics.json": {
+      "bytes": 91348,
+      "sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4"
+    },
+    "new-training-evidence/worker/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "new128.safetensors": {
+      "bytes": 3792296,
+      "sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce"
+    },
+    "plan.json": {
+      "bytes": 981775,
+      "sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698"
+    },
+    "reference-inputs/checkpoint-0128.safetensors": {
+      "bytes": 3792296,
+      "sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996"
+    },
+    "reference-inputs/cpu-report.json": {
+      "bytes": 9848,
+      "sha256": "9d902564fe0746ec81a727ec22f1e90a508e1300cd9414ff9045b7edd5e9cff2"
+    },
+    "reference-inputs/original14/checkpoint-0000.safetensors": {
+      "bytes": 3792296,
+      "sha256": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0"
+    },
+    "reference-inputs/original14/cpu-report.json": {
+      "bytes": 9419,
+      "sha256": "d91ef87a3f0bc70ae6b7ae8ce0d107fbb7961016f45c24ee7ff5139270a48f17"
+    },
+    "reference-inputs/original14/diagnostic.py.txt": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350"
+    },
+    "reference-inputs/original14/objective-inputs.safetensors": {
+      "bytes": 13248024,
+      "sha256": "95ccaab585bc90e7111510af04bd370585b42cf08f8f3f1dece450a04b47d7ce"
+    },
+    "reference-inputs/original14/original-training-inputs.safetensors": {
+      "bytes": 10543448,
+      "sha256": "289bc7ff587fef006986cc56f1fe57324d1d6b3d3adff33949ac706148e68b65"
+    },
+    "reference-inputs/original14/plan.json": {
+      "bytes": 157008,
+      "sha256": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6"
+    },
+    "reference-inputs/original14/test_diagnostic.py.txt": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f"
+    },
+    "reference-inputs/original14/visual-inputs/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d"
+    },
+    "reference-inputs/original14/visual-inputs/commands.safetensors": {
+      "bytes": 912,
+      "sha256": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405"
+    },
+    "reference-inputs/original14/visual-inputs/contexts.safetensors": {
+      "bytes": 2474152,
+      "sha256": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee"
+    },
+    "reference-inputs/original14/visual-inputs/cpu-report.json": {
+      "bytes": 9117,
+      "sha256": "55c454f61b75f8008d19a6c9442b01aa27a273b94151054efa507b18855de577"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/baseline/core/result/metrics.json": {
+      "bytes": 11403,
+      "sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/baseline/core/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/baseline/core/terminal.json": {
+      "bytes": 543,
+      "sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/baseline/decode/result/metrics.json": {
+      "bytes": 10144,
+      "sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/baseline/decode/terminal.json": {
+      "bytes": 543,
+      "sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/baseline/metrics.json": {
+      "bytes": 5876,
+      "sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/cache/metrics.json": {
+      "bytes": 79472,
+      "sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/cache/result/completion.json": {
+      "bytes": 63408,
+      "sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/cache/result/manifest.json": {
+      "bytes": 142043,
+      "sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/cache/terminal.json": {
+      "bytes": 544,
+      "sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/cache/worker/metrics.json": {
+      "bytes": 6448,
+      "sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/metrics.json": {
+      "bytes": 846,
+      "sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/plan.json": {
+      "bytes": 709761,
+      "sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/terminal.json": {
+      "bytes": 542,
+      "sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/training/checkpoint-0016/manifest.json": {
+      "bytes": 740101,
+      "sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/training/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/training/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/training/last-valid.json": {
+      "bytes": 153,
+      "sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/training/metrics.json": {
+      "bytes": 781775,
+      "sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/worker/metrics.json": {
+      "bytes": 23670,
+      "sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3"
+    },
+    "reference-inputs/original14/visual-inputs/evidence/training/worker/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "reference-inputs/original14/visual-inputs/metrics.json": {
+      "bytes": 192,
+      "sha256": "caecdbc8667ceec0bfc699701736d70c4b776b0b3fa572bf0ef544e0bf6fab61"
+    },
+    "reference-inputs/original14/visual-inputs/plan.json": {
+      "bytes": 1119213,
+      "sha256": "6feb229e4e27f2c44aa740184a1687bdad5b1ff06ada2eca1b4bb8d3b14e13f4"
+    },
+    "reference-inputs/original14/visual-inputs/sampling-inputs.safetensors": {
+      "bytes": 7283048,
+      "sha256": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade"
+    },
+    "reference-inputs/original14/visual-inputs/source/local/inputs.py": {
+      "bytes": 18266,
+      "sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a"
+    },
+    "reference-inputs/original14/visual-inputs/source/local/run.py": {
+      "bytes": 15532,
+      "sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499"
+    },
+    "reference-inputs/original14/visual-inputs/source/local/sampler.py": {
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+    },
+    "reference-inputs/original14/visual-inputs/source/local/test_run.py": {
+      "bytes": 9311,
+      "sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "bytes": 3901,
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "bytes": 5767,
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "bytes": 3550,
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "bytes": 3374,
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "bytes": 21001,
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "reference-inputs/plan.json": {
+      "bytes": 981673,
+      "sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6"
+    },
+    "reference-inputs/source/diagnostic/diagnostic.py": {
+      "bytes": 20797,
+      "sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71"
+    },
+    "reference-inputs/source/diagnostic/test_diagnostic.py": {
+      "bytes": 6668,
+      "sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c"
+    },
+    "reference-inputs/source/reference14/diagnostic.py": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350"
+    },
+    "reference-inputs/source/reference14/test_diagnostic.py": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f"
+    },
+    "reference-inputs/source/training_reader/inputs.py": {
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41"
+    },
+    "reference-inputs/source/training_reader/training-source.json": {
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347"
+    },
+    "reference-inputs/training-audit.json": {
+      "bytes": 165944,
+      "sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b"
+    },
+    "reference-inputs/training-evidence/metrics.json": {
+      "bytes": 849,
+      "sha256": "7590275a379348a35ca967cb336e23cf5d460975972da73ae62dae987302d1f4"
+    },
+    "reference-inputs/training-evidence/plan.json": {
+      "bytes": 813167,
+      "sha256": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a"
+    },
+    "reference-inputs/training-evidence/terminal.json": {
+      "bytes": 543,
+      "sha256": "c14d1d20f2ca540250e5471f59e716b096e5c8171a6d7aa1216d41c523f28491"
+    },
+    "reference-inputs/training-evidence/training/checkpoint-0128/manifest.json": {
+      "bytes": 5006,
+      "sha256": "353c1e9fead663f10edb064d15267cee571a654ab9ee4da26080c2eb34f71f93"
+    },
+    "reference-inputs/training-evidence/training/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "reference-inputs/training-evidence/training/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "reference-inputs/training-evidence/training/last-valid.json": {
+      "bytes": 154,
+      "sha256": "5e1fea5c716aed9bf225a5a0eb57eddeb7a7c5cd7b012e5764f35e63d7439124"
+    },
+    "reference-inputs/training-evidence/training/metrics.json": {
+      "bytes": 333311,
+      "sha256": "922aa689f26114e538fc15dab7716c1d572248d3c83a92a2a5aa792cbad6bf25"
+    },
+    "reference-inputs/training-evidence/worker/metrics.json": {
+      "bytes": 74379,
+      "sha256": "860b3aa2b7000cd30909751a2be012fa10179757ab28425bdc56eb5ed8a682f7"
+    },
+    "reference-inputs/training-evidence/worker/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "source/local/assessment.py": {
+      "bytes": 20057,
+      "sha256": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328"
+    },
+    "source/local/bindings.py": {
+      "bytes": 6149,
+      "sha256": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c"
+    },
+    "source/local/effect-training-plan.json": {
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+    },
+    "source/local/effect-training-source.json": {
+      "bytes": 10576,
+      "sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b"
+    },
+    "source/local/reader.py": {
+      "bytes": 12281,
+      "sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4"
+    },
+    "source/local/test_assessment.py": {
+      "bytes": 9609,
+      "sha256": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f"
+    },
+    "source/local/test_reader.py": {
+      "bytes": 5032,
+      "sha256": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2"
+    },
+    "source/reference/diagnostic.py": {
+      "bytes": 20797,
+      "sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71"
+    },
+    "source/reference/reference14/diagnostic.py": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350"
+    },
+    "source/reference/reference14/test_diagnostic.py": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f"
+    },
+    "source/reference/test_diagnostic.py": {
+      "bytes": 6668,
+      "sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c"
+    },
+    "source/reference/training_reader/inputs.py": {
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41"
+    },
+    "source/reference/training_reader/training-source.json": {
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347"
+    },
+    "source/reference/visual/inputs.py": {
+      "bytes": 18266,
+      "sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a"
+    },
+    "source/reference/visual/run.py": {
+      "bytes": 15532,
+      "sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499"
+    },
+    "source/reference/visual/sampler.py": {
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+    },
+    "source/reference/visual/test_run.py": {
+      "bytes": 9311,
+      "sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098"
+    },
+    "source/repository/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "source/repository/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "source/repository/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "source/repository/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "source/repository/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "source/repository/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "source/repository/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "source/repository/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "source/repository/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "bytes": 3901,
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "source/repository/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "source/repository/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "bytes": 5767,
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "bytes": 3550,
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "bytes": 3374,
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "bytes": 21001,
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+    },
+    "source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "source/repository/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "source/repository/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "source/repository/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "source/repository/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    }
+  },
+  "plan_review_sha256": "3e7af0e5942683433d77dce27ecd6ee5da428ea69e00096dd23c2d375d3ddae2",
+  "pins_sha256": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea",
+  "auditor_sha256": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2",
+  "actual_plan_review": {
+    "schema": "worldline-action-effect-assessment-actual-plan-review-v1",
+    "status": "passed",
+    "model_execution": false,
+    "cloud_actions": false,
+    "training_admission": false,
+    "sampling_admission": false,
+    "helper_sha256": "191bcb7eb0d8508881560b1cc86562156f3e5880c7313d2b0d2b498084607c90",
+    "helper_pins_sha256": "42a7d73124adc92c8c1429c61063795d5eaccf1a1b84120f2b209b343279b8c3",
+    "plan_sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698",
+    "source_sha256": {
+      "repository": {
+        "experiments/room_world/__init__.py": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+        "experiments/room_world/memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+        "experiments/room_world/memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+        "experiments/room_world/memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+        "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+        "experiments/room_world/model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+        "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+        "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+        "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+        "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+        "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+        "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+        "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+        "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+        "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+        "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+        "experiments/wan22_native/action_cuda/probe.py": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+        "experiments/wan22_native/action_cuda/probe_evidence.py": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+        "experiments/wan22_native/action_cuda/probe_math.py": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+        "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+        "experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+        "experiments/wan22_native/action_cuda/test_probe.py": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+        "experiments/wan22_native/action_cuda/test_probe_independent.py": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+        "experiments/wan22_native/action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+        "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+        "experiments/wan22_native/action_training/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+        "experiments/wan22_native/action_training/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+        "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+        "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+        "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+        "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+        "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+        "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+        "experiments/wan22_native/cuda_reference/requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+        "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+        "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+        "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+        "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+        "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+        "experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+        "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+        "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+        "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+        "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+        "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+        "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+        "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+        "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+        "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+        "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+        "experiments/wan22_native/text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+        "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+        "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+        "experiments/wan_adapter/native_control/__init__.py": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+        "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+        "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+        "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+        "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+        "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+        "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+      },
+      "local": {
+        "assessment.py": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328",
+        "bindings.py": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c",
+        "reader.py": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+        "test_reader.py": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2",
+        "test_assessment.py": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f",
+        "effect-training-source.json": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+        "effect-training-plan.json": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+      },
+      "reference": {
+        "test_diagnostic.py": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+        "diagnostic.py": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+        "reference14/test_diagnostic.py": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+        "reference14/diagnostic.py": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+        "training_reader/training-source.json": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+        "training_reader/inputs.py": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+        "visual/run.py": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+        "visual/test_run.py": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+        "visual/inputs.py": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+        "visual/sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+      }
+    },
+    "checkpoint_sha256": {
+      "zero": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0",
+      "old128": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+      "new128": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce"
+    },
+    "new_training_audit_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+    "counts": {
+      "heldout_heads": 48,
+      "seen506_heads": 6,
+      "original999_heads": 12,
+      "head_predictions": 66,
+      "feature_extracts": 12
+    },
+    "limits": {
+      "seconds": 900.0,
+      "host_rss_bytes": 51539607552,
+      "cuda_reserved_bytes": 64424509440,
+      "minimum_host_available_bytes": 8589934592,
+      "minimum_cuda_available_bytes": 8589934592,
+      "minimum_gpu_total_bytes": 75161927680
+    },
+    "heldout_manifest_sha256": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19",
+    "cpu_report_sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+    "files_verified": 233,
+    "file_bytes": 76076269,
+    "exact_original20_input_files": 125,
+    "training_plan_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+    "input_tensor_sha256": {
+      "observation": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+      "original999": "b437dec9be2f10c16248411d2554dbc59064da5aeed372b78ca0d07614227809",
+      "positive_text": "f152d177bf53650f4ac8658665fd6b7e86d4bad68106309c1ecd19e56a4bb093",
+      "negative_text": "aa6911f67cb7a4e5cf934131594b6fe264dff9983f84ab188e9199c706cf60cc",
+      "commands": {
+        "closed": "65092443014452cf6da0df95edd7d44444279ace867691110ec004bd6d06bfa1",
+        "open": "ff269f0b83e7ba85c0203bb674c738d305f5e1388c34de7e0184f8b584c779ae"
+      },
+      "seen506": {
+        "closed": "f1c898820c7b9b6b39cbd2f37a2d63e864a178b4cf81f5faea0e6a09d743396d",
+        "open": "10162234cf7a40deb929cca36e89979895f579118bebc2e96b94a6e90f38934f"
+      },
+      "target_difference": "ff08cd243edddf84ecf9ef5d60a7210d04fc1643bb62018c152b8bca612dfdf6"
+    },
+    "conditions": "Held-out and999 model calls share each declared noise and observation across checkpoint/command comparisons. Seen506 preserves each arm own original corruption. Targets are scored afterward.",
+    "numeric_gate": "New final must reduce held-out contrast MSE versus zero and old128 and have positive alignment on all four fixed noises. This is evaluated only after actual output recovery.",
+    "limitations": [
+      "This is saved-input eligibility, not model execution or numerical success.",
+      "One seen scene with four held-out Gaussian tensors does not establish generalization."
+    ]
+  },
+  "model_execution": false
+}

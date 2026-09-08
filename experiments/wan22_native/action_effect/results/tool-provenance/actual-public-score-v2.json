@@ -1,0 +1,878 @@
+{
+  "schema": "worldline-public-action-effect-saved-scores-v1",
+  "status": "passed",
+  "public_index_sha256": "7b05240b1a8c7058a2ac1fea71c95612745cb77ec166474a020f3fca8b4be14c",
+  "verified_public_files": 320,
+  "raw_predictions_scored": 66,
+  "reader_sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+  "scorer_sha256": "cc4728a17b9eb67da231bd14b69345d7b79ea0e5aed0fb3166a95fa253c1cef7",
+  "heldout_scores": [
+    {
+      "noise_index": 0,
+      "checkpoint": "zero",
+      "future_contrast_mse": 0.19637133935231751,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0,
+      "cosine": null,
+      "predicted_clean_difference_sha256": "7cb477fdf1f614966d91cd43a270c810e15c9ce7f9df32852840730e6f97eec8",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2749463435360742,
+          "mean_absolute": 1.0205393940188723,
+          "maximum_absolute": 5.78125
+        },
+        "closed-negative": {
+          "rms": 1.2789606892993601,
+          "mean_absolute": 1.0235798240638319,
+          "maximum_absolute": 5.78125
+        },
+        "open-positive": {
+          "rms": 1.2749463435360742,
+          "mean_absolute": 1.0205393940188723,
+          "maximum_absolute": 5.78125
+        },
+        "open-negative": {
+          "rms": 1.2789606892993601,
+          "mean_absolute": 1.0235798240638319,
+          "maximum_absolute": 5.78125
+        },
+        "closed-guided": {
+          "rms": 1.2709405364687203,
+          "mean_absolute": 1.0174556431317034,
+          "maximum_absolute": 5.78125
+        },
+        "open-guided": {
+          "rms": 1.2709405364687203,
+          "mean_absolute": 1.0174556431317034,
+          "maximum_absolute": 5.78125
+        },
+        "predicted-clean-difference": {
+          "rms": 0.0,
+          "mean_absolute": 0.0,
+          "maximum_absolute": 0.0
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 0,
+      "checkpoint": "old128",
+      "future_contrast_mse": 0.19640000089739568,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0001459558465746,
+      "cosine": -0.000885685737696066,
+      "predicted_clean_difference_sha256": "612a970d1852f6369ac097a6d87e93e81432bb5343dbc9986025d0666add6ec3",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2746633019688107,
+          "mean_absolute": 1.0203144346983424,
+          "maximum_absolute": 5.8125
+        },
+        "closed-negative": {
+          "rms": 1.2786335294718483,
+          "mean_absolute": 1.023318493394607,
+          "maximum_absolute": 5.78125
+        },
+        "open-positive": {
+          "rms": 1.2746702491602675,
+          "mean_absolute": 1.0203208897294065,
+          "maximum_absolute": 5.8125
+        },
+        "open-negative": {
+          "rms": 1.278641419245035,
+          "mean_absolute": 1.023325981861409,
+          "maximum_absolute": 5.78125
+        },
+        "closed-guided": {
+          "rms": 1.2708370968795706,
+          "mean_absolute": 1.0173710247462224,
+          "maximum_absolute": 5.9375
+        },
+        "open-guided": {
+          "rms": 1.27083981018112,
+          "mean_absolute": 1.0173727960449293,
+          "maximum_absolute": 5.9375
+        },
+        "predicted-clean-difference": {
+          "rms": 0.004975534073506234,
+          "mean_absolute": 0.0009059594268897019,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 0,
+      "checkpoint": "new128",
+      "future_contrast_mse": 0.19538651673170562,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 0.9949848963506585,
+      "cosine": 0.08092997608813014,
+      "predicted_clean_difference_sha256": "10ab91213b27fbd70040ebf895814a563807aba6888312c58fe39a1d5988a722",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2746500746453915,
+          "mean_absolute": 1.0203051490537842,
+          "maximum_absolute": 5.8125
+        },
+        "closed-negative": {
+          "rms": 1.2786153873835648,
+          "mean_absolute": 1.023305446050519,
+          "maximum_absolute": 5.78125
+        },
+        "open-positive": {
+          "rms": 1.2754393547873255,
+          "mean_absolute": 1.0209504804030682,
+          "maximum_absolute": 5.8125
+        },
+        "open-negative": {
+          "rms": 1.2794162731714438,
+          "mean_absolute": 1.0239573278605576,
+          "maximum_absolute": 5.78125
+        },
+        "closed-guided": {
+          "rms": 1.2708472188491498,
+          "mean_absolute": 1.017380206371039,
+          "maximum_absolute": 5.9375
+        },
+        "open-guided": {
+          "rms": 1.2715840928747375,
+          "mean_absolute": 1.0179974838179335,
+          "maximum_absolute": 5.9375
+        },
+        "predicted-clean-difference": {
+          "rms": 0.018503916129231076,
+          "mean_absolute": 0.010101865749464608,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 1,
+      "checkpoint": "zero",
+      "future_contrast_mse": 0.19637133935231751,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0,
+      "cosine": null,
+      "predicted_clean_difference_sha256": "7cb477fdf1f614966d91cd43a270c810e15c9ce7f9df32852840730e6f97eec8",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2870788597678255,
+          "mean_absolute": 1.0311559353407223,
+          "maximum_absolute": 5.75
+        },
+        "closed-negative": {
+          "rms": 1.2897799041260727,
+          "mean_absolute": 1.0331575652925358,
+          "maximum_absolute": 5.71875
+        },
+        "open-positive": {
+          "rms": 1.2870788597678255,
+          "mean_absolute": 1.0311559353407223,
+          "maximum_absolute": 5.75
+        },
+        "open-negative": {
+          "rms": 1.2897799041260727,
+          "mean_absolute": 1.0331575652925358,
+          "maximum_absolute": 5.71875
+        },
+        "closed-guided": {
+          "rms": 1.2863149561107636,
+          "mean_absolute": 1.0306051387185284,
+          "maximum_absolute": 5.875
+        },
+        "open-guided": {
+          "rms": 1.2863149561107636,
+          "mean_absolute": 1.0306051387185284,
+          "maximum_absolute": 5.875
+        },
+        "predicted-clean-difference": {
+          "rms": 0.0,
+          "mean_absolute": 0.0,
+          "maximum_absolute": 0.0
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 1,
+      "checkpoint": "old128",
+      "future_contrast_mse": 0.19640048281258576,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.000148409948032,
+      "cosine": -0.0010419349103151807,
+      "predicted_clean_difference_sha256": "48797921ede5d3fbdb65fd686c631aaca01ce6ef7c27755556d4477e3879c96c",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2867863094589842,
+          "mean_absolute": 1.0309262134835975,
+          "maximum_absolute": 5.75
+        },
+        "closed-negative": {
+          "rms": 1.2894761236459464,
+          "mean_absolute": 1.0329121126364207,
+          "maximum_absolute": 5.75
+        },
+        "open-positive": {
+          "rms": 1.286793510878043,
+          "mean_absolute": 1.0309335506914044,
+          "maximum_absolute": 5.75
+        },
+        "open-negative": {
+          "rms": 1.2894853691945007,
+          "mean_absolute": 1.032920312283429,
+          "maximum_absolute": 5.75
+        },
+        "closed-guided": {
+          "rms": 1.286068147956832,
+          "mean_absolute": 1.030439383213545,
+          "maximum_absolute": 5.75
+        },
+        "open-guided": {
+          "rms": 1.2860668462362057,
+          "mean_absolute": 1.0304431636032798,
+          "maximum_absolute": 5.75
+        },
+        "predicted-clean-difference": {
+          "rms": 0.004956456406978082,
+          "mean_absolute": 0.0008942383867565006,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 1,
+      "checkpoint": "new128",
+      "future_contrast_mse": 0.19539327674473403,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 0.9950193209925166,
+      "cosine": 0.08025426181022761,
+      "predicted_clean_difference_sha256": "ecc23cee46ed98c61a26694748db0406f00ffb2918bc4879e9a17488ee76bee5",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2867758951310162,
+          "mean_absolute": 1.030919922697383,
+          "maximum_absolute": 5.75
+        },
+        "closed-negative": {
+          "rms": 1.2894577959592801,
+          "mean_absolute": 1.0328996256228913,
+          "maximum_absolute": 5.75
+        },
+        "open-positive": {
+          "rms": 1.2875585337148494,
+          "mean_absolute": 1.031570363722114,
+          "maximum_absolute": 5.75
+        },
+        "open-negative": {
+          "rms": 1.2902381460864127,
+          "mean_absolute": 1.033548104095677,
+          "maximum_absolute": 5.75
+        },
+        "closed-guided": {
+          "rms": 1.286093358427454,
+          "mean_absolute": 1.030460418442457,
+          "maximum_absolute": 5.75
+        },
+        "open-guided": {
+          "rms": 1.2868791896357876,
+          "mean_absolute": 1.031113190988795,
+          "maximum_absolute": 5.75
+        },
+        "predicted-clean-difference": {
+          "rms": 0.01863104475572612,
+          "mean_absolute": 0.010155941141906238,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 2,
+      "checkpoint": "zero",
+      "future_contrast_mse": 0.19637133935231751,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0,
+      "cosine": null,
+      "predicted_clean_difference_sha256": "7cb477fdf1f614966d91cd43a270c810e15c9ce7f9df32852840730e6f97eec8",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2879426390609379,
+          "mean_absolute": 1.0309121232102523,
+          "maximum_absolute": 6.34375
+        },
+        "closed-negative": {
+          "rms": 1.2883018791745056,
+          "mean_absolute": 1.031140751357801,
+          "maximum_absolute": 6.34375
+        },
+        "open-positive": {
+          "rms": 1.2879426390609379,
+          "mean_absolute": 1.0309121232102523,
+          "maximum_absolute": 6.34375
+        },
+        "open-negative": {
+          "rms": 1.2883018791745056,
+          "mean_absolute": 1.031140751357801,
+          "maximum_absolute": 6.34375
+        },
+        "closed-guided": {
+          "rms": 1.2961284590675852,
+          "mean_absolute": 1.0371808475315358,
+          "maximum_absolute": 6.34375
+        },
+        "open-guided": {
+          "rms": 1.2961284590675852,
+          "mean_absolute": 1.0371808475315358,
+          "maximum_absolute": 6.34375
+        },
+        "predicted-clean-difference": {
+          "rms": 0.0,
+          "mean_absolute": 0.0,
+          "maximum_absolute": 0.0
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 2,
+      "checkpoint": "old128",
+      "future_contrast_mse": 0.19641644245053816,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0002296826938666,
+      "cosine": -0.004371126502599202,
+      "predicted_clean_difference_sha256": "c0693eed4651dcc5f2ee4443c4eda5db376bebe6a838aabeb1198d15c2b03a45",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2876921174075446,
+          "mean_absolute": 1.0307069370166273,
+          "maximum_absolute": 6.34375
+        },
+        "closed-negative": {
+          "rms": 1.2880289555841782,
+          "mean_absolute": 1.0309173087354147,
+          "maximum_absolute": 6.34375
+        },
+        "open-positive": {
+          "rms": 1.2877009468851548,
+          "mean_absolute": 1.0307149692835493,
+          "maximum_absolute": 6.34375
+        },
+        "open-negative": {
+          "rms": 1.2880391846569859,
+          "mean_absolute": 1.0309260552201334,
+          "maximum_absolute": 6.34375
+        },
+        "closed-guided": {
+          "rms": 1.2959675633374539,
+          "mean_absolute": 1.0370471405549042,
+          "maximum_absolute": 6.34375
+        },
+        "open-guided": {
+          "rms": 1.2959704334293385,
+          "mean_absolute": 1.0370527602718986,
+          "maximum_absolute": 6.34375
+        },
+        "predicted-clean-difference": {
+          "rms": 0.005052630946082612,
+          "mean_absolute": 0.0009100498200319407,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 2,
+      "checkpoint": "new128",
+      "future_contrast_mse": 0.19539994890452242,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 0.9950532982511654,
+      "cosine": 0.07988811078607468,
+      "predicted_clean_difference_sha256": "162447f39986092eb5879b8e06060d40ac2ace3dab26d9dd39f0d9a92c1c8acd",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2876811056500839,
+          "mean_absolute": 1.0307000860704016,
+          "maximum_absolute": 6.34375
+        },
+        "closed-negative": {
+          "rms": 1.2880138899329985,
+          "mean_absolute": 1.030906133751546,
+          "maximum_absolute": 6.34375
+        },
+        "open-positive": {
+          "rms": 1.288440302370183,
+          "mean_absolute": 1.0313235930869158,
+          "maximum_absolute": 6.375
+        },
+        "open-negative": {
+          "rms": 1.288784753388404,
+          "mean_absolute": 1.0315374519236857,
+          "maximum_absolute": 6.34375
+        },
+        "closed-guided": {
+          "rms": 1.2959779683118113,
+          "mean_absolute": 1.037061153846492,
+          "maximum_absolute": 6.34375
+        },
+        "open-guided": {
+          "rms": 1.2966861607495122,
+          "mean_absolute": 1.0376524988706326,
+          "maximum_absolute": 6.5
+        },
+        "predicted-clean-difference": {
+          "rms": 0.018612385876938864,
+          "mean_absolute": 0.010131971286525645,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 3,
+      "checkpoint": "zero",
+      "future_contrast_mse": 0.19637133935231751,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0,
+      "cosine": null,
+      "predicted_clean_difference_sha256": "7cb477fdf1f614966d91cd43a270c810e15c9ce7f9df32852840730e6f97eec8",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2921760808596496,
+          "mean_absolute": 1.0350468188115378,
+          "maximum_absolute": 6.40625
+        },
+        "closed-negative": {
+          "rms": 1.2934060863767578,
+          "mean_absolute": 1.035960593067342,
+          "maximum_absolute": 6.46875
+        },
+        "open-positive": {
+          "rms": 1.2921760808596496,
+          "mean_absolute": 1.0350468188115378,
+          "maximum_absolute": 6.40625
+        },
+        "open-negative": {
+          "rms": 1.2934060863767578,
+          "mean_absolute": 1.035960593067342,
+          "maximum_absolute": 6.46875
+        },
+        "closed-guided": {
+          "rms": 1.2966392244164664,
+          "mean_absolute": 1.0382248159409635,
+          "maximum_absolute": 6.46875
+        },
+        "open-guided": {
+          "rms": 1.2966392244164664,
+          "mean_absolute": 1.0382248159409635,
+          "maximum_absolute": 6.46875
+        },
+        "predicted-clean-difference": {
+          "rms": 0.0,
+          "mean_absolute": 0.0,
+          "maximum_absolute": 0.0
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 3,
+      "checkpoint": "old128",
+      "future_contrast_mse": 0.19638308523802248,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.000059814664114,
+      "cosine": 0.003005589749654493,
+      "predicted_clean_difference_sha256": "64ea5db715308facab720d8e7a6d301c1d633c9cd7440b2f6f0573b2beec3c89",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2919105695739543,
+          "mean_absolute": 1.0348116643326564,
+          "maximum_absolute": 6.4375
+        },
+        "closed-negative": {
+          "rms": 1.2931218619180422,
+          "mean_absolute": 1.0357082275810876,
+          "maximum_absolute": 6.46875
+        },
+        "open-positive": {
+          "rms": 1.2919182107502838,
+          "mean_absolute": 1.0348196538322512,
+          "maximum_absolute": 6.4375
+        },
+        "open-negative": {
+          "rms": 1.2931309341727943,
+          "mean_absolute": 1.0357169520686134,
+          "maximum_absolute": 6.46875
+        },
+        "closed-guided": {
+          "rms": 1.296451264706294,
+          "mean_absolute": 1.0380572018657432,
+          "maximum_absolute": 6.46875
+        },
+        "open-guided": {
+          "rms": 1.2964514447433213,
+          "mean_absolute": 1.0380620774912497,
+          "maximum_absolute": 6.46875
+        },
+        "predicted-clean-difference": {
+          "rms": 0.005008821978854826,
+          "mean_absolute": 0.0009063932744452546,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    {
+      "noise_index": 3,
+      "checkpoint": "new128",
+      "future_contrast_mse": 0.19533823641549794,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 0.994739034014704,
+      "cosine": 0.0834319527438999,
+      "predicted_clean_difference_sha256": "d25b5f0cc556a674e000eaaefc586c3a8db35c42b869d8fc98e4b03d45b3274b",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.291904977913342,
+          "mean_absolute": 1.034806709550995,
+          "maximum_absolute": 6.4375
+        },
+        "closed-negative": {
+          "rms": 1.2931031230317462,
+          "mean_absolute": 1.0356942846804944,
+          "maximum_absolute": 6.46875
+        },
+        "open-positive": {
+          "rms": 1.2926576715318194,
+          "mean_absolute": 1.0354388747590066,
+          "maximum_absolute": 6.4375
+        },
+        "open-negative": {
+          "rms": 1.2938907227536522,
+          "mean_absolute": 1.0363446443680924,
+          "maximum_absolute": 6.46875
+        },
+        "closed-guided": {
+          "rms": 1.2965004938771691,
+          "mean_absolute": 1.0380904643790099,
+          "maximum_absolute": 6.46875
+        },
+        "open-guided": {
+          "rms": 1.2971138834981564,
+          "mean_absolute": 1.0386417638799017,
+          "maximum_absolute": 6.5
+        },
+        "predicted-clean-difference": {
+          "rms": 0.018701227726210298,
+          "mean_absolute": 0.010191388542252095,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    }
+  ],
+  "seen506": {
+    "zero": {
+      "closed": {
+        "future_flow_mse_fp64": 0.14848440714209962,
+        "seen_training_draw": true
+      },
+      "open": {
+        "future_flow_mse_fp64": 0.16215267677281414,
+        "seen_training_draw": true
+      }
+    },
+    "old128": {
+      "closed": {
+        "future_flow_mse_fp64": 0.1479280550266104,
+        "seen_training_draw": true
+      },
+      "open": {
+        "future_flow_mse_fp64": 0.16156097004017397,
+        "seen_training_draw": true
+      }
+    },
+    "new128": {
+      "closed": {
+        "future_flow_mse_fp64": 0.14793662824488632,
+        "seen_training_draw": true
+      },
+      "open": {
+        "future_flow_mse_fp64": 0.16166139613761407,
+        "seen_training_draw": true
+      }
+    }
+  },
+  "original999": {
+    "zero": {
+      "future_contrast_mse": 0.19637133935231751,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0,
+      "cosine": null,
+      "predicted_clean_difference_sha256": "7cb477fdf1f614966d91cd43a270c810e15c9ce7f9df32852840730e6f97eec8",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2479681486053045,
+          "mean_absolute": 0.9990791983703409,
+          "maximum_absolute": 5.65625
+        },
+        "closed-negative": {
+          "rms": 1.2588091646540618,
+          "mean_absolute": 1.0076808422816452,
+          "maximum_absolute": 5.71875
+        },
+        "open-positive": {
+          "rms": 1.2479681486053045,
+          "mean_absolute": 0.9990791983703409,
+          "maximum_absolute": 5.65625
+        },
+        "open-negative": {
+          "rms": 1.2588091646540618,
+          "mean_absolute": 1.0076808422816452,
+          "maximum_absolute": 5.71875
+        },
+        "closed-guided": {
+          "rms": 1.2394638985669217,
+          "mean_absolute": 0.9920911186642425,
+          "maximum_absolute": 6.03125
+        },
+        "open-guided": {
+          "rms": 1.2394638985669217,
+          "mean_absolute": 0.9920911186642425,
+          "maximum_absolute": 6.03125
+        },
+        "predicted-clean-difference": {
+          "rms": 0.0,
+          "mean_absolute": 0.0,
+          "maximum_absolute": 0.0
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    "old128": {
+      "future_contrast_mse": 0.1963961454384446,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 1.0001263223350663,
+      "cosine": -8.698813093067718e-05,
+      "predicted_clean_difference_sha256": "a0f323240d934afbbdfee3a57aeb66b93e57815cc9aeee829d123ffc2c13e424",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.247721439559821,
+          "mean_absolute": 0.998886228844459,
+          "maximum_absolute": 5.625
+        },
+        "closed-negative": {
+          "rms": 1.258510378949699,
+          "mean_absolute": 1.0074430233482556,
+          "maximum_absolute": 5.71875
+        },
+        "open-positive": {
+          "rms": 1.247729315568587,
+          "mean_absolute": 0.9988929447814752,
+          "maximum_absolute": 5.625
+        },
+        "open-negative": {
+          "rms": 1.2585205738912937,
+          "mean_absolute": 1.007452053765201,
+          "maximum_absolute": 5.71875
+        },
+        "closed-guided": {
+          "rms": 1.2394276646907127,
+          "mean_absolute": 0.9920743173181417,
+          "maximum_absolute": 6.0
+        },
+        "open-guided": {
+          "rms": 1.2394268470355687,
+          "mean_absolute": 0.9920725035429143,
+          "maximum_absolute": 6.0
+        },
+        "predicted-clean-difference": {
+          "rms": 0.0049421722824138994,
+          "mean_absolute": 0.0009119911826698351,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    },
+    "new128": {
+      "future_contrast_mse": 0.19534103813041664,
+      "target_difference_mean_square": 0.19637133935231751,
+      "normalized_contrast_mse": 0.99475330144766,
+      "cosine": 0.08428155640693172,
+      "predicted_clean_difference_sha256": "ec0af75d45731f4e018099aa957b0d6a5e152da1fb7d7d5c1de717ff7a491b1f",
+      "magnitudes": {
+        "closed-positive": {
+          "rms": 1.2477078130234462,
+          "mean_absolute": 0.9988779545567201,
+          "maximum_absolute": 5.625
+        },
+        "closed-negative": {
+          "rms": 1.2584920996449216,
+          "mean_absolute": 1.007428125119674,
+          "maximum_absolute": 5.71875
+        },
+        "open-positive": {
+          "rms": 1.2484907385794297,
+          "mean_absolute": 0.9995096666607141,
+          "maximum_absolute": 5.625
+        },
+        "open-negative": {
+          "rms": 1.2592805161783442,
+          "mean_absolute": 1.0080648654270854,
+          "maximum_absolute": 5.71875
+        },
+        "closed-guided": {
+          "rms": 1.239441242168071,
+          "mean_absolute": 0.9920960079458564,
+          "maximum_absolute": 6.0
+        },
+        "open-guided": {
+          "rms": 1.2401860936964613,
+          "mean_absolute": 0.9926880364856326,
+          "maximum_absolute": 6.0
+        },
+        "predicted-clean-difference": {
+          "rms": 0.018253885225483334,
+          "mean_absolute": 0.010064737580330097,
+          "maximum_absolute": 0.15625
+        },
+        "target-difference": {
+          "rms": 0.4431380590203436,
+          "mean_absolute": 0.19093448861924953,
+          "maximum_absolute": 6.958332061767578
+        }
+      },
+      "reduction": "FP64 scoring after native-order FP32 CFG5 and s1 endpoint difference; observed latent excluded",
+      "quality_claim": false
+    }
+  },
+  "numerical_gate": {
+    "passed": true,
+    "per_noise": [
+      {
+        "noise_index": 0,
+        "lower_than_zero": true,
+        "lower_than_old128": true,
+        "positive_alignment": true,
+        "passed": true
+      },
+      {
+        "noise_index": 1,
+        "lower_than_zero": true,
+        "lower_than_old128": true,
+        "positive_alignment": true,
+        "passed": true
+      },
+      {
+        "noise_index": 2,
+        "lower_than_zero": true,
+        "lower_than_old128": true,
+        "positive_alignment": true,
+        "passed": true
+      },
+      {
+        "noise_index": 3,
+        "lower_than_zero": true,
+        "lower_than_old128": true,
+        "positive_alignment": true,
+        "passed": true
+      }
+    ]
+  },
+  "recorded_scores_match": true,
+  "model_execution": false,
+  "torch_imported": false,
+  "original_execution_preflight_invoked": false,
+  "original_hashes_restored_or_fabricated": false,
+  "limitations": [
+    "Public member hashes are checked directly; no original private audit path is reconstructed.",
+    "This recomputes saved scores, not model predictions or training.",
+    "The existing 1e-12 relative/1e-15 absolute tolerance compares serialized FP64 records only. Strict four-noise inequalities receive no tolerance.",
+    "Four noise inputs from one scene do not establish visible door or camera control."
+  ]
+}

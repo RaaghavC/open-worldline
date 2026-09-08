@@ -1,0 +1,2184 @@
+{
+  "schema": "worldline-prefix-only-public-derivations-v1",
+  "originals_retained": true,
+  "changes": [
+    {
+      "staged_member": "reproducibility/prepared-inputs.tar.gz!new-training-audit.json",
+      "original_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+      "staged_sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4",
+      "changed_json_field": "run",
+      "replacement_count": 1,
+      "rule": "Replace only the literal original local workspace prefix in audit.run with [WORKSPACE]/. All remaining bytes are unchanged. The private prefix is omitted from this public record.",
+      "original_retained": true
+    },
+    {
+      "staged_member": "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-audit.json",
+      "original_sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b",
+      "staged_sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81",
+      "changed_json_field": "run",
+      "replacement_count": 1,
+      "rule": "Replace only the literal original local workspace prefix in audit.run with [WORKSPACE]/. All remaining bytes are unchanged. The private prefix is omitted from this public record.",
+      "original_retained": true
+    }
+  ],
+  "private_prefix_literal_omitted_from_public_record": true,
+  "copies_and_archive_members": {
+    "metrics/parent.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/metrics.json",
+      "original_bytes": 413,
+      "original_sha256": "cc8ab2ce1a1889ef9779f4066cc6ecadf96ded0b6f8c107f268fb1ab08e5670e",
+      "staged_bytes": 413,
+      "staged_sha256": "cc8ab2ce1a1889ef9779f4066cc6ecadf96ded0b6f8c107f268fb1ab08e5670e",
+      "transformation": "none"
+    },
+    "metrics/result.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/metrics.json",
+      "original_bytes": 106439,
+      "original_sha256": "81515906b86395ce8e9443d877ca244a5ae703f459d4ed4402f03dd86f04732f",
+      "staged_bytes": 106439,
+      "staged_sha256": "81515906b86395ce8e9443d877ca244a5ae703f459d4ed4402f03dd86f04732f",
+      "transformation": "none"
+    },
+    "metrics/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "c59ce86d692e2fb7e0422838be2146ceb23399b43bd49b751ecea4a866a09147",
+      "staged_bytes": 543,
+      "staged_sha256": "c59ce86d692e2fb7e0422838be2146ceb23399b43bd49b751ecea4a866a09147",
+      "transformation": "none"
+    },
+    "metrics/monitor-terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/monitor-terminal.json",
+      "original_bytes": 402,
+      "original_sha256": "9f2bb0010aae1a46cc3ad52a0e48e1247ecc24c8637a3bf55fea372b1f8fd4d0",
+      "staged_bytes": 402,
+      "staged_sha256": "9f2bb0010aae1a46cc3ad52a0e48e1247ecc24c8637a3bf55fea372b1f8fd4d0",
+      "transformation": "none"
+    },
+    "metrics/core-before.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/core-after.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "plans/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/plan.json",
+      "original_bytes": 981775,
+      "original_sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698",
+      "staged_bytes": 981775,
+      "staged_sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698",
+      "transformation": "none"
+    },
+    "plans/launch.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/launch.json",
+      "original_bytes": 402,
+      "original_sha256": "013c0047bd5c60d72b1afe45514f8ce73373ff0a1da0b3b33a5e4038dbb81b56",
+      "staged_bytes": 402,
+      "staged_sha256": "013c0047bd5c60d72b1afe45514f8ce73373ff0a1da0b3b33a5e4038dbb81b56",
+      "transformation": "none"
+    },
+    "plans/executed-admission.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/executed-admission.json",
+      "original_bytes": 11421,
+      "original_sha256": "a5cec8b6d3de40678da480a6264bc998fe68ae69ecf1451f3f3747dffcffd864",
+      "staged_bytes": 11421,
+      "staged_sha256": "a5cec8b6d3de40678da480a6264bc998fe68ae69ecf1451f3f3747dffcffd864",
+      "transformation": "none"
+    },
+    "preflight/assessment-cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/cpu-report.json",
+      "original_bytes": 11140,
+      "original_sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+      "staged_bytes": 11140,
+      "staged_sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+      "transformation": "none"
+    },
+    "checkpoints/effect128-final.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new128.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "staged_bytes": 3792296,
+      "staged_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "transformation": "none"
+    },
+    "audit/audit.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/audit.py",
+      "original_bytes": 28262,
+      "original_sha256": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2",
+      "staged_bytes": 28262,
+      "staged_sha256": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2",
+      "transformation": "none"
+    },
+    "audit/binding.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/binding.json",
+      "original_bytes": 59069,
+      "original_sha256": "f2abe14412d9a3b3dd4de02797ff7e071dfd7802a0ec41a9916cf211823d1bc5",
+      "staged_bytes": 59069,
+      "staged_sha256": "f2abe14412d9a3b3dd4de02797ff7e071dfd7802a0ec41a9916cf211823d1bc5",
+      "transformation": "none"
+    },
+    "audit/inventory.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/inventory.json",
+      "original_bytes": 56052,
+      "original_sha256": "fb1491d895ccdaa0c8167855bc5ebd043c52501a4bc5a068ae9cb1b6711b2b11",
+      "staged_bytes": 56052,
+      "staged_sha256": "fb1491d895ccdaa0c8167855bc5ebd043c52501a4bc5a068ae9cb1b6711b2b11",
+      "transformation": "none"
+    },
+    "audit/pins.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/pins.json",
+      "original_bytes": 46893,
+      "original_sha256": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea",
+      "staged_bytes": 46893,
+      "staged_sha256": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea",
+      "transformation": "none"
+    },
+    "audit/reference/array_checks.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/reference/array_checks.py",
+      "original_bytes": 10606,
+      "original_sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+      "staged_bytes": 10606,
+      "staged_sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+      "transformation": "none"
+    },
+    "audit/reference/reader.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/reference/reader.py",
+      "original_bytes": 12281,
+      "original_sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+      "staged_bytes": 12281,
+      "staged_sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+      "transformation": "none"
+    },
+    "audit/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-audit-v1/report.json",
+      "original_bytes": 101010,
+      "original_sha256": "99528e0e654ad1de451d31a02ebbf2b92d19345f4c85179f7b24e9c973d4fe1a",
+      "staged_bytes": 101010,
+      "staged_sha256": "99528e0e654ad1de451d31a02ebbf2b92d19345f4c85179f7b24e9c973d4fe1a",
+      "transformation": "none"
+    },
+    "plans/actual-plan-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-plan-review-v1/report.json",
+      "original_bytes": 13275,
+      "original_sha256": "3e7af0e5942683433d77dce27ecd6ee5da428ea69e00096dd23c2d375d3ddae2",
+      "staged_bytes": 13275,
+      "staged_sha256": "3e7af0e5942683433d77dce27ecd6ee5da428ea69e00096dd23c2d375d3ddae2",
+      "transformation": "none"
+    },
+    "plans/audit-binding.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-binding-v1.json",
+      "original_bytes": 59069,
+      "original_sha256": "f2abe14412d9a3b3dd4de02797ff7e071dfd7802a0ec41a9916cf211823d1bc5",
+      "staged_bytes": 59069,
+      "staged_sha256": "f2abe14412d9a3b3dd4de02797ff7e071dfd7802a0ec41a9916cf211823d1bc5",
+      "transformation": "none"
+    },
+    "preflight/assessment-independent-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-evaluation-independent-review-v1/report.json",
+      "original_bytes": 23805,
+      "original_sha256": "f8085962a6f5a8c1a871864dc20aeb7b5ab8dd517787cc6c43938a6a2b7a7bca",
+      "staged_bytes": 23805,
+      "staged_sha256": "f8085962a6f5a8c1a871864dc20aeb7b5ab8dd517787cc6c43938a6a2b7a7bca",
+      "transformation": "none"
+    },
+    "preflight/auditor-cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-audit-prep-v1/cpu-v1.json",
+      "original_bytes": 830,
+      "original_sha256": "afa4e180dfe6f3ca6d8ab13b2e50e31a8b2ef297229d72f990e80d192e7bc922",
+      "staged_bytes": 830,
+      "staged_sha256": "afa4e180dfe6f3ca6d8ab13b2e50e31a8b2ef297229d72f990e80d192e7bc922",
+      "transformation": "none"
+    },
+    "preflight/test_audit.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-audit-prep-v1/test_audit.py",
+      "original_bytes": 7448,
+      "original_sha256": "fe9a83b1c9ea8bc3fd961f7b81dc55ae58d3c44a62f1d2a9639995239c3e7ae1",
+      "staged_bytes": 7448,
+      "staged_sha256": "fe9a83b1c9ea8bc3fd961f7b81dc55ae58d3c44a62f1d2a9639995239c3e7ae1",
+      "transformation": "none"
+    },
+    "preflight/auditor-independent-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-audit-independent-review-v1/report.json",
+      "original_bytes": 2563,
+      "original_sha256": "2fbec14ecce0b86876e9816b40b785428e09426c19712de840d7176663768af1",
+      "staged_bytes": 2563,
+      "staged_sha256": "2fbec14ecce0b86876e9816b40b785428e09426c19712de840d7176663768af1",
+      "transformation": "none"
+    },
+    "preflight/plan-review-cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-plan-review-prep-v1/cpu-v1.json",
+      "original_bytes": 1117,
+      "original_sha256": "552fc62cf7d9ed7098c9664e845dcd6b5ac87c58467b4f937751246e00bae139",
+      "staged_bytes": 1117,
+      "staged_sha256": "552fc62cf7d9ed7098c9664e845dcd6b5ac87c58467b4f937751246e00bae139",
+      "transformation": "none"
+    },
+    "preflight/plan-review-helper/review.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-plan-review-prep-v1/review.py",
+      "original_bytes": 6591,
+      "original_sha256": "191bcb7eb0d8508881560b1cc86562156f3e5880c7313d2b0d2b498084607c90",
+      "staged_bytes": 6591,
+      "staged_sha256": "191bcb7eb0d8508881560b1cc86562156f3e5880c7313d2b0d2b498084607c90",
+      "transformation": "none"
+    },
+    "preflight/plan-review-helper/pins.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-plan-review-prep-v1/pins.json",
+      "original_bytes": 963,
+      "original_sha256": "42a7d73124adc92c8c1429c61063795d5eaccf1a1b84120f2b209b343279b8c3",
+      "staged_bytes": 963,
+      "staged_sha256": "42a7d73124adc92c8c1429c61063795d5eaccf1a1b84120f2b209b343279b8c3",
+      "transformation": "none"
+    },
+    "preflight/plan-review-helper/test_review.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-plan-review-prep-v1/test_review.py",
+      "original_bytes": 4335,
+      "original_sha256": "6641c1cc96ec789fa41c97d7106e1e9e40cdf8f160e2449313342893a2cfd75f",
+      "staged_bytes": 4335,
+      "staged_sha256": "6641c1cc96ec789fa41c97d7106e1e9e40cdf8f160e2449313342893a2cfd75f",
+      "transformation": "none"
+    },
+    "summary.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-summary-v1.json",
+      "original_bytes": 3205,
+      "original_sha256": "ed5016a150ccbfb1e3e6513107efeb62841ad6fab408592d050eca3ab6af3a04",
+      "staged_bytes": 3205,
+      "staged_sha256": "ed5016a150ccbfb1e3e6513107efeb62841ad6fab408592d050eca3ab6af3a04",
+      "transformation": "none"
+    },
+    "recovery/original-index.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/index.json",
+      "original_bytes": 71819,
+      "original_sha256": "7cbe124f446623d4d3fa87cd8364478f0cb09cb040bb47f5d86bc4dbb710b0e8",
+      "staged_bytes": 71819,
+      "staged_sha256": "7cbe124f446623d4d3fa87cd8364478f0cb09cb040bb47f5d86bc4dbb710b0e8",
+      "transformation": "none"
+    },
+    "recovery/original-recovery-verified.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovery-verified.json",
+      "original_bytes": 315,
+      "original_sha256": "ccc57a88877e462eafae5e005cfd3b49e98e80cf3eff9e2325f2b2b1f196193f",
+      "staged_bytes": 315,
+      "staged_sha256": "ccc57a88877e462eafae5e005cfd3b49e98e80cf3eff9e2325f2b2b1f196193f",
+      "transformation": "none"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/ATRIUM-CC0.txt",
+      "original_bytes": 7840,
+      "original_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "staged_bytes": 7840,
+      "staged_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WAN-APACHE-2.0.txt",
+      "original_bytes": 11357,
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "staged_bytes": 11357,
+      "staged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WAN-NOTICE.txt",
+      "original_bytes": 1252,
+      "original_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "staged_bytes": 1252,
+      "staged_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WORLDLINE-APACHE-2.0.txt",
+      "original_bytes": 11358,
+      "original_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "staged_bytes": 11358,
+      "staged_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-NOTICE.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WORLDLINE-NOTICE.txt",
+      "original_bytes": 428,
+      "original_sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "staged_bytes": 428,
+      "staged_sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/assessment.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/assessment.py",
+      "original_bytes": 20057,
+      "original_sha256": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328",
+      "staged_bytes": 20057,
+      "staged_sha256": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/bindings.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/bindings.py",
+      "original_bytes": 6149,
+      "original_sha256": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c",
+      "staged_bytes": 6149,
+      "staged_sha256": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/effect-training-plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/effect-training-plan.json",
+      "original_bytes": 817529,
+      "original_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "staged_bytes": 817529,
+      "staged_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/effect-training-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/effect-training-source.json",
+      "original_bytes": 10576,
+      "original_sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+      "staged_bytes": 10576,
+      "staged_sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/reader.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/reader.py",
+      "original_bytes": 12281,
+      "original_sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+      "staged_bytes": 12281,
+      "staged_sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/test_assessment.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/test_assessment.py",
+      "original_bytes": 9609,
+      "original_sha256": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f",
+      "staged_bytes": 9609,
+      "staged_sha256": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/test_reader.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/local/test_reader.py",
+      "original_bytes": 5032,
+      "original_sha256": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2",
+      "staged_bytes": 5032,
+      "staged_sha256": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/diagnostic.py",
+      "original_bytes": 20797,
+      "original_sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "staged_bytes": 20797,
+      "staged_sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/reference14/diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/reference14/diagnostic.py",
+      "original_bytes": 20027,
+      "original_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "staged_bytes": 20027,
+      "staged_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/reference14/test_diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/reference14/test_diagnostic.py",
+      "original_bytes": 5021,
+      "original_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "staged_bytes": 5021,
+      "staged_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/test_diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/test_diagnostic.py",
+      "original_bytes": 6668,
+      "original_sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "staged_bytes": 6668,
+      "staged_sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/training_reader/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/training_reader/inputs.py",
+      "original_bytes": 20221,
+      "original_sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "staged_bytes": 20221,
+      "staged_sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/training_reader/training-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/training_reader/training-source.json",
+      "original_bytes": 10019,
+      "original_sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "staged_bytes": 10019,
+      "staged_sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/visual/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/visual/inputs.py",
+      "original_bytes": 18266,
+      "original_sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+      "staged_bytes": 18266,
+      "staged_sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/visual/run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/visual/run.py",
+      "original_bytes": 15532,
+      "original_sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+      "staged_bytes": 15532,
+      "staged_sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/visual/sampler.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/visual/sampler.py",
+      "original_bytes": 12488,
+      "original_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "staged_bytes": 12488,
+      "staged_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/reference/visual/test_run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/reference/visual/test_run.py",
+      "original_bytes": 9311,
+      "original_sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+      "staged_bytes": 9311,
+      "staged_sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/room_world/__init__.py",
+      "original_bytes": 82,
+      "original_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "staged_bytes": 82,
+      "staged_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_evaluate.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_evaluate.py",
+      "original_bytes": 43810,
+      "original_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "staged_bytes": 43810,
+      "staged_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_model.py",
+      "original_bytes": 6862,
+      "original_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "staged_bytes": 6862,
+      "staged_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_sequence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_sequence.py",
+      "original_bytes": 4839,
+      "original_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "staged_bytes": 4839,
+      "staged_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_train.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_train.py",
+      "original_bytes": 39603,
+      "original_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "staged_bytes": 39603,
+      "staged_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/room_world/model.py",
+      "original_bytes": 5261,
+      "original_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "staged_bytes": 5261,
+      "staged_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/__init__.py",
+      "original_bytes": 125,
+      "original_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "staged_bytes": 125,
+      "staged_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_adapter/__init__.py",
+      "original_bytes": 193,
+      "original_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "staged_bytes": 193,
+      "staged_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_adapter/model.py",
+      "original_bytes": 5459,
+      "original_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "staged_bytes": 5459,
+      "staged_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_adapter/pooling.py",
+      "original_bytes": 1776,
+      "original_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "staged_bytes": 1776,
+      "staged_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/__init__.py",
+      "original_bytes": 121,
+      "original_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "staged_bytes": 121,
+      "staged_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/bridge.py",
+      "original_bytes": 14738,
+      "original_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "staged_bytes": 14738,
+      "staged_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/cache_run.py",
+      "original_bytes": 10181,
+      "original_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "staged_bytes": 10181,
+      "staged_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "original_bytes": 3638,
+      "original_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "staged_bytes": 3638,
+      "staged_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "original_bytes": 1949,
+      "original_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "staged_bytes": 1949,
+      "staged_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/data.py",
+      "original_bytes": 33216,
+      "original_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "staged_bytes": 33216,
+      "staged_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/probe.py",
+      "original_bytes": 24439,
+      "original_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "staged_bytes": 24439,
+      "staged_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "original_bytes": 15730,
+      "original_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "staged_bytes": 15730,
+      "staged_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/probe_math.py",
+      "original_bytes": 14380,
+      "original_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "staged_bytes": 14380,
+      "staged_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_cpu.py",
+      "original_bytes": 15098,
+      "original_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "staged_bytes": 15098,
+      "staged_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_independent.py",
+      "original_bytes": 7882,
+      "original_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "staged_bytes": 7882,
+      "staged_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_probe.py",
+      "original_bytes": 16253,
+      "original_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "staged_bytes": 16253,
+      "staged_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py",
+      "original_bytes": 8816,
+      "original_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "staged_bytes": 8816,
+      "staged_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_data/__init__.py",
+      "original_bytes": 122,
+      "original_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "staged_bytes": 122,
+      "staged_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_data/data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_data/data.py",
+      "original_bytes": 8558,
+      "original_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "staged_bytes": 8558,
+      "staged_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_training/__init__.py",
+      "original_bytes": 116,
+      "original_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "staged_bytes": 116,
+      "staged_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_training/objective.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_training/objective.py",
+      "original_bytes": 12121,
+      "original_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "staged_bytes": 12121,
+      "staged_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "original_bytes": 11357,
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "staged_bytes": 11357,
+      "staged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/__init__.py",
+      "original_bytes": 105,
+      "original_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "staged_bytes": 105,
+      "staged_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/codec-source.json",
+      "original_bytes": 1956,
+      "original_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "staged_bytes": 1956,
+      "staged_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/config.json",
+      "original_bytes": 251,
+      "original_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "staged_bytes": 251,
+      "staged_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/decode.py",
+      "original_bytes": 3901,
+      "original_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "staged_bytes": 3901,
+      "staged_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/evidence.py",
+      "original_bytes": 7774,
+      "original_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "staged_bytes": 7774,
+      "staged_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "original_bytes": 206154,
+      "original_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "staged_bytes": 206154,
+      "staged_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/guards.py",
+      "original_bytes": 6767,
+      "original_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "staged_bytes": 6767,
+      "staged_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/native.py",
+      "original_bytes": 3102,
+      "original_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "staged_bytes": 3102,
+      "staged_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/requirements.txt",
+      "original_bytes": 263,
+      "original_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "staged_bytes": 263,
+      "staged_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/sampling.py",
+      "original_bytes": 2503,
+      "original_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "staged_bytes": 2503,
+      "staged_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "original_bytes": 2710,
+      "original_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "staged_bytes": 2710,
+      "staged_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "original_bytes": 108,
+      "original_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "staged_bytes": 108,
+      "staged_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "original_bytes": 5435,
+      "original_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "staged_bytes": 5435,
+      "staged_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "original_bytes": 32558,
+      "original_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "staged_bytes": 32558,
+      "staged_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "original_bytes": 18097,
+      "original_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "staged_bytes": 18097,
+      "staged_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "original_bytes": 31846,
+      "original_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "staged_bytes": 31846,
+      "staged_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/load_weights.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/load_weights.py",
+      "original_bytes": 8146,
+      "original_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "staged_bytes": 8146,
+      "staged_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/official_cpu/__init__.py",
+      "original_bytes": 113,
+      "original_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "staged_bytes": 113,
+      "staged_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/official_cpu/inputs.py",
+      "original_bytes": 3429,
+      "original_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "staged_bytes": 3429,
+      "staged_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/official_cpu/streaming.py",
+      "original_bytes": 10387,
+      "original_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "staged_bytes": 10387,
+      "staged_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/portable.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/portable.py",
+      "original_bytes": 11880,
+      "original_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "staged_bytes": 11880,
+      "staged_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/__init__.py",
+      "original_bytes": 110,
+      "original_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "staged_bytes": 110,
+      "staged_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/codec.py",
+      "original_bytes": 5767,
+      "original_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "staged_bytes": 5767,
+      "staged_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/config.py",
+      "original_bytes": 1348,
+      "original_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "staged_bytes": 1348,
+      "staged_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/evidence.py",
+      "original_bytes": 22089,
+      "original_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "staged_bytes": 22089,
+      "staged_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/guards.py",
+      "original_bytes": 10133,
+      "original_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "staged_bytes": 10133,
+      "staged_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/inputs.py",
+      "original_bytes": 9961,
+      "original_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "staged_bytes": 9961,
+      "staged_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/native.py",
+      "original_bytes": 3550,
+      "original_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "staged_bytes": 3550,
+      "staged_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/output.py",
+      "original_bytes": 3374,
+      "original_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "staged_bytes": 3374,
+      "staged_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/run.py",
+      "original_bytes": 21001,
+      "original_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "staged_bytes": 21001,
+      "staged_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/sampling.py",
+      "original_bytes": 7526,
+      "original_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "staged_bytes": 7526,
+      "staged_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/text-reuse.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/text-reuse.json",
+      "original_bytes": 2309,
+      "original_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "staged_bytes": 2309,
+      "staged_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/vendor/__init__.py",
+      "original_bytes": 119,
+      "original_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "staged_bytes": 119,
+      "staged_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/vendor/attention.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/vendor/attention.py",
+      "original_bytes": 5435,
+      "original_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "staged_bytes": 5435,
+      "staged_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/vendor/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan22_native/vendor/model.py",
+      "original_bytes": 18097,
+      "original_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "staged_bytes": 18097,
+      "staged_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan_adapter/capture_data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan_adapter/capture_data.py",
+      "original_bytes": 6043,
+      "original_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "staged_bytes": 6043,
+      "staged_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan_adapter/native_control/__init__.py",
+      "original_bytes": 80,
+      "original_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "staged_bytes": 80,
+      "staged_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/source/repository/experiments/wan_adapter/native_control/portable.py",
+      "original_bytes": 4570,
+      "original_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "staged_bytes": 4570,
+      "staged_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/cpu-report.json",
+      "original_bytes": 11140,
+      "original_sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+      "staged_bytes": 11140,
+      "staged_sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/environment.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/environment.json",
+      "original_bytes": 2245,
+      "original_sha256": "c773bdf1c37e264e512d1d21a2869f9f0b1c14a86161e44b71be8c69b199c40f",
+      "staged_bytes": 2245,
+      "staged_sha256": "c773bdf1c37e264e512d1d21a2869f9f0b1c14a86161e44b71be8c69b199c40f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/generation-status.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/generation-status.json",
+      "original_bytes": 98,
+      "original_sha256": "eb723338d81029aaf6e15f4fd680e0ea275337b0f8d6c7c81c6119780402267f",
+      "staged_bytes": 98,
+      "staged_sha256": "eb723338d81029aaf6e15f4fd680e0ea275337b0f8d6c7c81c6119780402267f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/generator-states.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/generator-states.safetensors",
+      "original_bytes": 25640,
+      "original_sha256": "522276a0d47c5e701caf63dbb39d6bc823de5d1959828c49962d2f327d75a66f",
+      "staged_bytes": 25640,
+      "staged_sha256": "522276a0d47c5e701caf63dbb39d6bc823de5d1959828c49962d2f327d75a66f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/manifest.json",
+      "original_bytes": 5106,
+      "original_sha256": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19",
+      "staged_bytes": 5106,
+      "staged_sha256": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/noise-0000.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/noise-0000.safetensors",
+      "original_bytes": 3294808,
+      "original_sha256": "521016371ee1eea6d19db071b479ee65745988e93f3e9ed69beac349b22e2e48",
+      "staged_bytes": 3294808,
+      "staged_sha256": "521016371ee1eea6d19db071b479ee65745988e93f3e9ed69beac349b22e2e48",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/noise-0001.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/noise-0001.safetensors",
+      "original_bytes": 3294808,
+      "original_sha256": "6ff785e7120dfdbb5f128e0a652277540bc65441a3dbd089a5c704b4ac2b7ed7",
+      "staged_bytes": 3294808,
+      "staged_sha256": "6ff785e7120dfdbb5f128e0a652277540bc65441a3dbd089a5c704b4ac2b7ed7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/noise-0002.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/noise-0002.safetensors",
+      "original_bytes": 3294808,
+      "original_sha256": "89e519d68f0ef8ba29128bf8cf0470a1b1da4c5c010bd6d29c8685d949ffce76",
+      "staged_bytes": 3294808,
+      "staged_sha256": "89e519d68f0ef8ba29128bf8cf0470a1b1da4c5c010bd6d29c8685d949ffce76",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/noise-0003.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/noise-0003.safetensors",
+      "original_bytes": 3294808,
+      "original_sha256": "237d744f49623ca6f5349ad4e3002b84f7345fa5b6fdb490e5698307113e2bbe",
+      "staged_bytes": 3294808,
+      "staged_sha256": "237d744f49623ca6f5349ad4e3002b84f7345fa5b6fdb490e5698307113e2bbe",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/prepare.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/prepare.py",
+      "original_bytes": 6811,
+      "original_sha256": "c87608287196de5c6858e7d9f95ca7af8e85a01cf1c7728074d3703957fa9f11",
+      "staged_bytes": 6811,
+      "staged_sha256": "c87608287196de5c6858e7d9f95ca7af8e85a01cf1c7728074d3703957fa9f11",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!heldout/training-comparison.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/heldout/training-comparison.json",
+      "original_bytes": 71277,
+      "original_sha256": "08025cea4b3f08f037f3ca32575ff77dc4158be60e35622df2b697bb4dae27ac",
+      "staged_bytes": 71277,
+      "staged_sha256": "08025cea4b3f08f037f3ca32575ff77dc4158be60e35622df2b697bb4dae27ac",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-audit.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-audit.json",
+      "original_bytes": 259731,
+      "original_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+      "staged_bytes": 259703,
+      "staged_sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4",
+      "transformation": "audit.run prefix only"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/metrics.json",
+      "original_bytes": 847,
+      "original_sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae",
+      "staged_bytes": 847,
+      "staged_sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/plan.json",
+      "original_bytes": 817529,
+      "original_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "staged_bytes": 817529,
+      "staged_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+      "staged_bytes": 543,
+      "staged_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/training/checkpoint-0128/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/training/checkpoint-0128/manifest.json",
+      "original_bytes": 5003,
+      "original_sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f",
+      "staged_bytes": 5003,
+      "staged_sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/training/core-after.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/training/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/training/core-before.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/training/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/training/last-valid.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/training/last-valid.json",
+      "original_bytes": 154,
+      "original_sha256": "5cdc7404ae620db89de7ad52838fb048dc37b54399e4f9ae3dc87e0827c8454e",
+      "staged_bytes": 154,
+      "staged_sha256": "5cdc7404ae620db89de7ad52838fb048dc37b54399e4f9ae3dc87e0827c8454e",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/training/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/training/metrics.json",
+      "original_bytes": 417501,
+      "original_sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32",
+      "staged_bytes": 417501,
+      "staged_sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/worker/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/worker/metrics.json",
+      "original_bytes": 91348,
+      "original_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+      "staged_bytes": 91348,
+      "staged_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new-training-evidence/worker/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new-training-evidence/worker/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!new128.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/new128.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "staged_bytes": 3792296,
+      "staged_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/plan.json",
+      "original_bytes": 981775,
+      "original_sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698",
+      "staged_bytes": 981775,
+      "staged_sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/checkpoint-0128.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/checkpoint-0128.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+      "staged_bytes": 3792296,
+      "staged_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/cpu-report.json",
+      "original_bytes": 9848,
+      "original_sha256": "9d902564fe0746ec81a727ec22f1e90a508e1300cd9414ff9045b7edd5e9cff2",
+      "staged_bytes": 9848,
+      "staged_sha256": "9d902564fe0746ec81a727ec22f1e90a508e1300cd9414ff9045b7edd5e9cff2",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/checkpoint-0000.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/checkpoint-0000.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0",
+      "staged_bytes": 3792296,
+      "staged_sha256": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/cpu-report.json",
+      "original_bytes": 9419,
+      "original_sha256": "d91ef87a3f0bc70ae6b7ae8ce0d107fbb7961016f45c24ee7ff5139270a48f17",
+      "staged_bytes": 9419,
+      "staged_sha256": "d91ef87a3f0bc70ae6b7ae8ce0d107fbb7961016f45c24ee7ff5139270a48f17",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/diagnostic.py.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/diagnostic.py.txt",
+      "original_bytes": 20027,
+      "original_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "staged_bytes": 20027,
+      "staged_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/objective-inputs.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/objective-inputs.safetensors",
+      "original_bytes": 13248024,
+      "original_sha256": "95ccaab585bc90e7111510af04bd370585b42cf08f8f3f1dece450a04b47d7ce",
+      "staged_bytes": 13248024,
+      "staged_sha256": "95ccaab585bc90e7111510af04bd370585b42cf08f8f3f1dece450a04b47d7ce",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/original-training-inputs.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/original-training-inputs.safetensors",
+      "original_bytes": 10543448,
+      "original_sha256": "289bc7ff587fef006986cc56f1fe57324d1d6b3d3adff33949ac706148e68b65",
+      "staged_bytes": 10543448,
+      "staged_sha256": "289bc7ff587fef006986cc56f1fe57324d1d6b3d3adff33949ac706148e68b65",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/plan.json",
+      "original_bytes": 157008,
+      "original_sha256": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6",
+      "staged_bytes": 157008,
+      "staged_sha256": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/test_diagnostic.py.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/test_diagnostic.py.txt",
+      "original_bytes": 5021,
+      "original_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "staged_bytes": 5021,
+      "staged_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/adapter.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/adapter.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+      "staged_bytes": 3792296,
+      "staged_sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/commands.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/commands.safetensors",
+      "original_bytes": 912,
+      "original_sha256": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405",
+      "staged_bytes": 912,
+      "staged_sha256": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/contexts.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/contexts.safetensors",
+      "original_bytes": 2474152,
+      "original_sha256": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee",
+      "staged_bytes": 2474152,
+      "staged_sha256": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/cpu-report.json",
+      "original_bytes": 9117,
+      "original_sha256": "55c454f61b75f8008d19a6c9442b01aa27a273b94151054efa507b18855de577",
+      "staged_bytes": 9117,
+      "staged_sha256": "55c454f61b75f8008d19a6c9442b01aa27a273b94151054efa507b18855de577",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/baseline/core/result/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/core/result/metrics.json",
+      "original_bytes": 11403,
+      "original_sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08",
+      "staged_bytes": 11403,
+      "staged_sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/baseline/core/result/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/core/result/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/baseline/core/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/core/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0",
+      "staged_bytes": 543,
+      "staged_sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/baseline/decode/result/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/decode/result/metrics.json",
+      "original_bytes": 10144,
+      "original_sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b",
+      "staged_bytes": 10144,
+      "staged_sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/baseline/decode/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/decode/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d",
+      "staged_bytes": 543,
+      "staged_sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/baseline/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/metrics.json",
+      "original_bytes": 5876,
+      "original_sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9",
+      "staged_bytes": 5876,
+      "staged_sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/cache/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/metrics.json",
+      "original_bytes": 79472,
+      "original_sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+      "staged_bytes": 79472,
+      "staged_sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/cache/result/completion.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/result/completion.json",
+      "original_bytes": 63408,
+      "original_sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+      "staged_bytes": 63408,
+      "staged_sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/cache/result/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/result/manifest.json",
+      "original_bytes": 142043,
+      "original_sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+      "staged_bytes": 142043,
+      "staged_sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/cache/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/terminal.json",
+      "original_bytes": 544,
+      "original_sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587",
+      "staged_bytes": 544,
+      "staged_sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/cache/worker/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/worker/metrics.json",
+      "original_bytes": 6448,
+      "original_sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069",
+      "staged_bytes": 6448,
+      "staged_sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/metrics.json",
+      "original_bytes": 846,
+      "original_sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea",
+      "staged_bytes": 846,
+      "staged_sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/plan.json",
+      "original_bytes": 709761,
+      "original_sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb",
+      "staged_bytes": 709761,
+      "staged_sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/terminal.json",
+      "original_bytes": 542,
+      "original_sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a",
+      "staged_bytes": 542,
+      "staged_sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/training/checkpoint-0016/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/checkpoint-0016/manifest.json",
+      "original_bytes": 740101,
+      "original_sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac",
+      "staged_bytes": 740101,
+      "staged_sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/training/core-after.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/training/core-before.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/training/last-valid.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/last-valid.json",
+      "original_bytes": 153,
+      "original_sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461",
+      "staged_bytes": 153,
+      "staged_sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/training/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/metrics.json",
+      "original_bytes": 781775,
+      "original_sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7",
+      "staged_bytes": 781775,
+      "staged_sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/worker/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/worker/metrics.json",
+      "original_bytes": 23670,
+      "original_sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3",
+      "staged_bytes": 23670,
+      "staged_sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/evidence/training/worker/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/worker/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/metrics.json",
+      "original_bytes": 192,
+      "original_sha256": "caecdbc8667ceec0bfc699701736d70c4b776b0b3fa572bf0ef544e0bf6fab61",
+      "staged_bytes": 192,
+      "staged_sha256": "caecdbc8667ceec0bfc699701736d70c4b776b0b3fa572bf0ef544e0bf6fab61",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/plan.json",
+      "original_bytes": 1119213,
+      "original_sha256": "6feb229e4e27f2c44aa740184a1687bdad5b1ff06ada2eca1b4bb8d3b14e13f4",
+      "staged_bytes": 1119213,
+      "staged_sha256": "6feb229e4e27f2c44aa740184a1687bdad5b1ff06ada2eca1b4bb8d3b14e13f4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/sampling-inputs.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/sampling-inputs.safetensors",
+      "original_bytes": 7283048,
+      "original_sha256": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade",
+      "staged_bytes": 7283048,
+      "staged_sha256": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/local/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/inputs.py",
+      "original_bytes": 18266,
+      "original_sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+      "staged_bytes": 18266,
+      "staged_sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/local/run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/run.py",
+      "original_bytes": 15532,
+      "original_sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+      "staged_bytes": 15532,
+      "staged_sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/local/sampler.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/sampler.py",
+      "original_bytes": 12488,
+      "original_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "staged_bytes": 12488,
+      "staged_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/local/test_run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/test_run.py",
+      "original_bytes": 9311,
+      "original_sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+      "staged_bytes": 9311,
+      "staged_sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/__init__.py",
+      "original_bytes": 82,
+      "original_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "staged_bytes": 82,
+      "staged_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_evaluate.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_evaluate.py",
+      "original_bytes": 43810,
+      "original_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "staged_bytes": 43810,
+      "staged_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_model.py",
+      "original_bytes": 6862,
+      "original_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "staged_bytes": 6862,
+      "staged_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_sequence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_sequence.py",
+      "original_bytes": 4839,
+      "original_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "staged_bytes": 4839,
+      "staged_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_train.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_train.py",
+      "original_bytes": 39603,
+      "original_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "staged_bytes": 39603,
+      "staged_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/model.py",
+      "original_bytes": 5261,
+      "original_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "staged_bytes": 5261,
+      "staged_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/__init__.py",
+      "original_bytes": 125,
+      "original_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "staged_bytes": 125,
+      "staged_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/__init__.py",
+      "original_bytes": 193,
+      "original_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "staged_bytes": 193,
+      "staged_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/model.py",
+      "original_bytes": 5459,
+      "original_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "staged_bytes": 5459,
+      "staged_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/pooling.py",
+      "original_bytes": 1776,
+      "original_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "staged_bytes": 1776,
+      "staged_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/__init__.py",
+      "original_bytes": 121,
+      "original_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "staged_bytes": 121,
+      "staged_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/bridge.py",
+      "original_bytes": 14738,
+      "original_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "staged_bytes": 14738,
+      "staged_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cache_run.py",
+      "original_bytes": 10181,
+      "original_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "staged_bytes": 10181,
+      "staged_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "original_bytes": 3638,
+      "original_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "staged_bytes": 3638,
+      "staged_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "original_bytes": 1949,
+      "original_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "staged_bytes": 1949,
+      "staged_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/data.py",
+      "original_bytes": 33216,
+      "original_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "staged_bytes": 33216,
+      "staged_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe.py",
+      "original_bytes": 24439,
+      "original_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "staged_bytes": 24439,
+      "staged_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "original_bytes": 15730,
+      "original_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "staged_bytes": 15730,
+      "staged_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_math.py",
+      "original_bytes": 14380,
+      "original_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "staged_bytes": 14380,
+      "staged_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_cpu.py",
+      "original_bytes": 15098,
+      "original_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "staged_bytes": 15098,
+      "staged_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_independent.py",
+      "original_bytes": 7882,
+      "original_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "staged_bytes": 7882,
+      "staged_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe.py",
+      "original_bytes": 16253,
+      "original_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "staged_bytes": 16253,
+      "staged_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py",
+      "original_bytes": 8816,
+      "original_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "staged_bytes": 8816,
+      "staged_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/__init__.py",
+      "original_bytes": 122,
+      "original_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "staged_bytes": 122,
+      "staged_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/data.py",
+      "original_bytes": 8558,
+      "original_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "staged_bytes": 8558,
+      "staged_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/__init__.py",
+      "original_bytes": 116,
+      "original_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "staged_bytes": 116,
+      "staged_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/objective.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/objective.py",
+      "original_bytes": 12121,
+      "original_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "staged_bytes": 12121,
+      "staged_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "original_bytes": 11357,
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "staged_bytes": 11357,
+      "staged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/__init__.py",
+      "original_bytes": 105,
+      "original_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "staged_bytes": 105,
+      "staged_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/codec-source.json",
+      "original_bytes": 1956,
+      "original_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "staged_bytes": 1956,
+      "staged_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/config.json",
+      "original_bytes": 251,
+      "original_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "staged_bytes": 251,
+      "staged_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/decode.py",
+      "original_bytes": 3901,
+      "original_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "staged_bytes": 3901,
+      "staged_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/evidence.py",
+      "original_bytes": 7774,
+      "original_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "staged_bytes": 7774,
+      "staged_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "original_bytes": 206154,
+      "original_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "staged_bytes": 206154,
+      "staged_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/guards.py",
+      "original_bytes": 6767,
+      "original_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "staged_bytes": 6767,
+      "staged_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/native.py",
+      "original_bytes": 3102,
+      "original_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "staged_bytes": 3102,
+      "staged_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/requirements.txt",
+      "original_bytes": 263,
+      "original_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "staged_bytes": 263,
+      "staged_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/sampling.py",
+      "original_bytes": 2503,
+      "original_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "staged_bytes": 2503,
+      "staged_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "original_bytes": 2710,
+      "original_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "staged_bytes": 2710,
+      "staged_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "original_bytes": 108,
+      "original_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "staged_bytes": 108,
+      "staged_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "original_bytes": 5435,
+      "original_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "staged_bytes": 5435,
+      "staged_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "original_bytes": 32558,
+      "original_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "staged_bytes": 32558,
+      "staged_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "original_bytes": 18097,
+      "original_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "staged_bytes": 18097,
+      "staged_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "original_bytes": 31846,
+      "original_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "staged_bytes": 31846,
+      "staged_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/load_weights.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/load_weights.py",
+      "original_bytes": 8146,
+      "original_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "staged_bytes": 8146,
+      "staged_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/__init__.py",
+      "original_bytes": 113,
+      "original_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "staged_bytes": 113,
+      "staged_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/inputs.py",
+      "original_bytes": 3429,
+      "original_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "staged_bytes": 3429,
+      "staged_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/streaming.py",
+      "original_bytes": 10387,
+      "original_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "staged_bytes": 10387,
+      "staged_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/portable.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/portable.py",
+      "original_bytes": 11880,
+      "original_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "staged_bytes": 11880,
+      "staged_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/__init__.py",
+      "original_bytes": 110,
+      "original_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "staged_bytes": 110,
+      "staged_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/codec.py",
+      "original_bytes": 5767,
+      "original_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "staged_bytes": 5767,
+      "staged_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/config.py",
+      "original_bytes": 1348,
+      "original_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "staged_bytes": 1348,
+      "staged_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/evidence.py",
+      "original_bytes": 22089,
+      "original_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "staged_bytes": 22089,
+      "staged_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/guards.py",
+      "original_bytes": 10133,
+      "original_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "staged_bytes": 10133,
+      "staged_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/inputs.py",
+      "original_bytes": 9961,
+      "original_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "staged_bytes": 9961,
+      "staged_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/native.py",
+      "original_bytes": 3550,
+      "original_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "staged_bytes": 3550,
+      "staged_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/output.py",
+      "original_bytes": 3374,
+      "original_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "staged_bytes": 3374,
+      "staged_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/run.py",
+      "original_bytes": 21001,
+      "original_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "staged_bytes": 21001,
+      "staged_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/sampling.py",
+      "original_bytes": 7526,
+      "original_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "staged_bytes": 7526,
+      "staged_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/text-reuse.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/text-reuse.json",
+      "original_bytes": 2309,
+      "original_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "staged_bytes": 2309,
+      "staged_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/__init__.py",
+      "original_bytes": 119,
+      "original_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "staged_bytes": 119,
+      "staged_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/attention.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/attention.py",
+      "original_bytes": 5435,
+      "original_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "staged_bytes": 5435,
+      "staged_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/model.py",
+      "original_bytes": 18097,
+      "original_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "staged_bytes": 18097,
+      "staged_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/capture_data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/capture_data.py",
+      "original_bytes": 6043,
+      "original_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "staged_bytes": 6043,
+      "staged_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/__init__.py",
+      "original_bytes": 80,
+      "original_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "staged_bytes": 80,
+      "staged_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/portable.py",
+      "original_bytes": 4570,
+      "original_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "staged_bytes": 4570,
+      "staged_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/plan.json",
+      "original_bytes": 981673,
+      "original_sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6",
+      "staged_bytes": 981673,
+      "staged_sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/source/diagnostic/diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/source/diagnostic/diagnostic.py",
+      "original_bytes": 20797,
+      "original_sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "staged_bytes": 20797,
+      "staged_sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/source/diagnostic/test_diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/source/diagnostic/test_diagnostic.py",
+      "original_bytes": 6668,
+      "original_sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "staged_bytes": 6668,
+      "staged_sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/source/reference14/diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/source/reference14/diagnostic.py",
+      "original_bytes": 20027,
+      "original_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "staged_bytes": 20027,
+      "staged_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/source/reference14/test_diagnostic.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/source/reference14/test_diagnostic.py",
+      "original_bytes": 5021,
+      "original_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "staged_bytes": 5021,
+      "staged_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/source/training_reader/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/source/training_reader/inputs.py",
+      "original_bytes": 20221,
+      "original_sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "staged_bytes": 20221,
+      "staged_sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/source/training_reader/training-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/source/training_reader/training-source.json",
+      "original_bytes": 10019,
+      "original_sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "staged_bytes": 10019,
+      "staged_sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-audit.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-audit.json",
+      "original_bytes": 165944,
+      "original_sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b",
+      "staged_bytes": 165916,
+      "staged_sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81",
+      "transformation": "audit.run prefix only"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/metrics.json",
+      "original_bytes": 849,
+      "original_sha256": "7590275a379348a35ca967cb336e23cf5d460975972da73ae62dae987302d1f4",
+      "staged_bytes": 849,
+      "staged_sha256": "7590275a379348a35ca967cb336e23cf5d460975972da73ae62dae987302d1f4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/plan.json",
+      "original_bytes": 813167,
+      "original_sha256": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a",
+      "staged_bytes": 813167,
+      "staged_sha256": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "c14d1d20f2ca540250e5471f59e716b096e5c8171a6d7aa1216d41c523f28491",
+      "staged_bytes": 543,
+      "staged_sha256": "c14d1d20f2ca540250e5471f59e716b096e5c8171a6d7aa1216d41c523f28491",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/training/checkpoint-0128/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/training/checkpoint-0128/manifest.json",
+      "original_bytes": 5006,
+      "original_sha256": "353c1e9fead663f10edb064d15267cee571a654ab9ee4da26080c2eb34f71f93",
+      "staged_bytes": 5006,
+      "staged_sha256": "353c1e9fead663f10edb064d15267cee571a654ab9ee4da26080c2eb34f71f93",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/training/core-after.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/training/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/training/core-before.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/training/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/training/last-valid.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/training/last-valid.json",
+      "original_bytes": 154,
+      "original_sha256": "5e1fea5c716aed9bf225a5a0eb57eddeb7a7c5cd7b012e5764f35e63d7439124",
+      "staged_bytes": 154,
+      "staged_sha256": "5e1fea5c716aed9bf225a5a0eb57eddeb7a7c5cd7b012e5764f35e63d7439124",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/training/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/training/metrics.json",
+      "original_bytes": 333311,
+      "original_sha256": "922aa689f26114e538fc15dab7716c1d572248d3c83a92a2a5aa792cbad6bf25",
+      "staged_bytes": 333311,
+      "staged_sha256": "922aa689f26114e538fc15dab7716c1d572248d3c83a92a2a5aa792cbad6bf25",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/worker/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/worker/metrics.json",
+      "original_bytes": 74379,
+      "original_sha256": "860b3aa2b7000cd30909751a2be012fa10179757ab28425bdc56eb5ed8a682f7",
+      "staged_bytes": 74379,
+      "staged_sha256": "860b3aa2b7000cd30909751a2be012fa10179757ab28425bdc56eb5ed8a682f7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!reference-inputs/training-evidence/worker/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/training-evidence/worker/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    }
+  },
+  "notes": [
+    "The 66-output actual audit, prepared plan, binding, CPU reports, independent reviews, raw metrics, source files and tensor bytes retain their exact original bytes.",
+    "Only two earlier training-audit run fields inside prepared-inputs.tar.gz receive the disclosed path-prefix replacement.",
+    "The complete raw recovery index and original canonical report hashes are retained; the public input archive is explicitly a derivative."
+  ]
+}

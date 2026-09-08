@@ -1,0 +1,15 @@
+{
+  "schema": "worldline-public-score-bytecode-correction-v1",
+  "change": "Set sys.dont_write_bytecode=True before dynamically importing the pinned recovered reader, preventing __pycache__ additions to verified raw evidence",
+  "previous_source_sha256": "81a09380cf012a426be838cb9a1e24f64fb0652765a923e12d00df9b89677587",
+  "current_source_sha256": "cc4728a17b9eb67da231bd14b69345d7b79ea0e5aed0fb3166a95fa253c1cef7",
+  "actual_public_byte_score_passed": true,
+  "invocation_removed_PYTHONDONTWRITEBYTECODE": true,
+  "score_report_v2_sha256": "cde4bdaf1780f26eb0565de7594409e1df7c404275bafa880f51625a7926df00",
+  "all_scores_and_gate_identical_to_v1": true,
+  "public_member_inventory_unchanged": 320,
+  "numpy_math_source_unchanged": true,
+  "model_execution": false,
+  "repository_sources_changed": false,
+  "original_release_assets_modified": false
+}

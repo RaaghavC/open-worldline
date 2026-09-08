@@ -1,0 +1,14 @@
+{
+  "schema": "worldline-public-effect-assessment-score-independent-review-v2",
+  "status": "passed",
+  "scorer_sha256": "cc4728a17b9eb67da231bd14b69345d7b79ea0e5aed0fb3166a95fa253c1cef7",
+  "previous_scorer_sha256": "81a09380cf012a426be838cb9a1e24f64fb0652765a923e12d00df9b89677587",
+  "previous_review_sha256": "a14d61592004e269a0868bfe2f1fb648dbc7a2b6e84722aae88208c7ca7b0ecd",
+  "change": "Exactly one module assignment sets sys.dont_write_bytecode=True before importing the recovered reader; one explanatory comment added. All other AST nodes unchanged.",
+  "purpose": "Prevents recovered source imports from adding __pycache__ files to an exact verified-member tree.",
+  "numerical_equations_unchanged": true,
+  "all_existing_source_and_gate_checks_unchanged": true,
+  "tests_rerun": false,
+  "model_execution": false,
+  "findings": []
+}

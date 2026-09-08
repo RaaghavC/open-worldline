@@ -1,0 +1,18 @@
+{
+  "schema": "worldline-action-effect-visual-audit-cpu-v1",
+  "status": "passed",
+  "tests": 6,
+  "exit_code": 0,
+  "source_sha256": {
+    "audit.py": "8e12dfab2b8aff084b3e89902f8e832f69706be8ac08daa001c1ffc82215cc91",
+    "binding.py": "e34c03c40d24c102b4c46076e05943d6ad8abb64fc508204afa080d810b9e06c",
+    "pins.json": "91b2f14675f2b9fce680d5f0198f7596fa9c48647d8f938d088d0c020a972ae6",
+    "test_audit.py": "239ed5c59388524db6a005399eb7f0df88c254386252b1a46c6cd8248bf52bf3",
+    "reference/final128-audit.py": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7"
+  },
+  "source_unchanged": true,
+  "seconds": 0.5103757500182837,
+  "model_execution": false,
+  "cloud_actions": false,
+  "actual_result_bound": false
+}

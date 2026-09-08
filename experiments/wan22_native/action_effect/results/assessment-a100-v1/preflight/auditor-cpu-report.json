@@ -1,0 +1,22 @@
+{
+  "schema": "worldline-action-effect-assessment-audit-cpu-v1",
+  "status": "passed",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 0.19297337500029244,
+  "source_sha256": {
+    "audit.py": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2",
+    "test_audit.py": "fe9a83b1c9ea8bc3fd961f7b81dc55ae58d3c44a62f1d2a9639995239c3e7ae1",
+    "pins.json": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea",
+    "reference/reader.py": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+    "reference/array_checks.py": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079"
+  },
+  "source_unchanged": true,
+  "numpy": "1.26.4",
+  "torch_imported": false,
+  "model_execution": false,
+  "cloud_actions": false,
+  "actual_new_results_bound": false
+}

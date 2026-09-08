@@ -1,0 +1,36 @@
+"""Four bounded failure checks for the compact artifact verifier, CPU stdlib only."""
+from pathlib import Path
+import hashlib, importlib.util, io, tarfile, tempfile, unittest
+
+SPEC=importlib.util.spec_from_file_location('compact_verifier',Path(__file__).parent/'results/verify_results.py')
+v=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(v)
+
+class VerificationTests(unittest.TestCase):
+    def test_original_payload_byte_change_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            p=Path(temp)/'file';p.write_bytes(b'abc')
+            row={'bytes':3,'sha256':hashlib.sha256(b'abc').hexdigest()}
+            v.check_record(p,row);p.write_bytes(b'abd')
+            with self.assertRaises(ValueError):v.check_record(p,row)
+
+    def test_transport_repartition_requires_matching_index(self):
+        part={'name':'evidence.tar.gz.part-000','bytes':8,'sha256':'1'*64,'url':'unused'}
+        m={'schema':'worldline-action-release-download-v1','parts':[part],'stream_sha256':'2'*64}
+        idx={'parts':[{k:part[k] for k in ('name','bytes','sha256')}],'stream_sha256':'2'*64,'transport_bytes':8,'file_bytes':1,'files':{'a':{'bytes':1,'sha256':'3'*64}}}
+        v.check_transport(m,idx);idx['parts'][0]['bytes']=16
+        with self.assertRaises(ValueError):v.check_transport(m,idx)
+
+    def test_unindexed_or_duplicate_nested_archive_member_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);p=root/'a.tar.gz';data=b'hello'
+            with tarfile.open(p,'w:gz') as t:
+                for _ in range(2):
+                    info=tarfile.TarInfo('a');info.size=len(data);t.addfile(info,io.BytesIO(data))
+            record={'bytes':p.stat().st_size,'sha256':v.sha(p),'files':{'a':{'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}}}
+            with self.assertRaises(ValueError):v.check_archive(root,p.name,record)
+
+    def test_traversal_and_absolute_names_rejected(self):
+        for name in ('../escape','/absolute','a/../../b','a\\b'):
+            with self.subTest(name=name),self.assertRaises(ValueError):v.relative(name)
+
+if __name__=='__main__':unittest.main()

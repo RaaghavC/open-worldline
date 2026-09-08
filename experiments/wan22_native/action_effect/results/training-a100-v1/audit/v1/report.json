@@ -1,0 +1,16 @@
+{
+  "schema": "worldline-action-effect128-actual-independent-v1",
+  "status": "failed",
+  "run": "[WORKSPACE]/work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1",
+  "model_execution": false,
+  "gpu_replay": false,
+  "backward_replay": false,
+  "audit_source_sha256": "0ab1ea225f4189bc0b51f6ea843d130368c46300b80090ca5e1aaa3f490bbf0e",
+  "checks_source_sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+  "checks": {},
+  "error_type": "ValueError",
+  "error": "Require a regular output outside the repository; preparation must be fresh",
+  "elapsed_seconds": 6.031021333998069,
+  "cuda_initialized": false,
+  "inventory_sha256": "4f932e2e1090253cc08f8efdbbcb4a8a049d812189bd9d1054f201e5a4375a2e"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "worldline-action-effect-assessment-plan-review-cpu-v1",
+  "status": "passed",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 0.06578195799374953,
+  "source_sha256": {
+    "review.py": "191bcb7eb0d8508881560b1cc86562156f3e5880c7313d2b0d2b498084607c90",
+    "pins.json": "42a7d73124adc92c8c1429c61063795d5eaccf1a1b84120f2b209b343279b8c3",
+    "test_review.py": "6641c1cc96ec789fa41c97d7106e1e9e40cdf8f160e2449313342893a2cfd75f"
+  },
+  "source_after_sha256": {
+    "review.py": "191bcb7eb0d8508881560b1cc86562156f3e5880c7313d2b0d2b498084607c90",
+    "pins.json": "42a7d73124adc92c8c1429c61063795d5eaccf1a1b84120f2b209b343279b8c3",
+    "test_review.py": "6641c1cc96ec789fa41c97d7106e1e9e40cdf8f160e2449313342893a2cfd75f"
+  },
+  "source_unchanged": true,
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "1.26.4",
+  "torch_imported": false,
+  "model_execution": false,
+  "fixture_scope": "Four bounded local file/protocol fixtures, including synthetic binding handoff; no actual assessment plan created."
+}

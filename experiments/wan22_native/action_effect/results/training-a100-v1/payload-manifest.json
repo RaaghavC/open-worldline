@@ -1,0 +1,184 @@
+{
+  "schema": "worldline-action-effect-training-compact-staging-v1",
+  "status": "prepared_local_only",
+  "files": {
+    "README.md": {
+      "bytes": 8169,
+      "sha256": "a1f82e7865cbfa18b279916e771f4c737e21563c56576bb93c6432c0cd04acf5"
+    },
+    "audit/v1/report.json": {
+      "bytes": 763,
+      "sha256": "c0a0911df0926bc626772a4417513e531e63e0e8b093bf799becef09f78fe490"
+    },
+    "audit/v2/audit.py": {
+      "bytes": 29874,
+      "sha256": "0ab1ea225f4189bc0b51f6ea843d130368c46300b80090ca5e1aaa3f490bbf0e"
+    },
+    "audit/v2/checks.py": {
+      "bytes": 10606,
+      "sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079"
+    },
+    "audit/v2/inventory.json": {
+      "bytes": 107898,
+      "sha256": "4f932e2e1090253cc08f8efdbbcb4a8a049d812189bd9d1054f201e5a4375a2e"
+    },
+    "audit/v2/invocation-correction.json": {
+      "bytes": 980,
+      "sha256": "5f6af37e8a29abbaa6a617676e3d921df0e0020d748673846df90874bcd6430e"
+    },
+    "audit/v2/pins.json": {
+      "bytes": 11355,
+      "sha256": "c2f200959b489a5c8bbdbe5c5f4cee0e93a592fe8f3737b58d08b7fac95ac3e8"
+    },
+    "audit/v2/report.json": {
+      "bytes": 259703,
+      "sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4"
+    },
+    "checkpoint-0128/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce"
+    },
+    "checkpoint-0128/manifest.json": {
+      "bytes": 5003,
+      "sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f"
+    },
+    "derivations.json": {
+      "bytes": 17617,
+      "sha256": "82c23550e21eb519552545434fac11c2b88eedd9d5c2fbdf1582f28f78ed5860"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/WORLDLINE-NOTICE.txt": {
+      "bytes": 428,
+      "sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915"
+    },
+    "metrics/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "metrics/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "metrics/monitor-terminal.json": {
+      "bytes": 404,
+      "sha256": "f10e7ab04f4e4036969cba8b1a8901b03539616de18334d5c96d8e23fe4e01eb"
+    },
+    "metrics/parent.json": {
+      "bytes": 847,
+      "sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae"
+    },
+    "metrics/terminal.json": {
+      "bytes": 543,
+      "sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d"
+    },
+    "metrics/training.json": {
+      "bytes": 417501,
+      "sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32"
+    },
+    "metrics/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "metrics/worker.json": {
+      "bytes": 91348,
+      "sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4"
+    },
+    "plans/executed-admission.json": {
+      "bytes": 776706,
+      "sha256": "dc06b7e63285222c239319e3a6cf54a7323d8be8ed60e733bb232481d2fc2f3e"
+    },
+    "plans/launch.json": {
+      "bytes": 725,
+      "sha256": "f0330131fa844ba8d536afb4f009bacfc817bc6ca41bd4f927a4f1587a3f5c43"
+    },
+    "plans/plan.json": {
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+    },
+    "preflight/auditor-cpu-report.json": {
+      "bytes": 12051,
+      "sha256": "7a11447f211aee9111be7dfdab949348da653185552ee9b322c25f8a7767d0a6"
+    },
+    "preflight/auditor-independent-review.json": {
+      "bytes": 13001,
+      "sha256": "1f0882317eec640d7c7446c2c1879a99f045f9f149ac89d23c2c21fc6a741da3"
+    },
+    "preflight/cpu-report.json": {
+      "bytes": 10982,
+      "sha256": "3ad62e5ef526e393d90511118e28334666a7c93e3db42989cbe3d6ae8bfe639d"
+    },
+    "preflight/prepared-read.json": {
+      "bytes": 11138,
+      "sha256": "d35d04aa35a24070d32c45d3e83221e549d41bf9a1a8d3438aaefc206807222a"
+    },
+    "preflight/training-independent-review.json": {
+      "bytes": 12474,
+      "sha256": "826c76de0c717d20f3cd9d5d88692f52569f626091cb22c91618afbd0abfc54a"
+    },
+    "privacy-check.json": {
+      "bytes": 180,
+      "sha256": "930b56f1ac906aaad3cf7efc79ec8b2f612d96d1404c33bc17b4183b013d7666"
+    },
+    "recovery/local-original-reference.json": {
+      "bytes": 921,
+      "sha256": "174080d66f7162834d5b3ed94e409fcb9fd90169a922d5c613d44506351f249b"
+    },
+    "recovery/original-index.json": {
+      "bytes": 223057,
+      "sha256": "61cd2d48160ee1db5b74a288328516850356cd1fc15b1bff4969c7f83d16c142"
+    },
+    "recovery/original-recovery-verified.json": {
+      "bytes": 319,
+      "sha256": "8f32e401ce0799398f20cced6c150c6df4e23f80773fc29f5ffd3dc8b557bd38"
+    },
+    "reproducibility/executed-source.tar.gz": {
+      "bytes": 608632,
+      "sha256": "5224b4900fd66ba897e91d5d641901684978374cc77d9b088286c59f264d13d5"
+    },
+    "reproducibility/fresh-transfer-read.json": {
+      "bytes": 20876,
+      "sha256": "c1239e9412ba25e05e2bc39eb4c4dd3f4980febe479ed09fa93e4793606ba7de"
+    },
+    "reproducibility/source-and-inputs.json": {
+      "bytes": 779850,
+      "sha256": "e8b5ce25ba7fc86604e69cf1110d66d47b654f6280d98ca2921f26ca1f755c40"
+    },
+    "reproducibility/training-transfer-manifest.json": {
+      "bytes": 125309,
+      "sha256": "22637196450641952cb1632ecb64b6bde5adab2e9872b1028ea047fb49623ae9"
+    },
+    "reproducibility/training-transfer.json": {
+      "bytes": 656,
+      "sha256": "9041ad984d52727e3c83298501bc11ceea00ad86a66e02658883e9f0cd6b3e6e"
+    },
+    "staging-status.json": {
+      "bytes": 418,
+      "sha256": "dfa95266bf211818339bd5b5061a68afcc6dd18bad200a4aa428b092692f0b64"
+    },
+    "summary.json": {
+      "bytes": 14348,
+      "sha256": "6b175c31b259d142dd35cb8ba418f4135d893c7b3df92fc396135613ca4a1ef9"
+    }
+  },
+  "file_count": 43,
+  "file_bytes": 8909051,
+  "source_archive_members": 88,
+  "path_only_audit_derivatives": 2,
+  "full_original_recovery_unchanged": true,
+  "github_publication": false
+}

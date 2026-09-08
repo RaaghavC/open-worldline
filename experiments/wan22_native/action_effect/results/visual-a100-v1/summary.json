@@ -1,0 +1,147 @@
+{
+  "schema": "worldline-action-effect-visual-publication-summary-v1",
+  "status": "staged_local_only",
+  "artifact_integrity": "passed",
+  "visible_door_control": "failed",
+  "visible_camera_control": "failed",
+  "all_generated_frames_reviewed": 34,
+  "full_resolution_endpoints_reviewed": 4,
+  "independent_artifact_audit_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+  "rgb_comparison_sha256": "d56e25c7ac4c94cd6f2be3c729af56f0a709b28629640a42d2f7610729779aa2",
+  "parent_visual_review_sha256": "4b41d60be1bf007a7d7676863bfc96402573cfde7c600d40ac984fc385602b43",
+  "final_checkpoint_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+  "sampling": {
+    "frames_per_arm": 17,
+    "future_frames_per_arm": 16,
+    "steps_per_arm": 50,
+    "predictions_per_arm": 100,
+    "shape": [
+      1248,
+      704
+    ],
+    "shift": 5.0,
+    "guidance": 5.0,
+    "same_observation_noise_text": true,
+    "command_only_difference": "First wait versus interact command; both then receive fifteen left turns."
+  },
+  "future_rgb_mae": {
+    "effect128": {
+      "closed": {
+        "generated_vs_target": 0.18356586897843116,
+        "repeat_start_vs_target": 0.17896263812652824,
+        "generated_vs_start": 0.019432956062153096
+      },
+      "open": {
+        "generated_vs_target": 0.19346617845690706,
+        "repeat_start_vs_target": 0.19035594893749191,
+        "generated_vs_start": 0.017506004188228893
+      }
+    },
+    "previous128": {
+      "closed": {
+        "generated_vs_target": 0.1835971495015451,
+        "repeat_start_vs_target": 0.17896263812652824,
+        "generated_vs_start": 0.019418469820064087
+      },
+      "open": {
+        "generated_vs_target": 0.19555837724022662,
+        "repeat_start_vs_target": 0.19035594893749191,
+        "generated_vs_start": 0.019431410105567322
+      }
+    },
+    "previous16": {
+      "closed": {
+        "generated_vs_target": 0.18355059142756472,
+        "repeat_start_vs_target": 0.17896263812652824,
+        "generated_vs_start": 0.019368893996099215
+      },
+      "open": {
+        "generated_vs_target": 0.19552292138584326,
+        "repeat_start_vs_target": 0.19035594893749191,
+        "generated_vs_start": 0.0194029578586525
+      }
+    }
+  },
+  "future_comparisons": {
+    "previous16": {
+      "closed": {
+        "target_mae_delta_effect_minus_previous": 1.527755086645115e-05,
+        "effect_vs_previous_mae": 0.0010730269204728385
+      },
+      "open": {
+        "target_mae_delta_effect_minus_previous": -0.0020567429289361887,
+        "effect_vs_previous_mae": 0.0033236081201104798
+      }
+    },
+    "previous128": {
+      "closed": {
+        "target_mae_delta_effect_minus_previous": -3.12805231139267e-05,
+        "effect_vs_previous_mae": 0.0010482993375120994
+      },
+      "open": {
+        "target_mae_delta_effect_minus_previous": -0.0020921987833195732,
+        "effect_vs_previous_mae": 0.003375180489233017
+      }
+    }
+  },
+  "strict_both_closer_to_own_truth_counts": {
+    "effect128": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    },
+    "previous128": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    },
+    "previous16": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    }
+  },
+  "both_branches_worse_than_repeat_start": true,
+  "resources": {
+    "passed": true,
+    "parent_seconds": 459.635301746428,
+    "stages": {
+      "core": {
+        "worker_seconds": 388.80632612109184,
+        "load_seconds": 168.49573971703649,
+        "parent_samples": 1558,
+        "worker_samples": 1507,
+        "peak_combined_rss_bytes": 3007578112,
+        "peak_cuda_reserved_bytes": 21581791232,
+        "minimum_cuda_available_bytes": 62965874688,
+        "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "decode": {
+        "worker_seconds": 61.1665758471936,
+        "load_seconds": 20.796948432922363,
+        "parent_samples": 258,
+        "worker_samples": 230,
+        "peak_combined_rss_bytes": 4391669760,
+        "peak_cuda_reserved_bytes": 32753319936,
+        "minimum_cuda_available_bytes": 51811123200,
+        "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "limits": {
+      "seconds": 1800.0,
+      "host_rss_bytes": 51539607552,
+      "cuda_reserved_bytes": 64424509440,
+      "minimum_host_available_bytes": 8589934592,
+      "minimum_cuda_available_bytes": 8589934592,
+      "minimum_gpu_total_bytes": 75161927680
+    }
+  },
+  "separate_endpoint_assessment": {
+    "four_noise_gate": "passed",
+    "error_reduction_vs_previous128_percent": [
+      0.5128327860644092,
+      0.5320462407738151
+    ],
+    "interpretation": "Small numerical improvement did not yield the requested visible door or camera response."
+  },
+  "model_replay": false,
+  "quality_success_claim": false,
+  "generalization_claim": false
+}

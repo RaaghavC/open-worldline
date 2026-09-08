@@ -1,0 +1,74 @@
+{
+  "schema": "worldline-action-effect-public-recovery-derivative-v1",
+  "status": "verified_local_public_recovery",
+  "original_index_sha256": "7cbe124f446623d4d3fa87cd8364478f0cb09cb040bb47f5d86bc4dbb710b0e8",
+  "public_index_sha256": "4b75683b81ea7538311801393f82506ff0e3baa48e0f84d6f20d9c1761da7626",
+  "original_stream_sha256": "48a07e2e849c0b8d606a3433d709975e2c08f9d7a9572914b85ba176886074eb",
+  "public_stream_sha256": "d6b52480fdac5cae32ef39008a4a6a46f0a835efc21a724bf9ab6378f46ff10f",
+  "original_file_count": 320,
+  "public_file_count": 320,
+  "unchanged_file_count": 318,
+  "excluded_file_count": 0,
+  "original_file_bytes": 294746992,
+  "public_file_bytes": 294746936,
+  "original_transport_parts": 2,
+  "public_transport_parts": 22,
+  "max_public_part_bytes": 8000000,
+  "compression": "New gzip level1 stream with sorted members, zero tar timestamps and mode0644",
+  "transformed_files": [
+    {
+      "path": "action-results/effect-assessment-v1/new-training-audit.json",
+      "original": {
+        "bytes": 259731,
+        "sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1"
+      },
+      "published": {
+        "bytes": 259703,
+        "sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4"
+      },
+      "operation": "Replace the exact original workspace prefix only in operational top-level audit.run; all other bytes retained",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 1
+    },
+    {
+      "path": "action-results/effect-assessment-v1/reference-inputs/training-audit.json",
+      "original": {
+        "bytes": 165944,
+        "sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b"
+      },
+      "published": {
+        "bytes": 165916,
+        "sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81"
+      },
+      "operation": "Replace the exact original workspace prefix only in operational top-level audit.run; all other bytes retained",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 1
+    }
+  ],
+  "member_mapping_sha256": "4327136e4eae2e33b0b501082ab93c8e98d06402d20b7d8f2afa40eff47c9869",
+  "all_tensors_sources_scientific_fields_unchanged": true,
+  "original_hash_references_in_plans_retained": true,
+  "execution_preflight_limitation": "Unchanged archival execution plans retain the original audit-report hashes. The two path-redacted public audit copies cannot satisfy those exact archival file-hash gates. Public download verification and saved-score recomputation use the public index. A new model run requires a fresh reviewed preparation that binds the audited public reports normally. No original private path or original hash is reconstructed.",
+  "privacy_scan": {
+    "text_files": 240,
+    "original_private_prefix_files": [
+      "action-results/effect-assessment-v1/new-training-audit.json",
+      "action-results/effect-assessment-v1/reference-inputs/training-audit.json"
+    ],
+    "credential_pattern_matches": [],
+    "scope": "Every indexed text extension scanned; no credential files read. Bounded patterns do not guarantee absence of arbitrary secrets."
+  },
+  "original_recovery_unchanged": true,
+  "publication_state": "local-preparation-only",
+  "source_audit_sha256": "99528e0e654ad1de451d31a02ebbf2b92d19345f4c85179f7b24e9c973d4fe1a",
+  "build_seconds": 6.943691166001372,
+  "local_recovery_verification_sha256": "fe7fd9b4f71380fe74f3830215bb0defbe3cd7b583d27c13ecac72a2713250b8",
+  "all_public_members_verified": true,
+  "previous_16mb_public_index_sha256": "7b05240b1a8c7058a2ac1fea71c95612745cb77ec166474a020f3fca8b4be14c",
+  "transport_change_sha256": "d8d774877cd2ea0b9693ae4241717d90e70dffe8d929a0869e2cb009dcbd9d8e",
+  "historical_local_recovery_verification_refers_to_previous_16mb_layout": true
+}

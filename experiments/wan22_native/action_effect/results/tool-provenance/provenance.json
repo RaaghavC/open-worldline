@@ -1,0 +1,19 @@
+{
+  "schema": "worldline-action-effect-public-tools-v1",
+  "fetch_artifacts": {
+    "sha256": "b6449d75606c102b540d3a9f5d153e8ae0f89fdf194a757cd7adcd52381a8844",
+    "original": "experiments/wan22_native/action_cuda/results/post128-a100-v1/fetch_artifacts.py",
+    "transformation": "none"
+  },
+  "builder_sha256": "85bdabc2b0d283ee396a5fc428de0e6fc17ee57f4f65aba0498a816323a95477",
+  "score_wrapper_sha256": "cc4728a17b9eb67da231bd14b69345d7b79ea0e5aed0fb3166a95fa253c1cef7",
+  "retained_numpy_reader_sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+  "score_reference": "Original reader.score and reader.read_saved_scores imported from the hash-checked recovered source; main seen506 FP64 loss matches existing actual audit formula.",
+  "model_execution": false,
+  "network_used": false,
+  "visual_extension_sha256": "d3db0507352e9675c5d6d7bb823571d709f9006f8cc75244675f86dc5902520a",
+  "unchanged_builder_used_for_visual": true,
+  "public_scoring_independent_review_sha256": "a14d61592004e269a0868bfe2f1fb648dbc7a2b6e84722aae88208c7ca7b0ecd",
+  "previous_score_wrapper_sha256": "81a09380cf012a426be838cb9a1e24f64fb0652765a923e12d00df9b89677587",
+  "bytecode_correction_sha256": "ba31c1bcd01e294f8267a3d1ae731b0db64e5f710a15f44e503e3476b72b4545"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "worldline-action-effect-historical-layout-v1",
+  "repository_location": "outputs/open-worldline",
+  "source_directory_mapping": {
+    "training": "work/wan22-action-effect-prep-v1",
+    "assessment": "work/wan22-action-effect-evaluation-prep-v1",
+    "visual": "work/wan22-action-effect-visual-prep-v1",
+    "audits/training": "work/wan22-action-effect-audit-prep-v1",
+    "audits/assessment": "work/wan22-action-effect-assessment-audit-prep-v1",
+    "audits/visual": "work/wan22-action-effect-visual-audit-prep-v1",
+    "comparison": "work/wan22-action-effect-visual-comparison-prep-v1",
+    "comparison/reference_rgb": "work/wan22-action-cuda-visual-analysis-prep-v1"
+  },
+  "copy_policy": "Copy real files preserving the source-manifest hashes, not symlinks. Core dependencies stay in the repository. Comparison reference_rgb belongs in its separate mapped directory.",
+  "artifact_policy": "Historical plans bind original audit bytes. Public path-redacted report derivatives require fresh preparation/review; this mapping does not undo privacy transformations."
+}

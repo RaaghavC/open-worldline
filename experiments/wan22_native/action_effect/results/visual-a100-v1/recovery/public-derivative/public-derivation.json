@@ -1,0 +1,58 @@
+{
+  "schema": "worldline-action-effect-public-recovery-derivative-v1",
+  "status": "verified_local_public_recovery",
+  "original_index_sha256": "9897bddfcc99b2ce0db29e9a4b7dbd1e7f88f51f0c671d07fee2e2db82a6866e",
+  "public_index_sha256": "66a3eb0ea3a470e27de1d9443ded653ee92131c805dbdad20c93c0c3a2f3b2fa",
+  "original_stream_sha256": "d597d212947410526c657b8e32a88fcc27dc589cdbbbebfc41456aabdda3ff14",
+  "public_stream_sha256": "c762b5aa63f2ef19d0e1d491c75008f957219009f48acebcddd87eab0c5bfd04",
+  "original_file_count": 338,
+  "public_file_count": 338,
+  "unchanged_file_count": 337,
+  "excluded_file_count": 0,
+  "original_file_bytes": 786411030,
+  "public_file_bytes": 786411002,
+  "original_transport_parts": 8,
+  "public_transport_parts": 45,
+  "max_public_part_bytes": 16000000,
+  "compression": "New gzip level1 stream with sorted members, zero tar timestamps and mode0644",
+  "transformed_files": [
+    {
+      "path": "action-results/effect-visual-v1/training-audit.json",
+      "original": {
+        "bytes": 259731,
+        "sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1"
+      },
+      "published": {
+        "bytes": 259703,
+        "sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4"
+      },
+      "operation": "Replace the exact original workspace prefix only in operational top-level audit.run; all other bytes retained",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 1
+    }
+  ],
+  "member_mapping_sha256": "16ad61db4da337200fa01b8b228d3bd02a353c66c01380300f9d17f163748b80",
+  "all_tensors_sources_scientific_fields_unchanged": true,
+  "original_hash_references_in_plans_retained": true,
+  "execution_preflight_limitation": "Unchanged archival visual plans retain the original training-audit report hash. Its path-redacted public copy cannot satisfy that exact archival file-hash gate. Public download verification uses the public index. A future run requires a separate fresh reviewed preparation binding audited public records normally. No original private path or original hash is reconstructed.",
+  "privacy_scan": {
+    "text_files": 158,
+    "original_private_prefix_files": [
+      "action-results/effect-visual-v1/training-audit.json"
+    ],
+    "credential_pattern_matches": [],
+    "scope": "Every indexed text extension scanned; no credential files read. Bounded patterns do not guarantee absence of arbitrary secrets."
+  },
+  "original_recovery_unchanged": true,
+  "publication_state": "local-preparation-only",
+  "source_audit_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+  "build_seconds": 27.248344791005366,
+  "local_recovery_verification_sha256": "be49cd19eeef819e1a37481e69f08b04ca69c65ebfa15e5d57088ce16fcfc299",
+  "all_public_members_verified": true,
+  "artifact_audit_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+  "parent_visual_review_sha256": "4b41d60be1bf007a7d7676863bfc96402573cfde7c600d40ac984fc385602b43",
+  "visible_door_control_passed": false,
+  "visible_camera_control_passed": false
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "worldline-action-effect-visual-audit-independent-review-v1",
+  "status": "passed",
+  "source_sha256": {
+    "audit.py": "8e12dfab2b8aff084b3e89902f8e832f69706be8ac08daa001c1ffc82215cc91",
+    "binding.py": "e34c03c40d24c102b4c46076e05943d6ad8abb64fc508204afa080d810b9e06c",
+    "pins.json": "91b2f14675f2b9fce680d5f0198f7596fa9c48647d8f938d088d0c020a972ae6",
+    "test_audit.py": "239ed5c59388524db6a005399eb7f0df88c254386252b1a46c6cd8248bf52bf3",
+    "reference/final128-audit.py": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7"
+  },
+  "cpu_report_sha256": "e96385ea93c7888d92227407fd56d0bd6b063f7796c61f94f03d4aa417803afe",
+  "read_only": true,
+  "model_execution": false,
+  "new_tests_run": false,
+  "unchanged_function_asts": [
+    "need",
+    "read",
+    "sha",
+    "tensor_sha",
+    "array_file",
+    "inventory",
+    "jsonlines",
+    "check_rgb",
+    "check_hardware"
+  ],
+  "findings": [
+    "Actual future plan requires completed new-family final128 audit, exact checkpoint/plan/source hashes, and explicit parent-reviewed actual-plan checksum. No provisional checkpoint hash is accepted.",
+    "Binding reread checks all copied input/evidence/source bytes and exact CPU/program review identities. No numerical values are regenerated.",
+    "Negative-context training metadata now records the start0 auxiliary CFG contrast only, retaining positive-only main FM scope.",
+    "No concrete blocker found in the new binding and eligibility paths."
+  ],
+  "limitations": [
+    "No actual effect-trained visual run is available; this reviews the prepared auditor only.",
+    "The six retained author CPU cases are accepted as source-bound evidence; no model or numerical replay was run."
+  ]
+}

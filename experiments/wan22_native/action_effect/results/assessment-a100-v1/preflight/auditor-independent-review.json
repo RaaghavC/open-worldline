@@ -1,0 +1,30 @@
+{
+  "schema": "worldline-action-effect-assessment-audit-independent-review-v1",
+  "status": "passed",
+  "read_only": true,
+  "new_tests_run": false,
+  "model_execution": false,
+  "source_sha256": {
+    "audit.py": "ad5ad6754d1b1788cea6867059d5acaaeea9409ecf61a9e36aa20271630952e2",
+    "test_audit.py": "fe9a83b1c9ea8bc3fd961f7b81dc55ae58d3c44a62f1d2a9639995239c3e7ae1",
+    "pins.json": "95ef2c006dc15a6223b9db62c0318315648025057ba624469f4a8ee56d6621ea",
+    "reference/reader.py": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4",
+    "reference/array_checks.py": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079"
+  },
+  "cpu_report_sha256": "afa4e180dfe6f3ca6d8ab13b2e50e31a8b2ef297229d72f990e80d192e7bc922",
+  "assessment_program_review_sha256": "f8085962a6f5a8c1a871864dc20aeb7b5ab8dd517787cc6c43938a6a2b7a7bca",
+  "actual_result_bound": false,
+  "findings": [
+    "The future binding requires actual prepared files, exact source and CPU report identities, final new128 audit/checkpoint hashes, and a passed review of the exact actual plan. It cannot bind a used execution directory or a provisional checkpoint.",
+    "Every one of 66 velocity files is checked against exact names, shape, FP32 dtype, finite values, file hash, tensor hash and reconstructed noise/time/context/command identity.",
+    "All 12 held-out score groups, six separate seen506 losses and three original999 contrasts are recomputed from raw arrays. The copied reader preserves FP32 CFG operation order and future-only FP64 score formulas.",
+    "The numerical gate requires improvement over zero and old128 plus positive alignment on all four held-out noises. It remains separate from artifact status and descriptive FP64 serialization tolerance.",
+    "The 12 original0/original128 comparisons use observed objective-* and causal-* filenames with exact old input and prediction hashes. Equality and magnitudes are descriptive, with no added cross-run acceptance tolerance.",
+    "The original 900-second, host/CUDA caps and free-memory floors remain enforced. Sequential allocated/reserved mismatches are reported without imposing an extra instantaneous relation.",
+    "No concrete source or runtime-report mismatch found against the frozen assessment producer."
+  ],
+  "limitations": [
+    "Source review and seven retained author CPU cases only; no actual new assessment output is available yet.",
+    "Saved outputs and source/counter records support the declared 12 feature extractions; the auditor does not replay foundation features."
+  ]
+}

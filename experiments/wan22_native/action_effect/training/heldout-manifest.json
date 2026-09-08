@@ -1,0 +1,164 @@
+{
+  "schema": "worldline-action-effect-heldout-noise-v1",
+  "status": "prepared",
+  "evaluation_only": true,
+  "training_use_prohibited": true,
+  "seed": 2026090801,
+  "shape": [
+    1,
+    48,
+    5,
+    44,
+    78
+  ],
+  "dtype": "float32",
+  "count": 4,
+  "noise_files": [
+    "noise-0000.safetensors",
+    "noise-0001.safetensors",
+    "noise-0002.safetensors",
+    "noise-0003.safetensors"
+  ],
+  "files": {
+    "noise-0000.safetensors": {
+      "bytes": 3294808,
+      "sha256": "521016371ee1eea6d19db071b479ee65745988e93f3e9ed69beac349b22e2e48",
+      "tensors": {
+        "noise": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "float32",
+          "sha256": "1faf06564697052999315981b88bffb8cc5a548f2cd528fdca88d33017087ce0"
+        }
+      }
+    },
+    "noise-0001.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6ff785e7120dfdbb5f128e0a652277540bc65441a3dbd089a5c704b4ac2b7ed7",
+      "tensors": {
+        "noise": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "float32",
+          "sha256": "3d0836f965c532fbf10c98179c7fc2d9847bfb9bbceeee7787d083799444bf77"
+        }
+      }
+    },
+    "noise-0002.safetensors": {
+      "bytes": 3294808,
+      "sha256": "89e519d68f0ef8ba29128bf8cf0470a1b1da4c5c010bd6d29c8685d949ffce76",
+      "tensors": {
+        "noise": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "float32",
+          "sha256": "9319abd38978cae1e4c077438d71a20d0f9e25c509631fd8298eee38c7fdb181"
+        }
+      }
+    },
+    "noise-0003.safetensors": {
+      "bytes": 3294808,
+      "sha256": "237d744f49623ca6f5349ad4e3002b84f7345fa5b6fdb490e5698307113e2bbe",
+      "tensors": {
+        "noise": {
+          "shape": [
+            1,
+            48,
+            5,
+            44,
+            78
+          ],
+          "dtype": "float32",
+          "sha256": "f1af83609766808dff9b8d081b93a76dd0c5ba6238e607b9d360539eb72cebf5"
+        }
+      }
+    },
+    "generator-states.safetensors": {
+      "bytes": 25640,
+      "sha256": "522276a0d47c5e701caf63dbb39d6bc823de5d1959828c49962d2f327d75a66f",
+      "tensors": {
+        "initial": {
+          "shape": [
+            5056
+          ],
+          "dtype": "uint8",
+          "sha256": "b34c3147508b763100e0b7300d53805887b5d998bfb11aff46d9a4a7d6c99e17"
+        },
+        "after_0000": {
+          "shape": [
+            5056
+          ],
+          "dtype": "uint8",
+          "sha256": "77497e2ed5cf18bdc68d12961134a05e8fe8eeba5c27c14f6a06c30d8ff80f98"
+        },
+        "after_0001": {
+          "shape": [
+            5056
+          ],
+          "dtype": "uint8",
+          "sha256": "a70ea47814e01c5b53fb25fb8721984b6caae18f880eb62392514e416eb2e36c"
+        },
+        "after_0002": {
+          "shape": [
+            5056
+          ],
+          "dtype": "uint8",
+          "sha256": "cca6dbc9b4d020688feb51592ad62132d51b3b2954d18a87f0282474a3d886a5"
+        },
+        "after_0003": {
+          "shape": [
+            5056
+          ],
+          "dtype": "uint8",
+          "sha256": "48f37d0548f19d46aa4e53c88e419c99b5f3b31a0ad39ab822608313387c3e19"
+        }
+      }
+    },
+    "prepare.py": {
+      "bytes": 6811,
+      "sha256": "c87608287196de5c6858e7d9f95ca7af8e85a01cf1c7728074d3703957fa9f11"
+    },
+    "environment.json": {
+      "bytes": 2245,
+      "sha256": "c773bdf1c37e264e512d1d21a2869f9f0b1c14a86161e44b71be8c69b199c40f"
+    },
+    "training-comparison.json": {
+      "bytes": 71277,
+      "sha256": "08025cea4b3f08f037f3ca32575ff77dc4158be60e35622df2b697bb4dae27ac"
+    },
+    "generation-status.json": {
+      "bytes": 98,
+      "sha256": "eb723338d81029aaf6e15f4fd680e0ea275337b0f8d6c7c81c6119780402267f"
+    }
+  },
+  "training_plan_sha256": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a",
+  "training_audit_sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b",
+  "training_shard_sha256": {
+    "draws-0000-0015.safetensors": "59772049308434db5444b8265605b1dc17198ca775793f196759ec995b1a8bfa",
+    "draws-0016-0031.safetensors": "cef59ec3a16ed4c385d63d8d668757c7fd450a8530693ab9cbdb15e354047efd",
+    "draws-0032-0047.safetensors": "b3c0bacd2fd0976240362e5a480206d0cb7f99c383b6f5c978e177c0207afebf",
+    "draws-0048-0063.safetensors": "2676e95d22ee45df2a0135316029b8e9a6f5b352c56961abba4dbef25a827166",
+    "draws-0064-0079.safetensors": "82d4aa6bfabc3fc8566bbda6ba94e3ee71ba1b94ec89c6c2bb7fb1d661bfe7e2",
+    "draws-0080-0095.safetensors": "e3d08cceb446f0ec442956dbceca04deeb350147086bc8db20c3beb4d5824393",
+    "draws-0096-0111.safetensors": "12ecb16e5b16e12dd6347701c0b0368420006a82654836a86b7523eb1cb451f7",
+    "draws-0112-0127.safetensors": "31fdfc1e21d88e17a0fe8c5b9ab516dc0b4f57ac5a098b3bea363a35bc8c0c1f"
+  },
+  "cross_architecture_rule": "Saved file and tensor hashes are canonical; do not regenerate from seed at evaluation.",
+  "generation_completed_once": true,
+  "model_execution": false
+}

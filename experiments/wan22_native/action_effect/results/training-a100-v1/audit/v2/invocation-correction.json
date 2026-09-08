@@ -1,0 +1,15 @@
+{
+  "schema": "worldline-effect128-audit-invocation-correction-v1",
+  "status": "passed_with_absolute_inputs",
+  "prior_report_sha256": "d897ed4c81c73d37af9e906b37bd098b3594b58e560358ab8e03e17926fb8db4",
+  "final_report_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+  "prior_error": "Relative probe/cache/diagnostic CLI arguments were resolved after the frozen auditor changed its working directory. The first invocation stopped in source-bound prior-probe validation before numerical checks.",
+  "correction": "Use absolute paths for every CLI input and a fresh v2 output directory.",
+  "auditor_source_changed": false,
+  "producer_source_changed": false,
+  "raw_recovery_changed": false,
+  "original_failure_retained": true,
+  "audit_source_sha256": "0ab1ea225f4189bc0b51f6ea843d130368c46300b80090ca5e1aaa3f490bbf0e",
+  "checks_source_sha256": "157d6ab9976dacafe94bef35953ddb1d71f49f8127547736b36922ee6f26e079",
+  "final_report_unchanged": true
+}

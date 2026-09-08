@@ -1,0 +1,1407 @@
+{
+  "excludes": [
+    "installed venv",
+    "wheel binaries",
+    "model weights",
+    "credentials"
+  ],
+  "file_bytes": 294746936,
+  "files": {
+    "action-pack-assessment-recovery-v1.sh": {
+      "bytes": 3569,
+      "sha256": "9a4b16c55f53254197b42af723bf5c04f69b258d65b1a497aa61efc56e2aab55"
+    },
+    "action-results/effect-assessment-actual-plan-review.json": {
+      "bytes": 13275,
+      "sha256": "3e7af0e5942683433d77dce27ecd6ee5da428ea69e00096dd23c2d375d3ddae2"
+    },
+    "action-results/effect-assessment-admission.json": {
+      "bytes": 11421,
+      "sha256": "a5cec8b6d3de40678da480a6264bc998fe68ae69ecf1451f3f3747dffcffd864"
+    },
+    "action-results/effect-assessment-console.log": {
+      "bytes": 5,
+      "sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+    },
+    "action-results/effect-assessment-dispatch.json": {
+      "bytes": 292,
+      "sha256": "ff61cee83f547792cacad9cce966f8e746167a442d70d2177cd15a1bb23260bb"
+    },
+    "action-results/effect-assessment-lease-admission.json": {
+      "bytes": 559,
+      "sha256": "f674da21e7ca60a7aa0ad939307bb8fcfd9d03b90aee5ffded01d6f12e737e06"
+    },
+    "action-results/effect-assessment-pid.json": {
+      "bytes": 324,
+      "sha256": "e728e5d19d56f201226befa9fe38d692fc17d85e3b35cdbc81a11a4f17ab4c93"
+    },
+    "action-results/effect-assessment-pre-execution-check.json": {
+      "bytes": 298,
+      "sha256": "2f0c7860cc291dff7ee7961d18a82341218fc05fce14e493e85f5e68bcbd8ab0"
+    },
+    "action-results/effect-assessment-v1/cpu-report.json": {
+      "bytes": 11140,
+      "sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884"
+    },
+    "action-results/effect-assessment-v1/executed-admission.json": {
+      "bytes": 11421,
+      "sha256": "a5cec8b6d3de40678da480a6264bc998fe68ae69ecf1451f3f3747dffcffd864"
+    },
+    "action-results/effect-assessment-v1/execution-attempt.json": {
+      "bytes": 11,
+      "sha256": "d80ccc459a4560bf4b0bdddef4c5dd84c5b0070618eae61fc002b4af19c40bc0"
+    },
+    "action-results/effect-assessment-v1/heldout/environment.json": {
+      "bytes": 2245,
+      "sha256": "c773bdf1c37e264e512d1d21a2869f9f0b1c14a86161e44b71be8c69b199c40f"
+    },
+    "action-results/effect-assessment-v1/heldout/generation-status.json": {
+      "bytes": 98,
+      "sha256": "eb723338d81029aaf6e15f4fd680e0ea275337b0f8d6c7c81c6119780402267f"
+    },
+    "action-results/effect-assessment-v1/heldout/generator-states.safetensors": {
+      "bytes": 25640,
+      "sha256": "522276a0d47c5e701caf63dbb39d6bc823de5d1959828c49962d2f327d75a66f"
+    },
+    "action-results/effect-assessment-v1/heldout/manifest.json": {
+      "bytes": 5106,
+      "sha256": "058e8c34570032f9a76a34ed040d89490fc25aede5bcaa9ffe40559c43111c19"
+    },
+    "action-results/effect-assessment-v1/heldout/noise-0000.safetensors": {
+      "bytes": 3294808,
+      "sha256": "521016371ee1eea6d19db071b479ee65745988e93f3e9ed69beac349b22e2e48"
+    },
+    "action-results/effect-assessment-v1/heldout/noise-0001.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6ff785e7120dfdbb5f128e0a652277540bc65441a3dbd089a5c704b4ac2b7ed7"
+    },
+    "action-results/effect-assessment-v1/heldout/noise-0002.safetensors": {
+      "bytes": 3294808,
+      "sha256": "89e519d68f0ef8ba29128bf8cf0470a1b1da4c5c010bd6d29c8685d949ffce76"
+    },
+    "action-results/effect-assessment-v1/heldout/noise-0003.safetensors": {
+      "bytes": 3294808,
+      "sha256": "237d744f49623ca6f5349ad4e3002b84f7345fa5b6fdb490e5698307113e2bbe"
+    },
+    "action-results/effect-assessment-v1/heldout/prepare.py": {
+      "bytes": 6811,
+      "sha256": "c87608287196de5c6858e7d9f95ca7af8e85a01cf1c7728074d3703957fa9f11"
+    },
+    "action-results/effect-assessment-v1/heldout/training-comparison.json": {
+      "bytes": 71277,
+      "sha256": "08025cea4b3f08f037f3ca32575ff77dc4158be60e35622df2b697bb4dae27ac"
+    },
+    "action-results/effect-assessment-v1/launch.json": {
+      "bytes": 402,
+      "sha256": "013c0047bd5c60d72b1afe45514f8ce73373ff0a1da0b3b33a5e4038dbb81b56"
+    },
+    "action-results/effect-assessment-v1/metrics.json": {
+      "bytes": 413,
+      "sha256": "cc8ab2ce1a1889ef9779f4066cc6ecadf96ded0b6f8c107f268fb1ab08e5670e"
+    },
+    "action-results/effect-assessment-v1/new-training-audit.json": {
+      "bytes": 259703,
+      "sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/metrics.json": {
+      "bytes": 847,
+      "sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/plan.json": {
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/terminal.json": {
+      "bytes": 543,
+      "sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/training/checkpoint-0128/manifest.json": {
+      "bytes": 5003,
+      "sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/training/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/training/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/training/last-valid.json": {
+      "bytes": 154,
+      "sha256": "5cdc7404ae620db89de7ad52838fb048dc37b54399e4f9ae3dc87e0827c8454e"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/training/metrics.json": {
+      "bytes": 417501,
+      "sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/worker/metrics.json": {
+      "bytes": 91348,
+      "sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4"
+    },
+    "action-results/effect-assessment-v1/new-training-evidence/worker/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/effect-assessment-v1/new128.safetensors": {
+      "bytes": 3792296,
+      "sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce"
+    },
+    "action-results/effect-assessment-v1/parent-memory.jsonl": {
+      "bytes": 125675,
+      "sha256": "c14fc24fdf7ce2ae997b8c1c8590564388696f7c8ac00e0e1de66f6613f78410"
+    },
+    "action-results/effect-assessment-v1/plan.json": {
+      "bytes": 981775,
+      "sha256": "11293c2615974e003c8592641a255a2d38d3240ffc796385573ede3dcef1f698"
+    },
+    "action-results/effect-assessment-v1/post128-transfer-manifest.json": {
+      "bytes": 50363,
+      "sha256": "3b15652e29ff8ca468e34645775cfa13435eda289c2ac6d535d62c058b464efd"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/checkpoint-0128.safetensors": {
+      "bytes": 3792296,
+      "sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/cpu-report.json": {
+      "bytes": 9848,
+      "sha256": "9d902564fe0746ec81a727ec22f1e90a508e1300cd9414ff9045b7edd5e9cff2"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/checkpoint-0000.safetensors": {
+      "bytes": 3792296,
+      "sha256": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/cpu-report.json": {
+      "bytes": 9419,
+      "sha256": "d91ef87a3f0bc70ae6b7ae8ce0d107fbb7961016f45c24ee7ff5139270a48f17"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/diagnostic.py.txt": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/objective-inputs.safetensors": {
+      "bytes": 13248024,
+      "sha256": "95ccaab585bc90e7111510af04bd370585b42cf08f8f3f1dece450a04b47d7ce"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/original-training-inputs.safetensors": {
+      "bytes": 10543448,
+      "sha256": "289bc7ff587fef006986cc56f1fe57324d1d6b3d3adff33949ac706148e68b65"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/plan.json": {
+      "bytes": 157008,
+      "sha256": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/test_diagnostic.py.txt": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/commands.safetensors": {
+      "bytes": 912,
+      "sha256": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/contexts.safetensors": {
+      "bytes": 2474152,
+      "sha256": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/cpu-report.json": {
+      "bytes": 9117,
+      "sha256": "55c454f61b75f8008d19a6c9442b01aa27a273b94151054efa507b18855de577"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/core/result/metrics.json": {
+      "bytes": 11403,
+      "sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/core/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/core/terminal.json": {
+      "bytes": 543,
+      "sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/decode/result/metrics.json": {
+      "bytes": 10144,
+      "sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/decode/terminal.json": {
+      "bytes": 543,
+      "sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/baseline/metrics.json": {
+      "bytes": 5876,
+      "sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/metrics.json": {
+      "bytes": 79472,
+      "sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/result/completion.json": {
+      "bytes": 63408,
+      "sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/result/manifest.json": {
+      "bytes": 142043,
+      "sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/terminal.json": {
+      "bytes": 544,
+      "sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/cache/worker/metrics.json": {
+      "bytes": 6448,
+      "sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/metrics.json": {
+      "bytes": 846,
+      "sha256": "5b36295d76c6c66e66f8f20c82d0118d276dfe25db0275d7dd82d5d89b3714ea"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/plan.json": {
+      "bytes": 709761,
+      "sha256": "5c9528667f5c9bc263fe763ab946ef288589dea8851512bdd73397b654058fcb"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/terminal.json": {
+      "bytes": 542,
+      "sha256": "7674306b5bfa6035a5efa360b26fc7b1f002c1e20265a9776f0b5fd48be4378a"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/checkpoint-0016/manifest.json": {
+      "bytes": 740101,
+      "sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/last-valid.json": {
+      "bytes": 153,
+      "sha256": "f101d012370ee0eb8e2536fe46d2527ea6f973dd5b40b765061418343a175461"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/training/metrics.json": {
+      "bytes": 781775,
+      "sha256": "cf58d5ead7f803b49cc45de7c41f5bdcd23824a09543aecbb6336089adae02e7"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/worker/metrics.json": {
+      "bytes": 23670,
+      "sha256": "5deba8c040bebbdc82d87d5ba488a4d233c52c0622d1043ffc6327658a8048f3"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/evidence/training/worker/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/metrics.json": {
+      "bytes": 192,
+      "sha256": "caecdbc8667ceec0bfc699701736d70c4b776b0b3fa572bf0ef544e0bf6fab61"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/plan.json": {
+      "bytes": 1119213,
+      "sha256": "6feb229e4e27f2c44aa740184a1687bdad5b1ff06ada2eca1b4bb8d3b14e13f4"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/sampling-inputs.safetensors": {
+      "bytes": 7283048,
+      "sha256": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/inputs.py": {
+      "bytes": 18266,
+      "sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/run.py": {
+      "bytes": 15532,
+      "sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/sampler.py": {
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/local/test_run.py": {
+      "bytes": 9311,
+      "sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "bytes": 3901,
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "bytes": 5767,
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "bytes": 3550,
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "bytes": 3374,
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "bytes": 21001,
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/visual-inputs/source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/plan.json": {
+      "bytes": 981673,
+      "sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/source/diagnostic/diagnostic.py": {
+      "bytes": 20797,
+      "sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/source/diagnostic/test_diagnostic.py": {
+      "bytes": 6668,
+      "sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/source/reference14/diagnostic.py": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/source/reference14/test_diagnostic.py": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/source/training_reader/inputs.py": {
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/source/training_reader/training-source.json": {
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-audit.json": {
+      "bytes": 165916,
+      "sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/metrics.json": {
+      "bytes": 849,
+      "sha256": "7590275a379348a35ca967cb336e23cf5d460975972da73ae62dae987302d1f4"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/plan.json": {
+      "bytes": 813167,
+      "sha256": "94c2df86e6d62de09fc9fa469b2fca7e04fd7f5fe894b4182349fd36e6af833a"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/terminal.json": {
+      "bytes": 543,
+      "sha256": "c14d1d20f2ca540250e5471f59e716b096e5c8171a6d7aa1216d41c523f28491"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/training/checkpoint-0128/manifest.json": {
+      "bytes": 5006,
+      "sha256": "353c1e9fead663f10edb064d15267cee571a654ab9ee4da26080c2eb34f71f93"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/training/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/training/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/training/last-valid.json": {
+      "bytes": 154,
+      "sha256": "5e1fea5c716aed9bf225a5a0eb57eddeb7a7c5cd7b012e5764f35e63d7439124"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/training/metrics.json": {
+      "bytes": 333311,
+      "sha256": "922aa689f26114e538fc15dab7716c1d572248d3c83a92a2a5aa792cbad6bf25"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/worker/metrics.json": {
+      "bytes": 74379,
+      "sha256": "860b3aa2b7000cd30909751a2be012fa10179757ab28425bdc56eb5ed8a682f7"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/training-evidence/worker/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/effect-assessment-v1/result/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/result/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "630b904679d1081203d401f86f261d2237b0308efc9ae7ea2ff8b5ecf7e12383"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a8250356938301460d8f637d42afbc134b80f001c7b2fd585e1a5b08de90bf96"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "802a876e2e2472f7b4b1d31719c5730608e85f85bf2426b09fc9990f419bfb4c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bd2c6da67182c0c54b462a154458b3b10b036fd0a7a98979681e71be7ae9ceb0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "8057ef8fe7c369f6c7b8cd833e00ec945119d777166efdc66ba9208e8ee379bc"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "9e7c653dce3546c80651e556f46df9e1d9ab54b1181833bdae0f4302c0d6a98a"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c89972e614e84cbb67bb201b428e2c7614912d1eb46e4d8a2dc968b0706fb35c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a4dbe541c521c93bb57fad2f4f06c7fb203953cdbeeda71eb54fec2d230cb267"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c7c2eb799a25aa0f692e8bbe1425851fc1cf98a222e5b3ac4774a4f2c76996af"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "77ae44b45bfb7b63d87a1dac9f2bfb51f7e4ae307792bcc04d87193d956b7a37"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c7c2eb799a25aa0f692e8bbe1425851fc1cf98a222e5b3ac4774a4f2c76996af"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "77ae44b45bfb7b63d87a1dac9f2bfb51f7e4ae307792bcc04d87193d956b7a37"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a6c4a052c63822b73fe91cb6f417b383a8b70c898e9fa197aff089578498cec2"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "3db385f806f896f449e8858d9d85ed2c0a10934372bbd3796890189c5eec39fb"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fde9fdff0709f4dc37f36e3221ab971b978bede1cb68c6e63f1fe0aa3f3485ab"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "17b5f5283a34a6388abe24018d64f5d0ab6c7bd7c9e33739e45a380e73c193e0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ff8738e2395915c93584a6583a5a542db5a7a9353e93b7ec45be5c1753d83660"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ff86f0cfa44b42a99850d5a05aacd2e8f4bd070b4aa92b1baa85419e17658186"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b3c5660bf03ecd22d72147bd4f543f4b1f3650d577094fa1eca6cbbe365379ab"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ca10686c929ef6127c062c3195b454a09c17d181520022be50943507d5e61842"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "894d52ae2caa653f445d9d164299e92a37039b13b57f9feb1e2e86ae1b2c7434"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ced95a6e1ccc4cb7e7f8313e5b414162a368376298c846e3a7164e163281f88f"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "894d52ae2caa653f445d9d164299e92a37039b13b57f9feb1e2e86ae1b2c7434"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ced95a6e1ccc4cb7e7f8313e5b414162a368376298c846e3a7164e163281f88f"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "3df97f48b4776e67efafe3e1e130d8bfcfd6edc32131fc9bb4353232d73e103d"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "18bc297d4243908f1d244bf461e3dabd97bc8f6359d11f6a02a95dad2bfae911"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "44353d619a312a885e2d6d5b9235e8e90ddeed6032c24ef4427e3e4b19b65c38"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4e7eabd0a7b22193571917eaff68d712b9ab46da9172120c1c0d0470119383a9"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "458d27f7ea9841e1612f63236036cf4e409b5b7eb287dc4bdfc9afa270872dba"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "97d4fac50b80a4cd3ecb565e39d63d168544fa6d38bf6b8b105f62b6276e83dc"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "513434aa33e9dcdded50873fd72f1dd0fe90bfb7fd23400651a50b4119277352"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1eb26393e8b81699348971b9b58d63e9a6e09b57dcd0cd86729c6c1aa72df120"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d40954bfb32dadbd0b20bd2b0a4384613cbcbd7b19e8606d9029911247276f45"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "417906418e95d156a45d7cde05066ba38c10bc48ec98f463441ebfc8df1efaf0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d40954bfb32dadbd0b20bd2b0a4384613cbcbd7b19e8606d9029911247276f45"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "417906418e95d156a45d7cde05066ba38c10bc48ec98f463441ebfc8df1efaf0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6a9fe81a6ceb1af321e39335669374acb7b62b59a3584261485efbf2b367ae1f"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d847828a68ee743ec0fc062d49e571d2e6f9e3ec3141e6c278c9e8fe03f35f31"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "910b4d9c680efb320c4b1a7cd0170de66029c3c09d412f4e0ab9f3ebd4edb649"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "2a9eeea480cf1ca53b4fad3b5d4a7d762b7bd94f2e430fa17b6f90e250ac2dab"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "2ecd8951a368b4ebe49ddabb22871961ade7f60169c540f31df877af8072875c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0912585d7ee35e6e80fbbfb5690544dae8d6bb03aafcea190c8a551590ce828c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b7e59c21d8ffd1be4413fd468089ec1c71b24ee7ccd193e42e159907fe624f0e"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6e0df937113f588cf0d810879e8f886aff3e3bf88036f5718a479069d6269c1b"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fe634e280d4f3544b746831a8e3f7470ec62318f29263a3dee9e29fdc9cf2839"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "11d83079d7e069acd2ccec2fe75ca3c33b53110dc9df897ac04d19b8bf694cfa"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fe634e280d4f3544b746831a8e3f7470ec62318f29263a3dee9e29fdc9cf2839"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "11d83079d7e069acd2ccec2fe75ca3c33b53110dc9df897ac04d19b8bf694cfa"
+    },
+    "action-results/effect-assessment-v1/result/memory.jsonl": {
+      "bytes": 195445,
+      "sha256": "a6bf72bfb49103e5ae85bc900fd08b6f9feac3928c388e2dddf50ba06d05b15b"
+    },
+    "action-results/effect-assessment-v1/result/metrics.json": {
+      "bytes": 106439,
+      "sha256": "81515906b86395ce8e9443d877ca244a5ae703f459d4ed4402f03dd86f04732f"
+    },
+    "action-results/effect-assessment-v1/result/monitor-terminal.json": {
+      "bytes": 402,
+      "sha256": "9f2bb0010aae1a46cc3ad52a0e48e1247ecc24c8637a3bf55fea372b1f8fd4d0"
+    },
+    "action-results/effect-assessment-v1/result/original999-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0e1ef7a1ffe63c0c9d91e7a16116b64ccffe13947a2cee233fa67323e7abccc4"
+    },
+    "action-results/effect-assessment-v1/result/original999-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "43b3ae814a5a05d8cab0a99b3a1e3749c35d56cc1edad8a63f76782737dd838b"
+    },
+    "action-results/effect-assessment-v1/result/original999-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ebcad5e3bec094b1844b8721b920a82a0e6230d6b3b65e59f1027b8e5569412a"
+    },
+    "action-results/effect-assessment-v1/result/original999-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ccab666b8211c8557bd196e57714a8e77c9ba939d6c9b9f54bc03b825f9b0afc"
+    },
+    "action-results/effect-assessment-v1/result/original999-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a138c77de89729160048abccbf18d5ba496b0faf1339ae4f5abcf005e2bfdc4f"
+    },
+    "action-results/effect-assessment-v1/result/original999-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "f04af27be9a30ecc88d00a1b1dc9be23d4eb40f9a90c97a8dacf415393b746a0"
+    },
+    "action-results/effect-assessment-v1/result/original999-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "056481598d7c8615e21e79f4dba73bce4526c05bedf29c4763107a22e25a7154"
+    },
+    "action-results/effect-assessment-v1/result/original999-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "39fdf001511d491f4edbc8cffaff8e9121607473c0ea63932b38f2990bc0900b"
+    },
+    "action-results/effect-assessment-v1/result/original999-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e819239c976815e15409fb8b0262b2b4847c37a7d1472ae278f101e3eb98463b"
+    },
+    "action-results/effect-assessment-v1/result/original999-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "f904876f57123204c411b9cf3f68299e7277bdfc31945dec460c6b6ad4a69f1f"
+    },
+    "action-results/effect-assessment-v1/result/original999-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e819239c976815e15409fb8b0262b2b4847c37a7d1472ae278f101e3eb98463b"
+    },
+    "action-results/effect-assessment-v1/result/original999-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "f904876f57123204c411b9cf3f68299e7277bdfc31945dec460c6b6ad4a69f1f"
+    },
+    "action-results/effect-assessment-v1/result/seen506-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "427ebbdf08051ddb793a0b00bb74b187c45ff63b097e5b860097ae32b96ee161"
+    },
+    "action-results/effect-assessment-v1/result/seen506-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "94fbc8395cf58948ba058858dec35b6b12929bc4f7517cac2055556249dd2682"
+    },
+    "action-results/effect-assessment-v1/result/seen506-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "952fe0024f5556318be1244baa5b0070e93fc0544ca070370238969eb4b1ee10"
+    },
+    "action-results/effect-assessment-v1/result/seen506-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d56be03bad37bf14207f724f62bfa3b5f873cf0b9e05fb8edef2d3bd3a0f9032"
+    },
+    "action-results/effect-assessment-v1/result/seen506-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "134c0217636ca30d2a169e91ecbad0d31102af459e94e45005da6ec1c81b06d4"
+    },
+    "action-results/effect-assessment-v1/result/seen506-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c332e205ee542aa0973403524ed4b1fe433825bdf3a2cc8307fd10aea278e4d6"
+    },
+    "action-results/effect-assessment-v1/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/effect-assessment-v1/source/local/assessment.py": {
+      "bytes": 20057,
+      "sha256": "b281fb835ce449c8d3c44a071edbed605e199f857566bda980792e9103683328"
+    },
+    "action-results/effect-assessment-v1/source/local/bindings.py": {
+      "bytes": 6149,
+      "sha256": "20e372ea8ec4d8c3d9ffb12d8354b8440c000c3bafaec53018a8f8c72f4e5f3c"
+    },
+    "action-results/effect-assessment-v1/source/local/effect-training-plan.json": {
+      "bytes": 817529,
+      "sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4"
+    },
+    "action-results/effect-assessment-v1/source/local/effect-training-source.json": {
+      "bytes": 10576,
+      "sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b"
+    },
+    "action-results/effect-assessment-v1/source/local/reader.py": {
+      "bytes": 12281,
+      "sha256": "487f16b5c39975a70e5f95e92040bc496f6ad1ff68a01cd10665cf80706cece4"
+    },
+    "action-results/effect-assessment-v1/source/local/test_assessment.py": {
+      "bytes": 9609,
+      "sha256": "39c2e9402be64e077105bb2a57c322b32b8a7aaa08396f152dcd9650dfac0f3f"
+    },
+    "action-results/effect-assessment-v1/source/local/test_reader.py": {
+      "bytes": 5032,
+      "sha256": "a8690518d95c2e7a81de97802b4ebb0e5d80b76da897e245e4a28e5e578d23a2"
+    },
+    "action-results/effect-assessment-v1/source/reference/diagnostic.py": {
+      "bytes": 20797,
+      "sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71"
+    },
+    "action-results/effect-assessment-v1/source/reference/reference14/diagnostic.py": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350"
+    },
+    "action-results/effect-assessment-v1/source/reference/reference14/test_diagnostic.py": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f"
+    },
+    "action-results/effect-assessment-v1/source/reference/test_diagnostic.py": {
+      "bytes": 6668,
+      "sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c"
+    },
+    "action-results/effect-assessment-v1/source/reference/training_reader/inputs.py": {
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41"
+    },
+    "action-results/effect-assessment-v1/source/reference/training_reader/training-source.json": {
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347"
+    },
+    "action-results/effect-assessment-v1/source/reference/visual/inputs.py": {
+      "bytes": 18266,
+      "sha256": "379c363bad0585d75579d25904f2f14897fbe3514f410e7d599dafe4a840b52a"
+    },
+    "action-results/effect-assessment-v1/source/reference/visual/run.py": {
+      "bytes": 15532,
+      "sha256": "421aeb1a78d769e0221bc20312c46f3fb2f7262ae0da7371affcff714a283499"
+    },
+    "action-results/effect-assessment-v1/source/reference/visual/sampler.py": {
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314"
+    },
+    "action-results/effect-assessment-v1/source/reference/visual/test_run.py": {
+      "bytes": 9311,
+      "sha256": "75a468a56b412b6b756432f2799c82104f5d208be409c223414684d47d358098"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "bytes": 3901,
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "bytes": 5767,
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "bytes": 3550,
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "bytes": 3374,
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "bytes": 21001,
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "action-results/effect-assessment-v1/source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "action-results/effect-assessment-v1/terminal.json": {
+      "bytes": 543,
+      "sha256": "c59ce86d692e2fb7e0422838be2146ceb23399b43bd49b751ecea4a866a09147"
+    },
+    "action-results/effect-assessment-v1/worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "label": "effect-assessment-final-v1",
+  "parts": [
+    {
+      "name": "evidence.tar.gz.part-000",
+      "bytes": 8000000,
+      "sha256": "e360e3e20de12462d8057ad7cfb6cb5607ca3a7f5644c5cf7a0c7abbb850abb2"
+    },
+    {
+      "name": "evidence.tar.gz.part-001",
+      "bytes": 8000000,
+      "sha256": "a9c6f9fbb9438a7a349e2aba535d4f1f53d1c507397060d6229659ccbd58d493"
+    },
+    {
+      "name": "evidence.tar.gz.part-002",
+      "bytes": 8000000,
+      "sha256": "70201c3c274689c0f95dec34e6c7b4baee85c97b5689516aa70fc3c2f7d56506"
+    },
+    {
+      "name": "evidence.tar.gz.part-003",
+      "bytes": 8000000,
+      "sha256": "b67e0fed2d39c48b681e3011906d29525283f1b588bdc1cfbbf3bbdc88ea47fc"
+    },
+    {
+      "name": "evidence.tar.gz.part-004",
+      "bytes": 8000000,
+      "sha256": "e5bfcc2552bc0308577fad8ff2d1f4436f75381942360a56db9a28d5a941d9ac"
+    },
+    {
+      "name": "evidence.tar.gz.part-005",
+      "bytes": 8000000,
+      "sha256": "2fd959f38501e6fddb89e89a5c3ce55aca9b972864ea265a1ed297f03f759f06"
+    },
+    {
+      "name": "evidence.tar.gz.part-006",
+      "bytes": 8000000,
+      "sha256": "006e67cdab6a50270e9cfb6cd41eaec2d651b45397a98fa8410300ad8f8a616c"
+    },
+    {
+      "name": "evidence.tar.gz.part-007",
+      "bytes": 8000000,
+      "sha256": "3aecc39f511477c85b2efc4e901459350ff0f0cd3f5b73fdbf26f60b37959ae9"
+    },
+    {
+      "name": "evidence.tar.gz.part-008",
+      "bytes": 8000000,
+      "sha256": "bffb97fa407986d80f51a4a5c2d231297ff59a9933b577835d24b729454f2e4b"
+    },
+    {
+      "name": "evidence.tar.gz.part-009",
+      "bytes": 8000000,
+      "sha256": "52e294b61d41633e99003505544353784eb1e48a169beeee3b47a3c83e79480c"
+    },
+    {
+      "name": "evidence.tar.gz.part-010",
+      "bytes": 8000000,
+      "sha256": "4bf240cd365bc6eb57c6d2daf04ee39d67591c780aa4111ec89c4065f22f6252"
+    },
+    {
+      "name": "evidence.tar.gz.part-011",
+      "bytes": 8000000,
+      "sha256": "8323c970ee1235bd2f6fea4a9259f99ff1c09c54a0fa724fc4e03a1f998001db"
+    },
+    {
+      "name": "evidence.tar.gz.part-012",
+      "bytes": 8000000,
+      "sha256": "994b3556d1f2d72d57a58f7f94722a357f58840a9a5ff2936ed667656c586d44"
+    },
+    {
+      "name": "evidence.tar.gz.part-013",
+      "bytes": 8000000,
+      "sha256": "384e90860fc509ccc74cba5c0a4d531e363c06f45067b456a6d5ea99aa088303"
+    },
+    {
+      "name": "evidence.tar.gz.part-014",
+      "bytes": 8000000,
+      "sha256": "56e9b1ce9906c4b27b3cdafcdb20dd3800a1d9618c62c1c2494bfd40012ddf41"
+    },
+    {
+      "name": "evidence.tar.gz.part-015",
+      "bytes": 8000000,
+      "sha256": "0bfea653eb75e9286e1ddb38d0649285640c30967069ea3c0c669dff7cb78dc2"
+    },
+    {
+      "name": "evidence.tar.gz.part-016",
+      "bytes": 8000000,
+      "sha256": "dc6fa18523e40f90565ee4aca025c4f1d8a92ac629dc602289f66f12f0c01fd3"
+    },
+    {
+      "name": "evidence.tar.gz.part-017",
+      "bytes": 8000000,
+      "sha256": "d0881ef35782ec1a47f32ab00da995489e30c9dc8c23dd2031d53cf5a6d0991d"
+    },
+    {
+      "name": "evidence.tar.gz.part-018",
+      "bytes": 8000000,
+      "sha256": "52928d85ff10c3b6e691fdef457e25680081e96b09c2b68c646139850aa267a8"
+    },
+    {
+      "name": "evidence.tar.gz.part-019",
+      "bytes": 8000000,
+      "sha256": "1cba95a1e1e3899b6ba7fae27b96a0ecc1da3326eab9b1f5ee0005f81830bf2a"
+    },
+    {
+      "name": "evidence.tar.gz.part-020",
+      "bytes": 8000000,
+      "sha256": "7a14a444fc2796ced131606fc1ddb965d0be81438fb7d7876844032e052aba0b"
+    },
+    {
+      "name": "evidence.tar.gz.part-021",
+      "bytes": 1307039,
+      "sha256": "d36b61ab3379aedb83389b2d78fdb042361e8f60476205f67c5568916ec0e3fa"
+    }
+  ],
+  "schema": "worldline-action-recovery-v1",
+  "stream_sha256": "d6b52480fdac5cae32ef39008a4a6a46f0a835efc21a724bf9ab6378f46ff10f",
+  "transport_bytes": 169307039
+}

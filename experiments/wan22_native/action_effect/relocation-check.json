@@ -1,0 +1,62 @@
+{
+  "schema": "worldline-action-effect-source-relocation-check-v1",
+  "status": "passed",
+  "checks": [
+    {
+      "stage": "training",
+      "check": "CLI --help only",
+      "exit_code": 0,
+      "seconds": 3.540102625003783,
+      "output_sha256": "7b18a28a322bc6498d795f347a42f958a2cad06b659d37bfd30c29774442d218"
+    },
+    {
+      "stage": "training",
+      "check": "Existing historical CPU report matches relocated source graph",
+      "exit_code": 0,
+      "result": {
+        "cpu_report_sha256": "3ad62e5ef526e393d90511118e28334666a7c93e3db42989cbe3d6ae8bfe639d",
+        "cuda_initialized": false,
+        "source_map_matches": true
+      }
+    },
+    {
+      "stage": "assessment",
+      "check": "CLI --help only",
+      "exit_code": 0,
+      "seconds": 2.768909708975116,
+      "output_sha256": "a3c57cd05da1d4deb3260fd4ead38070637b299575d32bbcab3bc3364327517a"
+    },
+    {
+      "stage": "assessment",
+      "check": "Existing historical CPU report matches relocated source graph",
+      "exit_code": 0,
+      "result": {
+        "cpu_report_sha256": "9b6a5247269a26b6147687bf5003ce7fb15fd0f85024fdded8262a5d19f0f884",
+        "cuda_initialized": false,
+        "source_map_matches": true
+      }
+    },
+    {
+      "stage": "visual",
+      "check": "CLI --help only",
+      "exit_code": 0,
+      "seconds": 2.7360669169866014,
+      "output_sha256": "c16c960f21b50799aa78bcdb1325645c93823e884fbe4d2da660aeaf77f13971"
+    },
+    {
+      "stage": "visual",
+      "check": "Existing historical CPU report matches relocated source graph",
+      "exit_code": 0,
+      "result": {
+        "cpu_report_sha256": "d45181f62705a5370f396843e9496db575dad865852c7d6935da0b05070a4fea",
+        "cuda_initialized": false,
+        "source_map_matches": true
+      }
+    }
+  ],
+  "tests_rerun": false,
+  "model_execution": false,
+  "cuda_execution": false,
+  "provider_calls": 0,
+  "source_changes": false
+}

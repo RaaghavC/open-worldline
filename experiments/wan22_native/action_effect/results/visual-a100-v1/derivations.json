@@ -1,0 +1,1354 @@
+{
+  "schema": "worldline-prefix-only-public-derivations-v1",
+  "changes": [
+    {
+      "staged_member": "audit/binding.json",
+      "original_sha256": "b54f57946c5cdf25f290120738db541fb4c467588096f241501905c680c28058",
+      "staged_sha256": "0b6deef65300e027aa9bbc02628f7c050daffeffbde0f4de98c0a62e2f9866c0",
+      "json_fields": [
+        "prepared",
+        "source_review",
+        "plan_review"
+      ],
+      "replacement_count": 3,
+      "rule": "Replace only the original local workspace prefix in the listed top-level path fields with [WORKSPACE]/. Every other byte remains unchanged. Private prefix omitted.",
+      "original_retained": true
+    },
+    {
+      "staged_member": "reproducibility/prepared-inputs.tar.gz!training-audit.json",
+      "original_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+      "staged_sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4",
+      "json_fields": [
+        "run"
+      ],
+      "replacement_count": 1,
+      "rule": "Replace only the original local workspace prefix in the listed top-level path fields with [WORKSPACE]/. Every other byte remains unchanged. Private prefix omitted.",
+      "original_retained": true
+    }
+  ],
+  "copies_and_archive_members": {
+    "metrics/parent.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/metrics.json",
+      "original_bytes": 10229,
+      "original_sha256": "b331383f4dabe8e0c5c77d2935f432185e03f048f03eede0715a82415a7000bf",
+      "staged_bytes": 10229,
+      "staged_sha256": "b331383f4dabe8e0c5c77d2935f432185e03f048f03eede0715a82415a7000bf",
+      "transformation": "none"
+    },
+    "plans/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/plan.json",
+      "original_bytes": 1186327,
+      "original_sha256": "a6e239bdad20b699f5909d47a026f39312e4015135194a874587619d3d621ef3",
+      "staged_bytes": 1186327,
+      "staged_sha256": "a6e239bdad20b699f5909d47a026f39312e4015135194a874587619d3d621ef3",
+      "transformation": "none"
+    },
+    "plans/executed-admission.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/executed-admission.json",
+      "original_bytes": 1184236,
+      "original_sha256": "158b6ad5d70697f1680600936293db428ad5e0a51f65df3c4ae553ca0b42b774",
+      "staged_bytes": 1184236,
+      "staged_sha256": "158b6ad5d70697f1680600936293db428ad5e0a51f65df3c4ae553ca0b42b774",
+      "transformation": "none"
+    },
+    "preflight/visual-cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/cpu-report.json",
+      "original_bytes": 9279,
+      "original_sha256": "d45181f62705a5370f396843e9496db575dad865852c7d6935da0b05070a4fea",
+      "staged_bytes": 9279,
+      "staged_sha256": "d45181f62705a5370f396843e9496db575dad865852c7d6935da0b05070a4fea",
+      "transformation": "none"
+    },
+    "checkpoint/effect128-final.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/adapter.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "staged_bytes": 3792296,
+      "staged_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "transformation": "none"
+    },
+    "metrics/core-terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "9c976c87e99bdeda851bb5c4f0d7a394cec0494c66cb91dd02f8b930cc8fe39e",
+      "staged_bytes": 543,
+      "staged_sha256": "9c976c87e99bdeda851bb5c4f0d7a394cec0494c66cb91dd02f8b930cc8fe39e",
+      "transformation": "none"
+    },
+    "metrics/core-launch.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/launch.json",
+      "original_bytes": 486,
+      "original_sha256": "8321aab643a1928b650b841c7853282a786daa3a62b0af810414a04d4a618865",
+      "staged_bytes": 486,
+      "staged_sha256": "8321aab643a1928b650b841c7853282a786daa3a62b0af810414a04d4a618865",
+      "transformation": "none"
+    },
+    "metrics/core-metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/result/metrics.json",
+      "original_bytes": 29625,
+      "original_sha256": "93ff86510a00ea085851a90b73949c1eb6acad6b450efeb4ff500c883857da06",
+      "staged_bytes": 29625,
+      "staged_sha256": "93ff86510a00ea085851a90b73949c1eb6acad6b450efeb4ff500c883857da06",
+      "transformation": "none"
+    },
+    "metrics/core-monitor-terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/result/monitor-terminal.json",
+      "original_bytes": 405,
+      "original_sha256": "c21987bf05ed5e356906c65f3ed5ece0cce093116927cf9f2aa8c322bdfc6ac3",
+      "staged_bytes": 405,
+      "staged_sha256": "c21987bf05ed5e356906c65f3ed5ece0cce093116927cf9f2aa8c322bdfc6ac3",
+      "transformation": "none"
+    },
+    "metrics/core-weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/result/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "metrics/decode-terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "e30640f005d692bf1ec5e93192fec55c3164a5785fb13e6b3b47c00485719340",
+      "staged_bytes": 543,
+      "staged_sha256": "e30640f005d692bf1ec5e93192fec55c3164a5785fb13e6b3b47c00485719340",
+      "transformation": "none"
+    },
+    "metrics/decode-launch.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/launch.json",
+      "original_bytes": 581,
+      "original_sha256": "0eb28c5216fa37a340bf5eb627981ff5851c8f98595bd87f2373864c5bad7ac8",
+      "staged_bytes": 581,
+      "staged_sha256": "0eb28c5216fa37a340bf5eb627981ff5851c8f98595bd87f2373864c5bad7ac8",
+      "transformation": "none"
+    },
+    "metrics/decode-metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/metrics.json",
+      "original_bytes": 21331,
+      "original_sha256": "ce42399aee2250ea1a53fa03005110468391816d5bdcaf85b1981284c2b926da",
+      "staged_bytes": 21331,
+      "staged_sha256": "ce42399aee2250ea1a53fa03005110468391816d5bdcaf85b1981284c2b926da",
+      "transformation": "none"
+    },
+    "metrics/decode-monitor-terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/monitor-terminal.json",
+      "original_bytes": 403,
+      "original_sha256": "12f6c55eb12f1d5a2b0ec4a19f07edd66d924a3e32c3cbb1cdb1d756384dcae4",
+      "staged_bytes": 403,
+      "staged_sha256": "12f6c55eb12f1d5a2b0ec4a19f07edd66d924a3e32c3cbb1cdb1d756384dcae4",
+      "transformation": "none"
+    },
+    "metrics/decode-weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/weight-load.json",
+      "original_bytes": 47173,
+      "original_sha256": "0ee5cb4bda9171176eadd866a7316b2a591ae1cf169090a712ae248c04d09723",
+      "staged_bytes": 47173,
+      "staged_sha256": "0ee5cb4bda9171176eadd866a7316b2a591ae1cf169090a712ae248c04d09723",
+      "transformation": "none"
+    },
+    "metrics/core-before.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/result/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/core-after.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/core/result/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "clips/closed.gif": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/closed/preview.gif",
+      "original_bytes": 7528355,
+      "original_sha256": "6d6f70183478cc664fe567498fb3c743f20b6809d8a4b67851bc1b950727bce0",
+      "staged_bytes": 7528355,
+      "staged_sha256": "6d6f70183478cc664fe567498fb3c743f20b6809d8a4b67851bc1b950727bce0",
+      "transformation": "none"
+    },
+    "clips/open.gif": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/decode/result/open/preview.gif",
+      "original_bytes": 7567030,
+      "original_sha256": "772cbaafb0afb8316fad13a20b99ce9fc2e0aa5225ce66e8269b18ab6b92810a",
+      "staged_bytes": 7567030,
+      "staged_sha256": "772cbaafb0afb8316fad13a20b99ce9fc2e0aa5225ce66e8269b18ab6b92810a",
+      "transformation": "none"
+    },
+    "audit/audit.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-audit-v1/audit.py",
+      "original_bytes": 29939,
+      "original_sha256": "8e12dfab2b8aff084b3e89902f8e832f69706be8ac08daa001c1ffc82215cc91",
+      "staged_bytes": 29939,
+      "staged_sha256": "8e12dfab2b8aff084b3e89902f8e832f69706be8ac08daa001c1ffc82215cc91",
+      "transformation": "none"
+    },
+    "audit/binding.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-audit-v1/binding.json",
+      "original_bytes": 1222,
+      "original_sha256": "b54f57946c5cdf25f290120738db541fb4c467588096f241501905c680c28058",
+      "staged_bytes": 1138,
+      "staged_sha256": "0b6deef65300e027aa9bbc02628f7c050daffeffbde0f4de98c0a62e2f9866c0",
+      "transformation": "listed path prefixes only"
+    },
+    "audit/binding.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-audit-v1/binding.py",
+      "original_bytes": 7524,
+      "original_sha256": "e34c03c40d24c102b4c46076e05943d6ad8abb64fc508204afa080d810b9e06c",
+      "staged_bytes": 7524,
+      "staged_sha256": "e34c03c40d24c102b4c46076e05943d6ad8abb64fc508204afa080d810b9e06c",
+      "transformation": "none"
+    },
+    "audit/inventory.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-audit-v1/inventory.json",
+      "original_bytes": 47590,
+      "original_sha256": "3decbfd48e5190181863c1593e4262509d67e71353941790b2266e0b2ce26aff",
+      "staged_bytes": 47590,
+      "staged_sha256": "3decbfd48e5190181863c1593e4262509d67e71353941790b2266e0b2ce26aff",
+      "transformation": "none"
+    },
+    "audit/pins.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-audit-v1/pins.json",
+      "original_bytes": 78743,
+      "original_sha256": "91b2f14675f2b9fce680d5f0198f7596fa9c48647d8f938d088d0c020a972ae6",
+      "staged_bytes": 78743,
+      "staged_sha256": "91b2f14675f2b9fce680d5f0198f7596fa9c48647d8f938d088d0c020a972ae6",
+      "transformation": "none"
+    },
+    "audit/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-audit-v1/report.json",
+      "original_bytes": 37916,
+      "original_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+      "staged_bytes": 37916,
+      "staged_sha256": "e2413f62a328220a4fb2d8a467fcd3017636a9fcfd7995dfe34011d5ff4a741f",
+      "transformation": "none"
+    },
+    "comparison/all-34-frames.png": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/all-34-frames.png",
+      "original_bytes": 2033791,
+      "original_sha256": "521f53080b735a099926153f2c0cd93084e06e924e6bcc9f93b5dbbeb483d7f3",
+      "staged_bytes": 2033791,
+      "staged_sha256": "521f53080b735a099926153f2c0cd93084e06e924e6bcc9f93b5dbbeb483d7f3",
+      "transformation": "none"
+    },
+    "comparison/checkpoint-target-comparison.png": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/checkpoint-target-comparison.png",
+      "original_bytes": 10568055,
+      "original_sha256": "caa895fbf4bf7e021ac3f627d0bfc15781789612693001c4f4b087ba7d4b9697",
+      "staged_bytes": 10568055,
+      "staged_sha256": "caa895fbf4bf7e021ac3f627d0bfc15781789612693001c4f4b087ba7d4b9697",
+      "transformation": "none"
+    },
+    "comparison/full-frame-previews/closed-final.png": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/full-frame-previews/closed-final.png",
+      "original_bytes": 631515,
+      "original_sha256": "e9bfec1b0a174223dd72c2da5ab7a871f552130790f620906080d4a11bff9983",
+      "staged_bytes": 631515,
+      "staged_sha256": "e9bfec1b0a174223dd72c2da5ab7a871f552130790f620906080d4a11bff9983",
+      "transformation": "none"
+    },
+    "comparison/full-frame-previews/closed-initial.png": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/full-frame-previews/closed-initial.png",
+      "original_bytes": 602052,
+      "original_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+      "staged_bytes": 602052,
+      "staged_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+      "transformation": "none"
+    },
+    "comparison/full-frame-previews/open-final.png": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/full-frame-previews/open-final.png",
+      "original_bytes": 632611,
+      "original_sha256": "0efefb12620e6b473752b43c0ebe6b914b3cdac977ac5a26c033da811b6862ee",
+      "staged_bytes": 632611,
+      "staged_sha256": "0efefb12620e6b473752b43c0ebe6b914b3cdac977ac5a26c033da811b6862ee",
+      "transformation": "none"
+    },
+    "comparison/full-frame-previews/open-initial.png": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/full-frame-previews/open-initial.png",
+      "original_bytes": 602052,
+      "original_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+      "staged_bytes": 602052,
+      "staged_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+      "transformation": "none"
+    },
+    "comparison/interpretation.md": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/interpretation.md",
+      "original_bytes": 3682,
+      "original_sha256": "9d935a5194e2edad65d681658982e8a8e06e3f03842077a4834b1cf30048b4cf",
+      "staged_bytes": 3682,
+      "staged_sha256": "9d935a5194e2edad65d681658982e8a8e06e3f03842077a4834b1cf30048b4cf",
+      "transformation": "none"
+    },
+    "comparison/inventory.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/inventory.json",
+      "original_bytes": 2201,
+      "original_sha256": "63e5fce91554c8766634fa862f078c7717399afdc7d61f7b8c1fef37c7aa9307",
+      "staged_bytes": 2201,
+      "staged_sha256": "63e5fce91554c8766634fa862f078c7717399afdc7d61f7b8c1fef37c7aa9307",
+      "transformation": "none"
+    },
+    "comparison/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/report.json",
+      "original_bytes": 396440,
+      "original_sha256": "d56e25c7ac4c94cd6f2be3c729af56f0a709b28629640a42d2f7610729779aa2",
+      "staged_bytes": 396440,
+      "staged_sha256": "d56e25c7ac4c94cd6f2be3c729af56f0a709b28629640a42d2f7610729779aa2",
+      "transformation": "none"
+    },
+    "comparison/source/README.md": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/source/README.md",
+      "original_bytes": 5265,
+      "original_sha256": "fa1a83b2fcff4b498d6c76a216a24fa3cc200158183d5a1a15ce26af4017177d",
+      "staged_bytes": 5265,
+      "staged_sha256": "fa1a83b2fcff4b498d6c76a216a24fa3cc200158183d5a1a15ce26af4017177d",
+      "transformation": "none"
+    },
+    "comparison/source/analyze.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/source/analyze.py",
+      "original_bytes": 13954,
+      "original_sha256": "6ddf720516b7e6001f63a0b97d31377f9c13ac436870cb19f0cf87e0f24d978d",
+      "staged_bytes": 13954,
+      "staged_sha256": "6ddf720516b7e6001f63a0b97d31377f9c13ac436870cb19f0cf87e0f24d978d",
+      "transformation": "none"
+    },
+    "comparison/source/check.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/source/check.py",
+      "original_bytes": 2636,
+      "original_sha256": "6b694a7bc8a1def447731785784c24c9794ca6a11fab24b1545dbaa037494933",
+      "staged_bytes": 2636,
+      "staged_sha256": "6b694a7bc8a1def447731785784c24c9794ca6a11fab24b1545dbaa037494933",
+      "transformation": "none"
+    },
+    "comparison/source/cpu-check.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/source/cpu-check.json",
+      "original_bytes": 1639,
+      "original_sha256": "06e3796a940b7050a58a30cda829af885ec71216da1900a90789982ba129b2f9",
+      "staged_bytes": 1639,
+      "staged_sha256": "06e3796a940b7050a58a30cda829af885ec71216da1900a90789982ba129b2f9",
+      "transformation": "none"
+    },
+    "comparison/source/independent-read-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-comparison-v1/source/independent-read-review.json",
+      "original_bytes": 2640,
+      "original_sha256": "40c62a3e2e123b1783ba8544e0f93db8a70804d6c68c9fc02971e18ce2eae316",
+      "staged_bytes": 2640,
+      "staged_sha256": "40c62a3e2e123b1783ba8544e0f93db8a70804d6c68c9fc02971e18ce2eae316",
+      "transformation": "none"
+    },
+    "visual-review/parent-all-frame-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-parent-visual-review-v1/report.json",
+      "original_bytes": 2477,
+      "original_sha256": "4b41d60be1bf007a7d7676863bfc96402573cfde7c600d40ac984fc385602b43",
+      "staged_bytes": 2477,
+      "staged_sha256": "4b41d60be1bf007a7d7676863bfc96402573cfde7c600d40ac984fc385602b43",
+      "transformation": "none"
+    },
+    "plans/actual-plan-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-plan-review-v1/report.json",
+      "original_bytes": 11547,
+      "original_sha256": "26b5354ba7163fbe82529bc97afab97691516b7869f8b2f78a793b2e5e55f33a",
+      "staged_bytes": 11547,
+      "staged_sha256": "26b5354ba7163fbe82529bc97afab97691516b7869f8b2f78a793b2e5e55f33a",
+      "transformation": "none"
+    },
+    "preflight/visual-independent-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-independent-review-v1/report.json",
+      "original_bytes": 11142,
+      "original_sha256": "797e12fcdafad9f64f941e4b4ab2270e1b03ce936ffee614ca77f6d333a773bb",
+      "staged_bytes": 11142,
+      "staged_sha256": "797e12fcdafad9f64f941e4b4ab2270e1b03ce936ffee614ca77f6d333a773bb",
+      "transformation": "none"
+    },
+    "preflight/auditor-cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-audit-prep-v1/cpu-v1.json",
+      "original_bytes": 735,
+      "original_sha256": "e96385ea93c7888d92227407fd56d0bd6b063f7796c61f94f03d4aa417803afe",
+      "staged_bytes": 735,
+      "staged_sha256": "e96385ea93c7888d92227407fd56d0bd6b063f7796c61f94f03d4aa417803afe",
+      "transformation": "none"
+    },
+    "preflight/auditor-independent-review.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-audit-independent-review-v1/report.json",
+      "original_bytes": 1732,
+      "original_sha256": "0b66b32e7552fd82100f5499b076eeb7b9dd199d06fed1f2383e72859d1caddc",
+      "staged_bytes": 1732,
+      "staged_sha256": "0b66b32e7552fd82100f5499b076eeb7b9dd199d06fed1f2383e72859d1caddc",
+      "transformation": "none"
+    },
+    "preflight/actual-preparation.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-actual-preparation-v1/report.json",
+      "original_bytes": 11510,
+      "original_sha256": "b5d736e0f6559464e7f77272e39f379114cf7a5cb0073577d83bb3b3b943f90a",
+      "staged_bytes": 11510,
+      "staged_sha256": "b5d736e0f6559464e7f77272e39f379114cf7a5cb0073577d83bb3b3b943f90a",
+      "transformation": "none"
+    },
+    "assessment/summary.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-assessment-actual-summary-v1.json",
+      "original_bytes": 3205,
+      "original_sha256": "ed5016a150ccbfb1e3e6513107efeb62841ad6fab408592d050eca3ab6af3a04",
+      "staged_bytes": 3205,
+      "staged_sha256": "ed5016a150ccbfb1e3e6513107efeb62841ad6fab408592d050eca3ab6af3a04",
+      "transformation": "none"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/ATRIUM-CC0.txt",
+      "original_bytes": 7840,
+      "original_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "staged_bytes": 7840,
+      "staged_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WAN-APACHE-2.0.txt",
+      "original_bytes": 11357,
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "staged_bytes": 11357,
+      "staged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WAN-NOTICE.txt",
+      "original_bytes": 1252,
+      "original_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "staged_bytes": 1252,
+      "staged_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WORLDLINE-APACHE-2.0.txt",
+      "original_bytes": 11358,
+      "original_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "staged_bytes": 11358,
+      "staged_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-NOTICE.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-training-publication-v1/payload/licenses/WORLDLINE-NOTICE.txt",
+      "original_bytes": 428,
+      "original_sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "staged_bytes": 428,
+      "staged_sha256": "bf9a03e4fee584e17a9cd0a3f67ec2180d95e4b4be86fb4776665785efe51915",
+      "transformation": "none"
+    },
+    "recovery/original-index.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/index.json",
+      "original_bytes": 66724,
+      "original_sha256": "9897bddfcc99b2ce0db29e9a4b7dbd1e7f88f51f0c671d07fee2e2db82a6866e",
+      "staged_bytes": 66724,
+      "staged_sha256": "9897bddfcc99b2ce0db29e9a4b7dbd1e7f88f51f0c671d07fee2e2db82a6866e",
+      "transformation": "none"
+    },
+    "recovery/original-recovery-verified.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovery-verified.json",
+      "original_bytes": 315,
+      "original_sha256": "4c9e767015e46c6867ace5cb590e9d6da168a0af6f23b0ba139eb592659f6901",
+      "staged_bytes": 315,
+      "staged_sha256": "4c9e767015e46c6867ace5cb590e9d6da168a0af6f23b0ba139eb592659f6901",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/local/inputs.py",
+      "original_bytes": 21490,
+      "original_sha256": "6a58a89b4274ddc8b248bec2e6ee4115bf6354d914a2a2ad5b4eb152e0edbd13",
+      "staged_bytes": 21490,
+      "staged_sha256": "6a58a89b4274ddc8b248bec2e6ee4115bf6354d914a2a2ad5b4eb152e0edbd13",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/local/run.py",
+      "original_bytes": 15968,
+      "original_sha256": "7f39872dcf7edeae2fa55751addb806e13f8df159b6fa08006e72addfbd2ea97",
+      "staged_bytes": 15968,
+      "staged_sha256": "7f39872dcf7edeae2fa55751addb806e13f8df159b6fa08006e72addfbd2ea97",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/sampler.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/local/sampler.py",
+      "original_bytes": 12488,
+      "original_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "staged_bytes": 12488,
+      "staged_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/test_run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/local/test_run.py",
+      "original_bytes": 12925,
+      "original_sha256": "5eed91b9f29e03068d44ffe8836eb94679ead23b6762c2597708d3adce989ad7",
+      "staged_bytes": 12925,
+      "staged_sha256": "5eed91b9f29e03068d44ffe8836eb94679ead23b6762c2597708d3adce989ad7",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/training-contract.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/local/training-contract.json",
+      "original_bytes": 54448,
+      "original_sha256": "daf0657204d8d2ce850b6f76b0746866e8769d599fb23b61845b25ac0ba2ed34",
+      "staged_bytes": 54448,
+      "staged_sha256": "daf0657204d8d2ce850b6f76b0746866e8769d599fb23b61845b25ac0ba2ed34",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/local/training-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/local/training-source.json",
+      "original_bytes": 10576,
+      "original_sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+      "staged_bytes": 10576,
+      "staged_sha256": "92ae8b12d19c800553bcee902c087c62370b0175000fcf3924554efd5ef9b21b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/room_world/__init__.py",
+      "original_bytes": 82,
+      "original_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "staged_bytes": 82,
+      "staged_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_evaluate.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/room_world/memory_evaluate.py",
+      "original_bytes": 43810,
+      "original_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "staged_bytes": 43810,
+      "staged_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/room_world/memory_model.py",
+      "original_bytes": 6862,
+      "original_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "staged_bytes": 6862,
+      "staged_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_sequence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/room_world/memory_sequence.py",
+      "original_bytes": 4839,
+      "original_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "staged_bytes": 4839,
+      "staged_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/memory_train.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/room_world/memory_train.py",
+      "original_bytes": 39603,
+      "original_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "staged_bytes": 39603,
+      "staged_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/room_world/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/room_world/model.py",
+      "original_bytes": 5261,
+      "original_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "staged_bytes": 5261,
+      "staged_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/__init__.py",
+      "original_bytes": 125,
+      "original_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "staged_bytes": 125,
+      "staged_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_adapter/__init__.py",
+      "original_bytes": 193,
+      "original_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "staged_bytes": 193,
+      "staged_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_adapter/model.py",
+      "original_bytes": 5459,
+      "original_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "staged_bytes": 5459,
+      "staged_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_adapter/pooling.py",
+      "original_bytes": 1776,
+      "original_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "staged_bytes": 1776,
+      "staged_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/__init__.py",
+      "original_bytes": 121,
+      "original_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "staged_bytes": 121,
+      "staged_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/bridge.py",
+      "original_bytes": 14738,
+      "original_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "staged_bytes": 14738,
+      "staged_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/cache_run.py",
+      "original_bytes": 10181,
+      "original_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "staged_bytes": 10181,
+      "staged_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "original_bytes": 3638,
+      "original_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "staged_bytes": 3638,
+      "staged_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "original_bytes": 1949,
+      "original_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "staged_bytes": 1949,
+      "staged_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/data.py",
+      "original_bytes": 33216,
+      "original_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "staged_bytes": 33216,
+      "staged_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/probe.py",
+      "original_bytes": 24439,
+      "original_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "staged_bytes": 24439,
+      "staged_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "original_bytes": 15730,
+      "original_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "staged_bytes": 15730,
+      "staged_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/probe_math.py",
+      "original_bytes": 14380,
+      "original_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "staged_bytes": 14380,
+      "staged_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/test_cpu.py",
+      "original_bytes": 15098,
+      "original_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "staged_bytes": 15098,
+      "staged_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/test_independent.py",
+      "original_bytes": 7882,
+      "original_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "staged_bytes": 7882,
+      "staged_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/test_probe.py",
+      "original_bytes": 16253,
+      "original_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "staged_bytes": 16253,
+      "staged_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py",
+      "original_bytes": 8816,
+      "original_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "staged_bytes": 8816,
+      "staged_sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_data/__init__.py",
+      "original_bytes": 122,
+      "original_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "staged_bytes": 122,
+      "staged_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_data/data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_data/data.py",
+      "original_bytes": 8558,
+      "original_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "staged_bytes": 8558,
+      "staged_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_training/__init__.py",
+      "original_bytes": 116,
+      "original_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "staged_bytes": 116,
+      "staged_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/action_training/objective.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/action_training/objective.py",
+      "original_bytes": 12121,
+      "original_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "staged_bytes": 12121,
+      "staged_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "original_bytes": 11357,
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "staged_bytes": 11357,
+      "staged_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/__init__.py",
+      "original_bytes": 105,
+      "original_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "staged_bytes": 105,
+      "staged_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/codec-source.json",
+      "original_bytes": 1956,
+      "original_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "staged_bytes": 1956,
+      "staged_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/config.json",
+      "original_bytes": 251,
+      "original_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "staged_bytes": 251,
+      "staged_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/decode.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/decode.py",
+      "original_bytes": 3901,
+      "original_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "staged_bytes": 3901,
+      "staged_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/evidence.py",
+      "original_bytes": 7774,
+      "original_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "staged_bytes": 7774,
+      "staged_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "original_bytes": 206154,
+      "original_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "staged_bytes": 206154,
+      "staged_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/guards.py",
+      "original_bytes": 6767,
+      "original_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "staged_bytes": 6767,
+      "staged_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/native.py",
+      "original_bytes": 3102,
+      "original_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "staged_bytes": 3102,
+      "staged_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/requirements.txt",
+      "original_bytes": 263,
+      "original_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "staged_bytes": 263,
+      "staged_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/sampling.py",
+      "original_bytes": 2503,
+      "original_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "staged_bytes": 2503,
+      "staged_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "original_bytes": 2710,
+      "original_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "staged_bytes": 2710,
+      "staged_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "original_bytes": 108,
+      "original_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "staged_bytes": 108,
+      "staged_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "original_bytes": 5435,
+      "original_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "staged_bytes": 5435,
+      "staged_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "original_bytes": 32558,
+      "original_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "staged_bytes": 32558,
+      "staged_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "original_bytes": 18097,
+      "original_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "staged_bytes": 18097,
+      "staged_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "original_bytes": 31846,
+      "original_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "staged_bytes": 31846,
+      "staged_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/load_weights.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/load_weights.py",
+      "original_bytes": 8146,
+      "original_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "staged_bytes": 8146,
+      "staged_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/official_cpu/__init__.py",
+      "original_bytes": 113,
+      "original_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "staged_bytes": 113,
+      "staged_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/official_cpu/inputs.py",
+      "original_bytes": 3429,
+      "original_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "staged_bytes": 3429,
+      "staged_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/official_cpu/streaming.py",
+      "original_bytes": 10387,
+      "original_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "staged_bytes": 10387,
+      "staged_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/portable.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/portable.py",
+      "original_bytes": 11880,
+      "original_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "staged_bytes": 11880,
+      "staged_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/__init__.py",
+      "original_bytes": 110,
+      "original_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "staged_bytes": 110,
+      "staged_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/codec.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/codec.py",
+      "original_bytes": 5767,
+      "original_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "staged_bytes": 5767,
+      "staged_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/config.py",
+      "original_bytes": 1348,
+      "original_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "staged_bytes": 1348,
+      "staged_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/evidence.py",
+      "original_bytes": 22089,
+      "original_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "staged_bytes": 22089,
+      "staged_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/guards.py",
+      "original_bytes": 10133,
+      "original_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "staged_bytes": 10133,
+      "staged_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/inputs.py",
+      "original_bytes": 9961,
+      "original_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "staged_bytes": 9961,
+      "staged_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/native.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/native.py",
+      "original_bytes": 3550,
+      "original_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "staged_bytes": 3550,
+      "staged_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/output.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/output.py",
+      "original_bytes": 3374,
+      "original_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "staged_bytes": 3374,
+      "staged_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/run.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/run.py",
+      "original_bytes": 21001,
+      "original_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "staged_bytes": 21001,
+      "staged_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/spatial_reference/sampling.py",
+      "original_bytes": 7526,
+      "original_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "staged_bytes": 7526,
+      "staged_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/text-reuse.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/text-reuse.json",
+      "original_bytes": 2309,
+      "original_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "staged_bytes": 2309,
+      "staged_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/vendor/__init__.py",
+      "original_bytes": 119,
+      "original_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "staged_bytes": 119,
+      "staged_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/vendor/attention.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/vendor/attention.py",
+      "original_bytes": 5435,
+      "original_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "staged_bytes": 5435,
+      "staged_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan22_native/vendor/model.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan22_native/vendor/model.py",
+      "original_bytes": 18097,
+      "original_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "staged_bytes": 18097,
+      "staged_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan_adapter/capture_data.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan_adapter/capture_data.py",
+      "original_bytes": 6043,
+      "original_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "staged_bytes": 6043,
+      "staged_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan_adapter/native_control/__init__.py",
+      "original_bytes": 80,
+      "original_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "staged_bytes": 80,
+      "staged_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "transformation": "none"
+    },
+    "reproducibility/executed-source.tar.gz!source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-recovered-final-v1/recovered/action-results/effect-visual-v1/source/repository/experiments/wan_adapter/native_control/portable.py",
+      "original_bytes": 4570,
+      "original_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "staged_bytes": 4570,
+      "staged_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!adapter.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/adapter.safetensors",
+      "original_bytes": 3792296,
+      "original_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "staged_bytes": 3792296,
+      "staged_sha256": "4c9cd94ac04a45a4dad29d5e5efa05b6560af99c364d350657d5d5fa4f8ca3ce",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!commands.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/commands.safetensors",
+      "original_bytes": 912,
+      "original_sha256": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405",
+      "staged_bytes": 912,
+      "staged_sha256": "4d9566e19f22067d6496edeb0206713dd52e3b14378ff8895148f1a918daa405",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!contexts.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/contexts.safetensors",
+      "original_bytes": 2474152,
+      "original_sha256": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee",
+      "staged_bytes": 2474152,
+      "staged_sha256": "40f59cf54f2819555ff37a95a116e41f3fe1e247af14cf824704f6191df327ee",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!cpu-report.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/cpu-report.json",
+      "original_bytes": 9279,
+      "original_sha256": "d45181f62705a5370f396843e9496db575dad865852c7d6935da0b05070a4fea",
+      "staged_bytes": 9279,
+      "staged_sha256": "d45181f62705a5370f396843e9496db575dad865852c7d6935da0b05070a4fea",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/baseline/core/result/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/baseline/core/result/metrics.json",
+      "original_bytes": 11403,
+      "original_sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08",
+      "staged_bytes": 11403,
+      "staged_sha256": "1f9c6ad27e034d57aca684d69d40190dcae6eaf5af586923703f8df5d2145c08",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/baseline/core/result/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/baseline/core/result/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/baseline/core/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/baseline/core/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0",
+      "staged_bytes": 543,
+      "staged_sha256": "83418e75bbb244d1c4c035b8bbc1c4861053f8d38aa68d60120c49efb9fdc1e0",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/baseline/decode/result/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/baseline/decode/result/metrics.json",
+      "original_bytes": 10144,
+      "original_sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b",
+      "staged_bytes": 10144,
+      "staged_sha256": "9a4d616d69a3ff7d99b77ed4391c3afe3820261cc97988f74cac6d2dffbabc5b",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/baseline/decode/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/baseline/decode/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d",
+      "staged_bytes": 543,
+      "staged_sha256": "2676fd4ddf6d253489cd34cc74840fd5b45c451c85c61bc0cd81deabd8f37b1d",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/baseline/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/baseline/metrics.json",
+      "original_bytes": 5876,
+      "original_sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9",
+      "staged_bytes": 5876,
+      "staged_sha256": "64fb77ed9778fbb4028a8f9679f7b34fc52c900b06f6b106e407eade0ad2fce9",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/cache/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/cache/metrics.json",
+      "original_bytes": 79472,
+      "original_sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+      "staged_bytes": 79472,
+      "staged_sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/cache/result/completion.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/cache/result/completion.json",
+      "original_bytes": 63408,
+      "original_sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+      "staged_bytes": 63408,
+      "staged_sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/cache/result/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/cache/result/manifest.json",
+      "original_bytes": 142043,
+      "original_sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+      "staged_bytes": 142043,
+      "staged_sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/cache/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/cache/terminal.json",
+      "original_bytes": 544,
+      "original_sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587",
+      "staged_bytes": 544,
+      "staged_sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/cache/worker/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/cache/worker/metrics.json",
+      "original_bytes": 6448,
+      "original_sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069",
+      "staged_bytes": 6448,
+      "staged_sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/metrics.json",
+      "original_bytes": 847,
+      "original_sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae",
+      "staged_bytes": 847,
+      "staged_sha256": "72ad5a6814517a34383fed9592cdb72e9c6c51ed409d2ca50ad543c6d57f77ae",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/plan.json",
+      "original_bytes": 817529,
+      "original_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "staged_bytes": 817529,
+      "staged_sha256": "bd6dc4082ddf1f19033f8b967eaf5cb3356d6e0484530e039e250d68a24c68e4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/terminal.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/terminal.json",
+      "original_bytes": 543,
+      "original_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+      "staged_bytes": 543,
+      "staged_sha256": "7765fafa101bf84e401544480b7a0858b71212469b3e42a483f1beb67f469a2d",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/training/checkpoint-0128/manifest.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/training/checkpoint-0128/manifest.json",
+      "original_bytes": 5003,
+      "original_sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f",
+      "staged_bytes": 5003,
+      "staged_sha256": "4c4e712bdb40c538d84be5c69be58c3e6322d24752090db5ebf403ee1de3129f",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/training/core-after.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/training/core-after.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/training/core-before.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/training/core-before.json",
+      "original_bytes": 150573,
+      "original_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "staged_bytes": 150573,
+      "staged_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/training/last-valid.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/training/last-valid.json",
+      "original_bytes": 154,
+      "original_sha256": "5cdc7404ae620db89de7ad52838fb048dc37b54399e4f9ae3dc87e0827c8454e",
+      "staged_bytes": 154,
+      "staged_sha256": "5cdc7404ae620db89de7ad52838fb048dc37b54399e4f9ae3dc87e0827c8454e",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/training/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/training/metrics.json",
+      "original_bytes": 417501,
+      "original_sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32",
+      "staged_bytes": 417501,
+      "staged_sha256": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/worker/metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/worker/metrics.json",
+      "original_bytes": 91348,
+      "original_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+      "staged_bytes": 91348,
+      "staged_sha256": "3964ececab457a91bd4cc4ded704cc625feb04ca79cfc2016980386a06ec13a4",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!evidence/training/worker/weight-load.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/evidence/training/worker/weight-load.json",
+      "original_bytes": 391591,
+      "original_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "staged_bytes": 391591,
+      "staged_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!metrics.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/metrics.json",
+      "original_bytes": 197,
+      "original_sha256": "942936c85e206762a10c4dec9e28ff18b0b2987b16d8c70b99deb90118a5afc6",
+      "staged_bytes": 197,
+      "staged_sha256": "942936c85e206762a10c4dec9e28ff18b0b2987b16d8c70b99deb90118a5afc6",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!plan.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/plan.json",
+      "original_bytes": 1186327,
+      "original_sha256": "a6e239bdad20b699f5909d47a026f39312e4015135194a874587619d3d621ef3",
+      "staged_bytes": 1186327,
+      "staged_sha256": "a6e239bdad20b699f5909d47a026f39312e4015135194a874587619d3d621ef3",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!sampling-inputs.safetensors": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/sampling-inputs.safetensors",
+      "original_bytes": 7283048,
+      "original_sha256": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade",
+      "staged_bytes": 7283048,
+      "staged_sha256": "0b1daf39df7630971ae67ae1d0db43ede1bc0fa20a893a295d4eed6e878faade",
+      "transformation": "none"
+    },
+    "reproducibility/prepared-inputs.tar.gz!training-audit.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-visual-prepared-v1/training-audit.json",
+      "original_bytes": 259731,
+      "original_sha256": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+      "staged_bytes": 259703,
+      "staged_sha256": "6fd71bfdf0d25b48fe18fb3f217f37f8cdb709903652417f30b34230b7f41ba4",
+      "transformation": "listed path prefixes only"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!analyze.py": {
+      "original_workspace_relative_path": "work/wan22-action-cuda-visual-analysis-prep-v1/analyze.py",
+      "original_bytes": 16963,
+      "original_sha256": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "staged_bytes": 16963,
+      "staged_sha256": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "transformation": "none"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!experiments/wan22_native/action_data/data.py": {
+      "original_workspace_relative_path": "outputs/open-worldline/experiments/wan22_native/action_data/data.py",
+      "original_bytes": 8558,
+      "original_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "staged_bytes": 8558,
+      "staged_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "transformation": "none"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!experiments/wan22_native/action_data/source-plan.md.txt": {
+      "original_workspace_relative_path": "outputs/open-worldline/experiments/wan22_native/action_data/source-plan.md.txt",
+      "original_bytes": 30107,
+      "original_sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "staged_bytes": 30107,
+      "staged_sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "transformation": "none"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!experiments/wan22_native/spatial_audit/rgb.py": {
+      "original_workspace_relative_path": "outputs/open-worldline/experiments/wan22_native/spatial_audit/rgb.py",
+      "original_bytes": 20764,
+      "original_sha256": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "staged_bytes": 20764,
+      "staged_sha256": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "transformation": "none"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!experiments/wan22_native/spatial_reference/config.py": {
+      "original_workspace_relative_path": "outputs/open-worldline/experiments/wan22_native/spatial_reference/config.py",
+      "original_bytes": 1348,
+      "original_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "staged_bytes": 1348,
+      "staged_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "transformation": "none"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!experiments/wan22_native/spatial_reference/inputs.py": {
+      "original_workspace_relative_path": "outputs/open-worldline/experiments/wan22_native/spatial_reference/inputs.py",
+      "original_bytes": 9961,
+      "original_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "staged_bytes": 9961,
+      "staged_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "transformation": "none"
+    },
+    "reproducibility/rgb-analysis-dependencies.tar.gz!experiments/wan_adapter/capture_data.py": {
+      "original_workspace_relative_path": "outputs/open-worldline/experiments/wan_adapter/capture_data.py",
+      "original_bytes": 6043,
+      "original_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "staged_bytes": 6043,
+      "staged_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "transformation": "none"
+    },
+    "recovery/public-derivative/index.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-public-recovery-prep-v1/visual/assets/index.json",
+      "original_bytes": 72754,
+      "original_sha256": "66a3eb0ea3a470e27de1d9443ded653ee92131c805dbdad20c93c0c3a2f3b2fa",
+      "staged_bytes": 72754,
+      "staged_sha256": "66a3eb0ea3a470e27de1d9443ded653ee92131c805dbdad20c93c0c3a2f3b2fa",
+      "transformation": "none"
+    },
+    "recovery/public-derivative/original-index.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-public-recovery-prep-v1/visual/assets/original-index.json",
+      "original_bytes": 66724,
+      "original_sha256": "9897bddfcc99b2ce0db29e9a4b7dbd1e7f88f51f0c671d07fee2e2db82a6866e",
+      "staged_bytes": 66724,
+      "staged_sha256": "9897bddfcc99b2ce0db29e9a4b7dbd1e7f88f51f0c671d07fee2e2db82a6866e",
+      "transformation": "none"
+    },
+    "recovery/public-derivative/member-mapping.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-public-recovery-prep-v1/visual/assets/member-mapping.json",
+      "original_bytes": 133985,
+      "original_sha256": "16ad61db4da337200fa01b8b228d3bd02a353c66c01380300f9d17f163748b80",
+      "staged_bytes": 133985,
+      "staged_sha256": "16ad61db4da337200fa01b8b228d3bd02a353c66c01380300f9d17f163748b80",
+      "transformation": "none"
+    },
+    "recovery/public-derivative/public-derivation.json": {
+      "original_workspace_relative_path": "work/wan22-action-effect-public-recovery-prep-v1/visual/assets/public-derivation.json",
+      "original_bytes": 3206,
+      "original_sha256": "1f87014e7e39d4e69e66b2c06050905ee19a88a4f65b9e79d360980f6d18bab4",
+      "staged_bytes": 3206,
+      "staged_sha256": "1f87014e7e39d4e69e66b2c06050905ee19a88a4f65b9e79d360980f6d18bab4",
+      "transformation": "none"
+    }
+  },
+  "originals_retained": true,
+  "private_prefix_literal_omitted": true,
+  "scientific_source_metric_tensor_image_bytes_changed": false
+}
