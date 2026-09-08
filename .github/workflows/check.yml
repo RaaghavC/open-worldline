@@ -87,10 +87,25 @@ jobs:
       - run: python -m pytest -q experiments/wan22_native/official_cpu/test_cpu.py experiments/wan22_native/official_cpu/test_independent.py
       - run: python -m pytest -q experiments/wan22_native/cuda_reference/test_cpu.py experiments/wan22_native/cuda_reference/test_independent.py
       - run: python -m experiments.wan22_native.spatial_reference.test_protocol --output work/wan22-spatial-cpu-review.json
+      - run: >-
+          python -m experiments.wan22_native.spatial_reference.run
+          --mode codec --profile both --expected-gpu 'NVIDIA A100-SXM4-80GB'
+          --weights /nonexistent-plan-only-weights
+          --inputs experiments/wan22_native/spatial_reference/prepared-inputs-v1
+          --input-manifest-sha256 765b0863f6b0ce8d9bb0e4edf4fdbcc64fa9e96b997eb5e61c010eb0c2f1ccdf
+          --cpu-report work/wan22-spatial-cpu-review.json
+          --output work/wan22-spatial-codec-plan
       - uses: actions/upload-artifact@v4
         with:
           name: wan22-spatial-cpu-review
-          path: work/wan22-spatial-cpu-review.json
+          path: |
+            work/wan22-spatial-cpu-review.json
+            work/wan22-spatial-codec-plan/metrics.json
+      - run: python -m experiments.wan22_native.spatial_audit.test_suite --output work/wan22-spatial-audit-cpu-review.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wan22-spatial-audit-cpu-review
+          path: work/wan22-spatial-audit-cpu-review.json
   text-cache-cpu:
     runs-on: ubuntu-latest
     timeout-minutes: 15

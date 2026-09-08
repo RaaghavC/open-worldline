@@ -31,6 +31,8 @@ A larger clip also changes the observation encoder from the earlier retained MPS
 
 Every mode is a CPU-only plan unless `--execute` is provided. Each execution requires an exact input manifest hash and a passing CPU report bound to the current runtime sources and tests. Pair and clip admission also requires matching measured hardware, environment, input and source identities. A changed artifact, incomplete count, nonzero worker exit, watchdog stop or cleanup failure prevents admission.
 
+The separate [post-run auditors](../spatial_audit/README.md) recompute saved tensor, guidance, prefix, image-pixel, codec-metric and original VAE-storage claims after recovery. They add no denoiser, encoder or decoder calls and preserve this package's frozen runtime sources.
+
 ## Time and memory limits
 
 | Mode | Whole-mode deadline |
