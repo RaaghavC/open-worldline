@@ -6,7 +6,7 @@ An original, locally trained spatial generator with a 3D explorer, learned ecosy
 
 The editor requires no inference API, hosted generative service, external foundation-model weights, or API key. Its original source, trained checkpoints, training data generator, evaluation code, and research review use Apache-2.0. Optional experiments have separate source, data and external-weight notices, as listed below.
 
-The [September 8 project status](docs/project-status-2026-09-08.md) summarizes the working editor, research, and latest model experiments. The older action-effect adapter failed visible door and camera control. After an [earlier-placement CUDA profile and native six-arm encoding](experiments/wan22_native/intermediate_action/results/a100-profile-v1/README.md), a [new 128-update model](experiments/wan22_native/intermediate_action/results/factorial128-a100-v1/README.md) completed training and passed its saved-file audit. Its [six-command video evaluation](experiments/wan22_native/intermediate_action/factorial_video/README.md) is still pending. The requested Genie 3 comparison remains unmet.
+The [September 8 project status](docs/project-status-2026-09-08.md) summarizes the working editor, research, and latest model experiments. The newest 128-update action adapter completed its [six-command video evaluation](experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/README.md). It failed visible door and camera control. The generated frames, pixel comparisons and saved-file audit are retained. The requested Genie 3 comparison remains unmet.
 
 ![A generated alien landscape in the Worldline browser renderer](docs/images/alien-preview.png)
 
@@ -71,7 +71,7 @@ Read the [current project status](docs/project-status-2026-09-08.md) for measure
 
 The three working editor features are persistent edits, local brushes and alternate saved futures. Each is implemented and tested. Each also has prior art; they are not claimed as scientific inventions.
 
-The separate high-resolution experiment trains an original action adapter through an attributed, frozen Wan2.2 model. The newest checkpoint completed 128 updates on six camera and door sequences and passed its [saved-file audit](experiments/wan22_native/intermediate_action/results/factorial128-a100-v1/README.md). Its [six-video evaluation](experiments/wan22_native/intermediate_action/factorial_video/README.md) is pending. Earlier adapters failed visible camera and door control.
+The separate high-resolution experiment trains an original action adapter through an attributed, frozen Wan2.2 model. The newest checkpoint completed 128 updates on six camera and door sequences and passed its [saved-file audit](experiments/wan22_native/intermediate_action/results/factorial128-a100-v1/README.md). Its [six-video evaluation](experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/README.md) failed visible camera and door control. Passing file and training checks did not establish usable interaction.
 
 To try the separate original 64 × 64 RGB predictor, double-click **start-room-lab.command**. It opens Room Lab at **http://127.0.0.1:8788**. Every action generates another small image locally; the enlarged display adds no detail. Its [evaluation](docs/room-rgb-experiment.md) records failures in detail and door memory.
 

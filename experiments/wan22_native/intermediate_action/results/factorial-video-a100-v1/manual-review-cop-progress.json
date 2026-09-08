@@ -1,0 +1,1774 @@
+{
+  "schema": "worldline-factorial-video-reviewer1-progress-v1",
+  "status": "in_progress",
+  "reviewer": "Codex architecture_review agent, reviewer1",
+  "reviewer_type": "AI visual review, not a human observer",
+  "identity": {
+    "plan_sha256": "07dc80a0daf69134e1985dc4649ad08f207fa6c2f85430cab23def82095d0a12",
+    "parent_sha256": "52d46682eb63fc93b649f5141bf5b6fa3d16d2e5638df28a9c7ec83d9d91ff39",
+    "core_sha256": "cc45e1967379bfac71d362971bb2dd24fcdff55d4d6177698e329d775be31419",
+    "decode_sha256": "b30e2a00e37ca3b22870edc7115932e35211b0b6697a4e41ebdb819c2bdee5be",
+    "checkpoint_sha256": "9147ef7a53a01c4399e7073cab97a4ccdc7c8d1195305333560871eeff004dba",
+    "capture_manifest_sha256": "1872dea69d16b124fb7a0a9eefaff06ea2d850ff49f36bcf87fec8c10c82dada",
+    "recovery_index_sha256": "a4c7893405c94481f6c999e82bd76585e4b4807423e57c3c19a36b16c46ac608"
+  },
+  "scoring_report_sha256": "56a3f75b2ac9792bdd073ecaaaeac9145ef4d9a531772bed89efeedb8b221970",
+  "criteria_sha256": "e3c109730aab414ff4191bc3896a7f8f15bf58269e38506d6593c9e7774d82e6",
+  "display": {
+    "tool": "view_image",
+    "detail": "original",
+    "source_size": [
+      1248,
+      704
+    ],
+    "display_size_requested": [
+      1248,
+      704
+    ],
+    "limits": "Original individual PNGs were supplied to the model image viewer at original detail. This does not establish a calibrated physical display or exact camera/door angles. No contacts or MP4s used for decisions."
+  },
+  "arms": {
+    "stationary_closed": {
+      "frames_reviewed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "camera": "achieved",
+      "door": "achieved",
+      "generated_first_open_frame": null,
+      "target_first_open_frame": null,
+      "coherence": "coherent",
+      "notes": "Generated wall, window, floor and closed wooden door remain recognizable and nearly stationary across all17 frames. Minor edge/texture drift is visible, with no material viewpoint turn. Target remains exactly the same closed-door view. This matches the no-change condition; it does not by itself demonstrate learned action response."
+    },
+    "stationary_interact": {
+      "frames_reviewed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "camera": "achieved",
+      "door": "failed",
+      "generated_first_open_frame": null,
+      "target_first_open_frame": 1,
+      "coherence": "coherent",
+      "notes": "Generated wooden door remains visibly closed in every frame0..16, with only minor edge/texture changes and a nearly fixed view. Target opens atframe1 to reveal the table, blue object and gold sphere in the room behind, and stays open through16. No generated opening or revealed room is visible."
+    },
+    "left_closed": {
+      "frames_reviewed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "camera": "failed",
+      "door": "achieved",
+      "generated_first_open_frame": null,
+      "target_first_open_frame": null,
+      "coherence": "coherent",
+      "notes": "Across all17 original frame pairs, generated door, wall and window stay close to the initial view with minor edge drift. The target moves progressively toward the window and plant side, shifting the door toward the right border and partly out of frame by16. Generated footage does not show that coherent progressive left turn; its door stays visibly closed throughout."
+    },
+    "left_interact": {
+      "frames_reviewed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "camera": "failed",
+      "door": "failed",
+      "generated_first_open_frame": null,
+      "target_first_open_frame": 1,
+      "coherence": "coherent",
+      "notes": "All 17 generated frames retain a nearly fixed view of the closed wooden door. Target opens at frame 1 and shifts progressively toward the window and plant side, with the open doorway moving toward the right border. The generated frames show neither the opening and revealed inner room nor that progressive left turn; minor edge and texture drift remains coherent."
+    }
+  },
+  "inspected_files": [
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0000.png",
+      "sha256": "65d6fda664eaee92fe4d6fc44e4b7abbe00029c4a5b7705085878b10ba228de0",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 0,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0000.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 0,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0001.png",
+      "sha256": "8e2064e400e19e8aad03f95ff18b5721fa0c330c938ec3f94657ad81e55d8cac",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 1,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0001.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 1,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0002.png",
+      "sha256": "0893899b198662b620c1123efce9eeb88b952a48631a15fd852074b8b7083783",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 2,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0002.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 2,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0003.png",
+      "sha256": "63be04aca3e8f900b5276f825cfbf05066395eb16043d75fecc014b73f918cc4",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 3,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0003.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 3,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0004.png",
+      "sha256": "e6ff2a47f34926a01aa11f95785313de8fd463af69e933c91b00216770204de7",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 4,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0004.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 4,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0005.png",
+      "sha256": "bc8e92837e4890c6c9a168d9f737f0cf788fc948f7f682091e83a570aa7e7f26",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 5,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0005.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 5,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0006.png",
+      "sha256": "ee5cf013795283caefdb39cfbfbecdbbbae26963db1dbe898c1eb31ef101d56b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 6,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0006.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 6,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0007.png",
+      "sha256": "9dabaf3867337f1b129dda500e71343f6d01c4765813bfbd2a2e2138056d8074",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 7,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0007.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 7,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0008.png",
+      "sha256": "60d3a528f8129451d86112d947591c72a272974960269d049a39fd1d26e3fa5f",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 8,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0008.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 8,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0009.png",
+      "sha256": "7caea55a712406d6dead249ef2b8350c4836bd890a8780efbed8f5cf9e96bb8a",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 9,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0009.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 9,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0010.png",
+      "sha256": "ba9bf2e8d8a92d40fb58dbda8f377d21810f6faa61796d77a21e308cfcc6068d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 10,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0010.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 10,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0011.png",
+      "sha256": "18517c58bba6753255d46b137dd60b357bd001843db79eb5f37d2d42ff84958f",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 11,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0011.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 11,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0012.png",
+      "sha256": "6841a797670d0447e3966997f326294d4bc244362694bfeeb6cf26d2e43603d3",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 12,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0012.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 12,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0013.png",
+      "sha256": "c41df93ed2c40b47eb2f0125b7ae0d44145981f05ad4ffd48e8a20a4555ae80b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 13,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0013.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 13,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0014.png",
+      "sha256": "6f8b4558f9e91f919190cc190415e6b4d40521fdd6e5f1cf28f00a6b1c38b294",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 14,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0014.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 14,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0015.png",
+      "sha256": "8052686070712f93752cfcb9c53890264bf117b554c1e3b40db6e9e71222aefe",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 15,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0015.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 15,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_closed/0016.png",
+      "sha256": "134fed31552be7647094aab39256ee1c91e5f6fca806f41dc74857895ac3684a",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 16,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_closed/0016.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_closed",
+      "index": 16,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0000.png",
+      "sha256": "65d6fda664eaee92fe4d6fc44e4b7abbe00029c4a5b7705085878b10ba228de0",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 0,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0000.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 0,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0001.png",
+      "sha256": "b8ff3e802d287d0af452752901afc2f2f2afefd2b716e23067c7804b0917d498",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 1,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0001.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 1,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0002.png",
+      "sha256": "b7ab468823d392a1655674b3e80a18b328e683c6e788704f426acdfb210c88ca",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 2,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0002.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 2,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0003.png",
+      "sha256": "f1f6cf6154e74a9bc582924dac54453417783c6dd79d06802a69d542f2205f4a",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 3,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0003.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 3,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0004.png",
+      "sha256": "4867d5b2a25e0d1c0d06df687bb7fbd26f3d7268e887f7f47d6ba545038e42a4",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 4,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0004.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 4,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0005.png",
+      "sha256": "e2cd31e463e2157b12f89fbf91e67cab2052be0f415a1f601df9aa1caee5d88e",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 5,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0005.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 5,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0006.png",
+      "sha256": "0c645c8a5c47021386b32140d21d3c6c83b9e9ab70fe1052a67b9d9121a74e9a",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 6,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0006.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 6,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0007.png",
+      "sha256": "45342b8a061fae82b410adc7d9eb300fd5fcbec9731829678c70d20809e94158",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 7,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0007.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 7,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0008.png",
+      "sha256": "d7e8e5529830bb68fb7fc6a43473649d8d4e44376ce2ebac062fe5790ac1b4e8",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 8,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0008.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 8,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0009.png",
+      "sha256": "856f983044141f40a1edfb136c1ed059fee201b09acfcbdd33afdfac6fb5c170",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 9,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0009.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 9,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0010.png",
+      "sha256": "238b6d56103501c12cf706e2659b2b057ce54599f26e9770b9db010b108d6cd8",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 10,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0010.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 10,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0011.png",
+      "sha256": "47591fcfe157a1e4cf8192f8c65a65f308439394a6dd76083e1d4e739b15c4df",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 11,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0011.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 11,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0012.png",
+      "sha256": "f5a3a97760b1e662ad4e451a65abf7967a41c328f015d4f3be1ee2c7dec43cb9",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 12,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0012.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 12,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0013.png",
+      "sha256": "56e2963bfd250963249a584b8585ae327eea9d252cbdbd68054c0407dc66a52f",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 13,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0013.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 13,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0014.png",
+      "sha256": "638774941fae1c145f410b30b590d52d6675b6989bebe030b466b74574ce548e",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 14,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0014.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 14,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0015.png",
+      "sha256": "a4d0b06bbde888194f516e62d0f92a3eced08a8de5dbf43be16a0bd19893e731",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 15,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0015.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 15,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/stationary_interact/0016.png",
+      "sha256": "efd5816ddd016788cdf58bcc664919cb7b8e8a0695343e28a7ba5f8981ec835e",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 16,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/stationary_interact/0016.png",
+      "sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "stationary_interact",
+      "index": 16,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0000.png",
+      "sha256": "65d6fda664eaee92fe4d6fc44e4b7abbe00029c4a5b7705085878b10ba228de0",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 0,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0000.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 0,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0001.png",
+      "sha256": "7e8f8f3d56fca4a0e011ca67e9309b79ced0cff4a7f9d7d11425964c09fa7d4f",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 1,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0001.png",
+      "sha256": "fb51f96a24e0a613c25af61ff1dc88e8d407be78aead146932c52ff877488c50",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 1,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0002.png",
+      "sha256": "6c58e8200137db17519d3cda341905de77b4f8b1cc5262bc0997ed07cf84e549",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 2,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0002.png",
+      "sha256": "b44c51dff7577825bc772d99e3366607dbbf6515e0ab58a8d07ad4dc334318b5",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 2,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0003.png",
+      "sha256": "290c889fb7ffd8b108b370e533872271e7d6436e6344b1e5ea8708c909b01f4c",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 3,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0003.png",
+      "sha256": "22220d960b21a2d9bba9f77cab05e6eb417c80f48a6a351354ae7ae44d0bd74f",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 3,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0004.png",
+      "sha256": "7fecd696cf323313057ae8baa57ea7080ed5b1d9c935482961334dd81bcc7fcc",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 4,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0004.png",
+      "sha256": "3a9d916cf5afc854a026461fb3636c8a01c3b566a965243829878e3f83e2ca00",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 4,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0005.png",
+      "sha256": "c02955b448b1ca41b68b5a24e472f14d75575a5c214f233bb004322c506f6067",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 5,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0005.png",
+      "sha256": "8827b6eb406dd063ac478953c35cbf3189372d3623199a59307be433e9e0ac87",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 5,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0006.png",
+      "sha256": "a671dbab7cddce143ac3a8c96bf33031e29d557584cf15cd6be772d1ba1013e9",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 6,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0006.png",
+      "sha256": "786700554b2cd78f77d733792123913d7ef53368fa5abed6c0d576ae932fd0c1",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 6,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0007.png",
+      "sha256": "f47954bddc50e0b96a0ce06c1f98e7fb5b644182f0d3ebfe2a209e64c9db3d68",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 7,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0007.png",
+      "sha256": "f1e6ae29195186e0743e08c2b28435eb4904b4e16d5eb16fe23ea2b5f81e13e6",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 7,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0008.png",
+      "sha256": "93cc1b64c146db6a797bf3cc2957652075b6e117f771e36a2b12ee79b1b0cd1b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 8,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0008.png",
+      "sha256": "1f8f09319c5a6b6481b1b74dabf6a510bd8ad0fce246c5613b363f6517ad0f16",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 8,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0009.png",
+      "sha256": "7e1151c9e28687b5e52f5da5770ef2a05838b82654b9a4d2813ae775868631a0",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 9,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0009.png",
+      "sha256": "3a8a3388b91a9042c203606addbfa58eee1e1a42bf5447c607da33e392dc46ff",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 9,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0010.png",
+      "sha256": "1d2de85f19edc85ca3d4e68279ecb5295c147477154fc0291b9dbd827442639e",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 10,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0010.png",
+      "sha256": "7422a75ba29ecb29fc9aa2335533e3d1710ca40cbb068b72742a50e3eca3665e",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 10,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0011.png",
+      "sha256": "b9c7327849625d7ed9a92d04ca8568a4db7dc6cbf8f2eafdb03e494b2a592690",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 11,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0011.png",
+      "sha256": "3263973c2cc19e63c08b2eb21ccd0e82bb9c278ac27377e0bbd92e71df0e6fdd",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 11,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0012.png",
+      "sha256": "8d35e0e930ff24287e5780af52a10a2c73c057e623bd0a81cfe16e25c655db64",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 12,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0012.png",
+      "sha256": "3741664a24b297eb5350557a769ae58ae31bfbd393577dd5bfa36aaec67a861b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 12,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0013.png",
+      "sha256": "b5d484ab4a88b571010e46e3a62bb55b7d84e98f8ea4adc45c1dbcc447acfdcd",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 13,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0013.png",
+      "sha256": "68953c7d9a836f3e986d55929fb42b87d740ab49e95ac22111b86d96309143be",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 13,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0014.png",
+      "sha256": "2c9487db2961a2f925c9bbb7b27ad367f5d26492d37c3ed085e84fa8531eca24",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 14,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0014.png",
+      "sha256": "e01f4a7dc54dac5c284cb173ab1e81c34c05de1d666c444aed78d3b2febeefd5",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 14,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0015.png",
+      "sha256": "ac3160dd80901111470af3c085beee2f38ddd321b8938f69522a54bedba14721",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 15,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0015.png",
+      "sha256": "a23995386d81e884c4868360ab3d66e10c1b2342954ac34a130b15836bfca8fc",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 15,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_closed/0016.png",
+      "sha256": "397a0de7e711c354c55712a89e6cf13c450d0513af6fadfe4346b688cbb122da",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 16,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_closed/0016.png",
+      "sha256": "c21c465f6589251f4e4f244030f08afd6e433ce1a48c5764c468f512c782f11c",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_closed",
+      "index": 16,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0000.png",
+      "sha256": "65d6fda664eaee92fe4d6fc44e4b7abbe00029c4a5b7705085878b10ba228de0",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 0,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0000.png",
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 0,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0001.png",
+      "sha256": "bb77d262788b871531de4cc9a880f36c2ac42ea218a95d970175e3c988488c9e",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 1,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0001.png",
+      "sha256": "1a4e8437bb5adf446adf86983eb391243716fd38670c76dc94f186b8d344dd4b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 1,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0002.png",
+      "sha256": "9ca746e84de9573f49794b29d92c19f06ce287a24eb685bdcebb345499517d39",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 2,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0002.png",
+      "sha256": "556aad87688fb7078d491e70c81f104aa449b3a9126bd2156dffe8bab4b6c3ca",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 2,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0003.png",
+      "sha256": "9219510c0b5966f4ec0cfaacdc9a75bf0ff9752f702255aee144271f97c93e0c",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 3,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0003.png",
+      "sha256": "428df1274e0cc4a9205002ade400ac2693406fcaa78300d975762a5bf8f0df51",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 3,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0004.png",
+      "sha256": "2e47d35e48b5e4c349aa000df2aabc1217d940970810573d5393227550ef4f3c",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 4,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0004.png",
+      "sha256": "602a5d0eecf748ea77bfb2ca5e0c69b264d12b47a4bc4b6a8b8b958464e85781",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 4,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0005.png",
+      "sha256": "13c77e49ecd4125d57f3aa9283b0182ef4c232ca0332816c8cc6c1a165a2b8ed",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 5,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0005.png",
+      "sha256": "d75322622709ab4dafa93556323c51b6e659ca8990f9710bdf49c2f35083324b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 5,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0006.png",
+      "sha256": "619a15904e59917dfc9530f3302c489a668325a917333caf3fc19f17d9bd83c2",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 6,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0006.png",
+      "sha256": "73fe2115e0d7bbdef30bacf6696d6d446ab9d429cb707c0f44fdf2365d261254",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 6,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0007.png",
+      "sha256": "a4e7b10c31f4975f8106362b2dfc91dfb448946d67306e2cde3ab7eb15cd0386",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 7,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0007.png",
+      "sha256": "5f55e52488b1f0ee57dcdaf7e57f96b929d4ee20f7c387bca9963acfd4d24d26",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 7,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0008.png",
+      "sha256": "b9538482ab0eb71be54c8cf6baf2a916acdd7a43c62a566e79df81edc89c40fc",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 8,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0008.png",
+      "sha256": "16ce89142c492bc972b2590e86d629fb9b590e9b5f59368c63c65c67bbb839ed",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 8,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0009.png",
+      "sha256": "d9f44c5dde2928f4c96336b587921da20e6501e54aa5b3e3260858eba45c6298",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 9,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0009.png",
+      "sha256": "15c79e1097fddfef7785e88349fa80a36777fa4d48924993f0be314a85732bbb",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 9,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0010.png",
+      "sha256": "ec33d546d5b2d204abfaf5e073e37966a578c75e9fe500533e7bb059655d1117",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 10,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0010.png",
+      "sha256": "30ea798a6a9980abe7edaab9ac9507ea575f6a55bab5592017023bf59bba4b41",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 10,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0011.png",
+      "sha256": "f355a49ea715917e0a40892b54d97a1d1aedd9f78878665765b783de9c543004",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 11,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0011.png",
+      "sha256": "51e72a579af8be0973e65adb378536d1bac8827b51e83d81224bc80e791b796b",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 11,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0012.png",
+      "sha256": "1e51201026a8fb755a7a064fb2f25fdc26a391a4028cda7a9a2b4f0ade598960",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 12,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0012.png",
+      "sha256": "643ab13894ea68e4e723212c5a3bea099f9d010a482309378bc1c05d6c985f82",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 12,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0013.png",
+      "sha256": "eab2e85ae8ea06f30673b584f728cbe751668c571e92ec12ec26a4eabde781f0",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 13,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0013.png",
+      "sha256": "235e84d80c84dd575ed9298ea4048e0b36ee6d9c9499539a1bce72250baefe11",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 13,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0014.png",
+      "sha256": "2c72609ce85445ad05e1e1d7584c50c594655459c5d7e9afe46a865892205484",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 14,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0014.png",
+      "sha256": "9c8a6ada080f8b188466008da67f5b0388d98e82ed8e95e071e808ef5792d4a7",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 14,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0015.png",
+      "sha256": "48915a5c8024e2f26d6926e8973a6be053c8a20058cf3b88cc0cd06932e1ccd1",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 15,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0015.png",
+      "sha256": "bee16c03b6990dbad5b79a0072ef65d8902bac5e8669b2a5c6e2300be0c4ebe5",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 15,
+      "kind": "target",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/generated/left_interact/0016.png",
+      "sha256": "854aa5fd8e678cf48c1ffdd76111cb54a0802138eceff806707e42d5cc4b6423",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 16,
+      "kind": "generated",
+      "visually_inspected": true
+    },
+    {
+      "path": "outputs/worldline-factorial-video-evaluation/frames/target/left_interact/0016.png",
+      "sha256": "97def054c625aa9f65af15dc188e49eab62d99de7ecce00f0718a786540e50d7",
+      "size": [
+        1248,
+        704
+      ],
+      "arm": "left_interact",
+      "index": 16,
+      "kind": "target",
+      "visually_inspected": true
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Six videos from the trained camera and door adapter
 
+**Completed result: control failed.** All six clips were generated and recovered. The inspected interaction clips keep the door closed, and the inspected left-turn clip omits the requested progressive turn. See the [measured result and retained evidence](../results/factorial-video-a100-v1/README.md).
+
 This program evaluates the final 128-update intermediate adapter on six command sequences: stationary, left and right, each with the door closed or opened. All clips share the independently encoded initial observation, saved Gaussian noise and text. Only commands change. The prepared plan is `07dc80a0daf69134e1985dc4649ad08f207fa6c2f85430cab23def82095d0a12`; the final checkpoint is `9147ef7a53a01c4399e7073cab97a4ccdc7c8d1195305333560871eeff004dba`.
 
 The trained adapter is inserted at block 28 of the attributed Wan2.2 foundation model. Generation uses 50 native UniPC updates with shift 5 and guidance 5, producing 17 frames at 1248 × 704 per clip. Both guidance branches receive the same commands. No future reference frame or target latent conditions generation. All six clips use one foundation load, followed by a separate native VAE decode process. Original model values and the adapter are checked for changes.

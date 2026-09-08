@@ -102,6 +102,14 @@ jobs:
           PYTHONDONTWRITEBYTECODE: '1'
           PYTHONPATH: '.:experiments/wan22_native/intermediate_action/factorial_video'
         run: python -m pytest -q experiments/wan22_native/intermediate_action/factorial_video/test_cpu.py
+      - name: Check saved-video audit portable cases
+        env:
+          PYTHONPATH: 'experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/audit'
+        run: python -m pytest -q experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/audit/test_audit.py -k 'not actual_prepared_identity_and_commands and not weight_reports_bind_all_core_and_codec_values'
+      - name: Check video scoring and comparison viewer
+        env:
+          PYTHONPATH: 'experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/scoring'
+        run: python -m pytest -q experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/scoring/test_cpu.py
       - run: python -m pytest -q experiments/wan22_native/test_core.py experiments/wan22_native/test_independent.py experiments/wan22_native/test_profile_independent.py experiments/wan22_native/test_codec.py experiments/wan22_native/test_codec_decode.py experiments/wan22_native/test_codec_independent.py experiments/wan22_native/test_codec_memory.py experiments/wan22_native/test_codec_memory_independent.py experiments/wan22_native/test_sample_clip.py experiments/wan22_native/test_sample_independent.py
       - run: python -m experiments.wan22_native.codec_cpu_diagnostic --output work/wan22-cpu-prefix-linux-diagnostic-v1.json
       - run: python -m experiments.wan22_native.codec_cpu_projection_diagnostic --output work/wan22-cpu-projection-linux-diagnostic-v2.json

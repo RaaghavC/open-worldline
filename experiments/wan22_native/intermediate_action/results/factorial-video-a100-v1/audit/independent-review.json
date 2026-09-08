@@ -1,0 +1,30 @@
+{
+  "schema": "worldline-factorial-video-audit-independent-review-v1",
+  "status": "passed",
+  "source_sha256": {
+    "audit.py": "22938f5c11d114f2b1cbd9fd5f4b90c0989e8fb6a20c964b33bbb9873f76287a",
+    "helpers.py": "db28b1febb6ce074e4cc9715ee5b3eded28ed46d58da7b1a92a2956d2410af04",
+    "rgb.py": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+    "pins.json": "e478bbb96b902dc2165bb9c0fe5df3031573b2c7de3e5d726c2d45d6f86aa3d9",
+    "test_audit.py": "7a521c919eba79ccbcc59858283021fb012b9f9a61dcdc00ba3f866b792f23f2",
+    "reference/preparation-review.json": "f32bd16f794a1eb55d56016aad4205b881dec243de698b6bf49f24f908bf6dd0",
+    "reference/plan.json": "07dc80a0daf69134e1985dc4649ad08f207fa6c2f85430cab23def82095d0a12",
+    "reference/vae-load-reference.json": "0ee5cb4bda9171176eadd866a7316b2a591ae1cf169090a712ae248c04d09723",
+    "reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "reference/native-steps-reference.jsonl": "9bc650e6f6c916ed704da838ea8b2357307b75eac150339e6c134f519e78b28e"
+  },
+  "cpu_report_sha256": "89195bd1f51037d1ed5caadbf4e1c510b93266ea02364160ea31d9f3472a95a2",
+  "checks": [
+    "Exact actual plan, source snapshots, conditioning artifacts, completed training audit and final checkpoint identity are bound before result reads.",
+    "Parent and both child reports, terminals, actual admission, common deadline and original memory/time caps match the frozen producer schema.",
+    "All run members bind to the original verified recovery inventory and are checked unchanged after audit.",
+    "The five report identity fields required by the scorer match its contract.",
+    "Saved-state numbering is 01 through 50; six arms produce 300 checked states. Raw first-step evidence is 12 predictions plus 6 guided tensors, distinct from 600 recorded model calls.",
+    "No allocated/reserved instantaneous ordering assumption is added. The approved hardware-capacity equal-or-greater rule is preserved."
+  ],
+  "findings": [],
+  "scope": "Read-only narrow source/schema review; original safe readers and numerical helpers inspected for integration. No actual-result audit, tests, model or solver replay.",
+  "tests_rerun": false,
+  "model_execution": false
+}
