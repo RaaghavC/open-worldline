@@ -1,0 +1,27 @@
+{
+  "schema": "worldline-primary-release-metadata-v1",
+  "metadata_only": true,
+  "weights_downloaded": false,
+  "records": {
+    "dreamx-world-code": {
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/commits/master",
+      "status": "failed",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>"
+    },
+    "dreamx-phi-code": {
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-Phi/commits/main",
+      "status": "failed",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>"
+    },
+    "dreamx-world-model": {
+      "url": "https://huggingface.co/api/models/GD-ML/DreamX-World-5B?blobs=true",
+      "status": "failed",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>"
+    },
+    "dreamx-camera-model": {
+      "url": "https://huggingface.co/api/models/GD-ML/DreamX-World-5B-Cam?blobs=true",
+      "status": "failed",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>"
+    }
+  }
+}

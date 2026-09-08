@@ -1,0 +1,118 @@
+{
+  "schema": "worldline-bounded-primary-research-check-v1",
+  "checked_local_date": "2026-09-08",
+  "timezone": "America/Los_Angeles",
+  "completed_utc": "2026-09-08T07:30:23.665375+00:00",
+  "scope": "Selected frontier releases, memory progression and action-conditioned video; supplements September 7 report; not exhaustive.",
+  "searches": [
+    "\"world model\" \"September 8, 2026\"",
+    "site:arxiv.org \"world\" \"8 Sep 2026\"",
+    "\"world models\" \"Sep 7\" \"2026\"",
+    "\"generative world\" September 2026 model research action",
+    "site:arxiv.org/abs/2609 \"world\" \"Sep\" \"7\"",
+    "site:arxiv.org \"world model\" \"September\" \"2026\" action memory",
+    "site:arxiv.org \"DreamX\" world",
+    "site:arxiv.org \"TetherMem\"",
+    "\"world model\" \"September 8, 2026\" site:deepmind.google OR site:research.nvidia.com OR site:microsoft.com OR site:worldlabs.ai",
+    "\"world model\" \"Sep 8, 2026\" site:arxiv.org OR site:github.com",
+    "\"TetherMem\" github code"
+  ],
+  "no_september_8_technical_release_verified_in_this_search": true,
+  "absence_claim": false,
+  "primary_sources": [
+    {
+      "url": "https://www.worldlabs.ai/blog/atlas",
+      "publication_date": "2026-09-01",
+      "checked": "announcement and access status"
+    },
+    {
+      "url": "https://runway.com/research/introducing-gwm-worlds-2",
+      "publication_date": "2026-09-03",
+      "checked": "announcement and preview status"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.16993",
+      "publication_date": "2026-06-15",
+      "version": "v1"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.16993v1",
+      "checked": "method"
+    },
+    {
+      "url": "https://github.com/AMAP-ML/DreamX-World",
+      "checked": "release dates, code listing, declared license, author efficiency table",
+      "commit_pin_verified": false
+    },
+    {
+      "url": "https://github.com/AMAP-ML/DreamX-World/blob/master/inference_README.md",
+      "checked": "shapes, guidance, postprocessing and frame-count semantics",
+      "commit_pin_verified": false
+    },
+    {
+      "url": "https://huggingface.co/GD-ML/DreamX-World-5B",
+      "checked": "model card and dependency/loader examples"
+    },
+    {
+      "url": "https://huggingface.co/GD-ML/DreamX-World-5B/tree/main",
+      "checked": "file listing and declared MIT license",
+      "full_commit_pin_verified": false
+    },
+    {
+      "url": "https://huggingface.co/GD-ML/DreamX-World-5B-Cam/tree/main",
+      "checked": "file listing and declared MIT license",
+      "full_commit_pin_verified": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.26902",
+      "publication_date": "2026-08-27",
+      "version": "v1"
+    },
+    {
+      "url": "https://arxiv.org/html/2608.26902v1",
+      "checked": "method, evaluation, ablations and explicit limitations"
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.13489",
+      "publication_date": "2026-08-13",
+      "version": "v1"
+    },
+    {
+      "url": "https://arxiv.org/html/2608.13489v1",
+      "checked": "method, dated leaderboard and limitations"
+    },
+    {
+      "url": "https://github.com/AMAP-ML/DreamX-Phi",
+      "checked": "actual file listing and release status; repository license",
+      "commit_pin_verified": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.06192",
+      "publication_date": "2026-05-07",
+      "version": "v1"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.06192v1",
+      "checked": "required inputs, method, training resources and limitations"
+    }
+  ],
+  "excluded_as_technical_updates": [
+    "September 8 workshop/tutorial schedules",
+    "third-party republished paper text",
+    "unaffiliated Atlas branding",
+    "search crawler dates"
+  ],
+  "unresolved": [
+    "TetherMem project page access failed; executable release and code license unverified.",
+    "Public API metadata checks failed TLS validation locally and were unavailable through the web tool; no API-derived commit identities obtained.",
+    "DreamX loader and model-card filename mismatch noted, implementation compatibility not tested."
+  ],
+  "execution": {
+    "model_runs": 0,
+    "weight_downloads": 0,
+    "cloud_account_calls": 0,
+    "browser_automation_calls": 0,
+    "repository_edits": 0
+  },
+  "draft_sha256": "6a14da29be3bf573e1da6c45360b160cb4ede0edc2369c3536064848748def4b"
+}

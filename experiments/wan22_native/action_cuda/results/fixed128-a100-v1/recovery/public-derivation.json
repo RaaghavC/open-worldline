@@ -1,0 +1,43 @@
+{
+  "schema": "worldline-fixed128-public-privacy-derivative-v1",
+  "status": "verified_local_derivative",
+  "original_index_sha256": "a6996862c4598f57afd632d8d3fc9a4b4fdc89cdec2fdc5d35e40008bc50b96c",
+  "public_index_sha256": "f2fc04946402a67a3179b0245545fa6ddd703872b769a3835d7a7330683f5134",
+  "original_stream_sha256": "7e6b1d440753726627c1139487d458315a1b5c9c9996714bfe4896af5874f045",
+  "public_stream_sha256": "99fab5e86f05fccd2a1f2d9abfcc4f364107ae80a146130d7dd160afd2063e72",
+  "original_transport_parts": 17,
+  "public_transport_parts": 100,
+  "max_public_part_bytes": 16000000,
+  "compression": "New gzip stream, compression level 1, sorted members and normalized tar header timestamps/modes; original recovery bytes untouched.",
+  "original_file_count": 957,
+  "public_file_count": 957,
+  "unchanged_file_count": 956,
+  "excluded_file_count": 0,
+  "original_file_bytes": 2096526751,
+  "public_file_bytes": 2096526695,
+  "transformed_files": [
+    {
+      "path": "action-results/fixed128-executed-program/cpu-output-v1.txt",
+      "original": {
+        "bytes": 1849,
+        "sha256": "6f1738e00cd803eb3c1c401e5e668c229702cb32be681875fb7b03d6971f7698"
+      },
+      "published": {
+        "bytes": 1793,
+        "sha256": "6be5fd82efa8370c5de5ed895a5e309329de280ea2add5a60bbff3e0477f2860"
+      },
+      "operation": "Replace only the exact local workspace UTF-8 prefix with [WORKSPACE]/",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 2,
+      "preserved": "All exception text, relative filenames, line numbers and failure evidence. No source, protocol, metric or tensor file changed."
+    }
+  ],
+  "archive_build_seconds": 57.25451450000401,
+  "previous_verified_public_45mb_index_sha256": "6bf6cbbbb91cf8379bad210fa7984bc51e2aa285ba50664f0596025e20236c48",
+  "transport_change": "The first 90 uploaded 16 MB parts are unchanged. Only the previously unuploaded tail uses 10 parts at most 8 MB. Same gzip stream and public member bytes; no recompression or scientific change.",
+  "previous_verified_public_16mb_index_sha256": "2475f8d686eceb659f8be2e66d4a63621ef0e06614159377fb0195687ebb9063",
+  "unchanged_uploaded_part_count": 90,
+  "remaining_tail_part_limit_bytes": 8000000
+}

@@ -1,0 +1,27 @@
+test_prototype (unittest.loader._FailedTest.test_prototype) ... ERROR
+test_admission_requires_cfg_review_and_parent_failure_is_single_use (test_runner.RunnerTests.test_admission_requires_cfg_review_and_parent_failure_is_single_use) ... ok
+test_chunk_coverage_no_large_duplicate_file (test_runner.RunnerTests.test_chunk_coverage_no_large_duplicate_file) ... ok
+test_diagnostic_without_actual_completed_parent_is_rejected (test_runner.RunnerTests.test_diagnostic_without_actual_completed_parent_is_rejected) ... ok
+test_numeric_gate_requires_both_losses_and_finite_action (test_runner.RunnerTests.test_numeric_gate_requires_both_losses_and_finite_action) ... ok
+
+======================================================================
+ERROR: test_prototype (unittest.loader._FailedTest.test_prototype)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_prototype
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "[WORKSPACE]/work/wan22-action-cuda-fixed128-prep-v1/test_prototype.py", line 12, in <module>
+    from experiments.wan22_native.action_cuda.test_cpu import fixture
+  File "[WORKSPACE]/outputs/open-worldline/experiments/wan22_native/action_cuda/test_cpu.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+FAILED (errors=1)

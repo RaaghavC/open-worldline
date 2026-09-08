@@ -1,0 +1,667 @@
+{
+  "sha": "a1f4c6e5e45600718e5236955f2e0702e53fc275",
+  "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/a1f4c6e5e45600718e5236955f2e0702e53fc275",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8be1458659e55b213062fabf8cd0fa177777a80f",
+      "size": 33,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/8be1458659e55b213062fabf8cd0fa177777a80f"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c7f5eb7ce547499bbae5a3e8997614a7e37f17",
+      "size": 14684,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/a3c7f5eb7ce547499bbae5a3e8997614a7e37f17"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36984f9a066ff197f95233ade2d1d3d54ce36ee8",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/36984f9a066ff197f95233ade2d1d3d54ce36ee8"
+    },
+    {
+      "path": "assets/dreamx-world_teaser_fig.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "065b92cefd314b12d5f4e022cf9fbc962581637e",
+      "size": 1341541,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/065b92cefd314b12d5f4e022cf9fbc962581637e"
+    },
+    {
+      "path": "assets/wechat_group_qrcode2.JPG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd104739f9393b634d86fdfb1179ae687185946d",
+      "size": 246876,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/cd104739f9393b634d86fdfb1179ae687185946d"
+    },
+    {
+      "path": "configs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7aa77d86b0aad671ed0eb0343872b8c582094c00",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/7aa77d86b0aad671ed0eb0343872b8c582094c00"
+    },
+    {
+      "path": "configs/dreamx-ar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ca36ed5e56f8d5271016c57277625fe45a5805b",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/7ca36ed5e56f8d5271016c57277625fe45a5805b"
+    },
+    {
+      "path": "configs/dreamx-ar/causal_camera_forcing_5b.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "30d6f348401e3043f70718b3aeafd5aca187683f",
+      "size": 907,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/30d6f348401e3043f70718b3aeafd5aca187683f"
+    },
+    {
+      "path": "configs/dreamx-ar/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60d5e65bb4d65de7d935be9f9668e513dbcd8116",
+      "size": 708,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/60d5e65bb4d65de7d935be9f9668e513dbcd8116"
+    },
+    {
+      "path": "configs/dreamx-ar/default_config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edd77e68d56d9a624ae26cc3631a04302740629a",
+      "size": 77,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/edd77e68d56d9a624ae26cc3631a04302740629a"
+    },
+    {
+      "path": "configs/dreamx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23c5677738bfc411c0841c42e9aded7c20e01ab0",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/23c5677738bfc411c0841c42e9aded7c20e01ab0"
+    },
+    {
+      "path": "configs/dreamx/eval.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "827f97c736e465b6c009cf2e9748f087877111ee",
+      "size": 13881,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/827f97c736e465b6c009cf2e9748f087877111ee"
+    },
+    {
+      "path": "configs/wan2.2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ba44095ce43b1a0ff35a868a272aca742eff933",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/4ba44095ce43b1a0ff35a868a272aca742eff933"
+    },
+    {
+      "path": "configs/wan2.2/wan_ti2v_5b.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f465e28e00ba377596a093ec3c2a23b4bc07e8b6",
+      "size": 935,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/f465e28e00ba377596a093ec3c2a23b4bc07e8b6"
+    },
+    {
+      "path": "demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df368c7574692b6f6ef834a7d904257e35e5f656",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/df368c7574692b6f6ef834a7d904257e35e5f656"
+    },
+    {
+      "path": "demo/005.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f768d432aaba52cfcf5f5834fd80edc321110ade",
+      "size": 1929270,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/f768d432aaba52cfcf5f5834fd80edc321110ade"
+    },
+    {
+      "path": "demo/007.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b7c1e5867971024eb0a43fca804afcd0760bd75",
+      "size": 295890,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/7b7c1e5867971024eb0a43fca804afcd0760bd75"
+    },
+    {
+      "path": "demo/008.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b4a6ab5982615fa1d2992aa4aff7bf2cec8115",
+      "size": 1581589,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/c3b4a6ab5982615fa1d2992aa4aff7bf2cec8115"
+    },
+    {
+      "path": "demo/034_w.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad01b5fff93c553769cbaee0d4ca2b92447206c8",
+      "size": 957712,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/ad01b5fff93c553769cbaee0d4ca2b92447206c8"
+    },
+    {
+      "path": "demo/12_发光森林中的精灵秘境_shot_06_wk.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50926eda38e11a87a1255d5843c22edb5eb30936",
+      "size": 814891,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/50926eda38e11a87a1255d5843c22edb5eb30936"
+    },
+    {
+      "path": "demo/19_龙影掠过的悬崖王国_shot_05_s_l.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7690a4f88297ec177776a6f06ec979f39e76d70a",
+      "size": 780186,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/7690a4f88297ec177776a6f06ec979f39e76d70a"
+    },
+    {
+      "path": "demo/36_Tilt_Down.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f17389277ba7f49efac230c66ebeeecf26d922",
+      "size": 1683878,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/29f17389277ba7f49efac230c66ebeeecf26d922"
+    },
+    {
+      "path": "demo/37_漫游异星生态世界_shot_01_w_l.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c6c1a2c445692e55dc73e4963e91abb7757d58",
+      "size": 1001104,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/c3c6c1a2c445692e55dc73e4963e91abb7757d58"
+    },
+    {
+      "path": "demo/51_L-shape_Forward.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51e987e9198a9885cebbbe4004fa30eafa9a6886",
+      "size": 712287,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/51e987e9198a9885cebbbe4004fa30eafa9a6886"
+    },
+    {
+      "path": "demo/65_L-shape_Forward.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5d8cad60ee3fd1a7e41cb387a43141ccb6acb5f",
+      "size": 1591576,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/d5d8cad60ee3fd1a7e41cb387a43141ccb6acb5f"
+    },
+    {
+      "path": "demo/VCG211326403844_crop.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "546010b20a50d5ea6af208d3a9104e42efe7af01",
+      "size": 1047699,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/546010b20a50d5ea6af208d3a9104e42efe7af01"
+    },
+    {
+      "path": "demo/VCG211376318837_crop.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b35186fd5ec887e1e55373b6b496daf5291d4157",
+      "size": 938358,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/b35186fd5ec887e1e55373b6b496daf5291d4157"
+    },
+    {
+      "path": "demo/case1_26_从森林到雪峰的高山攀登_shot_02_s_dj.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0dbbe46f0e94ac9d548c14ac0a2eb1c7a8ac492",
+      "size": 1048220,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/f0dbbe46f0e94ac9d548c14ac0a2eb1c7a8ac492"
+    },
+    {
+      "path": "demo/case2_01_霍格沃茨入学之夜_shot_05_l_w.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cf7e86346b4714896f1df200cfc79210f068602",
+      "size": 783565,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/0cf7e86346b4714896f1df200cfc79210f068602"
+    },
+    {
+      "path": "demo/case4_22_山中神社与灵体夜行_shot_05.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "181bca8bdf31c38f2e120379deb16e2201e910d1",
+      "size": 1902090,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/181bca8bdf31c38f2e120379deb16e2201e910d1"
+    },
+    {
+      "path": "demo/case6_04_天空之城巡游_shot_01_wl.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f4217812d7a6f2bf9109359f194c4f7069a6ba0",
+      "size": 932254,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/9f4217812d7a6f2bf9109359f194c4f7069a6ba0"
+    },
+    {
+      "path": "dist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed62081f5178356455781e0e38e2689a1c912239",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/ed62081f5178356455781e0e38e2689a1c912239"
+    },
+    {
+      "path": "dist/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d47411b2011ea89d3273a9bbc4511b01b89d5060",
+      "size": 512,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/d47411b2011ea89d3273a9bbc4511b01b89d5060"
+    },
+    {
+      "path": "dist/fsdp.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a25caba1d6650e707a4bfd3c1e9798bb1649c2e5",
+      "size": 1474,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/a25caba1d6650e707a4bfd3c1e9798bb1649c2e5"
+    },
+    {
+      "path": "dist/fuser.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "117dfc2295567485babbd366a7091d50b09cf58f",
+      "size": 2935,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/117dfc2295567485babbd366a7091d50b09cf58f"
+    },
+    {
+      "path": "dist/wan_xfuser.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "62b6e8a4133382a5bf74ba0e6a2ca1ec8b95b190",
+      "size": 11083,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/62b6e8a4133382a5bf74ba0e6a2ca1ec8b95b190"
+    },
+    {
+      "path": "inference_README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da185bd717571a4f559ce8ef16c9329b0ec79e9a",
+      "size": 6335,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/da185bd717571a4f559ce8ef16c9329b0ec79e9a"
+    },
+    {
+      "path": "inference_ar_forcing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f634dcede429abf1ac963042d0769878c397f64c",
+      "size": 13448,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/f634dcede429abf1ac963042d0769878c397f64c"
+    },
+    {
+      "path": "inference_ar_forcing.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b1d23a4b75dc4e903c6b28d7222d1a9be039418",
+      "size": 2988,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/7b1d23a4b75dc4e903c6b28d7222d1a9be039418"
+    },
+    {
+      "path": "inference_dreamx5b.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72add7b11238a0f077beb43d0a359aeb026072c0",
+      "size": 19673,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/72add7b11238a0f077beb43d0a359aeb026072c0"
+    },
+    {
+      "path": "inference_dreamx_5b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c911c95601ebc6214dcc6268ec127c5b76c4ca57",
+      "size": 2935,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/c911c95601ebc6214dcc6268ec127c5b76c4ca57"
+    },
+    {
+      "path": "models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3facca751d09811e604905c9abead6038cca039e",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/3facca751d09811e604905c9abead6038cca039e"
+    },
+    {
+      "path": "models/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eea20d9d553e1cfad642ba78d410d55ca2194c39",
+      "size": 726,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/eea20d9d553e1cfad642ba78d410d55ca2194c39"
+    },
+    {
+      "path": "models/attention_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed6851739053a43bdec353d17c63642054042adf",
+      "size": 6860,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/ed6851739053a43bdec353d17c63642054042adf"
+    },
+    {
+      "path": "models/prope_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b78259ca4aef52a62eb42df3f21f61039a4b5a7b",
+      "size": 9155,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/b78259ca4aef52a62eb42df3f21f61039a4b5a7b"
+    },
+    {
+      "path": "models/wan_text_encoder.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0076d78dec9a3b8ca83c6ab4639e35e4fc86c222",
+      "size": 15426,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/0076d78dec9a3b8ca83c6ab4639e35e4fc86c222"
+    },
+    {
+      "path": "models/wan_transformer3d.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bc318ad58cb79441a2dfa0b911cb65bdacc292fe",
+      "size": 48472,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/bc318ad58cb79441a2dfa0b911cb65bdacc292fe"
+    },
+    {
+      "path": "models/wan_vae.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7815e7b8582c102c80df4c54ccd064ff44fc88c5",
+      "size": 29681,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/7815e7b8582c102c80df4c54ccd064ff44fc88c5"
+    },
+    {
+      "path": "models/wan_vae3_8.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7898d07f87c0f6a49ce5c4fa9a25b036c6b5926",
+      "size": 33919,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/e7898d07f87c0f6a49ce5c4fa9a25b036c6b5926"
+    },
+    {
+      "path": "pipeline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5dc6f360ee36dd86711f72e047b0fc3051be7016",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/5dc6f360ee36dd86711f72e047b0fc3051be7016"
+    },
+    {
+      "path": "pipeline/pipeline_causal_camera.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "10fc5afb79d552c3bbd01ce3a5df6bb39952ea7f",
+      "size": 14176,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/10fc5afb79d552c3bbd01ce3a5df6bb39952ea7f"
+    },
+    {
+      "path": "pipeline/pipeline_dreamxworld.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd7f8b03edf7ba49a3c79394304c242fc359fff9",
+      "size": 37869,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/cd7f8b03edf7ba49a3c79394304c242fc359fff9"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac47ec4eb4435a90b6f0501c66d5701eff615c78",
+      "size": 414,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/ac47ec4eb4435a90b6f0501c66d5701eff615c78"
+    },
+    {
+      "path": "utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "923245c2163f02e35c9142b748f9b44df0dd3e21",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/923245c2163f02e35c9142b748f9b44df0dd3e21"
+    },
+    {
+      "path": "utils/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5d9d82d0c1848bc4a7f118452badb533013cde5e",
+      "size": 638,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/5d9d82d0c1848bc4a7f118452badb533013cde5e"
+    },
+    {
+      "path": "utils/ac_handle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91df98a1e53a79ac18a0b9579656854e0f4f6042",
+      "size": 2157,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/91df98a1e53a79ac18a0b9579656854e0f4f6042"
+    },
+    {
+      "path": "utils/discrete_sampler.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e191ac943b8f673fe6735821895dd6d7fc57da3",
+      "size": 2382,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/3e191ac943b8f673fe6735821895dd6d7fc57da3"
+    },
+    {
+      "path": "utils/fm_solvers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d516ca97c98cd8b5e0703a531577ca553d22a22",
+      "size": 40228,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/2d516ca97c98cd8b5e0703a531577ca553d22a22"
+    },
+    {
+      "path": "utils/fm_solvers_unipc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8b347b7eca72e961adc2f1fdbbef33ceb1eb009",
+      "size": 32644,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/b8b347b7eca72e961adc2f1fdbbef33ceb1eb009"
+    },
+    {
+      "path": "utils/fp8_optimization.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b8b00387b1423f5fdbeaa57dccadb4a38e14576e",
+      "size": 2492,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/b8b00387b1423f5fdbeaa57dccadb4a38e14576e"
+    },
+    {
+      "path": "utils/inference_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b57f20217cbdb8a49bf2653ab11cfeec0d5f4d81",
+      "size": 13695,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/b57f20217cbdb8a49bf2653ab11cfeec0d5f4d81"
+    },
+    {
+      "path": "utils/lora_peft.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d50faec932c53f8036ebb38e0521542c0c46c7d2",
+      "size": 6783,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/d50faec932c53f8036ebb38e0521542c0c46c7d2"
+    },
+    {
+      "path": "utils/lora_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f8c1731680f2e12be8e233b585925ec8385c6efc",
+      "size": 25537,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/f8c1731680f2e12be8e233b585925ec8385c6efc"
+    },
+    {
+      "path": "utils/memory.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c9758df6dffaed70887f2ec3bf14d9fa49181c32",
+      "size": 4417,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/c9758df6dffaed70887f2ec3bf14d9fa49181c32"
+    },
+    {
+      "path": "utils/misc.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "94cf29feb244eeac4f65b113f7a0c16f59d6442f",
+      "size": 1155,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/94cf29feb244eeac4f65b113f7a0c16f59d6442f"
+    },
+    {
+      "path": "utils/pose_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14dc0d003e39c8e837b2ddb46ef1fc46f1fd42eb",
+      "size": 3605,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/14dc0d003e39c8e837b2ddb46ef1fc46f1fd42eb"
+    },
+    {
+      "path": "utils/postprocess.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9abe7d536d99edf107555163f72a68af9f062695",
+      "size": 3219,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/9abe7d536d99edf107555163f72a68af9f062695"
+    },
+    {
+      "path": "utils/scheduler.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cde3f85c8046b2d5e697b827f4531a3410c20e9a",
+      "size": 7979,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/cde3f85c8046b2d5e697b827f4531a3410c20e9a"
+    },
+    {
+      "path": "utils/trajectory_processor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e148a6b75ceb2372be857af190b4e9c496b9e044",
+      "size": 35553,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/e148a6b75ceb2372be857af190b4e9c496b9e044"
+    },
+    {
+      "path": "utils/utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b203c60392ea28137b7a16aeaeb4ae11f6d3baa",
+      "size": 22384,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/8b203c60392ea28137b7a16aeaeb4ae11f6d3baa"
+    },
+    {
+      "path": "utils/wan_wrapper.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a0e75ab92a841967638d7bf32ccfd92b90e2054b",
+      "size": 8140,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/a0e75ab92a841967638d7bf32ccfd92b90e2054b"
+    },
+    {
+      "path": "wan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77d54b8fb1b4c04477176b4e4b7de9ce9d9183ff",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/77d54b8fb1b4c04477176b4e4b7de9ce9d9183ff"
+    },
+    {
+      "path": "wan/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64a0ea921c894860790427c3fa0bcd655772dd8b",
+      "size": 29,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/64a0ea921c894860790427c3fa0bcd655772dd8b"
+    },
+    {
+      "path": "wan/modules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd518d564adf580b2b47db5be0a6e5e3d78fe188",
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/trees/dd518d564adf580b2b47db5be0a6e5e3d78fe188"
+    },
+    {
+      "path": "wan/modules/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b85f58d4ead3fd44f0a4e53be6481efcb2f34ed",
+      "size": 39,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/3b85f58d4ead3fd44f0a4e53be6481efcb2f34ed"
+    },
+    {
+      "path": "wan/modules/attention.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8845659c1418da0b4a82014dcde77a53f7206e6e",
+      "size": 5641,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/8845659c1418da0b4a82014dcde77a53f7206e6e"
+    },
+    {
+      "path": "wan/modules/camera_prope.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94417dec42f5d6780204cae2419f47a738fd05c4",
+      "size": 11491,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/94417dec42f5d6780204cae2419f47a738fd05c4"
+    },
+    {
+      "path": "wan/modules/causal_camera_model_2_2_prope_infinity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eedf6e0886545bed51a03bf4bf3ff8e14036cbb",
+      "size": 34696,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/8eedf6e0886545bed51a03bf4bf3ff8e14036cbb"
+    },
+    {
+      "path": "wan/modules/model_2_2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e03f1babf9d70a80011cc7dd869ea4e5020b389c",
+      "size": 19293,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/e03f1babf9d70a80011cc7dd869ea4e5020b389c"
+    },
+    {
+      "path": "wan/modules/t5.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c841b044a239a6b3d0f872016c52072bc49885e7",
+      "size": 16910,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/c841b044a239a6b3d0f872016c52072bc49885e7"
+    },
+    {
+      "path": "wan/modules/tokenizers.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "121e591c48f82f82daa51a6ce38ae9a27beea8d2",
+      "size": 2431,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/121e591c48f82f82daa51a6ce38ae9a27beea8d2"
+    },
+    {
+      "path": "wan/modules/vae_2_2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "954006895cc625b45a5a1c0a8e3c9bc9cd1244f2",
+      "size": 33269,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/954006895cc625b45a5a1c0a8e3c9bc9cd1244f2"
+    },
+    {
+      "path": "wan/modules/wan_camera_adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5f42bf6181d1baf55831462678d78410552ec48",
+      "size": 4146,
+      "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/git/blobs/d5f42bf6181d1baf55831462678d78410552ec48"
+    }
+  ],
+  "truncated": false
+}

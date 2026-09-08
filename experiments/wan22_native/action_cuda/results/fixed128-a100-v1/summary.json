@@ -1,0 +1,81 @@
+{
+  "schema": "worldline-action-fixed128-summary-v1",
+  "numerical_training": "passed",
+  "independent_actual_audit": "passed",
+  "completed_updates": 128,
+  "parameters_trained": 947712,
+  "initialization": "Exact original checkpoint-zero bytes, empty optimizer, no checkpoint16 warm-start",
+  "starts": [
+    0,
+    8,
+    32,
+    49
+  ],
+  "cycles": 32,
+  "branches_per_update": 2,
+  "training_velocity_files": 256,
+  "gradient_bundles": 128,
+  "gradient_arrays": 2304,
+  "retained_checkpoint_updates": [
+    0,
+    16,
+    32,
+    48,
+    64,
+    80,
+    96,
+    112,
+    128
+  ],
+  "foundation_tensors_verified_unchanged": 825,
+  "checkpoint_16_matches_previous_fixed16_bytes": true,
+  "native_zero_adapter_comparisons_bit_exact": 2,
+  "final_checkpoint_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+  "first_gru_gradient_l2": 0.0,
+  "second_gru_gradient_l2": 6.245405529625714e-05,
+  "last_gru_gradient_l2": 0.0004438415926415473,
+  "parent_seconds": 388.465081050992,
+  "worker_seconds": 373.59087909013033,
+  "core_load_seconds": 131.6217909231782,
+  "paired_update_seconds_sum": 116.36694636940956,
+  "resources": {
+    "passed": true,
+    "parent_seconds": 388.465081050992,
+    "worker_seconds": 373.59087909013033,
+    "training_function_seconds_including_hashes_and_artifacts": 220.59612505882978,
+    "worker_samples": 1392,
+    "parent_samples": 1502,
+    "peak_cuda_reserved_bytes": 21583888384,
+    "peak_combined_rss_bytes": 4272115712,
+    "minimum_cuda_available_bytes": 62513348608,
+    "recorded_external_timeout": null,
+    "internal_limits": {
+      "seconds": 900.0,
+      "host_rss_bytes": 51539607552,
+      "cuda_reserved_bytes": 64424509440,
+      "minimum_host_available_bytes": 8589934592,
+      "minimum_cuda_available_bytes": 8589934592,
+      "minimum_gpu_total_bytes": 75161927680
+    }
+  },
+  "fresh_training_not_continuation": true,
+  "training_images_generated": 0,
+  "checkpoint128_rendered_action_control_assessed": false,
+  "checkpoint128_fixed_input_quality_assessed": false,
+  "combined_raw": {
+    "public_files": 957,
+    "public_file_bytes": 2096526695,
+    "public_transport_bytes": 1514792115,
+    "public_parts": 100,
+    "public_index_sha256": "f2fc04946402a67a3179b0245545fa6ddd703872b769a3835d7a7330683f5134",
+    "public_stream_sha256": "99fab5e86f05fccd2a1f2d9abfcc4f364107ae80a146130d7dd160afd2063e72",
+    "original_files_unchanged": 956,
+    "one_historical_failure_log_prefix_redacted": true
+  },
+  "limitations": [
+    "This repeats four paired windows from one fixed original room, not new independent scenes.",
+    "Sequential losses use different noise and timestep draws; their first/last values are not a matched learning curve.",
+    "The included fourteen-prediction diagnostic evaluates checkpoints0 and16, not checkpoint128.",
+    "No rendered checkpoint128 behavior or model generalization is established by this training result."
+  ]
+}

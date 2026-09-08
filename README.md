@@ -67,7 +67,11 @@ Read the [model card](docs/model-card.md) and [evaluation protocol](docs/evaluat
 
 The [September 7, 2026 research review](docs/research-2026-09-07.md) includes current systems, less-mainstream research, source and weight licensing, available training recipes, recent benchmarks and unresolved limitations. It records current releases such as Atlas, GWM Worlds 2, AlayaWorld v1.1 and LingBot-World Infinity, plus relevant new work on action effects, persistent computation and explicit state.
 
+The [September 8 update](docs/research-2026-09-08.md) checks DreamX-World release files, memory-related failure findings from TetherMem, and the availability and input requirements of DreamX-Phi and EA-WM. It records the search scope and separates published claims from our measurements.
+
 A [source-level ABot feasibility review](docs/abot-local-feasibility-2026-09-07.md) covers its September 4 code release, exact checkpoint structure, camera-command limits, streaming cache, local memory estimates and decoder provenance. It retains 53 primary-source records. No ABot inference or camera-control result is claimed.
+
+The [DreamX autoregressive source review](docs/dreamx-ar-feasibility-2026-09-08.md) pins the released code and model metadata, resolves the checkpoint format, and documents camera inputs, sampler differences and loading limits. A short A100 baseline is a candidate for profiling. The stock program requires CUDA; no DreamX model run or Mac port is claimed.
 
 The [completed spatial CUDA diagnostic](experiments/wan22_native/spatial_reference/results/a100-v1/README.md) produced a recognizable 1248 × 704 room sequence in 594.877 seconds. The severe earlier color distortion is absent in this one sample, but the 17-frame sequence is nearly static, the door stays closed and some requested details are missing. Four saved-file audits passed. The complete evidence includes every frame and all 50 saved sampling steps. This uses external pretrained Wan2.2 and does not establish action control, a general world model or Genie 3 parity. A matching full baseline clip with fresh CUDA image encoding remains necessary before attributing the visual difference solely to resolution.
 
@@ -77,6 +81,8 @@ The [native CUDA action-training result](experiments/wan22_native/action_cuda/re
 A subsequent [fresh sixteen-update CUDA run](experiments/wan22_native/action_cuda/results/fixed16-a100-v1/README.md) completed in 260.465 seconds. All seventeen checkpoints, thirty-two saved training predictions and sixteen saved gradient bundles passed independent checks. The complete public archive can be downloaded without a provider account. Generated image quality and command response remain unmeasured by this training run.
 
 The [first generated clips from that trained adapter](experiments/wan22_native/action_cuda/results/visual-a100-v1/README.md) are now evaluated. Both 1248 × 704 clips show a recognizable room, but the door stays closed and the requested camera turn is absent. They took 420.010 seconds together, including loading and verification. Both score worse against the captured target sequence than repeating the starting image. Every generated frame, the comparison, exact source and failure findings are retained. Action control remains unresolved.
+
+The [fourteen-prediction diagnostic](experiments/wan22_native/action_cuda/results/diagnostic-a100-v1/README.md) found small gains on a previously seen training draw and a small first-step command effect. A subsequent [fresh 128-update run](experiments/wan22_native/action_cuda/results/fixed128-a100-v1/README.md) completed in 388.465 seconds. Its 256 saved predictions, 128 gradient bundles and nine checkpoints passed independent checks. The combined public archive retains all 957 recovery files, with two disclosed path-prefix replacements in one historical dependency log. A fresh public download passed verification. These training checks do not establish visible command control.
 
 The three immediate engineering capabilities are:
 

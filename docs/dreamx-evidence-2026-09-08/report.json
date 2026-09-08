@@ -1,0 +1,122 @@
+{
+  "schema": "worldline-dreamx-ar-source-feasibility-v1",
+  "status": "complete-source-review",
+  "checked_utc": "2026-09-08T07:42:32.227940+00:00",
+  "code_commit": "a1f4c6e5e45600718e5236955f2e0702e53fc275",
+  "model_commit": "67487c4a61466bb7166d30b7187dd465e0ac9f6c",
+  "published_weight": {
+    "name": "model.safetensors",
+    "bytes": 21132560104,
+    "sha256": "fba4fd99fe1955b3fd9b2fe452a8029c9a625dc42441b5a482481f877520ebef",
+    "parameter_metadata": {
+      "F32": 5283110592
+    },
+    "tensor_payload_downloaded": false,
+    "full_file_digest_independently_verified": false
+  },
+  "loader_format": "safetensors.load_file; model. prefix; strict=False means full key coverage remains unverified",
+  "config_bytes_equal": true,
+  "a100_80gb": "Short 81-frame profile is a plausible candidate; host load peak and actual CUDA runtime remain unmeasured. No execution admission.",
+  "mac_24gb": "Released entry point requires CUDA at import and execution; no stock MPS path.",
+  "sample_contract": {
+    "height": 704,
+    "width": 1280,
+    "latent_frames_proposed": 21,
+    "pixel_frames": 81,
+    "frames_per_block": 3,
+    "denoiser_calls_per_block": 4,
+    "context_cache_calls_per_block": 1,
+    "total_core_calls_source_derived": 35,
+    "cfg_negative_calls": 0,
+    "solver": "Flow-to-clean prediction with repeated noising, not UniPC",
+    "all_module_storage_after_conversion": "bfloat16",
+    "saved_stock_output": "compressed MP4 only"
+  },
+  "limits": [
+    "Full key/name coverage not checked against weight tensors.",
+    "No model, CUDA, dependency installation, provider/account call or checkpoint conversion performed.",
+    "Metadata and source retrieval used system curl with normal TLS verification; no certificate bypass.",
+    "No existing repository/runtime sources changed.",
+    "Native input shapes, text/VAE precision, noise generation, camera semantics, sampler and postprocessing differ from our own Wan/adapter comparison."
+  ],
+  "feasibility_sha256": "1436b4ee362c2c17cb682a2f61c4d4f557e26250f8b7131f352eae1772edc49d",
+  "retained_source_files": 19,
+  "source_inventory": {
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "README.md": {
+      "bytes": 14684,
+      "sha256": "daf55e60cea0406bdffc98e137606b2845ae62a757134e9a0e75487a9c57325f"
+    },
+    "configs/dreamx-ar/causal_camera_forcing_5b.yaml": {
+      "bytes": 907,
+      "sha256": "b1c56bedb44c9c39891746e36e5a837f34ce920c3aaad9907cbe28558fb7bc1c"
+    },
+    "configs/dreamx-ar/config.json": {
+      "bytes": 708,
+      "sha256": "c618d961987187ba675823413431c388ac700ed721d877c623dc1c63e027af0e"
+    },
+    "configs/dreamx-ar/default_config.yaml": {
+      "bytes": 77,
+      "sha256": "0d48b43ba9e2d6c4a96c5af1681f779d82479d228921a920787b8d1b948050f8"
+    },
+    "inference_README.md": {
+      "bytes": 6335,
+      "sha256": "3b6c3d0a41925146496d88671200d76f0a94756941494d7084a02045cfd66b2b"
+    },
+    "inference_ar_forcing.py": {
+      "bytes": 13448,
+      "sha256": "e83988c4886a5f6c7cf71f2689a757b919ba3a58b8c6eb578b5e9c43d9db8fcd"
+    },
+    "inference_ar_forcing.sh": {
+      "bytes": 2988,
+      "sha256": "687c0cb0d69a1552ef2cac74f76faf0bd49b611c91e2d6e744bc804c5b76922d"
+    },
+    "model/config.json": {
+      "bytes": 708,
+      "sha256": "c618d961987187ba675823413431c388ac700ed721d877c623dc1c63e027af0e"
+    },
+    "pipeline/pipeline_causal_camera.py": {
+      "bytes": 14176,
+      "sha256": "f9b74c99dbcd6eb1e2c9907c39b1e196dbaa7d2377301dc89a7e07c33f5ba78f"
+    },
+    "requirements.txt": {
+      "bytes": 414,
+      "sha256": "5856b89e09fbd340087bef71b250d8631fb6c5422ad867f10ab13079def099c3"
+    },
+    "tree.json": {
+      "bytes": 24615,
+      "sha256": "a4e0d02387ddb29eedc00728beeb506c69a056c6fd536492948004288fa438da"
+    },
+    "utils/memory.py": {
+      "bytes": 4417,
+      "sha256": "ca0b31c93019f802e1312d512591ae6bea35b450064cdde19b6202779f50bb7f"
+    },
+    "utils/postprocess.py": {
+      "bytes": 3219,
+      "sha256": "f96c45ec1f12df317f2b44ae6460960b52d12e72770830f0df2a9f0775c4afdd"
+    },
+    "utils/scheduler.py": {
+      "bytes": 7979,
+      "sha256": "4194ef1324bb06527621749c7f9a82f431ccf011823aa65099cb7bdf116b642e"
+    },
+    "utils/trajectory_processor.py": {
+      "bytes": 35553,
+      "sha256": "cb51e9df7e95a93c241719cab71509213be1bd8fc69f690f2090f664ef009e2d"
+    },
+    "utils/wan_wrapper.py": {
+      "bytes": 8140,
+      "sha256": "2b95ac1410770d0b8e575af8ec68a85a428b9ffdbcee299d2f943b708998f517"
+    },
+    "wan/modules/attention.py": {
+      "bytes": 5641,
+      "sha256": "02ad719a76e6bdec79d18fc62b094ef2ad7c28b2d593c9f395ae1226041b7c9d"
+    },
+    "wan/modules/causal_camera_model_2_2_prope_infinity.py": {
+      "bytes": 34696,
+      "sha256": "95d8d2981a4ad81dde9f5fb5253670de50b7e5cebf58cf7f6a31002a8efbc0df"
+    }
+  }
+}

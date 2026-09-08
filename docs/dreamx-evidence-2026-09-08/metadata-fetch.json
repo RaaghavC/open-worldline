@@ -1,0 +1,145 @@
+{
+  "code-commit.json": {
+    "url": "https://api.github.com/repos/AMAP-ML/DreamX-World/commits/master",
+    "exit_code": 0,
+    "accessed_utc": "2026-09-08T07:32:49.881082+00:00",
+    "tls_verification_disabled": false,
+    "bytes": 7774,
+    "sha256": "542a4e4cd3ba8cd6cd4e2b2e1dc02fe8d30dd5aa07249e9caa83769b3aa1e47a",
+    "commit": "a1f4c6e5e45600718e5236955f2e0702e53fc275",
+    "commit_date": "2026-07-23T09:44:29Z"
+  },
+  "model-metadata.json": {
+    "url": "https://huggingface.co/api/models/GD-ML/DreamX-World-5B?blobs=true",
+    "exit_code": 0,
+    "accessed_utc": "2026-09-08T07:32:49.879150+00:00",
+    "tls_verification_disabled": false,
+    "bytes": 2127,
+    "sha256": "0b2e1674f82b6d4d97571411296aa187bf5bf5e539176e9e1138ce0cf53f44bf",
+    "commit": "67487c4a61466bb7166d30b7187dd465e0ac9f6c",
+    "last_modified": "2026-06-16T07:34:46.000Z",
+    "license": "mit",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1657,
+        "lfs": null
+      },
+      {
+        "path": "README.md",
+        "bytes": 7109,
+        "lfs": null
+      },
+      {
+        "path": "assets/dreamx-world_teaser_fig.jpg",
+        "bytes": 1341541,
+        "lfs": {
+          "sha256": "7aaae3359590b2f69efdbd0124c3e40699048df64849135e3137648bb25303bb",
+          "size": 1341541,
+          "pointerSize": 132
+        }
+      },
+      {
+        "path": "assets/wechat_group_qrcode.png",
+        "bytes": 189528,
+        "lfs": {
+          "sha256": "7d76aef3379037d7daa1390011cebc5752ce06344c299a7bdf9cb74c95d64125",
+          "size": 189528,
+          "pointerSize": 131
+        }
+      },
+      {
+        "path": "config.json",
+        "bytes": 708,
+        "lfs": null
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 21132560104,
+        "lfs": {
+          "sha256": "fba4fd99fe1955b3fd9b2fe452a8029c9a625dc42441b5a482481f877520ebef",
+          "size": 21132560104,
+          "pointerSize": 136
+        }
+      }
+    ]
+  },
+  "camera-model-metadata.json": {
+    "url": "https://huggingface.co/api/models/GD-ML/DreamX-World-5B-Cam?blobs=true",
+    "exit_code": 0,
+    "accessed_utc": "2026-09-08T07:32:49.834811+00:00",
+    "tls_verification_disabled": false,
+    "bytes": 2636,
+    "sha256": "4cdd73348157e0ac32090504e8a66b90f3db41592b884e1bd6f9421e59aa500d",
+    "commit": "a4379c7723f6ebd02139e2e8fd62d6ef523e86e3",
+    "last_modified": "2026-05-22T03:37:38.000Z",
+    "license": "mit",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1657,
+        "lfs": null
+      },
+      {
+        "path": "README.md",
+        "bytes": 4401,
+        "lfs": null
+      },
+      {
+        "path": "assets/dreamx-world_teaser_fig.jpg",
+        "bytes": 1341541,
+        "lfs": {
+          "sha256": "7aaae3359590b2f69efdbd0124c3e40699048df64849135e3137648bb25303bb",
+          "size": 1341541,
+          "pointerSize": 132
+        }
+      },
+      {
+        "path": "assets/wechat_group_qrcode.png",
+        "bytes": 201949,
+        "lfs": {
+          "sha256": "f3c1a4cec5e512ef5c4f35fc4f99cab8caf2276871739c05f39329d448bfeb91",
+          "size": 201949,
+          "pointerSize": 131
+        }
+      },
+      {
+        "path": "config.json",
+        "bytes": 857,
+        "lfs": null
+      },
+      {
+        "path": "diffusion_pytorch_model-00001-of-00003.safetensors",
+        "bytes": 10718745536,
+        "lfs": {
+          "sha256": "a5151c5ae099009861da9cfcb2250cc8147e63e973b38c0792ef8a594af55899",
+          "size": 10718745536,
+          "pointerSize": 136
+        }
+      },
+      {
+        "path": "diffusion_pytorch_model-00002-of-00003.safetensors",
+        "bytes": 10700757600,
+        "lfs": {
+          "sha256": "2972dd7f7dd36754effe8ec7352030bc0589228510f840a7e357274ad9c98b38",
+          "size": 10700757600,
+          "pointerSize": 136
+        }
+      },
+      {
+        "path": "diffusion_pytorch_model-00003-of-00003.safetensors",
+        "bytes": 3111824720,
+        "lfs": {
+          "sha256": "8d2a8e167156b0411c9bafbab15bf08d863e59ee6b8bfb4edfbe07e9865ecbef",
+          "size": 3111824720,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "diffusion_pytorch_model.safetensors.index.json",
+        "bytes": 102344,
+        "lfs": null
+      }
+    ]
+  }
+}

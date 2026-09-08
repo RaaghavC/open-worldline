@@ -1,0 +1,41 @@
+{
+  "schema": "worldline-action-fixed128-public-transport-history-v1",
+  "summary": "The 45 MB layout failed with TLS or connection errors. Smaller 16 MB parts uploaded successfully through part 089; part 090 exhausted two attempts. Only the five absent tail parts were split into ten pieces at most 8 MB, then uploaded once per piece. The first 90 completed part assets were preserved. Final 126 assets passed remote digest/size verification, followed by complete public HTTPS recovery.",
+  "layouts": [
+    {
+      "parts": 34,
+      "max_part_bytes": 45000000,
+      "outcome": "failed upload",
+      "index_sha256": "6bf6cbbbb91cf8379bad210fa7984bc51e2aa285ba50664f0596025e20236c48"
+    },
+    {
+      "parts": 95,
+      "max_part_bytes": 16000000,
+      "outcome": "first 90 completed; tail incomplete",
+      "index_sha256": "2475f8d686eceb659f8be2e66d4a63621ef0e06614159377fb0195687ebb9063"
+    },
+    {
+      "parts": 100,
+      "max_part_bytes": 16000000,
+      "tail_max_part_bytes": 8000000,
+      "outcome": "public download verified",
+      "index_sha256": "f2fc04946402a67a3179b0245545fa6ddd703872b769a3835d7a7330683f5134"
+    }
+  ],
+  "stream_unchanged_across_public_layouts": true,
+  "raw_transport_log_hashes": {
+    "upload-results.json": "ede316d044ce5c251d64733b0e7c83c44321e6106aea6fdf3308c09ff46d4269",
+    "tls12-result.json": "85357dc7508d0ea64a7232fca38d8a3ccbcc95756b8de0a7bb8c548876f25e33",
+    "http2-part000-result.json": "4606157aaebb90a4a65a9680386edc40562d2ada6e8efdef3c91c1e610944154",
+    "upload16-results.json": "9151d5ab824db7cebc23bcd434e1b3001b958e4fcd61e09a0aa9db03890e2bbc",
+    "tail8-upload-results.json": "5775fe2ffd8dfcd0b1d1249790c0a4ad042ac454a507fd232a2583d00ae986e9"
+  },
+  "raw_transport_logs_published": false,
+  "omission_reason": "Operational transport logs may contain private local network addresses or workspace paths. This summary retains their identities and outcomes; no scientific evidence is omitted.",
+  "tls_certificate_validation_disabled": false,
+  "completed_asset_deletion": false,
+  "historical_readme_assets_renamed_without_byte_changes": [
+    "README-45mb-attempt.md",
+    "README-16mb-attempt.md"
+  ]
+}

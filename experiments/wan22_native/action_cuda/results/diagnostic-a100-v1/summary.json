@@ -1,0 +1,119 @@
+{
+  "schema": "worldline-action-fourteen-diagnostic-summary-v1",
+  "numerical_execution": "passed",
+  "independent_saved_prediction_audit": "passed",
+  "predictions": 14,
+  "optimizer_updates": 0,
+  "generated_images": 0,
+  "reference_comparisons_bit_exact": 4,
+  "original_foundation_value_records_verified": 825,
+  "checkpoint_pair": [
+    0,
+    16
+  ],
+  "prepared_plan_sha256": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6",
+  "parent_elapsed_seconds": 252.70026128739119,
+  "worker_elapsed_seconds": 247.67431084439158,
+  "core_load_seconds": 135.62563410028815,
+  "before_value_hash_seconds": 51.07532523944974,
+  "after_value_hash_seconds": 51.1381462700665,
+  "objective_k506": {
+    "0": {
+      "closed": {
+        "float64_mse": 0.14848440714209962,
+        "float32_elementwise_float64_mean": 0.14848440712703756,
+        "numpy_float32_mse": 0.14848436415195465,
+        "reported_float32_mse": 0.14848440885543823,
+        "reported_minus_float64": 1.7133386098766579e-09
+      },
+      "open": {
+        "float64_mse": 0.16215267677281414,
+        "float32_elementwise_float64_mean": 0.16215267675700187,
+        "numpy_float32_mse": 0.16215266287326813,
+        "reported_float32_mse": 0.16215267777442932,
+        "reported_minus_float64": 1.0016151796854444e-09
+      }
+    },
+    "16": {
+      "closed": {
+        "float64_mse": 0.14791987699407244,
+        "float32_elementwise_float64_mean": 0.14791987698767728,
+        "numpy_float32_mse": 0.14791986346244812,
+        "reported_float32_mse": 0.14791987836360931,
+        "reported_minus_float64": 1.3695368727972834e-09
+      },
+      "open": {
+        "float64_mse": 0.16155256158205544,
+        "float32_elementwise_float64_mean": 0.16155256156238082,
+        "numpy_float32_mse": 0.1615525633096695,
+        "reported_float32_mse": 0.1615525484085083,
+        "reported_minus_float64": -1.3173547142031339e-08
+      }
+    }
+  },
+  "relative_objective_improvement_float64": {
+    "closed": 0.003801949032176344,
+    "open": 0.003700926822191808
+  },
+  "checkpoint16_same_input_k999": {
+    "positive_command_effect": {
+      "exact_equal": false,
+      "max_absolute": 0.015625,
+      "rms": 0.0003046884882653841,
+      "relative_l2": 0.00024423009799920777,
+      "difference_l2": 0.24733199466037337,
+      "reference_l2": 1012.7007141485717
+    },
+    "negative_command_effect": {
+      "exact_equal": false,
+      "max_absolute": 0.03125,
+      "rms": 0.00031130224296091696,
+      "relative_l2": 0.0002473900632115471,
+      "difference_l2": 0.2527007342223872,
+      "reference_l2": 1021.4667919232426
+    },
+    "guided_command_effect": {
+      "exact_equal": false,
+      "max_absolute": 0.125,
+      "rms": 0.001961411818885448,
+      "relative_l2": 0.0015827715532911904,
+      "difference_l2": 1.5921832172826587,
+      "reference_l2": 1005.946318640803
+    },
+    "positive_residual_vs_native": {
+      "exact_equal": false,
+      "max_absolute": 0.046875,
+      "rms": 0.01154690045153165,
+      "relative_l2": 0.009252560223140437,
+      "difference_l2": 9.37323867101464,
+      "reference_l2": 1013.0427087167062
+    },
+    "negative_residual_vs_native": {
+      "exact_equal": false,
+      "max_absolute": 0.046875,
+      "rms": 0.011559635934529579,
+      "relative_l2": 0.009182993148692503,
+      "difference_l2": 9.383576745914596,
+      "reference_l2": 1021.8429431421989
+    },
+    "positive_negative_command_delta_cosine": 0.006401127731720799,
+    "guided_l2_over_sum_weighted_component_l2": 0.708435814474488,
+    "guided_l2_over_5x_positive_l2": 1.2874866589492253,
+    "guided_delta_decomposition_max_fp32_roundoff_all_latents": 7.450580596923828e-09,
+    "computed_guided_tensor_sha256": {
+      "closed": "b188423428e5367f6e22ce048b98b93744048b82c025e8a67094e5ca5e423554",
+      "open": "551f38bf1a198116eab191d729bb574e4cb92d5d45e21561a7266f0fa8ab05d4"
+    },
+    "guided_values_retained_by_runtime": false,
+    "meaning": "Ratio and cosine describe combination/cancellation, with no causal diagnosis or quality threshold."
+  },
+  "scope": "Four seen-input objective losses and a first-step same-input command/CFG diagnostic. No new training, image generation or generalization result.",
+  "full_raw_publication": "public_and_download_verified",
+  "evidence_sha256": {
+    "audit/report.json": "b18fbdce5a37fc3c7d93a512b3b47136dda9f0f788b111363c3b0db70f91277e",
+    "plans/diagnostic.json": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6",
+    "metrics/parent.json": "58c91a1634205eb128160fe9aabb602816c96c9a03399bda373f31438a7b753f",
+    "metrics/worker.json": "da6cd31c69c57ca0e7e6e8134ddfbffe97fb929d1fe0d91246259f1a331b2083",
+    "plans/executed-admission.json": "6b4f77f799ca0f7edd92d59aa723e82100809a8e6b0ffb1f6a7432898813102e"
+  }
+}

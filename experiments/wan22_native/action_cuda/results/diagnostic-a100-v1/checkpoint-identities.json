@@ -1,0 +1,39 @@
+{
+  "schema": "worldline-action-diagnostic-checkpoint-identity-v1",
+  "trainable_parameter_count": 947712,
+  "dtype": "float32",
+  "checkpoint_0": {
+    "sha256": "8f7751f08435eed06d4e412357b96713dbecc43771a89594dfd2f9557afd14e0",
+    "tensor_sha256": {
+      "query.weight": "e1138b8f0f35724607940d51b78bb5731a57b9a2594fa7d8f1eaf50c9a180ec2",
+      "value.bias": "39a17ecd89f8d4611a16bab55500e38f25e22515be639b1fc362757fa25017c7",
+      "value.weight": "b9c46fcfe0c79ce915d40a3b50cbe25526154f9d5c7b3ed967fc342a9c1acc35",
+      "command_gru.bias_hh": "ed2ce4b855fa670d6e1eb665be7c880054ae1e3092e1bda50e62f51755626063",
+      "query.bias": "e2fcd78605784df7945f902c52c3d7f50791ca7581fae5398908fb60b4db7dff",
+      "action.2.weight": "dc3ab9ef3f27401080dba3a2159102e55075281ecb87dc854971ab011311f076",
+      "command_gru.weight_ih": "ff73ea2356eec2d43d52de651f6338058f4a7c9d29c12e572754de5732d429bd",
+      "key.bias": "334db40fb4114a9193f69ba12a568e777365e9641cc497f35b40bd4541e4d745",
+      "action.0.weight": "000878f0edad2ee194aa06c96890d64d36c9f27d80434e1f937660172ee0631c",
+      "action.2.bias": "1d0440c4d6342ff1ffa9d73ff160fcc55c639a81acdd043c1381621ff87f79ae",
+      "command_gru.bias_ih": "3d8b30d86dcac7ca267084cd3142884226afc99d8576b41dccc865f08002cc23",
+      "action.0.bias": "a94d61d91244a556fcc70681830e55492a78982f9abb937aa783b61768f6ae1f",
+      "key.weight": "0508fb9fdecfa27790f0750b8bd7d09266b76ae1628426a15f065cca87569031",
+      "observation.bias": "2bbbeef06b41683dcdd3890945f94e098bbc62a41257cef6e4c574e0463893f7",
+      "command_gru.weight_hh": "f37f9f613bde75b63f4a8e07c98597e5acdaa50dae8f97a7c4154844eefea463",
+      "observation.weight": "9f3efff92d9b8db0fd1e64d45e6bb953c9a36da9ac6d314cfbc9bd4760338183",
+      "output.bias": "f3cc103136423a57975750907ebc1d367e2985ac6338976d4d5a439f50323f4a",
+      "output.weight": "106f0647ae10a6516b1ab2968038161e287ef40d1b22ca047531ed768e594ef1"
+    },
+    "public_raw_release": "https://github.com/RaaghavC/open-worldline/releases/tag/wan22-action-fixed16-a100-v1",
+    "public_recovery_index": "../fixed16-a100-v1/recovery/index.json",
+    "raw_path": "action-results/fixed16-spatial-v1/training/checkpoint-0000/adapter.safetensors",
+    "bytes": 3792296
+  },
+  "checkpoint_16": {
+    "path": "../fixed16-a100-v1/checkpoint-0016/adapter.safetensors",
+    "sha256": "d15994f0cb1bdf54e264e75ecddd9fd126f3e32df04a6e913703d18b95e0db3d",
+    "manifest_path": "../fixed16-a100-v1/checkpoint-0016/manifest.json",
+    "manifest_sha256": "0459732170956581a15861867abca4f3e094dd1eebc8abd45088b6ccfa0306ac"
+  },
+  "new_training_performed": false
+}

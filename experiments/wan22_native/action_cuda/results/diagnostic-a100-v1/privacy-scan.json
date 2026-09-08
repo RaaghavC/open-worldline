@@ -1,0 +1,210 @@
+{
+  "schema": "worldline-action-diagnostic-publication-privacy-v1",
+  "status": "passed",
+  "selected_text_files": [
+    {
+      "name": "README.md",
+      "sha256": "cb195962c140d3c9edfac9122eb0efcca81919c569a8d676954e4fff4f7494ae",
+      "bytes": 7268
+    },
+    {
+      "name": "audit/interpretation.md",
+      "sha256": "f200f1809cebeab485a03115f304ef9fb9be39d3e80011df4d45f263c891816c",
+      "bytes": 3319
+    },
+    {
+      "name": "audit/inventory.json",
+      "sha256": "11bd45f143e0c0baf233a49c60ee428785df520519d87f50a20b14f4a14c2f7e",
+      "bytes": 926
+    },
+    {
+      "name": "audit/report.json",
+      "sha256": "b18fbdce5a37fc3c7d93a512b3b47136dda9f0f788b111363c3b0db70f91277e",
+      "bytes": 18937
+    },
+    {
+      "name": "audit/source/README.md",
+      "sha256": "dfa8fa79a38ec60c244014afb5f3e694adfcec1b521d2dd85cc585b7c882df65",
+      "bytes": 3132
+    },
+    {
+      "name": "audit/source/audit.py",
+      "sha256": "a76be21884be026304970f649dbc1d400cf412c474ab8ec3c1472108e32f47d8",
+      "bytes": 19109
+    },
+    {
+      "name": "audit/source/check.py",
+      "sha256": "87a297f6f6b2299d3cd0a916a00a6f27702566e4e575d2250a601eb4454418d2",
+      "bytes": 3144
+    },
+    {
+      "name": "audit/source/cpu-check.json",
+      "sha256": "8924e5fd0269a82e62ab528c5a79583476933e9c98ca3499abf53982e532fdfb",
+      "bytes": 1233
+    },
+    {
+      "name": "checkpoint-identities.json",
+      "sha256": "db10fe7b64987d41cbe19872fb8de2dea3c104c691bb97768876a62cf18bd6fb",
+      "bytes": 2606
+    },
+    {
+      "name": "code-provenance.json",
+      "sha256": "16d0f41c05302260157aef4c4435b060a7a69cced6464d064d1c4a5ac60a8e48",
+      "bytes": 26100
+    },
+    {
+      "name": "licenses/ATRIUM-CC0.txt",
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "bytes": 7840
+    },
+    {
+      "name": "licenses/WAN-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "name": "licenses/WAN-NOTICE.txt",
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "bytes": 1252
+    },
+    {
+      "name": "licenses/WORLDLINE-APACHE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "name": "metrics/core-after.json",
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "bytes": 150573
+    },
+    {
+      "name": "metrics/core-before.json",
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "bytes": 150573
+    },
+    {
+      "name": "metrics/monitor-terminal.json",
+      "sha256": "8993b5cb4ed7903585866d3ee9b0fc9067e410fb22797a46f1ce2f4a9bd8dfdd",
+      "bytes": 403
+    },
+    {
+      "name": "metrics/parent.json",
+      "sha256": "58c91a1634205eb128160fe9aabb602816c96c9a03399bda373f31438a7b753f",
+      "bytes": 412
+    },
+    {
+      "name": "metrics/terminal.json",
+      "sha256": "a4b9255fe81444414a441ee9f9b7b2bf78bad20cd40c182345b7db1b194b7fe2",
+      "bytes": 542
+    },
+    {
+      "name": "metrics/weight-load.json",
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "bytes": 391591
+    },
+    {
+      "name": "metrics/worker.json",
+      "sha256": "da6cd31c69c57ca0e7e6e8134ddfbffe97fb929d1fe0d91246259f1a331b2083",
+      "bytes": 23107
+    },
+    {
+      "name": "plans/diagnostic.json",
+      "sha256": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6",
+      "bytes": 157008
+    },
+    {
+      "name": "plans/executed-admission.json",
+      "sha256": "6b4f77f799ca0f7edd92d59aa723e82100809a8e6b0ffb1f6a7432898813102e",
+      "bytes": 10313
+    },
+    {
+      "name": "plans/visual-inputs.json",
+      "sha256": "6feb229e4e27f2c44aa740184a1687bdad5b1ff06ada2eca1b4bb8d3b14e13f4",
+      "bytes": 1119213
+    },
+    {
+      "name": "preflight/author-cpu.json",
+      "sha256": "d91ef87a3f0bc70ae6b7ae8ce0d107fbb7961016f45c24ee7ff5139270a48f17",
+      "bytes": 9419
+    },
+    {
+      "name": "preflight/independent-source-review.json",
+      "sha256": "29452c16fb811a2ed94e4ae41ccdc5055e928a160807b0a304d9778a1da37cc4",
+      "bytes": 11978
+    },
+    {
+      "name": "recovery/diagnostic-file-index.json",
+      "sha256": "b5790d38686dac8663b86eee425906174784520f6551bf49ebf7b69032700a29",
+      "bytes": 24861
+    },
+    {
+      "name": "recovery/interim-local-verification.json",
+      "sha256": "658ad07ab3d36b39ea4be74bb709e11c3625f71b59933727a8138ef40866f487",
+      "bytes": 316
+    },
+    {
+      "name": "release-status.json",
+      "sha256": "a5e38c479a0cb479ec4d0ccf6c02d6921ceef2e572f0be4fb5e5b10d916542bb",
+      "bytes": 674
+    },
+    {
+      "name": "source/diagnostic.py",
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "bytes": 20027
+    },
+    {
+      "name": "source/test_diagnostic.py",
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "bytes": 5021
+    },
+    {
+      "name": "summary.json",
+      "sha256": "83083cc4a36d8159eb97276101cbfb4d2c8a8ca965edf554151d9cdedf54933e",
+      "bytes": 4767
+    },
+    {
+      "name": "verify_payload.py",
+      "sha256": "98189eaf71b4d8e66710785a2ec44c76319c27beba0c7b8d6e3ce49450947b37",
+      "bytes": 3017
+    }
+  ],
+  "raw_diagnostic_log_files": [
+    {
+      "name": "execution-attempt.json",
+      "sha256": "d80ccc459a4560bf4b0bdddef4c5dd84c5b0070618eae61fc002b4af19c40bc0",
+      "bytes": 11
+    },
+    {
+      "name": "launch.json",
+      "sha256": "64e2887de9f85903280a65f091c988f202ba40de24483bd3717418f90a63c1d5",
+      "bytes": 396
+    },
+    {
+      "name": "parent-memory.jsonl",
+      "sha256": "6b85e761f5b2f188d2d17b21027257a77fd8d84b49401f44491b742a269f4155",
+      "bytes": 128641
+    },
+    {
+      "name": "result/memory.jsonl",
+      "sha256": "a4b8e9e10edd61bae84286a86cf9ea1842c87dcf9797cfe2ea70a4915ab94718",
+      "bytes": 199241
+    },
+    {
+      "name": "worker.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "findings": [],
+  "categories_checked": [
+    "private_key",
+    "github_token",
+    "provider_token",
+    "authorization_value",
+    "private_local_path",
+    "provider_access_address"
+  ],
+  "limitations": "Pattern scan plus review of selected records; not a guarantee against every possible secret representation. Raw model measurements and copied sources are unchanged. Operational launch records and sampled memory logs were scanned but omitted. No provider/account lifecycle logs are included.",
+  "published_log_files": [],
+  "transformed_copied_files": []
+}
