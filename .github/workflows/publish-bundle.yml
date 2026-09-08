@@ -1,4 +1,4 @@
-name: Publish verified source bundle once
+name: Publish verified source bundle without workflow changes
 
 on:
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
           set -euo pipefail
           test "$GITHUB_EVENT_NAME" = workflow_dispatch
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          test "$(git show -s --format=%P HEAD)" = "$EXPECTED_BASE"
+          git merge-base --is-ancestor "$EXPECTED_BASE" HEAD
           test "$(git diff --name-only "$EXPECTED_BASE" HEAD)" = "$TEMP_WORKFLOW"
           test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
           test -z "$(git status --porcelain)"
@@ -99,7 +99,7 @@ jobs:
           (out / 'source-bundle.json').write_bytes(raw)
           print(json.dumps({'verified_bundle_bytes':total, 'sha256':full.hexdigest(), 'parts':len(parts)}))
           PY
-      - name: Apply exactly the two reviewed source commits
+      - name: Apply reviewed source while preserving every workflow file
         shell: bash
         run: |
           set -euo pipefail
@@ -114,11 +114,13 @@ jobs:
             echo 'Expected final tree contains temporary workflow' >&2
             exit 1
           fi
-          git cherry-pick --no-gpg-sign "$SOURCE_FIRST" "$SOURCE_FINAL"
-          git rm -- "$TEMP_WORKFLOW"
-          git -c commit.gpgsign=false commit -m 'Remove completed source publication workflow [skip ci]'
-          test "$(git rev-parse HEAD^{tree})" = "$EXPECTED_TREE"
-          test "$(git rev-list --count "$GITHUB_SHA"..HEAD)" = 3
+          git restore --source "$SOURCE_FINAL" --staged --worktree -- . ':(top,exclude).github/workflows/**'
+          git diff --cached --exit-code "$GITHUB_SHA" -- .github/workflows
+          git diff --cached --exit-code "$SOURCE_FINAL" -- . ':(top,exclude).github/workflows/**'
+          git -c commit.gpgsign=false commit -m 'Publish verified action-effect source and evidence [skip ci]'
+          git diff --exit-code "$GITHUB_SHA" HEAD -- .github/workflows
+          git diff --exit-code "$SOURCE_FINAL" HEAD -- . ':(top,exclude).github/workflows/**'
+          test "$(git rev-list --count "$GITHUB_SHA"..HEAD)" = 1
           test -z "$(git status --porcelain)"
       - name: Push only if main has not moved
         shell: bash
@@ -129,8 +131,8 @@ jobs:
           git push origin HEAD:refs/heads/main
           test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$(git rev-parse HEAD)"
           {
-            echo 'Verified source tree published by ordinary fast-forward.'
+            echo 'Verified non-workflow source published by ordinary fast-forward.'
             echo "Published commit: $(git rev-parse HEAD)"
-            echo "Source tree: $EXPECTED_TREE"
-            echo 'Root must manually dispatch check.yml; this token push does not trigger push workflows.'
+            echo "Required final source tree after API workflow patch: $EXPECTED_TREE"
+            echo 'All workflow files remain unchanged. Root must apply the reviewed check.yml and remove this temporary workflow through existing API access, verify the final tree, then dispatch check.yml.'
           } >> "$GITHUB_STEP_SUMMARY"
