@@ -1,0 +1,110 @@
+{
+  "schema": "worldline-action-effect-independent-oracle-v1",
+  "status": "computed",
+  "source_sha256": "746cbd7d1c20cd138564b8b37ade2c84ac3c60174660df524bc379e61093059f",
+  "consumed_files_sha256": {
+    "work/wan22-action-effect-assessment-actual-audit-v1/report.json": "99528e0e654ad1de451d31a02ebbf2b92d19345f4c85179f7b24e9c973d4fe1a",
+    "work/wan22-action-effect-actual-audit-v2/report.json": "05b1d6ef0a32c4dfb228e7517ad27365240d75f105c007a18c779fc7e617f7c1",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/metrics.json": "81515906b86395ce8e9443d877ca244a5ae703f459d4ed4402f03dd86f04732f",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/plan.json": "c17ad42baf1dcd9898c7fcecb1aa3458113576ad92dd977c9ee7376e7f50c1e6",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/reference-inputs/original14/original-training-inputs.safetensors": "289bc7ff587fef006986cc56f1fe57324d1d6b3d3adff33949ac706148e68b65",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0000-new128-closed-positive.safetensors": "a8250356938301460d8f637d42afbc134b80f001c7b2fd585e1a5b08de90bf96",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0000-new128-closed-negative.safetensors": "630b904679d1081203d401f86f261d2237b0308efc9ae7ea2ff8b5ecf7e12383",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0000-new128-open-positive.safetensors": "bd2c6da67182c0c54b462a154458b3b10b036fd0a7a98979681e71be7ae9ceb0",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0000-new128-open-negative.safetensors": "802a876e2e2472f7b4b1d31719c5730608e85f85bf2426b09fc9990f419bfb4c",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0001-new128-closed-positive.safetensors": "3db385f806f896f449e8858d9d85ed2c0a10934372bbd3796890189c5eec39fb",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0001-new128-closed-negative.safetensors": "a6c4a052c63822b73fe91cb6f417b383a8b70c898e9fa197aff089578498cec2",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0001-new128-open-positive.safetensors": "17b5f5283a34a6388abe24018d64f5d0ab6c7bd7c9e33739e45a380e73c193e0",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0001-new128-open-negative.safetensors": "fde9fdff0709f4dc37f36e3221ab971b978bede1cb68c6e63f1fe0aa3f3485ab",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0002-new128-closed-positive.safetensors": "18bc297d4243908f1d244bf461e3dabd97bc8f6359d11f6a02a95dad2bfae911",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0002-new128-closed-negative.safetensors": "3df97f48b4776e67efafe3e1e130d8bfcfd6edc32131fc9bb4353232d73e103d",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0002-new128-open-positive.safetensors": "4e7eabd0a7b22193571917eaff68d712b9ab46da9172120c1c0d0470119383a9",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0002-new128-open-negative.safetensors": "44353d619a312a885e2d6d5b9235e8e90ddeed6032c24ef4427e3e4b19b65c38",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0003-new128-closed-positive.safetensors": "d847828a68ee743ec0fc062d49e571d2e6f9e3ec3141e6c278c9e8fe03f35f31",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0003-new128-closed-negative.safetensors": "6a9fe81a6ceb1af321e39335669374acb7b62b59a3584261485efbf2b367ae1f",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0003-new128-open-positive.safetensors": "2a9eeea480cf1ca53b4fad3b5d4a7d762b7bd94f2e430fa17b6f90e250ac2dab",
+    "work/wan22-action-effect-assessment-recovered-final-v1/recovered/action-results/effect-assessment-v1/result/heldout-0003-new128-open-negative.safetensors": "910b4d9c680efb320c4b1a7cd0170de66029c3c09d412f4e0ab9f3ebd4edb649",
+    "work/wan22-action-effect-recovered-final-v1/recovered/action-results/effect128-spatial-v1/training/metrics.json": "9dc8b5b081da3adfbc33976b2fe231b7d967b92951897d7d4cc260b044507c32"
+  },
+  "cases": [
+    {
+      "noise_index": 0,
+      "current_normalized_mse": 0.9949848963506593,
+      "oracle_scalar_gain": 1.9381385145605852,
+      "oracle_scalar_normalized_mse": 0.9934503389701942,
+      "oracle_scalar_target_energy_explained_percent": 0.6549661029805809,
+      "oracle_two_branch_coefficients_positive_negative": [
+        11.86929941070092,
+        11.871687444456096
+      ],
+      "oracle_two_branch_normalized_mse": 0.91935047863058,
+      "oracle_two_branch_target_energy_explained_percent": 8.064952136942004,
+      "two_branch_gram_condition": 7.234931308695478
+    },
+    {
+      "noise_index": 1,
+      "current_normalized_mse": 0.9950193209925186,
+      "oracle_scalar_gain": 1.9088418429014407,
+      "oracle_scalar_normalized_mse": 0.993559253461119,
+      "oracle_scalar_target_energy_explained_percent": 0.6440746538881048,
+      "oracle_two_branch_coefficients_positive_negative": [
+        11.828189726320744,
+        11.885395619031929
+      ],
+      "oracle_two_branch_normalized_mse": 0.9195189813870471,
+      "oracle_two_branch_target_energy_explained_percent": 8.048101861295287,
+      "two_branch_gram_condition": 7.132537584138157
+    },
+    {
+      "noise_index": 2,
+      "current_normalized_mse": 0.9950532982511654,
+      "oracle_scalar_gain": 1.9020378465509442,
+      "oracle_scalar_normalized_mse": 0.9936178897548488,
+      "oracle_scalar_target_energy_explained_percent": 0.6382110245151229,
+      "oracle_two_branch_coefficients_positive_negative": [
+        11.807880104342775,
+        11.87911425399338
+      ],
+      "oracle_two_branch_normalized_mse": 0.9197319934337498,
+      "oracle_two_branch_target_energy_explained_percent": 8.02680065662502,
+      "two_branch_gram_condition": 7.140827810449164
+    },
+    {
+      "noise_index": 3,
+      "current_normalized_mse": 0.9947390340147031,
+      "oracle_scalar_gain": 1.9769757440789089,
+      "oracle_scalar_normalized_mse": 0.9930391092611655,
+      "oracle_scalar_target_energy_explained_percent": 0.6960890738834546,
+      "oracle_two_branch_coefficients_positive_negative": [
+        12.10075783698486,
+        11.593925364328578
+      ],
+      "oracle_two_branch_normalized_mse": 0.9193179810378449,
+      "oracle_two_branch_target_energy_explained_percent": 8.068201896215509,
+      "two_branch_gram_condition": 7.117563782249822
+    }
+  ],
+  "gradient_clipping": {
+    "updates": 128,
+    "auxiliary_updates": 32,
+    "updates_with_changed_norm_after_clipping": 0,
+    "largest_combined_gradient_norm": 0.023516271263360977
+  },
+  "seconds": 0.2546282080002129,
+  "model_execution": false,
+  "training": false,
+  "post_hoc_target_fitted_oracle": true,
+  "equations": {
+    "guided": "G=N+5*(P-N), with producer FP32 operation order",
+    "clean_difference": "d=-(G_open-G_closed); D=z_open-z_closed; future four latent groups only",
+    "scalar": "alpha=(d dot D)/(d dot d); normalized residual=||D-alpha*d||^2/||D||^2",
+    "two_basis": "Q=[-(P_open-P_closed), -(N_open-N_closed)]; beta=(Q^T Q)^-1 Q^T D"
+  },
+  "limitations": [
+    "Coefficients use the target and are diagnostic, not held-out prediction or a deployable gain.",
+    "Separate branch subtraction is FP32; the two-column fit is FP64 and need not equal a changed native CFG operation bit for bit.",
+    "Only initial pure-noise endpoint fields are considered; a new solver trajectory could change later directions.",
+    "The observed response span is not the full function class or adapter Jacobian. Residuals do not prove architectural impossibility.",
+    "Combined gradient norms cannot reconstruct separate main and auxiliary gradients."
+  ]
+}

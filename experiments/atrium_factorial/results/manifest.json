@@ -1,0 +1,4432 @@
+{
+  "schema": "worldline-atrium-factorial-v1",
+  "status": "complete",
+  "split": "development",
+  "scene_family": "single_atrium_layout_v1",
+  "scene_seed": 51000,
+  "independent_layouts": 1,
+  "dataset_license": "CC0-1.0",
+  "scene_source_sha256": "cf794ac98a01209be8ea70b3849f5f87174f0750b2990159cb052002836f7a56",
+  "capture_source_sha256": "725b739fd801c497ef8024f126cbf79a27e7dbbd38fd0311e57d9932fd9bc4d8",
+  "blender": "5.1.2",
+  "render_engine": "Cycles",
+  "device": "METAL",
+  "samples": 32,
+  "resolution": [
+    1248,
+    704
+  ],
+  "K": [
+    [
+      624.0,
+      0.0,
+      624.0
+    ],
+    [
+      0.0,
+      624.0,
+      352.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "camera_convention": "world_from_camera uses OpenCV x right, y down, z forward; world z up; meters",
+  "action_channels": [
+    "local_right_m",
+    "local_up_m",
+    "local_forward_m",
+    "yaw_left_rad",
+    "pitch_up_rad",
+    "interact_pulse"
+  ],
+  "command_alignment": "record t contains the command applied from observation t-1 to t; frame0 has no incoming command",
+  "frames_per_arm": 17,
+  "yaw_step_radians": 0.02617993877991494,
+  "rgb_transform": {
+    "view": "AgX",
+    "look": "None",
+    "exposure": 0.0,
+    "gamma": 1.0,
+    "display": "sRGB"
+  },
+  "interaction_semantics": "Programmed instantaneous remote door toggle to102degrees; no reach/contact/collision simulation",
+  "repeated_states": "Identical camera and door states reuse the first saved PNG for that state; every reuse is identified",
+  "model_inputs": [
+    "initial_rgb",
+    "requested_command_deltas"
+  ],
+  "training_targets": [
+    "future_rgb"
+  ],
+  "extra_metadata_not_model_inputs": [
+    "door_open",
+    "yaw_radians",
+    "world_from_camera"
+  ],
+  "neural_model_execution": false,
+  "arms": {
+    "stationary_closed": [
+      {
+        "frame": 0,
+        "command_from_previous": null,
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0000.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": null,
+        "render_or_copy_seconds": 9.884278832993004
+      },
+      {
+        "frame": 1,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0001.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.025194042013026774
+      },
+      {
+        "frame": 2,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0002.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.02763645799132064
+      },
+      {
+        "frame": 3,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0003.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.02842904199496843
+      },
+      {
+        "frame": 4,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0004.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.024137958011124283
+      },
+      {
+        "frame": 5,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0005.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.030586832988774404
+      },
+      {
+        "frame": 6,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0006.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.027282875002129003
+      },
+      {
+        "frame": 7,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0007.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.037742416985565796
+      },
+      {
+        "frame": 8,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0008.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.02381037498707883
+      },
+      {
+        "frame": 9,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0009.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.03157329201349057
+      },
+      {
+        "frame": 10,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0010.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.023246249998919666
+      },
+      {
+        "frame": 11,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0011.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.02629833298851736
+      },
+      {
+        "frame": 12,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0012.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.03098679200047627
+      },
+      {
+        "frame": 13,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0013.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.02340270800050348
+      },
+      {
+        "frame": 14,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0014.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.030660374992294237
+      },
+      {
+        "frame": 15,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0015.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.029448916990077123
+      },
+      {
+        "frame": 16,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_closed/0016.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.03086733300006017
+      }
+    ],
+    "stationary_interact": [
+      {
+        "frame": 0,
+        "command_from_previous": null,
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0000.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.03167329201824032
+      },
+      {
+        "frame": 1,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0001.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.672170792007819
+      },
+      {
+        "frame": 2,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0002.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019963375001680106
+      },
+      {
+        "frame": 3,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0003.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.01968587501323782
+      },
+      {
+        "frame": 4,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0004.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019656083022709936
+      },
+      {
+        "frame": 5,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0005.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019121292018098757
+      },
+      {
+        "frame": 6,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0006.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019180750008672476
+      },
+      {
+        "frame": 7,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0007.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019841792003717273
+      },
+      {
+        "frame": 8,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0008.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019076083990512416
+      },
+      {
+        "frame": 9,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0009.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.01958320802077651
+      },
+      {
+        "frame": 10,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0010.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.01948962500318885
+      },
+      {
+        "frame": 11,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0011.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019628167006885633
+      },
+      {
+        "frame": 12,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0012.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.01963170900125988
+      },
+      {
+        "frame": 13,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0013.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019579291983973235
+      },
+      {
+        "frame": 14,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0014.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.019185750017641112
+      },
+      {
+        "frame": 15,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0015.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.01911866699811071
+      },
+      {
+        "frame": 16,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "stationary_interact/0016.png",
+        "png_sha256": "ee2ecf77cbcf013d34896830568bf5e8856ac9c206d0b286c6f733a703b74007",
+        "reused_from": "stationary_interact/0001.png",
+        "render_or_copy_seconds": 0.018967957992572337
+      }
+    ],
+    "left_closed": [
+      {
+        "frame": 0,
+        "command_from_previous": null,
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0000.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.018831166991731152
+      },
+      {
+        "frame": 1,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.02617993877991494,
+        "world_from_camera": [
+          [
+            0.9996573328971863,
+            0.0018279091455042362,
+            -0.026113033294677734,
+            -0.75
+          ],
+          [
+            0.02617693319916725,
+            -0.06980512291193008,
+            0.9972171187400818,
+            -4.400000095367432
+          ],
+          [
+            -1.1795506793532695e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0001.png",
+        "png_sha256": "fb51f96a24e0a613c25af61ff1dc88e8d407be78aead146932c52ff877488c50",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.931484625005396
+      },
+      {
+        "frame": 2,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.05235987755982988,
+        "world_from_camera": [
+          [
+            0.9986295104026794,
+            0.0036545738112181425,
+            -0.05220822989940643,
+            -0.75
+          ],
+          [
+            0.052335985004901886,
+            -0.06973335146903992,
+            0.9961918592453003,
+            -4.400000095367432
+          ],
+          [
+            1.6981078765354596e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0002.png",
+        "png_sha256": "b44c51dff7577825bc772d99e3366607dbbf6515e0ab58a8d07ad4dc334318b5",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.442180499987444
+      },
+      {
+        "frame": 3,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.07853981633974483,
+        "world_from_camera": [
+          [
+            0.9969173073768616,
+            0.005478743463754654,
+            -0.07826756685972214,
+            -0.75
+          ],
+          [
+            0.07845909148454666,
+            -0.06961391121149063,
+            0.9944838285446167,
+            -4.400000095367432
+          ],
+          [
+            1.0380142079213783e-08,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0003.png",
+        "png_sha256": "22220d960b21a2d9bba9f77cab05e6eb417c80f48a6a351354ae7ae44d0bd74f",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.567108499992173
+      },
+      {
+        "frame": 4,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.10471975511965977,
+        "world_from_camera": [
+          [
+            0.9945219159126282,
+            0.007299124263226986,
+            -0.10427337884902954,
+            -0.75
+          ],
+          [
+            0.1045285314321518,
+            -0.06944639980792999,
+            0.9920942187309265,
+            -4.400000095367432
+          ],
+          [
+            8.449582367120456e-09,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0004.png",
+        "png_sha256": "3a9d916cf5afc854a026461fb3636c8a01c3b566a965243829878e3f83e2ca00",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.900255916989408
+      },
+      {
+        "frame": 5,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.1308996938995747,
+        "world_from_camera": [
+          [
+            0.9914448857307434,
+            0.009114513173699379,
+            -0.1302076131105423,
+            -0.75
+          ],
+          [
+            0.13052622973918915,
+            -0.06923165172338486,
+            0.9890246987342834,
+            -4.400000095367432
+          ],
+          [
+            -9.407231438274266e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0005.png",
+        "png_sha256": "8827b6eb406dd063ac478953c35cbf3189372d3623199a59307be433e9e0ac87",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.855696124985116
+      },
+      {
+        "frame": 6,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.15707963267948966,
+        "world_from_camera": [
+          [
+            0.9876883625984192,
+            0.01092367060482502,
+            -0.1560526341199875,
+            -0.75
+          ],
+          [
+            0.15643450617790222,
+            -0.06896933913230896,
+            0.9852773547172546,
+            -4.400000095367432
+          ],
+          [
+            -2.491418182870575e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0006.png",
+        "png_sha256": "786700554b2cd78f77d733792123913d7ef53368fa5abed6c0d576ae932fd0c1",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.864727000007406
+      },
+      {
+        "frame": 7,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.1832595714594046,
+        "world_from_camera": [
+          [
+            0.9832549095153809,
+            0.01272533368319273,
+            -0.18179072439670563,
+            -0.75
+          ],
+          [
+            0.18223555386066437,
+            -0.06865976005792618,
+            0.9808547496795654,
+            -4.400000095367432
+          ],
+          [
+            -2.3921513658820004e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0007.png",
+        "png_sha256": "f1e6ae29195186e0743e08c2b28435eb4904b4e16d5eb16fe23ea2b5f81e13e6",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.067565333010862
+      },
+      {
+        "frame": 8,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.20943951023931953,
+        "world_from_camera": [
+          [
+            0.978147566318512,
+            0.01451826747506857,
+            -0.207404226064682,
+            -0.75
+          ],
+          [
+            0.20791174471378326,
+            -0.06830299645662308,
+            0.9757599234580994,
+            -4.400000095367432
+          ],
+          [
+            1.3139870524980779e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0008.png",
+        "png_sha256": "1f8f09319c5a6b6481b1b74dabf6a510bd8ad0fce246c5613b363f6517ad0f16",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.079553040995961
+      },
+      {
+        "frame": 9,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.23561944901923448,
+        "world_from_camera": [
+          [
+            0.972369909286499,
+            0.016301222145557404,
+            -0.23287555575370789,
+            -0.75
+          ],
+          [
+            0.233445405960083,
+            -0.06789955496788025,
+            0.9699963331222534,
+            -4.400000095367432
+          ],
+          [
+            -2.207271876386585e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0009.png",
+        "png_sha256": "3a8a3388b91a9042c203606addbfa58eee1e1a42bf5447c607da33e392dc46ff",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.55622591698193
+      },
+      {
+        "frame": 10,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.2617993877991494,
+        "world_from_camera": [
+          [
+            0.9659258127212524,
+            0.018073134124279022,
+            -0.2581874132156372,
+            -0.75
+          ],
+          [
+            0.25881919264793396,
+            -0.0674496740102768,
+            0.9635679125785828,
+            -4.400000095367432
+          ],
+          [
+            3.6467763919745266e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0010.png",
+        "png_sha256": "7422a75ba29ecb29fc9aa2335533e3d1710ca40cbb068b72742a50e3eca3665e",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.857801875012228
+      },
+      {
+        "frame": 11,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.28797932657906433,
+        "world_from_camera": [
+          [
+            0.9588196873664856,
+            0.019832540303468704,
+            -0.28332212567329407,
+            -0.75
+          ],
+          [
+            0.284015417098999,
+            -0.06695346534252167,
+            0.9564791917800903,
+            -4.400000095367432
+          ],
+          [
+            1.3624538830470101e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0011.png",
+        "png_sha256": "3263973c2cc19e63c08b2eb21ccd0e82bb9c278ac27377e0bbd92e71df0e6fdd",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.818956041999627
+      },
+      {
+        "frame": 12,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.3141592653589793,
+        "world_from_camera": [
+          [
+            0.9510565400123596,
+            0.021578343585133553,
+            -0.3082626461982727,
+            -0.75
+          ],
+          [
+            0.30901697278022766,
+            -0.06641125679016113,
+            0.9487349987030029,
+            -4.400000095367432
+          ],
+          [
+            1.9237877069144815e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0012.png",
+        "png_sha256": "3741664a24b297eb5350557a769ae58ae31bfbd393577dd5bfa36aaec67a861b",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.307015083002625
+      },
+      {
+        "frame": 13,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.3403392041388943,
+        "world_from_camera": [
+          [
+            0.9426414966583252,
+            0.02330942638218403,
+            -0.3329920768737793,
+            -0.75
+          ],
+          [
+            0.3338069021701813,
+            -0.0658237561583519,
+            0.9403404593467712,
+            -4.400000095367432
+          ],
+          [
+            8.08514677430594e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0013.png",
+        "png_sha256": "68953c7d9a836f3e986d55929fb42b87d740ab49e95ac22111b86d96309143be",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.43364320800174
+      },
+      {
+        "frame": 14,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.3665191429188092,
+        "world_from_camera": [
+          [
+            0.9335803985595703,
+            0.025024376809597015,
+            -0.35749322175979614,
+            -0.75
+          ],
+          [
+            0.3583679795265198,
+            -0.06519082933664322,
+            0.9313015341758728,
+            -4.400000095367432
+          ],
+          [
+            -3.7424058518809034e-08,
+            -0.9975590109825134,
+            -0.0698288157582283,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0014.png",
+        "png_sha256": "e01f4a7dc54dac5c284cb173ab1e81c34c05de1d666c444aed78d3b2febeefd5",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.618123749998631
+      },
+      {
+        "frame": 15,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.3926990816987241,
+        "world_from_camera": [
+          [
+            0.9238795042037964,
+            0.026722362264990807,
+            -0.38174936175346375,
+            -0.75
+          ],
+          [
+            0.38268348574638367,
+            -0.06451352685689926,
+            0.9216243028640747,
+            -4.400000095367432
+          ],
+          [
+            -1.901676327520363e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0015.png",
+        "png_sha256": "a23995386d81e884c4868360ab3d66e10c1b2342954ac34a130b15836bfca8fc",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.903864124993561
+      },
+      {
+        "frame": 16,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": 0.41887902047863906,
+        "world_from_camera": [
+          [
+            0.9135454297065735,
+            0.0284020584076643,
+            -0.40574389696121216,
+            -0.75
+          ],
+          [
+            0.4067367613315582,
+            -0.06379200518131256,
+            0.9113154411315918,
+            -4.400000095367432
+          ],
+          [
+            1.7507703731212132e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_closed/0016.png",
+        "png_sha256": "c21c465f6589251f4e4f244030f08afd6e433ce1a48c5764c468f512c782f11c",
+        "reused_from": null,
+        "render_or_copy_seconds": 9.340204082982382
+      }
+    ],
+    "left_interact": [
+      {
+        "frame": 0,
+        "command_from_previous": null,
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0000.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.020487125002546236
+      },
+      {
+        "frame": 1,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          1.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.02617993877991494,
+        "world_from_camera": [
+          [
+            0.9996573328971863,
+            0.0018279091455042362,
+            -0.026113033294677734,
+            -0.75
+          ],
+          [
+            0.02617693319916725,
+            -0.06980512291193008,
+            0.9972171187400818,
+            -4.400000095367432
+          ],
+          [
+            -1.1795506793532695e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0001.png",
+        "png_sha256": "1a4e8437bb5adf446adf86983eb391243716fd38670c76dc94f186b8d344dd4b",
+        "reused_from": null,
+        "render_or_copy_seconds": 7.204223750013625
+      },
+      {
+        "frame": 2,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.05235987755982988,
+        "world_from_camera": [
+          [
+            0.9986295104026794,
+            0.0036545738112181425,
+            -0.05220822989940643,
+            -0.75
+          ],
+          [
+            0.052335985004901886,
+            -0.06973335146903992,
+            0.9961918592453003,
+            -4.400000095367432
+          ],
+          [
+            1.6981078765354596e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0002.png",
+        "png_sha256": "556aad87688fb7078d491e70c81f104aa449b3a9126bd2156dffe8bab4b6c3ca",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.2073058749956544
+      },
+      {
+        "frame": 3,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.07853981633974483,
+        "world_from_camera": [
+          [
+            0.9969173073768616,
+            0.005478743463754654,
+            -0.07826756685972214,
+            -0.75
+          ],
+          [
+            0.07845909148454666,
+            -0.06961391121149063,
+            0.9944838285446167,
+            -4.400000095367432
+          ],
+          [
+            1.0380142079213783e-08,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0003.png",
+        "png_sha256": "428df1274e0cc4a9205002ade400ac2693406fcaa78300d975762a5bf8f0df51",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.794665875000646
+      },
+      {
+        "frame": 4,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.10471975511965977,
+        "world_from_camera": [
+          [
+            0.9945219159126282,
+            0.007299124263226986,
+            -0.10427337884902954,
+            -0.75
+          ],
+          [
+            0.1045285314321518,
+            -0.06944639980792999,
+            0.9920942187309265,
+            -4.400000095367432
+          ],
+          [
+            8.449582367120456e-09,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0004.png",
+        "png_sha256": "602a5d0eecf748ea77bfb2ca5e0c69b264d12b47a4bc4b6a8b8b958464e85781",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.117061625001952
+      },
+      {
+        "frame": 5,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.1308996938995747,
+        "world_from_camera": [
+          [
+            0.9914448857307434,
+            0.009114513173699379,
+            -0.1302076131105423,
+            -0.75
+          ],
+          [
+            0.13052622973918915,
+            -0.06923165172338486,
+            0.9890246987342834,
+            -4.400000095367432
+          ],
+          [
+            -9.407231438274266e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0005.png",
+        "png_sha256": "d75322622709ab4dafa93556323c51b6e659ca8990f9710bdf49c2f35083324b",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.081518749997485
+      },
+      {
+        "frame": 6,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.15707963267948966,
+        "world_from_camera": [
+          [
+            0.9876883625984192,
+            0.01092367060482502,
+            -0.1560526341199875,
+            -0.75
+          ],
+          [
+            0.15643450617790222,
+            -0.06896933913230896,
+            0.9852773547172546,
+            -4.400000095367432
+          ],
+          [
+            -2.491418182870575e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0006.png",
+        "png_sha256": "73fe2115e0d7bbdef30bacf6696d6d446ab9d429cb707c0f44fdf2365d261254",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.136336750001647
+      },
+      {
+        "frame": 7,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.1832595714594046,
+        "world_from_camera": [
+          [
+            0.9832549095153809,
+            0.01272533368319273,
+            -0.18179072439670563,
+            -0.75
+          ],
+          [
+            0.18223555386066437,
+            -0.06865976005792618,
+            0.9808547496795654,
+            -4.400000095367432
+          ],
+          [
+            -2.3921513658820004e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0007.png",
+        "png_sha256": "5f55e52488b1f0ee57dcdaf7e57f96b929d4ee20f7c387bca9963acfd4d24d26",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.8923297919973265
+      },
+      {
+        "frame": 8,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.20943951023931953,
+        "world_from_camera": [
+          [
+            0.978147566318512,
+            0.01451826747506857,
+            -0.207404226064682,
+            -0.75
+          ],
+          [
+            0.20791174471378326,
+            -0.06830299645662308,
+            0.9757599234580994,
+            -4.400000095367432
+          ],
+          [
+            1.3139870524980779e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0008.png",
+        "png_sha256": "16ce89142c492bc972b2590e86d629fb9b590e9b5f59368c63c65c67bbb839ed",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.832292209001025
+      },
+      {
+        "frame": 9,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.23561944901923448,
+        "world_from_camera": [
+          [
+            0.972369909286499,
+            0.016301222145557404,
+            -0.23287555575370789,
+            -0.75
+          ],
+          [
+            0.233445405960083,
+            -0.06789955496788025,
+            0.9699963331222534,
+            -4.400000095367432
+          ],
+          [
+            -2.207271876386585e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0009.png",
+        "png_sha256": "15c79e1097fddfef7785e88349fa80a36777fa4d48924993f0be314a85732bbb",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.793249040987575
+      },
+      {
+        "frame": 10,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.2617993877991494,
+        "world_from_camera": [
+          [
+            0.9659258127212524,
+            0.018073134124279022,
+            -0.2581874132156372,
+            -0.75
+          ],
+          [
+            0.25881919264793396,
+            -0.0674496740102768,
+            0.9635679125785828,
+            -4.400000095367432
+          ],
+          [
+            3.6467763919745266e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0010.png",
+        "png_sha256": "30ea798a6a9980abe7edaab9ac9507ea575f6a55bab5592017023bf59bba4b41",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.65647745798924
+      },
+      {
+        "frame": 11,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.28797932657906433,
+        "world_from_camera": [
+          [
+            0.9588196873664856,
+            0.019832540303468704,
+            -0.28332212567329407,
+            -0.75
+          ],
+          [
+            0.284015417098999,
+            -0.06695346534252167,
+            0.9564791917800903,
+            -4.400000095367432
+          ],
+          [
+            1.3624538830470101e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0011.png",
+        "png_sha256": "51e72a579af8be0973e65adb378536d1bac8827b51e83d81224bc80e791b796b",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.767893625015859
+      },
+      {
+        "frame": 12,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.3141592653589793,
+        "world_from_camera": [
+          [
+            0.9510565400123596,
+            0.021578343585133553,
+            -0.3082626461982727,
+            -0.75
+          ],
+          [
+            0.30901697278022766,
+            -0.06641125679016113,
+            0.9487349987030029,
+            -4.400000095367432
+          ],
+          [
+            1.9237877069144815e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0012.png",
+        "png_sha256": "643ab13894ea68e4e723212c5a3bea099f9d010a482309378bc1c05d6c985f82",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.769016125006601
+      },
+      {
+        "frame": 13,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.3403392041388943,
+        "world_from_camera": [
+          [
+            0.9426414966583252,
+            0.02330942638218403,
+            -0.3329920768737793,
+            -0.75
+          ],
+          [
+            0.3338069021701813,
+            -0.0658237561583519,
+            0.9403404593467712,
+            -4.400000095367432
+          ],
+          [
+            8.08514677430594e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0013.png",
+        "png_sha256": "235e84d80c84dd575ed9298ea4048e0b36ee6d9c9499539a1bce72250baefe11",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.061510291998275
+      },
+      {
+        "frame": 14,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.3665191429188092,
+        "world_from_camera": [
+          [
+            0.9335803985595703,
+            0.025024376809597015,
+            -0.35749322175979614,
+            -0.75
+          ],
+          [
+            0.3583679795265198,
+            -0.06519082933664322,
+            0.9313015341758728,
+            -4.400000095367432
+          ],
+          [
+            -3.7424058518809034e-08,
+            -0.9975590109825134,
+            -0.0698288157582283,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0014.png",
+        "png_sha256": "9c8a6ada080f8b188466008da67f5b0388d98e82ed8e95e071e808ef5792d4a7",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.568375457980437
+      },
+      {
+        "frame": 15,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.3926990816987241,
+        "world_from_camera": [
+          [
+            0.9238795042037964,
+            0.026722362264990807,
+            -0.38174936175346375,
+            -0.75
+          ],
+          [
+            0.38268348574638367,
+            -0.06451352685689926,
+            0.9216243028640747,
+            -4.400000095367432
+          ],
+          [
+            -1.901676327520363e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0015.png",
+        "png_sha256": "bee16c03b6990dbad5b79a0072ef65d8902bac5e8669b2a5c6e2300be0c4ebe5",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.9061871249869
+      },
+      {
+        "frame": 16,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": 0.41887902047863906,
+        "world_from_camera": [
+          [
+            0.9135454297065735,
+            0.0284020584076643,
+            -0.40574389696121216,
+            -0.75
+          ],
+          [
+            0.4067367613315582,
+            -0.06379200518131256,
+            0.9113154411315918,
+            -4.400000095367432
+          ],
+          [
+            1.7507703731212132e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "left_interact/0016.png",
+        "png_sha256": "97def054c625aa9f65af15dc188e49eab62d99de7ecce00f0718a786540e50d7",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.099568459001603
+      }
+    ],
+    "right_closed": [
+      {
+        "frame": 0,
+        "command_from_previous": null,
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0000.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.036875582998618484
+      },
+      {
+        "frame": 1,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.02617993877991494,
+        "world_from_camera": [
+          [
+            0.9996573328971863,
+            -0.0018279091455042362,
+            0.026113033294677734,
+            -0.75
+          ],
+          [
+            -0.02617693319916725,
+            -0.06980512291193008,
+            0.9972171187400818,
+            -4.400000095367432
+          ],
+          [
+            1.1795506793532695e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0001.png",
+        "png_sha256": "625346f8c524144b27e051649f2c3d197d41e75c9a4ea84ac403b444e52b4060",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.400622832996305
+      },
+      {
+        "frame": 2,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.05235987755982988,
+        "world_from_camera": [
+          [
+            0.9986295104026794,
+            -0.0036545738112181425,
+            0.05220822989940643,
+            -0.75
+          ],
+          [
+            -0.052335985004901886,
+            -0.06973335146903992,
+            0.9961918592453003,
+            -4.400000095367432
+          ],
+          [
+            -1.6981078765354596e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0002.png",
+        "png_sha256": "f49aeb20f9e0df97d479893ac1d75e904aa8002f2720c62c1116c8aeb70e3c59",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.115533875010442
+      },
+      {
+        "frame": 3,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.07853981633974483,
+        "world_from_camera": [
+          [
+            0.9969173073768616,
+            -0.005478743463754654,
+            0.07826756685972214,
+            -0.75
+          ],
+          [
+            -0.07845909148454666,
+            -0.06961391121149063,
+            0.9944838285446167,
+            -4.400000095367432
+          ],
+          [
+            -1.0380142079213783e-08,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0003.png",
+        "png_sha256": "45af8afd38774945d0b17c4eb76bd430f212ed48c654439007e0abbd2607ec7d",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.236371875012992
+      },
+      {
+        "frame": 4,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.10471975511965977,
+        "world_from_camera": [
+          [
+            0.9945219159126282,
+            -0.007299124263226986,
+            0.10427337884902954,
+            -0.75
+          ],
+          [
+            -0.1045285314321518,
+            -0.06944639980792999,
+            0.9920942187309265,
+            -4.400000095367432
+          ],
+          [
+            -8.449582367120456e-09,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0004.png",
+        "png_sha256": "1fd91bea40c983482db47e31c80d605b61484e466925b443702ebc958a3a98d0",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.437020917015616
+      },
+      {
+        "frame": 5,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.1308996938995747,
+        "world_from_camera": [
+          [
+            0.9914448857307434,
+            -0.009114513173699379,
+            0.1302076131105423,
+            -0.75
+          ],
+          [
+            -0.13052622973918915,
+            -0.06923165172338486,
+            0.9890246987342834,
+            -4.400000095367432
+          ],
+          [
+            9.407231438274266e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0005.png",
+        "png_sha256": "8ec4833f978e0a6d0d431f3580e3415f6be9b122df02c60dca9556a6495ce3ce",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.370291667000856
+      },
+      {
+        "frame": 6,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.15707963267948966,
+        "world_from_camera": [
+          [
+            0.9876883625984192,
+            -0.01092367060482502,
+            0.1560526341199875,
+            -0.75
+          ],
+          [
+            -0.15643450617790222,
+            -0.06896933913230896,
+            0.9852773547172546,
+            -4.400000095367432
+          ],
+          [
+            2.491418182870575e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0006.png",
+        "png_sha256": "4185329ac2513acaa5b82c4a6b5b9a33a26513291264f7106fce3ae9c4feec0a",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.659154209017288
+      },
+      {
+        "frame": 7,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.1832595714594046,
+        "world_from_camera": [
+          [
+            0.9832549095153809,
+            -0.01272533368319273,
+            0.18179072439670563,
+            -0.75
+          ],
+          [
+            -0.18223555386066437,
+            -0.06865976005792618,
+            0.9808547496795654,
+            -4.400000095367432
+          ],
+          [
+            2.3921513658820004e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0007.png",
+        "png_sha256": "3729e209b87c4e089b6cc714da2b7f49877bb3bb90fa074bfd489dfa60575268",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.1901950419996865
+      },
+      {
+        "frame": 8,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.20943951023931953,
+        "world_from_camera": [
+          [
+            0.978147566318512,
+            -0.01451826747506857,
+            0.207404226064682,
+            -0.75
+          ],
+          [
+            -0.20791174471378326,
+            -0.06830299645662308,
+            0.9757599234580994,
+            -4.400000095367432
+          ],
+          [
+            -1.3139870524980779e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0008.png",
+        "png_sha256": "19e87c840bf1934da4f03c1a362bef1cf11d61d5f1873b95490e82b549c66b4e",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.097849874990061
+      },
+      {
+        "frame": 9,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.23561944901923448,
+        "world_from_camera": [
+          [
+            0.972369909286499,
+            -0.016301222145557404,
+            0.23287555575370789,
+            -0.75
+          ],
+          [
+            -0.233445405960083,
+            -0.06789955496788025,
+            0.9699963331222534,
+            -4.400000095367432
+          ],
+          [
+            2.207271876386585e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0009.png",
+        "png_sha256": "4f3b00d1e98d7bdc2bb964efa6e7289867a56829e95b4caf1acde1d490f3e701",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.544344750000164
+      },
+      {
+        "frame": 10,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.2617993877991494,
+        "world_from_camera": [
+          [
+            0.9659258127212524,
+            -0.018073059618473053,
+            0.25818732380867004,
+            -0.75
+          ],
+          [
+            -0.2588191032409668,
+            -0.06744968891143799,
+            0.9635679721832275,
+            -4.400000095367432
+          ],
+          [
+            3.425257588673958e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0010.png",
+        "png_sha256": "0f39c65c17981d2968a4989d97b78d1f59ad4664250fb9b658930ba837dab50d",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.705740584002342
+      },
+      {
+        "frame": 11,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.28797932657906433,
+        "world_from_camera": [
+          [
+            0.9588197469711304,
+            -0.019832517951726913,
+            0.2833220958709717,
+            -0.75
+          ],
+          [
+            -0.28401538729667664,
+            -0.06695347279310226,
+            0.9564791917800903,
+            -4.400000095367432
+          ],
+          [
+            7.369441945570543e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0011.png",
+        "png_sha256": "0c062f1fb5d72190642a9b1a6b0852fe11950cad31e31da1aaac8b08dcce637c",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.889555457979441
+      },
+      {
+        "frame": 12,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.3141592653589793,
+        "world_from_camera": [
+          [
+            0.9510564804077148,
+            -0.021578285843133926,
+            0.3082627058029175,
+            -0.75
+          ],
+          [
+            -0.30901703238487244,
+            -0.06641127169132233,
+            0.9487349390983582,
+            -4.400000095367432
+          ],
+          [
+            4.5347395172257166e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0012.png",
+        "png_sha256": "8d1a1568bc1243a8d829bb41d17072a7f9503b3fa438088faf6244b8f7ffaf4f",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.4861379170033615
+      },
+      {
+        "frame": 13,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.3403392041388943,
+        "world_from_camera": [
+          [
+            0.9426414966583252,
+            -0.02330942638218403,
+            0.3329920768737793,
+            -0.75
+          ],
+          [
+            -0.3338069021701813,
+            -0.0658237561583519,
+            0.9403404593467712,
+            -4.400000095367432
+          ],
+          [
+            -8.08514677430594e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0013.png",
+        "png_sha256": "74bedd8bd3ca48857e8d8a5d9a19ba1b314a79f0f1e7bda1f18da83ad500f958",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.2002676670090295
+      },
+      {
+        "frame": 14,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.3665191429188092,
+        "world_from_camera": [
+          [
+            0.9335803985595703,
+            -0.025024397298693657,
+            0.35749325156211853,
+            -0.75
+          ],
+          [
+            -0.35836803913116455,
+            -0.06519081443548203,
+            0.9313015341758728,
+            -4.400000095367432
+          ],
+          [
+            1.8887828190372602e-08,
+            -0.9975590109825134,
+            -0.0698288157582283,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0014.png",
+        "png_sha256": "78af65cabf91093d28847d5905a5f2495aecd9dc7df021efa6335982d729d75d",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.704599500022596
+      },
+      {
+        "frame": 15,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.3926990816987241,
+        "world_from_camera": [
+          [
+            0.9238795042037964,
+            -0.026722362264990807,
+            0.38174936175346375,
+            -0.75
+          ],
+          [
+            -0.38268348574638367,
+            -0.06451352685689926,
+            0.9216243028640747,
+            -4.400000095367432
+          ],
+          [
+            1.901676327520363e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0015.png",
+        "png_sha256": "a577ef7d536f8c2cf074024f40aa26387ae53aaea13dc4c3c219080e490dd9d6",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.974677291989792
+      },
+      {
+        "frame": 16,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": false,
+        "yaw_radians": -0.41887902047863906,
+        "world_from_camera": [
+          [
+            0.9135453701019287,
+            -0.028402065858244896,
+            0.40574395656585693,
+            -0.75
+          ],
+          [
+            -0.406736820936203,
+            -0.06379187107086182,
+            0.911315381526947,
+            -4.400000095367432
+          ],
+          [
+            -7.539534863099107e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_closed/0016.png",
+        "png_sha256": "48366a986d24f912f4c874c18eb2d40552cf99d7d7cd359af8b3d411adedfed6",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.257615083013661
+      }
+    ],
+    "right_interact": [
+      {
+        "frame": 0,
+        "command_from_previous": null,
+        "door_open": false,
+        "yaw_radians": 0.0,
+        "world_from_camera": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.06982917338609695,
+            0.9975589513778687,
+            -4.400000095367432
+          ],
+          [
+            0.0,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0000.png",
+        "png_sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+        "reused_from": "stationary_closed/0000.png",
+        "render_or_copy_seconds": 0.020156083977781236
+      },
+      {
+        "frame": 1,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          1.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.02617993877991494,
+        "world_from_camera": [
+          [
+            0.9996573328971863,
+            -0.0018279091455042362,
+            0.026113033294677734,
+            -0.75
+          ],
+          [
+            -0.02617693319916725,
+            -0.06980512291193008,
+            0.9972171187400818,
+            -4.400000095367432
+          ],
+          [
+            1.1795506793532695e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0001.png",
+        "png_sha256": "a93caf226aa7cca5addd165c2549b6b53219e1a112079d411638a42b03195826",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.246107792016119
+      },
+      {
+        "frame": 2,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.05235987755982988,
+        "world_from_camera": [
+          [
+            0.9986295104026794,
+            -0.0036545738112181425,
+            0.05220822989940643,
+            -0.75
+          ],
+          [
+            -0.052335985004901886,
+            -0.06973335146903992,
+            0.9961918592453003,
+            -4.400000095367432
+          ],
+          [
+            -1.6981078765354596e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0002.png",
+        "png_sha256": "99230f9296e49fa098c59d64ee0bd60a057d25f65fe0cc9381f8ea684ced1b63",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.923086584021803
+      },
+      {
+        "frame": 3,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.07853981633974483,
+        "world_from_camera": [
+          [
+            0.9969173073768616,
+            -0.005478743463754654,
+            0.07826756685972214,
+            -0.75
+          ],
+          [
+            -0.07845909148454666,
+            -0.06961391121149063,
+            0.9944838285446167,
+            -4.400000095367432
+          ],
+          [
+            -1.0380142079213783e-08,
+            -0.9975589513778687,
+            -0.06982917338609695,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0003.png",
+        "png_sha256": "a44231c5242c9e6a6b8dc1daa8ad7d5503e333650f840f0bfa76dee1352e7815",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.517421750002541
+      },
+      {
+        "frame": 4,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.10471975511965977,
+        "world_from_camera": [
+          [
+            0.9945219159126282,
+            -0.007299124263226986,
+            0.10427337884902954,
+            -0.75
+          ],
+          [
+            -0.1045285314321518,
+            -0.06944639980792999,
+            0.9920942187309265,
+            -4.400000095367432
+          ],
+          [
+            -8.449582367120456e-09,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0004.png",
+        "png_sha256": "6598b216304001db6c0c948588d48a25575b0f0d633f1bbb339c3e879149fc47",
+        "reused_from": null,
+        "render_or_copy_seconds": 7.231623917003162
+      },
+      {
+        "frame": 5,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.1308996938995747,
+        "world_from_camera": [
+          [
+            0.9914448857307434,
+            -0.009114513173699379,
+            0.1302076131105423,
+            -0.75
+          ],
+          [
+            -0.13052622973918915,
+            -0.06923165172338486,
+            0.9890246987342834,
+            -4.400000095367432
+          ],
+          [
+            9.407231438274266e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0005.png",
+        "png_sha256": "4f2da8600113f8ca30bff1b4877e342df49b0a41716e92fb5813e934540ae68c",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.875210875004996
+      },
+      {
+        "frame": 6,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.15707963267948966,
+        "world_from_camera": [
+          [
+            0.9876883625984192,
+            -0.01092367060482502,
+            0.1560526341199875,
+            -0.75
+          ],
+          [
+            -0.15643450617790222,
+            -0.06896933913230896,
+            0.9852773547172546,
+            -4.400000095367432
+          ],
+          [
+            2.491418182870575e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0006.png",
+        "png_sha256": "d9e486568abe4b296023441927d429d6d5a2012d730052eb0c577f7d726219b4",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.634994249994634
+      },
+      {
+        "frame": 7,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.1832595714594046,
+        "world_from_camera": [
+          [
+            0.9832549095153809,
+            -0.01272533368319273,
+            0.18179072439670563,
+            -0.75
+          ],
+          [
+            -0.18223555386066437,
+            -0.06865976005792618,
+            0.9808547496795654,
+            -4.400000095367432
+          ],
+          [
+            2.3921513658820004e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0007.png",
+        "png_sha256": "e15e969e139d0e88cfff5b7e8797aa2f8db0a6ed0b43c8de47c5d160b083c786",
+        "reused_from": null,
+        "render_or_copy_seconds": 6.045600665995153
+      },
+      {
+        "frame": 8,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.20943951023931953,
+        "world_from_camera": [
+          [
+            0.978147566318512,
+            -0.01451826747506857,
+            0.207404226064682,
+            -0.75
+          ],
+          [
+            -0.20791174471378326,
+            -0.06830299645662308,
+            0.9757599234580994,
+            -4.400000095367432
+          ],
+          [
+            -1.3139870524980779e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0008.png",
+        "png_sha256": "c82ee8b2e56f6b8c165ac84a0dd2644cc51b4aa50291c063949ddfed1053c0f5",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.87525483398349
+      },
+      {
+        "frame": 9,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.23561944901923448,
+        "world_from_camera": [
+          [
+            0.972369909286499,
+            -0.016301222145557404,
+            0.23287555575370789,
+            -0.75
+          ],
+          [
+            -0.233445405960083,
+            -0.06789955496788025,
+            0.9699963331222534,
+            -4.400000095367432
+          ],
+          [
+            2.207271876386585e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0009.png",
+        "png_sha256": "5da1e6de90cbeb2f1b6ac8ea08b82628b223c7fb943f367d036e624612949ec8",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.342508166999323
+      },
+      {
+        "frame": 10,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.2617993877991494,
+        "world_from_camera": [
+          [
+            0.9659258127212524,
+            -0.018073059618473053,
+            0.25818732380867004,
+            -0.75
+          ],
+          [
+            -0.2588191032409668,
+            -0.06744968891143799,
+            0.9635679721832275,
+            -4.400000095367432
+          ],
+          [
+            3.425257588673958e-08,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0010.png",
+        "png_sha256": "8fcbbc9c2e13d7b05f9904f81e3036d72ab0b461e6de2d6fe260c0c6d6bcaa3f",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.308985833020415
+      },
+      {
+        "frame": 11,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.28797932657906433,
+        "world_from_camera": [
+          [
+            0.9588197469711304,
+            -0.019832517951726913,
+            0.2833220958709717,
+            -0.75
+          ],
+          [
+            -0.28401538729667664,
+            -0.06695347279310226,
+            0.9564791917800903,
+            -4.400000095367432
+          ],
+          [
+            7.369441945570543e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0011.png",
+        "png_sha256": "7f833445d111d4e26cf09e1da6912ad3ad7c9f53183d90157db710beb807af1c",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.839160250005079
+      },
+      {
+        "frame": 12,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.3141592653589793,
+        "world_from_camera": [
+          [
+            0.9510564804077148,
+            -0.021578285843133926,
+            0.3082627058029175,
+            -0.75
+          ],
+          [
+            -0.30901703238487244,
+            -0.06641127169132233,
+            0.9487349390983582,
+            -4.400000095367432
+          ],
+          [
+            4.5347395172257166e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0012.png",
+        "png_sha256": "2cb653523a232cf5157f38b2e8126bd4abd90fee9b43a1e2a003a0573e926db1",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.97984612500295
+      },
+      {
+        "frame": 13,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.3403392041388943,
+        "world_from_camera": [
+          [
+            0.9426414966583252,
+            -0.02330942638218403,
+            0.3329920768737793,
+            -0.75
+          ],
+          [
+            -0.3338069021701813,
+            -0.0658237561583519,
+            0.9403404593467712,
+            -4.400000095367432
+          ],
+          [
+            -8.08514677430594e-09,
+            -0.9975589513778687,
+            -0.0698290541768074,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0013.png",
+        "png_sha256": "277c38c298010a37eb885e7a4a25367227a383527cad3884063a419217eb877a",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.795276332995854
+      },
+      {
+        "frame": 14,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.3665191429188092,
+        "world_from_camera": [
+          [
+            0.9335803985595703,
+            -0.025024397298693657,
+            0.35749325156211853,
+            -0.75
+          ],
+          [
+            -0.35836803913116455,
+            -0.06519081443548203,
+            0.9313015341758728,
+            -4.400000095367432
+          ],
+          [
+            1.8887828190372602e-08,
+            -0.9975590109825134,
+            -0.0698288157582283,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0014.png",
+        "png_sha256": "f9f236bdf3a612155415a21c105f990928a0d9fe19eeaa58d259c93f43dc40ce",
+        "reused_from": null,
+        "render_or_copy_seconds": 4.876077332999557
+      },
+      {
+        "frame": 15,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.3926990816987241,
+        "world_from_camera": [
+          [
+            0.9238795042037964,
+            -0.026722362264990807,
+            0.38174936175346375,
+            -0.75
+          ],
+          [
+            -0.38268348574638367,
+            -0.06451352685689926,
+            0.9216243028640747,
+            -4.400000095367432
+          ],
+          [
+            1.901676327520363e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0015.png",
+        "png_sha256": "91609bc1ee55ef3df99271a087a5c7cd176581e38402788b1f2738b3517adb7f",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.871433958003763
+      },
+      {
+        "frame": 16,
+        "command_from_previous": [
+          0.0,
+          0.0,
+          0.0,
+          -0.02617993877991494,
+          0.0,
+          0.0
+        ],
+        "door_open": true,
+        "yaw_radians": -0.41887902047863906,
+        "world_from_camera": [
+          [
+            0.9135453701019287,
+            -0.028402065858244896,
+            0.40574395656585693,
+            -0.75
+          ],
+          [
+            -0.406736820936203,
+            -0.06379187107086182,
+            0.911315381526947,
+            -4.400000095367432
+          ],
+          [
+            -7.539534863099107e-08,
+            -0.9975589513778687,
+            -0.06982893496751785,
+            1.600000023841858
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "png": "right_interact/0016.png",
+        "png_sha256": "d8208baeec276a84b6f0bf5f6323e64d0fefc7eba4b230cf59c317d0db7d6ef1",
+        "reused_from": null,
+        "render_or_copy_seconds": 5.104005875007715
+      }
+    ]
+  },
+  "elapsed_seconds": 370.7513913750008,
+  "rendered_unique_states": 66,
+  "copied_identical_states": 36,
+  "blend_sha256": "5b35187202c748ccc17752806c610c6ae72ac18cd8653badd82cf6bdf71cc2af"
+}

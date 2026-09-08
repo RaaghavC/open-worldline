@@ -26,6 +26,14 @@ The subsequent two 17-frame, 1248 × 704 videos failed the visible controls. The
 
 The [complete results](../experiments/wan22_native/action_effect/results/README.md) retain the exact checkpoint, previews, source, predictions, audits, and download instructions. Historical records remain unchanged where possible; the publication notes disclose operational path redactions and changes to download-piece metadata. No further training under this hypothesis is admitted.
 
+## Follow-up diagnosis and implementation
+
+A [saved-prediction analysis](../experiments/action_effect_diagnostics/README.md) found that even an ideal, target-fitted multiplier explains less than 0.7% of the required initial latent change. The response is poorly aligned, rather than merely too small. This is a post hoc analysis of the same room, not a new quality result.
+
+The [intermediate action bridge](../experiments/wan22_native/intermediate_action/README.md) now lets the final native transformer block process the original adapter's commands. Its 25 CPU checks passed, including exact output and gradient comparisons and frozen-base checks. CUDA execution and the new model's visible behavior remain unmeasured.
+
+The [new camera/door capture](../experiments/atrium_factorial/README.md) contains six native 1248 × 704 sequences with independently varied camera and door commands. All 102 original training images passed file/label validation. The images are programmed targets; no model has been trained on them yet. A later comparison must give both model placements identical data and training settings.
+
 ## Run the editor
 
 Return to the [installation and controls](../README.md#run). The shipped small models run locally without an inference API. The experimental Wan adapter uses external open foundation weights and requires a separate CUDA environment; it is not the model powering the main editor.

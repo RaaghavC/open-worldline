@@ -17,6 +17,7 @@ jobs:
       - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
       - run: python -m pip install -e '.[test,atrium]'
       - run: python -m pytest -q
+      - run: python -m pytest -q experiments/atrium_factorial/test_validate.py experiments/atrium_factorial/test_reader.py
       - run: npm --prefix web ci
       - run: npm --prefix web run build
   wan-adapter-cpu:
@@ -63,6 +64,11 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
       - run: python -m pip install -r experiments/wan_adapter/requirements-real.txt -r experiments/wan22_native/requirements-core.txt -r experiments/wan22_native/requirements-sample.txt
+      - name: Check intermediate action gradients and saved-response analysis
+        env:
+          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+        run: python -m pytest -q experiments/wan22_native/intermediate_action/test_bridge.py experiments/wan22_native/intermediate_action/test_cached.py experiments/action_effect_diagnostics/test_analyze.py
       - run: python -m pytest -q experiments/wan22_native/test_core.py experiments/wan22_native/test_independent.py experiments/wan22_native/test_profile_independent.py experiments/wan22_native/test_codec.py experiments/wan22_native/test_codec_decode.py experiments/wan22_native/test_codec_independent.py experiments/wan22_native/test_codec_memory.py experiments/wan22_native/test_codec_memory_independent.py experiments/wan22_native/test_sample_clip.py experiments/wan22_native/test_sample_independent.py
       - run: python -m experiments.wan22_native.codec_cpu_diagnostic --output work/wan22-cpu-prefix-linux-diagnostic-v1.json
       - run: python -m experiments.wan22_native.codec_cpu_projection_diagnostic --output work/wan22-cpu-projection-linux-diagnostic-v2.json

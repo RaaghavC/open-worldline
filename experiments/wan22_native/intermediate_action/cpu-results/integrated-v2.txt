@@ -1,0 +1,30 @@
+..........................................................F...........   [100%]
+=================================== FAILURES ===================================
+______ Checks.test_all102_actual_png_reads_and_descriptive_endpoint_math _______
+
+self = <test_validate.Checks testMethod=test_all102_actual_png_reads_and_descriptive_endpoint_math>
+
+    def test_all102_actual_png_reads_and_descriptive_endpoint_math(self):
+        with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:
+            root = Path(directory)
+            capture_fixture(root)
+            report = v.audit_capture(root,
+                REPO/'experiments/atrium_factorial/render.py', REPO/'experiments/atrium_data/render.py',
+                v.sha(root/'manifest.json'))
+            self.assertEqual(report['status'], 'passed')
+            self.assertEqual(len(report['images']), 102)
+            self.assertTrue(report['all_initial_images_byte_exact'])
+>           self.assertFalse(report['torch_imported'])
+E           AssertionError: True is not false
+
+experiments/atrium_factorial/test_validate.py:151: AssertionError
+=============================== warnings summary ===============================
+experiments/wan22_native/intermediate_action/test_bridge.py: 15 warnings
+experiments/wan22_native/intermediate_action/test_cached.py: 29 warnings
+  /Users/rc/Documents/Codex/2026-09-07/re/work/wan-adapter-env/lib/python3.11/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED experiments/atrium_factorial/test_validate.py::Checks::test_all102_actual_png_reads_and_descriptive_endpoint_math
+1 failed, 69 passed, 44 warnings in 6.63s

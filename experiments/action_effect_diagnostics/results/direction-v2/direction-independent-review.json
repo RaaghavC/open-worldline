@@ -1,0 +1,46 @@
+{
+  "schema": "worldline-action-effect-direction-read-review-v1",
+  "status": "no_concrete_math_or_interpretation_blocker",
+  "root_source_sha256": "58ee2088f08054e80cf4ddc7d8f6503a499031512f5506a21b8ed6811686815a",
+  "root_result_sha256": "f8309c963ced8de263e763eb408bd94a15a34be83170dee85bd858c36743640b",
+  "independent_oracle_sha256": "54a8349b0e84f11199eaa604529339a8201a4abc75350b2193b68eb657cf3372",
+  "reviewed": [
+    "Producer FP32 CFG order and open-minus-closed clean-endpoint sign",
+    "Future latent groups1..4 only",
+    "Least-squares scalar and independent two-branch target-fitted projection",
+    "Spatial patch reshape groups correct2x2 latent sites; its channel/dy/dx ordering is an orthogonal permutation of the native patch vector and leaves reported norms/support unchanged",
+    "Per-frame spatial means and centered components form an orthogonal energy decomposition",
+    "Top-energy support is explicitly target-derived, not a door segmentation",
+    "All four centered responses have normalized MSE above1; spatial means supply the net benefit",
+    "Post-hoc/one-scene/initial-endpoint/target-fit limits are stated; no architectural impossibility or deployable gain claim"
+  ],
+  "numeric_agreement": [
+    {
+      "noise_index": 0,
+      "actual_normalized_mse": 0.9949848963506585,
+      "mean_only_normalized_mse": 0.9933711460882931,
+      "centered_actual_normalized_mse": 1.0018409788533358
+    },
+    {
+      "noise_index": 1,
+      "actual_normalized_mse": 0.9950193209925167,
+      "mean_only_normalized_mse": 0.9933529045143835,
+      "centered_actual_normalized_mse": 1.0019010608819954
+    },
+    {
+      "noise_index": 2,
+      "actual_normalized_mse": 0.9950532982511655,
+      "mean_only_normalized_mse": 0.9933612225665474,
+      "centered_actual_normalized_mse": 1.0019303331043665
+    },
+    {
+      "noise_index": 3,
+      "actual_normalized_mse": 0.994739034014704,
+      "mean_only_normalized_mse": 0.9932679300271686,
+      "centered_actual_normalized_mse": 1.0016782468733052
+    }
+  ],
+  "model_replay": false,
+  "tests_rerun": false,
+  "root_source_edited": false
+}

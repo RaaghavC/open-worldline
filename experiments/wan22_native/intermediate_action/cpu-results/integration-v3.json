@@ -1,0 +1,25 @@
+{
+  "schema": "worldline-action-control-preparation-local-checks-v1",
+  "status": "passed",
+  "native_and_diagnostic_checks": 58,
+  "data_checks_in_separate_process": 12,
+  "source_sha256": {
+    "experiments/wan22_native/intermediate_action/cached_intermediate.py": "9118b14343364e2c9ef9501dae81249469af23b6931268f3da4a5f7351bf6f28",
+    "experiments/wan22_native/intermediate_action/bridge.py": "5929bbc175c33a895b8790ba68a391865ac4428b5799bf6a4e795edfecb85ab1",
+    "experiments/wan22_native/intermediate_action/test_bridge.py": "3f7fb9782ad8dfc14da197c190e64bca520b33f9900fa54c5fdb037ba6d673f6",
+    "experiments/wan22_native/intermediate_action/test_cached.py": "ec02e0f57e25f1cf5ecbac5ef8b046840892c8f29d647b5a44f11725df5d52b1",
+    "experiments/action_effect_diagnostics/plot.py": "8100d398967c62ca07b677bcddbaf613255c6710c2f079ac09e4f6250f78870a",
+    "experiments/action_effect_diagnostics/test_analyze.py": "5d651cee89a6b60d83a9cfb82fd79b63ddd7327c913414ba880dbf1c66f2b6b2",
+    "experiments/action_effect_diagnostics/analyze.py": "58ee2088f08054e80cf4ddc7d8f6503a499031512f5506a21b8ed6811686815a",
+    "experiments/atrium_factorial/fetch.py": "acdbef15f1d947aa1bddd45f6df0239d2a4069cee587ce78549f33e4410be383",
+    "experiments/atrium_factorial/preview.py": "6408dcb6dd4cd35a5111fc11e0c2d97a260489fd8a2806f2bdfe68649715ffef",
+    "experiments/atrium_factorial/test_reader.py": "810cc67addee6a17fb93ddb9da12985ef7303c2f68a8a695addba92137ac4f32",
+    "experiments/atrium_factorial/render.py": "725b739fd801c497ef8024f126cbf79a27e7dbbd38fd0311e57d9932fd9bc4d8",
+    "experiments/atrium_factorial/reader.py": "5e5165c7e8f8011078cc8dd23f690ec3fee3a11a7b4544ff63baa2bac4e07a3e",
+    "experiments/atrium_factorial/validate.py": "9722a699ecb9ee74757d556f8604760200de63b1df659116eb75d7ef63cd299f",
+    "experiments/atrium_factorial/test_validate.py": "eaa5925020445a4eb00b877c3a35b38131dc55a8d1055fa3a90410f4000d339d"
+  },
+  "model_execution_with_pretrained_weights": false,
+  "cuda_execution": false,
+  "combined_attempt": "integrated-v2.txt failed one assertion because the isolated data validator correctly detected Torch already imported by model fixtures. Source assertions unchanged; separate-process reruns match the CI setup."
+}

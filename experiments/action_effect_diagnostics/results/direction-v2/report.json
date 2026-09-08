@@ -1,0 +1,1338 @@
+{
+  "schema": "worldline-action-effect-direction-diagnostic-v1",
+  "status": "computed",
+  "source_sha256": "58ee2088f08054e80cf4ddc7d8f6503a499031512f5506a21b8ed6811686815a",
+  "public_assessment_index_sha256": "4b75683b81ea7538311801393f82506ff0e3baa48e0f84d6f20d9c1761da7626",
+  "consumed_files": {
+    "action-results/effect-assessment-v1/result/metrics.json": {
+      "bytes": 106439,
+      "sha256": "81515906b86395ce8e9443d877ca244a5ae703f459d4ed4402f03dd86f04732f"
+    },
+    "action-results/effect-assessment-v1/reference-inputs/original14/original-training-inputs.safetensors": {
+      "bytes": 10543448,
+      "sha256": "289bc7ff587fef006986cc56f1fe57324d1d6b3d3adff33949ac706148e68b65"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "77ae44b45bfb7b63d87a1dac9f2bfb51f7e4ae307792bcc04d87193d956b7a37"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c7c2eb799a25aa0f692e8bbe1425851fc1cf98a222e5b3ac4774a4f2c76996af"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "77ae44b45bfb7b63d87a1dac9f2bfb51f7e4ae307792bcc04d87193d956b7a37"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c7c2eb799a25aa0f692e8bbe1425851fc1cf98a222e5b3ac4774a4f2c76996af"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "9e7c653dce3546c80651e556f46df9e1d9ab54b1181833bdae0f4302c0d6a98a"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "8057ef8fe7c369f6c7b8cd833e00ec945119d777166efdc66ba9208e8ee379bc"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a4dbe541c521c93bb57fad2f4f06c7fb203953cdbeeda71eb54fec2d230cb267"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c89972e614e84cbb67bb201b428e2c7614912d1eb46e4d8a2dc968b0706fb35c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a8250356938301460d8f637d42afbc134b80f001c7b2fd585e1a5b08de90bf96"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "630b904679d1081203d401f86f261d2237b0308efc9ae7ea2ff8b5ecf7e12383"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bd2c6da67182c0c54b462a154458b3b10b036fd0a7a98979681e71be7ae9ceb0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0000-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "802a876e2e2472f7b4b1d31719c5730608e85f85bf2426b09fc9990f419bfb4c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ced95a6e1ccc4cb7e7f8313e5b414162a368376298c846e3a7164e163281f88f"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "894d52ae2caa653f445d9d164299e92a37039b13b57f9feb1e2e86ae1b2c7434"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ced95a6e1ccc4cb7e7f8313e5b414162a368376298c846e3a7164e163281f88f"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "894d52ae2caa653f445d9d164299e92a37039b13b57f9feb1e2e86ae1b2c7434"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ff86f0cfa44b42a99850d5a05aacd2e8f4bd070b4aa92b1baa85419e17658186"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ff8738e2395915c93584a6583a5a542db5a7a9353e93b7ec45be5c1753d83660"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ca10686c929ef6127c062c3195b454a09c17d181520022be50943507d5e61842"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b3c5660bf03ecd22d72147bd4f543f4b1f3650d577094fa1eca6cbbe365379ab"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "3db385f806f896f449e8858d9d85ed2c0a10934372bbd3796890189c5eec39fb"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a6c4a052c63822b73fe91cb6f417b383a8b70c898e9fa197aff089578498cec2"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "17b5f5283a34a6388abe24018d64f5d0ab6c7bd7c9e33739e45a380e73c193e0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0001-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fde9fdff0709f4dc37f36e3221ab971b978bede1cb68c6e63f1fe0aa3f3485ab"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "417906418e95d156a45d7cde05066ba38c10bc48ec98f463441ebfc8df1efaf0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d40954bfb32dadbd0b20bd2b0a4384613cbcbd7b19e8606d9029911247276f45"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "417906418e95d156a45d7cde05066ba38c10bc48ec98f463441ebfc8df1efaf0"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d40954bfb32dadbd0b20bd2b0a4384613cbcbd7b19e8606d9029911247276f45"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "97d4fac50b80a4cd3ecb565e39d63d168544fa6d38bf6b8b105f62b6276e83dc"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "458d27f7ea9841e1612f63236036cf4e409b5b7eb287dc4bdfc9afa270872dba"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1eb26393e8b81699348971b9b58d63e9a6e09b57dcd0cd86729c6c1aa72df120"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "513434aa33e9dcdded50873fd72f1dd0fe90bfb7fd23400651a50b4119277352"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "18bc297d4243908f1d244bf461e3dabd97bc8f6359d11f6a02a95dad2bfae911"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "3df97f48b4776e67efafe3e1e130d8bfcfd6edc32131fc9bb4353232d73e103d"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4e7eabd0a7b22193571917eaff68d712b9ab46da9172120c1c0d0470119383a9"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0002-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "44353d619a312a885e2d6d5b9235e8e90ddeed6032c24ef4427e3e4b19b65c38"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "11d83079d7e069acd2ccec2fe75ca3c33b53110dc9df897ac04d19b8bf694cfa"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fe634e280d4f3544b746831a8e3f7470ec62318f29263a3dee9e29fdc9cf2839"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "11d83079d7e069acd2ccec2fe75ca3c33b53110dc9df897ac04d19b8bf694cfa"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-zero-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fe634e280d4f3544b746831a8e3f7470ec62318f29263a3dee9e29fdc9cf2839"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0912585d7ee35e6e80fbbfb5690544dae8d6bb03aafcea190c8a551590ce828c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "2ecd8951a368b4ebe49ddabb22871961ade7f60169c540f31df877af8072875c"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6e0df937113f588cf0d810879e8f886aff3e3bf88036f5718a479069d6269c1b"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-old128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b7e59c21d8ffd1be4413fd468089ec1c71b24ee7ccd193e42e159907fe624f0e"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d847828a68ee743ec0fc062d49e571d2e6f9e3ec3141e6c278c9e8fe03f35f31"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6a9fe81a6ceb1af321e39335669374acb7b62b59a3584261485efbf2b367ae1f"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-open-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "2a9eeea480cf1ca53b4fad3b5d4a7d762b7bd94f2e430fa17b6f90e250ac2dab"
+    },
+    "action-results/effect-assessment-v1/result/heldout-0003-new128-open-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "910b4d9c680efb320c4b1a7cd0170de66029c3c09d412f4e0ab9f3ebd4edb649"
+    }
+  },
+  "existing_12_normalized_scores_reproduced": true,
+  "cases": [
+    {
+      "noise_index": 0,
+      "checkpoint": "zero",
+      "global_scalar": {
+        "actual_normalized_mse": 1.0,
+        "unconstrained_oracle_gain": 0.0,
+        "unconstrained_oracle_normalized_mse": 1.0,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": null,
+        "response_rms": 0.0,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": null,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": null
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          0.0,
+          0.0
+        ],
+        "oracle_normalized_mse": 0.9999999999997342,
+        "rank": 0,
+        "singular_values": [
+          0.0,
+          0.0
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 0,
+      "checkpoint": "old128",
+      "global_scalar": {
+        "actual_normalized_mse": 1.0001459558465746,
+        "unconstrained_oracle_gain": -0.07888219694737383,
+        "unconstrained_oracle_normalized_mse": 0.9999992155607743,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": -0.0008856857376961835,
+        "response_rms": 0.004975534073506234,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.0001591741335825,
+          "unconstrained_oracle_gain": -0.3285819421565577,
+          "unconstrained_oracle_normalized_mse": 0.9999896296259977,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.003220306507522849,
+          "response_rms": 0.007094170918893062,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0000360751232225,
+          "unconstrained_oracle_gain": 0.33961023116770384,
+          "unconstrained_oracle_normalized_mse": 0.9999870293214351,
+          "nonnegative_oracle_gain": 0.33961023116770384,
+          "nonnegative_oracle_normalized_mse": 0.9999870293214351,
+          "cosine": 0.003601482828617154,
+          "response_rms": 0.005192545725842033,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.001153218791968,
+          "unconstrained_oracle_gain": -0.018646549692639333,
+          "unconstrained_oracle_normalized_mse": 0.9999996134486561,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0006217325342321218,
+          "response_rms": 0.0037745637018442085,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0008723476155108,
+          "unconstrained_oracle_gain": -0.022128797631050995,
+          "unconstrained_oracle_normalized_mse": 0.9999995909300573,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0006395857586406098,
+          "response_rms": 0.0027361714101601705,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.0026236425938178038,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0001639469113268,
+          "unconstrained_oracle_gain": -0.07147915396931159,
+          "unconstrained_oracle_normalized_mse": 0.9999992671220473,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0008560829128306726,
+          "response_rms": 0.004969002775183415,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0000022445971548,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.1664602175526204
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          -1.614244647973155,
+          -1.2578122757550114
+        ],
+        "oracle_normalized_mse": 0.9999857844592294,
+        "rank": 2,
+        "singular_values": [
+          0.6630056051504959,
+          0.6300726084050081
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 0,
+      "checkpoint": "new128",
+      "global_scalar": {
+        "actual_normalized_mse": 0.9949848963506585,
+        "unconstrained_oracle_gain": 1.9381385145605858,
+        "unconstrained_oracle_normalized_mse": 0.993450338970373,
+        "nonnegative_oracle_gain": 1.9381385145605858,
+        "nonnegative_oracle_normalized_mse": 0.993450338970373,
+        "cosine": 0.08092997608814091,
+        "response_rms": 0.018503916129231076,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 0.9928450803546666,
+          "unconstrained_oracle_gain": 4.986424847867226,
+          "unconstrained_oracle_normalized_mse": 0.98017318639209,
+          "nonnegative_oracle_gain": 4.986424847867226,
+          "nonnegative_oracle_normalized_mse": 0.98017318639209,
+          "cosine": 0.140807718566526,
+          "response_rms": 0.020440208155192454,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 0.9977940752576842,
+          "unconstrained_oracle_gain": 1.1828349742352433,
+          "unconstrained_oracle_normalized_mse": 0.9977400790214366,
+          "nonnegative_oracle_gain": 1.1828349742352433,
+          "nonnegative_oracle_normalized_mse": 0.9977400790214366,
+          "cosine": 0.047538626174544414,
+          "response_rms": 0.01967896331421519,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0114565510747153,
+          "unconstrained_oracle_gain": 0.2748405988401089,
+          "unconstrained_oracle_normalized_mse": 0.9980782557634229,
+          "nonnegative_oracle_gain": 0.2748405988401089,
+          "nonnegative_oracle_normalized_mse": 0.9980782557634229,
+          "cosine": 0.04383770336796028,
+          "response_rms": 0.01805629143144133,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.021383553677166,
+          "unconstrained_oracle_gain": 0.09821737768477698,
+          "unconstrained_oracle_normalized_mse": 0.9997432943627406,
+          "nonnegative_oracle_gain": 0.09821737768477698,
+          "nonnegative_oracle_normalized_mse": 0.9997432943627406,
+          "cosine": 0.01602203598982993,
+          "response_rms": 0.01544300105755053,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.07133722548686923,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0018409788533358,
+          "unconstrained_oracle_gain": 0.0016905850605359555,
+          "unconstrained_oracle_normalized_mse": 0.9999999947204883,
+          "nonnegative_oracle_gain": 0.0016905850605359555,
+          "nonnegative_oracle_normalized_mse": 0.9999999947204883,
+          "cosine": 7.266024913879352e-05,
+          "response_rms": 0.017831696752309546,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.9933711460882931,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.1047938080605748
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          11.869299410689635,
+          11.871687444469725
+        ],
+        "oracle_normalized_mse": 0.9193504786305178,
+        "rank": 2,
+        "singular_values": [
+          6.085278905554941,
+          2.2623681699149154
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 1,
+      "checkpoint": "zero",
+      "global_scalar": {
+        "actual_normalized_mse": 1.0,
+        "unconstrained_oracle_gain": 0.0,
+        "unconstrained_oracle_normalized_mse": 1.0,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": null,
+        "response_rms": 0.0,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": null,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": null
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          0.0,
+          0.0
+        ],
+        "oracle_normalized_mse": 0.9999999999997342,
+        "rank": 0,
+        "singular_values": [
+          0.0,
+          0.0
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 1,
+      "checkpoint": "old128",
+      "global_scalar": {
+        "actual_normalized_mse": 1.000148409948032,
+        "unconstrained_oracle_gain": -0.09315546750953357,
+        "unconstrained_oracle_normalized_mse": 0.9999989143716426,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": -0.0010419349103153192,
+        "response_rms": 0.004956456406978082,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.000132835017203,
+          "unconstrained_oracle_gain": -0.20754878678297292,
+          "unconstrained_oracle_normalized_mse": 0.9999959564148941,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.002010866754869504,
+          "response_rms": 0.007013119277129381,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0000927151746484,
+          "unconstrained_oracle_gain": 0.09204344663522089,
+          "unconstrained_oracle_normalized_mse": 0.9999990372962647,
+          "nonnegative_oracle_gain": 0.09204344663522089,
+          "nonnegative_oracle_normalized_mse": 0.9999990372962647,
+          "cosine": 0.00098117467088825,
+          "response_rms": 0.005219551681831293,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0014633823095225,
+          "unconstrained_oracle_gain": -0.14228826827030133,
+          "unconstrained_oracle_normalized_mse": 0.9999769359270466,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.004802506944678898,
+          "response_rms": 0.0038208549936519696,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0006685957059316,
+          "unconstrained_oracle_gain": 0.08615383980570224,
+          "unconstrained_oracle_normalized_mse": 0.9999940042442301,
+          "nonnegative_oracle_gain": 0.08615383980570224,
+          "nonnegative_oracle_normalized_mse": 0.9999940042442301,
+          "cosine": 0.002448623239631163,
+          "response_rms": 0.0026906032446329785,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.002399365625734615,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0001530973548394,
+          "unconstrained_oracle_gain": -0.03765541158834226,
+          "unconstrained_oracle_normalized_mse": 0.9999997981222443,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0004493080855412253,
+          "response_rms": 0.0049505066603661805,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0000142091145505,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.16933702299166578
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          -2.2260116366162355,
+          -1.8599497354599446
+        ],
+        "oracle_normalized_mse": 0.9999717802707669,
+        "rank": 2,
+        "singular_values": [
+          0.65926405801125,
+          0.6281960835660766
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 1,
+      "checkpoint": "new128",
+      "global_scalar": {
+        "actual_normalized_mse": 0.9950193209925167,
+        "unconstrained_oracle_gain": 1.9088418429014413,
+        "unconstrained_oracle_normalized_mse": 0.9935592534612937,
+        "nonnegative_oracle_gain": 1.9088418429014413,
+        "nonnegative_oracle_normalized_mse": 0.9935592534612937,
+        "cosine": 0.08025426181023827,
+        "response_rms": 0.01863104475572612,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 0.9928808897170665,
+          "unconstrained_oracle_gain": 4.847735230380905,
+          "unconstrained_oracle_normalized_mse": 0.980759762867687,
+          "nonnegative_oracle_gain": 4.847735230380905,
+          "nonnegative_oracle_normalized_mse": 0.980759762867687,
+          "cosine": 0.1387091818601542,
+          "response_rms": 0.020711638083076675,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 0.9978137614001148,
+          "unconstrained_oracle_gain": 1.1746463020017588,
+          "unconstrained_oracle_normalized_mse": 0.9977643405505884,
+          "nonnegative_oracle_gain": 1.1746463020017588,
+          "nonnegative_oracle_normalized_mse": 0.9977643405505884,
+          "cosine": 0.04728276059422994,
+          "response_rms": 0.01970949312851182,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0117854509706137,
+          "unconstrained_oracle_gain": 0.26980023563290634,
+          "unconstrained_oracle_normalized_mse": 0.9981366433642517,
+          "nonnegative_oracle_gain": 0.26980023563290634,
+          "nonnegative_oracle_normalized_mse": 0.9981366433642517,
+          "cosine": 0.04316661482846074,
+          "response_rms": 0.01811203779393344,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0213102217494958,
+          "unconstrained_oracle_gain": 0.10700254881089541,
+          "unconstrained_oracle_normalized_mse": 0.9996895751463842,
+          "nonnegative_oracle_gain": 0.10700254881089541,
+          "nonnegative_oracle_normalized_mse": 0.9996895751463842,
+          "cosine": 0.017618877762671546,
+          "response_rms": 0.015587858423895143,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.07043924196569872,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0019010608819954,
+          "unconstrained_oracle_gain": -0.007083475594166941,
+          "unconstrained_oracle_normalized_mse": 0.9999999059455443,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.00030668298920935144,
+          "response_rms": 0.017962885426419106,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.9933529045143835,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.10750022269447734
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          11.828189726327837,
+          11.88539561902148
+        ],
+        "oracle_normalized_mse": 0.9195189813869553,
+        "rank": 2,
+        "singular_values": [
+          6.085935405349141,
+          2.2787952427651805
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 2,
+      "checkpoint": "zero",
+      "global_scalar": {
+        "actual_normalized_mse": 1.0,
+        "unconstrained_oracle_gain": 0.0,
+        "unconstrained_oracle_normalized_mse": 1.0,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": null,
+        "response_rms": 0.0,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": null,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": null
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          0.0,
+          0.0
+        ],
+        "oracle_normalized_mse": 0.9999999999997342,
+        "rank": 0,
+        "singular_values": [
+          0.0,
+          0.0
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 2,
+      "checkpoint": "old128",
+      "global_scalar": {
+        "actual_normalized_mse": 1.0002296826938668,
+        "unconstrained_oracle_gain": -0.3833671080996422,
+        "unconstrained_oracle_normalized_mse": 0.9999808932530981,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": -0.0043711265025997825,
+        "response_rms": 0.005052630946082612,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.0002237121512123,
+          "unconstrained_oracle_gain": -0.6245882740281391,
+          "unconstrained_oracle_normalized_mse": 0.9999611980384835,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0062291220502362545,
+          "response_rms": 0.007219068188966515,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0001640546141022,
+          "unconstrained_oracle_gain": -0.20295423819792277,
+          "unconstrained_oracle_normalized_mse": 0.9999951935143492,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0021923698708033474,
+          "response_rms": 0.005289266465895446,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0012771271568757,
+          "unconstrained_oracle_gain": -0.06563224054870796,
+          "unconstrained_oracle_normalized_mse": 0.9999951369979898,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0022052215332263726,
+          "response_rms": 0.00380361579639411,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0008366380333291,
+          "unconstrained_oracle_gain": 0.003942697853684139,
+          "unconstrained_oracle_normalized_mse": 0.9999999868912056,
+          "nonnegative_oracle_gain": 0.003942697853684139,
+          "nonnegative_oracle_normalized_mse": 0.9999999868912056,
+          "cosine": 0.00011449364373571861,
+          "response_rms": 0.0027490979463223146,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.0026804449918673744,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.000234176662551,
+          "unconstrained_oracle_gain": -0.291607234853944,
+          "unconstrained_oracle_normalized_mse": 0.999987422322607,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0035465021350266886,
+          "response_rms": 0.005045854752574606,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0000244100206113,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.16445677775814013
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          -4.489332702858976,
+          -1.8133785449803126
+        ],
+        "oracle_normalized_mse": 0.9999190195765548,
+        "rank": 2,
+        "singular_values": [
+          0.6717049892286484,
+          0.6393317879594216
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 2,
+      "checkpoint": "new128",
+      "global_scalar": {
+        "actual_normalized_mse": 0.9950532982511655,
+        "unconstrained_oracle_gain": 1.9020378465509444,
+        "unconstrained_oracle_normalized_mse": 0.9936178897550304,
+        "nonnegative_oracle_gain": 1.9020378465509444,
+        "nonnegative_oracle_normalized_mse": 0.9936178897550304,
+        "cosine": 0.07988811078608528,
+        "response_rms": 0.018612385876938864,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 0.9927664811178026,
+          "unconstrained_oracle_gain": 4.961719557790904,
+          "unconstrained_oracle_normalized_mse": 0.980043619206058,
+          "nonnegative_oracle_gain": 4.961719557790904,
+          "nonnegative_oracle_normalized_mse": 0.980043619206058,
+          "cosine": 0.1412670548781354,
+          "response_rms": 0.02060899470343997,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 0.9981536690124646,
+          "unconstrained_oracle_gain": 1.0677685897351137,
+          "unconstrained_oracle_normalized_mse": 0.9981462016867273,
+          "nonnegative_oracle_gain": 1.0677685897351137,
+          "nonnegative_oracle_normalized_mse": 0.9981462016867273,
+          "cosine": 0.043055758189499686,
+          "response_rms": 0.019743941098995695,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0112809639019478,
+          "unconstrained_oracle_gain": 0.2786947347543552,
+          "unconstrained_oracle_normalized_mse": 0.9980203792610907,
+          "nonnegative_oracle_gain": 0.2786947347543552,
+          "nonnegative_oracle_normalized_mse": 0.9980203792610907,
+          "cosine": 0.04449292908889658,
+          "response_rms": 0.018072735050211317,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.022605242333727,
+          "unconstrained_oracle_gain": 0.08571967927027897,
+          "unconstrained_oracle_normalized_mse": 0.9997995315915316,
+          "nonnegative_oracle_gain": 0.08571967927027897,
+          "nonnegative_oracle_normalized_mse": 0.9997995315915316,
+          "cosine": 0.014158686678806407,
+          "response_rms": 0.01563668785664434,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.07065901195025225,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0019303331043665,
+          "unconstrained_oracle_gain": -0.016046341653783408,
+          "unconstrained_oracle_normalized_mse": 0.9999995184231204,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0006939574053215632,
+          "response_rms": 0.017942774282468633,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.9933612225665474,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.10620526565283464
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          11.807880104346975,
+          11.879114253987428
+        ],
+        "oracle_normalized_mse": 0.9197319934336745,
+        "rank": 2,
+        "singular_values": [
+          6.084691281028606,
+          2.277006486981615
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 3,
+      "checkpoint": "zero",
+      "global_scalar": {
+        "actual_normalized_mse": 1.0,
+        "unconstrained_oracle_gain": 0.0,
+        "unconstrained_oracle_normalized_mse": 1.0,
+        "nonnegative_oracle_gain": 0.0,
+        "nonnegative_oracle_normalized_mse": 1.0,
+        "cosine": null,
+        "response_rms": 0.0,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": null,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0,
+          "unconstrained_oracle_gain": 0.0,
+          "unconstrained_oracle_normalized_mse": 1.0,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": null,
+          "response_rms": 0.0,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 1.0,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": null
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          0.0,
+          0.0
+        ],
+        "oracle_normalized_mse": 0.9999999999997342,
+        "rank": 0,
+        "singular_values": [
+          0.0,
+          0.0
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 3,
+      "checkpoint": "old128",
+      "global_scalar": {
+        "actual_normalized_mse": 1.000059814664114,
+        "unconstrained_oracle_gain": 0.26590907273131337,
+        "unconstrained_oracle_normalized_mse": 0.9999909664302569,
+        "nonnegative_oracle_gain": 0.26590907273131337,
+        "nonnegative_oracle_normalized_mse": 0.9999909664302569,
+        "cosine": 0.003005589749654892,
+        "response_rms": 0.005008821978854826,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 1.000005158861286,
+          "unconstrained_oracle_gain": 0.4728447000428652,
+          "unconstrained_oracle_normalized_mse": 0.9999787623577147,
+          "nonnegative_oracle_gain": 0.4728447000428652,
+          "nonnegative_oracle_normalized_mse": 0.9999787623577147,
+          "cosine": 0.004608431651383514,
+          "response_rms": 0.0070547683120416186,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 1.0000918337101325,
+          "unconstrained_oracle_gain": 0.11530214945472522,
+          "unconstrained_oracle_normalized_mse": 0.9999984131817669,
+          "nonnegative_oracle_gain": 0.11530214945472522,
+          "nonnegative_oracle_normalized_mse": 0.9999984131817669,
+          "cosine": 0.0012596897366806536,
+          "response_rms": 0.005349410602040692,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0013440802431957,
+          "unconstrained_oracle_gain": -0.07873682525875059,
+          "unconstrained_oracle_normalized_mse": 0.9999928010379617,
+          "nonnegative_oracle_gain": 0.0,
+          "nonnegative_oracle_normalized_mse": 1.0,
+          "cosine": -0.0026830881533409924,
+          "response_rms": 0.003857613299314135,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.0005622372290617,
+          "unconstrained_oracle_gain": 0.14445921940813206,
+          "unconstrained_oracle_normalized_mse": 0.9999834997429554,
+          "nonnegative_oracle_gain": 0.14445921940813206,
+          "nonnegative_oracle_normalized_mse": 0.9999834997429554,
+          "cosine": 0.004062050842178235,
+          "response_rms": 0.002661965508901182,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.002260048029550146,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0000708427042815,
+          "unconstrained_oracle_gain": 0.2564196736873289,
+          "unconstrained_oracle_normalized_mse": 0.9999904385091475,
+          "nonnegative_oracle_gain": 0.2564196736873289,
+          "nonnegative_oracle_normalized_mse": 0.9999904385091475,
+          "cosine": 0.003092166045594628,
+          "response_rms": 0.005003158688095722,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.999997715942875,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.1639977618776345
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          -1.0822715483557968,
+          -4.2067568301524165
+        ],
+        "oracle_normalized_mse": 0.9999374741023986,
+        "rank": 2,
+        "singular_values": [
+          0.6655887743710973,
+          0.6336719936121687
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    },
+    {
+      "noise_index": 3,
+      "checkpoint": "new128",
+      "global_scalar": {
+        "actual_normalized_mse": 0.994739034014704,
+        "unconstrained_oracle_gain": 1.9769757440789097,
+        "unconstrained_oracle_normalized_mse": 0.9930391092613378,
+        "nonnegative_oracle_gain": 1.9769757440789097,
+        "nonnegative_oracle_normalized_mse": 0.9930391092613378,
+        "cosine": 0.08343195274391099,
+        "response_rms": 0.018701227726210298,
+        "target_rms": 0.4431380590203436
+      },
+      "per_future_latent_frame_scalar": [
+        {
+          "actual_normalized_mse": 0.9926153797976602,
+          "unconstrained_oracle_gain": 4.979222930492997,
+          "unconstrained_oracle_normalized_mse": 0.9795629299915432,
+          "nonnegative_oracle_gain": 4.979222930492997,
+          "nonnegative_oracle_normalized_mse": 0.9795629299915432,
+          "cosine": 0.1429582806571792,
+          "response_rms": 0.02078240842940356,
+          "target_rms": 0.7238492525711592
+        },
+        {
+          "actual_normalized_mse": 0.9974291585680395,
+          "unconstrained_oracle_gain": 1.2823121376078657,
+          "unconstrained_oracle_normalized_mse": 0.9972982028919021,
+          "nonnegative_oracle_gain": 1.2823121376078657,
+          "nonnegative_oracle_normalized_mse": 0.9972982028919021,
+          "cosine": 0.05197881403127312,
+          "response_rms": 0.019847799302875755,
+          "target_rms": 0.48964322147807837
+        },
+        {
+          "actual_normalized_mse": 1.0123141124805735,
+          "unconstrained_oracle_gain": 0.25936880413414126,
+          "unconstrained_oracle_normalized_mse": 0.998278699596769,
+          "nonnegative_oracle_gain": 0.25936880413414126,
+          "nonnegative_oracle_normalized_mse": 0.998278699596769,
+          "cosine": 0.04148855749759638,
+          "response_rms": 0.018108073299840686,
+          "target_rms": 0.11320396755720298
+        },
+        {
+          "actual_normalized_mse": 1.021799901305364,
+          "unconstrained_oracle_gain": 0.10160601412579892,
+          "unconstrained_oracle_normalized_mse": 0.9997175441409755,
+          "nonnegative_oracle_gain": 0.10160601412579892,
+          "nonnegative_oracle_normalized_mse": 0.9997175441409755,
+          "cosine": 0.016806423147843527,
+          "response_rms": 0.015658790436816162,
+          "target_rms": 0.09466781053410622
+        }
+      ],
+      "spatial": {
+        "response_energy_in_spatial_mean_fraction": 0.07156417489378762,
+        "target_energy_in_spatial_mean_fraction": 0.1234281374594237,
+        "centered_response_vs_centered_target": {
+          "actual_normalized_mse": 1.0016782468733052,
+          "unconstrained_oracle_gain": 0.05516458898663848,
+          "unconstrained_oracle_normalized_mse": 0.9999942595323656,
+          "nonnegative_oracle_gain": 0.05516458898663848,
+          "nonnegative_oracle_normalized_mse": 0.9999942595323656,
+          "cosine": 0.0023959273016388324,
+          "response_rms": 0.018019638066057928,
+          "target_rms": 0.41488985367883896
+        },
+        "spatial_mean_prediction_normalized_mse": 0.9932679300271686,
+        "oracle_spatial_mean_normalized_mse": 0.8765718625405756,
+        "top_target_energy_patch_fraction": 0.10023310023310024,
+        "target_energy_in_top_patches_fraction": 0.7860113644143725,
+        "response_energy_in_top_target_patches_fraction": 0.10603003331836386
+      },
+      "positive_negative_span_oracle": {
+        "coefficient_order": [
+          "positive_clean_command_contrast",
+          "negative_clean_command_contrast"
+        ],
+        "oracle_coefficients": [
+          12.100757836981794,
+          11.593925364333405
+        ],
+        "oracle_normalized_mse": 0.9193179810377747,
+        "rank": 2,
+        "singular_values": [
+          6.098101770552599,
+          2.285751345860276
+        ],
+        "fit_uses_target": true,
+        "is_cfg_sampler": false
+      }
+    }
+  ],
+  "model_execution": false,
+  "training": false,
+  "target_used_for_oracle_fits": true,
+  "limitations": [
+    "Post hoc diagnostic on one already evaluated room; not a new held-out evaluation or acceptance gate.",
+    "Oracle multipliers use the answer and cannot be deployed as measured performance.",
+    "Only the first pure-noise endpoint contrast is analyzed; changing solver guidance would also change future states and may rotate later predictions.",
+    "Spatial measurements concern codec latent patches, not a labelled door region or pixel segmentation.",
+    "Concentration or direction errors do not by themselves prove a representational bottleneck or its cause.",
+    "No evidence of Genie 3 parity, reliable controls, or scientific novelty is produced."
+  ]
+}

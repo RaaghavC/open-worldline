@@ -1,0 +1,117 @@
+{
+  "schema": "worldline-atrium-factorial-window-verification-v1",
+  "status": "verified",
+  "manifest_sha256": "1872dea69d16b124fb7a0a9eefaff06ea2d850ff49f36bcf87fec8c10c82dada",
+  "arm": "left_interact",
+  "image_files_read": 17,
+  "images": {
+    "left_interact/0000.png": {
+      "sha256": "0168770787b733e2436f869c04a31320dac64be85051d6ea091a94b12f13206d",
+      "bytes": 1027485
+    },
+    "left_interact/0001.png": {
+      "sha256": "1a4e8437bb5adf446adf86983eb391243716fd38670c76dc94f186b8d344dd4b",
+      "bytes": 1040797
+    },
+    "left_interact/0002.png": {
+      "sha256": "556aad87688fb7078d491e70c81f104aa449b3a9126bd2156dffe8bab4b6c3ca",
+      "bytes": 1041311
+    },
+    "left_interact/0003.png": {
+      "sha256": "428df1274e0cc4a9205002ade400ac2693406fcaa78300d975762a5bf8f0df51",
+      "bytes": 1043587
+    },
+    "left_interact/0004.png": {
+      "sha256": "602a5d0eecf748ea77bfb2ca5e0c69b264d12b47a4bc4b6a8b8b958464e85781",
+      "bytes": 1047749
+    },
+    "left_interact/0005.png": {
+      "sha256": "d75322622709ab4dafa93556323c51b6e659ca8990f9710bdf49c2f35083324b",
+      "bytes": 1046581
+    },
+    "left_interact/0006.png": {
+      "sha256": "73fe2115e0d7bbdef30bacf6696d6d446ab9d429cb707c0f44fdf2365d261254",
+      "bytes": 1049261
+    },
+    "left_interact/0007.png": {
+      "sha256": "5f55e52488b1f0ee57dcdaf7e57f96b929d4ee20f7c387bca9963acfd4d24d26",
+      "bytes": 1050658
+    },
+    "left_interact/0008.png": {
+      "sha256": "16ce89142c492bc972b2590e86d629fb9b590e9b5f59368c63c65c67bbb839ed",
+      "bytes": 1054398
+    },
+    "left_interact/0009.png": {
+      "sha256": "15c79e1097fddfef7785e88349fa80a36777fa4d48924993f0be314a85732bbb",
+      "bytes": 1067933
+    },
+    "left_interact/0010.png": {
+      "sha256": "30ea798a6a9980abe7edaab9ac9507ea575f6a55bab5592017023bf59bba4b41",
+      "bytes": 1071336
+    },
+    "left_interact/0011.png": {
+      "sha256": "51e72a579af8be0973e65adb378536d1bac8827b51e83d81224bc80e791b796b",
+      "bytes": 1075691
+    },
+    "left_interact/0012.png": {
+      "sha256": "643ab13894ea68e4e723212c5a3bea099f9d010a482309378bc1c05d6c985f82",
+      "bytes": 1088716
+    },
+    "left_interact/0013.png": {
+      "sha256": "235e84d80c84dd575ed9298ea4048e0b36ee6d9c9499539a1bce72250baefe11",
+      "bytes": 1097168
+    },
+    "left_interact/0014.png": {
+      "sha256": "9c8a6ada080f8b188466008da67f5b0388d98e82ed8e95e071e808ef5792d4a7",
+      "bytes": 1103148
+    },
+    "left_interact/0015.png": {
+      "sha256": "bee16c03b6990dbad5b79a0072ef65d8902bac5e8669b2a5c6e2300be0c4ebe5",
+      "bytes": 1111648
+    },
+    "left_interact/0016.png": {
+      "sha256": "97def054c625aa9f65af15dc188e49eab62d99de7ecce00f0718a786540e50d7",
+      "bytes": 1118304
+    }
+  },
+  "capture_source_sha256": "725b739fd801c497ef8024f126cbf79a27e7dbbd38fd0311e57d9932fd9bc4d8",
+  "scene_source_sha256": "cf794ac98a01209be8ea70b3849f5f87174f0750b2990159cb052002836f7a56",
+  "model_facing_fields": [
+    "initial_rgb",
+    "future_rgb_targets",
+    "commands"
+  ],
+  "pixel_operation": "uint8 to FP32; divide127.5 then subtract1; no crop/resize/compositing",
+  "validation_scope": "All six arms metadata checked; only the requested17 images were opened. No full102-image or native-camera audit is claimed.",
+  "model_execution": false,
+  "renderer_execution": false,
+  "arrays": {
+    "initial_rgb": {
+      "shape": [
+        3,
+        704,
+        1248
+      ],
+      "dtype": "float32",
+      "sha256": "c7996584d6d6bd01d081a43d6f3c755f6903fb47c93a191090229e8aafa33b0a"
+    },
+    "future_rgb_targets": {
+      "shape": [
+        16,
+        3,
+        704,
+        1248
+      ],
+      "dtype": "float32",
+      "sha256": "ae1619880b5dd79211a991cf2b5e1dc116ab06e1af09c2baf981e06b80694127"
+    },
+    "commands": {
+      "shape": [
+        16,
+        6
+      ],
+      "dtype": "float32",
+      "sha256": "d0bb2761551051ab35c399b6f7e90f2b7fa694a7a7e7ea216d810fa286aec3f0"
+    }
+  }
+}
