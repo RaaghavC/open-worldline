@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "Audit reader correction only; executed producer and every recovered byte unchanged",
+  "old_reader_sha256": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+  "new_reader_sha256": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+  "prior_failed_audit_sha256": "546419dffa6236fea6487d1837b4d7d2b1727cf9fd416cbda4503943806727eb",
+  "cpu_report_sha256": "12a657288c5c72ae3ddaa0b1ce9295616f9a9f264901fb49ea8f00c698cd68cc",
+  "passed_report_sha256": "df0db0ab434e6ca219ffe2a474f5f4bf008494733314134df1a1c311a1f547c0",
+  "producer_guard_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+  "declared_limits_unchanged": {
+    "seconds": 900.0,
+    "host_rss_bytes": 51539607552,
+    "cuda_reserved_bytes": 64424509440,
+    "minimum_host_available_bytes": 8589934592,
+    "minimum_cuda_available_bytes": 8589934592,
+    "minimum_gpu_total_bytes": 75161927680
+  },
+  "removed_assumption": "Allocated and reserved byte fields were assumed to be sampled at the same instant. The frozen monitor obtains them in separate calls and did not declare allocated<=reserved as a gate.",
+  "sequential_counter_mismatches": [
+    {
+      "sample_index": 97,
+      "seconds": 24.840815845876932,
+      "cuda_reserved_bytes": 1721761792,
+      "cuda_allocated_bytes": 1742798848
+    }
+  ],
+  "frozen_v1_preserved": true
+}

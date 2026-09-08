@@ -1,0 +1,25 @@
+{
+  "status": "completed_visual_review",
+  "reviewed_at": "2026-09-08T07:50:30.918396+00:00",
+  "reviewer": "parent agent",
+  "frame_count": 34,
+  "method": "Inspect both contact sheets containing every17-frame sequence at312x176 per frame, plus initial and both final raw1248x704 PNGs.",
+  "source_frame_hashes_sha256": "04e2f80a215979a22cbd8e8884053b7ad056a06020b3eaaf55ab3f411174b6dd",
+  "sheets": {
+    "closed": "5bc78f076948d85dda808392bb81879c8bd3c32f88bd94d45df67ade454b6bab",
+    "open": "d7cb1d9a5311ccec66025bf6baa7107e330f8535f623d584396ff548c635cc67"
+  },
+  "findings": [
+    "The door remains visibly closed throughout both17-frame sequences.",
+    "The requested112.5-degree left camera turn does not occur; room framing remains almost static.",
+    "Both sequences preserve recognizable room structure and natural color, with soft surfaces and small texture/edge changes.",
+    "The interact sequence does not visibly separate from wait through the requested door state change."
+  ],
+  "door_interaction_success": false,
+  "camera_turn_success": false,
+  "quality_or_control_improvement_over16_demonstrated": false,
+  "genie3_parity_demonstrated": false,
+  "structural_audit_sha256": "ac5b536e9af81e4a82120fd11427612cdbd78b7bf9a8817c9a4203e095c3afdd",
+  "rgb_comparison_sha256": "f0fff1f533543372b6d901c12ae63e6081bc84930a6de703edb660ad26b9667f",
+  "limits": "Visual inspection assesses the requested large camera and door changes. It is not a calibrated physical-state estimator or a broad human preference study."
+}

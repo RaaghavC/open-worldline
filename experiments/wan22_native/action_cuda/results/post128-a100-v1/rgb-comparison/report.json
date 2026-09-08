@@ -1,0 +1,4143 @@
+{
+  "schema": "worldline-final128-paired-rgb-comparison-v1",
+  "status": "completed",
+  "model_execution": false,
+  "cloud_operations": false,
+  "source_sha256": {
+    "wrapper": "970ce554e04eba2774e7f78b7d499acefd8e036935504aa0b96c6a01634e2a50",
+    "reused": {
+      "analyze.py": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "experiments/wan22_native/spatial_audit/rgb.py": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "experiments/wan22_native/action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    }
+  },
+  "structural_audit_sha256": "ac5b536e9af81e4a82120fd11427612cdbd78b7bf9a8817c9a4203e095c3afdd",
+  "checkpoint128_plan_sha256": "6a00ce5db2b3858dd23a616beadbf774fb8b157efbc26edd8a969bde501bed3b",
+  "checkpoint128_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+  "checkpoint16_original_analysis_sha256": "6693ba5434dd07dd9016ca660613ce19e5ce833512ce4a8d0c8dc839550faae3",
+  "checkpoint128_analysis_sha256": "052d89a30bf90510963f89b73c8cc4fa96ad551e18098ed535587d87d9fa68f7",
+  "conditions_identical_across_checkpoints": true,
+  "all_frames_scored": 17,
+  "future_frames_in_means": 16,
+  "frames": [
+    {
+      "frame": 0,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "1837995463c06606131e2093859cd2e00ece12e1ca32c7fbcc28ce8a3ef77fbf",
+            "raw_tensor_sha256": "6556d10c59d892bba97d4ddb62767dcdb9fe38840bcba338d83ee1eeb00cf278",
+            "png_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+            "png_pixels_sha256": "2f4c8c4489661147fe6819d5c215225710a387a33c14c019eb7ebc413660ef1a"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "1837995463c06606131e2093859cd2e00ece12e1ca32c7fbcc28ce8a3ef77fbf",
+            "raw_tensor_sha256": "6556d10c59d892bba97d4ddb62767dcdb9fe38840bcba338d83ee1eeb00cf278",
+            "png_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+            "png_pixels_sha256": "2f4c8c4489661147fe6819d5c215225710a387a33c14c019eb7ebc413660ef1a"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "1837995463c06606131e2093859cd2e00ece12e1ca32c7fbcc28ce8a3ef77fbf",
+            "raw_tensor_sha256": "6556d10c59d892bba97d4ddb62767dcdb9fe38840bcba338d83ee1eeb00cf278",
+            "png_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+            "png_pixels_sha256": "2f4c8c4489661147fe6819d5c215225710a387a33c14c019eb7ebc413660ef1a"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "1837995463c06606131e2093859cd2e00ece12e1ca32c7fbcc28ce8a3ef77fbf",
+            "raw_tensor_sha256": "6556d10c59d892bba97d4ddb62767dcdb9fe38840bcba338d83ee1eeb00cf278",
+            "png_sha256": "065dfe4115a3fe19bb22ca24eaa78cc4e1b10db13205292459a9810da2c37503",
+            "png_pixels_sha256": "2f4c8c4489661147fe6819d5c215225710a387a33c14c019eb7ebc413660ef1a"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0,
+            "mse_0_1": 0.0,
+            "psnr_db": null,
+            "exact": true
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.0017946969581729153,
+            "mse_0_1": 6.246319550094261e-06,
+            "psnr_db": 52.04375801839292,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.0017946969581729153,
+            "mse_0_1": 6.246319550094261e-06,
+            "psnr_db": 52.04375801839292,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.0
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0,
+            "mse_0_1": 0.0,
+            "psnr_db": null,
+            "exact": true
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.0017946969581729153,
+            "mse_0_1": 6.246319550094261e-06,
+            "psnr_db": 52.04375801839292,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.0017946969581729153,
+            "mse_0_1": 6.246319550094261e-06,
+            "psnr_db": 52.04375801839292,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.0
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0,
+        "generated_difference_mae_0_1": 0.0,
+        "truth_pixels_differing_any_byte": 0,
+        "truth_pixels_differing_at_least_two_levels": 0,
+        "difference_field_mae_0_1": 0.0,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": false,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": false,
+            "arms": {
+              "closed": {
+                "own": null,
+                "opposite": null
+              },
+              "open": {
+                "own": null,
+                "opposite": null
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0,
+        "generated_difference_mae_0_1": 0.0,
+        "truth_pixels_differing_any_byte": 0,
+        "truth_pixels_differing_at_least_two_levels": 0,
+        "difference_field_mae_0_1": 0.0,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": false,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0017946969581729153,
+                  "mse_0_1": 6.246319550094261e-06,
+                  "psnr_db": 52.04375801839292,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": false,
+            "arms": {
+              "closed": {
+                "own": null,
+                "opposite": null
+              },
+              "open": {
+                "own": null,
+                "opposite": null
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 1,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "2eae2d266f0ffc384afbfb01f8a0b8e31ff6f2943383efb54e42e59b24cac40f",
+            "raw_tensor_sha256": "865b54c35c810807f5d075459ec1db6c170c6f1e64fa6763209bf49920a3500c",
+            "png_sha256": "cc2f9c9879e8b78b37b7ee07386ad1474d61e050262c3667300b47010954eb7b",
+            "png_pixels_sha256": "c8cca1f3fb1160461eba5c3c8a619fba3d83123c073d1d11bf6810bb4d593219"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "f846d6da0e6c8a73b3c6599e2afe8fe1877a07902ba9ef56319c78b91b16a46a",
+            "raw_tensor_sha256": "168725a6c4aaab91074ec5895d16a028a8faf79c04de82c67a5b89ddbca06d4a",
+            "png_sha256": "e8b5f6e5c2aa4ed825679ff9bfb1e5d8188813b26080092edd5ef94256838e25",
+            "png_pixels_sha256": "7799f2330b486c4a9ee642c233abd4e86e12c44e774325eaca279db1bc5325ef"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "fc4d141462b22abc083f69a27c180672752a699e71ee6f25fe2c24ad9c099df6",
+            "raw_tensor_sha256": "7f853bd7bbe9a7b106c18e8cbd9e338884842be7dfd70ebf8549c71dcb439f20",
+            "png_sha256": "494a7bd1aff5fe966afe604cccf96effe614ca8c77d3bfff697e9f4f00fab25f",
+            "png_pixels_sha256": "6cbee4304e23cb0ba02af38ba9f2a5ed3f5c10cbc723c0221f0259fc91b00e1c"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "f1a2b99e78bdb6ce17935e90c1ddf6cff878164662803613037bdfb271c89734",
+            "raw_tensor_sha256": "05faa980603af0dc90c291fcc6b066ad7a01e76649e470018ee16290d29aa587",
+            "png_sha256": "1d03a65345f944160d1d210d6898be6af98d070e15cc17bb25b595cebd0e6e4b",
+            "png_pixels_sha256": "2ac06f76b8b8df8dfb4b2e570bb596b33432dd355bd54a39db9b3e424ade76c7"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0010338777669961874,
+            "mse_0_1": 3.960267683605996e-06,
+            "psnr_db": 54.022754581189396,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.009450563191013759,
+            "mse_0_1": 0.000661142747937571,
+            "psnr_db": 31.79704761469808,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.009558906302577998,
+            "mse_0_1": 0.0006489876638962446,
+            "psnr_db": 31.87763558288548,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -0.00010834311156423908
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.001041079620680505,
+            "mse_0_1": 3.0648114920725103e-06,
+            "psnr_db": 55.13596232555153,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.08660812227897036,
+            "mse_0_1": 0.03755820071015702,
+            "psnr_db": 14.252952215275327,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.08667246677970976,
+            "mse_0_1": 0.03765320777464213,
+            "psnr_db": 14.241980192114115,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -6.434450073940223e-05
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.08089948076161312,
+        "generated_difference_mae_0_1": 0.0009671366056689202,
+        "truth_pixels_differing_any_byte": 728319,
+        "truth_pixels_differing_at_least_two_levels": 508192,
+        "difference_field_mae_0_1": 0.08120125692897538,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.009450563191013759,
+                  "mse_0_1": 0.000661142747937571,
+                  "psnr_db": 31.79704761469808,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.08663154840281062,
+                  "mse_0_1": 0.037589448443498326,
+                  "psnr_db": 14.249340467177522,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.08660812227897036,
+                  "mse_0_1": 0.03755820071015702,
+                  "psnr_db": 14.252952215275327,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.009382354786780131,
+                  "mse_0_1": 0.000640466138085429,
+                  "psnr_db": 31.935038267801808,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.010956648176739293,
+                  "mse_0_1": 0.0008653067459346301,
+                  "psnr_db": 30.62829910510363,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1436845516415078,
+                  "mse_0_1": 0.06469894141531189,
+                  "psnr_db": 11.891028250693164,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.1435952069428915,
+                  "mse_0_1": 0.06465421121762929,
+                  "psnr_db": 11.89403182322416,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.010800172941161817,
+                  "mse_0_1": 0.0008391246739219575,
+                  "psnr_db": 30.761735085708214,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.08089948076161312,
+        "generated_difference_mae_0_1": 0.0010070324489038535,
+        "truth_pixels_differing_any_byte": 728319,
+        "truth_pixels_differing_at_least_two_levels": 508192,
+        "difference_field_mae_0_1": 0.08117772142747348,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.009558906302577998,
+                  "mse_0_1": 0.0006489876638962446,
+                  "psnr_db": 31.87763558288548,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.08685859838603154,
+                  "mse_0_1": 0.037625768616925966,
+                  "psnr_db": 14.2451461956607,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.08667246677970976,
+                  "mse_0_1": 0.03765320777464213,
+                  "psnr_db": 14.241980192114115,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.009368964450714692,
+                  "mse_0_1": 0.0006421173871824086,
+                  "psnr_db": 31.9238557014714,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.011009863392938569,
+                  "mse_0_1": 0.0008485863399685012,
+                  "psnr_db": 30.713039635239767,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1439272608375944,
+                  "mse_0_1": 0.06476544065833809,
+                  "psnr_db": 11.88656675226799,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.1438982193532039,
+                  "mse_0_1": 0.06481832887890422,
+                  "psnr_db": 11.883021699719054,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0109541933907595,
+                  "mse_0_1": 0.0008415017618035353,
+                  "psnr_db": 30.749449704299842,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 2,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "e29bb157ab2cc45ec00ef81cf7b931066d2d2078d364fc32d6f80aadec7efbaf",
+            "raw_tensor_sha256": "478121877af6eec24a5c92a15efeadbf6c6416e4e9e3db5cf6c59d6c6361dc95",
+            "png_sha256": "aa1a76a5514511b851fadbcb3c25476b9a6df59435d55d5645807a2733c59ed4",
+            "png_pixels_sha256": "73abd9cb7fa09a7d78113982e2c6fc3b23d36cd1199e4521d7c972498440e17f"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "75a67ac4dd3c3f4ae30b95fa5922b50ac5517bf60dbab85b6da4339c5ee08fd1",
+            "raw_tensor_sha256": "2731bc3ebaa6c902df85c140b9b16a68a309bb34b8771d4f65af315bc4eae657",
+            "png_sha256": "0091b7fe1d023f4c90f6c53b35959f6695539b861b2fa4516fd2a0e303695640",
+            "png_pixels_sha256": "cb05109c101ee51d3e88a3828f247ddabee559fe44c6727c5cfb68d88663339f"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "a95070dcf5bb02286e90c2e48ee577529462955fabada4242608d0b2141f027b",
+            "raw_tensor_sha256": "423a12dbf6ef85faffa2dcaf94454a23b40a7345c73a49cf7838b6fe8809630d",
+            "png_sha256": "7872bbe02bcb2c95f8370f360c659fd1a8d5045fedcee5f64107c56e33b82a60",
+            "png_pixels_sha256": "97035eca9f7628f1cb337ce441bc85c3e589c1611f672c842345b392d2475b3e"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "3952b8f8e49502f92b90f9cab2f4237074ac530d3df4aee4a677d00effac0bbb",
+            "raw_tensor_sha256": "b86066f57bd096672a2afeb6537e68f4811681f9f24d2c6f942cd64bff872d75",
+            "png_sha256": "8d55b0c993583dac1dddc6b9f0a551afc5c0875137cc2bd346b0673961480826",
+            "png_pixels_sha256": "cbbf6a0835631ab2cc8673fce7bc068b9c345ca67df04d04c75597178f1215e8"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0015365489848392232,
+            "mse_0_1": 1.033513571452207e-05,
+            "psnr_db": 49.85683816116416,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.07563323386469459,
+            "mse_0_1": 0.01812380323646063,
+            "psnr_db": 17.41750661444477,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.0757040313037301,
+            "mse_0_1": 0.018109082201390413,
+            "psnr_db": 17.421035598997573,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -7.079743903551372e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.001611614293364562,
+            "mse_0_1": 7.587557765926626e-06,
+            "psnr_db": 51.198979895143566,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.12954606993527965,
+            "mse_0_1": 0.047719561281214185,
+            "psnr_db": 13.213035577515624,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.12961092480947944,
+            "mse_0_1": 0.04787752518782865,
+            "psnr_db": 13.198683065748932,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -6.485487419979896e-05
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.08760664121417798,
+        "generated_difference_mae_0_1": 0.001459714041693739,
+        "truth_pixels_differing_any_byte": 671145,
+        "truth_pixels_differing_at_least_two_levels": 451914,
+        "difference_field_mae_0_1": 0.08819478269533683,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07563323386469459,
+                  "mse_0_1": 0.01812380323646063,
+                  "psnr_db": 17.41750661444477,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.129534190276123,
+                  "mse_0_1": 0.047781882411172975,
+                  "psnr_db": 13.207367448188451,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.12954606993527965,
+                  "mse_0_1": 0.047719561281214185,
+                  "psnr_db": 13.213035577515624,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07561604093321488,
+                  "mse_0_1": 0.01808596749632855,
+                  "psnr_db": 17.426582539978565,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07558804522597981,
+                  "mse_0_1": 0.015925345317691908,
+                  "psnr_db": 17.979111418533872,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.17959973114047664,
+                  "mse_0_1": 0.07342213279868155,
+                  "psnr_db": 11.341730040700458,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.17947914587886657,
+                  "mse_0_1": 0.07334273474445156,
+                  "psnr_db": 11.346429004528398,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07541068248584928,
+                  "mse_0_1": 0.015893869041531002,
+                  "psnr_db": 17.98770369699316,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.08760664121417798,
+        "generated_difference_mae_0_1": 0.0015652878343017514,
+        "truth_pixels_differing_any_byte": 671145,
+        "truth_pixels_differing_at_least_two_levels": 451914,
+        "difference_field_mae_0_1": 0.0883000269378987,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.0757040313037301,
+                  "mse_0_1": 0.018109082201390413,
+                  "psnr_db": 17.421035598997573,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.12964954785651606,
+                  "mse_0_1": 0.047782449935965816,
+                  "psnr_db": 13.207315865578115,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.12961092480947944,
+                  "mse_0_1": 0.04787752518782865,
+                  "psnr_db": 13.198683065748932,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07560736964968325,
+                  "mse_0_1": 0.018120704355310945,
+                  "psnr_db": 17.418249252199335,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07556844924976827,
+                  "mse_0_1": 0.015910098798851986,
+                  "psnr_db": 17.983271234544233,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.17966658826034657,
+                  "mse_0_1": 0.07343602695996067,
+                  "psnr_db": 11.340908273955986,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.17985083845555708,
+                  "mse_0_1": 0.07359761749410179,
+                  "psnr_db": 11.33136244438484,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07563906235503987,
+                  "mse_0_1": 0.01590899350343091,
+                  "psnr_db": 17.983572955094825,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 3,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "021d2ac6afed4e12dc854df2ea40d14c44b53e186579037a196055577e3ccd21",
+            "raw_tensor_sha256": "6e82b685eb709d237c54b97c0b86247c18d309ec62251d04bc6e5f5e9ef447c3",
+            "png_sha256": "c9201dbe3c2a4ed73c9a06a9c8f5d11989cbe723468c686c2511da099173eb6a",
+            "png_pixels_sha256": "6d99ecde0f1b131a387f6b9a2a2272fa2c9d28865e4130a12f6444cd4600f380"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "2fb1ae83f4663ceb4dce263de35a9393b54b2f8ba371c634e3e542e7c4ecb2d9",
+            "raw_tensor_sha256": "026e784288c5a386d3c9e3553c47bd78409274583a4d94b5b152b7c3d4978ebd",
+            "png_sha256": "7d63920f5257eac868cec74ac5e010e93e1faaae24037b1d77112eb019f7ce87",
+            "png_pixels_sha256": "99c27f81506d037b9692db3a78b220664d4d928b83dfa81a9b365808bf5715f0"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "633c185b8e3fbb1bf42537f717dff9cb4d524a8a14612450653070677e950a2c",
+            "raw_tensor_sha256": "43e545f12b5211dec39fc9fa4649195f7d477155212042980231546f2aa3af4e",
+            "png_sha256": "a25df8980d42742571a0d70e6cbc3960fedd7c342c963b5eafa007007e9f075b",
+            "png_pixels_sha256": "e7538045837675c19137bdc73d93c82f29e452f61c81c4245b3900938c5ba4e9"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "dbdee3bebeaa7da2065a7813e97aab9874d31858e509602a587579cbead7eaef",
+            "raw_tensor_sha256": "5e8dfb37ee2f515bcebd900ff348a926e5a980050d17e9530e7b581de88f9c02",
+            "png_sha256": "52b8b0eea1738d62911d99d2433ad9f735dc19076e6ff3e9aed475ad9996ab5b",
+            "png_pixels_sha256": "3c8334356b07c68c85213d11b88e79aaab74f756e068bbc7aee841509eb2a61b"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0017343573032140432,
+            "mse_0_1": 1.3073533054233749e-05,
+            "psnr_db": 48.83607030735493,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.1336605644965522,
+            "mse_0_1": 0.039830816950782374,
+            "psnr_db": 13.997807858935039,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.1336694740697385,
+            "mse_0_1": 0.03979388476280293,
+            "psnr_db": 14.001836620424658,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -8.909573186305364e-06
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.001836710322043826,
+            "mse_0_1": 9.59439392613795e-06,
+            "psnr_db": 50.179824542633,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.16496064108588934,
+            "mse_0_1": 0.05973056709895881,
+            "psnr_db": 12.238033619182664,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.1650991442775605,
+            "mse_0_1": 0.059946025659716407,
+            "psnr_db": 12.222396047464496,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -0.0001385031916711632
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.1005588516790263,
+        "generated_difference_mae_0_1": 0.0016458704530897114,
+        "truth_pixels_differing_any_byte": 641531,
+        "truth_pixels_differing_at_least_two_levels": 406528,
+        "difference_field_mae_0_1": 0.10125305815058383,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.1336605644965522,
+                  "mse_0_1": 0.039830816950782374,
+                  "psnr_db": 13.997807858935039,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.16495370727970235,
+                  "mse_0_1": 0.0598189617708693,
+                  "psnr_db": 12.231611289358495,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.16496064108588934,
+                  "mse_0_1": 0.05973056709895881,
+                  "psnr_db": 12.238033619182664,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.13364352553119743,
+                  "mse_0_1": 0.03976897872038602,
+                  "psnr_db": 14.004555616867844,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.14385517126853167,
+                  "mse_0_1": 0.04079858299852789,
+                  "psnr_db": 13.893549204053876,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21059505627922562,
+                  "mse_0_1": 0.08365860971361253,
+                  "psnr_db": 10.774893570482813,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.21050033440574362,
+                  "mse_0_1": 0.08355406553329248,
+                  "psnr_db": 10.780324135657015,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.14370898097397153,
+                  "mse_0_1": 0.040751541923474244,
+                  "psnr_db": 13.898559541341296,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.1005588516790263,
+        "generated_difference_mae_0_1": 0.0017732491168534934,
+        "truth_pixels_differing_any_byte": 641531,
+        "truth_pixels_differing_at_least_two_levels": 406528,
+        "difference_field_mae_0_1": 0.10142696646220364,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.1336694740697385,
+                  "mse_0_1": 0.03979388476280293,
+                  "psnr_db": 14.001836620424658,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.16500670370252452,
+                  "mse_0_1": 0.05978662991859192,
+                  "psnr_db": 12.233959264094032,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.1650991442775605,
+                  "mse_0_1": 0.059946025659716407,
+                  "psnr_db": 12.222396047464496,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1337335590596861,
+                  "mse_0_1": 0.03988551174463082,
+                  "psnr_db": 13.991848314316425,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.1437714937189313,
+                  "mse_0_1": 0.0407578484864757,
+                  "psnr_db": 13.897887494721147,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2106066520843407,
+                  "mse_0_1": 0.08362751668145697,
+                  "psnr_db": 10.776507993954418,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.21086846480716592,
+                  "mse_0_1": 0.08384765112688403,
+                  "psnr_db": 10.76509099031911,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.143971546001963,
+                  "mse_0_1": 0.040831614027454284,
+                  "psnr_db": 13.890034525687316,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 4,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "6b10206e08084930750004768641e8a71af1d111dcef938b0743a0f22983da06",
+            "raw_tensor_sha256": "44cec84ed4d80aaaf6c9aa3a32ac6cac92c808ef96503f389f55d1985a4dc70e",
+            "png_sha256": "bc7aa62d0bc9a20a72c9b4725e42e18920fc097165b8ee75c974cc1d549d20db",
+            "png_pixels_sha256": "e021b232fac9e790fe62b5ca4f1b48a7ec3eef93cdc372140f9712856af74da4"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "e0d3b9e35525ac7e32208b945874cbfe22375f13ae0b0ba56412fec61b842ac1",
+            "raw_tensor_sha256": "8438d3cc48e5445dd3d94e82986c8bcb1460c24524d6cb20e71037a948ab9837",
+            "png_sha256": "dfd82240cc8d50ca8ce4f823aca9c72d2b9de6ca636ebc831fd97ca316af061f",
+            "png_pixels_sha256": "eebee844fddf2e640538931ba1a1c69a3e841baa0450c9b566e36da302f59bb7"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "8eef29c979edee3462acfaee038876351a57f772a9c829a9c1ccd32a84e36da9",
+            "raw_tensor_sha256": "40c6f23aa2a47fb462eaa152be25904ce97d38b21b0ff533c446ca02c8f4da9e",
+            "png_sha256": "20836e3e564d143a408368f89c73d1eb56cf052c752662b2bb2a3b31517cba23",
+            "png_pixels_sha256": "fc0187c81640feb1a5819ee53eadab32522cc86c2d9b4fe3bb5007c1f0db93db"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "9a498a52643c4db880683e11b4d358aaa455778901410770fdb3f720fb198777",
+            "raw_tensor_sha256": "dde502973e4b9f03bd9f33f58fa0e85c2802723acfe03ed006156da1bb16ba28",
+            "png_sha256": "f06cd622cd18f898c911d806500f18ceda72bb2c85102cc2fcc3c299f9842f1c",
+            "png_pixels_sha256": "1361ad8f9f5acd0e82ffb78143623ebf6f053665c7fe0016f45c7d14c3c71843"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0018655516583406812,
+            "mse_0_1": 1.5533713753420315e-05,
+            "psnr_db": 48.08724702043299,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.18376897700194122,
+            "mse_0_1": 0.06151355146616355,
+            "psnr_db": 12.110291983927349,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.18377654514807065,
+            "mse_0_1": 0.061505288207263496,
+            "psnr_db": 12.110875421026536,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -7.5681461294274666e-06
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.001994250092687955,
+            "mse_0_1": 1.1016642146998432e-05,
+            "psnr_db": 49.579507575033105,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.19909428280231392,
+            "mse_0_1": 0.07216171070392613,
+            "psnr_db": 11.416931797279101,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.19922121905813384,
+            "mse_0_1": 0.07239536720456856,
+            "psnr_db": 11.402892247126204,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -0.00012693625581991497
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.11260245447975233,
+        "generated_difference_mae_0_1": 0.0017930456647109857,
+        "truth_pixels_differing_any_byte": 621816,
+        "truth_pixels_differing_at_least_two_levels": 368217,
+        "difference_field_mae_0_1": 0.11343074639067909,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.18376897700194122,
+                  "mse_0_1": 0.06151355146616355,
+                  "psnr_db": 12.110291983927349,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19911784059733667,
+                  "mse_0_1": 0.07225570334751044,
+                  "psnr_db": 11.411278671237476,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19909428280231392,
+                  "mse_0_1": 0.07216171070392613,
+                  "psnr_db": 11.416931797279101,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.18379518916253243,
+                  "mse_0_1": 0.061464907806792486,
+                  "psnr_db": 12.113727654543338,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2049944861107687,
+                  "mse_0_1": 0.06428480714982411,
+                  "psnr_db": 11.918916546127745,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2406253169878665,
+                  "mse_0_1": 0.08942335738507456,
+                  "psnr_db": 10.485490286478212,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.24043876233514533,
+                  "mse_0_1": 0.08929402071769006,
+                  "psnr_db": 10.491776212486663,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20492691303101807,
+                  "mse_0_1": 0.06426373555746584,
+                  "psnr_db": 11.920340331442667,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.11260245447975233,
+        "generated_difference_mae_0_1": 0.0019142365604060054,
+        "truth_pixels_differing_any_byte": 621816,
+        "truth_pixels_differing_at_least_two_levels": 368217,
+        "difference_field_mae_0_1": 0.1136128372471952,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.18377654514807065,
+                  "mse_0_1": 0.061505288207263496,
+                  "psnr_db": 12.110875421026536,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19908897480336127,
+                  "mse_0_1": 0.0722091929768373,
+                  "psnr_db": 11.414075087328365,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19922121905813384,
+                  "mse_0_1": 0.07239536720456856,
+                  "psnr_db": 11.402892247126204,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.18383115887875268,
+                  "mse_0_1": 0.06161325662300024,
+                  "psnr_db": 12.103258355821778,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2049442746976684,
+                  "mse_0_1": 0.0642926856475455,
+                  "psnr_db": 11.918384324194351,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2404885060852535,
+                  "mse_0_1": 0.08933965545767276,
+                  "psnr_db": 10.489557267368019,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.24086478850108814,
+                  "mse_0_1": 0.08963054144399979,
+                  "psnr_db": 10.475439800644025,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20513605349046374,
+                  "mse_0_1": 0.06439687700875314,
+                  "psnr_db": 11.91135193676718,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 5,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "07c68e81ab5bd3d41a3a04e0f274597b0bd4923c247226e27fe083fd0e08f6e9",
+            "raw_tensor_sha256": "306b5ab1aaff777893c65fc278e279a56f91796b6905ee2a3374c8089ce4742b",
+            "png_sha256": "c2a8f18dcef2c7066fad466b733044b28b53c380382f3c0f24bbb493be51e690",
+            "png_pixels_sha256": "f19ddc795b32a402a49773cb656684f9a48311becbac2ded48b64994f84ce206"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "7af87f8c8a7dc3c79eb914b454302953f6e6caf38341bddd8ee663e2fda74e67",
+            "raw_tensor_sha256": "c799a3e242b0ac7ead25f606aef6c43c3328a3fd991324e7f8da3f32b23146d2",
+            "png_sha256": "ec314fef036c5167735c1216fbc2d66a966f60aad42a470c36f81fcb07eab9ea",
+            "png_pixels_sha256": "cf0234bbba804d0ae78c0c9a58e2b0f9402368e4014b71a40c49257777ca2fd1"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "37b945fb3469701acb3d75a26b911765c7068a2d144e04235448f90db80aebdc",
+            "raw_tensor_sha256": "84f997be9be5387540353e3045608a1beeb3ca9f1abd668365d140fdbcb075cc",
+            "png_sha256": "08b2ed3c28c860a078f4a9b8f3e0cf24c3eb7eadc43425f8239174f4bad2b0af",
+            "png_pixels_sha256": "d833a3deef11ea8cc7a3e76e54846068abbd84543aeb1a0e111262d98c204431"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "df13da0798a4f65b7563748edf65121e5ab47b5d2a44a8a197119a3039ef68a1",
+            "raw_tensor_sha256": "5b773962bbbbfe2dd3666234b954374ddd894d55c7ad114babd198e29fdb78b9",
+            "png_sha256": "d528d4e10d7cb64a68a296acae9e38ab5583236e473fad30ee4b1a4393e12a3a",
+            "png_pixels_sha256": "3051300b56ed40d6ee7934e2163b346cc3c99dc4db660525e45d7f42a0798b70"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0013107480109025395,
+            "mse_0_1": 6.2809794023204225e-06,
+            "psnr_db": 52.01972630807557,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2099556046965304,
+            "mse_0_1": 0.07534001740003884,
+            "psnr_db": 11.229742838309198,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.20997206192035373,
+            "mse_0_1": 0.07535213203001719,
+            "psnr_db": 11.229044551506451,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -1.645722382331849e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0013827142866978327,
+            "mse_0_1": 5.114373559043137e-06,
+            "psnr_db": 52.91207553840762,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2158127531378212,
+            "mse_0_1": 0.07794667581256327,
+            "psnr_db": 11.08202401412206,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.2160332928858381,
+            "mse_0_1": 0.07812143280504535,
+            "psnr_db": 11.072298000280842,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -0.000220539748016918
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.09410291017023556,
+        "generated_difference_mae_0_1": 0.0012454413255784066,
+        "truth_pixels_differing_any_byte": 575086,
+        "truth_pixels_differing_at_least_two_levels": 305905,
+        "difference_field_mae_0_1": 0.09470155421301558,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2099556046965304,
+                  "mse_0_1": 0.07534001740003884,
+                  "psnr_db": 11.229742838309198,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21591522665685564,
+                  "mse_0_1": 0.07802662395149189,
+                  "psnr_db": 11.077571836900901,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2158127531378212,
+                  "mse_0_1": 0.07794667581256327,
+                  "psnr_db": 11.08202401412206,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2099060873340674,
+                  "mse_0_1": 0.07528665950151334,
+                  "psnr_db": 11.232819722476272,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22286643190423,
+                  "mse_0_1": 0.06882757209958477,
+                  "psnr_db": 11.622375499631952,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.23878754153549014,
+                  "mse_0_1": 0.07582135840910117,
+                  "psnr_db": 11.202084390563524,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.23862751832226634,
+                  "mse_0_1": 0.07573965692905034,
+                  "psnr_db": 11.206766663944608,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22285890860692456,
+                  "mse_0_1": 0.06882195652708391,
+                  "psnr_db": 11.622729850594942,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.09410291017023556,
+        "generated_difference_mae_0_1": 0.001328749847082768,
+        "truth_pixels_differing_any_byte": 575086,
+        "truth_pixels_differing_at_least_two_levels": 305905,
+        "difference_field_mae_0_1": 0.09485563725415364,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.20997206192035373,
+                  "mse_0_1": 0.07535213203001719,
+                  "psnr_db": 11.229044551506451,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2159018429142226,
+                  "mse_0_1": 0.07801954092512466,
+                  "psnr_db": 11.077966094493966,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2160332928858381,
+                  "mse_0_1": 0.07812143280504535,
+                  "psnr_db": 11.072298000280842,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21004383072412955,
+                  "mse_0_1": 0.07542481512813698,
+                  "psnr_db": 11.224857456399262,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22288136985464138,
+                  "mse_0_1": 0.06884674312494775,
+                  "psnr_db": 11.621165997254138,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.23871629610267953,
+                  "mse_0_1": 0.07578519077800258,
+                  "psnr_db": 11.20415651778914,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.23885438370163564,
+                  "mse_0_1": 0.07585603078464694,
+                  "psnr_db": 11.200098857753877,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2228478500747174,
+                  "mse_0_1": 0.06883407270779701,
+                  "psnr_db": 11.621965337704621,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 6,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "5fdb0dcdb58ded94b9cb692f73c376993e59f7e7e49c1675ad17d702b339f001",
+            "raw_tensor_sha256": "0a1c0687a9971921680380948a77f7d6dd35fc0b8c6605699a5c3ae0ce7d564c",
+            "png_sha256": "dc2f40aef22c9d30fb4760e80db06d77a1cfc579deb30e7122d1fdc659df6509",
+            "png_pixels_sha256": "19ff1e2a02ddbd0e5343c589e4bf587ea7dc16b7129b33da94aeb22fce950493"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "34346f740d892c56ab1217f7dd052d8eb56a2d54837ecc9fcca462cfcb579a3f",
+            "raw_tensor_sha256": "e45aed0d3921ce50c17ff344bce2140db9b057c080e67e4e2ffe52d43bc6b4c0",
+            "png_sha256": "8f06822ea04d4a27f95ce3b9d091ed540e112cbe89047a8ecd8db81d2c3b74f5",
+            "png_pixels_sha256": "29f2b3aecbf8d62b381d01c69117ac860a9a2848b0a9e96ee4303a9bc73761aa"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "16bf74867a9d5a9e4dc04a110d504e407c1072c064ac12367f3efe1b90614021",
+            "raw_tensor_sha256": "e553779593a10c6dcacde8ad6b1cdb42faa6975611890e1f5dc067014d790a6a",
+            "png_sha256": "c5ff9c6581561418bfcf769e78e3b2ffc28c0087d99221ea18a09ee4fda826f6",
+            "png_pixels_sha256": "ad9537dd12c612ae2c01d4fe91db4575774c0c96eb4ef16595253dd9e9467c7d"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "a713a467dc3cd884b25e161105b4b2c91fd9ecaf6f75256e50300bcdf2da84df",
+            "raw_tensor_sha256": "069a7bc35ffce85f2c56e144bd8acd9b0bcbda100061bcfc6e4872162501b480",
+            "png_sha256": "7b68a80fb793d1eecc9de7cc8bde209cb9d57330aaadd60e3564b49f0bb369e4",
+            "png_pixels_sha256": "8ee324d6fdb0c6e804e49731e3db365d9dfde329efbb369a72ae5f26cb0f311d"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.000982505142224802,
+            "mse_0_1": 2.4880863875009774e-06,
+            "psnr_db": 56.041345448157614,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.21721218832620162,
+            "mse_0_1": 0.08040532080775406,
+            "psnr_db": 10.947152109407668,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.21718798859864952,
+            "mse_0_1": 0.08040836219356948,
+            "psnr_db": 10.94698783767998,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 2.4199727552104422e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.001053608699844267,
+            "mse_0_1": 2.6559541900840347e-06,
+            "psnr_db": 55.757794199536036,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.22548616532265534,
+            "mse_0_1": 0.0840110532649558,
+            "psnr_db": 10.756635704122495,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.2255875363457085,
+            "mse_0_1": 0.08405934711992649,
+            "psnr_db": 10.754139874368676,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -0.00010137102305315948
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.06999863923692062,
+        "generated_difference_mae_0_1": 0.0009245965557479271,
+        "truth_pixels_differing_any_byte": 518509,
+        "truth_pixels_differing_at_least_two_levels": 231160,
+        "difference_field_mae_0_1": 0.07048914332931874,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.21721218832620162,
+                  "mse_0_1": 0.08040532080775406,
+                  "psnr_db": 10.947152109407668,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22557448222142656,
+                  "mse_0_1": 0.0840575015389799,
+                  "psnr_db": 10.754235227764537,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.22548616532265534,
+                  "mse_0_1": 0.0840110532649558,
+                  "psnr_db": 10.756635704122495,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21717196299268113,
+                  "mse_0_1": 0.08038397592453425,
+                  "psnr_db": 10.948305166886254,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22331762912794073,
+                  "mse_0_1": 0.06744432779157798,
+                  "psnr_db": 11.710545695266045,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2535127587611012,
+                  "mse_0_1": 0.08040365938405858,
+                  "psnr_db": 10.947241849065518,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2533448421437907,
+                  "mse_0_1": 0.08032253533318012,
+                  "psnr_db": 10.95162591735009,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22333260767637436,
+                  "mse_0_1": 0.06745824239648252,
+                  "psnr_db": 11.709649784070148,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.06999863923692062,
+        "generated_difference_mae_0_1": 0.0010125707717201207,
+        "truth_pixels_differing_any_byte": 518509,
+        "truth_pixels_differing_at_least_two_levels": 231160,
+        "difference_field_mae_0_1": 0.07062509671755361,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.21718798859864952,
+                  "mse_0_1": 0.08040836219356948,
+                  "psnr_db": 10.94698783767998,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22549042911960315,
+                  "mse_0_1": 0.084029236219113,
+                  "psnr_db": 10.755695839437635,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2255875363457085,
+                  "mse_0_1": 0.08405934711992649,
+                  "psnr_db": 10.754139874368676,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21724358728890622,
+                  "mse_0_1": 0.08042048081508388,
+                  "psnr_db": 10.946333346810867,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22336341821388916,
+                  "mse_0_1": 0.06747959782681694,
+                  "psnr_db": 11.70827514436716,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2533310616732241,
+                  "mse_0_1": 0.08032019165220557,
+                  "psnr_db": 10.951752639266951,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2534466625020013,
+                  "mse_0_1": 0.08035838638563188,
+                  "psnr_db": 10.949687925665447,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22332178894317262,
+                  "mse_0_1": 0.06744958069276344,
+                  "psnr_db": 11.710207458198767,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 7,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "fcc1b1ac7a12b374ba30abd422a93fe5e69bae4c2e6c1dea84e384405f64dabf",
+            "raw_tensor_sha256": "678421c4af2742ed883e80812892ac792af9bf90324b576b1daae5896558c106",
+            "png_sha256": "fbcd8d940c89d43f9e00c5c367cc94d9813c542254ed199e7f400a1e54028ddc",
+            "png_pixels_sha256": "3a06363418b000bfeaa928ab04863e0af96c33cec21e547716a203240520a69e"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "408ab0c093f633574d297e188d242f12e323faeb6735ac85681a120718fbbd39",
+            "raw_tensor_sha256": "4ce35334d3c990bee53a427ebcbdbb3dd4465beafa771ea9f09aba3e5bf40a08",
+            "png_sha256": "c970322ed62e3c77488f285e07c5de299da0db19c6999ffe94f771fa67de0b60",
+            "png_pixels_sha256": "6da53be01fd02afc845d81898301837cafa16f0b36a7e001f17482970053fff3"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "f7d6646505bf1acdd7b4e713a9fc2441082649c71b086834ba5454dbeee94566",
+            "raw_tensor_sha256": "0e81814d7dd95337eb38303603363942d4f71efb3f96953b3d3aebd046cc54f4",
+            "png_sha256": "8acd737233893d944069909e1824819196515d58fbb224e462ad43426a3f20de",
+            "png_pixels_sha256": "25c13d1a8a939b5c6435a399e07df59953fe412efe8085779af729f1f13caf1f"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "2c1a618bfb4dcab05bf63fbd8a3a1525a250a30c3ab05ccd7f66b88d476a95cd",
+            "raw_tensor_sha256": "d1585d4f3625ebf7be54828269f00352bbb8668cb402150dd40abdd12131c98f",
+            "png_sha256": "5c90185c8f54addb88e4b65a654d42bb69b8ff5519ad35b610ae594cf227916c",
+            "png_pixels_sha256": "0c0fa0f0ff2849259ac27763f7a0afb062d732b579228ea409a073706f3de033"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009314772834800137,
+            "mse_0_1": 1.998452633905442e-06,
+            "psnr_db": 56.99306140662457,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2278277356675942,
+            "mse_0_1": 0.08870159633186306,
+            "psnr_db": 10.520685642507875,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.22779700066358002,
+            "mse_0_1": 0.08871367534819352,
+            "psnr_db": 10.520094278517888,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 3.073500401418183e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0010426278550034174,
+            "mse_0_1": 2.581658015575426e-06,
+            "psnr_db": 55.88101287935277,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.23414954208916286,
+            "mse_0_1": 0.09155377604797262,
+            "psnr_db": 10.383237389321478,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.23422673952071676,
+            "mse_0_1": 0.09156531685479596,
+            "psnr_db": 10.382689974123283,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -7.71974315539048e-05
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.036972065286633306,
+        "generated_difference_mae_0_1": 0.000878799435026589,
+        "truth_pixels_differing_any_byte": 470050,
+        "truth_pixels_differing_at_least_two_levels": 150330,
+        "difference_field_mae_0_1": 0.037489617687710794,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2278277356675942,
+                  "mse_0_1": 0.08870159633186306,
+                  "psnr_db": 10.520685642507875,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.23422988170556336,
+                  "mse_0_1": 0.0915811151090376,
+                  "psnr_db": 10.381940727240961,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.23414954208916286,
+                  "mse_0_1": 0.09155377604797262,
+                  "psnr_db": 10.383237389321478,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2277848077839909,
+                  "mse_0_1": 0.08869516929002905,
+                  "psnr_db": 10.521000330184947,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.23662267074651655,
+                  "mse_0_1": 0.07892024299219526,
+                  "psnr_db": 11.028115862428686,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2716175402450627,
+                  "mse_0_1": 0.09459824942058012,
+                  "psnr_db": 10.241169003214278,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2714498110477961,
+                  "mse_0_1": 0.09452816384548203,
+                  "psnr_db": 10.244387779417325,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.23667360636091786,
+                  "mse_0_1": 0.07897163713278067,
+                  "psnr_db": 11.025288586899505,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.036972065286633306,
+        "generated_difference_mae_0_1": 0.001001135813064547,
+        "truth_pixels_differing_any_byte": 470050,
+        "truth_pixels_differing_at_least_two_levels": 150330,
+        "difference_field_mae_0_1": 0.03767179735561039,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22779700066358002,
+                  "mse_0_1": 0.08871367534819352,
+                  "psnr_db": 10.520094278517888,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.23415538221287052,
+                  "mse_0_1": 0.0915684032322599,
+                  "psnr_db": 10.382543589645191,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.23422673952071676,
+                  "mse_0_1": 0.09156531685479596,
+                  "psnr_db": 10.382689974123283,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22784116912692487,
+                  "mse_0_1": 0.08869744346330764,
+                  "psnr_db": 10.52088897708061,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.23669147610669852,
+                  "mse_0_1": 0.078992854188555,
+                  "psnr_db": 11.024121938594767,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.27143079096181943,
+                  "mse_0_1": 0.09452675605752227,
+                  "psnr_db": 10.24445245845799,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2714816671805065,
+                  "mse_0_1": 0.09451672705305847,
+                  "psnr_db": 10.244913256283976,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2365843905574086,
+                  "mse_0_1": 0.07890656763356506,
+                  "psnr_db": 11.028868476358154,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 8,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "c4d253b659ecf22c912d9662782cd833effe332c6b01aac06b2f4a3b8f8c5e18",
+            "raw_tensor_sha256": "f3961a9b65e8c54b8a42fb4fe3b2c1d0d580bfe8293cb0563f79cfd3b2001761",
+            "png_sha256": "a50a7dfdb38d441e4c3024ba135734c14b0bcb2aed98ba64d8a59da584099196",
+            "png_pixels_sha256": "7c6a8e5dad16a844a96bc1f458405bf08403552865ec1310615110f939337668"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "ee7e6272b0f909ae8e7f963fc8e38bdc5d8ba9b60b1983f1d0f2b5a84472c56c",
+            "raw_tensor_sha256": "572b09f6291ffe6ad0d45f92328d4ac2a9a3cc7a18040609578fdb95ba6f5fbe",
+            "png_sha256": "6a68a7805bae6c350261559431731863f8ae480c10f2b99639d52dbe45ab029c",
+            "png_pixels_sha256": "bebab1e97962bbd3d16d2a718edfb21f7eb2d505cafe0f2e7f08a9921d3f9018"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "1e46bbf457b106fea3b7cbe0c366f32a9093462344dbfd0ac37093aa441691c9",
+            "raw_tensor_sha256": "c5c8acad015eab7241e4f1f415bae0595b33ea54a55843f66b4467e4e62395af",
+            "png_sha256": "8af0ded2f7aee340c78376612e47334b147610ed3e8f2076fdd323fb59ebab0e",
+            "png_pixels_sha256": "3cd3a9ed6927ff5a4ad64b832672f9cb7eca3bedad96f3f98a9b69af59ba90fd"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "5a7c3f44a7b09efe5335e95028b3cd916b87f7c9da47de7fcbe0571d003e63ad",
+            "raw_tensor_sha256": "ec361272942e63fcb2dba996c883b892fa119ebf7fc96db73c1a3b8440d49646",
+            "png_sha256": "a02a0930daf0aabb5fc13fc8c99e98ccc1c0ff620033f7fe8368d8c3743a8893",
+            "png_pixels_sha256": "7e1e8872628143b934938fa8bbc4e21a3ae8d9c59c06f424a6d61e850c914a02"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009422046725730598,
+            "mse_0_1": 2.0374797253351815e-06,
+            "psnr_db": 56.90906704167795,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2285438759954033,
+            "mse_0_1": 0.08800534588757127,
+            "psnr_db": 10.554909458162394,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.22844407684143717,
+            "mse_0_1": 0.0879797273568114,
+            "psnr_db": 10.556173882061188,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 9.979915396612915e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0010772632776469547,
+            "mse_0_1": 2.7697720470157435e-06,
+            "psnr_db": 55.575559720174624,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.22886461204960826,
+            "mse_0_1": 0.08807461631542848,
+            "psnr_db": 10.551492400848995,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.22890808116558425,
+            "mse_0_1": 0.08805418384011705,
+            "psnr_db": 10.552500039725922,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": -4.346911597599701e-05
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0013231018113830611,
+        "generated_difference_mae_0_1": 0.0008819342296109078,
+        "truth_pixels_differing_any_byte": 388883,
+        "truth_pixels_differing_at_least_two_levels": 59854,
+        "difference_field_mae_0_1": 0.0019443047315533472,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2285438759954033,
+                  "mse_0_1": 0.08800534588757127,
+                  "psnr_db": 10.554909458162394,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22894019788107559,
+                  "mse_0_1": 0.08809639407621633,
+                  "psnr_db": 10.55041867579451,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.22886461204960826,
+                  "mse_0_1": 0.08807461631542848,
+                  "psnr_db": 10.551492400848995,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22846898142232602,
+                  "mse_0_1": 0.08798398774169747,
+                  "psnr_db": 10.555963581699421,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2663476133916573,
+                  "mse_0_1": 0.1039078813855705,
+                  "psnr_db": 9.83351510070841,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.26546812510729806,
+                  "mse_0_1": 0.10220979768325068,
+                  "psnr_db": 9.905074713654763,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2653667150627113,
+                  "mse_0_1": 0.10218149031807088,
+                  "psnr_db": 9.906277674181469,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2662504109298574,
+                  "mse_0_1": 0.10388310077340916,
+                  "psnr_db": 9.834550957323462,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0013231018113830611,
+        "generated_difference_mae_0_1": 0.001045218142285372,
+        "truth_pixels_differing_any_byte": 388883,
+        "truth_pixels_differing_at_least_two_levels": 59854,
+        "difference_field_mae_0_1": 0.002140324912847181,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22844407684143717,
+                  "mse_0_1": 0.0879797273568114,
+                  "psnr_db": 10.556173882061188,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22883982150417945,
+                  "mse_0_1": 0.08807024385007876,
+                  "psnr_db": 10.551708011747012,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.22890808116558425,
+                  "mse_0_1": 0.08805418384011705,
+                  "psnr_db": 10.552500039725922,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22851185268154495,
+                  "mse_0_1": 0.08796323395945249,
+                  "psnr_db": 10.55698812224769,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2662510625853474,
+                  "mse_0_1": 0.10390744798463307,
+                  "psnr_db": 9.833533215217686,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.26536939866539977,
+                  "mse_0_1": 0.1022052739518395,
+                  "psnr_db": 9.90526693349199,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2651986363627733,
+                  "mse_0_1": 0.1020585421082559,
+                  "psnr_db": 9.911506397943215,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2660829531538989,
+                  "mse_0_1": 0.10375697696361187,
+                  "psnr_db": 9.839826902311058,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 9,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "085acad9b75ef3b50f73f16e9508fb81afe77579775ed1c8df3acfd9880cfb48",
+            "raw_tensor_sha256": "0f54970796d292578ecc2a3dabf7d2ac6112e5db31965c5afcd27765d5c7bdfd",
+            "png_sha256": "21f9b6f342c0773db6330faf01df78e7afca84bf02e31521f57bdbc39da8a81f",
+            "png_pixels_sha256": "1df9c8c86a0d4488a1be2e0cfb4455a376db61d44011e0b40ba19f3da0547f0c"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "5de0fd2dcadf6b5beee57d888161cfd6ebe32968e4585c3482f5b5fee840b6c8",
+            "raw_tensor_sha256": "eac75b5fea54670b3cea9c9270372db7de7d412f797d5456f55939adaa451fd6",
+            "png_sha256": "e8ba9ed4af5ac7b4663fe5898526c0568b81ecca0992e89d2a523bd0d5512ba9",
+            "png_pixels_sha256": "6aee1a430ac41fb7161d2a89bf08a619ea923ae589bc8b0dd6a356e8b9eb4273"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "ce2c1e39df6fa6f6e731b0e2eca9cc5d97303a081386e6c92c052ab21eea1948",
+            "raw_tensor_sha256": "9f8919dd0ba676941ee467217b2f8586b7fc7f3bdc1e1e3fe4cfcb542e16724e",
+            "png_sha256": "eb9ca84b291157547624a9f84efa9bc73536c961cdf69f9576177f82c1974c5e",
+            "png_pixels_sha256": "cd92d5af736faa556b6046d0d933d6848061a70aee709845e88e62ee62435a6e"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "360144df4c7c8e061cb8106a1df3ab11ea957010f04fa611635292c7a938df3f",
+            "raw_tensor_sha256": "e4064ba647522024251881ee2dff03ec6fda40117ec907c2a26a47a482732fb9",
+            "png_sha256": "b8dc4fb320e093c63c1204617a02f3a13bf2731bc35e5f4aa76d74acc137bdd4",
+            "png_pixels_sha256": "0bef2621d2bbbb000a732f3b39264c8a99164fa238f8cecb7ac5eff82068a0dc"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008102726119290855,
+            "mse_0_1": 1.4888523925995877e-06,
+            "psnr_db": 58.27148356819433,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.22628336184571093,
+            "mse_0_1": 0.08581493053199798,
+            "psnr_db": 10.6643714474402,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.22619528459180033,
+            "mse_0_1": 0.08580527319284362,
+            "psnr_db": 10.664860216130364,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 8.807725391060672e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009533363785118395,
+            "mse_0_1": 2.3316791447365483e-06,
+            "psnr_db": 56.32331211742112,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.22633602984862505,
+            "mse_0_1": 0.08586282488469141,
+            "psnr_db": 10.66194827344445,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.22626999277001392,
+            "mse_0_1": 0.0858003023780547,
+            "psnr_db": 10.665111816048004,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 6.603707861113639e-05
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0011681524664061424,
+        "generated_difference_mae_0_1": 0.0007614217901786054,
+        "truth_pixels_differing_any_byte": 390961,
+        "truth_pixels_differing_at_least_two_levels": 42968,
+        "difference_field_mae_0_1": 0.0017223434143502714,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22628336184571093,
+                  "mse_0_1": 0.08581493053199798,
+                  "psnr_db": 10.6643714474402,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2263709982504707,
+                  "mse_0_1": 0.08586198716639941,
+                  "psnr_db": 10.661990645472962,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.22633602984862505,
+                  "mse_0_1": 0.08586282488469141,
+                  "psnr_db": 10.66194827344445,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22624895989488836,
+                  "mse_0_1": 0.08581591049176927,
+                  "psnr_db": 10.664321853658729,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2466280725369858,
+                  "mse_0_1": 0.09812691015441097,
+                  "psnr_db": 10.082118761173056,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.24416039006523108,
+                  "mse_0_1": 0.09622208810923631,
+                  "psnr_db": 10.167252227350648,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.24416839927787704,
+                  "mse_0_1": 0.09624488652701427,
+                  "psnr_db": 10.166223351918681,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.24663538854946285,
+                  "mse_0_1": 0.09815011709375104,
+                  "psnr_db": 10.081091779474228,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0011681524664061424,
+        "generated_difference_mae_0_1": 0.0009245141652941825,
+        "truth_pixels_differing_any_byte": 390961,
+        "truth_pixels_differing_at_least_two_levels": 42968,
+        "difference_field_mae_0_1": 0.0019007804873377447,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.22619528459180033,
+                  "mse_0_1": 0.08580527319284362,
+                  "psnr_db": 10.664860216130364,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22628256826129461,
+                  "mse_0_1": 0.08585197862541162,
+                  "psnr_db": 10.662496912287985,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.22626999277001392,
+                  "mse_0_1": 0.0858003023780547,
+                  "psnr_db": 10.665111816048004,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.22618179234589375,
+                  "mse_0_1": 0.08575325195331364,
+                  "psnr_db": 10.667494015639054,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2467227941889526,
+                  "mse_0_1": 0.09824830730287104,
+                  "psnr_db": 10.07674923246228,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.24425595863086214,
+                  "mse_0_1": 0.09634017184314222,
+                  "psnr_db": 10.161925833645176,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.24396708019584185,
+                  "mse_0_1": 0.09614258889721936,
+                  "psnr_db": 10.170841875054947,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2464323840616103,
+                  "mse_0_1": 0.09804735703918122,
+                  "psnr_db": 10.085641086639146,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 10,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "b792e48dd4286488704a8c0bee1c4c6c83d0dc4bead2c5461a64311175d6906f",
+            "raw_tensor_sha256": "4e7c9c2a6c554d82317c4fb646c66b24bdfb26625fecffab63a118739b847220",
+            "png_sha256": "3bfe636d4353821884be7e12617529249f47877a841ea795d07d77589f73f0e7",
+            "png_pixels_sha256": "cb2a2332b890608d1fc5ccd65656dc4b2a82416e18b2490813e5f76bc1ab9648"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "3b15c2d3062e42e101cd041b85bfea7e8f6cb53833433928e571e60356292a08",
+            "raw_tensor_sha256": "b52720e7edeeb5591fea437b1cda617e2aac68028c594436cb48c8102c2cc182",
+            "png_sha256": "73df0c2d1182b9c8da5746664e1ff769219a958b9d2b37175e662b390851b4e8",
+            "png_pixels_sha256": "1a235eb21f93e55972bcdb9ebf4f4379221ef1d00955966b899fca7aa9ed7d6a"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "ecf64bbe25b52102e889193e71aa31f7ba6ae5ef53989b48ec526cd6d7f8df4c",
+            "raw_tensor_sha256": "597db3ab13b5262d93784829d4b1947a1454cc29d416e7abe9668449c8dcd0fa",
+            "png_sha256": "134b82c28845ae54c31c378269c6bab722547b1e835de5d1acd1caa115da3552",
+            "png_pixels_sha256": "af1b809faf9fe58715c8e090df92aee14335f7606cdb1b5c57d7ca8db29c8b65"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "c0c63a5bf1ee8e3c2c4caa271ad25041e8c919d79d9bc4a22112a6a03fa2325f",
+            "raw_tensor_sha256": "7be8ae7881669352650b6a153d76511a8bc019e9ea2ec5cb707f773591d98239",
+            "png_sha256": "9e7d711de7cfe15500d0f0f53485e6d9801b87501c79ade653592ed1d1782538",
+            "png_pixels_sha256": "5242a075d0036795cd231eae813c1f784a7378b4e07dc7dc0879b5d226f37bc8"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008036559142073015,
+            "mse_0_1": 1.4369363695730126e-06,
+            "psnr_db": 58.42562462871456,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.21875415892602645,
+            "mse_0_1": 0.08217006925899606,
+            "psnr_db": 10.852863469707948,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.21863767043034324,
+            "mse_0_1": 0.0821350360196238,
+            "psnr_db": 10.854715480666137,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00011648849568321462
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009488542486389192,
+            "mse_0_1": 2.4591775805694586e-06,
+            "psnr_db": 56.09210109131641,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.21842571642058678,
+            "mse_0_1": 0.08216881133807366,
+            "psnr_db": 10.852929955266726,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.21829752813183093,
+            "mse_0_1": 0.08207447477966776,
+            "psnr_db": 10.857918877764707,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00012818828875585386
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0014196362427060956,
+        "generated_difference_mae_0_1": 0.0007567841178490689,
+        "truth_pixels_differing_any_byte": 409017,
+        "truth_pixels_differing_at_least_two_levels": 65132,
+        "difference_field_mae_0_1": 0.0019451206149785933,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.21875415892602645,
+                  "mse_0_1": 0.08217006925899606,
+                  "psnr_db": 10.852863469707948,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21844667303874632,
+                  "mse_0_1": 0.08216184311000864,
+                  "psnr_db": 10.853298269140879,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.21842571642058678,
+                  "mse_0_1": 0.08216881133807366,
+                  "psnr_db": 10.852929955266726,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21873303233548888,
+                  "mse_0_1": 0.08217713627309738,
+                  "psnr_db": 10.852489971999885,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.14452478479399208,
+                  "mse_0_1": 0.04807797111574007,
+                  "psnr_db": 13.180538677904687,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1412687168172992,
+                  "mse_0_1": 0.047012377663140544,
+                  "psnr_db": 13.27787783700725,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.14124269218735713,
+                  "mse_0_1": 0.04701998437201572,
+                  "psnr_db": 13.277175195570699,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.14449588525440504,
+                  "mse_0_1": 0.04808500762458188,
+                  "psnr_db": 13.17990310754126,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0014196362427060956,
+        "generated_difference_mae_0_1": 0.0008813563067620393,
+        "truth_pixels_differing_any_byte": 409017,
+        "truth_pixels_differing_at_least_two_levels": 65132,
+        "difference_field_mae_0_1": 0.0021027684637714645,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.21863767043034324,
+                  "mse_0_1": 0.0821350360196238,
+                  "psnr_db": 10.854715480666137,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21832919267219797,
+                  "mse_0_1": 0.08212648958077577,
+                  "psnr_db": 10.855167402833718,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.21829752813183093,
+                  "mse_0_1": 0.08207447477966776,
+                  "psnr_db": 10.857918877764707,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21860375840006205,
+                  "mse_0_1": 0.08208269645694971,
+                  "psnr_db": 10.857483852105867,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.1444853296419358,
+                  "mse_0_1": 0.048079929427505046,
+                  "psnr_db": 13.180361784692858,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.14122722934736498,
+                  "mse_0_1": 0.047013504805039345,
+                  "psnr_db": 13.277773714292493,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.1411838204457757,
+                  "mse_0_1": 0.04700499876172004,
+                  "psnr_db": 13.278559544218805,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.14444203593614452,
+                  "mse_0_1": 0.04807136819120289,
+                  "psnr_db": 13.18113516951162,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 11,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "a5c4e9ed5c364e254b3818f99944d4c04625fe2123cbb6c6da765102ed3dfcf4",
+            "raw_tensor_sha256": "3a3710f8f9ed49d6b238ae660a667e87b09e7583e4558741e2b5b2a73bf77ec4",
+            "png_sha256": "496a8534171281cd8483fb4c184256df8659ba584a566e8f44f64650ccf5f386",
+            "png_pixels_sha256": "ec65df95b2111452ce1d9a40bf08c8adbb23669f1ae1a1c914106cd10ee3e8ef"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "ee295d2047a26955ee9afea125c9ebfc4eb938804f566cefe577da9dedd1c51c",
+            "raw_tensor_sha256": "6f97eded74a47efd5b6c07146baf080345b5923502815aa5723699173d473100",
+            "png_sha256": "628b365257fb441e4f4b9174c12d9354ad5309779618bea21086c3426b0454d1",
+            "png_pixels_sha256": "b91c6e2b5266ba048ce4e12dafbe92ecd2c4e31eba762ede487f2bd0405c4e5b"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "d97fb5a9e098af894b5476f89d71c3538b77b3e30e2c35c3ddc96502363716ca",
+            "raw_tensor_sha256": "ed434f4bacaf8ed00a1eb920cb7e42f726b997f5927a4fc10c33484f7956ecc3",
+            "png_sha256": "2728b8d29f649432b43498f3cfcd573d44a67a7dac5ef435b27aab8e70f8e747",
+            "png_pixels_sha256": "005dbd4bd5d840da918fca21e53723afb9be348e2b0368759248d9afa9e18c23"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "f84073cc541ddff26c7de2a4c29c53ddb0661cd9917891aed8b062fc1a5bc4ab",
+            "raw_tensor_sha256": "5761ac0ecbcfc2a91e67e0612cb011d14b9235b1e13a14c116a2d99ba1d3c567",
+            "png_sha256": "ae1d8bc3a74a01ff5d35276da2665d5a5bd8fe89e5bf32ebbfede1632fe30c07",
+            "png_pixels_sha256": "c9e3f6a76fa17993a803d5c70fe13978dce9bc6c394af7304df4142c497d4d8e"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008291124931573417,
+            "mse_0_1": 1.5179730464659689e-06,
+            "psnr_db": 58.18735939820659,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2124158530802515,
+            "mse_0_1": 0.08050123747059997,
+            "psnr_db": 10.94197443575953,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.21231357324241829,
+            "mse_0_1": 0.0804692512869204,
+            "psnr_db": 10.9437003947672,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00010227983783320238
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009206305629725224,
+            "mse_0_1": 2.0572267029316825e-06,
+            "psnr_db": 56.867178471447374,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2117573066098702,
+            "mse_0_1": 0.08045372803952552,
+            "psnr_db": 10.944538268976828,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.21160359122402725,
+            "mse_0_1": 0.08033174843314236,
+            "psnr_db": 10.95112780446005,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00015371538584293964
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0018864987902212145,
+        "generated_difference_mae_0_1": 0.0007800768467849793,
+        "truth_pixels_differing_any_byte": 433902,
+        "truth_pixels_differing_at_least_two_levels": 142458,
+        "difference_field_mae_0_1": 0.0023991949569404022,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2124158530802515,
+                  "mse_0_1": 0.08050123747059997,
+                  "psnr_db": 10.94197443575953,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21176359789426547,
+                  "mse_0_1": 0.08043230566712124,
+                  "psnr_db": 10.945694816623025,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.2117573066098702,
+                  "mse_0_1": 0.08045372803952552,
+                  "psnr_db": 10.944538268976828,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2124097203382559,
+                  "mse_0_1": 0.08052273700918787,
+                  "psnr_db": 10.940814716399993,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.09493886001475321,
+                  "mse_0_1": 0.0226608827377087,
+                  "psnr_db": 16.447231765269528,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.09119138279174094,
+                  "mse_0_1": 0.02205455302081625,
+                  "psnr_db": 16.565017396339364,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.0911885650778899,
+                  "mse_0_1": 0.02205504546107906,
+                  "psnr_db": 16.564920426928545,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.09493438675268659,
+                  "mse_0_1": 0.022661599013275184,
+                  "psnr_db": 16.447094493648887,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0018864987902212145,
+        "generated_difference_mae_0_1": 0.0008760421499005034,
+        "truth_pixels_differing_any_byte": 433902,
+        "truth_pixels_differing_at_least_two_levels": 142458,
+        "difference_field_mae_0_1": 0.002547997829576152,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.21231357324241829,
+                  "mse_0_1": 0.0804692512869204,
+                  "psnr_db": 10.9437003947672,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21165640876795605,
+                  "mse_0_1": 0.08039974667507553,
+                  "psnr_db": 10.947453196320232,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.21160359122402725,
+                  "mse_0_1": 0.08033174843314236,
+                  "psnr_db": 10.95112780446005,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.21225377486780617,
+                  "mse_0_1": 0.08040054962764027,
+                  "psnr_db": 10.947409823530986,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.09496728860223919,
+                  "mse_0_1": 0.022671341731242276,
+                  "psnr_db": 16.44522776775487,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.09120548575841655,
+                  "mse_0_1": 0.022063363782079737,
+                  "psnr_db": 16.563282742789845,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.09109085217977177,
+                  "mse_0_1": 0.022058379039103355,
+                  "psnr_db": 16.564264048712566,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0948330882313065,
+                  "mse_0_1": 0.022663678570975333,
+                  "psnr_db": 16.446695978523227,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 12,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "af51eaaf91becbc18fff6a4e860497a593077108d96caaa94f01f7206a9c9c60",
+            "raw_tensor_sha256": "f36eca894d1b624a8593c028602f9a5dbc972b6584a9c5403d9d98a049a8372a",
+            "png_sha256": "0cc0b1d94920d60351e91c4c03d9c24095260908ecf1eb0389bb1559cec99ef2",
+            "png_pixels_sha256": "cc08212efb7796136914a6445870efb04cd88741334ca0f854210dac602d9146"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "126cf1eb3ff4b1b274159ff7e03d05a9e79bc1163bb434994b9f803bcfefab52",
+            "raw_tensor_sha256": "971150f434b614eb80f9860834411a9103ffbd3baadab97c840268ffe8484bf7",
+            "png_sha256": "b541393290af3ff27f53369e1556516069f5411c3a5ba9b3f17228a70c6cfa3f",
+            "png_pixels_sha256": "144cf5003efff722c8dd6e695a9c0dd0cd4f790a2f8f58f1e536da0fd718435d"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "dbf8881af47427cc0585089214e431501207742fedd28e396743766aa99b4610",
+            "raw_tensor_sha256": "e0525747f6a4e5d5bdc929fa2beb75f871831e8caca8b1645555de3d29eca98f",
+            "png_sha256": "e555b3e37a334d1faa2943c57edd751c6f893fe6971f67d1aa1979bd44558a30",
+            "png_pixels_sha256": "8c68741101b7476246de7429152cffe2b39fa35639673e3b62054cc957272f3d"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "d57ac30b88167bac697d8234c8e48e590f9e2b801040c356906e907f9a2512fc",
+            "raw_tensor_sha256": "a482ef1c28162d871a58cb51b3e21fba4dbdea3738051aa7419f0147b36809c5",
+            "png_sha256": "1c2dc73d1d94358550788f5772b5e5de136a7e6694d1734ea0112b1ab8fbf696",
+            "png_pixels_sha256": "6a72b083ec505d64e8382e8f2c7c6f70eeba4a54c0ea21ebf22e0cd48d34aea9"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008534972982487283,
+            "mse_0_1": 1.5899649950177322e-06,
+            "psnr_db": 57.986124370870876,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.2013933818575923,
+            "mse_0_1": 0.07565053572529168,
+            "psnr_db": 11.211879921389547,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.20129611478181214,
+            "mse_0_1": 0.0756292323996802,
+            "psnr_db": 11.213103074615532,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 9.726707578017191e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0010127001005494427,
+            "mse_0_1": 2.8346646317427376e-06,
+            "psnr_db": 55.47498314971784,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.20047972261844166,
+            "mse_0_1": 0.07555589208308527,
+            "psnr_db": 11.2173166237204,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.20031385057535775,
+            "mse_0_1": 0.07541718433341897,
+            "psnr_db": 11.225296858164448,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.0001658720430839089
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0025160890222930663,
+        "generated_difference_mae_0_1": 0.0008387214783562762,
+        "truth_pixels_differing_any_byte": 459752,
+        "truth_pixels_differing_at_least_two_levels": 226052,
+        "difference_field_mae_0_1": 0.0030306778841971116,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.2013933818575923,
+                  "mse_0_1": 0.07565053572529168,
+                  "psnr_db": 11.211879921389547,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20047037948713514,
+                  "mse_0_1": 0.07551790892058828,
+                  "psnr_db": 11.219500440916452,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.20047972261844166,
+                  "mse_0_1": 0.07555589208308527,
+                  "psnr_db": 11.2173166237204,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.2014023676764259,
+                  "mse_0_1": 0.07568851170555796,
+                  "psnr_db": 11.209700343904336,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07980378517891172,
+                  "mse_0_1": 0.014382692220960325,
+                  "psnr_db": 18.421598130302904,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07556147816775106,
+                  "mse_0_1": 0.013742811566813205,
+                  "psnr_db": 18.61924408248798,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.0755344215245661,
+                  "mse_0_1": 0.013739195965145562,
+                  "psnr_db": 18.62038681986643,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07977570832524716,
+                  "mse_0_1": 0.014379011587868256,
+                  "psnr_db": 18.422709662958372,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0025160890222930663,
+        "generated_difference_mae_0_1": 0.0009369911821631266,
+        "truth_pixels_differing_any_byte": 459752,
+        "truth_pixels_differing_at_least_two_levels": 226052,
+        "difference_field_mae_0_1": 0.003190446393090204,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.20129611478181214,
+                  "mse_0_1": 0.0756292323996802,
+                  "psnr_db": 11.213103074615532,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20036610069993055,
+                  "mse_0_1": 0.07549587142549395,
+                  "psnr_db": 11.220767975913649,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.20031385057535775,
+                  "mse_0_1": 0.07541718433341897,
+                  "psnr_db": 11.225296858164448,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20123985573675848,
+                  "mse_0_1": 0.07554959875603899,
+                  "psnr_db": 11.217678378570657,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07984333220418914,
+                  "mse_0_1": 0.014396602078256092,
+                  "psnr_db": 18.417399990713232,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07558778061172713,
+                  "mse_0_1": 0.013755128346452148,
+                  "psnr_db": 18.615353529372648,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.07545604846720114,
+                  "mse_0_1": 0.01374351487006635,
+                  "psnr_db": 18.619021833274203,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07970532707580011,
+                  "mse_0_1": 0.014382114567882099,
+                  "psnr_db": 18.42177255980365,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 13,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "1b79d64091a4a923518dbbd40dc2f154e1ceda28ebc838d0ccc1d36ee81ee67e",
+            "raw_tensor_sha256": "b55afeb6a2bc7a24e0abe97eabbbfbf719912cce3a870074800bcba2231774ad",
+            "png_sha256": "61caa0005b2075e1ba73420bcf3dc438b2c0f2648b317e482253796ca464ee99",
+            "png_pixels_sha256": "5d3ac4755cd483df71ee9ab437694db6ed016ff05610b03e3dbabe29a310439f"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "670c5b8295584576d9d513ce0d1f261673fa91d90679b7cf9d26fa6b745d3041",
+            "raw_tensor_sha256": "05ca17ae9369e23e748cae24fb688e811e23960fca6369f38894d34bc32c7904",
+            "png_sha256": "9e0d0fffef118c1383dcc75e5915d1088981f7383aa19833af8b16d0c4d6da86",
+            "png_pixels_sha256": "e28ca8c6bdb2125cd9f9d83a5ed561950fc21d5ecd42aff9ac32ed39f896e895"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "3efc07dc8e483589963721e257bc19da97645dca0c09e9ff77cc839ee1f7f8ae",
+            "raw_tensor_sha256": "310b7ee8352b678724cae85b6c37c5864e877def4e10f03ebd4178d7b117f510",
+            "png_sha256": "1b5b966e14f07449d64d5ba1bed55d373605a979051a5ab7f7937276e1609efd",
+            "png_pixels_sha256": "f616802c7731de56423314072b38ca5cf54b6cb7b8eb9219ad35ca7d22b5de55"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "c481d26b92760d1a8828c8a0f038161b790e1ff9641e5ccd8a10b041694160a3",
+            "raw_tensor_sha256": "975b194679f1830b53396502deba879d633312acc070b2c7f99b5123e9bd79aa",
+            "png_sha256": "06eec977b3cf095367158cb617260a7d58180860262ae38452d0b80830032e1e",
+            "png_pixels_sha256": "a44d44306f694eb1e279da60fd6eeeaa31b66226a269508e948c32eb4b0d5ae4"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0007774607904037324,
+            "mse_0_1": 1.3215476744368567e-06,
+            "psnr_db": 58.78917165206208,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.198182890290091,
+            "mse_0_1": 0.07552318068260121,
+            "psnr_db": 11.219197278755871,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.19807606248517756,
+            "mse_0_1": 0.07549656894684989,
+            "psnr_db": 11.220727850768952,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00010682780491344523
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009535901847121676,
+            "mse_0_1": 2.7135914645500082e-06,
+            "psnr_db": 55.664555354702046,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.19693367142711735,
+            "mse_0_1": 0.07530581679248152,
+            "psnr_db": 11.231714766105899,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.19675694359236243,
+            "mse_0_1": 0.07515915508771835,
+            "psnr_db": 11.240181107269684,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.0001767278347549195
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0032955164388987932,
+        "generated_difference_mae_0_1": 0.0007645526226571568,
+        "truth_pixels_differing_any_byte": 502720,
+        "truth_pixels_differing_at_least_two_levels": 300209,
+        "difference_field_mae_0_1": 0.003724895414947169,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.198182890290091,
+                  "mse_0_1": 0.07552318068260121,
+                  "psnr_db": 11.219197278755871,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19693342802090588,
+                  "mse_0_1": 0.07527272007651543,
+                  "psnr_db": 11.233623898927018,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19693367142711735,
+                  "mse_0_1": 0.07530581679248152,
+                  "psnr_db": 11.231714766105899,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19818443356864282,
+                  "mse_0_1": 0.07555643108744513,
+                  "psnr_db": 11.217285641916362,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07513695957181353,
+                  "mse_0_1": 0.012668288022064345,
+                  "psnr_db": 18.972820712101953,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07054857201823304,
+                  "mse_0_1": 0.011814610161878979,
+                  "psnr_db": 19.275806038951732,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.07050539182437421,
+                  "mse_0_1": 0.011800093862069703,
+                  "psnr_db": 19.281145381500775,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0750974870471207,
+                  "mse_0_1": 0.012654067016878533,
+                  "psnr_db": 18.977698698149553,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0032955164388987932,
+        "generated_difference_mae_0_1": 0.0008497219542776385,
+        "truth_pixels_differing_any_byte": 502720,
+        "truth_pixels_differing_at_least_two_levels": 300209,
+        "difference_field_mae_0_1": 0.003873235414806563,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.19807606248517756,
+                  "mse_0_1": 0.07549656894684989,
+                  "psnr_db": 11.220727850768952,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1968171822865827,
+                  "mse_0_1": 0.075244991475407,
+                  "psnr_db": 11.235224026707911,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19675694359236243,
+                  "mse_0_1": 0.07515915508771835,
+                  "psnr_db": 11.240181107269684,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19801137276374314,
+                  "mse_0_1": 0.07540971570274942,
+                  "psnr_db": 11.225726965139932,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07520026044885407,
+                  "mse_0_1": 0.012681277306222033,
+                  "psnr_db": 18.968370004680175,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07058864392652578,
+                  "mse_0_1": 0.011825235999383154,
+                  "psnr_db": 19.27190183173061,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.07054526670909123,
+                  "mse_0_1": 0.011817996507698563,
+                  "psnr_db": 19.274561426934202,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07514629746260156,
+                  "mse_0_1": 0.012671617685695975,
+                  "psnr_db": 18.97167938618953,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 14,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "81c27d25f2d2e3829ad703476e085bd071bbb3fbc021bcad653aa6fb5ac5a993",
+            "raw_tensor_sha256": "eaf84838794224efa825c13481da99e58b4687e2517d10e5189a1f44359d3a5b",
+            "png_sha256": "48dae9a04cb6b15f482f197ae5561499b5a4997aab1bf4577baeda1ecde7d815",
+            "png_pixels_sha256": "86980765ee417ef1d07889357d06c504a80efe052570a3eb3936976ae805f9ad"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "adce1870b455e099be7e205fa02721694822b8737c891013d92047c383c5b5eb",
+            "raw_tensor_sha256": "be4f74bd081a50e7b41d219ff8a8472f590a260c4434d54936c24d2fe9bc8492",
+            "png_sha256": "68e560ddf84ba2124c649c19e3132530d846ba90d7c84aaf3e86590544d1aff6",
+            "png_pixels_sha256": "a449403e8d1a848d9aea892e6ac0c4ae758539f036cdbd597e2a42e350b02b20"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "aa3e158fef7d6653cad243343d22b25b1d554fa0c0e319013ccbc02afd9800d7",
+            "raw_tensor_sha256": "1d97af42eda03a0ff143b636df921bad984da016b6399c2da15211711b26fb3a",
+            "png_sha256": "10e95dab9acff58a9fe6ea3f06c8b5b79b5a9ffed2f65136ac6d3bf66226efbf",
+            "png_pixels_sha256": "e852854d0e4b92de2acda97b1f9039fb871a58cafdb24fef2b2ef14b968a0658"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "14a05d1d9cb05d3604aeb20f4bc2f1be6b1f8023ba8acb3b937a5adf6008a972",
+            "raw_tensor_sha256": "1b0fee77fdb7f33630933b185e4bd49d55e8a24cc96d909f917995011a4548db",
+            "png_sha256": "d01baee383b93abc2a3eba494e65eef0e2616d5644f47449a3951cad4db62cb3",
+            "png_pixels_sha256": "3f2e40c8f834518d975dce9b8fb594a9e78f3eed023df406f9efe8f7836d0e75"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008149036365261366,
+            "mse_0_1": 1.4772927849047592e-06,
+            "psnr_db": 58.3053342326133,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.19751493083750127,
+            "mse_0_1": 0.07527058124273943,
+            "psnr_db": 11.23374730311685,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.1974113606353968,
+            "mse_0_1": 0.07524558466003967,
+            "psnr_db": 11.235189789771706,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00010357020210446932
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009929261256334352,
+            "mse_0_1": 2.779814662370588e-06,
+            "psnr_db": 55.55984158683708,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.1960845661980604,
+            "mse_0_1": 0.07503327505140947,
+            "psnr_db": 11.247460970562518,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.19586886931507308,
+            "mse_0_1": 0.0748598230121718,
+            "psnr_db": 11.257512040039641,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.0002156968829873096
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.004161316454514982,
+        "generated_difference_mae_0_1": 0.0007994334314577715,
+        "truth_pixels_differing_any_byte": 558997,
+        "truth_pixels_differing_at_least_two_levels": 371583,
+        "difference_field_mae_0_1": 0.004572652472921303,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.19751493083750127,
+                  "mse_0_1": 0.07527058124273943,
+                  "psnr_db": 11.23374730311685,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19606851154976684,
+                  "mse_0_1": 0.07498934939516239,
+                  "psnr_db": 11.250004143065677,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.1960845661980604,
+                  "mse_0_1": 0.07503327505140947,
+                  "psnr_db": 11.247460970562518,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1975321279112103,
+                  "mse_0_1": 0.07531444034155671,
+                  "psnr_db": 11.231217467820379,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07585493004847023,
+                  "mse_0_1": 0.013086396868388328,
+                  "psnr_db": 18.831799130810968,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07157390670663634,
+                  "mse_0_1": 0.012187906129506489,
+                  "psnr_db": 19.140708993455192,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.071518522152993,
+                  "mse_0_1": 0.012174325414947375,
+                  "psnr_db": 19.145550939065554,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07580196072008458,
+                  "mse_0_1": 0.013072703117788341,
+                  "psnr_db": 18.836346015733238,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.004161316454514982,
+        "generated_difference_mae_0_1": 0.0008611156684632275,
+        "truth_pixels_differing_any_byte": 558997,
+        "truth_pixels_differing_at_least_two_levels": 371583,
+        "difference_field_mae_0_1": 0.004656052767779016,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.1974113606353968,
+                  "mse_0_1": 0.07524558466003967,
+                  "psnr_db": 11.235189789771706,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1959516107044111,
+                  "mse_0_1": 0.0749625038379406,
+                  "psnr_db": 11.251559159190949,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19586886931507308,
+                  "mse_0_1": 0.0748598230121718,
+                  "psnr_db": 11.257512040039641,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19732206383648507,
+                  "mse_0_1": 0.0751421644359046,
+                  "psnr_db": 11.241162994372402,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.07591953467246666,
+                  "mse_0_1": 0.013105629789018008,
+                  "psnr_db": 18.82542104261574,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07160857639552162,
+                  "mse_0_1": 0.012203617318752073,
+                  "psnr_db": 19.135114194301607,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.07162470731056361,
+                  "mse_0_1": 0.012197939222621955,
+                  "psnr_db": 19.137135348859804,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07592047658643485,
+                  "mse_0_1": 0.013098439980438546,
+                  "psnr_db": 18.82780425583249,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 15,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "969e4b0cff10d05d51d881c69b92eb60906e28dd5abf137c55fd0515c538a44c",
+            "raw_tensor_sha256": "73f062b9fd394640917f371441d7cd9bafd65b88d7fca4071b2d9e62770316a5",
+            "png_sha256": "a703c6fc64b124d511ac5518fedd96e4a9469527b28abac08ea9695ec8d8640a",
+            "png_pixels_sha256": "36d927a258c6b5ffd1c4d74f2d456ec694dd6f910991950faddaa1956404e4f4"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "0e0ec504193e9b00b80cd64eabe3f67b656909c5be0745065acc0a1610690d9f",
+            "raw_tensor_sha256": "54250930fe92adec90fc72dc6413d26a075b239ab8a32a2f0fc3374c78558c20",
+            "png_sha256": "fd450a401dae27e9c94c40dba7f7fec3b129c9b19b0db1858033c50cecf3b3e4",
+            "png_pixels_sha256": "4ab5ffa84677a3de8f620b00d5113c49087be2a341e38d16384b8903b3549daf"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "617350aab48aa8f58ca264b41bd0428eb915e41b118ad86e4a9b5d7e15d8dcd5",
+            "raw_tensor_sha256": "ac2e1c3e9c0a929c047cd607cced5d29337eeb5421cc8ce13cbf15958f08b9c3",
+            "png_sha256": "e6d40ccbc8cfdd6f0c89104267668b4f80e7f82995e553650f8873cb6ce2d4b5",
+            "png_pixels_sha256": "dbdcdffaca375286bd8a0b30f3ec92eb8f71ea4a901c39ea43c080082324dba3"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "6028a0793e598bc4b5067a4df6466b7c5bc17c3b9d1740efa9eab30496b0975d",
+            "raw_tensor_sha256": "45f97ed7edd9a954cbf4ca2d5ccd4b008122b49b78f0d6b16cb2949a28761cc6",
+            "png_sha256": "068cef8d49939780eb4839c5de7e16187233f70b3bd20a09783c7af691e212c3",
+            "png_pixels_sha256": "df53f03807ef1a5c5b7783a4cd0f8a97fd01da526815cec0d53560f263f4470f"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008453511464574512,
+            "mse_0_1": 1.6179727834854613e-06,
+            "psnr_db": 57.91028788089318,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.19577037448696757,
+            "mse_0_1": 0.07305388249578354,
+            "psnr_db": 11.363566982555113,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.19567495130449059,
+            "mse_0_1": 0.07302453643794546,
+            "psnr_db": 11.365311912606956,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 9.542318247698911e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0009971075657224321,
+            "mse_0_1": 2.6379192493845915e-06,
+            "psnr_db": 55.78738502983528,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.19436987551692664,
+            "mse_0_1": 0.07298549276740726,
+            "psnr_db": 11.367634554574007,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.1941454175013772,
+            "mse_0_1": 0.07280427109686023,
+            "psnr_db": 11.37843141849225,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.00022445801554943356
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.0049165221097665955,
+        "generated_difference_mae_0_1": 0.0008139495727472502,
+        "truth_pixels_differing_any_byte": 595187,
+        "truth_pixels_differing_at_least_two_levels": 428428,
+        "difference_field_mae_0_1": 0.005287895411252774,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.19577037448696757,
+                  "mse_0_1": 0.07305388249578354,
+                  "psnr_db": 11.363566982555113,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.194355380712899,
+                  "mse_0_1": 0.07294258377249921,
+                  "psnr_db": 11.370188571688672,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19436987551692664,
+                  "mse_0_1": 0.07298549276740726,
+                  "psnr_db": 11.367634554574007,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.195787343756005,
+                  "mse_0_1": 0.07309658323902254,
+                  "psnr_db": 11.361029228385629,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.08030413772580633,
+                  "mse_0_1": 0.015497112792627672,
+                  "psnr_db": 18.097492060250072,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.07670821177475162,
+                  "mse_0_1": 0.014897619616568922,
+                  "psnr_db": 18.268831188343874,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.0766547523997311,
+                  "mse_0_1": 0.01488560114546257,
+                  "psnr_db": 18.272336219587753,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.08025588174308242,
+                  "mse_0_1": 0.015484875608373605,
+                  "psnr_db": 18.10092279026208,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.0049165221097665955,
+        "generated_difference_mae_0_1": 0.0008641741428850722,
+        "truth_pixels_differing_any_byte": 595187,
+        "truth_pixels_differing_at_least_two_levels": 428428,
+        "difference_field_mae_0_1": 0.0053252227946762815,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.19567495130449059,
+                  "mse_0_1": 0.07302453643794546,
+                  "psnr_db": 11.365311912606956,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19424325304000656,
+                  "mse_0_1": 0.07291087487909974,
+                  "psnr_db": 11.372076905057646,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.1941454175013772,
+                  "mse_0_1": 0.07280427109686023,
+                  "psnr_db": 11.37843141849225,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19556676620905034,
+                  "mse_0_1": 0.0729173425171589,
+                  "psnr_db": 11.371691676523412,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.08034270682327187,
+                  "mse_0_1": 0.015508347231842594,
+                  "psnr_db": 18.094344837039717,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.0767131495542045,
+                  "mse_0_1": 0.014904525587260284,
+                  "psnr_db": 18.26681843053962,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.07674879298117411,
+                  "mse_0_1": 0.014899601342510034,
+                  "psnr_db": 18.268253515249246,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.08035727618160879,
+                  "mse_0_1": 0.015501968478697871,
+                  "psnr_db": 18.096131505293666,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    },
+    {
+      "frame": 16,
+      "identities": {
+        "closed": {
+          "checkpoint128": {
+            "raw_file_sha256": "53de8993d159daf6db36297ba1ee91fdf7eaf4c94e6ab8acff8642287e896251",
+            "raw_tensor_sha256": "9f43ce2d64cb6d925aeb0d2ea81714ce2ca883c1a9d16193a9c7e4cdc15339b1",
+            "png_sha256": "d947faa453de41db8fabc5a25aa07faa0c42aba8619d8d82c5e31d6bb6a05578",
+            "png_pixels_sha256": "e27c07aadf6e04931e6fc3fc74458df2041081a87a28e83ce7e97243c44f228f"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "8a4904cad9591c5907e0b327bf885c6e650c6a5c05943be00eb3f489847e531f",
+            "raw_tensor_sha256": "5017699a60791bd55c6034655ecb4ac06bfcd5b867026f66fba8651cade82f48",
+            "png_sha256": "5d9d3e8c84e657db3d022f9011de91363f4beda966a8f7fe29ef4d67ae76f934",
+            "png_pixels_sha256": "6d9ccc84c6c51a39b367c5607b3b6b17112beaef49e467c8724bd208bfc614e5"
+          }
+        },
+        "open": {
+          "checkpoint128": {
+            "raw_file_sha256": "6e25441d84a52dac848549bbb2c250409b83d7563566c2f38a6de807899139a6",
+            "raw_tensor_sha256": "a5842a576a84a8b61a744c7015b01a728c8f6bedeff55b9678f3a3061de56c84",
+            "png_sha256": "f77b97cd07d03a9f9ca9e2b73760d824bd65be055442c9f23f19c0cc3ec8b328",
+            "png_pixels_sha256": "6368e7e27f48e474c5d2bd81b21018be2f3ef9874ac50bb704dc0b9a59a92a8f"
+          },
+          "checkpoint16": {
+            "raw_file_sha256": "db4325848c9a02e0e32b92cb9486ee1c0b2627e95b40b134e47224d5a8089aad",
+            "raw_tensor_sha256": "c87a270a14dbe2071f92b7cb57901cbcb569a4ac63cb1a1760da94c3f6a220c4",
+            "png_sha256": "401059903d602cb6de8e1b1aac12be7a3ec303645aebd064607f5967b3787a2c",
+            "png_pixels_sha256": "e8f86a9ac1d1cec96b6c562600d18be2b242ce082bf704bdc0b03a350a04e567"
+          }
+        }
+      },
+      "arms": {
+        "closed": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0008773022373082036,
+            "mse_0_1": 1.7888867818689331e-06,
+            "psnr_db": 57.474171449359915,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.20118669746064902,
+            "mse_0_1": 0.07467834011452545,
+            "psnr_db": 11.268053437373363,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.20109436052145868,
+            "mse_0_1": 0.07464530144182743,
+            "psnr_db": 11.26997523801079,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 9.233693919033503e-05
+        },
+        "open": {
+          "checkpoint128_vs_checkpoint16": {
+            "mae_0_1": 0.0010512676581675383,
+            "mse_0_1": 3.1141025771061962e-06,
+            "psnr_db": 55.06667086071856,
+            "exact": false
+          },
+          "checkpoint128_vs_target": {
+            "mae_0_1": 0.20002495850229735,
+            "mse_0_1": 0.07489695555083513,
+            "psnr_db": 11.255358353625475,
+            "exact": false
+          },
+          "checkpoint16_vs_target": {
+            "mae_0_1": 0.19975114422071844,
+            "mse_0_1": 0.07468654947926595,
+            "psnr_db": 11.267576045153543,
+            "exact": false
+          },
+          "target_mae_delta_128_minus16": 0.0002738142815789102
+        }
+      },
+      "checkpoint128_pair": {
+        "truth_difference_mae_0_1": 0.005572924403347201,
+        "generated_difference_mae_0_1": 0.0008564069484161332,
+        "truth_pixels_differing_any_byte": 625593,
+        "truth_pixels_differing_at_least_two_levels": 470174,
+        "difference_field_mae_0_1": 0.005929523720284299,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.20118669746064902,
+                  "mse_0_1": 0.07467834011452545,
+                  "psnr_db": 11.268053437373363,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1999858134104389,
+                  "mse_0_1": 0.07484138942166622,
+                  "psnr_db": 11.25858158470779,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.20002495850229735,
+                  "mse_0_1": 0.07489695555083513,
+                  "psnr_db": 11.255358353625475,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20123062573762213,
+                  "mse_0_1": 0.07473362508282218,
+                  "psnr_db": 11.264839510332445,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.10276206923785197,
+                  "mse_0_1": 0.027180977336056275,
+                  "psnr_db": 15.657349315613908,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.09991692199487945,
+                  "mse_0_1": 0.027092656713894447,
+                  "psnr_db": 15.671484058338782,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.09990035576058029,
+                  "mse_0_1": 0.027104916079843014,
+                  "psnr_db": 15.66951933010486,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.1027544684354467,
+                  "mse_0_1": 0.027192927093246874,
+                  "psnr_db": 15.65544041694423,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "checkpoint16_pair": {
+        "truth_difference_mae_0_1": 0.005572924403347201,
+        "generated_difference_mae_0_1": 0.0008815783795722039,
+        "truth_pixels_differing_any_byte": 625593,
+        "truth_pixels_differing_at_least_two_levels": 470174,
+        "difference_field_mae_0_1": 0.005901587113668705,
+        "mask_definition": "Any RGB channel differs by at least 2 uint8 levels between paired processed truth; includes lighting cues, not a door segmentation",
+        "regions": {
+          "full_frame": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.20109436052145868,
+                  "mse_0_1": 0.07464530144182743,
+                  "psnr_db": 11.26997523801079,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.19987586872864796,
+                  "mse_0_1": 0.07480551499897667,
+                  "psnr_db": 11.260663828129305,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.19975114422071844,
+                  "mse_0_1": 0.07468654947926595,
+                  "psnr_db": 11.267576045153543,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.20095962743905696,
+                  "mse_0_1": 0.0745261977149979,
+                  "psnr_db": 11.276910356665535,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          },
+          "paired_truth_difference": {
+            "informative_truth_contrast": true,
+            "arms": {
+              "closed": {
+                "own": {
+                  "mae_0_1": 0.10278233393266593,
+                  "mse_0_1": 0.027192810070186327,
+                  "psnr_db": 15.65545910657578,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.09990435591259283,
+                  "mse_0_1": 0.027099546134849682,
+                  "psnr_db": 15.670379826599454,
+                  "exact": false
+                }
+              },
+              "open": {
+                "own": {
+                  "mae_0_1": 0.09989563663529166,
+                  "mse_0_1": 0.027062056244279695,
+                  "psnr_db": 15.676392076786598,
+                  "exact": false
+                },
+                "opposite": {
+                  "mae_0_1": 0.10275488077446679,
+                  "mse_0_1": 0.027154591546980987,
+                  "psnr_db": 15.661567253783096,
+                  "exact": false
+                }
+              }
+            },
+            "strict_both_closer_to_own_truth": false,
+            "ties_pass": false,
+            "empty_region_scores": null
+          }
+        }
+      },
+      "meaning": "Descriptive RGB difference and target correspondence. No numerical quality or control threshold."
+    }
+  ],
+  "future_means": {
+    "closed": {
+      "target_mae_delta_128_minus16": 4.655807398037785e-05,
+      "checkpoint128_vs_checkpoint16_mae": 0.001059301684425533
+    },
+    "open": {
+      "target_mae_delta_128_minus16": 3.545585438338456e-05,
+      "checkpoint128_vs_checkpoint16_mae": 0.0011793925795548512
+    }
+  },
+  "strict_pair_counts": {
+    "checkpoint128": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    },
+    "checkpoint16": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    }
+  },
+  "contact_indices": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    12,
+    16
+  ],
+  "contact_sha256": "a096c74c8d9f59e5182e74949b9a10936fcbb16767506a313f58563bfa08cedc",
+  "raw_files_modified": false,
+  "limitations": [
+    "One seen fixed scene and one shared saved noise; no independent sample estimate.",
+    "After the initial command there are 15 left turns, reaching 112.5 requested degrees at frame16. Door visibility is not measured by this RGB audit.",
+    "Paired truth differences include indirect illumination and renderer variation, not just door pixels.",
+    "A closer own-target score may reflect lighting or framing. Whole-frame target error is sensitive to camera mismatch.",
+    "Frame0 is a conditioned reconstruction. It is reported separately from future averages.",
+    "Both command sequences are supplied to positive and negative CFG branches; training used the positive context only.",
+    "Pixel changes between checkpoints and target-error differences do not by themselves establish quality or door/camera response.",
+    "The final128 structural audit is a separate prerequisite. This wrapper does not replay sampling, decoding or training."
+  ]
+}

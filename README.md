@@ -84,6 +84,8 @@ The [first generated clips from that trained adapter](experiments/wan22_native/a
 
 The [fourteen-prediction diagnostic](experiments/wan22_native/action_cuda/results/diagnostic-a100-v1/README.md) found small gains on a previously seen training draw and a small first-step command effect. A subsequent [fresh 128-update run](experiments/wan22_native/action_cuda/results/fixed128-a100-v1/README.md) completed in 388.465 seconds. Its 256 saved predictions, 128 gradient bundles and nine checkpoints passed independent checks. The combined public archive retains all 957 recovery files, with two disclosed path-prefix replacements in one historical dependency log. A fresh public download passed verification. These training checks do not establish visible command control.
 
+The [final checkpoint evaluation](experiments/wan22_native/action_cuda/results/post128-a100-v1/README.md) also failed both requested controls. All 34 frames retain a closed door and almost static framing. The two clips completed in 398.633 seconds and score slightly worse against the targets than the 16-update clips. A separate 20-prediction comparison found slightly higher fixed-case error at 128 updates, despite a 2.52-fold increase in initial command sensitivity. All repeated reference predictions matched their earlier files exactly. Complete clips, raw predictions, independent audits and the failed first audit reader are retained with the corrected reader and its review.
+
 The three immediate engineering capabilities are:
 
 1. Preserve generated fields and edits across camera movement, reloads and process restarts.

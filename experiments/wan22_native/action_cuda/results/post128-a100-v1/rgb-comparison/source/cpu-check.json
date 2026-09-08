@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    "Exact final128 plan and cp128 identity; prior cp16 source/report and all initial input/text/command file hashes match",
+    "Independent synthetic target-error delta: correct new branches improve by 0.5 and old midpoint ties fail",
+    "Identical checkpoints give exact zero differences; paired ties remain failures",
+    "Missing branch rejected"
+  ],
+  "seconds": 0.0171024160226807,
+  "source_sha256": {
+    "wrapper": "970ce554e04eba2774e7f78b7d499acefd8e036935504aa0b96c6a01634e2a50",
+    "reused": {
+      "analyze.py": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc",
+      "experiments/wan22_native/spatial_audit/rgb.py": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b",
+      "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "experiments/wan22_native/action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    }
+  },
+  "fixture_sha256": "e05ba5227ed4fe6c533a94670dd5ee911e4e50b9d993fefab1dfbcc5d7017c05",
+  "actual_final128_images_read": false,
+  "model_execution": false,
+  "cloud_operations": false
+}

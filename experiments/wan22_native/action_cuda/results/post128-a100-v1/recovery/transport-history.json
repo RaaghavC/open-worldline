@@ -1,0 +1,22 @@
+{
+  "schema": "worldline-post128-transport-history-v1",
+  "outcome": "Published exact final assets and completed fresh public HTTPS recovery",
+  "original_layout_parts": 50,
+  "final_layout_parts": 82,
+  "first17_uploaded16mb_parts_preserved": true,
+  "remaining65_parts_at_most8mb": true,
+  "compressed_stream_and_members_unchanged_by_split": true,
+  "original16mb_attempt": "One bounded failure at part017 after parts000..016 verified; inventory reconciled before incomplete starter cleanup.",
+  "tail8_attempts": "One attempt per remaining piece, with remote size/digest verification.",
+  "draft_lookup": "Initial tag-based draft lookup returned404; existing release was found by exact title/list and ID, with no duplicate creation.",
+  "raw_operational_logs_published": false,
+  "raw_log_sha256": {
+    "upload-results.json": "c4694e2359bb4c605068c9997c94bd38d61be297917b9644e03c8e39971b8c30",
+    "upload-tail8-results.json": "4802518098b673a670315a442d3176bf459fde4583d30a5ae79bd3ef69d03cee",
+    "repart-tail8-startup-failure.json": "bf416fd4321da2d90b0287a2f89349100138fef4cb9eaa9ec397dcae3f60bf20"
+  },
+  "local_preparation_failure": "An initial repartition script stopped at SyntaxError before execution; the corrected script then preserved the exact stream and passed complete local recovery.",
+  "tls_certificate_validation_disabled": false,
+  "completed_assets_deleted": false,
+  "privacy": "Raw transport logs remain local because they may contain private network or workspace paths; this record retains outcome and original log hashes."
+}

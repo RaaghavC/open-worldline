@@ -1,0 +1,53 @@
+{
+  "status": "prepared",
+  "model_execution": false,
+  "actual_visual128_run_audited": false,
+  "source_sha256": {
+    "audit.py": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7",
+    "test_audit.py": "97f21cdf9455664716fdf647e824da06e104f7761aafe7c6ef7f1506afdec4f3",
+    "adapt.py": "67d330e9b2a4d71e8fc34f00f03c17fa994f034f44788cc9e777d14e340687a6"
+  },
+  "cpu_report_sha256": "becdd5806f16839105111f37a0f4276930dab205b05b030f42547d15e486a2f3",
+  "references": {
+    "original_visual16_audit": {
+      "path": "work/wan22-action-cuda-visual-actual-audit-v1/audit.py",
+      "sha256": "2ad85abf821faf42255487f857212ef41d4c7217d818dbfa1991e42802b42fa9"
+    },
+    "rgb_reader": {
+      "path": "outputs/open-worldline/experiments/wan22_native/spatial_audit/rgb.py",
+      "sha256": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b"
+    },
+    "expected_native_weights": {
+      "path": "outputs/open-worldline/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "source_review": {
+      "path": "work/wan22-action-cuda-final128-eval-independent-review-v1/report.json",
+      "sha256": "0b866edca7b812a7e75d582db708e5be719ea1523a1a7944924a981371700d1e"
+    },
+    "actual_plan_review": {
+      "path": "work/wan22-action-cuda-final128-actual-plan-review-v1/report.json",
+      "sha256": "06c44e84a308e5d7b8f99ce8a0d157a28670e9d7d0af27263993b63035cdbd4e"
+    },
+    "training_actual_audit": {
+      "path": "work/wan22-action-cuda-fixed128-actual-audit-v1/report.json",
+      "sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b"
+    },
+    "actual_prepared_plan": {
+      "path": "work/wan22-action-cuda-final128-visual-prepared-v1/plan.json",
+      "sha256": "6a00ce5db2b3858dd23a616beadbf774fb8b157efbc26edd8a969bde501bed3b"
+    }
+  },
+  "coverage": {
+    "arms": 2,
+    "saved_latent_states": 100,
+    "saved_prefix_checks": 100,
+    "first_step_raw_velocity_sets": 2,
+    "original_core_tensors": 825,
+    "native_vae_tensors": 196,
+    "raw_rgb_frames": 34,
+    "png_frames": 34
+  },
+  "unchanged_math": "The array and RGB functions and the entire per-arm schedule, state, prefix and first-velocity CFG block are byte-identical to the passed16 auditor. Four focused CPU tests verify the new bindings and this preservation.",
+  "limits": "No model or solver trajectory replay. Only first-step velocities were retained; later prediction-boundary counts remain source-bound execution counters."
+}

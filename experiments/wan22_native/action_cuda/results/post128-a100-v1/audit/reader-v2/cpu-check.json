@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    "Actual final128 plan/audit/checkpoint and unchanged original14 k506/k999 input bytes",
+    "Rejects incomplete/nonfrozen/wrong-checkpoint actual128 audit evidence",
+    "Two native calls once plus exactly six calls for each0/16/128 checkpoint",
+    "Known prefix excluded from objective and nonzero text-specific effects can cancel exactly under CFG5",
+    "Original tensor/contrast/loss/CFG function ASTs unchanged; independent bounded byte fixture rejects trailing data",
+    "Sequential allocated/reserved mismatch accepted descriptively; all declared resource caps and integer types still reject violations"
+  ],
+  "tests": 6,
+  "elapsed_seconds": 0.13602191701647826,
+  "source_sha256": {
+    "reader": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+    "diagnostic": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+    "diagnostic_test": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+    "expected_weights": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+  },
+  "fixture_source_sha256": "c85180f0e6c0a17f39445f9a439204e228dba7a126f2f76e8c49b460b2383c9c",
+  "prepared_plan_sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6",
+  "numpy": "1.26.4",
+  "model_execution": false,
+  "cloud_calls": false,
+  "torch_imported": false,
+  "actual20_run_audited": false
+}

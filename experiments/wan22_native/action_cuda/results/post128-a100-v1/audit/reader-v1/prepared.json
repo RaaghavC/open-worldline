@@ -1,0 +1,28 @@
+{
+  "status": "prepared",
+  "actual20_run_audited": false,
+  "model_execution": false,
+  "source_sha256": {
+    "audit.py": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+    "check.py": "d1730b5024dd541812b96e71884435046b76e4f1e4f8baf8eae7cc44b8546a40",
+    "adapt.py": "8e3fac27cfc6828834964ae4fcea810dc8f44b15cae0fbb95fad9a263170ffd0"
+  },
+  "cpu_report_sha256": "777eb80fde538e8afdafc4eb9cf5561585d8541ed4f125c2f8e67f742f51fd68",
+  "expected_plan_sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6",
+  "actual128_audit_sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b",
+  "actual128_checkpoint_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+  "original14_auditor_sha256": "a76be21884be026304970f649dbc1d400cf412c474ab8ec3c1472108e32f47d8",
+  "checks": {
+    "raw_predictions": 20,
+    "fixed_k506_losses": 6,
+    "zero_native_comparisons": 4,
+    "checkpoint_labels": [
+      "0",
+      "16",
+      "128"
+    ],
+    "saved_command_deltas": 6,
+    "unchanged_original_core_records": 825
+  },
+  "no_model_import": true
+}

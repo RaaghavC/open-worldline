@@ -1,0 +1,956 @@
+{
+  "schema": "worldline-action-post128-publication-provenance-v1",
+  "executed_repository_dependency_commit": "099eeae6268da852b0acb580258e4c168f900520",
+  "copied_files": {
+    "metrics/visual-parent.json": {
+      "bytes": 10133,
+      "sha256": "75d1614bf13ad92067e8b53782e8a7d489903b0a3d100a10ced6dcff0b6e6384",
+      "source_sha256": "75d1614bf13ad92067e8b53782e8a7d489903b0a3d100a10ced6dcff0b6e6384",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/metrics.json"
+    },
+    "metrics/visual-core.json": {
+      "bytes": 29173,
+      "sha256": "b4e1b5724ae8b3df1ff31cde1298dcef55398e0e8290444cc05ce9a0ce3411f7",
+      "source_sha256": "b4e1b5724ae8b3df1ff31cde1298dcef55398e0e8290444cc05ce9a0ce3411f7",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/core/result/metrics.json"
+    },
+    "metrics/visual-decode.json": {
+      "bytes": 21238,
+      "sha256": "247f94b906a0d048c4213f01f81f665b6e33987f03dfd7eec9472b74dab2b943",
+      "source_sha256": "247f94b906a0d048c4213f01f81f665b6e33987f03dfd7eec9472b74dab2b943",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/decode/result/metrics.json"
+    },
+    "metrics/visual-core-terminal.json": {
+      "bytes": 543,
+      "sha256": "6ba3cfd6c1b81d2a60624e1083d629833cb850d409c4f873a75f7059bdef45a9",
+      "source_sha256": "6ba3cfd6c1b81d2a60624e1083d629833cb850d409c4f873a75f7059bdef45a9",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/core/terminal.json"
+    },
+    "metrics/visual-decode-terminal.json": {
+      "bytes": 543,
+      "sha256": "b990819e4c16e08599a6ad25d26267bd11e95a792d86a5219a64e0005a27fef6",
+      "source_sha256": "b990819e4c16e08599a6ad25d26267bd11e95a792d86a5219a64e0005a27fef6",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/decode/terminal.json"
+    },
+    "plans/visual.json": {
+      "bytes": 1185367,
+      "sha256": "6a00ce5db2b3858dd23a616beadbf774fb8b157efbc26edd8a969bde501bed3b",
+      "source_sha256": "6a00ce5db2b3858dd23a616beadbf774fb8b157efbc26edd8a969bde501bed3b",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/plan.json"
+    },
+    "plans/visual-admission.json": {
+      "bytes": 1183332,
+      "sha256": "96d6687c7286726de7d43f10c9644dfd87c7fff5186c54b427988a9aba5b37f1",
+      "source_sha256": "96d6687c7286726de7d43f10c9644dfd87c7fff5186c54b427988a9aba5b37f1",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/executed-admission.json"
+    },
+    "preflight/visual-cpu.json": {
+      "bytes": 9180,
+      "sha256": "6e594717b809fa919bde463e29eb7823a6ac20d59361b35815e857b4e43bcc16",
+      "source_sha256": "6e594717b809fa919bde463e29eb7823a6ac20d59361b35815e857b4e43bcc16",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/cpu-report.json"
+    },
+    "metrics/comparison20-parent.json": {
+      "bytes": 415,
+      "sha256": "ddc80f2a123f56472aabd119acf9abbdbeb5d3428b262c4f0d4fa893fb5ca663",
+      "source_sha256": "ddc80f2a123f56472aabd119acf9abbdbeb5d3428b262c4f0d4fa893fb5ca663",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/metrics.json"
+    },
+    "metrics/comparison20-worker.json": {
+      "bytes": 28923,
+      "sha256": "e089b1c4568accb8b34c28d4773db40304cb0105ff34813345378a39a7a79eb5",
+      "source_sha256": "e089b1c4568accb8b34c28d4773db40304cb0105ff34813345378a39a7a79eb5",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/result/metrics.json"
+    },
+    "metrics/comparison20-terminal.json": {
+      "bytes": 543,
+      "sha256": "d9b6f5bc06c38af35732027910de3503b77dfd85edd1906950ba5c4f713dc0cf",
+      "source_sha256": "d9b6f5bc06c38af35732027910de3503b77dfd85edd1906950ba5c4f713dc0cf",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/terminal.json"
+    },
+    "plans/comparison20.json": {
+      "bytes": 981673,
+      "sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6",
+      "source_sha256": "6622575e7c3e66aeb283834bd2b43d7567cd28d66d11be6e4f7b016aaaaee9e6",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/plan.json"
+    },
+    "plans/comparison20-admission.json": {
+      "bytes": 11032,
+      "sha256": "1fd04746c1bc2aec379bc1bd7836ae25cbd52642b8b3d7b733d1e004d00bc6de",
+      "source_sha256": "1fd04746c1bc2aec379bc1bd7836ae25cbd52642b8b3d7b733d1e004d00bc6de",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/executed-admission.json"
+    },
+    "preflight/comparison20-cpu.json": {
+      "bytes": 9848,
+      "sha256": "9d902564fe0746ec81a727ec22f1e90a508e1300cd9414ff9045b7edd5e9cff2",
+      "source_sha256": "9d902564fe0746ec81a727ec22f1e90a508e1300cd9414ff9045b7edd5e9cff2",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/cpu-report.json"
+    },
+    "source/visual/inputs.py": {
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "source_sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/source/local/inputs.py"
+    },
+    "source/visual/run.py": {
+      "bytes": 15579,
+      "sha256": "abf2bb9d4eb594ef793883bc87c9a51070011c87cabb4a1df3a873388572fed5",
+      "source_sha256": "abf2bb9d4eb594ef793883bc87c9a51070011c87cabb4a1df3a873388572fed5",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/source/local/run.py"
+    },
+    "source/visual/sampler.py": {
+      "bytes": 12488,
+      "sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "source_sha256": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/source/local/sampler.py"
+    },
+    "source/visual/test_run.py": {
+      "bytes": 11739,
+      "sha256": "870c920310a0a4558565ce1e24fc878c9ac8273ac937444b02d3cdb97d7b3317",
+      "source_sha256": "870c920310a0a4558565ce1e24fc878c9ac8273ac937444b02d3cdb97d7b3317",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/source/local/test_run.py"
+    },
+    "source/visual/training-source.json": {
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "source_sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/source/local/training-source.json"
+    },
+    "source/comparison20/diagnostic/diagnostic.py": {
+      "bytes": 20797,
+      "sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "source_sha256": "f4ac8df98649cb0d08e53fffce33fd8a5b0570958943a4b086086a0309270c71",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/source/diagnostic/diagnostic.py"
+    },
+    "source/comparison20/diagnostic/test_diagnostic.py": {
+      "bytes": 6668,
+      "sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "source_sha256": "9e2eb6dba11461666218e5b8641dad81f62222e875f83df04d140d7d37e7cc2c",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/source/diagnostic/test_diagnostic.py"
+    },
+    "source/comparison20/reference14/diagnostic.py": {
+      "bytes": 20027,
+      "sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "source_sha256": "1d7a5ea10c3b29d5cfef23359719f76c59d51f97a523c57b6e25b892305cb350",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/source/reference14/diagnostic.py"
+    },
+    "source/comparison20/reference14/test_diagnostic.py": {
+      "bytes": 5021,
+      "sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "source_sha256": "4646e729aa160ae3b7d2760c84ab927b181438c90d76405e99accd603f42f35f",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/source/reference14/test_diagnostic.py"
+    },
+    "source/comparison20/training_reader/inputs.py": {
+      "bytes": 20221,
+      "sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "source_sha256": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/source/training_reader/inputs.py"
+    },
+    "source/comparison20/training_reader/training-source.json": {
+      "bytes": 10019,
+      "sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "source_sha256": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/comparison128-spatial-v1/source/training_reader/training-source.json"
+    },
+    "audit/visual/audit.py": {
+      "bytes": 29256,
+      "sha256": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7",
+      "source_sha256": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-actual-audit-v1/audit.py"
+    },
+    "audit/visual/inventory.json": {
+      "bytes": 47441,
+      "sha256": "aedfe3cb4a09174c0b7ac16156e4b0670ad8ec65e047d2e21e1e2b86a26661ae",
+      "source_sha256": "aedfe3cb4a09174c0b7ac16156e4b0670ad8ec65e047d2e21e1e2b86a26661ae",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-actual-audit-v1/inventory.json"
+    },
+    "audit/visual/report.json": {
+      "bytes": 37554,
+      "sha256": "ac5b536e9af81e4a82120fd11427612cdbd78b7bf9a8817c9a4203e095c3afdd",
+      "source_sha256": "ac5b536e9af81e4a82120fd11427612cdbd78b7bf9a8817c9a4203e095c3afdd",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-actual-audit-v1/report.json"
+    },
+    "audit/comparison20-v2/audit.py": {
+      "bytes": 30720,
+      "sha256": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+      "source_sha256": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v2/audit.py"
+    },
+    "audit/comparison20-v2/interpretation.md": {
+      "bytes": 1705,
+      "sha256": "ba1ac997f755a9a978ef29d8e2b1cb2e38fe403a2687dd58c60f677f46145742",
+      "source_sha256": "ba1ac997f755a9a978ef29d8e2b1cb2e38fe403a2687dd58c60f677f46145742",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v2/interpretation.md"
+    },
+    "audit/comparison20-v2/inventory.json": {
+      "bytes": 28856,
+      "sha256": "aaab0453d4aad2d7721a37d76401c734691ae4923e5669abe273907bada28744",
+      "source_sha256": "aaab0453d4aad2d7721a37d76401c734691ae4923e5669abe273907bada28744",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v2/inventory.json"
+    },
+    "audit/comparison20-v2/original14-reproduction.json": {
+      "bytes": 4370,
+      "sha256": "5f0a8ec8cf69c1a8fabf9c8d2c9c4a12504df505fc1d080148548995999414b9",
+      "source_sha256": "5f0a8ec8cf69c1a8fabf9c8d2c9c4a12504df505fc1d080148548995999414b9",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v2/original14-reproduction.json"
+    },
+    "audit/comparison20-v2/report.json": {
+      "bytes": 28079,
+      "sha256": "df0db0ab434e6ca219ffe2a474f5f4bf008494733314134df1a1c311a1f547c0",
+      "source_sha256": "df0db0ab434e6ca219ffe2a474f5f4bf008494733314134df1a1c311a1f547c0",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v2/report.json"
+    },
+    "audit/comparison20-v2/summary.json": {
+      "bytes": 1777,
+      "sha256": "9d68164f2bb4d9659d1d3f5369a9904fb0e15e63ec820118c31be6a75ef02162",
+      "source_sha256": "9d68164f2bb4d9659d1d3f5369a9904fb0e15e63ec820118c31be6a75ef02162",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v2/summary.json"
+    },
+    "audit/comparison20-v1/audit.py": {
+      "bytes": 30145,
+      "sha256": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+      "source_sha256": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v1/audit.py"
+    },
+    "audit/comparison20-v1/failed.json": {
+      "bytes": 194,
+      "sha256": "546419dffa6236fea6487d1837b4d7d2b1727cf9fd416cbda4503943806727eb",
+      "source_sha256": "546419dffa6236fea6487d1837b4d7d2b1727cf9fd416cbda4503943806727eb",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-actual-audit-v1/failed.json"
+    },
+    "audit/reader-v1/README.md": {
+      "bytes": 1488,
+      "sha256": "c39abe8e1f814586c3ed4120d34559ac4b317c2fdf72fb80087efed15cfede07",
+      "source_sha256": "c39abe8e1f814586c3ed4120d34559ac4b317c2fdf72fb80087efed15cfede07",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v1/README.md"
+    },
+    "audit/reader-v1/adapt.py": {
+      "bytes": 14766,
+      "sha256": "8e3fac27cfc6828834964ae4fcea810dc8f44b15cae0fbb95fad9a263170ffd0",
+      "source_sha256": "8e3fac27cfc6828834964ae4fcea810dc8f44b15cae0fbb95fad9a263170ffd0",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v1/adapt.py"
+    },
+    "audit/reader-v1/audit.py": {
+      "bytes": 30145,
+      "sha256": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+      "source_sha256": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v1/audit.py"
+    },
+    "audit/reader-v1/check.py": {
+      "bytes": 4035,
+      "sha256": "d1730b5024dd541812b96e71884435046b76e4f1e4f8baf8eae7cc44b8546a40",
+      "source_sha256": "d1730b5024dd541812b96e71884435046b76e4f1e4f8baf8eae7cc44b8546a40",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v1/check.py"
+    },
+    "audit/reader-v1/cpu-check.json": {
+      "bytes": 1276,
+      "sha256": "777eb80fde538e8afdafc4eb9cf5561585d8541ed4f125c2f8e67f742f51fd68",
+      "source_sha256": "777eb80fde538e8afdafc4eb9cf5561585d8541ed4f125c2f8e67f742f51fd68",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v1/cpu-check.json"
+    },
+    "audit/reader-v1/prepared.json": {
+      "bytes": 1124,
+      "sha256": "45e4519cab4aa8df1a75155d8c9037f4fb8b44d0f8c6d25ead54cacf7d92b010",
+      "source_sha256": "45e4519cab4aa8df1a75155d8c9037f4fb8b44d0f8c6d25ead54cacf7d92b010",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v1/prepared.json"
+    },
+    "audit/reader-v2/audit.py": {
+      "bytes": 30720,
+      "sha256": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+      "source_sha256": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v2/audit.py"
+    },
+    "audit/reader-v2/check.py": {
+      "bytes": 4744,
+      "sha256": "c85180f0e6c0a17f39445f9a439204e228dba7a126f2f76e8c49b460b2383c9c",
+      "source_sha256": "c85180f0e6c0a17f39445f9a439204e228dba7a126f2f76e8c49b460b2383c9c",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v2/check.py"
+    },
+    "audit/reader-v2/correction.json": {
+      "bytes": 1398,
+      "sha256": "fa86824ca90288840892ecd7728d7593eb38895831768e44c63cb5def289de07",
+      "source_sha256": "fa86824ca90288840892ecd7728d7593eb38895831768e44c63cb5def289de07",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v2/correction.json"
+    },
+    "audit/reader-v2/cpu-check.json": {
+      "bytes": 1415,
+      "sha256": "12a657288c5c72ae3ddaa0b1ce9295616f9a9f264901fb49ea8f00c698cd68cc",
+      "source_sha256": "12a657288c5c72ae3ddaa0b1ce9295616f9a9f264901fb49ea8f00c698cd68cc",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-prep-v2/cpu-check.json"
+    },
+    "audit/reader-v2-independent/report.json": {
+      "bytes": 1339,
+      "sha256": "bbe0e8ccca1e6c5728e843b91fe372b74b7da2846e9446ce34bd71f30dae2b09",
+      "source_sha256": "bbe0e8ccca1e6c5728e843b91fe372b74b7da2846e9446ce34bd71f30dae2b09",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-audit-independent-review-v2/report.json"
+    },
+    "visual-review/visual-review.json": {
+      "bytes": 1534,
+      "sha256": "9240db3c03fdafbeefaccf41cc116a27b6d20db4a4088db0ba1c04351de9d225",
+      "source_sha256": "9240db3c03fdafbeefaccf41cc116a27b6d20db4a4088db0ba1c04351de9d225",
+      "transformation": "none",
+      "origin": "work/wan22-final128-visual-parent-review-v1/visual-review.json"
+    },
+    "visual-review/source-frame-hashes.json": {
+      "bytes": 2893,
+      "sha256": "04e2f80a215979a22cbd8e8884053b7ad056a06020b3eaaf55ab3f411174b6dd",
+      "source_sha256": "04e2f80a215979a22cbd8e8884053b7ad056a06020b3eaaf55ab3f411174b6dd",
+      "transformation": "none",
+      "origin": "work/wan22-final128-visual-parent-review-v1/source-frame-hashes.json"
+    },
+    "visual-review/closed-all17.png": {
+      "bytes": 902324,
+      "sha256": "5bc78f076948d85dda808392bb81879c8bd3c32f88bd94d45df67ade454b6bab",
+      "source_sha256": "5bc78f076948d85dda808392bb81879c8bd3c32f88bd94d45df67ade454b6bab",
+      "transformation": "none",
+      "origin": "work/wan22-final128-visual-parent-review-v1/closed-all17.png"
+    },
+    "visual-review/open-all17.png": {
+      "bytes": 902250,
+      "sha256": "d7cb1d9a5311ccec66025bf6baa7107e330f8535f623d584396ff548c635cc67",
+      "source_sha256": "d7cb1d9a5311ccec66025bf6baa7107e330f8535f623d584396ff548c635cc67",
+      "transformation": "none",
+      "origin": "work/wan22-final128-visual-parent-review-v1/open-all17.png"
+    },
+    "rgb-comparison/checkpoint-comparison.png": {
+      "bytes": 7849976,
+      "sha256": "a096c74c8d9f59e5182e74949b9a10936fcbb16767506a313f58563bfa08cedc",
+      "source_sha256": "a096c74c8d9f59e5182e74949b9a10936fcbb16767506a313f58563bfa08cedc",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/checkpoint-comparison.png"
+    },
+    "rgb-comparison/checkpoint128-versus-truth/comparison.png": {
+      "bytes": 5121320,
+      "sha256": "2d1309b63ea1470aed39e00dec5d39d03c7deb202d836782a06773627220ac63",
+      "source_sha256": "2d1309b63ea1470aed39e00dec5d39d03c7deb202d836782a06773627220ac63",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/checkpoint128-versus-truth/comparison.png"
+    },
+    "rgb-comparison/checkpoint128-versus-truth/report.json": {
+      "bytes": 155042,
+      "sha256": "052d89a30bf90510963f89b73c8cc4fa96ad551e18098ed535587d87d9fa68f7",
+      "source_sha256": "052d89a30bf90510963f89b73c8cc4fa96ad551e18098ed535587d87d9fa68f7",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/checkpoint128-versus-truth/report.json"
+    },
+    "rgb-comparison/interpretation.md": {
+      "bytes": 3168,
+      "sha256": "acab81801e7f55e62cf45562b2e65a48214fb8784e6ed312268e60774e3363aa",
+      "source_sha256": "acab81801e7f55e62cf45562b2e65a48214fb8784e6ed312268e60774e3363aa",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/interpretation.md"
+    },
+    "rgb-comparison/inventory.json": {
+      "bytes": 1534,
+      "sha256": "08242686873d4a8b59aedf1a15d443c121e27aa1643d2d0e3867e6a13dad611a",
+      "source_sha256": "08242686873d4a8b59aedf1a15d443c121e27aa1643d2d0e3867e6a13dad611a",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/inventory.json"
+    },
+    "rgb-comparison/report.json": {
+      "bytes": 163302,
+      "sha256": "f0fff1f533543372b6d901c12ae63e6081bc84930a6de703edb660ad26b9667f",
+      "source_sha256": "f0fff1f533543372b6d901c12ae63e6081bc84930a6de703edb660ad26b9667f",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/report.json"
+    },
+    "rgb-comparison/source/README.md": {
+      "bytes": 3016,
+      "sha256": "6e8cc0b3e763ee5ed80c46c7af3caeb2d52672f2873307d2ada1a41f071d0e13",
+      "source_sha256": "6e8cc0b3e763ee5ed80c46c7af3caeb2d52672f2873307d2ada1a41f071d0e13",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/source/README.md"
+    },
+    "rgb-comparison/source/analyze.py": {
+      "bytes": 8524,
+      "sha256": "970ce554e04eba2774e7f78b7d499acefd8e036935504aa0b96c6a01634e2a50",
+      "source_sha256": "970ce554e04eba2774e7f78b7d499acefd8e036935504aa0b96c6a01634e2a50",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/source/analyze.py"
+    },
+    "rgb-comparison/source/check.py": {
+      "bytes": 1767,
+      "sha256": "e05ba5227ed4fe6c533a94670dd5ee911e4e50b9d993fefab1dfbcc5d7017c05",
+      "source_sha256": "e05ba5227ed4fe6c533a94670dd5ee911e4e50b9d993fefab1dfbcc5d7017c05",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/source/check.py"
+    },
+    "rgb-comparison/source/cpu-check.json": {
+      "bytes": 1588,
+      "sha256": "624db0fbad90a32ad16145a6b45a2084486e67b8a51ddf4d800c720113da3fa7",
+      "source_sha256": "624db0fbad90a32ad16145a6b45a2084486e67b8a51ddf4d800c720113da3fa7",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/source/cpu-check.json"
+    },
+    "rgb-comparison/source/independent-read-review.json": {
+      "bytes": 542,
+      "sha256": "0953b39a9a800b6c7275f27e840aa3156fa03f7de2423bb0554b4384f753d844",
+      "source_sha256": "0953b39a9a800b6c7275f27e840aa3156fa03f7de2423bb0554b4384f753d844",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-comparison-v1/source/independent-read-review.json"
+    },
+    "previews/closed.gif": {
+      "bytes": 7533793,
+      "sha256": "3f69ea509eb1551ff77c4cd640dd3c8ed89e92af76bd5c3b73378701613745b3",
+      "source_sha256": "3f69ea509eb1551ff77c4cd640dd3c8ed89e92af76bd5c3b73378701613745b3",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/decode/result/closed/preview.gif"
+    },
+    "metrics/closed-rgb-index.json": {
+      "bytes": 4694,
+      "sha256": "160e82c719f88e2c1584b48c064af2518eff86d4e31be24abf55e436fb7bf2b8",
+      "source_sha256": "160e82c719f88e2c1584b48c064af2518eff86d4e31be24abf55e436fb7bf2b8",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/decode/result/closed/rgb/index.json"
+    },
+    "previews/open.gif": {
+      "bytes": 7538400,
+      "sha256": "705eb3b526ed8a447d7969459b024f56a57283b697506f5034617b0547c80388",
+      "source_sha256": "705eb3b526ed8a447d7969459b024f56a57283b697506f5034617b0547c80388",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/decode/result/open/preview.gif"
+    },
+    "metrics/open-rgb-index.json": {
+      "bytes": 4694,
+      "sha256": "2d96a87a5833ce6fff325b76b0cb9dbe9039e013bc87553ab05e18b43ab3fb9c",
+      "source_sha256": "2d96a87a5833ce6fff325b76b0cb9dbe9039e013bc87553ab05e18b43ab3fb9c",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovered/action-results/final128-visual-v1/decode/result/open/rgb/index.json"
+    },
+    "fetch_artifacts.py": {
+      "bytes": 10130,
+      "sha256": "b6449d75606c102b540d3a9f5d153e8ae0f89fdf194a757cd7adcd52381a8844",
+      "source_sha256": "b6449d75606c102b540d3a9f5d153e8ae0f89fdf194a757cd7adcd52381a8844",
+      "transformation": "none",
+      "origin": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/fetch_artifacts.py"
+    },
+    "test_fetch_artifacts.py": {
+      "bytes": 6623,
+      "sha256": "d7cb26252d8365debaa740a211acba80e3f5f19e418f497ffef1826dc4c88341",
+      "source_sha256": "d7cb26252d8365debaa740a211acba80e3f5f19e418f497ffef1826dc4c88341",
+      "transformation": "none",
+      "origin": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/test_fetch_artifacts.py"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none",
+      "origin": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/WAN-APACHE-2.0.txt"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "source_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none",
+      "origin": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/WAN-NOTICE.txt"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "source_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none",
+      "origin": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/ATRIUM-CC0.txt"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none",
+      "origin": "outputs/open-worldline/experiments/wan22_native/action_cuda/results/fixed128-a100-v1/licenses/WORLDLINE-APACHE-2.0.txt"
+    },
+    "recovery/original-index.json": {
+      "bytes": 127913,
+      "sha256": "78283c76c83f3f091c143308c61d93cc190788eb34c39c849123164d521e498a",
+      "source_sha256": "78283c76c83f3f091c143308c61d93cc190788eb34c39c849123164d521e498a",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/index.json"
+    },
+    "recovery/original-verification.json": {
+      "bytes": 315,
+      "sha256": "04233139684d9c3d0fed3f2dad779bfeb6e272114d9da1473d91c83599eed41f",
+      "source_sha256": "04233139684d9c3d0fed3f2dad779bfeb6e272114d9da1473d91c83599eed41f",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-post128-recovered-final-v1/recovery-verified.json"
+    },
+    "recovery/index.json": {
+      "bytes": 139747,
+      "sha256": "8bc6a96e379c8b87841cf4b2e6079aa3c29e50f6af4ddf77871b7f77a295e6ad",
+      "source_sha256": "8bc6a96e379c8b87841cf4b2e6079aa3c29e50f6af4ddf77871b7f77a295e6ad",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/index.json"
+    },
+    "recovery/public-derivation.json": {
+      "bytes": 4161,
+      "sha256": "b0b67a4375a810d1c37e01f00d75b51a9286fe0c36566579c0e554d116b2303b",
+      "source_sha256": "b0b67a4375a810d1c37e01f00d75b51a9286fe0c36566579c0e554d116b2303b",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/public-derivation.json"
+    },
+    "release-download.json": {
+      "bytes": 24463,
+      "sha256": "8c68aba141f3307d00884ba77c1cd0c6bfdaf530a2badfcc15fa73fc0af97979",
+      "source_sha256": "8c68aba141f3307d00884ba77c1cd0c6bfdaf530a2badfcc15fa73fc0af97979",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/release-download.json"
+    },
+    "recovery/local-verification.json": {
+      "bytes": 460,
+      "sha256": "3d663bb60bbc091f53def8b2e453acbf3e05b41bb2510ea9d07c804f3cf1227e",
+      "source_sha256": "3d663bb60bbc091f53def8b2e453acbf3e05b41bb2510ea9d07c804f3cf1227e",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/local-recovery-verification.json"
+    },
+    "audit/visual-preflight/README.md": {
+      "bytes": 1491,
+      "sha256": "bf96082a291707016433f82b61ee774b7eacaf5d7e05d500d054d85d29ee413d",
+      "source_sha256": "bf96082a291707016433f82b61ee774b7eacaf5d7e05d500d054d85d29ee413d",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-audit-prep-v1/README.md"
+    },
+    "audit/visual-preflight/cpu-v1.json": {
+      "bytes": 494,
+      "sha256": "becdd5806f16839105111f37a0f4276930dab205b05b030f42547d15e486a2f3",
+      "source_sha256": "becdd5806f16839105111f37a0f4276930dab205b05b030f42547d15e486a2f3",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-audit-prep-v1/cpu-v1.json"
+    },
+    "audit/visual-preflight/prepared.json": {
+      "bytes": 2565,
+      "sha256": "2fb5553ecf099e2510497492922f992610788167729711884cde6e8a6c92e0d8",
+      "source_sha256": "2fb5553ecf099e2510497492922f992610788167729711884cde6e8a6c92e0d8",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-audit-prep-v1/prepared.json"
+    },
+    "audit/visual-preflight/test_audit.py": {
+      "bytes": 4270,
+      "sha256": "97f21cdf9455664716fdf647e824da06e104f7761aafe7c6ef7f1506afdec4f3",
+      "source_sha256": "97f21cdf9455664716fdf647e824da06e104f7761aafe7c6ef7f1506afdec4f3",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-audit-prep-v1/test_audit.py"
+    },
+    "preflight/visual-reader-independent.json": {
+      "bytes": 2367,
+      "sha256": "b27264cace4b7ffdb61542c086e95dc326453e0d0473f7696644daac6d196e5a",
+      "source_sha256": "b27264cace4b7ffdb61542c086e95dc326453e0d0473f7696644daac6d196e5a",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-visual-audit-independent-review-v1/report.json"
+    },
+    "preflight/visual-program-independent.json": {
+      "bytes": 20648,
+      "sha256": "0b866edca7b812a7e75d582db708e5be719ea1523a1a7944924a981371700d1e",
+      "source_sha256": "0b866edca7b812a7e75d582db708e5be719ea1523a1a7944924a981371700d1e",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-eval-independent-review-v1/report.json"
+    },
+    "preflight/visual-plan-independent.json": {
+      "bytes": 788,
+      "sha256": "06c44e84a308e5d7b8f99ce8a0d157a28670e9d7d0af27263993b63035cdbd4e",
+      "source_sha256": "06c44e84a308e5d7b8f99ce8a0d157a28670e9d7d0af27263993b63035cdbd4e",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-final128-actual-plan-review-v1/report.json"
+    },
+    "preflight/comparison20-program-independent.json": {
+      "bytes": 11278,
+      "sha256": "0171f244badd6e614d5a32801bcbbe6ffc53a2c23b0426fe39ade1f07e5d5490",
+      "source_sha256": "0171f244badd6e614d5a32801bcbbe6ffc53a2c23b0426fe39ade1f07e5d5490",
+      "transformation": "none",
+      "origin": "work/wan22-action-cuda-comparison128-independent-review-v1/report.json"
+    },
+    "recovery/history/public-index-16mb.json": {
+      "bytes": 134595,
+      "sha256": "10f59f8c072c681e1d66ec8ba5ebdb1cc683e9a9d7b14b7c39f7864cec3a1ca5",
+      "source_sha256": "10f59f8c072c681e1d66ec8ba5ebdb1cc683e9a9d7b14b7c39f7864cec3a1ca5",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/public-index-16mb.json"
+    },
+    "recovery/history/public-download-16mb.json": {
+      "bytes": 15119,
+      "sha256": "1a98125d30c2f9c65b25fa9524117b22bcd280d1cac26097cbb841660ae27197",
+      "source_sha256": "1a98125d30c2f9c65b25fa9524117b22bcd280d1cac26097cbb841660ae27197",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/public-download-16mb.json"
+    },
+    "recovery/history/local-verification-16mb.json": {
+      "bytes": 460,
+      "sha256": "278bf12c1b45f8b149dbbec5c59c95e187fd28f98910d2b8e84d31d35cda839b",
+      "source_sha256": "278bf12c1b45f8b149dbbec5c59c95e187fd28f98910d2b8e84d31d35cda839b",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/public-assets-tail8/local-recovery-verification-16mb.json"
+    },
+    "recovery/published-release.json": {
+      "bytes": 212590,
+      "sha256": "2f0be7d215038dbc706995206bfeaea4516cf42716f37bbe3c8c28bad0b78039",
+      "source_sha256": "2f0be7d215038dbc706995206bfeaea4516cf42716f37bbe3c8c28bad0b78039",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/published-release.json"
+    },
+    "recovery/remote-asset-verification.json": {
+      "bytes": 40959,
+      "sha256": "cd7c562e77b29226087c907ff107f88184c571566dbc323fde26e1d068d52f6e",
+      "source_sha256": "cd7c562e77b29226087c907ff107f88184c571566dbc323fde26e1d068d52f6e",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-publication-v1/remote-asset-verification.json"
+    },
+    "recovery/public-download-verification.json": {
+      "bytes": 461,
+      "sha256": "003886664153f61798e559fa8e3db79578ba731e0e9c5bb494d4d3442b5c38fc",
+      "source_sha256": "003886664153f61798e559fa8e3db79578ba731e0e9c5bb494d4d3442b5c38fc",
+      "transformation": "none",
+      "origin": "work/wan22-action-post128-public-download-v1/verification.json"
+    }
+  },
+  "repository_source_references": {
+    "experiments/room_world/__init__.py": {
+      "path": "../a100-v1/source/experiments/room_world/__init__.py",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "experiments/room_world/memory_evaluate.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_evaluate.py",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "experiments/room_world/memory_model.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_model.py",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "experiments/room_world/memory_sequence.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_sequence.py",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "experiments/room_world/memory_train.py": {
+      "path": "../a100-v1/source/experiments/room_world/memory_train.py",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "experiments/room_world/model.py": {
+      "path": "../a100-v1/source/experiments/room_world/model.py",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "experiments/wan22_native/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/__init__.py",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "experiments/wan22_native/action_adapter/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_adapter/__init__.py",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "experiments/wan22_native/action_adapter/model.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_adapter/model.py",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "experiments/wan22_native/action_adapter/pooling.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_adapter/pooling.py",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "experiments/wan22_native/action_cuda/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/__init__.py",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "experiments/wan22_native/action_cuda/bridge.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/bridge.py",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "experiments/wan22_native/action_cuda/cache_run.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/cache_run.py",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "experiments/wan22_native/action_cuda/data.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/data.py",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "experiments/wan22_native/action_cuda/probe.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/probe.py",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "experiments/wan22_native/action_cuda/probe_math.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/probe_math.py",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "experiments/wan22_native/action_cuda/test_cpu.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/test_cpu.py",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "experiments/wan22_native/action_cuda/test_independent.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/test_independent.py",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "experiments/wan22_native/action_cuda/test_probe.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_cuda/test_probe.py",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "path": "../fixed16-a100-v1/source/repository/experiments/wan22_native/action_cuda/test_probe_independent.py",
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "experiments/wan22_native/action_data/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_data/__init__.py",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "experiments/wan22_native/action_data/data.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_data/data.py",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "experiments/wan22_native/action_training/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_training/__init__.py",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "experiments/wan22_native/action_training/objective.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/action_training/objective.py",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "experiments/wan22_native/cuda_reference/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/__init__.py",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "experiments/wan22_native/cuda_reference/codec-source.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/codec-source.json",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "experiments/wan22_native/cuda_reference/config.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/config.json",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "experiments/wan22_native/cuda_reference/evidence.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/evidence.py",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "experiments/wan22_native/cuda_reference/guards.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/guards.py",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "experiments/wan22_native/cuda_reference/native.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/native.py",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "experiments/wan22_native/cuda_reference/requirements.txt": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/requirements.txt",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "experiments/wan22_native/cuda_reference/sampling.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/sampling.py",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "experiments/wan22_native/load_weights.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/load_weights.py",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "experiments/wan22_native/official_cpu/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/official_cpu/__init__.py",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "experiments/wan22_native/official_cpu/inputs.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/official_cpu/inputs.py",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "experiments/wan22_native/official_cpu/streaming.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/official_cpu/streaming.py",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "experiments/wan22_native/portable.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/portable.py",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "experiments/wan22_native/spatial_reference/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/__init__.py",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "experiments/wan22_native/spatial_reference/config.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/config.py",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "experiments/wan22_native/spatial_reference/evidence.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/evidence.py",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "experiments/wan22_native/spatial_reference/guards.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/guards.py",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "experiments/wan22_native/spatial_reference/inputs.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/inputs.py",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "experiments/wan22_native/spatial_reference/sampling.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/sampling.py",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "experiments/wan22_native/text-reuse.json": {
+      "path": "../a100-v1/source/experiments/wan22_native/text-reuse.json",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "experiments/wan22_native/vendor/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/vendor/__init__.py",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "experiments/wan22_native/vendor/attention.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/vendor/model.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan_adapter/capture_data.py": {
+      "path": "../a100-v1/source/experiments/wan_adapter/capture_data.py",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "experiments/wan_adapter/native_control/__init__.py": {
+      "path": "../a100-v1/source/experiments/wan_adapter/native_control/__init__.py",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "experiments/wan_adapter/native_control/portable.py": {
+      "path": "../a100-v1/source/experiments/wan_adapter/native_control/portable.py",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "experiments/wan22_native/cuda_reference/decode.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/cuda_reference/decode.py",
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+    },
+    "experiments/wan22_native/spatial_reference/codec.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/codec.py",
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+    },
+    "experiments/wan22_native/spatial_reference/native.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/native.py",
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+    },
+    "experiments/wan22_native/spatial_reference/output.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/output.py",
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+    },
+    "experiments/wan22_native/spatial_reference/run.py": {
+      "path": "../a100-v1/source/experiments/wan22_native/spatial_reference/run.py",
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+    }
+  },
+  "visual_local_sources": {
+    "inputs.py": "04242c13c2afe01bd3c9377c02f0bfe25733fcb58ce5778d31ac18f9b06deb41",
+    "run.py": "abf2bb9d4eb594ef793883bc87c9a51070011c87cabb4a1df3a873388572fed5",
+    "sampler.py": "374e2d1b68015c7ce0b436dcddb68c6f5d8b247584feaa9140b94ec1aae3c314",
+    "test_run.py": "870c920310a0a4558565ce1e24fc878c9ac8273ac937444b02d3cdb97d7b3317",
+    "training-source.json": "726e8b0e3077317b4e217c4da1812d190a80bf2991b851a11a1a0caf790b2347"
+  },
+  "raw_recovery_source": "Complete measured programs and source-bound plans are in the full recovery; compact source copies are exact.",
+  "source_records_transformed": false,
+  "raw_privacy_derivative": "Three copies of the prior training audit replace only the operational report.run workspace prefix. All other605 raw members remain byte-identical; no current visual/comparison metric or tensor changes.",
+  "audit_analysis_source_references": {
+    "analyze.py": {
+      "path": "../visual-a100-v1/analysis/source/analyze.py",
+      "sha256": "520c2af654749faf5f4d480cc52c0ac21d8f7aede7257e254e2cf4e9eb00d9bc"
+    },
+    "experiments/wan22_native/spatial_audit/rgb.py": {
+      "path": "../../../spatial_audit/rgb.py",
+      "sha256": "d3c249d5c4948417385d2cd980ba36a5bca64211819eb7bb7520007dbaf4890b"
+    },
+    "experiments/wan22_native/action_data/data.py": {
+      "path": "../../../action_data/data.py",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "experiments/wan_adapter/capture_data.py": {
+      "path": "../../../../wan_adapter/capture_data.py",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "experiments/wan22_native/action_data/source-plan.md.txt": {
+      "path": "../../../action_data/source-plan.md.txt",
+      "sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62"
+    },
+    "experiments/wan22_native/spatial_reference/inputs.py": {
+      "path": "../../../spatial_reference/inputs.py",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "experiments/wan22_native/spatial_reference/config.py": {
+      "path": "../../../spatial_reference/config.py",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    }
+  }
+}

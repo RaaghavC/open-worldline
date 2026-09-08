@@ -1,0 +1,75 @@
+{
+  "schema": "worldline-action-post128-result-summary-v1",
+  "visual_execution": "passed",
+  "visual_artifact_audit": "passed",
+  "door_control": "failed",
+  "camera_turn_control": "failed",
+  "same_input_command_pair": true,
+  "checkpoint": 128,
+  "checkpoint_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+  "frames_per_arm": 17,
+  "width": 1248,
+  "height": 704,
+  "all_visual_frames_reviewed": 34,
+  "visual_parent_seconds": 398.6329531259835,
+  "comparison20_execution": "passed",
+  "comparison20_saved_prediction_audit": "passed_after_disclosed_reader_correction",
+  "predictions_verified": 20,
+  "optimizer_updates": 0,
+  "future_mse_fp64": {
+    "0": {
+      "closed": 0.14848440714209962,
+      "open": 0.16215267677281414
+    },
+    "16": {
+      "closed": 0.14791987699407244,
+      "open": 0.16155256158205544
+    },
+    "128": {
+      "closed": 0.1479280550266104,
+      "open": 0.16156097004017397
+    }
+  },
+  "cp128_vs16_relative_mse_increase": {
+    "closed": 5.528690737288677e-05,
+    "open": 5.2047816736511265e-05
+  },
+  "guided_command_rms": {
+    "16": 0.001961411818885448,
+    "128": 0.0049421722824138994
+  },
+  "guided_command_rms_ratio_128_vs16": 2.5197014899309815,
+  "strict_pair_counts": {
+    "checkpoint128": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    },
+    "checkpoint16": {
+      "full_frame": 0,
+      "paired_truth_difference": 0
+    }
+  },
+  "future_rgb_comparisons": {
+    "closed": {
+      "target_mae_delta_128_minus16": 4.655807398037785e-05,
+      "checkpoint128_vs_checkpoint16_mae": 0.001059301684425533
+    },
+    "open": {
+      "target_mae_delta_128_minus16": 3.545585438338456e-05,
+      "checkpoint128_vs_checkpoint16_mae": 0.0011793925795548512
+    }
+  },
+  "public_raw_files": 608,
+  "public_raw_file_bytes": 927969112,
+  "raw_files_byte_exact": 605,
+  "raw_audit_operational_path_derivatives": 3,
+  "action_quality_success": false,
+  "generalization_assessed": false,
+  "limitations": [
+    "One seen room and one shared sampling noise, with the original start0 wait/interact command contrast.",
+    "All17 frames scored and all34 generated frames visually reviewed; pixel correspondence is descriptive, not a perceptual quality measure.",
+    "The fixed k506 diagnostic uses two seen target-corrupted examples; k999 isolates command changes on one common input.",
+    "A larger command-dependent velocity does not establish correct action behavior. No foundation or adapter update occurs in these evaluation runs.",
+    "Training used positive text only; sampling applies commands to both CFG branches, with no separate negative-context action training."
+  ]
+}

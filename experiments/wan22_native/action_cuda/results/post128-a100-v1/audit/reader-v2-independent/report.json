@@ -1,0 +1,17 @@
+{
+  "schema": "worldline-comparison128-reader-v2-narrow-review-v1",
+  "status": "passed",
+  "review": "Read-only exact diff and frozen monitor source review; no test rerun or actual model/audit execution.",
+  "source_sha256": {
+    "work/wan22-action-cuda-comparison128-audit-prep-v1/audit.py": "2ce0f4c975af7e5f9ef7425226b7ca2c2e7aa08476c60da87917eb5419f4c271",
+    "work/wan22-action-cuda-comparison128-audit-prep-v2/audit.py": "72eb14820038740dcbda6a9feb228740d9f311d04b618d4b17aae08740fc4867",
+    "work/wan22-action-cuda-comparison128-audit-prep-v2/cpu-check.json": "12a657288c5c72ae3ddaa0b1ce9295616f9a9f264901fb49ea8f00c698cd68cc",
+    "outputs/open-worldline/experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+  },
+  "findings": [
+    "The monitor reads reserved and allocated counters sequentially, so the shared row time does not establish an instantaneous allocated<=reserved relation.",
+    "The v2 reader removes only that added relation. Host RSS, CUDA reserved, host/CUDA minimum free caps and strict nonnegative integer fields remain enforced.",
+    "Mismatched counter rows remain descriptive evidence. Prior v1 source, test report and actual failure remain retained."
+  ],
+  "review_scope": "Reader correction only; no resource limit was relaxed."
+}

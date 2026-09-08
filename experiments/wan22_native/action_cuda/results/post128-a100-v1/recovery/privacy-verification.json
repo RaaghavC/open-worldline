@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "scanned_public_text_files": 492,
+  "findings": [],
+  "independent_raw_scan": "Confirmed exactly three report.run private prefixes; no private prefixes in the current external audits/reviews.",
+  "raw_original_modified": false,
+  "limitations": "Bounded patterns for known credentials/private keys and workspace prefixes cannot guarantee detection of every possible secret representation.",
+  "privacy_transformations": "Only three prior training-audit operational run prefixes; every numerical/source/metric/tensor field unchanged."
+}

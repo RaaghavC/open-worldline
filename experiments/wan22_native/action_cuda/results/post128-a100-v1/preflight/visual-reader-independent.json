@@ -1,0 +1,41 @@
+{
+  "schema": "worldline-final128-visual-auditor-read-review-v1",
+  "status": "passed",
+  "reviewed_utc": "2026-09-08T07:31:44.379964+00:00",
+  "review": "Narrow read-only source comparison; no tests or actual-result audit rerun.",
+  "reviewed_source_sha256": {
+    "audit.py": "56169ba2a0832a321f06f8396c259d4ebc2ab44440faa576c6894a1d005c5ee7",
+    "test_audit.py": "97f21cdf9455664716fdf647e824da06e104f7761aafe7c6ef7f1506afdec4f3",
+    "adapt.py": "67d330e9b2a4d71e8fc34f00f03c17fa994f034f44788cc9e777d14e340687a6"
+  },
+  "author_cpu_report_sha256": "becdd5806f16839105111f37a0f4276930dab205b05b030f42547d15e486a2f3",
+  "author_checks": 4,
+  "author_elapsed_seconds": 0.4672348749882076,
+  "previous_auditor_sha256": "2ad85abf821faf42255487f857212ef41d4c7217d818dbfa1991e42802b42fa9",
+  "prepared_plan_sha256": "6a00ce5db2b3858dd23a616beadbf774fb8b157efbc26edd8a969bde501bed3b",
+  "actual_training_audit_sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b",
+  "final_checkpoint_sha256": "ac1160b22531804c473746d2fb8ee9edd75710e0e43d6f1eabc86d268c864996",
+  "findings": [
+    "Exact final128 parent/worker/training/terminal/plan/checkpoint/source identities are compared to the independently audited actual run.",
+    "Prepared plan, independent source review, actual-plan review, CPU report and copied evidence have explicit retained hash gates. The singular source_unchanged CPU field matches actual producer schema.",
+    "Hardware comparison accepts only integer equal-or-greater total capacity; the field set and all other JSON values/types remain exact, with unchanged resource limits.",
+    "FP32 array reader, raw-to-PNG/GIF/contact checks and the complete per-arm state/prefix/first-step CFG audit remain unchanged.",
+    "Output must be fresh and outside the measured run and repository. No concrete new blocker found."
+  ],
+  "unchanged_function_asts": [
+    "array_file",
+    "tensor_sha",
+    "inventory",
+    "jsonlines",
+    "check_rgb"
+  ],
+  "trajectory_block_byte_exact": true,
+  "model_execution": false,
+  "cloud_calls": 0,
+  "source_edits": false,
+  "tests_rerun": false,
+  "actual_final128_visual_audited": false,
+  "limitations": [
+    "Read-only preparation review only. Four CPU checks are author evidence, not an independent rerun. Actual recovered final128 visual result still requires this auditor to pass."
+  ]
+}

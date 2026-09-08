@@ -1,0 +1,83 @@
+{
+  "schema": "worldline-post128-public-privacy-derivative-v1",
+  "status": "verified_local_derivative",
+  "original_index_sha256": "78283c76c83f3f091c143308c61d93cc190788eb34c39c849123164d521e498a",
+  "public_index_sha256": "8bc6a96e379c8b87841cf4b2e6079aa3c29e50f6af4ddf77871b7f77a295e6ad",
+  "original_stream_sha256": "5707f3d51e790881256d432d694159c826d9d2991a80deff582fa3a1677221a6",
+  "public_stream_sha256": "624dce4bfd3d10f8ab30f99be73bcb4f83d01b667ed0a9ee4823129cce5222e5",
+  "original_transport_parts": 9,
+  "public_transport_parts": 82,
+  "max_public_part_bytes": 16000000,
+  "compression": "New gzip level1 stream, sorted members with normalized tar timestamps/modes; original recovery untouched.",
+  "original_file_count": 608,
+  "public_file_count": 608,
+  "unchanged_file_count": 605,
+  "excluded_file_count": 0,
+  "original_file_bytes": 927969196,
+  "public_file_bytes": 927969112,
+  "transformed_files": [
+    {
+      "path": "action-results/comparison128-spatial-v1/training-audit.json",
+      "original": {
+        "bytes": 165944,
+        "sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b"
+      },
+      "published": {
+        "bytes": 165916,
+        "sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81"
+      },
+      "operation": "Replace only the exact local workspace UTF-8 prefix in the operational audit run field with [WORKSPACE]/",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 1,
+      "unchanged": "Every numerical, scientific identity and source field; original report remains untouched locally."
+    },
+    {
+      "path": "action-results/final128-visual-v1/training-audit.json",
+      "original": {
+        "bytes": 165944,
+        "sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b"
+      },
+      "published": {
+        "bytes": 165916,
+        "sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81"
+      },
+      "operation": "Replace only the exact local workspace UTF-8 prefix in the operational audit run field with [WORKSPACE]/",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 1,
+      "unchanged": "Every numerical, scientific identity and source field; original report remains untouched locally."
+    },
+    {
+      "path": "action-results/post128-executed-programs/reviews/actual128/report.json",
+      "original": {
+        "bytes": 165944,
+        "sha256": "e987d7b31ce754977ce8ee547aa9e2cf4a2b31afc136a4f57b893de6950caa7b"
+      },
+      "published": {
+        "bytes": 165916,
+        "sha256": "c2f0d66c1d4e123156a5c77a3a878748cf21a7c24dfa3690b8adb3424b977b81"
+      },
+      "operation": "Replace only the exact local workspace UTF-8 prefix in the operational audit run field with [WORKSPACE]/",
+      "original_prefix_sha256": "f055720bbf4918654f08c2f7e7563f8ee471f19a1a0177a6901025e15169b7c1",
+      "original_prefix_bytes": 40,
+      "replacement": "[WORKSPACE]/",
+      "replacement_count": 1,
+      "unchanged": "Every numerical, scientific identity and source field; original report remains untouched locally."
+    }
+  ],
+  "original_audit_hash_references_retained": true,
+  "hash_reference_note": "Executed plans still name the original actual128 training-audit report hash. The derivative mappings identify the three published copies with redacted operational run prefixes; scientific identity fields are unchanged.",
+  "archive_build_seconds": 29.76156708400231,
+  "transport_repartition": {
+    "preserved_uploaded_parts": 17,
+    "first_parts_bytes": 16000000,
+    "remaining_parts_max_bytes": 8000000,
+    "prior_index_sha256": "10f59f8c072c681e1d66ec8ba5ebdb1cc683e9a9d7b14b7c39f7864cec3a1ca5",
+    "prior_part_count": 50,
+    "public_gzip_stream_unchanged": true,
+    "reason": "Single16 MB attempt for part017 failed after parts000..016 completed; only unuploaded tail repartitioned."
+  }
+}

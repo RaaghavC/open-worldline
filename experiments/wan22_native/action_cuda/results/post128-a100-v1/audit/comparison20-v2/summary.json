@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "visual_audit_sha256": "ac5b536e9af81e4a82120fd11427612cdbd78b7bf9a8817c9a4203e095c3afdd",
+  "comparison20_audit_sha256": "df0db0ab434e6ca219ffe2a474f5f4bf008494733314134df1a1c311a1f547c0",
+  "recovery_verified_sha256": "04233139684d9c3d0fed3f2dad779bfeb6e272114d9da1473d91c83599eed41f",
+  "future_mse_fp64": {
+    "0": {
+      "closed": 0.14848440714209962,
+      "open": 0.16215267677281414
+    },
+    "16": {
+      "closed": 0.14791987699407244,
+      "open": 0.16155256158205544
+    },
+    "128": {
+      "closed": 0.1479280550266104,
+      "open": 0.16156097004017397
+    }
+  },
+  "cp128_vs16_relative_mse_increase": {
+    "closed": 5.528690737288677e-05,
+    "open": 5.2047816736511265e-05
+  },
+  "guided_command_rms": {
+    "16": 0.001961411818885448,
+    "128": 0.0049421722824138994
+  },
+  "guided_command_rms_ratio_128_vs16": 2.5197014899309815,
+  "zero_native_bit_exact_comparisons": 4,
+  "core_values_unchanged": 825,
+  "interpretation": [
+    "The128 checkpoint does not improve either retained k506 objective case beyond16. Both remain modestly below initialization.",
+    "The held-input k999 command response is larger at128; this is numerical sensitivity and does not establish correct door or camera behavior.",
+    "The guided command response is not nearly erased at this initial step; this single-step decomposition does not diagnose the later visual failure."
+  ],
+  "scope": [
+    "Two seen training cases at one saved timestep506, each with its own target corruption.",
+    "One common initial sampling input at timestep999 for causal command comparisons.",
+    "Root endpoint inspection reports closed door and nearly static camera; full RGB/target comparison is separate."
+  ],
+  "producer_model_execution_by_audit": false
+}

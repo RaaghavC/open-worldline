@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "original14_audit_sha256": "b18fbdce5a37fc3c7d93a512b3b47136dda9f0f788b111363c3b0db70f91277e",
+  "comparison20_audit_sha256": "df0db0ab434e6ca219ffe2a474f5f4bf008494733314134df1a1c311a1f547c0",
+  "repeated_original14_prediction_files_byte_exact": 14,
+  "matched_call_identities": [
+    {
+      "name": "native-atrium",
+      "tensor_sha256": "868c030601ae3280415bc20effe8594ac4d4841686ca2b17324a5bc6826076b1",
+      "file_sha256": "f904876f57123204c411b9cf3f68299e7277bdfc31945dec460c6b6ad4a69f1f",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "native-native_negative",
+      "tensor_sha256": "f3c2b6668026796fa6835bfc0cfa1d3067ac87e56d536d89193604a30407bc3c",
+      "file_sha256": "e819239c976815e15409fb8b0262b2b4847c37a7d1472ae278f101e3eb98463b",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "objective-0-closed",
+      "tensor_sha256": "caf0a47aa20d652d3154d0bd1f680f47bba223f0247303689379aef92329519e",
+      "file_sha256": "134c0217636ca30d2a169e91ecbad0d31102af459e94e45005da6ec1c81b06d4",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "objective-0-open",
+      "tensor_sha256": "c809d7640a045bf1bada856e8e5707309dc0e6720d313f5dcd843e7cc584bc84",
+      "file_sha256": "c332e205ee542aa0973403524ed4b1fe433825bdf3a2cc8307fd10aea278e4d6",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-0-closed-atrium",
+      "tensor_sha256": "868c030601ae3280415bc20effe8594ac4d4841686ca2b17324a5bc6826076b1",
+      "file_sha256": "f904876f57123204c411b9cf3f68299e7277bdfc31945dec460c6b6ad4a69f1f",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-0-closed-native_negative",
+      "tensor_sha256": "f3c2b6668026796fa6835bfc0cfa1d3067ac87e56d536d89193604a30407bc3c",
+      "file_sha256": "e819239c976815e15409fb8b0262b2b4847c37a7d1472ae278f101e3eb98463b",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-0-open-atrium",
+      "tensor_sha256": "868c030601ae3280415bc20effe8594ac4d4841686ca2b17324a5bc6826076b1",
+      "file_sha256": "f904876f57123204c411b9cf3f68299e7277bdfc31945dec460c6b6ad4a69f1f",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-0-open-native_negative",
+      "tensor_sha256": "f3c2b6668026796fa6835bfc0cfa1d3067ac87e56d536d89193604a30407bc3c",
+      "file_sha256": "e819239c976815e15409fb8b0262b2b4847c37a7d1472ae278f101e3eb98463b",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "objective-16-closed",
+      "tensor_sha256": "3317f16e1f7cb15856d57fe8e0c5d0ff09215de1458052c688b7171d64b902e6",
+      "file_sha256": "9de90a48f17b8c21dfcfeee5ceaf4c89998eb2e24c948aae3594c752da470ef7",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "objective-16-open",
+      "tensor_sha256": "723dc2448cfd4404ae24e22229b724bbf3f80b95366cace8e66ba6067655aa14",
+      "file_sha256": "fe18c7307da67d3ca7017551b6e0bff4b1f2aa18e1183dce6949c7e73cd4d41b",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-16-closed-atrium",
+      "tensor_sha256": "7090ab393cc3552baf998ae6a583d31d481d102d1279fa52779ad0e46df4b156",
+      "file_sha256": "b1717e908cae7c9bbd359d29df2d0a76e432655e02e57a749c3ea6ea7ab2291a",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-16-closed-native_negative",
+      "tensor_sha256": "ea71e893a9727be569203b95a532b14e14567dda46be1c8232e4bcdfb0233bb2",
+      "file_sha256": "2970348750cca2a292f943ff802702a91bf01f3509c2b361deb6a3a7465b9518",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-16-open-atrium",
+      "tensor_sha256": "4f9d2ec16d4b00a053f5f97cdd7fb89997ac2d5d4c95ca6f3214f2922ee46717",
+      "file_sha256": "b7c910754aff5754ff49ed32aed3e070c057e7080208728b447654074758e224",
+      "complete_call_identity_exact": true
+    },
+    {
+      "name": "causal-16-open-native_negative",
+      "tensor_sha256": "a0ea22ba12fbf586be27f57309eaa050a790d81472c3fc0c3020df8fadc0286e",
+      "file_sha256": "adfa2d215fbc18c94f6e52883f4d4b07b77d9936f2928fd7de326038e2957280",
+      "complete_call_identity_exact": true
+    }
+  ],
+  "scope": "Read-only comparison of exact tensor/file/call hashes in two independently passed saved-file audits. No new model calls or nondeterminism claim beyond these retained values."
+}
