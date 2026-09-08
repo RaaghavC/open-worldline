@@ -1,0 +1,62 @@
+{
+  "files": {
+    "training_inputs.py": {
+      "sha256": "73bccef456855c7a892d0f7c8e5b6b6fb97100999a2e8ff1b174184089d5d1a3",
+      "bytes": 12640,
+      "unchanged_copy": true
+    },
+    "training_math.py": {
+      "sha256": "b911e1bd3dea294677d224ccbf8cf756b4d462ffe55d8b006676ba789200bdc6",
+      "bytes": 7909,
+      "unchanged_copy": true
+    },
+    "training_run.py": {
+      "sha256": "1aa4fcdfc3dac5eef9559e3ec96100a09e9c4f76b591ab9d4e955ad81c4359c7",
+      "bytes": 16679,
+      "unchanged_copy": true
+    },
+    "validate_prior.py": {
+      "sha256": "2505290cad66e73a255a48175284d53a6ae142e46dab6fb1be3d56a1dce727c6",
+      "bytes": 5742,
+      "unchanged_copy": true
+    },
+    "test_cpu.py": {
+      "sha256": "19f7a1e08f1695c0951938ab0d0a8fa87f8bb336034fb1c7f1284bcf0dee55df",
+      "bytes": 13868,
+      "unchanged_copy": true
+    },
+    "original-inputs.json": {
+      "sha256": "dbbd9d7e4f3150be15cd94359e4ec1cb61e40846fd548af9d0142eb5ac9da54a",
+      "bytes": 136125,
+      "unchanged_copy": true
+    },
+    "cache-validation-v1.json": {
+      "sha256": "5b0ce7941d64b6a6a767bec38bdeebf576f492386ec996d8a962569faf913c15",
+      "bytes": 14978,
+      "unchanged_copy": true
+    },
+    "profile-validation-v1.json": {
+      "sha256": "3ed83d887b33dabfa64993a37cbb28c13c69d4947a5e4ef7a1630811fd6adf89",
+      "bytes": 9386,
+      "unchanged_copy": true
+    },
+    "independent-review.json": {
+      "sha256": "98c81e467f4ce9c2882e9837a7206dc6a9321c29a30e80026033db596bc8c37e",
+      "bytes": 14161,
+      "unchanged_copy": true
+    },
+    "cpu-v1/report.json": {
+      "sha256": "397827e9f7f28a3aacd3c8201c816dddfacc40d3c6535594d3bf276f270fb48f",
+      "bytes": 11781,
+      "unchanged_copy": true
+    },
+    "cpu-v2/report.json": {
+      "sha256": "0699049f20c1bcddaefde8ccb10d8db435702b3a139d78f2aa4169b2073b333a",
+      "bytes": 11782,
+      "unchanged_copy": true
+    }
+  },
+  "original_program": "work/factorial-intermediate-training-v1",
+  "existing_model_sources_changed": false,
+  "cpu_snapshots": "Retained in original preparation and actual recovery; report source hashes bind existing repository and local files."
+}

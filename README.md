@@ -6,7 +6,7 @@ An original, locally trained spatial generator with a 3D explorer, learned ecosy
 
 The editor requires no inference API, hosted generative service, external foundation-model weights, or API key. Its original source, trained checkpoints, training data generator, evaluation code, and research review use Apache-2.0. Optional experiments have separate source, data and external-weight notices, as listed below.
 
-The [September 8 project status](docs/project-status-2026-09-08.md) summarizes the working editor, research, and latest model experiments. The action-effect adapter improved a small numerical test but failed visible door and camera control. The subsequent [earlier-placement CUDA profile and six-arm encoding](experiments/wan22_native/intermediate_action/results/a100-profile-v1/README.md) passed execution and input checks; they contain no new generated video. The requested Genie 3 comparison remains unmet.
+The [September 8 project status](docs/project-status-2026-09-08.md) summarizes the working editor, research, and latest model experiments. The older action-effect adapter failed visible door and camera control. After an [earlier-placement CUDA profile and native six-arm encoding](experiments/wan22_native/intermediate_action/results/a100-profile-v1/README.md), a [new 128-update model](experiments/wan22_native/intermediate_action/results/factorial128-a100-v1/README.md) completed training and passed its saved-file audit. Its generated-video evaluation is still pending. The requested Genie 3 comparison remains unmet.
 
 ![A generated alien landscape in the Worldline browser renderer](docs/images/alien-preview.png)
 
