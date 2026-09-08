@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-09-08T04:49:26.460042+00:00",
+  "scope": [
+    "probe preparation",
+    "two-update probe execution"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "reason": "The completed cache parent required 485.052322 seconds; its worker required 250.875312 seconds. Limit CPU reduction/checking threads for the next fresh process; keep all saved inputs and comparisons unchanged.",
+  "cpu_threads_during_cache": "default, not explicitly set",
+  "source_files_changed": false,
+  "gpu_precision_settings_changed": false,
+  "numerical_tolerances_changed": false,
+  "canonical_noise_and_adapter_bytes_generated_on_runtime_host": true
+}

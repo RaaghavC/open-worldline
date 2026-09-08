@@ -1,0 +1,15 @@
+{
+  "source": "experiments/wan22_native/spatial_reference/results/a100-v1/fetch_artifacts.py",
+  "source_sha256": "e8ea4fb6e929ba23288c3356bb81f2ca313e3a3bb320850bec2ae3241dbd5e7a",
+  "published_sha256": "966eb406718cc2417af42584611954592e14b63c82dd641faa50c5ff8ba53df7",
+  "changes": [
+    "Explicit Apache SPDX header and action-CUDA module description",
+    "Download and recovery schema names changed from spatial to action; recovery algorithm unchanged",
+    "Per-part ceiling reduced from90,000,000 to83,000,000bytes; pinned actual part82,190,774bytes"
+  ],
+  "test_source_sha256": "9ebc4a6fcc3b61e3268563e12afde0f20b613e80d4554f44a109b84f46a3b29f",
+  "test_changes": [
+    "Recovery fixture schema changed from spatial to action; five cases unchanged"
+  ],
+  "network_executed": false
+}

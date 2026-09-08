@@ -72,6 +72,8 @@ A [source-level ABot feasibility review](docs/abot-local-feasibility-2026-09-07.
 The [completed spatial CUDA diagnostic](experiments/wan22_native/spatial_reference/results/a100-v1/README.md) produced a recognizable 1248 × 704 room sequence in 594.877 seconds. The severe earlier color distortion is absent in this one sample, but the 17-frame sequence is nearly static, the door stays closed and some requested details are missing. Four saved-file audits passed. The complete evidence includes every frame and all 50 saved sampling steps. This uses external pretrained Wan2.2 and does not establish action control, a general world model or Genie 3 parity. A matching full baseline clip with fresh CUDA image encoding remains necessary before attributing the visual difference solely to resolution.
 
 
+The [native CUDA action-training result](experiments/wan22_native/action_cuda/results/a100-v1/README.md) trained the original 947,712-parameter adapter for two paired updates on an A100. Native predictions and the initially zero adapter matched bit for bit, recurrent gradients became nonzero, and all 825 base-model parameter records remained unchanged. Independent audits and a fresh public download of the complete evidence passed. This result measures numerical training behavior; it contains no generated clip from the trained adapter and does not establish command response or visual quality.
+
 The three immediate engineering capabilities are:
 
 1. Preserve generated fields and edits across camera movement, reloads and process restarts.

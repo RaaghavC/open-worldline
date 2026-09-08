@@ -1,6 +1,6 @@
 # Original action adapter through the native CUDA forward
 
-This package prepares the existing **947,712-parameter FP32 Worldline action adapter** for the literal, externally pretrained Wan2.2 TI2V-5B CUDA model. **Real CUDA adapter parity, backward memory, training and action-quality evaluation are unexecuted.** The native CUDA parity gate remains closed. Passing CPU fixtures does not open it.
+The existing **947,712-parameter FP32 Worldline action adapter** completed a [two-update A100 numerical probe](results/a100-v1/README.md) on the literal, externally pretrained Wan2.2 TI2V-5B CUDA model. Native versus zero-adapter predictions were bit-exact on both tested inputs, the second update reached the GRU, and all 825 foundation values remained unchanged. **That probe did not execute fixed16 or evaluate rendered action quality.**
 
 The separate high-resolution native clip passed its severe-distortion visual check: it showed a recognizable room with natural colors and little motion. That is an external foundation diagnostic. It did not execute this adapter or test action control. The earlier MPS visual experiment remains failed; its [two-update numerical probe](../action_training/results/probe-v2/README.md) is separate evidence for the previous MPS wrapper.
 

@@ -1,0 +1,65 @@
+{
+  "schema": "worldline-action-cuda-numerical-summary-v1",
+  "status": "passed",
+  "scope": "two-update-numerical-feasibility-only",
+  "profile": "spatial",
+  "executed_commit": "099eeae6268da852b0acb580258e4c168f900520",
+  "evidence_sha256": {
+    "metrics/probe/worker.json": "8e59fc3297821f1a315329673a9c053ac8c21baf812330e5ceaa297b4e0f62f7",
+    "metrics/probe/parent.json": "4ecd6ea994692c861c6e03be9cc210b0d6bd5c8d1675034ffdcccfda5a44ab4d",
+    "metrics/cache/parent.json": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+    "cache/completion.json": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+    "audits/cache/report.json": "a52fbdd7103cf0990f8d3b7bb8ba36a3ba68244979098cc8d58e217cc55171e9",
+    "audits/probe/report.json": "0da8b0dd6ad13b4b8697ddbbfb57b0f5c738a82e36b9fdc3e7ace797140da9d2",
+    "plans/probe.json": "52654da423c040c28609e46ff5197e021cbca17e02caa6db0b09355897f8b0c7",
+    "plans/admission.json": "40751f7ed8945b13f6edc5b3ee54ef421727c485a23501eadb6f7810b42d725a",
+    "checkpoint-0002/adapter.safetensors": "f1a1db8dcc1531680f0d8c6b052416b148076925da675d500954c5d2e2258cd5",
+    "checkpoint-0002/manifest.json": "29ac409981c564f95aa454ed91ab7e1ce881320d631461e3515b188b1aa36685"
+  },
+  "adapter_parameters": 947712,
+  "completed_paired_updates": 2,
+  "native_zero_comparisons": [
+    {
+      "window_id": "closed-0000",
+      "exact_equal": true,
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    },
+    {
+      "window_id": "open-0000",
+      "exact_equal": true,
+      "max_absolute": 0.0,
+      "relative_l2": 0.0
+    }
+  ],
+  "updates": [
+    {
+      "update": 1,
+      "start": 0,
+      "seconds": 0.9809219479793683,
+      "paired_mean_future_flow_mse": 0.15531854331493378,
+      "command_gru_gradient_l2": 0.0
+    },
+    {
+      "update": 2,
+      "start": 8,
+      "seconds": 0.8913820590241812,
+      "paired_mean_future_flow_mse": 0.184849351644516,
+      "command_gru_gradient_l2": 6.245405529625714e-05
+    }
+  ],
+  "base_unchanged": true,
+  "all825_current_value_hashes_verified": true,
+  "probe_parent_seconds": 237.84936417796416,
+  "probe_worker_seconds": 230.65485067100963,
+  "cache_parent_seconds": 485.0523224940407,
+  "cache_windows": 8,
+  "unique_observations": 7,
+  "cache_comparisons": 11,
+  "independent_cache_audit": "passed",
+  "independent_probe_audit": "passed",
+  "image_generation": false,
+  "rendered_action_quality_evaluated": false,
+  "fixed16_executed": false,
+  "limits": "Two different window/noise losses are not a learning curve. One original scene; no rendered command response or memory/generalization result."
+}

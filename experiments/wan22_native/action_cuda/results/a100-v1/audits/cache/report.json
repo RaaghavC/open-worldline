@@ -1,0 +1,697 @@
+{
+  "schema": "worldline-action-cuda-cache-actual-independent-v1",
+  "status": "passed",
+  "run": "work/wan22-action-cuda-recovered-cache-v1/recovered/action-results/cache-spatial-run-v1",
+  "model_execution": false,
+  "cuda_initialized": false,
+  "audit_source_sha256": "01de107b213d27079880e8f1ae86afeaf68a1659ac77379bf5e2e6d45af92eee",
+  "checks": {
+    "source_and_original_plan": {
+      "passed": true,
+      "source_files": 37,
+      "original_rgb_files": 118,
+      "input_plan_sha256": "8fa4559428a56540da56441f9181c5115ff75197c32f1f3e5671c2f4cd2323c8",
+      "cpu_report_sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7",
+      "current_source_sha256": {
+        "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+        "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+        "experiments/wan22_native/action_cuda/cache_review.py": "e4c0c98458db2f504f90776819f6b66b041cb394f480040e1ab895a0e55fa20f",
+        "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+        "experiments/wan22_native/action_cuda/cache_worker.py": "ff63f9c0265ae44e8bf4429b2ba6cf94bd5d09acd35818dcb0bc3ff8b741691e",
+        "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+        "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+        "experiments/wan22_native/action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+        "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+        "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+        "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+        "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+        "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+        "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+        "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+        "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+        "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+        "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+        "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+        "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+        "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+        "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+        "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+        "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+        "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+        "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+        "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+        "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+        "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+        "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+        "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+        "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+        "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+        "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+        "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+        "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+        "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+      }
+    },
+    "windows": {
+      "passed": true,
+      "count": 8,
+      "unique_observations": 7,
+      "raw_canonical_changed_channel_values": 18,
+      "raw_canonical_max_change": 1,
+      "raw_target_prefix_replaced": false,
+      "windows": [
+        {
+          "id": "closed-0000",
+          "file_sha256": "9f36c4ef4fe6dd14da11a95e172acb536d580a5202a2fa2fd97889f4eeb2ba83",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "049663630c562c16b2e3b51afc1ab86387efe0f1d7afbd95292542394cb866af"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "65092443014452cf6da0df95edd7d44444279ace867691110ec004bd6d06bfa1"
+            }
+          },
+          "command_labels": [
+            "wait",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left"
+          ],
+          "observation_id": "start-0000-shared"
+        },
+        {
+          "id": "open-0000",
+          "file_sha256": "a4a8a5fde4783674e77238938caec3ae3c2ba8b72ab77e5cccb0c174f0b2fc02",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "7e5a63d4eea8e2d71652db64c69f604ba685e98b78b6de6d9f432699f2736865"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "ff269f0b83e7ba85c0203bb674c738d305f5e1388c34de7e0184f8b584c779ae"
+            }
+          },
+          "command_labels": [
+            "interact",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left"
+          ],
+          "observation_id": "start-0000-shared"
+        },
+        {
+          "id": "closed-0008",
+          "file_sha256": "e3599270c46eaa4537db5a665f9c9e2c41b810ab4c3d11ab42c6e4ef60d41b18",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "4a79d714f7588ed1f99a1233b65f386a6b156c4a5f6b48bc7d62d75be6ac4aa9"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "f14fad06af7aca39bf4c08e7bb2cb72167fca94bf6c2e6020f10f67e11aa9ad9"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "15472cd212683ab6d8d676e6af30c96d926a27abcbcda9782c584bd562765a0f"
+            }
+          },
+          "command_labels": [
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left"
+          ],
+          "observation_id": "closed-0008"
+        },
+        {
+          "id": "open-0008",
+          "file_sha256": "3c30dbdb703576f68576b28b071f5eb6f677dfe1104438928dfcf46db019d376",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "16adcec44a11237bb04ee44dc8414ce9eb54b21b325d7b2fbf495645ec9ccaa3"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "41ae1eb38901c99e3c5107cbcb3e584c97f24deec488b4ca1eb91ce702ac8ab4"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "15472cd212683ab6d8d676e6af30c96d926a27abcbcda9782c584bd562765a0f"
+            }
+          },
+          "command_labels": [
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left",
+            "left"
+          ],
+          "observation_id": "open-0008"
+        },
+        {
+          "id": "closed-0032",
+          "file_sha256": "77510811c9b93a557e3b009a9bdbe94c716d0d40dac3ecf18ed5bbd1e14ddff7",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "e30c484da866a28a9c7aa03fc4f8a4d70b291f1fe0a9ee514afaeb73ab0842dc"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "a9928cb010ea1f3de7f8f5c86d85847a3092eac4dc57176b2e9c396b014cb67f"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "77d71814ae00ccb5b61dac97d49271583437b24db41fe526cc05c8023810b8cb"
+            }
+          },
+          "command_labels": [
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right"
+          ],
+          "observation_id": "closed-0032"
+        },
+        {
+          "id": "open-0032",
+          "file_sha256": "61baf580321539ffe29540eddf1adc3bfbe8ac21d51e846da72a5ecb31f7128c",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "38b010f4976268a98b1dab19dc2565a44cd0a2fd5cdde100e800101027806bab"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "1485f151f294807460c7994cc8fab4f0d58677c89569e82e473195ffa28abf37"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "77d71814ae00ccb5b61dac97d49271583437b24db41fe526cc05c8023810b8cb"
+            }
+          },
+          "command_labels": [
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "wait",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right"
+          ],
+          "observation_id": "open-0032"
+        },
+        {
+          "id": "closed-0049",
+          "file_sha256": "6d0564d60d961baebdae1fd32a63d5a6004504451a6b75d4626a5fdaa5e0e2ad",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "2e9f8ce81e8f964c39b8d0713bdbb26158acc109b2f03690979b99b6f3065073"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "089cb964bed61ced552d8e5a2d1b6f737e08dbbe3b7ccd13db604dcb12918953"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "939e463df30b02e9b6a66a7a2430b55be1872a97fc37c393872f366e4e3db268"
+            }
+          },
+          "command_labels": [
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right"
+          ],
+          "observation_id": "closed-0049"
+        },
+        {
+          "id": "open-0049",
+          "file_sha256": "5d111cf7e6a3189e044d628e50dcd5b23a28fdd3c51e5f02ebf53d1bd0862d72",
+          "tensors": {
+            "target": {
+              "shape": [
+                1,
+                48,
+                5,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "fa8f63ddb52673a2a9fe5cc24ad8cc9627d6546ce3c065a87b2fd9286730f42b"
+            },
+            "observation": {
+              "shape": [
+                1,
+                48,
+                1,
+                44,
+                78
+              ],
+              "dtype": "float32",
+              "sha256": "b3514b4da204f8e7b385ae1f4d590d034753a53abfb6c370a0bb0c152480e48e"
+            },
+            "commands": {
+              "shape": [
+                1,
+                16,
+                6
+              ],
+              "dtype": "float32",
+              "sha256": "939e463df30b02e9b6a66a7a2430b55be1872a97fc37c393872f366e4e3db268"
+            }
+          },
+          "command_labels": [
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right",
+            "right"
+          ],
+          "observation_id": "open-0049"
+        }
+      ]
+    },
+    "prefixes": {
+      "passed": true,
+      "count": 11,
+      "all_bit_exact": true,
+      "comparisons": [
+        {
+          "name": "closed-0000_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+          "reference_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e"
+        },
+        {
+          "name": "open-0000_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+          "reference_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e"
+        },
+        {
+          "name": "open-0000_same_length_future_perturbation",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": true,
+          "candidate_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+          "reference_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e"
+        },
+        {
+          "name": "shared_initial_after_full_perturbation",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": true,
+          "candidate_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e",
+          "reference_sha256": "f7271434015fa96bfd00694b423c9bc1b6caf2e3bc95216079503181752af51e"
+        },
+        {
+          "name": "closed-0008_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "f14fad06af7aca39bf4c08e7bb2cb72167fca94bf6c2e6020f10f67e11aa9ad9",
+          "reference_sha256": "f14fad06af7aca39bf4c08e7bb2cb72167fca94bf6c2e6020f10f67e11aa9ad9"
+        },
+        {
+          "name": "open-0008_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "41ae1eb38901c99e3c5107cbcb3e584c97f24deec488b4ca1eb91ce702ac8ab4",
+          "reference_sha256": "41ae1eb38901c99e3c5107cbcb3e584c97f24deec488b4ca1eb91ce702ac8ab4"
+        },
+        {
+          "name": "open-0008_same_length_future_perturbation",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": true,
+          "candidate_sha256": "41ae1eb38901c99e3c5107cbcb3e584c97f24deec488b4ca1eb91ce702ac8ab4",
+          "reference_sha256": "41ae1eb38901c99e3c5107cbcb3e584c97f24deec488b4ca1eb91ce702ac8ab4"
+        },
+        {
+          "name": "closed-0032_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "a9928cb010ea1f3de7f8f5c86d85847a3092eac4dc57176b2e9c396b014cb67f",
+          "reference_sha256": "a9928cb010ea1f3de7f8f5c86d85847a3092eac4dc57176b2e9c396b014cb67f"
+        },
+        {
+          "name": "open-0032_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "1485f151f294807460c7994cc8fab4f0d58677c89569e82e473195ffa28abf37",
+          "reference_sha256": "1485f151f294807460c7994cc8fab4f0d58677c89569e82e473195ffa28abf37"
+        },
+        {
+          "name": "closed-0049_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "089cb964bed61ced552d8e5a2d1b6f737e08dbbe3b7ccd13db604dcb12918953",
+          "reference_sha256": "089cb964bed61ced552d8e5a2d1b6f737e08dbbe3b7ccd13db604dcb12918953"
+        },
+        {
+          "name": "open-0049_target_vs_independent",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bit_exact_equal": true,
+          "requires_bit_exact": false,
+          "candidate_sha256": "b3514b4da204f8e7b385ae1f4d590d034753a53abfb6c370a0bb0c152480e48e",
+          "reference_sha256": "b3514b4da204f8e7b385ae1f4d590d034753a53abfb6c370a0bb0c152480e48e"
+        }
+      ]
+    },
+    "vae": {
+      "passed": true,
+      "weight_sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+      "tensor_records": 196,
+      "parameters": 704688668,
+      "same_as_previous_independently_audited_cuda_codec": true,
+      "new_full_weight_read": false
+    },
+    "resources": {
+      "passed": true,
+      "worker_samples": 576,
+      "parent_samples": 885,
+      "peak_combined_rss_bytes": 4503113728,
+      "peak_cuda_reserved_bytes": 10917773312,
+      "peak_cuda_allocated_bytes": 6776685568,
+      "minimum_cuda_available_bytes": 73646669824,
+      "minimum_host_available_bytes": 2091987255296,
+      "parent_elapsed_seconds": 485.0523224940407,
+      "worker_elapsed_seconds": 250.87531228200532,
+      "vae_load_seconds": 31.6745732150157,
+      "monitor_elapsed_seconds": 166.0506924680085,
+      "limits": {
+        "seconds": 600.0,
+        "host_rss_bytes": 51539607552,
+        "cuda_reserved_bytes": 64424509440,
+        "minimum_host_available_bytes": 8589934592,
+        "minimum_cuda_available_bytes": 8589934592,
+        "minimum_gpu_total_bytes": 75161927680
+      },
+      "hardware": {
+        "name": "NVIDIA A100-SXM4-80GB",
+        "total_memory_bytes": 85093777408,
+        "capability": [
+          8,
+          0
+        ],
+        "bf16_supported": true,
+        "torch": "2.5.1+cu124",
+        "cuda": "12.4",
+        "flash_attn": "2.7.4.post1",
+        "flash_attention_2_available": true,
+        "flash_attention_3_available": false,
+        "cudnn": 90100,
+        "matmul_allow_tf32": false,
+        "cudnn_allow_tf32": true,
+        "cudnn_benchmark": false,
+        "dependencies": {
+          "diffusers": "0.34.0",
+          "numpy": "1.26.4",
+          "safetensors": "0.5.3",
+          "psutil": "7.2.2",
+          "einops": "0.8.1",
+          "Pillow": "12.3.0"
+        },
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": null,
+          "PYTORCH_CUDA_ALLOC_CONF": null,
+          "CUBLAS_WORKSPACE_CONFIG": null,
+          "NVIDIA_TF32_OVERRIDE": null
+        }
+      },
+      "codec_caches_clear": true
+    }
+  },
+  "recovered_bytes_unchanged": true,
+  "recovered_files": 110,
+  "recovered_bytes": 52568863,
+  "manifest_sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+  "completion_sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+  "limitations": [
+    "Read-only retained evidence audit; no model re-execution or quality evaluation.",
+    "Memory limits are checked at recorded sampling instants.",
+    "All eight windows belong to one development layout; spatial inputs enlarge original 512x288 captures.",
+    "Exact causal-prefix results do not establish action control or future-frame reconstruction quality.",
+    "VAE value records match the prior audited original load; original checkpoint bytes were not reread."
+  ],
+  "elapsed_seconds": 4.050447999994503,
+  "inventory_sha256": "05e59318b1c6d46efa17e2d3183a1c17b8ed188c2ad6c2d1029999576a6a0542"
+}

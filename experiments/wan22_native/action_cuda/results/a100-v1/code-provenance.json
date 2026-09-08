@@ -1,0 +1,822 @@
+{
+  "schema": "worldline-action-cuda-a100-publication-v1",
+  "executed_commit": "099eeae6268da852b0acb580258e4c168f900520",
+  "copied_files": {
+    "metrics/cache/parent.json": {
+      "bytes": 79472,
+      "sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/metrics.json",
+      "source_sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313",
+      "transformation": "none"
+    },
+    "metrics/cache/terminal.json": {
+      "bytes": 544,
+      "sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/terminal.json",
+      "source_sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587",
+      "transformation": "none"
+    },
+    "metrics/cache/worker.json": {
+      "bytes": 6448,
+      "sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/worker/metrics.json",
+      "source_sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069",
+      "transformation": "none"
+    },
+    "metrics/cache/monitor.json": {
+      "bytes": 403,
+      "sha256": "6b6f4bb04a89308f6f5f75ca179222bc1452ba38139d3b39357be1a151497f15",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/worker/monitor-terminal.json",
+      "source_sha256": "6b6f4bb04a89308f6f5f75ca179222bc1452ba38139d3b39357be1a151497f15",
+      "transformation": "none"
+    },
+    "metrics/cache/weight-load.json": {
+      "bytes": 47173,
+      "sha256": "0ee5cb4bda9171176eadd866a7316b2a591ae1cf169090a712ae248c04d09723",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/worker/weight-load.json",
+      "source_sha256": "0ee5cb4bda9171176eadd866a7316b2a591ae1cf169090a712ae248c04d09723",
+      "transformation": "none"
+    },
+    "plans/cache.json": {
+      "bytes": 78297,
+      "sha256": "1855a0ad7e38eb7627c2299af9454b569b286f48f545e7ec6eb053cd1858cff0",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/plan.json",
+      "source_sha256": "1855a0ad7e38eb7627c2299af9454b569b286f48f545e7ec6eb053cd1858cff0",
+      "transformation": "none"
+    },
+    "preflight/cache-cpu.json": {
+      "bytes": 5407,
+      "sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/cpu-report.json",
+      "source_sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/__init__.py",
+      "source_sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_cuda/__init__.py",
+      "source_sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/cache_review.py": {
+      "bytes": 2963,
+      "sha256": "e4c0c98458db2f504f90776819f6b66b041cb394f480040e1ab895a0e55fa20f",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_cuda/cache_review.py",
+      "source_sha256": "e4c0c98458db2f504f90776819f6b66b041cb394f480040e1ab895a0e55fa20f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_cuda/cache_run.py",
+      "source_sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/cache_worker.py": {
+      "bytes": 4176,
+      "sha256": "ff63f9c0265ae44e8bf4429b2ba6cf94bd5d09acd35818dcb0bc3ff8b741691e",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_cuda/cache_worker.py",
+      "source_sha256": "ff63f9c0265ae44e8bf4429b2ba6cf94bd5d09acd35818dcb0bc3ff8b741691e",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_cuda/data.py",
+      "source_sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_data/data.py",
+      "source_sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_data/source-plan.md.txt": {
+      "bytes": 30107,
+      "sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/action_data/source-plan.md.txt",
+      "source_sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/__init__.py",
+      "source_sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/codec-source.json",
+      "source_sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/config.json",
+      "source_sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/decode.py": {
+      "bytes": 3901,
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/decode.py",
+      "source_sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/evidence.py",
+      "source_sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/expected-weights.json",
+      "source_sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/guards.py",
+      "source_sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/native.py",
+      "source_sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/sampling.py",
+      "source_sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "source_sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "source_sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "source_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "source_sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/vendor/model.py",
+      "source_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "source_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/official_cpu/__init__.py",
+      "source_sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/official_cpu/inputs.py",
+      "source_sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/official_cpu/streaming.py",
+      "source_sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/__init__.py",
+      "source_sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/codec.py": {
+      "bytes": 5767,
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/codec.py",
+      "source_sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/config.py",
+      "source_sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/evidence.py",
+      "source_sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/guards.py",
+      "source_sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/inputs.py",
+      "source_sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/native.py": {
+      "bytes": 3550,
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/native.py",
+      "source_sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/output.py": {
+      "bytes": 3374,
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/output.py",
+      "source_sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/run.py": {
+      "bytes": 21001,
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/run.py",
+      "source_sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan22_native/spatial_reference/sampling.py",
+      "source_sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "transformation": "none"
+    },
+    "source/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/source/experiments/wan_adapter/capture_data.py",
+      "source_sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "transformation": "none"
+    },
+    "metrics/probe/parent.json": {
+      "bytes": 689040,
+      "sha256": "4ecd6ea994692c861c6e03be9cc210b0d6bd5c8d1675034ffdcccfda5a44ab4d",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/metrics.json",
+      "source_sha256": "4ecd6ea994692c861c6e03be9cc210b0d6bd5c8d1675034ffdcccfda5a44ab4d",
+      "transformation": "none"
+    },
+    "metrics/probe/terminal.json": {
+      "bytes": 542,
+      "sha256": "dd6db3ab21e66d8544d680954a1fcf8d08bc647b91a2c2899b67da54f7fc9922",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/terminal.json",
+      "source_sha256": "dd6db3ab21e66d8544d680954a1fcf8d08bc647b91a2c2899b67da54f7fc9922",
+      "transformation": "none"
+    },
+    "metrics/probe/worker.json": {
+      "bytes": 1463289,
+      "sha256": "8e59fc3297821f1a315329673a9c053ac8c21baf812330e5ceaa297b4e0f62f7",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/metrics.json",
+      "source_sha256": "8e59fc3297821f1a315329673a9c053ac8c21baf812330e5ceaa297b4e0f62f7",
+      "transformation": "none"
+    },
+    "metrics/probe/monitor.json": {
+      "bytes": 402,
+      "sha256": "9bf0b396f2533608d891816c7ef786511d6f11027a736c2a7bb05fdbf49919e4",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/monitor-terminal.json",
+      "source_sha256": "9bf0b396f2533608d891816c7ef786511d6f11027a736c2a7bb05fdbf49919e4",
+      "transformation": "none"
+    },
+    "metrics/probe/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/weight-load.json",
+      "source_sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "transformation": "none"
+    },
+    "plans/probe.json": {
+      "bytes": 688888,
+      "sha256": "52654da423c040c28609e46ff5197e021cbca17e02caa6db0b09355897f8b0c7",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/plan.json",
+      "source_sha256": "52654da423c040c28609e46ff5197e021cbca17e02caa6db0b09355897f8b0c7",
+      "transformation": "none"
+    },
+    "preflight/probe-cpu.json": {
+      "bytes": 12993,
+      "sha256": "45d4cbb957fc06e36c7fd035452dc853694b1904889e3c13ee35e5425414dc4d",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/cpu-report.json",
+      "source_sha256": "45d4cbb957fc06e36c7fd035452dc853694b1904889e3c13ee35e5425414dc4d",
+      "transformation": "none"
+    },
+    "preflight/probe-independent.json": {
+      "bytes": 16892,
+      "sha256": "f500ba0f41743019239ac000c74bff01f6ca0cbc69b986e74de55763786c13bb",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/independent-report.json",
+      "source_sha256": "f500ba0f41743019239ac000c74bff01f6ca0cbc69b986e74de55763786c13bb",
+      "transformation": "none"
+    },
+    "source/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/room_world/__init__.py",
+      "source_sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "transformation": "none"
+    },
+    "source/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/room_world/memory_evaluate.py",
+      "source_sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "transformation": "none"
+    },
+    "source/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/room_world/memory_model.py",
+      "source_sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "transformation": "none"
+    },
+    "source/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/room_world/memory_sequence.py",
+      "source_sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "transformation": "none"
+    },
+    "source/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/room_world/memory_train.py",
+      "source_sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "transformation": "none"
+    },
+    "source/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/room_world/model.py",
+      "source_sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_adapter/__init__.py",
+      "source_sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_adapter/model.py",
+      "source_sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_adapter/pooling.py",
+      "source_sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/bridge.py",
+      "source_sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "source_sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "source_sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/probe.py",
+      "source_sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/probe_evidence.py",
+      "source_sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/probe_math.py",
+      "source_sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/test_cpu.py",
+      "source_sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/test_independent.py",
+      "source_sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_cuda/test_probe.py",
+      "source_sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_data/__init__.py",
+      "source_sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_training/__init__.py",
+      "source_sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/action_training/objective.py",
+      "source_sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/cuda_reference/requirements.txt",
+      "source_sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/load_weights.py",
+      "source_sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/portable.py",
+      "source_sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/text-reuse.json",
+      "source_sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/vendor/__init__.py",
+      "source_sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/vendor/attention.py",
+      "source_sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "transformation": "none"
+    },
+    "source/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan22_native/vendor/model.py",
+      "source_sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "transformation": "none"
+    },
+    "source/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan_adapter/native_control/__init__.py",
+      "source_sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "transformation": "none"
+    },
+    "source/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/source/experiments/wan_adapter/native_control/portable.py",
+      "source_sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "transformation": "none"
+    },
+    "metrics/probe/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/core-before.json",
+      "source_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/probe/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/core-after.json",
+      "source_sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "transformation": "none"
+    },
+    "metrics/probe/last-valid.json": {
+      "bytes": 152,
+      "sha256": "adf548abd01ca6a8c25ed1a84dbb4c038f46830bbcc60ed35b67ec5e13150079",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/last-valid.json",
+      "source_sha256": "adf548abd01ca6a8c25ed1a84dbb4c038f46830bbcc60ed35b67ec5e13150079",
+      "transformation": "none"
+    },
+    "cache/manifest.json": {
+      "bytes": 142043,
+      "sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/result/manifest.json",
+      "source_sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e",
+      "transformation": "none"
+    },
+    "cache/completion.json": {
+      "bytes": 63408,
+      "sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/result/completion.json",
+      "source_sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8",
+      "transformation": "none"
+    },
+    "cache/plan.json": {
+      "bytes": 69432,
+      "sha256": "6f9d059b9a2944f3e3ad1166053469b1fd774c77c0295d4d543b4092b750ffca",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cache-spatial-run-v1/result/plan.json",
+      "source_sha256": "6f9d059b9a2944f3e3ad1166053469b1fd774c77c0295d4d543b4092b750ffca",
+      "transformation": "none"
+    },
+    "plans/admission.json": {
+      "bytes": 688785,
+      "sha256": "40751f7ed8945b13f6edc5b3ee54ef421727c485a23501eadb6f7810b42d725a",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/executed-admission.json",
+      "source_sha256": "40751f7ed8945b13f6edc5b3ee54ef421727c485a23501eadb6f7810b42d725a",
+      "transformation": "none"
+    },
+    "checkpoint-0002/adapter.safetensors": {
+      "bytes": 3792296,
+      "sha256": "f1a1db8dcc1531680f0d8c6b052416b148076925da675d500954c5d2e2258cd5",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/checkpoint-0002/adapter.safetensors",
+      "source_sha256": "f1a1db8dcc1531680f0d8c6b052416b148076925da675d500954c5d2e2258cd5",
+      "transformation": "none"
+    },
+    "checkpoint-0002/manifest.json": {
+      "bytes": 726252,
+      "sha256": "29ac409981c564f95aa454ed91ab7e1ce881320d631461e3515b188b1aa36685",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/checkpoint-0002/manifest.json",
+      "source_sha256": "29ac409981c564f95aa454ed91ab7e1ce881320d631461e3515b188b1aa36685",
+      "transformation": "none"
+    },
+    "parity/parity-open-0000-native.safetensors": {
+      "bytes": 3294816,
+      "sha256": "6e1cedc5ef8ffaafb8cb6db2ba53a1dbcdc40b46c5eb0838e8e654c77e2972c7",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/parity-open-0000-native.safetensors",
+      "source_sha256": "6e1cedc5ef8ffaafb8cb6db2ba53a1dbcdc40b46c5eb0838e8e654c77e2972c7",
+      "transformation": "none"
+    },
+    "parity/parity-closed-0000-native.safetensors": {
+      "bytes": 3294816,
+      "sha256": "155bca7c6af44ecc99416ece701a604d3f8538fdedae925a8c32f04490b559cf",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/parity-closed-0000-native.safetensors",
+      "source_sha256": "155bca7c6af44ecc99416ece701a604d3f8538fdedae925a8c32f04490b559cf",
+      "transformation": "none"
+    },
+    "parity/parity-open-0000-bridge.safetensors": {
+      "bytes": 3294816,
+      "sha256": "cc21ffc0e01cef494ba78b87a0f47f08f10963999647dc0b8b7b4d94c18ccef6",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/parity-open-0000-bridge.safetensors",
+      "source_sha256": "cc21ffc0e01cef494ba78b87a0f47f08f10963999647dc0b8b7b4d94c18ccef6",
+      "transformation": "none"
+    },
+    "parity/parity-closed-0000-bridge.safetensors": {
+      "bytes": 3294816,
+      "sha256": "19aae34606d67d469984b4e7b7995a4ac2572a51a8ea44045bdfff5011feafa0",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/probe-spatial-v1/result/parity-closed-0000-bridge.safetensors",
+      "source_sha256": "19aae34606d67d469984b4e7b7995a4ac2572a51a8ea44045bdfff5011feafa0",
+      "transformation": "none"
+    },
+    "audits/cache/report.json": {
+      "bytes": 25110,
+      "sha256": "a52fbdd7103cf0990f8d3b7bb8ba36a3ba68244979098cc8d58e217cc55171e9",
+      "source": "work/wan22-action-cuda-cache-actual-audit-v1/report.json",
+      "source_sha256": "a52fbdd7103cf0990f8d3b7bb8ba36a3ba68244979098cc8d58e217cc55171e9",
+      "transformation": "none"
+    },
+    "audits/cache/inventory.json": {
+      "bytes": 18300,
+      "sha256": "05e59318b1c6d46efa17e2d3183a1c17b8ed188c2ad6c2d1029999576a6a0542",
+      "source": "work/wan22-action-cuda-cache-actual-audit-v1/inventory.json",
+      "source_sha256": "05e59318b1c6d46efa17e2d3183a1c17b8ed188c2ad6c2d1029999576a6a0542",
+      "transformation": "none"
+    },
+    "audits/cache/audit.py": {
+      "bytes": 14092,
+      "sha256": "01de107b213d27079880e8f1ae86afeaf68a1659ac77379bf5e2e6d45af92eee",
+      "source": "work/wan22-action-cuda-cache-actual-audit-v1/audit.py",
+      "source_sha256": "01de107b213d27079880e8f1ae86afeaf68a1659ac77379bf5e2e6d45af92eee",
+      "transformation": "none"
+    },
+    "recovery/index.json": {
+      "bytes": 57066,
+      "sha256": "ec6f4552db9c047f3c04bda8a67356d0531ecb54c7b48d2265d4f0dac9446d6e",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/index.json",
+      "source_sha256": "ec6f4552db9c047f3c04bda8a67356d0531ecb54c7b48d2265d4f0dac9446d6e",
+      "transformation": "none"
+    },
+    "recovery/recovery-verified.json": {
+      "bytes": 315,
+      "sha256": "b9e2f90e09151a8623d2a9d266bf4f6984b3c8a17272f094177dc5816464eaf2",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovery-verified.json",
+      "source_sha256": "b9e2f90e09151a8623d2a9d266bf4f6984b3c8a17272f094177dc5816464eaf2",
+      "transformation": "none"
+    },
+    "preflight/source-transfer-manifest.json": {
+      "bytes": 117678,
+      "sha256": "6afd7bb3b2dcd53d6142649cd8874a339239da57d0a59d17d2bf31bbe65b0b18",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/source-transfer-manifest.json",
+      "source_sha256": "6afd7bb3b2dcd53d6142649cd8874a339239da57d0a59d17d2bf31bbe65b0b18",
+      "transformation": "none"
+    },
+    "preflight/prepared-input-verification.json": {
+      "bytes": 8083,
+      "sha256": "ca327f902021ecac2df294673df448f61a836fc03b5295c4a3cb5f2afc103366",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/prepared-input-verification.json",
+      "source_sha256": "ca327f902021ecac2df294673df448f61a836fc03b5295c4a3cb5f2afc103366",
+      "transformation": "none"
+    },
+    "preflight/transfer-check.json": {
+      "bytes": 405,
+      "sha256": "73f55878928a51475b3b485be0ff80b28affe660a7e19fd2607864027ca2471e",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/transfer-check.json",
+      "source_sha256": "73f55878928a51475b3b485be0ff80b28affe660a7e19fd2607864027ca2471e",
+      "transformation": "none"
+    },
+    "preflight/cpu-thread-policy.json": {
+      "bytes": 685,
+      "sha256": "f8cea3559d71c5be5b1b2ea392bedc4a4aff427948b49d81aab35085c1d8c256",
+      "source": "work/wan22-action-cuda-recovered-probe-v1/recovered/action-results/cpu-thread-policy.json",
+      "source_sha256": "f8cea3559d71c5be5b1b2ea392bedc4a4aff427948b49d81aab35085c1d8c256",
+      "transformation": "none"
+    },
+    "licenses/WAN-NOTICE.txt": {
+      "bytes": 1252,
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "source": "outputs/open-worldline/experiments/wan22_native/NOTICE",
+      "source_sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c",
+      "transformation": "none"
+    },
+    "licenses/WAN-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "outputs/open-worldline/experiments/wan22_native/LICENSE-APACHE-2.0.txt",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "transformation": "none"
+    },
+    "licenses/WORLDLINE-APACHE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "outputs/open-worldline/LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformation": "none"
+    },
+    "licenses/ATRIUM-CC0.txt": {
+      "bytes": 7840,
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "source": "outputs/open-worldline/experiments/atrium_data/DATA-LICENSE",
+      "source_sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d",
+      "transformation": "none"
+    },
+    "audits/probe/report.json": {
+      "bytes": 12124,
+      "sha256": "0da8b0dd6ad13b4b8697ddbbfb57b0f5c738a82e36b9fdc3e7ace797140da9d2",
+      "source": "work/wan22-action-cuda-probe-actual-audit-v1/report.json",
+      "source_sha256": "0da8b0dd6ad13b4b8697ddbbfb57b0f5c738a82e36b9fdc3e7ace797140da9d2",
+      "transformation": "none"
+    },
+    "audits/probe/inventory.json": {
+      "bytes": 15317,
+      "sha256": "1c1f4f7327d97328f73dcd4bca5881e368e3ff91075c5bf8b758edaf9b7c8707",
+      "source": "work/wan22-action-cuda-probe-actual-audit-v1/inventory.json",
+      "source_sha256": "1c1f4f7327d97328f73dcd4bca5881e368e3ff91075c5bf8b758edaf9b7c8707",
+      "transformation": "none"
+    },
+    "audits/probe/audit.py": {
+      "bytes": 18861,
+      "sha256": "45ec042ff5235f7428960263b48027aaecdfe078a1e0db93136cbf95b56d2b85",
+      "source": "work/wan22-action-cuda-probe-actual-audit-v1/audit.py",
+      "source_sha256": "45ec042ff5235f7428960263b48027aaecdfe078a1e0db93136cbf95b56d2b85",
+      "transformation": "none"
+    },
+    "recovery/local-downloader-verification.json": {
+      "bytes": 459,
+      "sha256": "60fd337e2019d66d507fc846983a8e37f00df41f194fe4166af397e4a5ce6d84",
+      "source": "work/wan22-action-cuda-public-fetch-local-v1/verification.json",
+      "source_sha256": "60fd337e2019d66d507fc846983a8e37f00df41f194fe4166af397e4a5ce6d84",
+      "transformation": "none"
+    },
+    "recovery/published-release.json": {
+      "bytes": 265,
+      "sha256": "f4eb2a2da6c66b1f15a95dfc0ae22239381ea99178fc53bcbea1960f62cbf1d4",
+      "source": "work/wan22-action-cuda-publication-v1/published-release.json",
+      "source_sha256": "f4eb2a2da6c66b1f15a95dfc0ae22239381ea99178fc53bcbea1960f62cbf1d4",
+      "transformation": "none"
+    },
+    "recovery/remote-asset-verification.json": {
+      "bytes": 4581,
+      "sha256": "695bef3e4dc0452829f8fadf6bcf5eff3052c844dcde5d28e73c865abdf204b1",
+      "source": "work/wan22-action-cuda-publication-v1/remote-asset-verification.json",
+      "source_sha256": "695bef3e4dc0452829f8fadf6bcf5eff3052c844dcde5d28e73c865abdf204b1",
+      "transformation": "none"
+    },
+    "recovery/public-download-verification.json": {
+      "bytes": 460,
+      "sha256": "13f3a34f7faa8eb3b59254c85546f7912afc9a4d980eb0df921a7337b0a0441b",
+      "source": "work/wan22-action-cuda-public-download-v1/verification.json",
+      "source_sha256": "13f3a34f7faa8eb3b59254c85546f7912afc9a4d980eb0df921a7337b0a0441b",
+      "transformation": "none"
+    }
+  },
+  "source_file_count": 68,
+  "privacy_transformations": [],
+  "scope": "Selected exact measurements, checkpoint2 adapter, parity tensors, source snapshots and independent audits; complete recovery distributed separately",
+  "independent_probe_audit": "passed"
+}

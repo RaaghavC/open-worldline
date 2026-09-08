@@ -1,0 +1,2238 @@
+{
+  "builder_sha256": "fa994686743f0540f9cd74261f98332215e7f9b6275cba911b3fd27aa6341eca",
+  "cache_source_sha256": {
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+    "experiments/wan22_native/action_cuda/cache_review.py": "e4c0c98458db2f504f90776819f6b66b041cb394f480040e1ab895a0e55fa20f",
+    "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+    "experiments/wan22_native/action_cuda/cache_worker.py": "ff63f9c0265ae44e8bf4429b2ba6cf94bd5d09acd35818dcb0bc3ff8b741691e",
+    "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+    "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+    "experiments/wan22_native/action_data/source-plan.md.txt": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62",
+    "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+    "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/cuda_reference/decode.py": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b",
+    "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+    "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+    "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+    "experiments/wan22_native/spatial_reference/codec.py": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80",
+    "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+    "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+    "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+    "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+    "experiments/wan22_native/spatial_reference/native.py": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb",
+    "experiments/wan22_native/spatial_reference/output.py": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7",
+    "experiments/wan22_native/spatial_reference/run.py": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4",
+    "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+    "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+  },
+  "cache_test_sha256": {
+    "test_cache_run.py": "e4f884348dbfaea9bf9280f326f1157a360a3489cfd9a508bba9b09c1c848b90",
+    "test_data.py": "44e556d09b2635b471af701d0b542489c9d40325486d2059a0b3094c58bd89f9"
+  },
+  "capture_manifest_sha256": "942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0",
+  "capture_png_count": 118,
+  "cloud_calls": false,
+  "file_bytes": 26210646,
+  "file_count": 368,
+  "files": {
+    "LICENSE": {
+      "bytes": 11358,
+      "commit_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "role": "committed_source_or_evidence",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "experiments/atrium_data/DATA-LICENSE": {
+      "bytes": 7840,
+      "commit_blob": "ff423647395261da723c328755b7baf40a9cbd4c",
+      "role": "committed_source_or_evidence",
+      "sha256": "45c10acc31a53dd6f039c0006026bbb53d084d1623312413908622f309d79f9d"
+    },
+    "experiments/atrium_data/LICENSE": {
+      "bytes": 35650,
+      "commit_blob": "e0aa78a636e115bf007c08348d146eb4f55a4308",
+      "role": "committed_source_or_evidence",
+      "sha256": "9cf8f3310dcd6f215361d2ad97ea16524aef693cf1173148606b01231db83f3e"
+    },
+    "experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "commit_blob": "e3ee34b074a541d14ddb189285a1ab971646daee",
+      "role": "committed_source_or_evidence",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "commit_blob": "b54f7c05a9cf855a10f01692a60858b48c21bdae",
+      "role": "committed_source_or_evidence",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "commit_blob": "8d7585dbb4ad3225dcc2b9d4f322f2f49298e905",
+      "role": "committed_source_or_evidence",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "commit_blob": "3df1983ac67dc059bb797fc8a59c4d166acd3428",
+      "role": "committed_source_or_evidence",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "commit_blob": "ad17e73690335dcdfc68e65fc8cd41ee4bc44b8e",
+      "role": "committed_source_or_evidence",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "experiments/room_world/model.py": {
+      "bytes": 5261,
+      "commit_blob": "0d34b05dd270914def4f41c3d3ea6d85ab048534",
+      "role": "committed_source_or_evidence",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "experiments/wan22_native/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "commit_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "role": "committed_source_or_evidence",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "experiments/wan22_native/NOTICE": {
+      "bytes": 1252,
+      "commit_blob": "01837e7727af5e378053483ed86058e064e81390",
+      "role": "committed_source_or_evidence",
+      "sha256": "d5605628237bda888e5388ea615ba84cadcbc5d558cf183a67ba04e0b8dd9c4c"
+    },
+    "experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "commit_blob": "bf22b5f318ce9e93e1393ce9535766953dc49f54",
+      "role": "committed_source_or_evidence",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "commit_blob": "b6fe33f798fc5b280106e3080740fbe7f9cb3f62",
+      "role": "committed_source_or_evidence",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "commit_blob": "f2c0b4e1f294e5db49334373142d7dda4c6dfb71",
+      "role": "committed_source_or_evidence",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "commit_blob": "276c00b401fe8cfd36f8022d37e8e47f6ee22b81",
+      "role": "committed_source_or_evidence",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "experiments/wan22_native/action_cuda/CACHE-RUN.md": {
+      "bytes": 3423,
+      "commit_blob": "3e40cea8166b1127455b319da3c0a3481422a03e",
+      "role": "committed_source_or_evidence",
+      "sha256": "51c61e4eb96fed35ba98d0fed818528ed2f37d35f70fe29762d68d5379a23c16"
+    },
+    "experiments/wan22_native/action_cuda/PROBE-PLAN.md": {
+      "bytes": 5387,
+      "commit_blob": "d0d41268388014aef361e329c123f71c44ace994",
+      "role": "committed_source_or_evidence",
+      "sha256": "494a1a78f4570f8d1a4a13e69062f93405f45c5470f892ea4ae43d0eaec4ffce"
+    },
+    "experiments/wan22_native/action_cuda/PROBE.md": {
+      "bytes": 9457,
+      "commit_blob": "73d821baf4b4455f6c56733f927ad3747df89fbf",
+      "role": "committed_source_or_evidence",
+      "sha256": "cad87f5e5f05efea39e4dab2ebdf8e6a7607dcc8ea5013c9235c7bf6b5db0ae6"
+    },
+    "experiments/wan22_native/action_cuda/README.md": {
+      "bytes": 8518,
+      "commit_blob": "4147963cb90f18645504994eb456acf500f1012c",
+      "role": "committed_source_or_evidence",
+      "sha256": "e0c92c391be48f9560c2c96d557b8980aacc1c5ee0c6f588a34058ffa759c644"
+    },
+    "experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "commit_blob": "ca42b8fa6233d1d06fc13e5901670c30983092c5",
+      "role": "committed_source_or_evidence",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "commit_blob": "973d2894d5d387e60d38ce8f8604d1fd49b710f9",
+      "role": "committed_source_or_evidence",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "experiments/wan22_native/action_cuda/cache_review.py": {
+      "bytes": 2963,
+      "commit_blob": "9516bd86e122b3967b2452a51940217c2411ef7d",
+      "role": "committed_source_or_evidence",
+      "sha256": "e4c0c98458db2f504f90776819f6b66b041cb394f480040e1ab895a0e55fa20f"
+    },
+    "experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "commit_blob": "95fe82284c739ab66d1f1f67b7204d6220092175",
+      "role": "committed_source_or_evidence",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "experiments/wan22_native/action_cuda/cache_worker.py": {
+      "bytes": 4176,
+      "commit_blob": "d7fdd1d837c1cc746ae6d19959fc6edaaa3b04e8",
+      "role": "committed_source_or_evidence",
+      "sha256": "ff63f9c0265ae44e8bf4429b2ba6cf94bd5d09acd35818dcb0bc3ff8b741691e"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/cache-v1/report.json": {
+      "bytes": 5407,
+      "commit_blob": "e2837833856526bf2f1859fac974b8f8aa032153",
+      "role": "committed_source_or_evidence",
+      "sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_adapter/__init__.py.txt": {
+      "bytes": 193,
+      "commit_blob": "b6fe33f798fc5b280106e3080740fbe7f9cb3f62",
+      "role": "committed_source_or_evidence",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_adapter/model.py.txt": {
+      "bytes": 5459,
+      "commit_blob": "f2c0b4e1f294e5db49334373142d7dda4c6dfb71",
+      "role": "committed_source_or_evidence",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_adapter/pooling.py.txt": {
+      "bytes": 1776,
+      "commit_blob": "276c00b401fe8cfd36f8022d37e8e47f6ee22b81",
+      "role": "committed_source_or_evidence",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_cuda/__init__.py.txt": {
+      "bytes": 121,
+      "commit_blob": "ca42b8fa6233d1d06fc13e5901670c30983092c5",
+      "role": "committed_source_or_evidence",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_cuda/bridge.py.txt": {
+      "bytes": 14738,
+      "commit_blob": "973d2894d5d387e60d38ce8f8604d1fd49b710f9",
+      "role": "committed_source_or_evidence",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_cuda/test_cpu.py.txt": {
+      "bytes": 15098,
+      "commit_blob": "111dd67c531e8dd743546ba3d27d689cb64084b8",
+      "role": "committed_source_or_evidence",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/action_cuda/test_independent.py.txt": {
+      "bytes": 7882,
+      "commit_blob": "7dadfb17ecd95084e87d96470879dc86592b38f6",
+      "role": "committed_source_or_evidence",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/cuda_reference/native.py.txt": {
+      "bytes": 3102,
+      "commit_blob": "baa7f6ae0353d9f2b63317ed7066ba3359972d8b",
+      "role": "committed_source_or_evidence",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/attention.py.txt": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/model.py.txt": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/publication.json": {
+      "bytes": 2647,
+      "commit_blob": "a10d3af8ab3e3beb4f088da89197523d4c30ee3c",
+      "role": "committed_source_or_evidence",
+      "sha256": "585c22968851f3aa05c5dd4f917150e2f1632cd9b500051de313c9afdebcb2e7"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/pytest-output.txt": {
+      "bytes": 1116,
+      "commit_blob": "f9a19130fe129e864d63f62e5217701557ef410c",
+      "role": "committed_source_or_evidence",
+      "sha256": "4cacbda5d647589b24c522c7fcca5eea99a0ab369872839f0aa0dd8aef54d359"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "commit_blob": "69c02208efc378bea86b9608f84a94eee40c39ad",
+      "role": "committed_source_or_evidence",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/run-review.py": {
+      "bytes": 2945,
+      "commit_blob": "a6d867478877833e2b5e24feb6a258bb894e8c47",
+      "role": "committed_source_or_evidence",
+      "sha256": "1d5ce0c42c9c7fcddc22abef40315f7729b0a533afc56c4bf604f7ea06070d8f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "commit_blob": "e3ee34b074a541d14ddb189285a1ab971646daee",
+      "role": "committed_source_or_evidence",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "commit_blob": "b54f7c05a9cf855a10f01692a60858b48c21bdae",
+      "role": "committed_source_or_evidence",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "commit_blob": "8d7585dbb4ad3225dcc2b9d4f322f2f49298e905",
+      "role": "committed_source_or_evidence",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "commit_blob": "3df1983ac67dc059bb797fc8a59c4d166acd3428",
+      "role": "committed_source_or_evidence",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "commit_blob": "ad17e73690335dcdfc68e65fc8cd41ee4bc44b8e",
+      "role": "committed_source_or_evidence",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "commit_blob": "0d34b05dd270914def4f41c3d3ea6d85ab048534",
+      "role": "committed_source_or_evidence",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "commit_blob": "bf22b5f318ce9e93e1393ce9535766953dc49f54",
+      "role": "committed_source_or_evidence",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "commit_blob": "b6fe33f798fc5b280106e3080740fbe7f9cb3f62",
+      "role": "committed_source_or_evidence",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "commit_blob": "f2c0b4e1f294e5db49334373142d7dda4c6dfb71",
+      "role": "committed_source_or_evidence",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "commit_blob": "276c00b401fe8cfd36f8022d37e8e47f6ee22b81",
+      "role": "committed_source_or_evidence",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "commit_blob": "ca42b8fa6233d1d06fc13e5901670c30983092c5",
+      "role": "committed_source_or_evidence",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "commit_blob": "973d2894d5d387e60d38ce8f8604d1fd49b710f9",
+      "role": "committed_source_or_evidence",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "commit_blob": "95fe82284c739ab66d1f1f67b7204d6220092175",
+      "role": "committed_source_or_evidence",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "commit_blob": "69c02208efc378bea86b9608f84a94eee40c39ad",
+      "role": "committed_source_or_evidence",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "commit_blob": "ef470ade9dfa83e303d9fbbd6a9729e9aaefa20e",
+      "role": "committed_source_or_evidence",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "commit_blob": "328f20c0969a580b6e684700fc5d7f02d23fcfe9",
+      "role": "committed_source_or_evidence",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "commit_blob": "36710586a09209c5229d4d929bfadb93460fd1fd",
+      "role": "committed_source_or_evidence",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "commit_blob": "dcc4211552a15b672ef08659a401c4cac5fd71b0",
+      "role": "committed_source_or_evidence",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "commit_blob": "a8d07ca43e0a80287296f7374ab700116fb8a696",
+      "role": "committed_source_or_evidence",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "commit_blob": "111dd67c531e8dd743546ba3d27d689cb64084b8",
+      "role": "committed_source_or_evidence",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "commit_blob": "7dadfb17ecd95084e87d96470879dc86592b38f6",
+      "role": "committed_source_or_evidence",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "commit_blob": "45d53af09615a77d41a272b82be2e2b94ae1c75d",
+      "role": "committed_source_or_evidence",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "commit_blob": "1f8cafd40d4b4029390c134c9ed7cdb2d1e9fd49",
+      "role": "committed_source_or_evidence",
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "commit_blob": "c182fcfcc6b043db1bd28b483828360d676c9e9a",
+      "role": "committed_source_or_evidence",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "commit_blob": "bbc1e9d0e77c437a15f197f185492a452615ec31",
+      "role": "committed_source_or_evidence",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "commit_blob": "a44396812b1e7b293dd8263b751891be175a7d48",
+      "role": "committed_source_or_evidence",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "commit_blob": "cda13971b58b3397084348669b638da5be801f9f",
+      "role": "committed_source_or_evidence",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "commit_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "role": "committed_source_or_evidence",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "commit_blob": "141d9fe1a6a82cf642674ebef488c6ef7baef73d",
+      "role": "committed_source_or_evidence",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "commit_blob": "3f8409ac3c8faa93293a21b0c7be7707eb839e91",
+      "role": "committed_source_or_evidence",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "commit_blob": "abb356dedbca416450700e180a6622626d789601",
+      "role": "committed_source_or_evidence",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "commit_blob": "959ff37cc9d2ab6c7e918d5ef75e46e2fa0e18fe",
+      "role": "committed_source_or_evidence",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "commit_blob": "bad092259077cf5bc711df52609012f4074b1ac3",
+      "role": "committed_source_or_evidence",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "commit_blob": "b28a4ebc50b80fe9adc6add901324f18a29bd59c",
+      "role": "committed_source_or_evidence",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "commit_blob": "baa7f6ae0353d9f2b63317ed7066ba3359972d8b",
+      "role": "committed_source_or_evidence",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "commit_blob": "3fc5c6717039801d4a61e8d75222cfbedac32715",
+      "role": "committed_source_or_evidence",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "commit_blob": "a9594dfac9290f2ea486a7c0214370e0372bed10",
+      "role": "committed_source_or_evidence",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "commit_blob": "989232ca3711c9024bbe6b65e9163f15274da6e3",
+      "role": "committed_source_or_evidence",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "commit_blob": "d336e6d091ba4e6f93f52ddab3f814a07e44eac0",
+      "role": "committed_source_or_evidence",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "commit_blob": "fb502f2eb2840c74d04bf0513d280283625b0040",
+      "role": "committed_source_or_evidence",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "commit_blob": "c0b3f29bf48fa7d798cde2c230b2863548278b51",
+      "role": "committed_source_or_evidence",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "commit_blob": "3c2201fd238e60b1e097bf1baab3a36f67b981ef",
+      "role": "committed_source_or_evidence",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "commit_blob": "fe9d90dd25663396668d81cdd857ef9bd7392408",
+      "role": "committed_source_or_evidence",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "commit_blob": "0911476642feca8a4dc3fc739c47b19637a03815",
+      "role": "committed_source_or_evidence",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "commit_blob": "3bde3f59a5571d5bed636c0cb430c43262ec8245",
+      "role": "committed_source_or_evidence",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "commit_blob": "7566bd6865571d87a514c1b135e8fd0b51469bd7",
+      "role": "committed_source_or_evidence",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "commit_blob": "9200a74754e15f59a46cb2a8d2c9119e8b115ac2",
+      "role": "committed_source_or_evidence",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "commit_blob": "fbd4208830ff5fe3d7fef087e4e79baf4b9a7af3",
+      "role": "committed_source_or_evidence",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "commit_blob": "7e3c29a9ed2282fbdab91a950b34843967cbc696",
+      "role": "committed_source_or_evidence",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "commit_blob": "79dd2b3cad82cfc6971c2793654cc914f95377f4",
+      "role": "committed_source_or_evidence",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "commit_blob": "8b446e833ce4574c98b4375acfb3a83ead20fd73",
+      "role": "committed_source_or_evidence",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "commit_blob": "c58ac7013e51bd5f99174ea4ed4d67f259cd49fb",
+      "role": "committed_source_or_evidence",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "commit_blob": "85cc88a9c09b2f97484d1cb04a66c5794000a7ac",
+      "role": "committed_source_or_evidence",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "commit_blob": "a804b9c0b85b8e541b7f23f156d632eae62a3d76",
+      "role": "committed_source_or_evidence",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "commit_blob": "4d07d2a883826e1b3a45e5cbaee3697f63184139",
+      "role": "committed_source_or_evidence",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "commit_blob": "c604bc50182b1dd20cf89115d64cf93a5870d99a",
+      "role": "committed_source_or_evidence",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/checked-source/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "commit_blob": "fc6a745120995d701e2c293c06417352251832d8",
+      "role": "committed_source_or_evidence",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/publication.json": {
+      "bytes": 9781,
+      "commit_blob": "b7e3c7b0706ef5bfa6a75240b5c245227f876f1f",
+      "role": "committed_source_or_evidence",
+      "sha256": "cc5074f5ad1fc51b713d6a58f3b831f63bc738615eb573a4c013b243a9cf8635"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/pytest-output.txt": {
+      "bytes": 882,
+      "commit_blob": "c157166d5864de474b1e1c0e7654f3113accfa39",
+      "role": "committed_source_or_evidence",
+      "sha256": "9581b453a82b6b7296fdf94c234e7f76f6501d35d67770f9773dc86037bce304"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/report.json": {
+      "bytes": 16892,
+      "commit_blob": "9ce38bab69fa7b005bff35725049bf512d3481b0",
+      "role": "committed_source_or_evidence",
+      "sha256": "f500ba0f41743019239ac000c74bff01f6ca0cbc69b986e74de55763786c13bb"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-independent-v1/run-review.py": {
+      "bytes": 4341,
+      "commit_blob": "0107c51bcd91ee741ce4b4860d50aa1e1a7c76e5",
+      "role": "committed_source_or_evidence",
+      "sha256": "128d63db5678b616e4e4f81047783c4996cd6b9d3d98e7f9e1dec805315a3313"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/pytest.txt": {
+      "bytes": 99,
+      "commit_blob": "c6582c0a239c429c796dabb35c76f6f93f241868",
+      "role": "committed_source_or_evidence",
+      "sha256": "c3ae709c8abe2906941beb5bb79a54133aea4cfd8445b6a72c34cb1e38e23f50"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/report.json": {
+      "bytes": 12993,
+      "commit_blob": "0106be4d321a0a8bd3e1c104af5c5faed780df0a",
+      "role": "committed_source_or_evidence",
+      "sha256": "45d4cbb957fc06e36c7fd035452dc853694b1904889e3c13ee35e5425414dc4d"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "commit_blob": "e3ee34b074a541d14ddb189285a1ab971646daee",
+      "role": "committed_source_or_evidence",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "commit_blob": "b54f7c05a9cf855a10f01692a60858b48c21bdae",
+      "role": "committed_source_or_evidence",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "commit_blob": "8d7585dbb4ad3225dcc2b9d4f322f2f49298e905",
+      "role": "committed_source_or_evidence",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "commit_blob": "3df1983ac67dc059bb797fc8a59c4d166acd3428",
+      "role": "committed_source_or_evidence",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "commit_blob": "ad17e73690335dcdfc68e65fc8cd41ee4bc44b8e",
+      "role": "committed_source_or_evidence",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "commit_blob": "0d34b05dd270914def4f41c3d3ea6d85ab048534",
+      "role": "committed_source_or_evidence",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "commit_blob": "bf22b5f318ce9e93e1393ce9535766953dc49f54",
+      "role": "committed_source_or_evidence",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "commit_blob": "b6fe33f798fc5b280106e3080740fbe7f9cb3f62",
+      "role": "committed_source_or_evidence",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "commit_blob": "f2c0b4e1f294e5db49334373142d7dda4c6dfb71",
+      "role": "committed_source_or_evidence",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "commit_blob": "276c00b401fe8cfd36f8022d37e8e47f6ee22b81",
+      "role": "committed_source_or_evidence",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "commit_blob": "ca42b8fa6233d1d06fc13e5901670c30983092c5",
+      "role": "committed_source_or_evidence",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "commit_blob": "973d2894d5d387e60d38ce8f8604d1fd49b710f9",
+      "role": "committed_source_or_evidence",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "commit_blob": "95fe82284c739ab66d1f1f67b7204d6220092175",
+      "role": "committed_source_or_evidence",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "commit_blob": "69c02208efc378bea86b9608f84a94eee40c39ad",
+      "role": "committed_source_or_evidence",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "commit_blob": "ef470ade9dfa83e303d9fbbd6a9729e9aaefa20e",
+      "role": "committed_source_or_evidence",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "commit_blob": "328f20c0969a580b6e684700fc5d7f02d23fcfe9",
+      "role": "committed_source_or_evidence",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "commit_blob": "36710586a09209c5229d4d929bfadb93460fd1fd",
+      "role": "committed_source_or_evidence",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "commit_blob": "dcc4211552a15b672ef08659a401c4cac5fd71b0",
+      "role": "committed_source_or_evidence",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "commit_blob": "a8d07ca43e0a80287296f7374ab700116fb8a696",
+      "role": "committed_source_or_evidence",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "commit_blob": "111dd67c531e8dd743546ba3d27d689cb64084b8",
+      "role": "committed_source_or_evidence",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "commit_blob": "7dadfb17ecd95084e87d96470879dc86592b38f6",
+      "role": "committed_source_or_evidence",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "commit_blob": "45d53af09615a77d41a272b82be2e2b94ae1c75d",
+      "role": "committed_source_or_evidence",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "commit_blob": "c182fcfcc6b043db1bd28b483828360d676c9e9a",
+      "role": "committed_source_or_evidence",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "commit_blob": "bbc1e9d0e77c437a15f197f185492a452615ec31",
+      "role": "committed_source_or_evidence",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "commit_blob": "a44396812b1e7b293dd8263b751891be175a7d48",
+      "role": "committed_source_or_evidence",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "commit_blob": "cda13971b58b3397084348669b638da5be801f9f",
+      "role": "committed_source_or_evidence",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "commit_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "role": "committed_source_or_evidence",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "commit_blob": "141d9fe1a6a82cf642674ebef488c6ef7baef73d",
+      "role": "committed_source_or_evidence",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "commit_blob": "3f8409ac3c8faa93293a21b0c7be7707eb839e91",
+      "role": "committed_source_or_evidence",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "commit_blob": "abb356dedbca416450700e180a6622626d789601",
+      "role": "committed_source_or_evidence",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "commit_blob": "959ff37cc9d2ab6c7e918d5ef75e46e2fa0e18fe",
+      "role": "committed_source_or_evidence",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "commit_blob": "bad092259077cf5bc711df52609012f4074b1ac3",
+      "role": "committed_source_or_evidence",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "commit_blob": "b28a4ebc50b80fe9adc6add901324f18a29bd59c",
+      "role": "committed_source_or_evidence",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "commit_blob": "baa7f6ae0353d9f2b63317ed7066ba3359972d8b",
+      "role": "committed_source_or_evidence",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "commit_blob": "3fc5c6717039801d4a61e8d75222cfbedac32715",
+      "role": "committed_source_or_evidence",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "commit_blob": "a9594dfac9290f2ea486a7c0214370e0372bed10",
+      "role": "committed_source_or_evidence",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "commit_blob": "989232ca3711c9024bbe6b65e9163f15274da6e3",
+      "role": "committed_source_or_evidence",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "commit_blob": "d336e6d091ba4e6f93f52ddab3f814a07e44eac0",
+      "role": "committed_source_or_evidence",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "commit_blob": "fb502f2eb2840c74d04bf0513d280283625b0040",
+      "role": "committed_source_or_evidence",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "commit_blob": "c0b3f29bf48fa7d798cde2c230b2863548278b51",
+      "role": "committed_source_or_evidence",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "commit_blob": "3c2201fd238e60b1e097bf1baab3a36f67b981ef",
+      "role": "committed_source_or_evidence",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "commit_blob": "fe9d90dd25663396668d81cdd857ef9bd7392408",
+      "role": "committed_source_or_evidence",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "commit_blob": "0911476642feca8a4dc3fc739c47b19637a03815",
+      "role": "committed_source_or_evidence",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "commit_blob": "3bde3f59a5571d5bed636c0cb430c43262ec8245",
+      "role": "committed_source_or_evidence",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "commit_blob": "7566bd6865571d87a514c1b135e8fd0b51469bd7",
+      "role": "committed_source_or_evidence",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "commit_blob": "9200a74754e15f59a46cb2a8d2c9119e8b115ac2",
+      "role": "committed_source_or_evidence",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "commit_blob": "fbd4208830ff5fe3d7fef087e4e79baf4b9a7af3",
+      "role": "committed_source_or_evidence",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "commit_blob": "7e3c29a9ed2282fbdab91a950b34843967cbc696",
+      "role": "committed_source_or_evidence",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "commit_blob": "79dd2b3cad82cfc6971c2793654cc914f95377f4",
+      "role": "committed_source_or_evidence",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "commit_blob": "8b446e833ce4574c98b4375acfb3a83ead20fd73",
+      "role": "committed_source_or_evidence",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "commit_blob": "c58ac7013e51bd5f99174ea4ed4d67f259cd49fb",
+      "role": "committed_source_or_evidence",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "commit_blob": "85cc88a9c09b2f97484d1cb04a66c5794000a7ac",
+      "role": "committed_source_or_evidence",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "commit_blob": "a804b9c0b85b8e541b7f23f156d632eae62a3d76",
+      "role": "committed_source_or_evidence",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "commit_blob": "4d07d2a883826e1b3a45e5cbaee3697f63184139",
+      "role": "committed_source_or_evidence",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "commit_blob": "c604bc50182b1dd20cf89115d64cf93a5870d99a",
+      "role": "committed_source_or_evidence",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/probe-v1/source/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "commit_blob": "fc6a745120995d701e2c293c06417352251832d8",
+      "role": "committed_source_or_evidence",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/pytest.txt": {
+      "bytes": 99,
+      "commit_blob": "71327990d3afec24d03e93411e271529278725f0",
+      "role": "committed_source_or_evidence",
+      "sha256": "b99414f026c1f68115486216007cee2ec3e8f405967d23c2d53afd22d168a054"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "commit_blob": "ef470ade9dfa83e303d9fbbd6a9729e9aaefa20e",
+      "role": "committed_source_or_evidence",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "commit_blob": "b6fe33f798fc5b280106e3080740fbe7f9cb3f62",
+      "role": "committed_source_or_evidence",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "commit_blob": "f2c0b4e1f294e5db49334373142d7dda4c6dfb71",
+      "role": "committed_source_or_evidence",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "commit_blob": "276c00b401fe8cfd36f8022d37e8e47f6ee22b81",
+      "role": "committed_source_or_evidence",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "commit_blob": "ca42b8fa6233d1d06fc13e5901670c30983092c5",
+      "role": "committed_source_or_evidence",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "commit_blob": "973d2894d5d387e60d38ce8f8604d1fd49b710f9",
+      "role": "committed_source_or_evidence",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "commit_blob": "111dd67c531e8dd743546ba3d27d689cb64084b8",
+      "role": "committed_source_or_evidence",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "commit_blob": "baa7f6ae0353d9f2b63317ed7066ba3359972d8b",
+      "role": "committed_source_or_evidence",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/action_cuda/cpu-results/v1/source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "commit_blob": "328f20c0969a580b6e684700fc5d7f02d23fcfe9",
+      "role": "committed_source_or_evidence",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "commit_blob": "36710586a09209c5229d4d929bfadb93460fd1fd",
+      "role": "committed_source_or_evidence",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "commit_blob": "dcc4211552a15b672ef08659a401c4cac5fd71b0",
+      "role": "committed_source_or_evidence",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "commit_blob": "a8d07ca43e0a80287296f7374ab700116fb8a696",
+      "role": "committed_source_or_evidence",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "experiments/wan22_native/action_cuda/test_cache_run.py": {
+      "bytes": 10956,
+      "commit_blob": "515409b1c47ab255cdefe5cf95a0984df4edc217",
+      "role": "committed_source_or_evidence",
+      "sha256": "e4f884348dbfaea9bf9280f326f1157a360a3489cfd9a508bba9b09c1c848b90"
+    },
+    "experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "commit_blob": "111dd67c531e8dd743546ba3d27d689cb64084b8",
+      "role": "committed_source_or_evidence",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "experiments/wan22_native/action_cuda/test_data.py": {
+      "bytes": 16206,
+      "commit_blob": "c099367ea844dc1ff0c7ddef25301c83fdc7c0b5",
+      "role": "committed_source_or_evidence",
+      "sha256": "44e556d09b2635b471af701d0b542489c9d40325486d2059a0b3094c58bd89f9"
+    },
+    "experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "commit_blob": "7dadfb17ecd95084e87d96470879dc86592b38f6",
+      "role": "committed_source_or_evidence",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "commit_blob": "45d53af09615a77d41a272b82be2e2b94ae1c75d",
+      "role": "committed_source_or_evidence",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "experiments/wan22_native/action_cuda/test_probe_independent.py": {
+      "bytes": 8816,
+      "commit_blob": "1f8cafd40d4b4029390c134c9ed7cdb2d1e9fd49",
+      "role": "committed_source_or_evidence",
+      "sha256": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d"
+    },
+    "experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "commit_blob": "c182fcfcc6b043db1bd28b483828360d676c9e9a",
+      "role": "committed_source_or_evidence",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "commit_blob": "bbc1e9d0e77c437a15f197f185492a452615ec31",
+      "role": "committed_source_or_evidence",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "experiments/wan22_native/action_data/source-images/closed-0000.png": {
+      "bytes": 184628,
+      "commit_blob": "b69a3b00bedf4b81df3f51967b677abbf90e135a",
+      "role": "committed_source_or_evidence",
+      "sha256": "99a567f46891f60a7ea6ce2514e682b54e59a4700b372514bdefcb4549f99d49"
+    },
+    "experiments/wan22_native/action_data/source-images/open-0000.png": {
+      "bytes": 184595,
+      "commit_blob": "468e0dafbef14eeb6ca370ee14867c2bbf1dde4f",
+      "role": "committed_source_or_evidence",
+      "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+    },
+    "experiments/wan22_native/action_data/source-plan.md.txt": {
+      "bytes": 30107,
+      "commit_blob": "8a54aa24850ff3a07798451329cc6810f547276d",
+      "role": "committed_source_or_evidence",
+      "sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62"
+    },
+    "experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "commit_blob": "a44396812b1e7b293dd8263b751891be175a7d48",
+      "role": "committed_source_or_evidence",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "commit_blob": "cda13971b58b3397084348669b638da5be801f9f",
+      "role": "committed_source_or_evidence",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "commit_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "role": "committed_source_or_evidence",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "commit_blob": "141d9fe1a6a82cf642674ebef488c6ef7baef73d",
+      "role": "committed_source_or_evidence",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "commit_blob": "3f8409ac3c8faa93293a21b0c7be7707eb839e91",
+      "role": "committed_source_or_evidence",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "commit_blob": "abb356dedbca416450700e180a6622626d789601",
+      "role": "committed_source_or_evidence",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "experiments/wan22_native/cuda_reference/decode.py": {
+      "bytes": 3901,
+      "commit_blob": "991ae8518f29f46bad29865e20a673b2d3bee4be",
+      "role": "committed_source_or_evidence",
+      "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+    },
+    "experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "commit_blob": "959ff37cc9d2ab6c7e918d5ef75e46e2fa0e18fe",
+      "role": "committed_source_or_evidence",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "commit_blob": "bad092259077cf5bc711df52609012f4074b1ac3",
+      "role": "committed_source_or_evidence",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "commit_blob": "b28a4ebc50b80fe9adc6add901324f18a29bd59c",
+      "role": "committed_source_or_evidence",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "commit_blob": "baa7f6ae0353d9f2b63317ed7066ba3359972d8b",
+      "role": "committed_source_or_evidence",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "commit_blob": "3fc5c6717039801d4a61e8d75222cfbedac32715",
+      "role": "committed_source_or_evidence",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "commit_blob": "a9594dfac9290f2ea486a7c0214370e0372bed10",
+      "role": "committed_source_or_evidence",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "commit_blob": "989232ca3711c9024bbe6b65e9163f15274da6e3",
+      "role": "committed_source_or_evidence",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "commit_blob": "d336e6d091ba4e6f93f52ddab3f814a07e44eac0",
+      "role": "committed_source_or_evidence",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "commit_blob": "fb502f2eb2840c74d04bf0513d280283625b0040",
+      "role": "committed_source_or_evidence",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "commit_blob": "c0b3f29bf48fa7d798cde2c230b2863548278b51",
+      "role": "committed_source_or_evidence",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "commit_blob": "3c2201fd238e60b1e097bf1baab3a36f67b981ef",
+      "role": "committed_source_or_evidence",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "commit_blob": "fe9d90dd25663396668d81cdd857ef9bd7392408",
+      "role": "committed_source_or_evidence",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "commit_blob": "0911476642feca8a4dc3fc739c47b19637a03815",
+      "role": "committed_source_or_evidence",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "commit_blob": "3bde3f59a5571d5bed636c0cb430c43262ec8245",
+      "role": "committed_source_or_evidence",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "commit_blob": "7566bd6865571d87a514c1b135e8fd0b51469bd7",
+      "role": "committed_source_or_evidence",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "commit_blob": "9200a74754e15f59a46cb2a8d2c9119e8b115ac2",
+      "role": "committed_source_or_evidence",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "experiments/wan22_native/spatial_reference/codec.py": {
+      "bytes": 5767,
+      "commit_blob": "9a6bcb68993bc8e4ceeef829271b6c011745a5e7",
+      "role": "committed_source_or_evidence",
+      "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+    },
+    "experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "commit_blob": "fbd4208830ff5fe3d7fef087e4e79baf4b9a7af3",
+      "role": "committed_source_or_evidence",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "commit_blob": "7e3c29a9ed2282fbdab91a950b34843967cbc696",
+      "role": "committed_source_or_evidence",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "commit_blob": "79dd2b3cad82cfc6971c2793654cc914f95377f4",
+      "role": "committed_source_or_evidence",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "commit_blob": "8b446e833ce4574c98b4375acfb3a83ead20fd73",
+      "role": "committed_source_or_evidence",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "experiments/wan22_native/spatial_reference/native.py": {
+      "bytes": 3550,
+      "commit_blob": "f5d9dfff03dc3da7297cf44255425eefdf7add17",
+      "role": "committed_source_or_evidence",
+      "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+    },
+    "experiments/wan22_native/spatial_reference/output.py": {
+      "bytes": 3374,
+      "commit_blob": "15f6ba48d5ffb1c8ea17c6b25c1354e2a3b4848d",
+      "role": "committed_source_or_evidence",
+      "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+    },
+    "experiments/wan22_native/spatial_reference/results/a100-v1/audits/baseline-pair/report.json": {
+      "bytes": 17581,
+      "commit_blob": "14e3e004a7857e3d5e35466f29b0174dc94387e9",
+      "role": "committed_source_or_evidence",
+      "sha256": "12bc390b3d3fe0feb373448025d759e7ec1496bd6d803f645e39646201103fac"
+    },
+    "experiments/wan22_native/spatial_reference/results/a100-v1/audits/clip/report.json": {
+      "bytes": 79449,
+      "commit_blob": "cefbf53d824bf9e263323098911d51dd494dba87",
+      "role": "committed_source_or_evidence",
+      "sha256": "a7531c9de42ea9e27b712dbf0308703110a9f9ef958db8f40501525614a0093b"
+    },
+    "experiments/wan22_native/spatial_reference/results/a100-v1/audits/clip/visual-review.json": {
+      "bytes": 4476,
+      "commit_blob": "b7d2c1016ba96d033fbae66d7ea1879922379c84",
+      "role": "committed_source_or_evidence",
+      "sha256": "673cf09db4a94dfaf186136d2bb385a9d229f19e94cb56f716c76b6a584966b6"
+    },
+    "experiments/wan22_native/spatial_reference/results/a100-v1/audits/clip/visual-review.md": {
+      "bytes": 1053,
+      "commit_blob": "dc5f0222ba98022f6ad67c686cee485211fb786f",
+      "role": "committed_source_or_evidence",
+      "sha256": "33aa32da70a43893173df6d31030356861a42fd316dc67e0ec025db7462c9f0a"
+    },
+    "experiments/wan22_native/spatial_reference/results/a100-v1/audits/codec/report.json": {
+      "bytes": 44913,
+      "commit_blob": "07da9fc2deb948a705e04d6425bfdfae7c496af7",
+      "role": "committed_source_or_evidence",
+      "sha256": "a6252e5131f0fe392229fa0c8e80c977f23670f027a730c3c1270e925b50ce2f"
+    },
+    "experiments/wan22_native/spatial_reference/results/a100-v1/audits/spatial-pair/report.json": {
+      "bytes": 17578,
+      "commit_blob": "1dff71d9e52185208ccb8d11eb0aa6a2ae48109b",
+      "role": "committed_source_or_evidence",
+      "sha256": "09b79c3c77f96f6371589c149131a59950d5ee38bdfd65aa263aa2009106c60c"
+    },
+    "experiments/wan22_native/spatial_reference/run.py": {
+      "bytes": 21001,
+      "commit_blob": "0bbfcc2bd67c1eee770967d645b230bc49be9113",
+      "role": "committed_source_or_evidence",
+      "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+    },
+    "experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "commit_blob": "c58ac7013e51bd5f99174ea4ed4d67f259cd49fb",
+      "role": "committed_source_or_evidence",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "commit_blob": "85cc88a9c09b2f97484d1cb04a66c5794000a7ac",
+      "role": "committed_source_or_evidence",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "commit_blob": "a804b9c0b85b8e541b7f23f156d632eae62a3d76",
+      "role": "committed_source_or_evidence",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "commit_blob": "4dbbe03fc79e1eb1509dfd98720b60196144878d",
+      "role": "committed_source_or_evidence",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "commit_blob": "6982fa15db1156dfcfc50d480ae9a42d8525f83d",
+      "role": "committed_source_or_evidence",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "experiments/wan_adapter/NOTICE": {
+      "bytes": 519,
+      "commit_blob": "6136eeabc2024e8585586178440d70ccf2fed499",
+      "role": "committed_source_or_evidence",
+      "sha256": "66c0d10d17480396fa52602279a9d49fcf3a702c9a808f2bd9f7816b9cfb0099"
+    },
+    "experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "commit_blob": "4d07d2a883826e1b3a45e5cbaee3697f63184139",
+      "role": "committed_source_or_evidence",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "commit_blob": "c604bc50182b1dd20cf89115d64cf93a5870d99a",
+      "role": "committed_source_or_evidence",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "commit_blob": "fc6a745120995d701e2c293c06417352251832d8",
+      "role": "committed_source_or_evidence",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "experiments/wan_adapter/text_cache/NOTICE": {
+      "bytes": 1102,
+      "commit_blob": "86921d36c004591a994ccfe54a5511fe40b3721a",
+      "role": "committed_source_or_evidence",
+      "sha256": "6fbb5f5ab86d715c1b94d014a5582692200accb4bf0304c2cb9f7ac3b3b206cb"
+    },
+    "experiments/wan_adapter/text_cache/native-results/NOTICE": {
+      "bytes": 986,
+      "commit_blob": "ef1b524a507254bae13bdd3372fc1c1aebe33174",
+      "role": "committed_source_or_evidence",
+      "sha256": "7e0ba14c5458ef53591ccd051f2c3a2078f2a78e7ec490fd07b54731cba11b40"
+    },
+    "inputs/capture/closed/0000.png": {
+      "bytes": 184628,
+      "role": "selected_original_rgb",
+      "sha256": "99a567f46891f60a7ea6ce2514e682b54e59a4700b372514bdefcb4549f99d49"
+    },
+    "inputs/capture/closed/0001.png": {
+      "bytes": 184664,
+      "role": "selected_original_rgb",
+      "sha256": "b121c79bb1f8ac42a600044520c634ace3782876317c37949b992198584ac718"
+    },
+    "inputs/capture/closed/0002.png": {
+      "bytes": 188198,
+      "role": "selected_original_rgb",
+      "sha256": "c5167bfd903cd6f0a1e693de37c6c0819a95c5ac5347777ec71ef46b651144aa"
+    },
+    "inputs/capture/closed/0003.png": {
+      "bytes": 194348,
+      "role": "selected_original_rgb",
+      "sha256": "c520290996ddacdbf40626a85303366ceabeb11b3bab37d5b0de3de6a7ab0166"
+    },
+    "inputs/capture/closed/0004.png": {
+      "bytes": 203148,
+      "role": "selected_original_rgb",
+      "sha256": "9c2931199b694d36dfe6fe731ec24f3be48fffe448ee9d46b6f825f2b4400b4c"
+    },
+    "inputs/capture/closed/0005.png": {
+      "bytes": 204663,
+      "role": "selected_original_rgb",
+      "sha256": "95ed9e2c8775bb632e07b21ce047818a622650ffd63e4b27c7d512697fc3e05e"
+    },
+    "inputs/capture/closed/0006.png": {
+      "bytes": 202811,
+      "role": "selected_original_rgb",
+      "sha256": "8acb7baa924cc4cab64cb9647d9d74bf024bb2ee0bd897a99613f8658efa3763"
+    },
+    "inputs/capture/closed/0007.png": {
+      "bytes": 202984,
+      "role": "selected_original_rgb",
+      "sha256": "e702eb2fac70ce7584d5768e3dd616125f623aa8c1e5a475814032b0bbafead4"
+    },
+    "inputs/capture/closed/0008.png": {
+      "bytes": 196103,
+      "role": "selected_original_rgb",
+      "sha256": "8af6588a73a0af965b22f7db4e1306895e090a0e6e35c0c9dbc445041512af19"
+    },
+    "inputs/capture/closed/0009.png": {
+      "bytes": 192407,
+      "role": "selected_original_rgb",
+      "sha256": "9e9d5fa6f50491bbcb500b67d231d3a46b825eed4a897a8c826a4fae0d1460c5"
+    },
+    "inputs/capture/closed/0010.png": {
+      "bytes": 190564,
+      "role": "selected_original_rgb",
+      "sha256": "f0f77619cdb2a1995b6e86bedd01365e9f066d4bb45b7823b980c098ebec951c"
+    },
+    "inputs/capture/closed/0011.png": {
+      "bytes": 187668,
+      "role": "selected_original_rgb",
+      "sha256": "2ef2aa6d94272c2bdda2629823550718f3ce0468feedf39f54faa251413c33fb"
+    },
+    "inputs/capture/closed/0012.png": {
+      "bytes": 184442,
+      "role": "selected_original_rgb",
+      "sha256": "203656f08488a9786390cfee4d4802544de81b33ab440c38172951681c454872"
+    },
+    "inputs/capture/closed/0013.png": {
+      "bytes": 180068,
+      "role": "selected_original_rgb",
+      "sha256": "5b8c5af877380eb9791de2694c1fba4f3612b20c84511cf974eb513cc4f91824"
+    },
+    "inputs/capture/closed/0014.png": {
+      "bytes": 181236,
+      "role": "selected_original_rgb",
+      "sha256": "de8fbcb9d5c81b3f6667fafe6003caffe475fc4bbdf78c8a61e70623d92086d2"
+    },
+    "inputs/capture/closed/0015.png": {
+      "bytes": 179558,
+      "role": "selected_original_rgb",
+      "sha256": "7b14b8a75786fef857d890de7fd710e1abbf740b2de1b3e05ac5b34c7d44a699"
+    },
+    "inputs/capture/closed/0016.png": {
+      "bytes": 172339,
+      "role": "selected_original_rgb",
+      "sha256": "94e11b0b335fee648d8932938f713f1968fceebc4741ce2e825a399a782edd8b"
+    },
+    "inputs/capture/closed/0017.png": {
+      "bytes": 162866,
+      "role": "selected_original_rgb",
+      "sha256": "e6b432478879400372e5050c64c72d0cae1d4593c2eedffb00381da053a13c57"
+    },
+    "inputs/capture/closed/0018.png": {
+      "bytes": 162239,
+      "role": "selected_original_rgb",
+      "sha256": "5a7b719a7d9fd46550364175c7f85c38eff689885ac6daad0eae52cd1666b76a"
+    },
+    "inputs/capture/closed/0019.png": {
+      "bytes": 154346,
+      "role": "selected_original_rgb",
+      "sha256": "c231af6bc12db35a2087d6d1747c9471ecb575c3f99c6d44fa160400b30e4462"
+    },
+    "inputs/capture/closed/0020.png": {
+      "bytes": 150220,
+      "role": "selected_original_rgb",
+      "sha256": "ee629bd4577fb65cc2468f45c2f31b5d186b58736dd4f46ae665fb1f16ece016"
+    },
+    "inputs/capture/closed/0021.png": {
+      "bytes": 146288,
+      "role": "selected_original_rgb",
+      "sha256": "509b9cee7b9aa1f35b6d6466bdadaa83e447bfbbf84e1db268d04927462e0100"
+    },
+    "inputs/capture/closed/0022.png": {
+      "bytes": 144896,
+      "role": "selected_original_rgb",
+      "sha256": "22f9aa15d09aa561992955ac0f7e2f1f034ea4f83532ddaee18699fa569ee3c0"
+    },
+    "inputs/capture/closed/0023.png": {
+      "bytes": 144484,
+      "role": "selected_original_rgb",
+      "sha256": "e9cdd30e9ba6709a64cbb9e105161bb4ce1c4c7423883008641021aad403cf2d"
+    },
+    "inputs/capture/closed/0024.png": {
+      "bytes": 143617,
+      "role": "selected_original_rgb",
+      "sha256": "45d034aeff63ebaafbec3c6ea8d36f1c0c1b53fa3fc4f996cada4633e4df5f92"
+    },
+    "inputs/capture/closed/0032.png": {
+      "bytes": 141691,
+      "role": "selected_original_rgb",
+      "sha256": "168539af22b1a379955e81dc5da7a6c3dbaefe2150d8b0e084f5a3ef5c7fa39f"
+    },
+    "inputs/capture/closed/0033.png": {
+      "bytes": 141709,
+      "role": "selected_original_rgb",
+      "sha256": "b0ec1426cf2937d7203e2be27dc87606b62f1adb5f0ca19227a0d1dc5f30f50a"
+    },
+    "inputs/capture/closed/0034.png": {
+      "bytes": 141834,
+      "role": "selected_original_rgb",
+      "sha256": "369080da17c44cd9b54e47a435cb1dc3cb7b835c68908c570c58832ab452c884"
+    },
+    "inputs/capture/closed/0035.png": {
+      "bytes": 141748,
+      "role": "selected_original_rgb",
+      "sha256": "a09a259d73cece6689b5432d10f52c349016b056db7705b929dee60b7bcfbe19"
+    },
+    "inputs/capture/closed/0036.png": {
+      "bytes": 141738,
+      "role": "selected_original_rgb",
+      "sha256": "b276e920f4ba48a019bd32dd0d83c298fb1940e2b25b4634fda8fa37297715ee"
+    },
+    "inputs/capture/closed/0037.png": {
+      "bytes": 141795,
+      "role": "selected_original_rgb",
+      "sha256": "55ee1ab602a0a9640af8f6df74e9b1b689dbdeca871df6f90909d47a71513268"
+    },
+    "inputs/capture/closed/0038.png": {
+      "bytes": 141807,
+      "role": "selected_original_rgb",
+      "sha256": "cfe6aa79e928569c3d4602c3bf67721593e92ab9ee79302f780ea70faf75930d"
+    },
+    "inputs/capture/closed/0039.png": {
+      "bytes": 141742,
+      "role": "selected_original_rgb",
+      "sha256": "3f8fc9174955399382bfb74d513a8b77cc37a6c6b47c0e6275ba2fd87feb8c84"
+    },
+    "inputs/capture/closed/0040.png": {
+      "bytes": 141802,
+      "role": "selected_original_rgb",
+      "sha256": "e349ef3c2bfe53c0af521d7f470f3a1a1df3382cdd357312fd54e7b938849ba4"
+    },
+    "inputs/capture/closed/0041.png": {
+      "bytes": 141729,
+      "role": "selected_original_rgb",
+      "sha256": "5c606b2565f7a3ad0d414dd28c766c8f100259a930a2b991fdad957970111306"
+    },
+    "inputs/capture/closed/0042.png": {
+      "bytes": 143853,
+      "role": "selected_original_rgb",
+      "sha256": "c328f1179ad72914ff03f222b80e9628454ef869cd270c8d80e2c300a3308fb4"
+    },
+    "inputs/capture/closed/0043.png": {
+      "bytes": 144464,
+      "role": "selected_original_rgb",
+      "sha256": "59a83b14d7cc621769b181f0f386d6be41810787e157568810cf466efaca065c"
+    },
+    "inputs/capture/closed/0044.png": {
+      "bytes": 144754,
+      "role": "selected_original_rgb",
+      "sha256": "296f63fb7dfcb0828598dde1570618e6ec5f2fd7f47cc08abaafa21884b2f177"
+    },
+    "inputs/capture/closed/0045.png": {
+      "bytes": 146195,
+      "role": "selected_original_rgb",
+      "sha256": "aae8796273a9ce18762fa2ed068f3e90dec910ad79873c1a171a2c525f2d65b0"
+    },
+    "inputs/capture/closed/0046.png": {
+      "bytes": 150230,
+      "role": "selected_original_rgb",
+      "sha256": "3f38a39d927854b3f2d497f0f42b212f539cf63ef3951510920f8fe06c420bd8"
+    },
+    "inputs/capture/closed/0047.png": {
+      "bytes": 154329,
+      "role": "selected_original_rgb",
+      "sha256": "bcdd84b2f97ccdb82481dc86114d703a5c10884fcf599225a3cc9a5288c8f4c7"
+    },
+    "inputs/capture/closed/0048.png": {
+      "bytes": 162029,
+      "role": "selected_original_rgb",
+      "sha256": "4ab56196c13fa26d60986bfe8e82b0c2c2d6173007c88bc39a2a1d5f3b22c23b"
+    },
+    "inputs/capture/closed/0049.png": {
+      "bytes": 162966,
+      "role": "selected_original_rgb",
+      "sha256": "660160ed1644245933913c5dbe31c0a722e66e23e36f6e78dc3bb0ee23b11242"
+    },
+    "inputs/capture/closed/0050.png": {
+      "bytes": 172284,
+      "role": "selected_original_rgb",
+      "sha256": "6efa3f2c346bd491b487a28b463fa29eb75bb331e04a98905fcf4dd8528e4ec5"
+    },
+    "inputs/capture/closed/0051.png": {
+      "bytes": 179452,
+      "role": "selected_original_rgb",
+      "sha256": "581f6cc4d64ac348fe79594a2f123e4a7c85e490547ffc82703f5135c1c35bb8"
+    },
+    "inputs/capture/closed/0052.png": {
+      "bytes": 181323,
+      "role": "selected_original_rgb",
+      "sha256": "f2e4030d581c19f295de5d6cb8309dd383983aedda0ac15c1ba4896068edbfab"
+    },
+    "inputs/capture/closed/0053.png": {
+      "bytes": 180057,
+      "role": "selected_original_rgb",
+      "sha256": "e84754ed1c3665a6fcb4f668da5a0f511abaf685b8477232dbeb572b1ab79255"
+    },
+    "inputs/capture/closed/0054.png": {
+      "bytes": 184502,
+      "role": "selected_original_rgb",
+      "sha256": "d871246df62045f0ed5b7dc059a2f446e92d8fa2ad909550a68b3f599357042d"
+    },
+    "inputs/capture/closed/0055.png": {
+      "bytes": 187589,
+      "role": "selected_original_rgb",
+      "sha256": "d4c045a3744b943d8c2b41adfc2430c0ef35471bb6f265ae3d8e027814b1a540"
+    },
+    "inputs/capture/closed/0056.png": {
+      "bytes": 190535,
+      "role": "selected_original_rgb",
+      "sha256": "b494e032f711075e51245dd4c0bcb0f1b82eaced611ef393eb5e0657d91e12b5"
+    },
+    "inputs/capture/closed/0057.png": {
+      "bytes": 192583,
+      "role": "selected_original_rgb",
+      "sha256": "0d784371cfbed90707640b8c636f9a5c5a85a93dcfd36c3348082df0b2c9823a"
+    },
+    "inputs/capture/closed/0058.png": {
+      "bytes": 196033,
+      "role": "selected_original_rgb",
+      "sha256": "5968451f5e06aaa44e659ee9abc318b8af9e52f8db8cbc23be40bbd0183e8e75"
+    },
+    "inputs/capture/closed/0059.png": {
+      "bytes": 202963,
+      "role": "selected_original_rgb",
+      "sha256": "826261790aab1661fc577180ed4e9f84a4f6fda1261d9ac0458e58c3674c24a6"
+    },
+    "inputs/capture/closed/0060.png": {
+      "bytes": 202901,
+      "role": "selected_original_rgb",
+      "sha256": "ccde33c2f5d0e7f9ae88582dfdf71489da527f558a6b67997d43b21234522bce"
+    },
+    "inputs/capture/closed/0061.png": {
+      "bytes": 204669,
+      "role": "selected_original_rgb",
+      "sha256": "38b46ea928a9cd23eb31913637971e5f15c22ae42b620629bdbc8857ab80e977"
+    },
+    "inputs/capture/closed/0062.png": {
+      "bytes": 203227,
+      "role": "selected_original_rgb",
+      "sha256": "d2f86b5a04eecd4c59d7abf751ca7a20fd4b5cdc63e8d1642f81016026f07ae1"
+    },
+    "inputs/capture/closed/0063.png": {
+      "bytes": 194389,
+      "role": "selected_original_rgb",
+      "sha256": "928d3d5c72c9d5e89a96bc11c3be05521dc39c027377ebf5cad44b9ec8049cea"
+    },
+    "inputs/capture/closed/0064.png": {
+      "bytes": 188087,
+      "role": "selected_original_rgb",
+      "sha256": "eb093f0f14140ee9fbe34311f674b5988a131610b68eeebbbf899d8e3f8369a0"
+    },
+    "inputs/capture/closed/0065.png": {
+      "bytes": 184620,
+      "role": "selected_original_rgb",
+      "sha256": "ce89d8e3b6a53cad59f3c0a3b89dda4c482dae71099fc023700e2d9ff20d1b8e"
+    },
+    "inputs/capture/manifest.json": {
+      "bytes": 146465,
+      "role": "original_capture_manifest",
+      "sha256": "942eaf38badb1c2de5489fac59b7727e5c2a3d5699ec44aa415b7862c8440ef0"
+    },
+    "inputs/capture/open/0000.png": {
+      "bytes": 184595,
+      "role": "selected_original_rgb",
+      "sha256": "7bdfa121eb2917b837af3ee1faae9e697751cdd3cdee0b21422c1b1f2a53e780"
+    },
+    "inputs/capture/open/0001.png": {
+      "bytes": 187119,
+      "role": "selected_original_rgb",
+      "sha256": "18ba823611f1183a1c3b675456b6c2b6ae4d042911df4c0a7a75e2759ba21835"
+    },
+    "inputs/capture/open/0002.png": {
+      "bytes": 190838,
+      "role": "selected_original_rgb",
+      "sha256": "4eac06bf7d5269476e53c924fbe340e77340b2b3e16c4eacb07edc0ce846576b"
+    },
+    "inputs/capture/open/0003.png": {
+      "bytes": 197558,
+      "role": "selected_original_rgb",
+      "sha256": "48904e7eca2f75281b9ce5f7f6a0b189e9f239d8df51c656ef748baf10cf91a2"
+    },
+    "inputs/capture/open/0004.png": {
+      "bytes": 206592,
+      "role": "selected_original_rgb",
+      "sha256": "da92af403ac43cb77326c63a757af07c06c8e1525c4a3dd41cf4473da7bc9dcb"
+    },
+    "inputs/capture/open/0005.png": {
+      "bytes": 207214,
+      "role": "selected_original_rgb",
+      "sha256": "c4ef33b8e7291f937d05ae0e13b9fd81c800a63ab9cdef207061378bfcbb9611"
+    },
+    "inputs/capture/open/0006.png": {
+      "bytes": 204330,
+      "role": "selected_original_rgb",
+      "sha256": "cea2946dfa89a38b661a463699d052f65cc8bb2f1a4bcf36c7c89fed85aa96cc"
+    },
+    "inputs/capture/open/0007.png": {
+      "bytes": 202659,
+      "role": "selected_original_rgb",
+      "sha256": "9639073f57ab07715048cf527b661b19746df5f7476afb816a70d53a257aafbe"
+    },
+    "inputs/capture/open/0008.png": {
+      "bytes": 195716,
+      "role": "selected_original_rgb",
+      "sha256": "800dc876844ed9f54752c0a877a07573bb1784bc6aebdd7f7f95095e539daf80"
+    },
+    "inputs/capture/open/0009.png": {
+      "bytes": 192477,
+      "role": "selected_original_rgb",
+      "sha256": "9a5e3d28eb9a67fcbf58b898da3cccb4ac81bd6a7759731356120bade1d731c5"
+    },
+    "inputs/capture/open/0010.png": {
+      "bytes": 190152,
+      "role": "selected_original_rgb",
+      "sha256": "fd68a0e1dd790d1b376eb9a90d48ad7870edcaa48c0189fc35a5b3d02e47698e"
+    },
+    "inputs/capture/open/0011.png": {
+      "bytes": 187425,
+      "role": "selected_original_rgb",
+      "sha256": "acc38f3c4bf97874ab13329f3bd459cd0474f8e5beb9d01ef706a8c22274c683"
+    },
+    "inputs/capture/open/0012.png": {
+      "bytes": 184549,
+      "role": "selected_original_rgb",
+      "sha256": "5a86d8dced79d8e6dfcb40ab65d63e2b0d31da75c9ec21c66144af2fc24bf40d"
+    },
+    "inputs/capture/open/0013.png": {
+      "bytes": 179529,
+      "role": "selected_original_rgb",
+      "sha256": "80fb93d933b11f2d9df24d3348c0e9a5d890ad463132c658f504359fc65e4006"
+    },
+    "inputs/capture/open/0014.png": {
+      "bytes": 180739,
+      "role": "selected_original_rgb",
+      "sha256": "f1f2acd91462ede7fffed9ecf0e305bbebaae38f6e49ac6f7f931f3f5e634599"
+    },
+    "inputs/capture/open/0015.png": {
+      "bytes": 178674,
+      "role": "selected_original_rgb",
+      "sha256": "863a37822f83397de02e72e3726e5a81320cbe3906b772262265ba518542a54d"
+    },
+    "inputs/capture/open/0016.png": {
+      "bytes": 171829,
+      "role": "selected_original_rgb",
+      "sha256": "ca10715064bb0997003efab9f2a384fd94dbca34c46a1c27d1229d89159e91c2"
+    },
+    "inputs/capture/open/0017.png": {
+      "bytes": 162249,
+      "role": "selected_original_rgb",
+      "sha256": "ffcee3ae6a9f46d99051c60e5892d1a1cef19227e5b85e5c7f97f330c09cbdb9"
+    },
+    "inputs/capture/open/0018.png": {
+      "bytes": 160789,
+      "role": "selected_original_rgb",
+      "sha256": "12df6d92f805fa44bab5a9eb02a30064e29c565ff9a87c741c83b9bd162d46b9"
+    },
+    "inputs/capture/open/0019.png": {
+      "bytes": 152590,
+      "role": "selected_original_rgb",
+      "sha256": "0d175c76070b77a13eaeedb3cb4ff5ff5354907abd68044c0d5559c86e289aa1"
+    },
+    "inputs/capture/open/0020.png": {
+      "bytes": 147313,
+      "role": "selected_original_rgb",
+      "sha256": "f12106a5ba17f2e27f9a01594dadda972ec67ae9a7bdf865b0b86d17f55c829a"
+    },
+    "inputs/capture/open/0021.png": {
+      "bytes": 142951,
+      "role": "selected_original_rgb",
+      "sha256": "aac96b445495a5b27b8a5f64e06ad3443b436b7134bb7ceb73ce31167219e438"
+    },
+    "inputs/capture/open/0022.png": {
+      "bytes": 141819,
+      "role": "selected_original_rgb",
+      "sha256": "c41634c9e55cd58f9f8b93ab9d24b9ccc47930501f65f7811acc4d4c8e6b1446"
+    },
+    "inputs/capture/open/0023.png": {
+      "bytes": 142219,
+      "role": "selected_original_rgb",
+      "sha256": "b0429dde2305aa76ef765037f7b90742248030a617e4e0ea4591fb4ac57d1b97"
+    },
+    "inputs/capture/open/0024.png": {
+      "bytes": 142565,
+      "role": "selected_original_rgb",
+      "sha256": "89064e35568321d8a27503935657997d950e206edde874bba750a77054d68fc6"
+    },
+    "inputs/capture/open/0032.png": {
+      "bytes": 142763,
+      "role": "selected_original_rgb",
+      "sha256": "e1df3436dfa3807d6d1f4297f1d6183b07733969325717ebd77e9ddffecd6265"
+    },
+    "inputs/capture/open/0033.png": {
+      "bytes": 142701,
+      "role": "selected_original_rgb",
+      "sha256": "c1a0ede04bc27f42f0a7e0f3def6ec99a76fcc009d005e3a176e0b00248656d4"
+    },
+    "inputs/capture/open/0034.png": {
+      "bytes": 142757,
+      "role": "selected_original_rgb",
+      "sha256": "dcd6d995fc4745b636349b2e27880cd0a41c458e852500c479e9d2115255f5bc"
+    },
+    "inputs/capture/open/0035.png": {
+      "bytes": 142714,
+      "role": "selected_original_rgb",
+      "sha256": "7361c85114d7b078ee88efe98af8557872fad515a304c3462034a4f4c9bd6191"
+    },
+    "inputs/capture/open/0036.png": {
+      "bytes": 142797,
+      "role": "selected_original_rgb",
+      "sha256": "36c23275fc0a76f2731ff8f60d67502060ebcf0cf4ff6d2d7105d8945c04f44b"
+    },
+    "inputs/capture/open/0037.png": {
+      "bytes": 142726,
+      "role": "selected_original_rgb",
+      "sha256": "3c1cafb44f1c71404dad338028677f9bf0de0468f7bfddf77b0c4408a06d9291"
+    },
+    "inputs/capture/open/0038.png": {
+      "bytes": 142795,
+      "role": "selected_original_rgb",
+      "sha256": "2bf30653ba48ce91d6dc7e349b83247457d83928e2652e2e87dbbae217980e0c"
+    },
+    "inputs/capture/open/0039.png": {
+      "bytes": 142762,
+      "role": "selected_original_rgb",
+      "sha256": "653ea03d38bf5191b85dcb71dc4d94b9f5c7e482e4d7950d5f3f334bf7acc6c3"
+    },
+    "inputs/capture/open/0040.png": {
+      "bytes": 142672,
+      "role": "selected_original_rgb",
+      "sha256": "dbdf8b21fdfdd73f8249e872d406efc102cfc1d445e45cfe00eefef90ff6f45b"
+    },
+    "inputs/capture/open/0041.png": {
+      "bytes": 142757,
+      "role": "selected_original_rgb",
+      "sha256": "ae2d215d8fca1678457e15b7b89285287b218563fe311385f5e985e35128615b"
+    },
+    "inputs/capture/open/0042.png": {
+      "bytes": 142563,
+      "role": "selected_original_rgb",
+      "sha256": "e67e0edac6cc79858a60867172f3d248e8e60468da6a01d1a28b5f7175962829"
+    },
+    "inputs/capture/open/0043.png": {
+      "bytes": 142336,
+      "role": "selected_original_rgb",
+      "sha256": "21d68598f1783fa7349ae0d86e6da997d206927c72e8d1043ec2e57345df2c8f"
+    },
+    "inputs/capture/open/0044.png": {
+      "bytes": 141811,
+      "role": "selected_original_rgb",
+      "sha256": "555485d86375695e753cb1380172dcb374d5c702cf2ab0951538295afac572dd"
+    },
+    "inputs/capture/open/0045.png": {
+      "bytes": 142921,
+      "role": "selected_original_rgb",
+      "sha256": "88aa44d3d524c6c2ad464bc291d24363cd6b1ed3cd31992bfdd01ab0a8d84741"
+    },
+    "inputs/capture/open/0046.png": {
+      "bytes": 147346,
+      "role": "selected_original_rgb",
+      "sha256": "3bc9f3523bac47b13322a0e741c6f4af13f9aa45617601fcbd6c659e0c1b54a9"
+    },
+    "inputs/capture/open/0047.png": {
+      "bytes": 152684,
+      "role": "selected_original_rgb",
+      "sha256": "b328aa115f7f538e1d0b46ab4c3712d03ad45a418c4bb673f34ae6d6e1761f60"
+    },
+    "inputs/capture/open/0048.png": {
+      "bytes": 160751,
+      "role": "selected_original_rgb",
+      "sha256": "dd019635ff5e4a981e4554be175422d4fc463a88ad28072196e3c0b5a1069944"
+    },
+    "inputs/capture/open/0049.png": {
+      "bytes": 162204,
+      "role": "selected_original_rgb",
+      "sha256": "2bd903075e6620d6a83020af31f947a44e4f902e557c7b80d274a6c7af10a7ec"
+    },
+    "inputs/capture/open/0050.png": {
+      "bytes": 171665,
+      "role": "selected_original_rgb",
+      "sha256": "d5654f036b8c076e4fcd5bb52e8871d44b11509f4c43be5946089b4481e212b3"
+    },
+    "inputs/capture/open/0051.png": {
+      "bytes": 178610,
+      "role": "selected_original_rgb",
+      "sha256": "faf703978b71f4358db136ab71c87956a09d3ed684437b4d0ad0c584e6f400c5"
+    },
+    "inputs/capture/open/0052.png": {
+      "bytes": 180747,
+      "role": "selected_original_rgb",
+      "sha256": "3547e72c0fa4a85c787dc749a91d7310861c9d0d16cfb853283f60b4e8acb7a1"
+    },
+    "inputs/capture/open/0053.png": {
+      "bytes": 179600,
+      "role": "selected_original_rgb",
+      "sha256": "634803ea5257211cbed244b063f2624344736529a5590f43d56e33a7db8b616f"
+    },
+    "inputs/capture/open/0054.png": {
+      "bytes": 184449,
+      "role": "selected_original_rgb",
+      "sha256": "598b312fca3105fba0bfc41b575131466e8eca552c63dcc6894a2ef48e4bd9fd"
+    },
+    "inputs/capture/open/0055.png": {
+      "bytes": 187350,
+      "role": "selected_original_rgb",
+      "sha256": "248f3d9a4debbf1b38dfdae5e5361138dd34fa667c356b5fa7fe601257315dbd"
+    },
+    "inputs/capture/open/0056.png": {
+      "bytes": 190166,
+      "role": "selected_original_rgb",
+      "sha256": "9330b32cc90cbcd96dd215576de33f265816bc234e752cfaf4211cb5452f5492"
+    },
+    "inputs/capture/open/0057.png": {
+      "bytes": 192387,
+      "role": "selected_original_rgb",
+      "sha256": "54692c947ca8aab3e07713c6c10e434702e2ce109878f02b487b62f3a23bfd85"
+    },
+    "inputs/capture/open/0058.png": {
+      "bytes": 195706,
+      "role": "selected_original_rgb",
+      "sha256": "bbad96649a76d3cefaa26f582caee697b0c91f65a6dadbd34e8625a26ffd2cf2"
+    },
+    "inputs/capture/open/0059.png": {
+      "bytes": 202606,
+      "role": "selected_original_rgb",
+      "sha256": "f5ef4b1b291415d64f4728f88bec62aad33375daf6e4e68e47c3ce2bbf229195"
+    },
+    "inputs/capture/open/0060.png": {
+      "bytes": 204238,
+      "role": "selected_original_rgb",
+      "sha256": "dd449e8b140715caf9c94f17aad75e63263921fc3ef8ec0fc7fa66a866b8740a"
+    },
+    "inputs/capture/open/0061.png": {
+      "bytes": 207154,
+      "role": "selected_original_rgb",
+      "sha256": "cfa7dee5dccd79ff8cb8942dfabeb1323639ffff36882a15728bce19f8f53ced"
+    },
+    "inputs/capture/open/0062.png": {
+      "bytes": 206639,
+      "role": "selected_original_rgb",
+      "sha256": "ca32855574dbfbe1a43d8339a330b036c2c8e2204cef2c45809deefec70d1c81"
+    },
+    "inputs/capture/open/0063.png": {
+      "bytes": 197676,
+      "role": "selected_original_rgb",
+      "sha256": "39589beee38285f8bbfe0795253e9e37896df111350f6f7092d2d2b7f4b4520e"
+    },
+    "inputs/capture/open/0064.png": {
+      "bytes": 190732,
+      "role": "selected_original_rgb",
+      "sha256": "0562cf05a1b6722cdc9605efd4bbaa5ea962706112f742c7042931df9e53c489"
+    },
+    "inputs/capture/open/0065.png": {
+      "bytes": 187122,
+      "role": "selected_original_rgb",
+      "sha256": "12beb47d9a3256cbc7b3b81455e1468a5c6b05395d9d1c25c4c2e57193090af5"
+    },
+    "inputs/text/embeddings.safetensors": {
+      "bytes": 2474288,
+      "role": "pinned_genuine_text",
+      "sha256": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406"
+    },
+    "inputs/text/manifest.json": {
+      "bytes": 32126,
+      "role": "pinned_genuine_text",
+      "sha256": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c"
+    },
+    "plans/baseline.json": {
+      "bytes": 69416,
+      "role": "derived_cpu_input_plan",
+      "sha256": "c1a5a1de5a2a01188ed9e873a018db67425d87806bb466066c7dcadb5f938b5b"
+    },
+    "plans/spatial.json": {
+      "bytes": 69432,
+      "role": "derived_cpu_input_plan",
+      "sha256": "d3fc0a580a15f4762b22b2ca8e997af8470049ed3cb7720e9ef23f5fb70308d6"
+    },
+    "reviews/cache.json": {
+      "bytes": 5407,
+      "role": "explicit_current_cpu_report",
+      "sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7"
+    },
+    "reviews/probe.json": {
+      "bytes": 12993,
+      "role": "explicit_current_cpu_report",
+      "sha256": "45d4cbb957fc06e36c7fd035452dc853694b1904889e3c13ee35e5425414dc4d"
+    },
+    "reviews/probe_independent.json": {
+      "bytes": 16892,
+      "role": "explicit_current_cpu_report",
+      "sha256": "f500ba0f41743019239ac000c74bff01f6ca0cbc69b986e74de55763786c13bb"
+    }
+  },
+  "input_plans": {
+    "baseline": {
+      "canonical_sha256": "9360d7416d12aeb1445b0b200315b606ca0c825e0b524af5a6abe0bec4dca605",
+      "file": "plans/baseline.json"
+    },
+    "spatial": {
+      "canonical_sha256": "8fa4559428a56540da56441f9181c5115ff75197c32f1f3e5671c2f4cd2323c8",
+      "file": "plans/spatial.json"
+    }
+  },
+  "layout": {
+    "capture": "inputs/capture",
+    "cpu_reports": "reviews",
+    "source_cwd": ".",
+    "text": "inputs/text"
+  },
+  "limitations": "Preparation only. The adapter probe has no generation or quality admission. The published spatial clip is one nearly static resized original room with fresh CUDA encoding.",
+  "model_execution": false,
+  "package_root": "open-worldline-099eeae6268d",
+  "probe_source_sha256": {
+    "experiments/room_world/__init__.py": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+    "experiments/room_world/memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+    "experiments/room_world/memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+    "experiments/room_world/memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+    "experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+    "experiments/room_world/model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+    "experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+    "experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+    "experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+    "experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+    "experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+    "experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+    "experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+    "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+    "experiments/wan22_native/action_cuda/cpu-results/v1/report.json": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+    "experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+    "experiments/wan22_native/action_cuda/probe.py": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+    "experiments/wan22_native/action_cuda/probe_evidence.py": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+    "experiments/wan22_native/action_cuda/probe_math.py": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+    "experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+    "experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+    "experiments/wan22_native/action_cuda/test_probe.py": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+    "experiments/wan22_native/action_cuda/test_probe_independent.py": "cbbc0f43f0b1dff6c5c0367ae8c80acd56710b2a79b85b2006b4da06f5b1a78d",
+    "experiments/wan22_native/action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+    "experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+    "experiments/wan22_native/action_training/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+    "experiments/wan22_native/action_training/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+    "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+    "experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+    "experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+    "experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+    "experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+    "experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+    "experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+    "experiments/wan22_native/cuda_reference/requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+    "experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+    "experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+    "experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+    "experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+    "experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+    "experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+    "experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+    "experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+    "experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+    "experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+    "experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+    "experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+    "experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+    "experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+    "experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+    "experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+    "experiments/wan22_native/text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+    "experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+    "experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+    "experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+    "experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+    "experiments/wan_adapter/native_control/__init__.py": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+    "experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+  },
+  "reviews": {
+    "cache": {
+      "file": "reviews/cache.json",
+      "sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7"
+    },
+    "probe": {
+      "file": "reviews/probe.json",
+      "sha256": "45d4cbb957fc06e36c7fd035452dc853694b1904889e3c13ee35e5425414dc4d"
+    },
+    "probe_independent": {
+      "file": "reviews/probe_independent.json",
+      "sha256": "f500ba0f41743019239ac000c74bff01f6ca0cbc69b986e74de55763786c13bb"
+    }
+  },
+  "schema": "worldline-wan22-action-cuda-transfer-v1",
+  "source_commit": "099eeae6268da852b0acb580258e4c168f900520",
+  "text_files": {
+    "embeddings.safetensors": "2f00251cd8ffbbd72f8cee232feeac49df8b6645c204dfc07667748cff36c406",
+    "manifest.json": "03936c8122c5a902062fdf6a555552a45d861630d0ee2012a712a6a3caf5c11c"
+  },
+  "weights_included": false
+}

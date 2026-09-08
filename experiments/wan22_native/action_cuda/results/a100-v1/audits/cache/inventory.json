@@ -1,0 +1,442 @@
+{
+  "cpu-report.json": {
+    "bytes": 5407,
+    "sha256": "32d5b7246ef209169482140f128604615298be51f0b86c683754a2fc6cde04c7"
+  },
+  "launch.json": {
+    "bytes": 78608,
+    "sha256": "3e133dcf24e1fc97ce009273c6232d98f20c64464f0584dd14b6df69f1fdad63"
+  },
+  "metrics.json": {
+    "bytes": 79472,
+    "sha256": "2ac7ef811cebffec536231a3fe59d71ef0bc33571c4ffd79b7b99b9c4bf21313"
+  },
+  "parent-memory.jsonl": {
+    "bytes": 113736,
+    "sha256": "c2f2dd8fbf236e0f1807f3248f38f553d92ccbe8e2c6fceb5f268d591525acdd"
+  },
+  "plan.json": {
+    "bytes": 78297,
+    "sha256": "1855a0ad7e38eb7627c2299af9454b569b286f48f545e7ec6eb053cd1858cff0"
+  },
+  "result/checks/closed-0000_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "272ae16053c2997808911de5eea69af9c78277f329c70e8aeae4a8daf9ebf9ed"
+  },
+  "result/checks/closed-0008_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "9e3463180da520dd4f00944ebdc476cf607b72b8f8a9702d08b394f989317b74"
+  },
+  "result/checks/closed-0032_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "392d0af0dbaccd755e94d09e4584b94ee8865256488b10d96d11ccf4de67ab18"
+  },
+  "result/checks/closed-0049_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "4ebcd4c13109686ddd09d4cf44b4f04eb826a6e83b38324935bb2c834bd0f496"
+  },
+  "result/checks/open-0000_same_length_future_perturbation.safetensors": {
+    "bytes": 1318064,
+    "sha256": "272ae16053c2997808911de5eea69af9c78277f329c70e8aeae4a8daf9ebf9ed"
+  },
+  "result/checks/open-0000_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "272ae16053c2997808911de5eea69af9c78277f329c70e8aeae4a8daf9ebf9ed"
+  },
+  "result/checks/open-0008_same_length_future_perturbation.safetensors": {
+    "bytes": 1318064,
+    "sha256": "602c92988f91de52a1764d32e2898d7a95852c9f4960ba73727febf39e730b1e"
+  },
+  "result/checks/open-0008_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "602c92988f91de52a1764d32e2898d7a95852c9f4960ba73727febf39e730b1e"
+  },
+  "result/checks/open-0032_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "3964b1a5ae1086c8ffe88db6e4bc337a71cdd5e9ed2230ccc58a228600a3a230"
+  },
+  "result/checks/open-0049_target_vs_independent.safetensors": {
+    "bytes": 1318064,
+    "sha256": "37f474fc4033a8bd8d17add2e78f29fac7c1b6376d8f81de3c7930184f5b43c9"
+  },
+  "result/checks/shared_initial_after_full_perturbation.safetensors": {
+    "bytes": 1318064,
+    "sha256": "272ae16053c2997808911de5eea69af9c78277f329c70e8aeae4a8daf9ebf9ed"
+  },
+  "result/closed-0000.safetensors": {
+    "bytes": 3954288,
+    "sha256": "9f36c4ef4fe6dd14da11a95e172acb536d580a5202a2fa2fd97889f4eeb2ba83"
+  },
+  "result/closed-0008.safetensors": {
+    "bytes": 3954288,
+    "sha256": "e3599270c46eaa4537db5a665f9c9e2c41b810ab4c3d11ab42c6e4ef60d41b18"
+  },
+  "result/closed-0032.safetensors": {
+    "bytes": 3954288,
+    "sha256": "77510811c9b93a557e3b009a9bdbe94c716d0d40dac3ecf18ed5bbd1e14ddff7"
+  },
+  "result/closed-0049.safetensors": {
+    "bytes": 3954288,
+    "sha256": "6d0564d60d961baebdae1fd32a63d5a6004504451a6b75d4626a5fdaa5e0e2ad"
+  },
+  "result/completion.json": {
+    "bytes": 63408,
+    "sha256": "9ba95f08f453ba0685f98fb862db9e36b6094fef0a6a47398b66815a78c479a8"
+  },
+  "result/manifest.json": {
+    "bytes": 142043,
+    "sha256": "0fef6f1db561623dd30bf380502ec13f1661d1a6f1b3dfb6d4ef878a0a0d347e"
+  },
+  "result/observations/closed-0008.safetensors": {
+    "bytes": 659032,
+    "sha256": "34c80f0f550d836d334285f1de835f998d644f4be3ca6c247fdde32adbd753dc"
+  },
+  "result/observations/closed-0032.safetensors": {
+    "bytes": 659032,
+    "sha256": "edec0673a25aca31bdd1df4e6d7adbcf85052c87f938d812e150ae4d08d6d1d9"
+  },
+  "result/observations/closed-0049.safetensors": {
+    "bytes": 659032,
+    "sha256": "76061c6f7d9765257812a178d771a7998ec857fb398090145c8579192573d267"
+  },
+  "result/observations/open-0008.safetensors": {
+    "bytes": 659032,
+    "sha256": "34f82962323a225f9e0c9aa9524b96fc7f1dfd3dbfa4d3eadb1b5270b2923c8e"
+  },
+  "result/observations/open-0032.safetensors": {
+    "bytes": 659032,
+    "sha256": "e41eb278fa821326762f8eaca066823b3ce26db4439c446fa4eea0029e44f3e1"
+  },
+  "result/observations/open-0049.safetensors": {
+    "bytes": 659032,
+    "sha256": "5a4708cfba6355d7c8aa28273dfd107c818129bed176b5689667d3c818957c2f"
+  },
+  "result/observations/start-0000-shared.safetensors": {
+    "bytes": 659032,
+    "sha256": "e369ecf2f11bd8c0d839b9cd2dae2e5b37d39336d6c8ab6fa96a1a4cdbab857b"
+  },
+  "result/open-0000.safetensors": {
+    "bytes": 3954288,
+    "sha256": "a4a8a5fde4783674e77238938caec3ae3c2ba8b72ab77e5cccb0c174f0b2fc02"
+  },
+  "result/open-0008.safetensors": {
+    "bytes": 3954288,
+    "sha256": "3c30dbdb703576f68576b28b071f5eb6f677dfe1104438928dfcf46db019d376"
+  },
+  "result/open-0032.safetensors": {
+    "bytes": 3954288,
+    "sha256": "61baf580321539ffe29540eddf1adc3bfbe8ac21d51e846da72a5ecb31f7128c"
+  },
+  "result/open-0049.safetensors": {
+    "bytes": 3954288,
+    "sha256": "5d111cf7e6a3189e044d628e50dcd5b23a28fdd3c51e5f02ebf53d1bd0862d72"
+  },
+  "result/plan.json": {
+    "bytes": 69432,
+    "sha256": "6f9d059b9a2944f3e3ad1166053469b1fd774c77c0295d4d543b4092b750ffca"
+  },
+  "result/source/experiments/wan22_native/__init__.py": {
+    "bytes": 125,
+    "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+  },
+  "result/source/experiments/wan22_native/action_cuda/data.py": {
+    "bytes": 33216,
+    "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+  },
+  "result/source/experiments/wan22_native/action_data/data.py": {
+    "bytes": 8558,
+    "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+  },
+  "result/source/experiments/wan22_native/action_data/source-plan.md.txt": {
+    "bytes": 30107,
+    "sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/__init__.py": {
+    "bytes": 105,
+    "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/codec-source.json": {
+    "bytes": 1956,
+    "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/config.json": {
+    "bytes": 251,
+    "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/decode.py": {
+    "bytes": 3901,
+    "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/evidence.py": {
+    "bytes": 7774,
+    "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/expected-weights.json": {
+    "bytes": 206154,
+    "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/guards.py": {
+    "bytes": 6767,
+    "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/native.py": {
+    "bytes": 3102,
+    "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/sampling.py": {
+    "bytes": 2503,
+    "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+    "bytes": 2710,
+    "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+    "bytes": 108,
+    "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+    "bytes": 5435,
+    "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+    "bytes": 32558,
+    "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+    "bytes": 18097,
+    "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+  },
+  "result/source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+    "bytes": 31846,
+    "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "result/source/experiments/wan22_native/official_cpu/__init__.py": {
+    "bytes": 113,
+    "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+  },
+  "result/source/experiments/wan22_native/official_cpu/inputs.py": {
+    "bytes": 3429,
+    "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+  },
+  "result/source/experiments/wan22_native/official_cpu/streaming.py": {
+    "bytes": 10387,
+    "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/__init__.py": {
+    "bytes": 110,
+    "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/codec.py": {
+    "bytes": 5767,
+    "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/config.py": {
+    "bytes": 1348,
+    "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/evidence.py": {
+    "bytes": 22089,
+    "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/guards.py": {
+    "bytes": 10133,
+    "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/inputs.py": {
+    "bytes": 9961,
+    "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/native.py": {
+    "bytes": 3550,
+    "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/output.py": {
+    "bytes": 3374,
+    "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/run.py": {
+    "bytes": 21001,
+    "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+  },
+  "result/source/experiments/wan22_native/spatial_reference/sampling.py": {
+    "bytes": 7526,
+    "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+  },
+  "result/source/experiments/wan_adapter/capture_data.py": {
+    "bytes": 6043,
+    "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+  },
+  "source/experiments/wan22_native/__init__.py": {
+    "bytes": 125,
+    "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+  },
+  "source/experiments/wan22_native/action_cuda/__init__.py": {
+    "bytes": 121,
+    "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+  },
+  "source/experiments/wan22_native/action_cuda/cache_review.py": {
+    "bytes": 2963,
+    "sha256": "e4c0c98458db2f504f90776819f6b66b041cb394f480040e1ab895a0e55fa20f"
+  },
+  "source/experiments/wan22_native/action_cuda/cache_run.py": {
+    "bytes": 10181,
+    "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+  },
+  "source/experiments/wan22_native/action_cuda/cache_worker.py": {
+    "bytes": 4176,
+    "sha256": "ff63f9c0265ae44e8bf4429b2ba6cf94bd5d09acd35818dcb0bc3ff8b741691e"
+  },
+  "source/experiments/wan22_native/action_cuda/data.py": {
+    "bytes": 33216,
+    "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+  },
+  "source/experiments/wan22_native/action_data/data.py": {
+    "bytes": 8558,
+    "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+  },
+  "source/experiments/wan22_native/action_data/source-plan.md.txt": {
+    "bytes": 30107,
+    "sha256": "52fead080ba299f89c7bc1aad1f58c1679c93c8ec735c177aa99c5b3916e6a62"
+  },
+  "source/experiments/wan22_native/cuda_reference/__init__.py": {
+    "bytes": 105,
+    "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+  },
+  "source/experiments/wan22_native/cuda_reference/codec-source.json": {
+    "bytes": 1956,
+    "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+  },
+  "source/experiments/wan22_native/cuda_reference/config.json": {
+    "bytes": 251,
+    "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+  },
+  "source/experiments/wan22_native/cuda_reference/decode.py": {
+    "bytes": 3901,
+    "sha256": "8e0ef01e9dec77dd426a69e86f3f867fc62a4bcf53d067062fcec9c90b6b601b"
+  },
+  "source/experiments/wan22_native/cuda_reference/evidence.py": {
+    "bytes": 7774,
+    "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+  },
+  "source/experiments/wan22_native/cuda_reference/expected-weights.json": {
+    "bytes": 206154,
+    "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+  },
+  "source/experiments/wan22_native/cuda_reference/guards.py": {
+    "bytes": 6767,
+    "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+  },
+  "source/experiments/wan22_native/cuda_reference/native.py": {
+    "bytes": 3102,
+    "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+  },
+  "source/experiments/wan22_native/cuda_reference/sampling.py": {
+    "bytes": 2503,
+    "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+  },
+  "source/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+    "bytes": 2710,
+    "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+  },
+  "source/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+    "bytes": 108,
+    "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+  },
+  "source/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+    "bytes": 5435,
+    "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+  },
+  "source/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+    "bytes": 32558,
+    "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+  },
+  "source/experiments/wan22_native/cuda_reference/vendor/model.py": {
+    "bytes": 18097,
+    "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+  },
+  "source/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+    "bytes": 31846,
+    "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+  },
+  "source/experiments/wan22_native/official_cpu/__init__.py": {
+    "bytes": 113,
+    "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+  },
+  "source/experiments/wan22_native/official_cpu/inputs.py": {
+    "bytes": 3429,
+    "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+  },
+  "source/experiments/wan22_native/official_cpu/streaming.py": {
+    "bytes": 10387,
+    "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+  },
+  "source/experiments/wan22_native/spatial_reference/__init__.py": {
+    "bytes": 110,
+    "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+  },
+  "source/experiments/wan22_native/spatial_reference/codec.py": {
+    "bytes": 5767,
+    "sha256": "9e6e6c7dac72dd466dc534129aea13c70f7d9842cfdb43cf2d4867a80377cb80"
+  },
+  "source/experiments/wan22_native/spatial_reference/config.py": {
+    "bytes": 1348,
+    "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+  },
+  "source/experiments/wan22_native/spatial_reference/evidence.py": {
+    "bytes": 22089,
+    "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+  },
+  "source/experiments/wan22_native/spatial_reference/guards.py": {
+    "bytes": 10133,
+    "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+  },
+  "source/experiments/wan22_native/spatial_reference/inputs.py": {
+    "bytes": 9961,
+    "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+  },
+  "source/experiments/wan22_native/spatial_reference/native.py": {
+    "bytes": 3550,
+    "sha256": "4baba0920beb9367ffb9ec61ef016d46ffb0fff0bd23dea6102e37fca7077cdb"
+  },
+  "source/experiments/wan22_native/spatial_reference/output.py": {
+    "bytes": 3374,
+    "sha256": "b28d9204989c9982955bf32859460417868d0ece1c5e9f2836b43c7fad26f4f7"
+  },
+  "source/experiments/wan22_native/spatial_reference/run.py": {
+    "bytes": 21001,
+    "sha256": "d9f9ee778b2e8efee137363009d21d7b2e501847bd8cad9c480f83ac8d9938d4"
+  },
+  "source/experiments/wan22_native/spatial_reference/sampling.py": {
+    "bytes": 7526,
+    "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+  },
+  "source/experiments/wan_adapter/capture_data.py": {
+    "bytes": 6043,
+    "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+  },
+  "terminal.json": {
+    "bytes": 544,
+    "sha256": "dd62e134796be4b9a55331b8e77c9a3f328eadbb14cdeafdd289071fabc1c587"
+  },
+  "worker/memory.jsonl": {
+    "bytes": 120011,
+    "sha256": "62dba86fba36f533938646ce57976117a7d36394e9158adb56c643b15576b403"
+  },
+  "worker/metrics.json": {
+    "bytes": 6448,
+    "sha256": "d4d70407d0a945bf3b595acdd8581902fe3e8592c8764b49ac298e53a2419069"
+  },
+  "worker/monitor-terminal.json": {
+    "bytes": 403,
+    "sha256": "6b6f4bb04a89308f6f5f75ca179222bc1452ba38139d3b39357be1a151497f15"
+  },
+  "worker/weight-load.json": {
+    "bytes": 47173,
+    "sha256": "0ee5cb4bda9171176eadd866a7316b2a591ae1cf169090a712ae248c04d09723"
+  },
+  "worker.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
