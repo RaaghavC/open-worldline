@@ -1,0 +1,704 @@
+{
+  "absolute_path_disclosure": "Owned nonsecret /workspace paths, Pod IDs and process IDs remain. No local user workspace prefixes were found in selected files.",
+  "copied_auditor_files": 15,
+  "copied_bytes": 5650985,
+  "copied_executed_source_files": 6,
+  "copied_files": 67,
+  "copied_record_files": 46,
+  "files": {
+    "audit/README.md": {
+      "bytes": 3398,
+      "sha256": "64ef3c43286668114fda28cfbe6a773f2a47289e490f15046f62d67ba46d3496",
+      "source": "work/command-attention-training-audit-v1/README.md",
+      "transformation": "none"
+    },
+    "audit/arrays.py": {
+      "bytes": 3417,
+      "sha256": "5d03c159978df228a613af93f1610eccb07f4becaceff31ea77263df5d71ae53",
+      "source": "work/command-attention-training-audit-v1/arrays.py",
+      "transformation": "none"
+    },
+    "audit/audit.py": {
+      "bytes": 37671,
+      "sha256": "297b8e5b669b5c61f5a6cc9392884c254dcc8fa6f108fddbfb00c23e07e291e4",
+      "source": "work/command-attention-training-audit-v1/audit.py",
+      "transformation": "none"
+    },
+    "audit/cpu-v1/independent-schema-review.json": {
+      "bytes": 971,
+      "sha256": "ef42591314648d11eb299d86108f3dfb578d7154077d7a8483335b0fbb6f9539",
+      "source": "work/command-attention-training-audit-v1/cpu-v1/independent-schema-review.json",
+      "transformation": "none"
+    },
+    "audit/cpu-v1/report.json": {
+      "bytes": 1742,
+      "sha256": "0407d616f9e1d971cd7d30ad76704a87ca6bd978253eeb500036c2710c066ca4",
+      "source": "work/command-attention-training-audit-v1/cpu-v1/report.json",
+      "transformation": "none"
+    },
+    "audit/cpu-v1/test.log": {
+      "bytes": 562,
+      "sha256": "c166a24768bad62dd9c84b0f02d37962fb343c945d12e67706585462bada5c44",
+      "source": "work/command-attention-training-audit-v1/cpu-v1/test.log",
+      "transformation": "none"
+    },
+    "audit/freeze.json": {
+      "bytes": 1295,
+      "sha256": "c21c2a90784dbf5e0bcb55c4fe995f13712693550e79147a987e483e5681be95",
+      "source": "work/command-attention-training-audit-v1/freeze.json",
+      "transformation": "none"
+    },
+    "audit/original-transfer-manifest.json": {
+      "bytes": 192683,
+      "sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932",
+      "source": "work/command-attention-training-audit-v1/original-transfer-manifest.json",
+      "transformation": "none"
+    },
+    "audit/producer-freeze.json": {
+      "bytes": 10036,
+      "sha256": "de512d91be83d2a127104c31f46c323a7dd3bff28e1d98cfa28d29c339351ab2",
+      "source": "work/command-attention-training-audit-v1/producer-freeze.json",
+      "transformation": "none"
+    },
+    "audit/profile_reference.py": {
+      "bytes": 31859,
+      "sha256": "b6a3c9a52cb05e462069197a91f9801f90ca210bcac362f316803ea5cf188967",
+      "source": "work/command-attention-training-audit-v1/profile_reference.py",
+      "transformation": "none"
+    },
+    "audit/protocol.json": {
+      "bytes": 1573,
+      "sha256": "ce1b1653ace6e83c196ecfcc3c18e9eb0815f92647a0315b35ea6f4875a481b0",
+      "source": "work/command-attention-training-audit-v1/protocol.json",
+      "transformation": "none"
+    },
+    "audit/reference/math_steps.py": {
+      "bytes": 8027,
+      "sha256": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50",
+      "source": "work/command-attention-training-audit-v1/reference/math_steps.py",
+      "transformation": "none"
+    },
+    "audit/reference/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "source": "work/command-attention-training-audit-v1/reference/objective.py",
+      "transformation": "none"
+    },
+    "audit/reference/run_training.py": {
+      "bytes": 36568,
+      "sha256": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a",
+      "source": "work/command-attention-training-audit-v1/reference/run_training.py",
+      "transformation": "none"
+    },
+    "audit/test_audit.py": {
+      "bytes": 8534,
+      "sha256": "4698185eb5ed3ca8bf31714059e1b041bb80c18db3413a794177faaef92f6f2e",
+      "source": "work/command-attention-training-audit-v1/test_audit.py",
+      "transformation": "none"
+    },
+    "executed-source/controller/bridge.py": {
+      "bytes": 16772,
+      "sha256": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/source/controller/bridge.py",
+      "transformation": "none"
+    },
+    "executed-source/controller/controller.py": {
+      "bytes": 5509,
+      "sha256": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/source/controller/controller.py",
+      "transformation": "none"
+    },
+    "executed-source/training/math_steps.py": {
+      "bytes": 8027,
+      "sha256": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/source/training/math_steps.py",
+      "transformation": "none"
+    },
+    "executed-source/training/packet.py": {
+      "bytes": 4343,
+      "sha256": "f838763a9777c61a08179a70c1fee8f8a3588063853abb243ee4d11b35bdcaa3",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/source/training/packet.py",
+      "transformation": "none"
+    },
+    "executed-source/training/prepare_inputs.py": {
+      "bytes": 5370,
+      "sha256": "e40f1792e034944cd334dbf6bf92bb5532fdd05c2180f3cc4f462f7d8ba7d724",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/source/training/prepare_inputs.py",
+      "transformation": "none"
+    },
+    "executed-source/training/run_training.py": {
+      "bytes": 36568,
+      "sha256": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/source/training/run_training.py",
+      "transformation": "none"
+    },
+    "records/audit.json": {
+      "bytes": 135623,
+      "sha256": "ba8e27201b649e0f8e700c39c7c4cc2b78c166a74ebf71e7e4d01ba82e916c41",
+      "source": "work/command-attention-training-actual-audit-v1/report.json",
+      "transformation": "none"
+    },
+    "records/automatic-dispatch/forecast.json": {
+      "bytes": 472,
+      "sha256": "c2a0e0c9f70062a2d820bfdc59cf017a070a74f48018dcbebe3aa4ae0d2725d3",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-auto-v1/forecast.json",
+      "transformation": "none"
+    },
+    "records/automatic-dispatch/profile-dispatch.json": {
+      "bytes": 393,
+      "sha256": "c7631344cd081ec2b951f9115682f2e5a6ce4f7c2ef58e60b4e81beb104782ee",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-auto-v1/profile-dispatch.json",
+      "transformation": "none"
+    },
+    "records/automatic-dispatch/request.json": {
+      "bytes": 429,
+      "sha256": "2aea94ce585a0a1afb87ce43ea28723233560c0cd2fdcc71ce75fbd171e6e37d",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-auto-v1/request.json",
+      "transformation": "none"
+    },
+    "records/automatic-dispatch/terminal.json": {
+      "bytes": 1007,
+      "sha256": "39be5f1c51bafb0f63f9fa2f022a6c63d14d4190fbc1a3f96097ac0f8b1278fc",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-auto-v1/terminal.json",
+      "transformation": "none"
+    },
+    "records/automatic-dispatch/training-dispatch.json": {
+      "bytes": 395,
+      "sha256": "e131602b89e57d599ee3567be4c24e3786b09bb7755eea686c366f5d84d99ef5",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-auto-v1/training-dispatch.json",
+      "transformation": "none"
+    },
+    "records/cleanup-plan.json": {
+      "bytes": 467,
+      "sha256": "37cf4e3bea85d7bc567860440492059418d303d8146222f3b9abacd0e0e979b2",
+      "source": "work/command-attention-training-recovered-v1/recovered/command-attention-cleanup-plan.json",
+      "transformation": "none"
+    },
+    "records/profile-audit.json": {
+      "bytes": 15275,
+      "sha256": "003b5675a46388dca2fe2e94e613f00dc45bbbb489ff64bf5f736a7a16c7a451",
+      "source": "work/command-attention-profile-training-lease-audit-v1/report.json",
+      "transformation": "none"
+    },
+    "records/profile-dispatch/request.json": {
+      "bytes": 149367,
+      "sha256": "174f1066d282b01d385c7f11da7430ddd3cdffe73df9bde7b01f997c99e7cc66",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-dispatch-v1/request.json",
+      "transformation": "none"
+    },
+    "records/profile-dispatch/stage-pid.json": {
+      "bytes": 393,
+      "sha256": "c7631344cd081ec2b951f9115682f2e5a6ce4f7c2ef58e60b4e81beb104782ee",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-dispatch-v1/stage-pid.json",
+      "transformation": "none"
+    },
+    "records/profile-dispatch/stage-terminal.json": {
+      "bytes": 1431,
+      "sha256": "131baf6406bf7d54081919d0dd8e1d54424b0df4effa4deaf14394dd5e70fbda",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-dispatch-v1/stage-terminal.json",
+      "transformation": "none"
+    },
+    "records/profile/launch.json": {
+      "bytes": 3962,
+      "sha256": "98c7120be6815bfa9a1ed31eb422fd3960a8c6a682e71065706af4e288841f94",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/launch.json",
+      "transformation": "none"
+    },
+    "records/profile/result/core-after-parity.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/result/core-after-parity.json",
+      "transformation": "none"
+    },
+    "records/profile/result/core-after-updates.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/result/core-after-updates.json",
+      "transformation": "none"
+    },
+    "records/profile/result/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/result/core-before.json",
+      "transformation": "none"
+    },
+    "records/profile/result/metrics.json": {
+      "bytes": 40192,
+      "sha256": "54571933fa957d1a26f020057aad114c32e85c691b6c25fb41820f5c600e63f7",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/result/metrics.json",
+      "transformation": "none"
+    },
+    "records/profile/result/monitor-terminal.json": {
+      "bytes": 404,
+      "sha256": "3b248837ca155896476b1c2f2ff0612750c4d58e633490d81939a81ba7376a72",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/result/monitor-terminal.json",
+      "transformation": "none"
+    },
+    "records/profile/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/result/weight-load.json",
+      "transformation": "none"
+    },
+    "records/profile/terminal.json": {
+      "bytes": 541,
+      "sha256": "449891e20f6f53c9505cff5d4518fa7ca09c8294bfe081272b7f1fa313106a71",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-profile-v1/terminal.json",
+      "transformation": "none"
+    },
+    "records/recovery/index.json": {
+      "bytes": 76945,
+      "sha256": "2e87c2b859718172ccfeae3a2430ccc28a34c01eeb0edf6c29cced43387e3c34",
+      "source": "work/command-attention-training-recovered-v1/index.json",
+      "transformation": "none"
+    },
+    "records/recovery/original-transfer-binding.json": {
+      "bytes": 937,
+      "sha256": "4372fffb7f066568b8b031bd521743703f565234bbc0b6a542e5c6c8fed7e5ec",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-recovery/profile-training-v1/original-transfer-binding.json",
+      "transformation": "none"
+    },
+    "records/recovery/recovery-verified.json": {
+      "bytes": 423,
+      "sha256": "207784cac5ba063c512feeca93a3cf748ad762a2c6c3b67b16ffb7627db72ee8",
+      "source": "work/command-attention-training-recovered-v1/recovery-verified.json",
+      "transformation": "none"
+    },
+    "records/training-dispatch/request.json": {
+      "bytes": 390946,
+      "sha256": "7027c74cb3bc2a49f1ec175c97c28d6e618f399badb82857a96a1f67f0049641",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-dispatch-v1/request.json",
+      "transformation": "none"
+    },
+    "records/training-dispatch/stage-pid.json": {
+      "bytes": 395,
+      "sha256": "e131602b89e57d599ee3567be4c24e3786b09bb7755eea686c366f5d84d99ef5",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-dispatch-v1/stage-pid.json",
+      "transformation": "none"
+    },
+    "records/training-dispatch/stage-terminal.json": {
+      "bytes": 1350,
+      "sha256": "da161443e57ddfc81daf354d5e24ac5acc298d6dd5b1e9d22616a5eac059cd83",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-dispatch-v1/stage-terminal.json",
+      "transformation": "none"
+    },
+    "records/training-dispatch/training-admission.json": {
+      "bytes": 9355,
+      "sha256": "adf92b22a129e2627779c69c82541c1e08ea0b986368a80f52673af98580cac4",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-dispatch-v1/training-admission.json",
+      "transformation": "none"
+    },
+    "records/training-dispatch/training-plan.json": {
+      "bytes": 226685,
+      "sha256": "e705ec9e1e8ef769317aef9f13b9e7a385106d7837236869964481c0a5490198",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-dispatch-v1/training-plan.json",
+      "transformation": "none"
+    },
+    "records/training/attempt.json": {
+      "bytes": 100,
+      "sha256": "dc35c96c9a508ff33ef7646698161f1179ed17943a7eb191a6966dffab55581a",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/attempt.json",
+      "transformation": "none"
+    },
+    "records/training/executed-admission.json": {
+      "bytes": 9355,
+      "sha256": "adf92b22a129e2627779c69c82541c1e08ea0b986368a80f52673af98580cac4",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/executed-admission.json",
+      "transformation": "none"
+    },
+    "records/training/executed-plan.json": {
+      "bytes": 226685,
+      "sha256": "e705ec9e1e8ef769317aef9f13b9e7a385106d7837236869964481c0a5490198",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/executed-plan.json",
+      "transformation": "none"
+    },
+    "records/training/launch.json": {
+      "bytes": 10349,
+      "sha256": "99fd22a6ba2c7a01b5c6dff911698b8ebbca9af0d8ba5983f1d7c95525a21bc7",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/launch.json",
+      "transformation": "none"
+    },
+    "records/training/metrics.json": {
+      "bytes": 20200,
+      "sha256": "6c8bd8ef950edd315a1365c3845644aab9e48f40d04579f74deec8421c0aecf9",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/metrics.json",
+      "transformation": "none"
+    },
+    "records/training/parent-memory.jsonl": {
+      "bytes": 570384,
+      "sha256": "a96c6495f037fd58296ad4066bbc6c0ee10b4f5f0e08c12c782164db6f7eff23",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/parent-memory.jsonl",
+      "transformation": "none"
+    },
+    "records/training/result/checkpoint-0000/manifest.json": {
+      "bytes": 21460,
+      "sha256": "78fb75515e1e56510062b5504b69ae9d866dd5ac5ae17e327ec374ad2718118f",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/checkpoint-0000/manifest.json",
+      "transformation": "none"
+    },
+    "records/training/result/checkpoint-0128/manifest.json": {
+      "bytes": 21462,
+      "sha256": "41018051ec648c2e1e01ed7d9334ecf24d3a11235df35e6ceb5948a529b00c37",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/checkpoint-0128/manifest.json",
+      "transformation": "none"
+    },
+    "records/training/result/checkpoint-0256/manifest.json": {
+      "bytes": 21462,
+      "sha256": "d6fb5f18e43c0b2b6a58a035cf445c25f51406f52f8c4469c3fe23d58eda8d25",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/checkpoint-0256/manifest.json",
+      "transformation": "none"
+    },
+    "records/training/result/checkpoint-0384/manifest.json": {
+      "bytes": 21462,
+      "sha256": "9028a95bd3f425806e7d98aa42ebef5e677f6daf11008a47ae17100792e7e515",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/checkpoint-0384/manifest.json",
+      "transformation": "none"
+    },
+    "records/training/result/checkpoint-0512/manifest.json": {
+      "bytes": 21462,
+      "sha256": "bfbe45cb96d2b3ea5a927c53bca04a28d030280491dd5d2f3b42215ee74dda13",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/checkpoint-0512/manifest.json",
+      "transformation": "none"
+    },
+    "records/training/result/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/core-after.json",
+      "transformation": "none"
+    },
+    "records/training/result/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/core-before.json",
+      "transformation": "none"
+    },
+    "records/training/result/last-valid.json": {
+      "bytes": 154,
+      "sha256": "5f77ae81079ae391d27d4bbd42562bf437e1b6d8bb2fa3016e0822202baed576",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/last-valid.json",
+      "transformation": "none"
+    },
+    "records/training/result/memory.jsonl": {
+      "bytes": 919032,
+      "sha256": "df5311f7869fb2054f6b9c3fcbd5873a967dcbe3805594528ab44e707edfeeac",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/memory.jsonl",
+      "transformation": "none"
+    },
+    "records/training/result/metrics.json": {
+      "bytes": 765990,
+      "sha256": "8db62b74e5e02036b4da5a60bb382d84ed1dcff9d2e266927428076662fd7954",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/metrics.json",
+      "transformation": "none"
+    },
+    "records/training/result/monitor-terminal.json": {
+      "bytes": 404,
+      "sha256": "297081f41b1f7c7ab7593884c952ec284c81e352195e52dc8f46ced140443986",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/monitor-terminal.json",
+      "transformation": "none"
+    },
+    "records/training/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/result/weight-load.json",
+      "transformation": "none"
+    },
+    "records/training/terminal.json": {
+      "bytes": 544,
+      "sha256": "6e0d2eec559fb1d8abb251c44e4a80cff35a391df9d5a6462cd7f56ba9fa75a1",
+      "source": "work/command-attention-training-recovered-v1/recovered/action-results/command-attention-training-v1/terminal.json",
+      "transformation": "none"
+    }
+  },
+  "privacy_scan": {
+    "matched_files": [],
+    "rules": [
+      "private_workspace",
+      "private_key",
+      "github_token",
+      "provider_token",
+      "aws_access",
+      "bearer_value"
+    ],
+    "scope": "Only copied text payload; pattern scan plus operational path review. It is not a proof that every possible secret format is absent."
+  },
+  "raw_publication": {
+    "included_in_git": false,
+    "status": "pending",
+    "url": null
+  },
+  "recorded_producer_sources_in_repository": {
+    "controller/bridge.py": {
+      "repository_path": "experiments/wan22_native/command_attention/bridge.py",
+      "sha256": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f"
+    },
+    "controller/controller.py": {
+      "repository_path": "experiments/wan22_native/command_attention/controller.py",
+      "sha256": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45"
+    },
+    "repository/experiments/room_world/__init__.py": {
+      "repository_path": "experiments/room_world/__init__.py",
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "repository/experiments/room_world/memory_evaluate.py": {
+      "repository_path": "experiments/room_world/memory_evaluate.py",
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "repository/experiments/room_world/memory_model.py": {
+      "repository_path": "experiments/room_world/memory_model.py",
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "repository/experiments/room_world/memory_sequence.py": {
+      "repository_path": "experiments/room_world/memory_sequence.py",
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "repository/experiments/room_world/memory_train.py": {
+      "repository_path": "experiments/room_world/memory_train.py",
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "repository/experiments/room_world/model.py": {
+      "repository_path": "experiments/room_world/model.py",
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "repository/experiments/wan22_native/__init__.py": {
+      "repository_path": "experiments/wan22_native/__init__.py",
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "repository_path": "experiments/wan22_native/action_adapter/__init__.py",
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "repository/experiments/wan22_native/action_adapter/model.py": {
+      "repository_path": "experiments/wan22_native/action_adapter/model.py",
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "repository_path": "experiments/wan22_native/action_adapter/pooling.py",
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/__init__.py",
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/bridge.py",
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/cache_run.py",
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "repository_path": "experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json",
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "repository_path": "experiments/wan22_native/action_cuda/cpu-results/v1/report.json",
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "repository/experiments/wan22_native/action_cuda/data.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/data.py",
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "repository/experiments/wan22_native/action_cuda/probe.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/probe.py",
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/probe_evidence.py",
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/probe_math.py",
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/test_cpu.py",
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/test_independent.py",
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "repository_path": "experiments/wan22_native/action_cuda/test_probe.py",
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "repository/experiments/wan22_native/action_data/__init__.py": {
+      "repository_path": "experiments/wan22_native/action_data/__init__.py",
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "repository/experiments/wan22_native/action_data/data.py": {
+      "repository_path": "experiments/wan22_native/action_data/data.py",
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "repository/experiments/wan22_native/action_training/__init__.py": {
+      "repository_path": "experiments/wan22_native/action_training/__init__.py",
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "repository/experiments/wan22_native/action_training/objective.py": {
+      "repository_path": "experiments/wan22_native/action_training/objective.py",
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "repository_path": "experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/__init__.py",
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/codec-source.json",
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "repository/experiments/wan22_native/cuda_reference/config.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/config.json",
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/evidence.py",
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/expected-weights.json",
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/guards.py",
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "repository/experiments/wan22_native/cuda_reference/native.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/native.py",
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "repository_path": "experiments/wan22_native/cuda_reference/requirements.txt",
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/sampling.py",
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "repository_path": "experiments/wan22_native/cuda_reference/upstream-provenance.json",
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/vendor/__init__.py",
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py",
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "repository_path": "experiments/wan22_native/cuda_reference/vendor/vae2_2.py",
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "repository/experiments/wan22_native/load_weights.py": {
+      "repository_path": "experiments/wan22_native/load_weights.py",
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "repository_path": "experiments/wan22_native/official_cpu/__init__.py",
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "repository_path": "experiments/wan22_native/official_cpu/inputs.py",
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "repository_path": "experiments/wan22_native/official_cpu/streaming.py",
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "repository/experiments/wan22_native/portable.py": {
+      "repository_path": "experiments/wan22_native/portable.py",
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/__init__.py",
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "repository/experiments/wan22_native/spatial_reference/config.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/config.py",
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/evidence.py",
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/guards.py",
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/inputs.py",
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "repository_path": "experiments/wan22_native/spatial_reference/sampling.py",
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "repository/experiments/wan22_native/text-reuse.json": {
+      "repository_path": "experiments/wan22_native/text-reuse.json",
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "repository/experiments/wan22_native/vendor/__init__.py": {
+      "repository_path": "experiments/wan22_native/vendor/__init__.py",
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "repository/experiments/wan22_native/vendor/attention.py": {
+      "repository_path": "experiments/wan22_native/vendor/attention.py",
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "repository/experiments/wan22_native/vendor/model.py": {
+      "repository_path": "experiments/wan22_native/vendor/model.py",
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "repository/experiments/wan_adapter/capture_data.py": {
+      "repository_path": "experiments/wan_adapter/capture_data.py",
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "repository/experiments/wan_adapter/native_control/__init__.py": {
+      "repository_path": "experiments/wan_adapter/native_control/__init__.py",
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "repository/experiments/wan_adapter/native_control/portable.py": {
+      "repository_path": "experiments/wan_adapter/native_control/portable.py",
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "training/math_steps.py": {
+      "repository_path": "experiments/wan22_native/command_attention/training/math_steps.py",
+      "sha256": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50"
+    },
+    "training/packet.py": {
+      "repository_path": "experiments/wan22_native/command_attention/training/packet.py",
+      "sha256": "f838763a9777c61a08179a70c1fee8f8a3588063853abb243ee4d11b35bdcaa3"
+    },
+    "training/prepare_inputs.py": {
+      "repository_path": "experiments/wan22_native/command_attention/training/prepare_inputs.py",
+      "sha256": "e40f1792e034944cd334dbf6bf92bb5532fdd05c2180f3cc4f462f7d8ba7d724"
+    },
+    "training/run_training.py": {
+      "repository_path": "experiments/wan22_native/command_attention/training/run_training.py",
+      "sha256": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a"
+    }
+  },
+  "redactions": [],
+  "schema": "worldline-command-attention-training-record-publication-v1",
+  "scope": "Small exact producer/audit records and existing CPU saved-file reader; no raw tensors or optimizer binaries in Git.",
+  "supplemental_files": [
+    "README.md",
+    "publication.json",
+    "numerical-summary.json",
+    "verify_records.py"
+  ]
+}

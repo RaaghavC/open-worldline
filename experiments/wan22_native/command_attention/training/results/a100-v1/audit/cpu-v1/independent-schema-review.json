@@ -1,0 +1,22 @@
+{
+  "audit_sha256": "297b8e5b669b5c61f5a6cc9392884c254dcc8fa6f108fddbfb00c23e07e291e4",
+  "checked": [
+    "scalar/evaluation/raw paths",
+    "five checkpoint manifests and last-valid pointer",
+    "66-source identities",
+    "output inventory",
+    "profile timing components",
+    "clip guard terminal fields",
+    "dispatch lease bindings"
+  ],
+  "dispatcher_sha256": "f76897d8415648b8b7545f503d77169a0f27423216f4a083c6b217fde5a1e7e2",
+  "finding": "No concrete field, path, checkpoint-name, retention-count or forecast-receipt mismatch found.",
+  "model_calls": false,
+  "producer_sha256": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a",
+  "review_method": "Independent textual source/schema read communicated by reviewer; recorded here by artifact owner.",
+  "reviewer": "/root/video_review_close",
+  "schema": "worldline-command-attention-training-audit-schema-review-v1",
+  "source_edits": false,
+  "status": "passed",
+  "tests_rerun": false
+}

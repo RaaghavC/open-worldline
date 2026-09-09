@@ -1,0 +1,20 @@
+{
+  "status": "training_dispatched",
+  "pod_id": "9fyvk00q8raoxv",
+  "lease_plan_sha256": "37cf4e3bea85d7bc567860440492059418d303d8146222f3b9abacd0e0e979b2",
+  "helper_sha256": "f76897d8415648b8b7545f503d77169a0f27423216f4a083c6b217fde5a1e7e2",
+  "source_sha256": "e640b4fb0c7bbe655cbb04d32a2d04c1e8beba285e67a18f44d57a45873f3f74",
+  "profile_deadline_utc": "2026-09-09T00:07:41.516099Z",
+  "cleanup_due_at": "2026-09-09T00:46:37.078725Z",
+  "profile_sha256": "54571933fa957d1a26f020057aad114c32e85c691b6c25fb41820f5c600e63f7",
+  "projection_seconds": 1437.123321211338,
+  "training_dispatch": {
+    "schema": "worldline-command-attention-stage-dispatch-v1",
+    "stage": "training",
+    "pid": 6152,
+    "request_sha256": "7027c74cb3bc2a49f1ec175c97c28d6e618f399badb82857a96a1f67f0049641",
+    "helper": "/workspace/dispatch_command_attention.py",
+    "started_at": "2026-09-08T23:59:29.978869Z",
+    "terminal": "/workspace/action-results/command-attention-training-dispatch-v1/stage-terminal.json"
+  }
+}

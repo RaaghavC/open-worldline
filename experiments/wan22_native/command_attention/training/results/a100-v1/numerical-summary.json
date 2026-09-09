@@ -1,0 +1,232 @@
+{
+  "completed_updates": 512,
+  "definition": "For edge a to b, FP32 -(G_b-G_a) versus z_b-z_a; G=N+5(P-N), ideal sigma=1, native time=999, clean observed prefix excluded; FP64 reductions over four future latent groups. Ranges span the four fixed evaluation noises.",
+  "edges": [
+    {
+      "edge": [
+        "stationary_closed",
+        "stationary_interact"
+      ],
+      "kind": "door",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          0.6275098581335568,
+          0.6403907587596288
+        ],
+        "normalized_mse": [
+          0.8173022784927668,
+          0.8384790065529318
+        ],
+        "prediction_rms": [
+          0.08683342089556723,
+          0.09926455314016604
+        ],
+        "target_rms": [
+          0.6070362554369515,
+          0.6070362554369515
+        ]
+      }
+    },
+    {
+      "edge": [
+        "left_closed",
+        "left_interact"
+      ],
+      "kind": "door",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          0.44198255517155083,
+          0.44818689396069933
+        ],
+        "normalized_mse": [
+          0.8857018513463247,
+          0.8991283226079081
+        ],
+        "prediction_rms": [
+          0.08638268779745903,
+          0.09892259329001613
+        ],
+        "target_rms": [
+          0.6425488950679712,
+          0.6425488950679712
+        ]
+      }
+    },
+    {
+      "edge": [
+        "right_closed",
+        "right_interact"
+      ],
+      "kind": "door",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          0.4225459916322348,
+          0.4268077909933069
+        ],
+        "normalized_mse": [
+          0.8851106518304962,
+          0.8954264315434305
+        ],
+        "prediction_rms": [
+          0.08725837073414702,
+          0.09958176559626732
+        ],
+        "target_rms": [
+          0.5859962418859452,
+          0.5859962418859452
+        ]
+      }
+    },
+    {
+      "edge": [
+        "stationary_closed",
+        "left_closed"
+      ],
+      "kind": "camera",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          0.005811319277350826,
+          0.01785580785015824
+        ],
+        "normalized_mse": [
+          0.9996840330558449,
+          1.0000778758316575
+        ],
+        "prediction_rms": [
+          0.017053857240313445,
+          0.017435154587700924
+        ],
+        "target_rms": [
+          1.0550656084108898,
+          1.0550656084108898
+        ]
+      }
+    },
+    {
+      "edge": [
+        "stationary_closed",
+        "right_closed"
+      ],
+      "kind": "camera",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          -0.013366313822746343,
+          -0.005954398775757698
+        ],
+        "normalized_mse": [
+          1.000483453840366,
+          1.0007570858083132
+        ],
+        "prediction_rms": [
+          0.016950827605724382,
+          0.017411716936493713
+        ],
+        "target_rms": [
+          1.0074684937751963,
+          1.0074684937751963
+        ]
+      }
+    },
+    {
+      "edge": [
+        "stationary_interact",
+        "left_interact"
+      ],
+      "kind": "camera",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          -0.011406465493972699,
+          0.010947210953331404
+        ],
+        "normalized_mse": [
+          0.9999304520269101,
+          1.0006567306227045
+        ],
+        "prediction_rms": [
+          0.01694162781156765,
+          0.018361385853360265
+        ],
+        "target_rms": [
+          1.0178716722668557,
+          1.0178716722668557
+        ]
+      }
+    },
+    {
+      "edge": [
+        "stationary_interact",
+        "right_interact"
+      ],
+      "kind": "camera",
+      "noise_ids": [
+        "noise_00",
+        "noise_01",
+        "noise_02",
+        "noise_03"
+      ],
+      "ranges": {
+        "cosine": [
+          -0.007619449915762253,
+          0.01067266838251982
+        ],
+        "normalized_mse": [
+          0.9999351424932641,
+          1.00057438806833
+        ],
+        "prediction_rms": [
+          0.016878129371144374,
+          0.017577764165152603
+        ],
+        "target_rms": [
+          0.9692553068231224,
+          0.9692553068231224
+        ]
+      }
+    }
+  ],
+  "evaluation_noises": 4,
+  "final_checkpoint_sha256": "c3ece8c1b9c6f7eadedbd9db235ad63cab28b2c2ad2d097936c02f7efaf4393d",
+  "initial_normalized_mse_all": 1.0,
+  "initial_prediction_rms_all": 0.0,
+  "quality_assessed": false,
+  "schema": "worldline-command-attention-training-seven-edge-summary-v1",
+  "source_audit_sha256": "ba8e27201b649e0f8e700c39c7c4cc2b78c166a74ebf71e7e4d01ba82e916c41",
+  "source_metrics_sha256": "8db62b74e5e02036b4da5a60bb382d84ed1dcff9d2e266927428076662fd7954",
+  "video_status": "pending"
+}

@@ -1,0 +1,548 @@
+{
+  "schema": "worldline-wan22-action-checkpoint-v1",
+  "completed_updates": 0,
+  "identity": {
+    "schema": "worldline-command-attention-training-v1",
+    "scope": "fixed512-command-attention-seven-edge-fitting-only",
+    "plan_sha256": "e705ec9e1e8ef769317aef9f13b9e7a385106d7837236869964481c0a5490198",
+    "source_sha256": {
+      "controller/bridge.py": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f",
+      "controller/controller.py": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45",
+      "repository/experiments/room_world/__init__.py": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094",
+      "repository/experiments/room_world/memory_evaluate.py": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd",
+      "repository/experiments/room_world/memory_model.py": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f",
+      "repository/experiments/room_world/memory_sequence.py": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080",
+      "repository/experiments/room_world/memory_train.py": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8",
+      "repository/experiments/room_world/model.py": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754",
+      "repository/experiments/wan22_native/__init__.py": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416",
+      "repository/experiments/wan22_native/action_adapter/__init__.py": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0",
+      "repository/experiments/wan22_native/action_adapter/model.py": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375",
+      "repository/experiments/wan22_native/action_adapter/pooling.py": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b",
+      "repository/experiments/wan22_native/action_cuda/__init__.py": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974",
+      "repository/experiments/wan22_native/action_cuda/bridge.py": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f",
+      "repository/experiments/wan22_native/action_cuda/cache_run.py": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b",
+      "repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd",
+      "repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9",
+      "repository/experiments/wan22_native/action_cuda/data.py": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3",
+      "repository/experiments/wan22_native/action_cuda/probe.py": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9",
+      "repository/experiments/wan22_native/action_cuda/probe_evidence.py": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702",
+      "repository/experiments/wan22_native/action_cuda/probe_math.py": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193",
+      "repository/experiments/wan22_native/action_cuda/test_cpu.py": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70",
+      "repository/experiments/wan22_native/action_cuda/test_independent.py": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b",
+      "repository/experiments/wan22_native/action_cuda/test_probe.py": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f",
+      "repository/experiments/wan22_native/action_data/__init__.py": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db",
+      "repository/experiments/wan22_native/action_data/data.py": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2",
+      "repository/experiments/wan22_native/action_training/__init__.py": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73",
+      "repository/experiments/wan22_native/action_training/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+      "repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "repository/experiments/wan22_native/cuda_reference/__init__.py": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534",
+      "repository/experiments/wan22_native/cuda_reference/codec-source.json": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662",
+      "repository/experiments/wan22_native/cuda_reference/config.json": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc",
+      "repository/experiments/wan22_native/cuda_reference/evidence.py": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac",
+      "repository/experiments/wan22_native/cuda_reference/expected-weights.json": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367",
+      "repository/experiments/wan22_native/cuda_reference/guards.py": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f",
+      "repository/experiments/wan22_native/cuda_reference/native.py": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602",
+      "repository/experiments/wan22_native/cuda_reference/requirements.txt": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378",
+      "repository/experiments/wan22_native/cuda_reference/sampling.py": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6",
+      "repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b",
+      "repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e",
+      "repository/experiments/wan22_native/cuda_reference/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "repository/experiments/wan22_native/cuda_reference/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+      "repository/experiments/wan22_native/load_weights.py": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9",
+      "repository/experiments/wan22_native/official_cpu/__init__.py": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba",
+      "repository/experiments/wan22_native/official_cpu/inputs.py": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f",
+      "repository/experiments/wan22_native/official_cpu/streaming.py": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815",
+      "repository/experiments/wan22_native/portable.py": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e",
+      "repository/experiments/wan22_native/spatial_reference/__init__.py": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22",
+      "repository/experiments/wan22_native/spatial_reference/config.py": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2",
+      "repository/experiments/wan22_native/spatial_reference/evidence.py": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02",
+      "repository/experiments/wan22_native/spatial_reference/guards.py": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8",
+      "repository/experiments/wan22_native/spatial_reference/inputs.py": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb",
+      "repository/experiments/wan22_native/spatial_reference/sampling.py": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602",
+      "repository/experiments/wan22_native/text-reuse.json": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1",
+      "repository/experiments/wan22_native/vendor/__init__.py": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068",
+      "repository/experiments/wan22_native/vendor/attention.py": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "repository/experiments/wan22_native/vendor/model.py": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432",
+      "repository/experiments/wan_adapter/capture_data.py": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca",
+      "repository/experiments/wan_adapter/native_control/__init__.py": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092",
+      "repository/experiments/wan_adapter/native_control/portable.py": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457",
+      "training/math_steps.py": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50",
+      "training/packet.py": "f838763a9777c61a08179a70c1fee8f8a3588063853abb243ee4d11b35bdcaa3",
+      "training/prepare_inputs.py": "e40f1792e034944cd334dbf6bf92bb5532fdd05c2180f3cc4f462f7d8ba7d724",
+      "training/run_training.py": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a"
+    },
+    "inputs_sha256": "4f37fa59791d7b0645529e4b97978f08d928baf8987e79a9aad6da1b42f3046a",
+    "controller_parameters": 4936448,
+    "admission_sha256": "adf92b22a129e2627779c69c82541c1e08ea0b986368a80f52673af98580cac4",
+    "note": "Reused checkpoint helper calls the new controller file adapter.safetensors; original residual adapter is absent."
+  },
+  "tensors": {
+    "action.0.weight": {
+      "shape": [
+        128,
+        24
+      ],
+      "dtype": "float32",
+      "sha256": "5addcb6a2e5db8ba7f3a6790705e40dc62507655e072b16979ed5d3e61fe6a83"
+    },
+    "action.0.bias": {
+      "shape": [
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "bc207ad0c024e3783e8878a339f4c072fc13057037e92f1227ff26fe9c2eb65b"
+    },
+    "action.2.weight": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "fb6473490c9229e03325a1b07495c91d45f3c99de11c15b6980a4016e11a595d"
+    },
+    "action.2.bias": {
+      "shape": [
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "692c1966cc9b3151804e1899a3dd8493a9f36316db3b7ce3644531e1eddb4f53"
+    },
+    "command_gru.weight_ih": {
+      "shape": [
+        384,
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "e1c56b29429dd1c7f909baad460061d53d23e14b4f759150b34c95d53781fed4"
+    },
+    "command_gru.weight_hh": {
+      "shape": [
+        384,
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "f4d0037bcbb968afdbf47387b9cc0b4b525984320cf10a9ff44ce19cfae1ed0e"
+    },
+    "command_gru.bias_ih": {
+      "shape": [
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "f5824a829f20d01aca044bd727e0dad6af761e54ffa2330c69c7448e48b907d8"
+    },
+    "command_gru.bias_hh": {
+      "shape": [
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "3bc3332b24640f2645aa63a6ad90232d61c09639a7ad9f690ae49509ffad8037"
+    },
+    "gate.weight": {
+      "shape": [
+        768,
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "0ddeee9317eb11b9fdac0717be1dacac6f400012ad5be8b8e8bfaecda20b3ca9"
+    },
+    "gate.bias": {
+      "shape": [
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "ee598127ec173eda409417467cc9b66d3f400c1c4f0730162a063809a69aad76"
+    },
+    "projections.24_q.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "0e1a2b7d460b7bfb50c60c148a7638051ecce46513df60ebe018b013dc41e107"
+    },
+    "projections.24_q.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.24_k.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "0d85f3ecc68e083e60b8eff109c7c07603d2bb78623d5c03bf23d89004634be7"
+    },
+    "projections.24_k.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.24_v.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "fa0953d27de99a36b1e78dc2eb8451eb6dc184140b33e336a295943e2f940d89"
+    },
+    "projections.24_v.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.24_o.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "ba93d8e894af9bc3669a5533a6ae0425ae2b9e12fada600554baf57d47e40d36"
+    },
+    "projections.24_o.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.25_q.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "28d26b199d7007ecf32ab29e7e3395cd3395d85b58bd4c03a742d9e80e92aa7d"
+    },
+    "projections.25_q.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.25_k.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "3be4d4bfa12af2950d158bf6876161efc6b37391b248732819e2218ddb090b77"
+    },
+    "projections.25_k.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.25_v.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "6d6d848b258ba5c813832027840a7f1fbe559db982b5e85ee1e02be14d071dca"
+    },
+    "projections.25_v.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.25_o.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "4804ff84d4c4dac43443666aa18393789e9c1fee8eb68d23525dc4fb5cf24a95"
+    },
+    "projections.25_o.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.26_q.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "c57df2f913badf3f211e0286ea4fe89315b8f9e1161886c2663c1f9cfe7bcf4f"
+    },
+    "projections.26_q.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.26_k.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "03188c5fbd36234c666dd654062f279aeb3852a502c132947257c9a7661d97d3"
+    },
+    "projections.26_k.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.26_v.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "ad51769b2443f19678157367840dea91eebe9c41d746f7cc0bd5495ea4e0b2bc"
+    },
+    "projections.26_v.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.26_o.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "8449a222f13f641c668032c9f4d32a15da9ade8862870ff5dd1bade31a0adb59"
+    },
+    "projections.26_o.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.27_q.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "b199f1a432978a67a245746e2a9f16dc06d565f43816b1a560549bcd5486e0e5"
+    },
+    "projections.27_q.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.27_k.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "885eb62a3346ff85b68811c065d0558c43180e8f18cdf2f3c124abb3b2d9a26b"
+    },
+    "projections.27_k.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.27_v.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "4c33d07f5bc3ecf38d7c95941df063a724914a2731a490f448897728037bfb0b"
+    },
+    "projections.27_v.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.27_o.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "9724613a260641db4552675fb25c729082be1e405cc4edd9375dd171b5acb849"
+    },
+    "projections.27_o.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.28_q.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "3f79b4d8f0ab6accb5ee29556085538f7db3fe83c9281359df7155e14bbe8b2d"
+    },
+    "projections.28_q.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.28_k.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "d2c583a27b215387cda19d720bb6ced224c744df189b2c30de31a09d7416a604"
+    },
+    "projections.28_k.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.28_v.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "d418186cbc35657c2efc08b5583aabb96084c657daa0d343dc509d70c8accbec"
+    },
+    "projections.28_v.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.28_o.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "f89fac134da4458e04d9296957397ca55315e5d285b29ec183cc1dc3900c8088"
+    },
+    "projections.28_o.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.29_q.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "fde0de88223b080576f9ace0582f1a246fa45d10791ab0e97a5d16521dc279ad"
+    },
+    "projections.29_q.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.29_k.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "bb22b007448b29b4ed9ded64142c852702a79b6b1c0f555040dc4550756e635a"
+    },
+    "projections.29_k.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.29_v.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "55cee79d799c1e5492b7e1748d6763b747a0cd8603b3b77f579719f3d3d37f81"
+    },
+    "projections.29_v.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    },
+    "projections.29_o.a.weight": {
+      "shape": [
+        32,
+        3072
+      ],
+      "dtype": "float32",
+      "sha256": "d7d37c6a9a31b0b4f696fa6f0a612c8f873a4196d9787c33f7df853e1fb2b179"
+    },
+    "projections.29_o.b.weight": {
+      "shape": [
+        3072,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762"
+    }
+  },
+  "files": {
+    "adapter.safetensors": "a87ef9fb9fe97909bd5ecaaa46e46d35942624d32840529dd2c1245651be5ba2",
+    "optimizer-and-rng.pt": "886d7f0df1c0dcda5416f1d223ebb85b4aeeec50c9b052f8c96a25075a6a1b1a"
+  },
+  "external_core_weights_included": false,
+  "resume_supported": false
+}

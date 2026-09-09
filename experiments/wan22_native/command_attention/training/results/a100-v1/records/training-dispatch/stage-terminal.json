@@ -1,0 +1,33 @@
+{
+  "schema": "worldline-command-attention-stage-dispatch-v1",
+  "stage": "training",
+  "status": "complete",
+  "pid": 6152,
+  "request_sha256": "7027c74cb3bc2a49f1ec175c97c28d6e618f399badb82857a96a1f67f0049641",
+  "runner_pid": 6215,
+  "argv": [
+    "/workspace/action-setup-v1/venv/bin/python",
+    "/workspace/command-attention-v1/training/run_training.py",
+    "--execute",
+    "--plan",
+    "/workspace/action-results/command-attention-training-dispatch-v1/training-plan.json",
+    "--plan-sha256",
+    "e705ec9e1e8ef769317aef9f13b9e7a385106d7837236869964481c0a5490198",
+    "--admission",
+    "/workspace/action-results/command-attention-training-dispatch-v1/training-admission.json",
+    "--weights",
+    "/workspace/wan22-reference-weights",
+    "--output",
+    "/workspace/action-results/command-attention-training-v1"
+  ],
+  "exit_code": 0,
+  "runner_records_sha256": {
+    "terminal.json": "6e0d2eec559fb1d8abb251c44e4a80cff35a391df9d5a6462cd7f56ba9fa75a1",
+    "metrics.json": "6c8bd8ef950edd315a1365c3845644aab9e48f40d04579f74deec8421c0aecf9",
+    "launch.json": "99fd22a6ba2c7a01b5c6dff911698b8ebbca9af0d8ba5983f1d7c95525a21bc7",
+    "result/metrics.json": "8db62b74e5e02036b4da5a60bb382d84ed1dcff9d2e266927428076662fd7954"
+  },
+  "seconds": 1134.0302327498794,
+  "finished_at": "2026-09-09T00:18:24.055219Z",
+  "runner_exited": true
+}

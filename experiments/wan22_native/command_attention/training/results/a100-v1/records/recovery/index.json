@@ -1,0 +1,1566 @@
+{
+  "excludes": [
+    "unchanged original source/input transfer files",
+    "foundation weights",
+    "installed runtime",
+    "credentials",
+    "unrelated output directories"
+  ],
+  "file_bytes": 864298597,
+  "files": {
+    "action-download-weights.sh": {
+      "bytes": 2317,
+      "sha256": "2350f1572bf8fc3192358c3938d3975d7ea3b7d204ec396c1b5e8c20b80a020d"
+    },
+    "action-extract.py": {
+      "bytes": 20894,
+      "sha256": "fa994686743f0540f9cd74261f98332215e7f9b6275cba911b3fd27aa6341eca"
+    },
+    "action-recovery/profile-training-v1/input-comparison.json": {
+      "bytes": 295,
+      "sha256": "d7b5588ad5e62b6e528dacd101dec5d7dff7f5217f4361ec28469bf78a0ce27b"
+    },
+    "action-recovery/profile-training-v1/original-transfer-binding.json": {
+      "bytes": 937,
+      "sha256": "4372fffb7f066568b8b031bd521743703f565234bbc0b6a542e5c6c8fed7e5ec"
+    },
+    "action-recovery/profile-training-v1/quiet-before.json": {
+      "bytes": 3971,
+      "sha256": "54aba5b65bbedb932d849f86528c51de5898149a6d4af0aa8a6c81d83e238bf5"
+    },
+    "action-results/command-attention-auto-launch-v1/console.log": {
+      "bytes": 953,
+      "sha256": "02abaff662a6bf89be886fc610169ea290bbcbcdf83dcfc97a58a0663d9309b7"
+    },
+    "action-results/command-attention-auto-launch-v1/stage-pid.json": {
+      "bytes": 267,
+      "sha256": "f3ffec88cd7b45841606e1d282e563f6bd3f6dfc1e350dd67aef91165d60a41c"
+    },
+    "action-results/command-attention-auto-v1/forecast.json": {
+      "bytes": 472,
+      "sha256": "c2a0e0c9f70062a2d820bfdc59cf017a070a74f48018dcbebe3aa4ae0d2725d3"
+    },
+    "action-results/command-attention-auto-v1/profile-dispatch.json": {
+      "bytes": 393,
+      "sha256": "c7631344cd081ec2b951f9115682f2e5a6ce4f7c2ef58e60b4e81beb104782ee"
+    },
+    "action-results/command-attention-auto-v1/request.json": {
+      "bytes": 429,
+      "sha256": "2aea94ce585a0a1afb87ce43ea28723233560c0cd2fdcc71ce75fbd171e6e37d"
+    },
+    "action-results/command-attention-auto-v1/terminal.json": {
+      "bytes": 1007,
+      "sha256": "39be5f1c51bafb0f63f9fa2f022a6c63d14d4190fbc1a3f96097ac0f8b1278fc"
+    },
+    "action-results/command-attention-auto-v1/training-dispatch.json": {
+      "bytes": 395,
+      "sha256": "e131602b89e57d599ee3567be4c24e3786b09bb7755eea686c366f5d84d99ef5"
+    },
+    "action-results/command-attention-profile-dispatch-v1/request.json": {
+      "bytes": 149367,
+      "sha256": "174f1066d282b01d385c7f11da7430ddd3cdffe73df9bde7b01f997c99e7cc66"
+    },
+    "action-results/command-attention-profile-dispatch-v1/stage-console.log": {
+      "bytes": 40192,
+      "sha256": "54571933fa957d1a26f020057aad114c32e85c691b6c25fb41820f5c600e63f7"
+    },
+    "action-results/command-attention-profile-dispatch-v1/stage-pid.json": {
+      "bytes": 393,
+      "sha256": "c7631344cd081ec2b951f9115682f2e5a6ce4f7c2ef58e60b4e81beb104782ee"
+    },
+    "action-results/command-attention-profile-dispatch-v1/stage-terminal.json": {
+      "bytes": 1431,
+      "sha256": "131baf6406bf7d54081919d0dd8e1d54424b0df4effa4deaf14394dd5e70fbda"
+    },
+    "action-results/command-attention-profile-v1/launch.json": {
+      "bytes": 3962,
+      "sha256": "98c7120be6815bfa9a1ed31eb422fd3960a8c6a682e71065706af4e288841f94"
+    },
+    "action-results/command-attention-profile-v1/parent-memory.jsonl": {
+      "bytes": 187025,
+      "sha256": "b1fe3fb594d1d7df911e64081701c910007ba0fed510af553678d89efc35841e"
+    },
+    "action-results/command-attention-profile-v1/result/controller-final.safetensors": {
+      "bytes": 19751208,
+      "sha256": "221edad02709b0726c21a367e89d61316a7b3e88879b74309932085b8011e64c"
+    },
+    "action-results/command-attention-profile-v1/result/controller-initial.safetensors": {
+      "bytes": 19751208,
+      "sha256": "a87ef9fb9fe97909bd5ecaaa46e46d35942624d32840529dd2c1245651be5ba2"
+    },
+    "action-results/command-attention-profile-v1/result/core-after-parity.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-profile-v1/result/core-after-updates.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-profile-v1/result/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-profile-v1/result/memory.jsonl": {
+      "bytes": 296788,
+      "sha256": "a1ab3949353ac4e43b880f0af41847122011c730a1a8afc6963fa29519c618d2"
+    },
+    "action-results/command-attention-profile-v1/result/metrics.json": {
+      "bytes": 40192,
+      "sha256": "54571933fa957d1a26f020057aad114c32e85c691b6c25fb41820f5c600e63f7"
+    },
+    "action-results/command-attention-profile-v1/result/monitor-terminal.json": {
+      "bytes": 404,
+      "sha256": "3b248837ca155896476b1c2f2ff0612750c4d58e633490d81939a81ba7376a72"
+    },
+    "action-results/command-attention-profile-v1/result/parity/native-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a737effa625dd7e3cff110dc3ce14286cbc1dc623d79625f55e7eb274f8163c4"
+    },
+    "action-results/command-attention-profile-v1/result/parity/native-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ceebfa609e97708476fe3b80b18c70d46494f363a4e871b0a04ee63d2f3093fd"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-0-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a02e75fbaa2dadebecd43c14d7212989e12262c82eb56326eef33091d3b916e4"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-0-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fccff587691c1f6f0add26545a979dfba2c8338c534835fc19d021b5b5e74801"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-1-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a02e75fbaa2dadebecd43c14d7212989e12262c82eb56326eef33091d3b916e4"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/aux-1-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fccff587691c1f6f0add26545a979dfba2c8338c534835fc19d021b5b5e74801"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "7e2099952b102db2be119f881a5da2f806fd262d99e9994adc293845eb4053c6"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/main-stationary_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ceebfa609e97708476fe3b80b18c70d46494f363a4e871b0a04ee63d2f3093fd"
+    },
+    "action-results/command-attention-profile-v1/result/update-1/main-stationary_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "09b4e48b8132e3432c725d438bd19769c951b822cc82c00f0cbc8df116224816"
+    },
+    "action-results/command-attention-profile-v1/result/update-2/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "e9db1de1462ae02a14fa88b94c2499907a4f3816a3cf9f7f7701e7904c012eab"
+    },
+    "action-results/command-attention-profile-v1/result/update-2/main-left_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c5ee082ef220da457d828fd98d626e545bc264798a9354082f9664b0fd2c0a50"
+    },
+    "action-results/command-attention-profile-v1/result/update-2/main-left_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a7e3ba68f2c8249496fdedc63538359e8c4cf9536cc54d0dc9e0c2a11e022760"
+    },
+    "action-results/command-attention-profile-v1/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/command-attention-profile-v1/terminal.json": {
+      "bytes": 541,
+      "sha256": "449891e20f6f53c9505cff5d4518fa7ca09c8294bfe081272b7f1fa313106a71"
+    },
+    "action-results/command-attention-profile-v1/worker.log": {
+      "bytes": 40192,
+      "sha256": "54571933fa957d1a26f020057aad114c32e85c691b6c25fb41820f5c600e63f7"
+    },
+    "action-results/command-attention-training-dispatch-v1/request.json": {
+      "bytes": 390946,
+      "sha256": "7027c74cb3bc2a49f1ec175c97c28d6e618f399badb82857a96a1f67f0049641"
+    },
+    "action-results/command-attention-training-dispatch-v1/stage-console.log": {
+      "bytes": 20200,
+      "sha256": "6c8bd8ef950edd315a1365c3845644aab9e48f40d04579f74deec8421c0aecf9"
+    },
+    "action-results/command-attention-training-dispatch-v1/stage-pid.json": {
+      "bytes": 395,
+      "sha256": "e131602b89e57d599ee3567be4c24e3786b09bb7755eea686c366f5d84d99ef5"
+    },
+    "action-results/command-attention-training-dispatch-v1/stage-terminal.json": {
+      "bytes": 1350,
+      "sha256": "da161443e57ddfc81daf354d5e24ac5acc298d6dd5b1e9d22616a5eac059cd83"
+    },
+    "action-results/command-attention-training-dispatch-v1/training-admission.json": {
+      "bytes": 9355,
+      "sha256": "adf92b22a129e2627779c69c82541c1e08ea0b986368a80f52673af98580cac4"
+    },
+    "action-results/command-attention-training-dispatch-v1/training-plan.json": {
+      "bytes": 226685,
+      "sha256": "e705ec9e1e8ef769317aef9f13b9e7a385106d7837236869964481c0a5490198"
+    },
+    "action-results/command-attention-training-v1/attempt.json": {
+      "bytes": 100,
+      "sha256": "dc35c96c9a508ff33ef7646698161f1179ed17943a7eb191a6966dffab55581a"
+    },
+    "action-results/command-attention-training-v1/executed-admission.json": {
+      "bytes": 9355,
+      "sha256": "adf92b22a129e2627779c69c82541c1e08ea0b986368a80f52673af98580cac4"
+    },
+    "action-results/command-attention-training-v1/executed-plan.json": {
+      "bytes": 226685,
+      "sha256": "e705ec9e1e8ef769317aef9f13b9e7a385106d7837236869964481c0a5490198"
+    },
+    "action-results/command-attention-training-v1/launch.json": {
+      "bytes": 10349,
+      "sha256": "99fd22a6ba2c7a01b5c6dff911698b8ebbca9af0d8ba5983f1d7c95525a21bc7"
+    },
+    "action-results/command-attention-training-v1/metrics.json": {
+      "bytes": 20200,
+      "sha256": "6c8bd8ef950edd315a1365c3845644aab9e48f40d04579f74deec8421c0aecf9"
+    },
+    "action-results/command-attention-training-v1/parent-memory.jsonl": {
+      "bytes": 570384,
+      "sha256": "a96c6495f037fd58296ad4066bbc6c0ee10b4f5f0e08c12c782164db6f7eff23"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0000/adapter.safetensors": {
+      "bytes": 19751208,
+      "sha256": "a87ef9fb9fe97909bd5ecaaa46e46d35942624d32840529dd2c1245651be5ba2"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0000/manifest.json": {
+      "bytes": 21460,
+      "sha256": "78fb75515e1e56510062b5504b69ae9d866dd5ac5ae17e327ec374ad2718118f"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0000/optimizer-and-rng.pt": {
+      "bytes": 21652,
+      "sha256": "886d7f0df1c0dcda5416f1d223ebb85b4aeeec50c9b052f8c96a25075a6a1b1a"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0128/adapter.safetensors": {
+      "bytes": 19751208,
+      "sha256": "cf0765c162b27a5d0111cc9d167f8fb13bbf08d37b090026e47c934ca2971851"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0128/manifest.json": {
+      "bytes": 21462,
+      "sha256": "41018051ec648c2e1e01ed7d9334ecf24d3a11235df35e6ceb5948a529b00c37"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0128/optimizer-and-rng.pt": {
+      "bytes": 39561242,
+      "sha256": "1a459c4c86bb5b84f88c49f307c6cfb284346e77fc67a95fa558c794392478d5"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0256/adapter.safetensors": {
+      "bytes": 19751208,
+      "sha256": "0ab8d4a48e44f4a1a79012e939efad98a4584e235ff2fcb67dc551e71e99effe"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0256/manifest.json": {
+      "bytes": 21462,
+      "sha256": "d6fb5f18e43c0b2b6a58a035cf445c25f51406f52f8c4469c3fe23d58eda8d25"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0256/optimizer-and-rng.pt": {
+      "bytes": 39561242,
+      "sha256": "750c2ff792e4a6a82c0dc0993f32b2e4049226e0034b85f9aab02916f2351e73"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0384/adapter.safetensors": {
+      "bytes": 19751208,
+      "sha256": "667dddc5132ceae545c85c3b7a6b455563f5af2bf2d7511423dc0180ec307fe3"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0384/manifest.json": {
+      "bytes": 21462,
+      "sha256": "9028a95bd3f425806e7d98aa42ebef5e677f6daf11008a47ae17100792e7e515"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0384/optimizer-and-rng.pt": {
+      "bytes": 39561242,
+      "sha256": "e20d6297403d28fa06113434b5ea0ab348fc238510dcaf45531202a3c96fa392"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0512/adapter.safetensors": {
+      "bytes": 19751208,
+      "sha256": "c3ece8c1b9c6f7eadedbd9db235ad63cab28b2c2ad2d097936c02f7efaf4393d"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0512/manifest.json": {
+      "bytes": 21462,
+      "sha256": "bfbe45cb96d2b3ea5a927c53bca04a28d030280491dd5d2f3b42215ee74dda13"
+    },
+    "action-results/command-attention-training-v1/result/checkpoint-0512/optimizer-and-rng.pt": {
+      "bytes": 39561242,
+      "sha256": "d7b25e1c56d63ec02c2bc3ae4f184e8ca08e605489b974baa60e87923ffd2318"
+    },
+    "action-results/command-attention-training-v1/result/core-after.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-training-v1/result/core-before.json": {
+      "bytes": 150573,
+      "sha256": "3b66373e38cd076522919b6691774411411c5a63d72714db3a501d3df7cd33cc"
+    },
+    "action-results/command-attention-training-v1/result/cuda-rng-0000.safetensors": {
+      "bytes": 88,
+      "sha256": "c7900314a7d2bd997245819e9d9acffb284d3734ab848d08df24e9195d4213fa"
+    },
+    "action-results/command-attention-training-v1/result/cuda-rng-0128.safetensors": {
+      "bytes": 88,
+      "sha256": "c7900314a7d2bd997245819e9d9acffb284d3734ab848d08df24e9195d4213fa"
+    },
+    "action-results/command-attention-training-v1/result/cuda-rng-0256.safetensors": {
+      "bytes": 88,
+      "sha256": "c7900314a7d2bd997245819e9d9acffb284d3734ab848d08df24e9195d4213fa"
+    },
+    "action-results/command-attention-training-v1/result/cuda-rng-0384.safetensors": {
+      "bytes": 88,
+      "sha256": "c7900314a7d2bd997245819e9d9acffb284d3734ab848d08df24e9195d4213fa"
+    },
+    "action-results/command-attention-training-v1/result/cuda-rng-0512.safetensors": {
+      "bytes": 88,
+      "sha256": "c7900314a7d2bd997245819e9d9acffb284d3734ab848d08df24e9195d4213fa"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "2ea9240577b9932f527d0109341d68cc7fc0734188cb968fe19afedbbfe31071"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "920f2cba3cff5585cdcd2fae893fc9abde24ed8b7553bb77d7f4db222b3367fc"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "3e279562bea8a0e23cf86c5fc4d3bb0707538e95d149a449544b394869eb1253"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c7c96c2c583ef18b996656a3cad6390a47a870f534db306df072aca29f4f1e5e"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "35047ebbde1786acd89b9e70028571e02daf3da78dc5eb2aaf633b3e810d78a9"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "96f8191da0c6a86b01873c5ab9b86e55260143ea22a65ecca030638df0802a04"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "03a9aeea399d832d28b2c682258f38ef39146d2e252d9a72e309400ad5528b8e"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b4d5574460cfe78cb5a524754561d6d8f3df291c66beb59a970b5452de8bdc99"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "33880ffacca8ef9ce2623e10f56f9b2f2614cfc3294226cd4ea95cf10b5b8872"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "594eb22a335ea795d6479a9a1be8ae821a88573e155dc74256a76e66299e7d01"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d5ec33eaaeddf89ec256fd8834bee33f513148eb9130a003cc547cfdb38db977"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_00/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "681643f500cca050295b8b7b6ce61b115056c36b27983bdf7861ffe3ac6296d9"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ec095ddf730698b0c661e3f1d4c28cd36be2283eadd048fb77a3842237395d70"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7ddd89042eea6098ba39bcaab6c01be905ebc01dcd0934d0acaea39105677cf7"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "02e813d3c71371412b8d865f8dc84fa29f6f4528d0f6d0b1e1a58c81dc329bca"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "17202f271c32597d2b39e736d11654d8c9a3a5bf26dce445e990720164cf3692"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "af3939faa4fb6bcbaa08861b2be69e1070341c6d79a3f3bb035c5dba84b796e1"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0b66d384417abbc9d10785cac0537e5d6fe0b048db3b6c8d8a868811fc0dd44f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "8c2ae2b1d9016ed8cec43a361454a9ad46b659a0641bf92135b4099c4b7e2049"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6358398a650f1b59a7e66c676f630ef1e4055490b217dc05cbb5221ca58270e6"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a24c716f8c3c07e5ff125440d0765517a9f50bb3ab88736758ce28f1a3eb5fa9"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a85989a4be54d6d27b7319dd8c23e2a68d868e4cd02f80b0e946a39992e6f4e4"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "6eeba6319d6d8cb37bf8b8079cdef772d3438419e283c9bcfc2277289a27d52a"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_01/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e9f18f55d48ae986bb33b05a1653f3319a4634fcf5dbd7ee882a6fe68b5a643e"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "9c58e0a8bf1b320d459cb8c3c25c10dab14bcb13c8931ecaa3d5a6a77b171ef2"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4e3ec3e9a79f4c880614384bd456f079e7ce2c5e4b8b456ea98f098691e039f6"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b642e30b8a017ede6394fb6acd3128690228fb740c4eb791f29add75a286939"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "495e67865ce63dd962a9adb4a1985a313a974465cd32e81b1448bf302b4773c6"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "95720103af95c4fbe5361f97d40e46e53afb82dc8f63d93a8fde83b6a92f972f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d5c61d6b800209717c3d727ad77160d94358db5e44da038d5de3b2f9ad48c2e8"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "c2fb1a3133282181e1668ed990016f3efe2cea490d9e766290190353e1c90e45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e201dd71f62a661e032596e0849b6ddc2b9134db7d97d003fae71dd1cacaccdc"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "983c0273c613828c0a5b7f3f0d2465b231343ed43d4ea24f0ed21af7a8d3037e"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b19b8bd8d90cd8696f484f40cb8e3fb99a6dcdbe376e490a43e0123dc7016da"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "740ed0419073ed6c7fec062349fa7e2daf594422eaceb0c930afe0853f7b7769"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_02/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b2357302b7ecc4ffcdc4e8fd43dcb8c99997fbe270c39a8c91bade526a96c276"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d74979ec2acdd10e6b27e892bcc5ac689daee1811ea37d75deff9b15ccdd81e2"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0c57d823baff37c90b05e29bb57c45a9fa621958829fb35f5b23d51019b742d6"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d07b97540b91fde1fccab854cb61a98881f48914e41ed3b7843dd0d126c1e7ad"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a44513e3c31e7204c405d6662838595639eea0c195b8c5b874962796d07b20f5"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "77f85949b2408bbbd7d281bf647ce67b9a89f51548b0161bd038e0b720ccc0c4"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "8f7aec801e5d43ab58f89bc829ef1e3977a2cb9218c17d476b1a5691ddff9b6a"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "591e81c966dbe0822f35a36a9be7ef7caea7ec0b4b45f64b6f0fb536cff162c3"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5180156649f65dccd4c8c7f0682fa2b5936fe2eac19c68f11ff5c0c14d7ed0bc"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a5b161b351eddd9387e906f235fef0e7d2d395dba1f3433cee880cb148047fa7"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "f1813eb1de87388127a46b924db639f11c64d371bb1eeab2a8f1333f98be0c44"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "93f05ca74412a96e766fabea19830c26aaae15a591767ddf7e611a6f5756114d"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/final/noise_03/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "2376ed4a1a03f5d4fb78085df61327a4d0f7e9c1b9347ad47209b294469472bd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e69f1f30e31bcf6ef6ccd3f698f384a6541c153cbfb4d3c8914277c0a2847e37"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b234b78e822ca898a4af72c1d373b5d11e043192dc6372370df33ff7b0c169cd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e69f1f30e31bcf6ef6ccd3f698f384a6541c153cbfb4d3c8914277c0a2847e37"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b234b78e822ca898a4af72c1d373b5d11e043192dc6372370df33ff7b0c169cd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e69f1f30e31bcf6ef6ccd3f698f384a6541c153cbfb4d3c8914277c0a2847e37"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b234b78e822ca898a4af72c1d373b5d11e043192dc6372370df33ff7b0c169cd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e69f1f30e31bcf6ef6ccd3f698f384a6541c153cbfb4d3c8914277c0a2847e37"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b234b78e822ca898a4af72c1d373b5d11e043192dc6372370df33ff7b0c169cd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e69f1f30e31bcf6ef6ccd3f698f384a6541c153cbfb4d3c8914277c0a2847e37"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b234b78e822ca898a4af72c1d373b5d11e043192dc6372370df33ff7b0c169cd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "e69f1f30e31bcf6ef6ccd3f698f384a6541c153cbfb4d3c8914277c0a2847e37"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_00/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "b234b78e822ca898a4af72c1d373b5d11e043192dc6372370df33ff7b0c169cd"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1f5f8df3bef5b7ba10afb63299300b053c3a76173b18712e44abe1f6a1f38803"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bb9ce0227cd7c50d187ebec7f1f42849190ff9e81b1b0345577a34604410cb45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1f5f8df3bef5b7ba10afb63299300b053c3a76173b18712e44abe1f6a1f38803"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bb9ce0227cd7c50d187ebec7f1f42849190ff9e81b1b0345577a34604410cb45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1f5f8df3bef5b7ba10afb63299300b053c3a76173b18712e44abe1f6a1f38803"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bb9ce0227cd7c50d187ebec7f1f42849190ff9e81b1b0345577a34604410cb45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1f5f8df3bef5b7ba10afb63299300b053c3a76173b18712e44abe1f6a1f38803"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bb9ce0227cd7c50d187ebec7f1f42849190ff9e81b1b0345577a34604410cb45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1f5f8df3bef5b7ba10afb63299300b053c3a76173b18712e44abe1f6a1f38803"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bb9ce0227cd7c50d187ebec7f1f42849190ff9e81b1b0345577a34604410cb45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1f5f8df3bef5b7ba10afb63299300b053c3a76173b18712e44abe1f6a1f38803"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_01/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "bb9ce0227cd7c50d187ebec7f1f42849190ff9e81b1b0345577a34604410cb45"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "00b0b7fc7408812f68e8a07ead3bce526750c124f8ae4bd430b45bfab41bf336"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7c5e480d25c257e81ada8e3fc3e0375323daabcd6082854b10c8a590e4f1de92"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "00b0b7fc7408812f68e8a07ead3bce526750c124f8ae4bd430b45bfab41bf336"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7c5e480d25c257e81ada8e3fc3e0375323daabcd6082854b10c8a590e4f1de92"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "00b0b7fc7408812f68e8a07ead3bce526750c124f8ae4bd430b45bfab41bf336"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7c5e480d25c257e81ada8e3fc3e0375323daabcd6082854b10c8a590e4f1de92"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "00b0b7fc7408812f68e8a07ead3bce526750c124f8ae4bd430b45bfab41bf336"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7c5e480d25c257e81ada8e3fc3e0375323daabcd6082854b10c8a590e4f1de92"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "00b0b7fc7408812f68e8a07ead3bce526750c124f8ae4bd430b45bfab41bf336"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7c5e480d25c257e81ada8e3fc3e0375323daabcd6082854b10c8a590e4f1de92"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "00b0b7fc7408812f68e8a07ead3bce526750c124f8ae4bd430b45bfab41bf336"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_02/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "7c5e480d25c257e81ada8e3fc3e0375323daabcd6082854b10c8a590e4f1de92"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/left_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5edb2f5ea7a943a85b422e2839d0239cc8c823a97d25b477af664a17cb34647f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/left_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b9313f9849a0889af3d32990cf983a65a691b8adb4c2abbaccc6a3d5f7d4ba3"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/left_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5edb2f5ea7a943a85b422e2839d0239cc8c823a97d25b477af664a17cb34647f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/left_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b9313f9849a0889af3d32990cf983a65a691b8adb4c2abbaccc6a3d5f7d4ba3"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/right_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5edb2f5ea7a943a85b422e2839d0239cc8c823a97d25b477af664a17cb34647f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/right_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b9313f9849a0889af3d32990cf983a65a691b8adb4c2abbaccc6a3d5f7d4ba3"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/right_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5edb2f5ea7a943a85b422e2839d0239cc8c823a97d25b477af664a17cb34647f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/right_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b9313f9849a0889af3d32990cf983a65a691b8adb4c2abbaccc6a3d5f7d4ba3"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/stationary_closed-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5edb2f5ea7a943a85b422e2839d0239cc8c823a97d25b477af664a17cb34647f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/stationary_closed-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b9313f9849a0889af3d32990cf983a65a691b8adb4c2abbaccc6a3d5f7d4ba3"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/stationary_interact-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "5edb2f5ea7a943a85b422e2839d0239cc8c823a97d25b477af664a17cb34647f"
+    },
+    "action-results/command-attention-training-v1/result/evaluation/initial/noise_03/stationary_interact-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4b9313f9849a0889af3d32990cf983a65a691b8adb4c2abbaccc6a3d5f7d4ba3"
+    },
+    "action-results/command-attention-training-v1/result/last-valid.json": {
+      "bytes": 154,
+      "sha256": "5f77ae81079ae391d27d4bbd42562bf437e1b6d8bb2fa3016e0822202baed576"
+    },
+    "action-results/command-attention-training-v1/result/memory.jsonl": {
+      "bytes": 919032,
+      "sha256": "df5311f7869fb2054f6b9c3fcbd5873a967dcbe3805594528ab44e707edfeeac"
+    },
+    "action-results/command-attention-training-v1/result/metrics.json": {
+      "bytes": 765990,
+      "sha256": "8db62b74e5e02036b4da5a60bb382d84ed1dcff9d2e266927428076662fd7954"
+    },
+    "action-results/command-attention-training-v1/result/monitor-terminal.json": {
+      "bytes": 404,
+      "sha256": "297081f41b1f7c7ab7593884c952ec284c81e352195e52dc8f46ced140443986"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/aux-0-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a02e75fbaa2dadebecd43c14d7212989e12262c82eb56326eef33091d3b916e4"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/aux-0-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fccff587691c1f6f0add26545a979dfba2c8338c534835fc19d021b5b5e74801"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/aux-1-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a02e75fbaa2dadebecd43c14d7212989e12262c82eb56326eef33091d3b916e4"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/aux-1-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fccff587691c1f6f0add26545a979dfba2c8338c534835fc19d021b5b5e74801"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "f5e21404f9dff95a7f9df052a5dda056b9a1949baadf04fab05126cc36307e4f"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/main-stationary_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "ceebfa609e97708476fe3b80b18c70d46494f363a4e871b0a04ee63d2f3093fd"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0001/main-stationary_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "09b4e48b8132e3432c725d438bd19769c951b822cc82c00f0cbc8df116224816"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0002/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "d8c34e6b832b606ed8979d0a0e1894efad273b7ff810da68bbcb64ebf49a351e"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0002/main-left_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "07adf8826b4090d3ce6a121036fd11cfa125e6e879439512bc7150ced64b2690"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0002/main-left_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "994a849de3a4cf1196cc19a9601392c693752560ebd87727f2da7256534fa841"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/aux-0-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "d758507681eeaf759fa713d7a11c88792778e541ac26469261b29634f7fae94a"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/aux-0-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0fa895f61537e26a0a3c21450fc5d9317a323c36c0bd7d632d177ed98c78fee3"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/aux-1-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "9d6f680cae293489b1008f051fea989e6c2a7f722618fcfecf87f15e23318f5a"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/aux-1-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "74a73d46265d7c9850561ab44cefa78e15e535198d1996bd06623d479b9598e1"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "f26a6b11ba176df482aa89e9cacc9adb8f4c71110a4864f87b7c0807d1b1be06"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/main-left_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "a9cce4a0a1d4ad367f4cc3651f927c20f67538276dc6eee8ae38b2cb09719175"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0005/main-left_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "1bebde100baaa39e910caccd8f97f1a9d5a7bb25a4c454cb4cbf46f8a46c3149"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/aux-0-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "0054b3fcad9ea7b3f357c3ce2d42a2deef7123fae725f5c6f38ea414fce36d89"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/aux-0-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "4daa9aec518977e3ee010f00d26d8084e0d24bb0344d2799748b4bf4c083da81"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/aux-1-negative.safetensors": {
+      "bytes": 3294808,
+      "sha256": "938e27ff8931a122d464ab3d321719d9869f51b640d9378d4bda75d2eb8c31f9"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/aux-1-positive.safetensors": {
+      "bytes": 3294808,
+      "sha256": "06310967652ccf7a55017e8582e1e2d1cde208bec8dc842b5626c28dee2f1cad"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "66bdd097a4cbf63e0f333dc5da5b71f42e8e87dddf6d5e4c83b2ba1b44a6bca6"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/main-left_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "212093d966af8a7a860961de5ed15cb16c0e45171417fa1f01c6e483674a6a3a"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0509/main-left_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "f2f70632a17318b6dcbe7f8fb90ba0f3d74d573bb6da862a5fcafc9d12984c66"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0512/gradients.safetensors": {
+      "bytes": 19751208,
+      "sha256": "8db1c6a6a6fe67529cb9fa3541d80ae944b2073ac2f426150d19d785b115f3ad"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0512/main-left_closed.safetensors": {
+      "bytes": 3294808,
+      "sha256": "fd0856e54b7b3387ec8b55e4e82979f38395e7a8261dcb6b7514f0414b39c060"
+    },
+    "action-results/command-attention-training-v1/result/raw/update-0512/main-left_interact.safetensors": {
+      "bytes": 3294808,
+      "sha256": "43caf8f7e533b7cfe6678c4086c027e3c9e36d5b69b331c9ddf81221de0cc471"
+    },
+    "action-results/command-attention-training-v1/result/weight-load.json": {
+      "bytes": 391591,
+      "sha256": "bfa02903e79a1a674184eeb931bd9ad07c1c2e6f5d830cf28d87efc2e191c4e7"
+    },
+    "action-results/command-attention-training-v1/source/controller/bridge.py": {
+      "bytes": 16772,
+      "sha256": "19b67e5b1af5374f589290c0ae5e0c63789d6d41b7e9715fff9a7e42aa113b8f"
+    },
+    "action-results/command-attention-training-v1/source/controller/controller.py": {
+      "bytes": 5509,
+      "sha256": "f67ac148f252456b618b4d12ddbe3efebf53bfb2c3d9ef86b038ef70a95e8d45"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/room_world/__init__.py": {
+      "bytes": 82,
+      "sha256": "1ede526c17bf3a15c05669a6ca88efc90aa01c40a2ec7127caa3c83c5da6c094"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/room_world/memory_evaluate.py": {
+      "bytes": 43810,
+      "sha256": "2b082926775aeee38c03d96a092a594b0a17a8638b9488a9314a18f6166419fd"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/room_world/memory_model.py": {
+      "bytes": 6862,
+      "sha256": "a5544a4af4f2886e256e9715a5d68f02e6bdf310a418aed1c611cbec7248a67f"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/room_world/memory_sequence.py": {
+      "bytes": 4839,
+      "sha256": "173326ba7b2ec5332600ba1cf9814b6cc87619758524b8da1dfe51f84e142080"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/room_world/memory_train.py": {
+      "bytes": 39603,
+      "sha256": "78f233747956ada0f5a3f05deac9e504c01b943c8d85bef77b3f4a447b4201d8"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/room_world/model.py": {
+      "bytes": 5261,
+      "sha256": "26e2c402312f6752455596f007986e0b8d70876b1bf402610811a9acd8745754"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/__init__.py": {
+      "bytes": 125,
+      "sha256": "c0e7b05a7a68c202db51233a3ef38272a832c9d6163ab14add24d7cdb6a1c416"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_adapter/__init__.py": {
+      "bytes": 193,
+      "sha256": "0b3f3aa2f3de1610ab58592ca6d8c5495af7caa8adce5818580b6269ad358df0"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_adapter/model.py": {
+      "bytes": 5459,
+      "sha256": "74d6584c8762530f5c1fa7568607a605c29a1a8b9fe97c79d09afde590f17375"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_adapter/pooling.py": {
+      "bytes": 1776,
+      "sha256": "a6c1623aeab10c492a530dee6fbdd14e0089ee79330099025324fc9048374f5b"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/__init__.py": {
+      "bytes": 121,
+      "sha256": "9cb311ee1bbd4b7af937ce946ba8eb3a82b10045a0a8b9952f2150304a168974"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/bridge.py": {
+      "bytes": 14738,
+      "sha256": "feb4a6b942653f45d2cd5cd1fed4c5c88893a2875e8f842e536eac791985779f"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/cache_run.py": {
+      "bytes": 10181,
+      "sha256": "41fda54b394ebc66ad897b1979f242673f0f7db083f59d77f843d52477e2373b"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/independent-v1/report.json": {
+      "bytes": 3638,
+      "sha256": "4b9e72c1d5b1df59c959aee6558988a0790c503943ebaa4dcf6b78f972cdc4fd"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/cpu-results/v1/report.json": {
+      "bytes": 1949,
+      "sha256": "7a8fe9c9335f1db6ee1aea5c4ecb9b32c56491575aa0639886e41dd06aa82ee9"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/data.py": {
+      "bytes": 33216,
+      "sha256": "d416f2792b2e115090660fb37dd815c32b433e917c30ab349bf837f87a2696c3"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/probe.py": {
+      "bytes": 24439,
+      "sha256": "2bf5f9739398ca86046f3b8635ecf14fa66b5bf79a4c8fc8fcae0fa792f4c8f9"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/probe_evidence.py": {
+      "bytes": 15730,
+      "sha256": "7a89294ca927657af3ed959ef6f6cb178648dfaee4eebb24249b1fb1e0762702"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/probe_math.py": {
+      "bytes": 14380,
+      "sha256": "f354fc2475008a20a9dd2536341d22adb8efcfee672b8c0f3a192f6911156193"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/test_cpu.py": {
+      "bytes": 15098,
+      "sha256": "5b60e54225dd7086ddb777816779d8a6044768562271ea51013ea6f586c2ea70"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/test_independent.py": {
+      "bytes": 7882,
+      "sha256": "b429aae1a01a964750edf62c586fd26444f8470bd8380d82b75740f5c52e3c4b"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_cuda/test_probe.py": {
+      "bytes": 16253,
+      "sha256": "be5cf71b142381e34ca57d9b603c407ab4f58c963efec10e7a4a9f878f69a33f"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_data/__init__.py": {
+      "bytes": 122,
+      "sha256": "9812e7c7cc296b822a2a95bd11cdc31cd848eb7e45ac9cad6fa8a627560652db"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_data/data.py": {
+      "bytes": 8558,
+      "sha256": "94cb60f18c5e1c7032701990b1500fce57d5f888c2b73b3cd676843a68f616a2"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_training/__init__.py": {
+      "bytes": 116,
+      "sha256": "174e98e651e699b6fc56fb5333f83874ca39e19ebb7b7c33fd47cc54578bdb73"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/action_training/objective.py": {
+      "bytes": 12121,
+      "sha256": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/LICENSE-APACHE-2.0.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/__init__.py": {
+      "bytes": 105,
+      "sha256": "e00c303a4eec1e76b1e58135f0b9366ecea9074fa6cfc7372b8b3235346b7534"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/codec-source.json": {
+      "bytes": 1956,
+      "sha256": "3f1ab52829aead0ffbc8d95884c7a4db46b0620629fb150a6e354375fd581662"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/config.json": {
+      "bytes": 251,
+      "sha256": "d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/evidence.py": {
+      "bytes": 7774,
+      "sha256": "674dd377db397897081353ee838e08b7dbe706837b4e0e330c4b978f51cc13ac"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/expected-weights.json": {
+      "bytes": 206154,
+      "sha256": "5793f603d4f83c4526b450b12959ca7cc852db96b02ead341324b3d9fe421367"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/guards.py": {
+      "bytes": 6767,
+      "sha256": "c6ab9fea72853c3cf3431ca5ee226fd65cb6a2939b022b26f0e7d49a2ff8132f"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/native.py": {
+      "bytes": 3102,
+      "sha256": "2241a71e2bae4d97d99d710dee724f2170fa40cac68cd5b052e6dd67ef109602"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/requirements.txt": {
+      "bytes": 263,
+      "sha256": "6f2400ac8c11d050fb96d318abcfee6ee6674d3bb0c887c9fbcdf371a1053378"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/sampling.py": {
+      "bytes": 2503,
+      "sha256": "d23107c111053bb24e150aaa16fbcd64c23a0940fd55fc84922ef014c75eb9b6"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/upstream-provenance.json": {
+      "bytes": 2710,
+      "sha256": "93c4f086bb2e9ad1d405aece8abad71d27c0ad77d27b8a95ab41697b8934284b"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/__init__.py": {
+      "bytes": 108,
+      "sha256": "ffea6b262c764e67b7304ed4502071e1ea7fde635cdb2d9e264002e87741667e"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/fm_solvers_unipc.py": {
+      "bytes": 32558,
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/cuda_reference/vendor/vae2_2.py": {
+      "bytes": 31846,
+      "sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/load_weights.py": {
+      "bytes": 8146,
+      "sha256": "15e41efc45c7aa16a9dd361460bbd2fe9307ba9751fdec263bee165399c8c5f9"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/official_cpu/__init__.py": {
+      "bytes": 113,
+      "sha256": "e35efea47fcb069fbfdf23df0852897504dc210a13efc332bb362ec56d8c71ba"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/official_cpu/inputs.py": {
+      "bytes": 3429,
+      "sha256": "03e3ff6ad64e4d22b53eb011ced15c0dac92fa20cf03948885bc301e3f28b60f"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/official_cpu/streaming.py": {
+      "bytes": 10387,
+      "sha256": "0fe21b6ae708cf6320ed82f5b2007785ee12edafd92a00041b230984cd703815"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/portable.py": {
+      "bytes": 11880,
+      "sha256": "1bdd727337e7c23c96264dce22d9a2d1ee9a9cb9eedea347d3bba353c7833b4e"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/spatial_reference/__init__.py": {
+      "bytes": 110,
+      "sha256": "74e18fdfb5291df9097eef50cf0f079442fb487cf42a0e1f68daf6d0b8164e22"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/spatial_reference/config.py": {
+      "bytes": 1348,
+      "sha256": "667eaa56750fb3cd26bc7d0b003578d37defd4ac8a3cd37eb63d222c791e30d2"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/spatial_reference/evidence.py": {
+      "bytes": 22089,
+      "sha256": "75ef33d1821937ad8e0a74a82f9bca5c799eceec495893b37f0d73e2df2fbe02"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/spatial_reference/guards.py": {
+      "bytes": 10133,
+      "sha256": "cdd5ed8a72a5437a8ec5be6a6f60ab7b8cfb9f833f672b01065e2b4038fbc6a8"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/spatial_reference/inputs.py": {
+      "bytes": 9961,
+      "sha256": "0a5431b76066eb2d34c956b285168306eac7897ba264b73aa8726662f78d7feb"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/spatial_reference/sampling.py": {
+      "bytes": 7526,
+      "sha256": "a423ee265a4ed0bbf093ba68cee2774f925719b8da786d75e6b8975038714602"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/text-reuse.json": {
+      "bytes": 2309,
+      "sha256": "65620d3bae6f5d4340ce5563476fd4aaa453d0df0b4eebfe9fa69e03fbf0bcb1"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/vendor/__init__.py": {
+      "bytes": 119,
+      "sha256": "b4ba7762a50753f6aa9cb987d55b52401b3d7f345a8595b403ecaa9f0ed10068"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/vendor/attention.py": {
+      "bytes": 5435,
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan22_native/vendor/model.py": {
+      "bytes": 18097,
+      "sha256": "8b39115298ca7322806c19b3165b3f435a94fe4a58f0624aec24f8e7f4997432"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan_adapter/capture_data.py": {
+      "bytes": 6043,
+      "sha256": "859a1001980a2d0efe99a6369979e5f225c72993fcaa3ef901e130fe60c249ca"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan_adapter/native_control/__init__.py": {
+      "bytes": 80,
+      "sha256": "7868cc1bca48525cdca3fd477cb681d794d30dc9008846d9352d15538e153092"
+    },
+    "action-results/command-attention-training-v1/source/repository/experiments/wan_adapter/native_control/portable.py": {
+      "bytes": 4570,
+      "sha256": "d615b0866a0b0c062b70dcf08353308a9121810fdd99985801d6008514da9457"
+    },
+    "action-results/command-attention-training-v1/source/training/math_steps.py": {
+      "bytes": 8027,
+      "sha256": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50"
+    },
+    "action-results/command-attention-training-v1/source/training/packet.py": {
+      "bytes": 4343,
+      "sha256": "f838763a9777c61a08179a70c1fee8f8a3588063853abb243ee4d11b35bdcaa3"
+    },
+    "action-results/command-attention-training-v1/source/training/prepare_inputs.py": {
+      "bytes": 5370,
+      "sha256": "e40f1792e034944cd334dbf6bf92bb5532fdd05c2180f3cc4f462f7d8ba7d724"
+    },
+    "action-results/command-attention-training-v1/source/training/run_training.py": {
+      "bytes": 36568,
+      "sha256": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a"
+    },
+    "action-results/command-attention-training-v1/terminal.json": {
+      "bytes": 544,
+      "sha256": "6e0d2eec559fb1d8abb251c44e4a80cff35a391df9d5a6462cd7f56ba9fa75a1"
+    },
+    "action-results/command-attention-training-v1/worker.log": {
+      "bytes": 765990,
+      "sha256": "8db62b74e5e02036b4da5a60bb382d84ed1dcff9d2e266927428076662fd7954"
+    },
+    "action-results/pre-download-packet-check.json": {
+      "bytes": 405,
+      "sha256": "73f55878928a51475b3b485be0ff80b28affe660a7e19fd2607864027ca2471e"
+    },
+    "action-results/source-transfer-manifest.json": {
+      "bytes": 117678,
+      "sha256": "6afd7bb3b2dcd53d6142649cd8874a339239da57d0a59d17d2bf31bbe65b0b18"
+    },
+    "action-results/transfer-check.json": {
+      "bytes": 405,
+      "sha256": "73f55878928a51475b3b485be0ff80b28affe660a7e19fd2607864027ca2471e"
+    },
+    "action-results/weight-download-terminal.txt": {
+      "bytes": 12,
+      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120"
+    },
+    "action-results/weight-download.log": {
+      "bytes": 2433,
+      "sha256": "a89bb87b705909832661d7b69525f935b6bf0c1916440699294c25b971a12209"
+    },
+    "action-results/weight-hash-check.txt": {
+      "bytes": 251,
+      "sha256": "9954890a0d54958610964893defdac0aeecd994933bd64b1adae983076fd9316"
+    },
+    "action-setup-console.log": {
+      "bytes": 11113,
+      "sha256": "2d367953e707de969b8d5ee7bf15f56c633931b99af79e018845a45838bbe37f"
+    },
+    "action-setup-pid.json": {
+      "bytes": 71,
+      "sha256": "413f004f2b547bf4ec6dd4fe2edbe3e764368f0ad5c93a5a756fdf5268d966f7"
+    },
+    "action-setup-terminal.txt": {
+      "bytes": 12,
+      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120"
+    },
+    "action-setup-v1/action-setup-check.json": {
+      "bytes": 1107,
+      "sha256": "b2121f443f9651d7dfa98a87de65e58fcfdb1c189a937411e7ffa063a3783b58"
+    },
+    "action-setup-v1/after.json": {
+      "bytes": 991,
+      "sha256": "eecade1474a3a85675e007de76fdf6e20a407e32e41e3a000eba0d5ddb2395c0"
+    },
+    "action-setup-v1/before.json": {
+      "bytes": 710,
+      "sha256": "4dfb847063090d4bbae115ea67c2969037d88f6b1c30c3c3ca504b1702dcb2dc"
+    },
+    "action-setup-v1/setup.log": {
+      "bytes": 10293,
+      "sha256": "30454ae956b6c52222adee38c49794997d7064cca99bbbda1b8fb0f533199efa"
+    },
+    "action-setup-v1/terminal.txt": {
+      "bytes": 12,
+      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120"
+    },
+    "action-setup-v1/wheel-download.json": {
+      "bytes": 348,
+      "sha256": "d52747bee74c19a20a33af23426a8b2bbc0f1b0c34cf8df81e9aa4bbeff3ac66"
+    },
+    "action-verify-packet.py": {
+      "bytes": 5602,
+      "sha256": "320368058002678e94eabe3a70942932bce4229c8d77b60d2da37c3f48f645ec"
+    },
+    "auto_command_attention.py": {
+      "bytes": 4455,
+      "sha256": "e640b4fb0c7bbe655cbb04d32a2d04c1e8beba285e67a18f44d57a45873f3f74"
+    },
+    "check_setup.py": {
+      "bytes": 5907,
+      "sha256": "82315346fca300180d2298120c347658c92a4cef15429b307dbbde2ba9a6e070"
+    },
+    "command-attention-cleanup-plan.json": {
+      "bytes": 467,
+      "sha256": "37cf4e3bea85d7bc567860440492059418d303d8146222f3b9abacd0e0e979b2"
+    },
+    "command-attention-manifest.json": {
+      "bytes": 192683,
+      "sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932"
+    },
+    "command-attention-recovery-v1/common.py": {
+      "bytes": 2634,
+      "sha256": "36ea99bdf1f18d670ea0572bcd27a663277bb1bd346dcd0e209b34ce9d293cb1"
+    },
+    "command-attention-recovery-v1/original-transfer-manifest.json": {
+      "bytes": 192683,
+      "sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932"
+    },
+    "command-attention-recovery-v1/pack-recovery.sh": {
+      "bytes": 653,
+      "sha256": "8c97855d7ad6753edc1b325157cdd2254f76f69135f0cf9f2019ba89bc48c719"
+    },
+    "command-attention-recovery-v1/recovery_snapshot.py": {
+      "bytes": 11381,
+      "sha256": "3d8a62800f9ed5c2a6fdbf5dfa83ac652e74e1f13442373dcd9678416aea7822"
+    },
+    "command-attention-recovery-v1/transfer-bindings.json": {
+      "bytes": 937,
+      "sha256": "4372fffb7f066568b8b031bd521743703f565234bbc0b6a542e5c6c8fed7e5ec"
+    },
+    "command-attention-v1/transfer-verified.json": {
+      "bytes": 243,
+      "sha256": "dfa8c411d956229e725a55df56f9c5c5e2b1e1239a5d8f95390f2968721d5ad4"
+    },
+    "dispatch_command_attention.py": {
+      "bytes": 15465,
+      "sha256": "f76897d8415648b8b7545f503d77169a0f27423216f4a083c6b217fde5a1e7e2"
+    },
+    "prepare-v1.sh": {
+      "bytes": 1284,
+      "sha256": "e2e7473b7259d33580df8500c227db148992f6660fc1743652d4e613afbc3567"
+    },
+    "prepare.sh": {
+      "bytes": 3077,
+      "sha256": "5214ef1622099c383589f99bbb167ad89f0918ae6da495be21a3c7b3bb790646"
+    },
+    "read-command-attention-forecast.sh": {
+      "bytes": 1519,
+      "sha256": "b55a84f32a0afea8efc1d9fee0d346710f4e64997510afdd38c251ed758b884b"
+    },
+    "runtime-check.py": {
+      "bytes": 2490,
+      "sha256": "28d1de707cea6195af3c7af8e30df0c15352f1ef86347590ae71c4dcf275eb89"
+    },
+    "start-action-setup.sh": {
+      "bytes": 1688,
+      "sha256": "c86d830429ee51012062a0436fe83a61d6a92881dab01a524dba58a3bb71c68a"
+    }
+  },
+  "input_comparison": {
+    "changed_or_added": {},
+    "meaning": "Original source/input packet retained separately. Changed or added regular files are recovered; absent original files are recorded.",
+    "missing": {},
+    "original_files": 901,
+    "original_inventory_and_bytes_unchanged": true,
+    "unchanged_files": 901
+  },
+  "label": "profile-training-v1",
+  "original_transfer": {
+    "archive_bytes": 1617286707,
+    "archive_sha256": "f917864d57bc7ccc75d7228795c7e4d9bf31ce1bc5facbbe6689721c64b45107",
+    "elapsed_seconds": 59.815130584000144,
+    "files": 901,
+    "inputs_manifest_sha256": "4f37fa59791d7b0645529e4b97978f08d928baf8987e79a9aad6da1b42f3046a",
+    "manifest_sha256": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932",
+    "meaning": "These original source and input bytes are retained separately locally. Recovery compares every remote file with this original manifest and retains changed or added files.",
+    "repository_source_manifest_sha256": "d2df23de91d018a8088f384019b31ce10f264819ca64ad46669ad1930d139995",
+    "runtime_root": "/workspace/command-attention-v1",
+    "schema": "worldline-command-attention-recovery-transfer-binding-v1",
+    "source_manifest_sha256": "b1d4d7e9ee4ea9c46755bf05a6da6499b95fdbeebc5431a7883f7c2c6d750ae3",
+    "status": "packed",
+    "uncompressed_bytes": 1757732061
+  },
+  "parts": [
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-000",
+      "sha256": "0f180829b9ba12f954bb2ccf7d11ea8203fdee107d5da467b73c04e1aae1205c"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-001",
+      "sha256": "44964c7b6bf50bba3b83960a56f7d662670d9882a7e2921f7c46cb0ceb61df2d"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-002",
+      "sha256": "c1cddef31f4de924cf70204040ce8fc2d1e86988ee513877bab400707fc4b5cd"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-003",
+      "sha256": "0288692185bd95aecc98f02f9a346b3823c9aa6993ec80ab72fcb332c0e41d5a"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-004",
+      "sha256": "9793fb78e699354db833847c3efa40342d50b0bd60e152daf5f935944f6ef07a"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-005",
+      "sha256": "e733ac965f3b69c5a140ad13fe80b7986aba243300bf377bb77fa389f918fd94"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-006",
+      "sha256": "a7563d5cafc1dbdffed3c6c5a10e90a18377c4ada283fe60f0969df1f47543c1"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-007",
+      "sha256": "dff776eadc2382159182c00a7244956a7d8c1f72f6bfc863bd6d27902a41c4ac"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-008",
+      "sha256": "a1c7758547768cd36efd717dc12551d42f01ec0b63829bc6e0c5d560031605e9"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-009",
+      "sha256": "2a19a37455ed58e03d6a69b38f9cae41ff77b9872fabe54a3c9867c3d9362c37"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-010",
+      "sha256": "5a3bcd22e36ecd4d95583dd6f1d382f5352d22b94bb47b8181c212414cff8b5e"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-011",
+      "sha256": "c5d31c21291c3c5454b9300f44747e9d83366ab0ddce9e486b8312ab28ad3ed5"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-012",
+      "sha256": "6520ec3174ec6c1b42cccbb3cad0d909720942ede13d9b80ae49fad9c210abaf"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-013",
+      "sha256": "c51c2c52d79efc2858d90453f1c6270d3a461b855a2085f7bd47d2a2dd501205"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-014",
+      "sha256": "6ef20936437720fbca4b1da29762cd48c832c4035ade0e285c3a18e0bf67fd8d"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-015",
+      "sha256": "2d799e5d892556dae4d55295bff96b6f506ded3211d066d7835e6585f1ab5d64"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-016",
+      "sha256": "8c444ead168eed4ef7f3f8787210c2e38408a02962af68156ad3e12348f83659"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-017",
+      "sha256": "7450eab969765212f16acf80fc18efcd32957125e0c74ae073e09dd092f3a9eb"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-018",
+      "sha256": "a809459e36fd39347e283a7c36bb1bfae4ae4c4e956387d9b1bf1c68796b815d"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-019",
+      "sha256": "2913ac7d8a1ff16196f41bfa1c2c6b8329cb5d49d0cf664e68bacd67cb996198"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-020",
+      "sha256": "e297a101beec410f7faa0f659a8efa5e407c7c7649adf356808b99724920034f"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-021",
+      "sha256": "02e9a064aa04cdb042f460d669cff4d5e944a36a3cdc5365dbde6ab3ca57dd59"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-022",
+      "sha256": "c9b3c94efc1d4d106196d8b71723f328fc6e3b1ea5ae93837dac1cf8c4751742"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-023",
+      "sha256": "2b5b3ab62d2f3f8efdce18834b3292a37aef66a382d08aafbbac29d37836d3b6"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-024",
+      "sha256": "979bf042b2b1292bbef67642423358845ac77ed4defa124b976d7b80bfc3d4b5"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-025",
+      "sha256": "ece33bbff8de89d39f1ae766d4f2239cbdc215ba68c01f85c4a82907b33cc54f"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-026",
+      "sha256": "70bfea09fa1ada1cfea2b17e28f9e0391a4cffdb4ec1b580650f61612d67f61f"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-027",
+      "sha256": "a364300fc015f5fc4f4f208ff5a668469f5da43b9a32f31d5beeb8ef4c081fa1"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-028",
+      "sha256": "2b607910f8248c6b4985fa06be1fc19643690a4e4e91466d639ff3acb1a3d9c9"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-029",
+      "sha256": "5feff7bf39add4df5ca510857bb0159291fe250d19d852d8e874289ee42e6f6d"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-030",
+      "sha256": "3644e65dbfd378034311b8f44f70f6f6eb6ed270309373d36310019291926b96"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-031",
+      "sha256": "ee5ab73849fdc21c5b7e5a23a323624bd8e68dda887e1b2efe598cc7b5b4c51a"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-032",
+      "sha256": "677a2cc60d97265e6d8d0855cdaddb8a9a5c8a49da43a38ee33c3c568e3b42c9"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-033",
+      "sha256": "68de887ebf1250fec5e603706e57e0702cd33a2d73b6f10b58841c3f8a9c42de"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-034",
+      "sha256": "4d35b78e8afc2ca7007a8763768d3e5febe98ad6f5db6897c88c79d3fb496008"
+    },
+    {
+      "bytes": 16000000,
+      "name": "evidence.tar.gz.part-035",
+      "sha256": "5a74ac820ba3404d006964eda535b93583b4f1edfd1aefd386405aeb3428778c"
+    },
+    {
+      "bytes": 5737911,
+      "name": "evidence.tar.gz.part-036",
+      "sha256": "1d6e469f6bb21d87135e17f24401dc9d2fae4a9e85496ef47821e0c8e5c724d9"
+    }
+  ],
+  "publication": "Original raw recovery. Public derivatives require a separate hash mapping.",
+  "quiet_after": {
+    "active_matching_processes": 0,
+    "meaning": "No matching live task process. Missing or malformed terminals remain incomplete evidence; quiet does not mean passed.",
+    "process_arguments_retained": false,
+    "recorded_parents": [
+      {
+        "exited": true,
+        "file": "action-setup-pid.json",
+        "pid": 5363,
+        "sha256": "413f004f2b547bf4ec6dd4fe2edbe3e764368f0ad5c93a5a756fdf5268d966f7"
+      },
+      {
+        "exited": true,
+        "file": "action-results/command-attention-profile-dispatch-v1/stage-pid.json",
+        "pid": 5979,
+        "sha256": "c7631344cd081ec2b951f9115682f2e5a6ce4f7c2ef58e60b4e81beb104782ee"
+      },
+      {
+        "exited": true,
+        "file": "action-results/command-attention-training-dispatch-v1/stage-pid.json",
+        "pid": 6152,
+        "sha256": "e131602b89e57d599ee3567be4c24e3786b09bb7755eea686c366f5d84d99ef5"
+      },
+      {
+        "exited": true,
+        "file": "action-results/command-attention-auto-launch-v1/stage-pid.json",
+        "pid": 5977,
+        "sha256": "f3ffec88cd7b45841606e1d282e563f6bd3f6dfc1e350dd67aef91165d60a41c"
+      }
+    ],
+    "stages": [
+      {
+        "directory": "action-results/command-attention-profile-v1",
+        "present": true,
+        "records": {
+          "result/metrics.json": {
+            "bytes": 40192,
+            "sha256": "54571933fa957d1a26f020057aad114c32e85c691b6c25fb41820f5c600e63f7",
+            "status": "passed"
+          },
+          "result/monitor-terminal.json": {
+            "bytes": 404,
+            "sha256": "3b248837ca155896476b1c2f2ff0612750c4d58e633490d81939a81ba7376a72",
+            "status": "complete"
+          },
+          "terminal.json": {
+            "bytes": 541,
+            "sha256": "449891e20f6f53c9505cff5d4518fa7ca09c8294bfe081272b7f1fa313106a71",
+            "status": "complete"
+          }
+        },
+        "terminal_present": true
+      },
+      {
+        "directory": "action-results/command-attention-training-v1",
+        "present": true,
+        "records": {
+          "metrics.json": {
+            "bytes": 20200,
+            "sha256": "6c8bd8ef950edd315a1365c3845644aab9e48f40d04579f74deec8421c0aecf9",
+            "status": "passed"
+          },
+          "result/metrics.json": {
+            "bytes": 765990,
+            "sha256": "8db62b74e5e02036b4da5a60bb382d84ed1dcff9d2e266927428076662fd7954",
+            "status": "passed"
+          },
+          "result/monitor-terminal.json": {
+            "bytes": 404,
+            "sha256": "297081f41b1f7c7ab7593884c952ec284c81e352195e52dc8f46ced140443986",
+            "status": "complete"
+          },
+          "terminal.json": {
+            "bytes": 544,
+            "sha256": "6e0d2eec559fb1d8abb251c44e4a80cff35a391df9d5a6462cd7f56ba9fa75a1",
+            "status": "complete"
+          }
+        },
+        "terminal_present": true
+      },
+      {
+        "directory": "action-results/command-attention-profile-dispatch-v1",
+        "present": true,
+        "records": {
+          "stage-terminal.json": {
+            "bytes": 1431,
+            "sha256": "131baf6406bf7d54081919d0dd8e1d54424b0df4effa4deaf14394dd5e70fbda",
+            "status": "complete"
+          }
+        },
+        "terminal_present": false
+      },
+      {
+        "directory": "action-results/command-attention-training-dispatch-v1",
+        "present": true,
+        "records": {
+          "stage-terminal.json": {
+            "bytes": 1350,
+            "sha256": "da161443e57ddfc81daf354d5e24ac5acc298d6dd5b1e9d22616a5eac059cd83",
+            "status": "complete"
+          }
+        },
+        "terminal_present": false
+      },
+      {
+        "directory": "action-results/command-attention-auto-v1",
+        "present": true,
+        "records": {
+          "terminal.json": {
+            "bytes": 1007,
+            "sha256": "39be5f1c51bafb0f63f9fa2f022a6c63d14d4190fbc1a3f96097ac0f8b1278fc",
+            "status": "training_dispatched"
+          }
+        },
+        "terminal_present": true
+      },
+      {
+        "directory": "action-results/command-attention-auto-launch-v1",
+        "present": true,
+        "records": {},
+        "terminal_present": false
+      }
+    ],
+    "status": "quiet"
+  },
+  "redactions": [],
+  "schema": "worldline-action-recovery-v1",
+  "source_inventory_and_bytes_unchanged": true,
+  "stream_sha256": "58fab823aff59ae2a0b177606334ab4ffaa7ce9c1af567861b17115f9ea6678f",
+  "transport_bytes": 581737911
+}

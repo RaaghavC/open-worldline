@@ -1,0 +1,37 @@
+{
+  "exit_code": 0,
+  "failures": 0,
+  "model_execution": false,
+  "original_input_reader": {
+    "controller_parameters": 4936448,
+    "input_artifacts": 42,
+    "input_manifest_additional": 1,
+    "noise_regenerated": false,
+    "saved_draws": 512,
+    "seconds": 4.229848624992883,
+    "status": "passed",
+    "torch_imported": false,
+    "training_sources": 66
+  },
+  "provider_or_network_calls": false,
+  "schema": "worldline-command-attention-training-audit-cpu-v1",
+  "seconds": 0.3809302089794073,
+  "source_sha256": {
+    "README.md": "64ef3c43286668114fda28cfbe6a773f2a47289e490f15046f62d67ba46d3496",
+    "arrays.py": "5d03c159978df228a613af93f1610eccb07f4becaceff31ea77263df5d71ae53",
+    "audit.py": "297b8e5b669b5c61f5a6cc9392884c254dcc8fa6f108fddbfb00c23e07e291e4",
+    "original-transfer-manifest.json": "4dfb2da33228ce58dd56646bb818fd93e6bf9455b685986d7bfc294e3e7cb932",
+    "producer-freeze.json": "de512d91be83d2a127104c31f46c323a7dd3bff28e1d98cfa28d29c339351ab2",
+    "profile_reference.py": "b6a3c9a52cb05e462069197a91f9801f90ca210bcac362f316803ea5cf188967",
+    "protocol.json": "ce1b1653ace6e83c196ecfcc3c18e9eb0815f92647a0315b35ea6f4875a481b0",
+    "reference/math_steps.py": "bd460ae93d34670da702cf7cd3d70f9d118f654286437ea523459e641d79db50",
+    "reference/objective.py": "0c30f73785883ca6d96670ea2934e22193dd8a276af58a9befeada3e6e9018cb",
+    "reference/run_training.py": "80cb395b202995219b2d2c561cc8ed2f453a27fd5700644ab2cdcdf028254c2a",
+    "test_audit.py": "4698185eb5ed3ca8bf31714059e1b041bb80c18db3413a794177faaef92f6f2e"
+  },
+  "sources_unchanged": true,
+  "status": "passed",
+  "test_log_sha256": "c166a24768bad62dd9c84b0f02d37962fb343c945d12e67706585462bada5c44",
+  "tests": 3,
+  "torch_imported": false
+}
