@@ -16,7 +16,7 @@ The image shows the programmed 3D renderer displaying learned terrain fields. Se
 
 Requirements: Python 3.11+, Node.js 20.19+ or 22.12+, and a browser with WebGL2. Tested development machine: Apple M4 Pro with 24 GB memory. Training selects MPS, CUDA, or CPU. The small shipped models use CPU inference by default because it was faster in the local benchmark; set WORLDLINE_DEVICE=mps or cuda to override. CPU speed varies.
 
-On macOS, double-click **start.command** after cloning this repository. It installs the Python dependencies, builds the browser interface, and opens the editor in your browser. The initial dependency installation needs internet access. Keep its terminal window open while using the app.
+On macOS, double-click **start.command** after cloning this repository. It installs the Python and browser dependencies, rebuilds the interface from the current source, and opens the editor in your browser. Dependency installation may need internet access. Keep its terminal window open while using the app. To launch an already installed build without reinstalling, run `.venv/bin/python -m worldline.server --open` from this directory.
 
 Or run from this directory:
 
@@ -73,7 +73,7 @@ The three working editor features are persistent edits, local brushes and altern
 
 The separate high-resolution experiment trains an original action adapter through an attributed, frozen Wan2.2 model. The newest checkpoint completed 128 updates on six camera and door sequences and passed its [saved-file audit](experiments/wan22_native/intermediate_action/results/factorial128-a100-v1/README.md). Its [six-video evaluation](experiments/wan22_native/intermediate_action/results/factorial-video-a100-v1/README.md) failed visible camera and door control. Passing file and training checks did not establish usable interaction.
 
-A [different controller and training setup](experiments/wan22_native/command_attention/README.md) now has CPU-checked source. It adds command-controlled attention across six blocks and direct camera-contrast training. This candidate has not yet run its GPU profile, training or video evaluation.
+A [different controller and training setup](experiments/wan22_native/command_attention/README.md) adds command-controlled attention across six blocks and direct camera-contrast training. Its [A100 resource profile](experiments/wan22_native/command_attention/profile/results/a100-v1/README.md) passed all 24 comparisons and two training updates. That profile establishes execution and resource measurements; a complete 512-update result and generated-video control have not yet been published.
 
 To try the separate original 64 × 64 RGB predictor, double-click **start-room-lab.command**. It opens Room Lab at **http://127.0.0.1:8788**. Every action generates another small image locally; the enlarged display adds no detail. Its [evaluation](docs/room-rgb-experiment.md) records failures in detail and door memory.
 
